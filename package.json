@@ -1,0 +1,18 @@
+{
+	"name": "istanbul-smile-center-website",
+	"version": "1.0.0",
+	"description": "istanbul smile center website",
+	"main": "server.js",
+	"scripts": {
+		"dev": "next",
+		"build": "next build",
+		"start": "next start"
+	},
+	"author": "Selcuk Onuk",
+	"license": "ISC",
+	"dependencies": {
+		"next": "^9.1.1",
+		"react": "^16.10.2",
+		"react-dom": "^16.10.2"
+	}
+}
