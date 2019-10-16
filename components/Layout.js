@@ -15,14 +15,14 @@ const useStyles = makeStyles((theme) => ({
 		html: {
 			fontSize: "62.5%",
 			boxSizing: "border-box",
-			fontFamily: "Roboto,sans-serif"
+			fontFamily: "Source Sans Pro, sans-serif"
 		},
 		body: {
 			fontSize: "1.6rem",
 			fontWeight: 400
 		},
 		".colorPath": {
-			transition: "all 300ms"
+			transition: "all 200ms"
 		}
 	},
 	root: {
@@ -32,7 +32,14 @@ const useStyles = makeStyles((theme) => ({
 	button: {
 		margin: theme.spacing(1),
 		borderRadius: "20px",
-		fontSize: "inherit"
+		fontSize: "1.5rem",
+		backgroundColor: "#0178d1",
+		fontFamily: "Source Sans Pro, sans-serif",
+		letterSpacing: "1px",
+		padding: "5px 20px",
+		"&:hover": {
+			backgroundColor: "#0060a7"
+		}
 	},
 	toolbar: {
 		padding: 0,
@@ -50,23 +57,21 @@ const useStyles = makeStyles((theme) => ({
 		justifyContent: "space-between",
 		alignItems: "center"
 	},
-	logo: {
-		// display: "flex",
-		// justifyContent: "center",
-		// alignItems: "center",
-		// backgroundImage: `url(${logoNonColorUrl})`,
-		// width: "175px",
-		// height: "50px",
-		fontSize: 0,
-		lineHeight: 0
-	},
 	navLink: {
 		textDecoration: "none",
-		margin: "10px",
-		color: "gray"
+		margin: "0 10px",
+		color: "#6c675c",
+		fontWeight: "600",
+		fontSize: "1.8rem",
+		transition: "all 100ms",
+		"&:hover": {
+			color: "#0178d1",
+			fontSize: "1.9rem"
+		}
 	},
 	svgLogo: {
-		fill: "#ABA69C",
+		// fill: "#ABA69C",
+		fill: "#0178d1",
 		"&:hover": {
 			cursor: "pointer",
 			"& .color0, .color2 ": {
@@ -80,9 +85,6 @@ const useStyles = makeStyles((theme) => ({
 			}
 		}
 	}
-	// st0: {
-	// 	// fill: "#ABA69C"
-	// }
 }));
 
 const Layout = (props) => {
@@ -302,7 +304,10 @@ const Layout = (props) => {
 								</a>
 							</Link>
 						</div>
-						<nav class="navBar">
+						<nav className="navBar">
+							<Link href="/">
+								<a className={classes.navLink}>Home</a>
+							</Link>
 							<Link href="/treatments">
 								<a className={classes.navLink}>Treatments</a>
 							</Link>
@@ -310,27 +315,18 @@ const Layout = (props) => {
 								<a className={classes.navLink}>Prices</a>
 							</Link>
 							<Link href="/treatments">
-								<a className={classes.navLink}>Treatments</a>
-							</Link>
-							<Link href="/treatments">
-								<a className={classes.navLink}>Treatments</a>
+								<a className={classes.navLink}>About Us</a>
 							</Link>
 						</nav>
 						<div>
 							<Button variant="contained" color="primary" className={classes.button}>
-								Primary
+								Chat Now
 							</Button>
 						</div>
 					</div>
 				</header>
 			</Toolbar>
 			{props.children}
-			<style>{`
-				.navBar{
-					background-color:blue;
-				}
-			
-			`}</style>
 		</div>
 	);
 };
