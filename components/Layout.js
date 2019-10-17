@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
 		margin: theme.spacing(1),
 		borderRadius: "20px",
 		fontSize: "1.5rem",
-		backgroundColor: "#0178d1",
+		backgroundColor: "#004C97",
 		fontFamily: "Source Sans Pro, sans-serif",
 		letterSpacing: "1px",
 		padding: "5px 20px",
@@ -65,13 +65,12 @@ const useStyles = makeStyles((theme) => ({
 		fontSize: "1.8rem",
 		transition: "all 100ms",
 		"&:hover": {
-			color: "#0178d1",
-			fontSize: "1.9rem"
+			color: "#004C97"
 		}
 	},
 	svgLogo: {
 		// fill: "#ABA69C",
-		fill: "#0178d1",
+		fill: "#004C97",
 		"&:hover": {
 			cursor: "pointer",
 			"& .color0, .color2 ": {
