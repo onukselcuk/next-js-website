@@ -308,13 +308,19 @@ const Layout = (props) => {
 								<a className={classes.navLink}>Home</a>
 							</Link>
 							<Link href="/treatments">
+								<a className={classes.navLink}>About Us</a>
+							</Link>
+							<Link href="/treatments">
 								<a className={classes.navLink}>Treatments</a>
+							</Link>
+							<Link href="/before-after">
+								<a className={classes.navLink}>Before-After</a>
 							</Link>
 							<Link href="/prices">
 								<a className={classes.navLink}>Prices</a>
 							</Link>
-							<Link href="/treatments">
-								<a className={classes.navLink}>About Us</a>
+							<Link href="/contact">
+								<a className={classes.navLink}>Contact Us</a>
 							</Link>
 						</nav>
 						<div>
