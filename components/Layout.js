@@ -30,7 +30,6 @@ const useStyles = makeStyles((theme) => ({
 		padding: 0
 	},
 	button: {
-		margin: theme.spacing(1),
 		borderRadius: "20px",
 		fontSize: "1.5rem",
 		backgroundColor: theme.palette.primary.main,

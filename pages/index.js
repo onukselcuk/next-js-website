@@ -1,5 +1,7 @@
 import Layout from "../components/Layout";
+import Link from "next/link";
 import heroImage from "../public/hero-image-optimized.jpg";
+import atakoyTowersImage from "../public/atakoy-towers-image.jpg";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import Paper from "@material-ui/core/Paper";
@@ -34,6 +36,17 @@ const useStyles = makeStyles((theme) => ({
 		"&:hover": {
 			color: theme.palette.secondary.main,
 			backgroundColor: theme.palette.primary.main
+		}
+	},
+	regularButton: {
+		borderRadius: "20px",
+		fontSize: "1.5rem",
+		backgroundColor: theme.palette.primary.main,
+		fontFamily: theme.typography.sansSerif,
+		letterSpacing: "1px",
+		padding: "10px 25px",
+		"&:hover": {
+			backgroundColor: theme.palette.primary.light
 		}
 	},
 	servicePaper: {
@@ -212,6 +225,58 @@ const Index = (props) => {
 					</Paper>
 				</div>
 			</section>
+			<section className="isc-intro-section">
+				<div className="clinic-image-collage-div">
+					<img className="clinic-image-collage" src={atakoyTowersImage} alt="" />
+				</div>
+				<div className="clinic-intro-div">
+					<div className="clinic-intro-wrapper">
+						<h4 className="clinic-exclusive-text">An Exclusive Dental Clinic</h4>
+						<h2 className="clinic-name-header">Istanbul Smile Center</h2>
+						<p className="clinic-intro-text">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel eaque dignissimos error.
+							Fugit, corporis laboriosam. Minus dolor harum facilis, optio eius, saepe, nesciunt
+							voluptatem suscipit temporibus labore expedita quidem molestiae! Lorem ipsum, dolor sit amet
+							consectetur adipisicing elit. Doloribus rem ducimus quidem tempore fugiat obcaecati.
+							Necessitatibus quod consequuntur libero error vel dicta ad ullam ea! Facilis beatae sapiente
+							voluptatem vel. Error optio, totam laborum rem nihil culpa quidem odio numquam corporis sunt
+							tenetur veniam, reiciendis dicta eum obcaecati eaque similique hic quae voluptate sapiente
+						</p>
+						<div className="clinic-intro-buttons-div">
+							<Button variant="contained" color="primary" className={classes.regularButton}>
+								Chat Now
+							</Button>
+							<Link href="/about">
+								<a className="clinic-intro-link">Learn more about us</a>
+							</Link>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, aperiam suscipit. Accusantium labore
+				amet quasi ut assumenda quis neque autem deleniti sit, esse sint laboriosam recusandae minima
+				consectetur est praesentium. At est commodi beatae eum dignissimos dicta, ad qui repellat. Sed, nemo
+				perferendis. Dolorum assumenda voluptas, inventore fugit, soluta sit libero quasi, repudiandae dolorem
+				nesciunt possimus corrupti incidunt qui id? Porro tempore aliquam ratione deleniti iure nam harum
+				laborum quam mollitia tempora. Suscipit doloremque ab minus, provident, nisi ea laboriosam aliquid
+				repellendus quaerat sit iure. Facere soluta ipsam consequuntur maxime. Impedit velit minima vel autem!
+				Enim iure suscipit sit delectus facilis rem doloribus deleniti corrupti amet accusamus, cum, optio minus
+				eos natus voluptates saepe dignissimos! Vel ipsum voluptatem voluptatum numquam. Earum animi maiores
+				corrupti fuga cumque, debitis hic quidem, ipsa fugiat, beatae minima saepe consequatur. Veritatis porro,
+				blanditiis, quaerat eos facere nulla ullam pariatur soluta odit magni, adipisci fuga nisi. Dicta
+				pariatur assumenda sequi molestias doloribus reiciendis velit qui consequatur enim illo expedita, libero
+				modi suscipit. Omnis eaque nisi magni commodi quis assumenda autem nihil alias, porro blanditiis iste
+				vel. Impedit odit error voluptas doloribus in laborum architecto saepe iure fugit assumenda corrupti
+				itaque voluptate quasi, ipsa natus sed. Molestias cum placeat obcaecati, ex alias perspiciatis aliquam
+				dolorum animi esse. Earum, quae distinctio corrupti id pariatur laboriosam iusto. Totam id hic
+				laboriosam natus excepturi officia suscipit quidem tempora omnis odio, similique, deleniti quas quod
+				iste deserunt explicabo! Modi, eveniet nesciunt? Unde modi a voluptatem nobis totam voluptatibus animi,
+				illum impedit dignissimos mollitia nostrum nemo architecto illo possimus voluptate? Non eaque dicta
+				delectus? Eligendi nulla sapiente amet facere culpa voluptatem vel! Voluptates culpa accusantium
+				deserunt architecto ab quia quibusdam omnis sit nam quisquam adipisci alias quas id iste velit
+				voluptatibus, provident et atque est, tenetur, dolorum beatae ea excepturi. Illum, ea?
+			</div>
 
 			<style jsx>{`
 				.hero-image-div {
@@ -239,7 +304,6 @@ const Index = (props) => {
 					flex-wrap: wrap;
 					margin-top: -5px;
 					padding: 4rem 0;
-					background-color: ${sTheme.palette.secondary.main};
 				}
 				.our-services-header {
 					display: flex;
@@ -265,6 +329,65 @@ const Index = (props) => {
 					justify-content: center;
 					width: 80%;
 					margin-top: 3rem;
+				}
+				.isc-intro-section {
+					display: flex;
+					margin-top: 2.5rem;
+				}
+				.clinic-image-collage-div {
+					display: flex;
+					align-items: center;
+					min-width: 50%;
+				}
+				.clinic-image-collage {
+					width: 100%;
+					border-top-right-radius: 20px;
+					border-bottom-right-radius: 20px;
+				}
+				.clinic-intro-div {
+					display: flex;
+					align-items: center;
+				}
+				.clinic-intro-wrapper {
+					background-color: ${sTheme.palette.secondary.main};
+					border-top: 1px solid ${sTheme.palette.primary.main};
+					border-bottom: 1px solid ${sTheme.palette.primary.main};
+					margin: 3rem 0;
+					padding: 5rem;
+				}
+				.clinic-exclusive-text {
+					color: ${sTheme.palette.secondary.dark};
+					font-size: 1.8rem;
+				}
+				.clinic-name-header {
+					font-family: ${sTheme.typography.serif};
+					color: ${sTheme.palette.primary.main};
+					font-size: 4rem;
+					margin-top: .5rem;
+				}
+				.clinic-intro-text {
+					width: 95%;
+					color: ${sTheme.palette.secondary.dark};
+					font-size: 1.7rem;
+					line-height: 1.6;
+				}
+
+				.clinic-intro-buttons-div {
+					margin-top: 2rem;
+					display: flex;
+					justify-content: space-between;
+					align-items: baseline;
+					width: 95%;
+				}
+
+				.clinic-intro-link {
+					color: ${sTheme.palette.primary.main};
+					text-decoration: none;
+					font-size: 1.7rem;
+					transition: all 200ms ease-in-out;
+				}
+				.clinic-intro-link:hover {
+					text-decoration: underline;
 				}
 			`}</style>
 		</Layout>
