@@ -6,6 +6,9 @@ import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
+import Card from "@material-ui/core/Card";
+import CardActionArea from "@material-ui/core/CardActionArea";
+import CardContent from "@material-ui/core/CardContent";
 import SvgIcon from "@material-ui/core/SvgIcon";
 import LiveChat from "../components/logos-icons/LiveChat";
 import VideoCallConsultation from "../components/logos-icons/VideoCallConsultation";
@@ -17,7 +20,16 @@ import HotelBookingAssistance from "../components/logos-icons/HotelBookingAssist
 import HotelDiscounts from "../components/logos-icons/HotelDiscounts";
 import MultilingualAssistance from "../components/logos-icons/MultilingualAssistance";
 import TravelToursDiscounts from "../components/logos-icons/TravelToursDiscounts";
+import DentalImplant from "../components/logos-icons/DentalImplants";
 import sTheme from "../src/styledTheme";
+import clsx from "clsx";
+import DentalCrown from "../components/logos-icons/DentalCrown";
+import DentalVeneer from "../components/logos-icons/DentalVeneer";
+import Braces from "../components/logos-icons/Braces";
+import CosmeticDentistry from "../components/logos-icons/CosmeticDentistry";
+import PediatricDentistry from "../components/logos-icons/PediatricDentistry";
+import SmileMakeover from "../components/logos-icons/SmileMakeover";
+import TeethWhitening from "../components/logos-icons/TeethWhitening";
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -46,7 +58,8 @@ const useStyles = makeStyles((theme) => ({
 		letterSpacing: "1px",
 		padding: "10px 25px",
 		"&:hover": {
-			backgroundColor: theme.palette.primary.light
+			backgroundColor: theme.palette.secondary.main,
+			color: theme.palette.primary.main
 		}
 	},
 	servicePaper: {
@@ -61,10 +74,21 @@ const useStyles = makeStyles((theme) => ({
 			transform: "scale(1.05)"
 		}
 	},
+	servicePaperCard: {
+		minWidth: "300px",
+		width: "23%",
+		padding: 0,
+		"&:hover": {
+			transform: "scale(1)"
+		}
+	},
 	svgIcon: {
 		marginTop: "5px",
 		width: "100px",
 		minHeight: "100px"
+	},
+	svgIconTreatment: {
+		marginTop: "15px"
 	},
 	servicePaperTitle: {
 		textAlign: "center",
@@ -76,7 +100,31 @@ const useStyles = makeStyles((theme) => ({
 	servicePaperText: {
 		textAlign: "center",
 		fontFamily: theme.typography.sansSerif,
-		color: theme.palette.third.main
+		color: theme.palette.secondary.dark
+	},
+	cardContent: {
+		paddingTop: 0
+	},
+	servicePaperCardTitle: {
+		fontSize: "2.8rem"
+	},
+	servicePaperCardText: {
+		fontSize: "1.7rem"
+	},
+	treatmentsButton: {
+		marginRight: "auto",
+		marginLeft: "50%",
+		transform: "translateX(-50%)",
+		padding: "1rem 6rem"
+
+		// position: "relative",
+		// left: "50%",
+	},
+	cardActionArea: {
+		display: "flex",
+		flexDirection: "column",
+		height: "100%",
+		justifyContent: "flex-start"
 	}
 }));
 
@@ -240,7 +288,10 @@ const Index = (props) => {
 							consectetur adipisicing elit. Doloribus rem ducimus quidem tempore fugiat obcaecati.
 							Necessitatibus quod consequuntur libero error vel dicta ad ullam ea! Facilis beatae sapiente
 							voluptatem vel. Error optio, totam laborum rem nihil culpa quidem odio numquam corporis sunt
-							tenetur veniam, reiciendis dicta eum obcaecati eaque similique hic quae voluptate sapiente
+							tenetur veniam, reiciendis dicta eum obcaecati eaque similique hic quae voluptate sapiente,
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti soluta alias aliquam ipsa
+							a, ducimus dolorem quisquam inventore! Sapiente velit quae facilis aperiam possimus
+							distinctio laudantium odio, quidem suscipit accusamus?
 						</p>
 						<div className="clinic-intro-buttons-div">
 							<Button variant="contained" color="primary" className={classes.regularButton}>
@@ -253,30 +304,254 @@ const Index = (props) => {
 					</div>
 				</div>
 			</section>
-			<div>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, aperiam suscipit. Accusantium labore
-				amet quasi ut assumenda quis neque autem deleniti sit, esse sint laboriosam recusandae minima
-				consectetur est praesentium. At est commodi beatae eum dignissimos dicta, ad qui repellat. Sed, nemo
-				perferendis. Dolorum assumenda voluptas, inventore fugit, soluta sit libero quasi, repudiandae dolorem
-				nesciunt possimus corrupti incidunt qui id? Porro tempore aliquam ratione deleniti iure nam harum
-				laborum quam mollitia tempora. Suscipit doloremque ab minus, provident, nisi ea laboriosam aliquid
-				repellendus quaerat sit iure. Facere soluta ipsam consequuntur maxime. Impedit velit minima vel autem!
-				Enim iure suscipit sit delectus facilis rem doloribus deleniti corrupti amet accusamus, cum, optio minus
-				eos natus voluptates saepe dignissimos! Vel ipsum voluptatem voluptatum numquam. Earum animi maiores
-				corrupti fuga cumque, debitis hic quidem, ipsa fugiat, beatae minima saepe consequatur. Veritatis porro,
-				blanditiis, quaerat eos facere nulla ullam pariatur soluta odit magni, adipisci fuga nisi. Dicta
-				pariatur assumenda sequi molestias doloribus reiciendis velit qui consequatur enim illo expedita, libero
-				modi suscipit. Omnis eaque nisi magni commodi quis assumenda autem nihil alias, porro blanditiis iste
-				vel. Impedit odit error voluptas doloribus in laborum architecto saepe iure fugit assumenda corrupti
-				itaque voluptate quasi, ipsa natus sed. Molestias cum placeat obcaecati, ex alias perspiciatis aliquam
-				dolorum animi esse. Earum, quae distinctio corrupti id pariatur laboriosam iusto. Totam id hic
-				laboriosam natus excepturi officia suscipit quidem tempora omnis odio, similique, deleniti quas quod
-				iste deserunt explicabo! Modi, eveniet nesciunt? Unde modi a voluptatem nobis totam voluptatibus animi,
-				illum impedit dignissimos mollitia nostrum nemo architecto illo possimus voluptate? Non eaque dicta
-				delectus? Eligendi nulla sapiente amet facere culpa voluptatem vel! Voluptates culpa accusantium
-				deserunt architecto ab quia quibusdam omnis sit nam quisquam adipisci alias quas id iste velit
-				voluptatibus, provident et atque est, tenetur, dolorum beatae ea excepturi. Illum, ea?
-			</div>
+			<section className="our-services-section">
+				<div className="our-services-header">
+					<h2 className="our-services-header-text">Dental Treatments</h2>
+					<p className="our-services-header-paragraph-text">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis mollitia deleniti beatae quam
+						incidunt doloribus. Culpa numquam tenetur fugiat modi debitis, est, aut earum perspiciatis ut
+						incidunt dignissimos quos. Voluptate.
+					</p>
+				</div>
+				<div className="our-services-wrapper">
+					<Card className={clsx(classes.servicePaper, classes.servicePaperCard)} elevation={paperElevation}>
+						<CardActionArea className={classes.cardActionArea}>
+							<SvgIcon
+								className={clsx(classes.svgIcon, classes.svgIconTreatment)}
+								viewBox="0 0 84.8 84.8"
+							>
+								<DentalImplant />
+							</SvgIcon>
+							<CardContent className={classes.cardContent}>
+								<Typography
+									variant="h5"
+									component="h3"
+									className={clsx(classes.servicePaperTitle, classes.servicePaperCardTitle)}
+								>
+									Dental Implants
+								</Typography>
+								<Typography
+									variant="body2"
+									component="p"
+									className={clsx(classes.servicePaperText, classes.servicePaperCardText)}
+								>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste sequi libero dolore
+									consequuntur temporibus delectus, in tenetur quaerat aut ea autem, aliquam
+									excepturi, assumenda ab obcaecati magnam aspernatur culpa vitae.
+								</Typography>
+							</CardContent>
+						</CardActionArea>
+					</Card>
+					<Card className={clsx(classes.servicePaper, classes.servicePaperCard)} elevation={paperElevation}>
+						<CardActionArea className={classes.cardActionArea}>
+							<SvgIcon
+								className={clsx(classes.svgIcon, classes.svgIconTreatment)}
+								viewBox="0 0 84.8 84.8"
+							>
+								<DentalCrown />
+							</SvgIcon>
+							<CardContent className={classes.cardContent}>
+								<Typography
+									variant="h5"
+									component="h3"
+									className={clsx(classes.servicePaperTitle, classes.servicePaperCardTitle)}
+								>
+									Dental Crowns
+								</Typography>
+								<Typography
+									variant="body2"
+									component="p"
+									className={clsx(classes.servicePaperText, classes.servicePaperCardText)}
+								>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste sequi libero dolore
+									consequuntur temporibus delectus, in tenetur quaerat aut ea autem, aliquam
+									excepturi, assumenda ab obcaecati magnam aspernatur culpa vitae.
+								</Typography>
+							</CardContent>
+						</CardActionArea>
+					</Card>
+					<Card className={clsx(classes.servicePaper, classes.servicePaperCard)} elevation={paperElevation}>
+						<CardActionArea className={classes.cardActionArea}>
+							<SvgIcon
+								className={clsx(classes.svgIcon, classes.svgIconTreatment)}
+								viewBox="0 0 84.8 84.8"
+							>
+								<DentalVeneer />
+							</SvgIcon>
+							<CardContent className={classes.cardContent}>
+								<Typography
+									variant="h5"
+									component="h3"
+									className={clsx(classes.servicePaperTitle, classes.servicePaperCardTitle)}
+								>
+									Dental Veneers
+								</Typography>
+								<Typography
+									variant="body2"
+									component="p"
+									className={clsx(classes.servicePaperText, classes.servicePaperCardText)}
+								>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste sequi libero dolore
+									consequuntur temporibus delectus, in tenetur quaerat aut ea autem, aliquam
+									excepturi, assumenda ab obcaecati magnam aspernatur culpa vitae.
+								</Typography>
+							</CardContent>
+						</CardActionArea>
+					</Card>
+					<Card className={clsx(classes.servicePaper, classes.servicePaperCard)} elevation={paperElevation}>
+						<CardActionArea className={classes.cardActionArea}>
+							<SvgIcon
+								className={clsx(classes.svgIcon, classes.svgIconTreatment)}
+								viewBox="0 0 84.8 84.8"
+							>
+								<Braces />
+							</SvgIcon>
+							<CardContent className={classes.cardContent}>
+								<Typography
+									variant="h5"
+									component="h3"
+									className={clsx(classes.servicePaperTitle, classes.servicePaperCardTitle)}
+								>
+									Orthodontics
+								</Typography>
+								<Typography
+									variant="body2"
+									component="p"
+									className={clsx(classes.servicePaperText, classes.servicePaperCardText)}
+								>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste sequi libero dolore
+									consequuntur temporibus delectus, in tenetur quaerat aut ea autem, aliquam
+									excepturi, assumenda ab obcaecati magnam aspernatur culpa vitae.
+								</Typography>
+							</CardContent>
+						</CardActionArea>
+					</Card>
+					<Card className={clsx(classes.servicePaper, classes.servicePaperCard)} elevation={paperElevation}>
+						<CardActionArea className={classes.cardActionArea}>
+							<SvgIcon
+								className={clsx(classes.svgIcon, classes.svgIconTreatment)}
+								viewBox="0 0 84.8 84.8"
+							>
+								<CosmeticDentistry />
+							</SvgIcon>
+							<CardContent className={classes.cardContent}>
+								<Typography
+									variant="h5"
+									component="h3"
+									className={clsx(classes.servicePaperTitle, classes.servicePaperCardTitle)}
+								>
+									Cosmetic Dentistry
+								</Typography>
+								<Typography
+									variant="body2"
+									component="p"
+									className={clsx(classes.servicePaperText, classes.servicePaperCardText)}
+								>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste sequi libero dolore
+									consequuntur temporibus delectus, in tenetur quaerat aut ea autem, aliquam
+									excepturi, assumenda ab obcaecati magnam aspernatur culpa vitae.
+								</Typography>
+							</CardContent>
+						</CardActionArea>
+					</Card>
+					<Card className={clsx(classes.servicePaper, classes.servicePaperCard)} elevation={paperElevation}>
+						<CardActionArea className={classes.cardActionArea}>
+							<SvgIcon
+								className={clsx(classes.svgIcon, classes.svgIconTreatment)}
+								viewBox="0 0 84.8 84.8"
+							>
+								<PediatricDentistry />
+							</SvgIcon>
+							<CardContent className={classes.cardContent}>
+								<Typography
+									variant="h5"
+									component="h3"
+									className={clsx(classes.servicePaperTitle, classes.servicePaperCardTitle)}
+								>
+									Pediatric Dentistry
+								</Typography>
+								<Typography
+									variant="body2"
+									component="p"
+									className={clsx(classes.servicePaperText, classes.servicePaperCardText)}
+								>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste sequi libero dolore
+									consequuntur temporibus delectus, in tenetur quaerat aut ea autem, aliquam
+									excepturi, assumenda ab obcaecati magnam aspernatur culpa vitae.
+								</Typography>
+							</CardContent>
+						</CardActionArea>
+					</Card>
+					<Card className={clsx(classes.servicePaper, classes.servicePaperCard)} elevation={paperElevation}>
+						<CardActionArea className={classes.cardActionArea}>
+							<SvgIcon
+								className={clsx(classes.svgIcon, classes.svgIconTreatment)}
+								viewBox="0 0 84.8 84.8"
+							>
+								<SmileMakeover />
+							</SvgIcon>
+							<CardContent className={classes.cardContent}>
+								<Typography
+									variant="h5"
+									component="h3"
+									className={clsx(classes.servicePaperTitle, classes.servicePaperCardTitle)}
+								>
+									Smile Makeover
+								</Typography>
+								<Typography
+									variant="body2"
+									component="p"
+									className={clsx(classes.servicePaperText, classes.servicePaperCardText)}
+								>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste sequi libero dolore
+									consequuntur temporibus delectus, in tenetur quaerat aut ea autem, aliquam
+									excepturi, assumenda ab obcaecati magnam aspernatur culpa vitae.
+								</Typography>
+							</CardContent>
+						</CardActionArea>
+					</Card>
+					<Card className={clsx(classes.servicePaper, classes.servicePaperCard)} elevation={paperElevation}>
+						<CardActionArea className={classes.cardActionArea}>
+							<SvgIcon
+								className={clsx(classes.svgIcon, classes.svgIconTreatment)}
+								viewBox="0 0 84.8 84.8"
+							>
+								<TeethWhitening />
+							</SvgIcon>
+							<CardContent className={classes.cardContent}>
+								<Typography
+									variant="h5"
+									component="h3"
+									className={clsx(classes.servicePaperTitle, classes.servicePaperCardTitle)}
+								>
+									Teeth Whitening
+								</Typography>
+								<Typography
+									variant="body2"
+									component="p"
+									className={clsx(classes.servicePaperText, classes.servicePaperCardText)}
+								>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste sequi libero dolore
+									consequuntur temporibus delectus, in tenetur quaerat aut ea autem, aliquam Lorem
+									ipsum, dolor sit amet consectetur adipisicing elit.
+								</Typography>
+							</CardContent>
+						</CardActionArea>
+					</Card>
+				</div>
+				<div className="dental-treatments-buttons-div">
+					<Button
+						variant="contained"
+						color="primary"
+						className={clsx(classes.regularButton, classes.treatmentsButton)}
+					>
+						Chat Now
+					</Button>
+					<Link href="/treatments">
+						<a className="clinic-intro-link">See all treatments</a>
+					</Link>
+				</div>
+			</section>
 
 			<style jsx>{`
 				.hero-image-div {
@@ -388,6 +663,15 @@ const Index = (props) => {
 				}
 				.clinic-intro-link:hover {
 					text-decoration: underline;
+				}
+
+				.dental-treatments-buttons-div {
+					display: flex;
+					justify-content: flex-start;
+					width: 78%;
+					align-items: baseline;
+					margin: 0 auto;
+					margin-top: 1.5rem;
 				}
 			`}</style>
 		</Layout>

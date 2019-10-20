@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import Toolbar from "@material-ui/core/Toolbar";
 import Logo from "./logos-icons/Logo";
+import ActiveLink from "./ActiveLink";
 
 const useStyles = makeStyles((theme) => ({
 	"@global": {
@@ -35,9 +36,10 @@ const useStyles = makeStyles((theme) => ({
 		backgroundColor: theme.palette.primary.main,
 		fontFamily: theme.typography.sansSerif,
 		letterSpacing: "1px",
-		padding: "5px 20px",
+		padding: "8px 25px",
 		"&:hover": {
-			backgroundColor: theme.palette.primary.light
+			backgroundColor: theme.palette.secondary.main,
+			color: theme.palette.primary.main
 		}
 	},
 	toolbar: {
@@ -58,15 +60,32 @@ const useStyles = makeStyles((theme) => ({
 		alignItems: "center"
 	},
 	navLink: {
+		position: "relative",
 		textDecoration: "none",
 		margin: "0 10px",
 		color: theme.palette.secondary.dark,
 		fontWeight: "600",
-		fontSize: "1.8rem",
+		fontSize: "2rem",
 		transition: "all 200ms ease-in-out",
+		"&::before": {
+			content: "close-quote",
+			position: "absolute",
+			width: 0,
+			height: "120%",
+			borderBottom: `2px solid ${theme.palette.primary.main} `,
+			top: 0,
+			left: "-5%",
+			transition: "all 400ms ease-in-out"
+		},
 		"&:hover": {
-			color: theme.palette.primary.main
+			color: theme.palette.primary.main,
+			"&::before": {
+				width: "110%"
+			}
 		}
+	},
+	activeLink: {
+		color: theme.palette.primary.main
 	}
 }));
 
@@ -86,24 +105,24 @@ const Layout = (props) => {
 							</Link>
 						</div>
 						<nav className="navBar">
-							<Link href="/">
+							<ActiveLink href="/" activeClassName={classes.activeLink}>
 								<a className={classes.navLink}>Home</a>
-							</Link>
-							<Link href="/treatments">
+							</ActiveLink>
+							<ActiveLink href="/treatments" activeClassName={classes.activeLink}>
 								<a className={classes.navLink}>About Us</a>
-							</Link>
-							<Link href="/treatments">
+							</ActiveLink>
+							<ActiveLink href="/treatments" activeClassName={classes.activeLink}>
 								<a className={classes.navLink}>Treatments</a>
-							</Link>
-							<Link href="/before-after">
+							</ActiveLink>
+							<ActiveLink href="/before-after" activeClassName={classes.activeLink}>
 								<a className={classes.navLink}>Before-After</a>
-							</Link>
-							<Link href="/prices">
-								<a className={classes.navLink}>Prices</a>
-							</Link>
-							<Link href="/contact">
+							</ActiveLink>
+							<ActiveLink href="/prices" activeClassName={classes.activeLink}>
+								<a className={classes.navLink}>Prices & Cost Calculator</a>
+							</ActiveLink>
+							<ActiveLink href="/contact" activeClassName={classes.activeLink}>
 								<a className={classes.navLink}>Contact Us</a>
-							</Link>
+							</ActiveLink>
 						</nav>
 						<div>
 							<Button variant="contained" color="primary" className={classes.button}>
