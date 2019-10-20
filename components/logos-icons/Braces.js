@@ -1,14 +1,14 @@
 export default () => (
-	<svg x="0px" y="0px" viewBox="0 0 325 325" enable-background="new 0 0 325 325">
+	<svg x="0px" y="0px" viewBox="0 0 325 325" enableBackground="new 0 0 325 325">
 		<g>
 			<g>
 				<path
 					fill="#FFFFFF"
 					stroke="#295182"
-					stroke-width="5"
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					stroke-miterlimit="10"
+					strokeWidth="5"
+					strokeLinecap="round"
+					strokeLinejoin="round"
+					strokeMiterlimit="10"
 					d="
 			M110.8,212.3c4,13.3,5.1,27.2,4.2,37.8c-1.3,14.8,7.4,14.7,7.7,14.7c4.6,0,6.6-1.1,11.2-8.8c4.6-7.7,8.8-22.2,8.7-46.9
 			c-0.1-21.3,5.8-32.8,11-41.8c5-9.2,9.2-15.7,9.3-33.8c0-0.9,0-1.8-0.1-2.8c-0.5-12.8-5.5-20.3-13.2-25.6
@@ -21,10 +21,10 @@ export default () => (
 				<line
 					fill="none"
 					stroke="#295182"
-					stroke-width="5"
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					stroke-miterlimit="10"
+					strokeWidth="5"
+					strokeLinecap="round"
+					strokeLinejoin="round"
+					strokeMiterlimit="10"
 					x1="90.8"
 					y1="103.7"
 					x2="109.2"
@@ -34,10 +34,10 @@ export default () => (
 				<path
 					fill="#FFFFFF"
 					stroke="#295182"
-					stroke-width="5"
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					stroke-miterlimit="10"
+					strokeWidth="5"
+					strokeLinecap="round"
+					strokeLinejoin="round"
+					strokeMiterlimit="10"
 					d="
 			M255.1,212.3c4,13.3,5.1,27.2,4.2,37.8c-1.3,14.8,7.4,14.7,7.7,14.7c4.6,0,6.6-1.1,11.2-8.8c4.6-7.7,8.8-22.2,8.7-46.9
 			c-0.1-21.3,5.8-32.8,11-41.8c5-9.2,9.2-15.7,9.3-33.8c0-0.9,0-1.8-0.1-2.8c-0.5-12.8-5.5-20.3-13.2-25.6
@@ -50,10 +50,10 @@ export default () => (
 				<line
 					fill="none"
 					stroke="#295182"
-					stroke-width="5"
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					stroke-miterlimit="10"
+					strokeWidth="5"
+					strokeLinecap="round"
+					strokeLinejoin="round"
+					strokeMiterlimit="10"
 					x1="235.1"
 					y1="103.7"
 					x2="253.5"
@@ -63,10 +63,10 @@ export default () => (
 				<line
 					fill="none"
 					stroke="#295182"
-					stroke-width="5"
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					stroke-miterlimit="10"
+					strokeWidth="5"
+					strokeLinecap="round"
+					strokeLinejoin="round"
+					strokeMiterlimit="10"
 					x1="71.6"
 					y1="158.4"
 					x2="3.9"
@@ -76,10 +76,10 @@ export default () => (
 				<line
 					fill="none"
 					stroke="#295182"
-					stroke-width="5"
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					stroke-miterlimit="10"
+					strokeWidth="5"
+					strokeLinecap="round"
+					strokeLinejoin="round"
+					strokeMiterlimit="10"
 					x1="110.3"
 					y1="158.4"
 					x2="215.9"
@@ -89,10 +89,10 @@ export default () => (
 				<line
 					fill="none"
 					stroke="#295182"
-					stroke-width="5"
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					stroke-miterlimit="10"
+					strokeWidth="5"
+					strokeLinecap="round"
+					strokeLinejoin="round"
+					strokeMiterlimit="10"
 					x1="254.5"
 					y1="158.4"
 					x2="322"
@@ -104,10 +104,10 @@ export default () => (
 					y="139.1"
 					fill="#DFF0F7"
 					stroke="#295182"
-					stroke-width="5"
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					stroke-miterlimit="10"
+					strokeWidth="5"
+					strokeLinecap="round"
+					strokeLinejoin="round"
+					strokeMiterlimit="10"
 					width="38.6"
 					height="38.6"
 				/>
@@ -117,10 +117,10 @@ export default () => (
 					y="139.1"
 					fill="#DFF0F7"
 					stroke="#295182"
-					stroke-width="5"
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					stroke-miterlimit="10"
+					strokeWidth="5"
+					strokeLinecap="round"
+					strokeLinejoin="round"
+					strokeMiterlimit="10"
 					width="38.6"
 					height="38.6"
 				/>
@@ -128,18 +128,18 @@ export default () => (
 			<path
 				fill="none"
 				stroke="#FFFFFF"
-				stroke-width="5"
-				stroke-linecap="round"
-				stroke-miterlimit="10"
+				strokeWidth="5"
+				strokeLinecap="round"
+				strokeMiterlimit="10"
 				d="M52.2,119.5
 		c-4.3,1.3-7.2,5.2-8.4,10"
 			/>
 			<path
 				fill="none"
 				stroke="#FFFFFF"
-				stroke-width="5"
-				stroke-linecap="round"
-				stroke-miterlimit="10"
+				strokeWidth="5"
+				strokeLinecap="round"
+				strokeMiterlimit="10"
 				d="M198,119.5
 		c-4.3,1.3-7.2,5.2-8.4,10"
 			/>

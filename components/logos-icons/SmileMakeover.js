@@ -1,10 +1,10 @@
 export default () => (
-	<svg x="0px" y="0px" viewBox="0 0 325 325" enable-background="new 0 0 325 325">
+	<svg x="0px" y="0px" viewBox="0 0 325 325" enableBackground="new 0 0 325 325">
 		<g>
 			<path
 				fill="#DFF0F7"
 				stroke="#004C97"
-				stroke-miterlimit="10"
+				strokeMiterlimit="10"
 				d="M162.8,127.5c33.7,0,54.9-12.4,157.2,4.6
 		c-51.5-41.3-94.8-53.4-111.8-53.4c-14.8,0-39.4,10.8-45.4,13.6c-6-2.8-30.6-13.6-45.4-13.6c-16.9,0-60.3,12-111.8,53.4
 		C108,115.2,129.1,127.5,162.8,127.5z M74.6,108.1c-18.2,0.1,28.2-15.7,26.7-15.2c11.6-4.7,42.2-2.4,50.1,6
@@ -16,14 +16,14 @@ export default () => (
 			/>
 
 			<path
-				fill-rule="evenodd"
-				clip-rule="evenodd"
+				fillRule="evenodd"
+				clipRule="evenodd"
 				fill="#FFFFFF"
 				stroke="#004C97"
-				stroke-width="5"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				stroke-miterlimit="10"
+				strokeWidth="5"
+				strokeLinecap="round"
+				strokeLinejoin="round"
+				strokeMiterlimit="10"
 				d="
 		M119.8,124c-5.6,6.5-6.4,16.4-6.4,18.3v15.4v2.5c0,0,0.5,7.3,2.8,8c4,1.2,26.4,6.9,42.6,5.2c3.5-0.4,3.9-4.3,4-4.7c0,0,0,0,0,0
 		c0,0,0,0,0,0v-26.3c0,0,0,0,0,0c-0.1-0.2-5.7-8.6-13.4-15.4 M287.9,137.5c1.1,1.1,2.9,2.5,4.3,2.4c2-0.1,5-6.8,6-8.6
@@ -42,14 +42,14 @@ export default () => (
 			/>
 
 			<path
-				fill-rule="evenodd"
-				clip-rule="evenodd"
+				fillRule="evenodd"
+				clipRule="evenodd"
 				fill="none"
 				stroke="#004C97"
-				stroke-width="5"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				stroke-miterlimit="10"
+				strokeWidth="5"
+				strokeLinecap="round"
+				strokeLinejoin="round"
+				strokeMiterlimit="10"
 				d="
 		M5.7,132.1c51.5-41.3,94.8-53.4,111.8-53.4c14.8,0,39.4,10.8,45.4,13.6c6-2.8,30.6-13.6,45.4-13.6c16.9,0,60.3,12,111.8,53.4
 		c-102.3-16.9-123.4-4.6-157.2-4.6C129.1,127.5,108,115.2,5.7,132.1z M185.9,179.3c-19.6,0-23,1.4-23,1.4s-3.4-1.4-23-1.4
@@ -59,10 +59,10 @@ export default () => (
 			<path
 				fill="none"
 				stroke="#004C97"
-				stroke-width="5"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				stroke-miterlimit="10"
+				strokeWidth="5"
+				strokeLinecap="round"
+				strokeLinejoin="round"
+				strokeMiterlimit="10"
 				d="
 		M52.3,56h15.2 M61.2,50.4v14.4 M183.7,277.8h-9 M189.4,277.8h2.3 M221.4,251.6h2.3 M179.1,282.4V273 M105.9,26.6
 		c-2,0-3.6,1.6-3.6,3.6c0,2,1.6,3.6,3.6,3.6c2,0,3.6-1.6,3.6-3.6C109.5,28.2,107.9,26.6,105.9,26.6z M96.1,270
@@ -73,10 +73,10 @@ export default () => (
 			<path
 				fill="none"
 				stroke="#DFF0F7"
-				stroke-width="5"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				stroke-miterlimit="10"
+				strokeWidth="5"
+				strokeLinecap="round"
+				strokeLinejoin="round"
+				strokeMiterlimit="10"
 				d="
 		M149.9,182.9c0-16.4-0.6-23.1-18.6-23.1c17.7,0,18.6-7.7,18.6-23.1c0,14.4-0.3,23.1,18.6,23.1C150.7,159.8,149.9,166.4,149.9,182.9
 		z M30.7,230.5h9 M35.1,235v-9.4 M150.2,53c-3,0-5.4,2.4-5.4,5.4c0,3,2.4,5.4,5.4,5.4c3,0,5.4-2.4,5.4-5.4

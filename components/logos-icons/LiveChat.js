@@ -1,5 +1,5 @@
 export default () => (
-	<svg x="0px" y="0px" viewBox="0 0 324 292" enable-background="new 0 0 324 292">
+	<svg x="0px" y="0px" viewBox="0 0 324 292" enableBackground="new 0 0 324 292">
 		<g>
 			<g>
 				<g>
@@ -25,10 +25,10 @@ export default () => (
 					<path
 						fill="none"
 						stroke="#004C97"
-						stroke-width="5.1"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-miterlimit="10"
+						strokeWidth="5.1"
+						strokeLinecap="round"
+						strokeLinejoin="round"
+						strokeMiterlimit="10"
 						d="
 				M260.1,115.8c0,59.9-54.8,108.4-122.3,108.4c-15.8,0-42.9-4.7-56.8-9.5l-49.7,16.9l9.4-49.9c-15.8-18.3-25.2-41.1-25.2-65.9
 				C15.4,55.9,70.1,7.4,137.7,7.4C205.3,7.4,260.1,55.9,260.1,115.8z"
@@ -37,10 +37,10 @@ export default () => (
 					<path
 						fill="none"
 						stroke="#004C97"
-						stroke-width="5.1"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-miterlimit="10"
+						strokeWidth="5.1"
+						strokeLinecap="round"
+						strokeLinejoin="round"
+						strokeMiterlimit="10"
 						d="
 				M113.5,251.6c21,14.8,47.7,23.6,76.7,23.5c15.8-0.1,42.9-4.8,56.7-9.8l49.8,16.7l-9.6-49.8c15.7-18.3,25-41.2,24.9-66
 				c-0.1-19.2-5.7-37.1-15.6-52.7"
@@ -49,10 +49,10 @@ export default () => (
 					<line
 						fill="#EDFCFF"
 						stroke="#004C97"
-						stroke-width="5.1"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-miterlimit="10"
+						strokeWidth="5.1"
+						strokeLinecap="round"
+						strokeLinejoin="round"
+						strokeMiterlimit="10"
 						x1="67.1"
 						y1="92.1"
 						x2="208.3"
@@ -62,9 +62,9 @@ export default () => (
 					<line
 						fill="#EDFCFF"
 						stroke="#004C97"
-						stroke-width="5.1"
-						stroke-linecap="round"
-						stroke-linejoin="round"
+						strokeWidth="5.1"
+						strokeLinecap="round"
+						strokeLinejoin="round"
 						x1="67.1"
 						y1="141.7"
 						x2="102.7"
@@ -74,9 +74,9 @@ export default () => (
 					<line
 						fill="#EDFCFF"
 						stroke="#004C97"
-						stroke-width="5.1"
-						stroke-linecap="round"
-						stroke-linejoin="round"
+						strokeWidth="5.1"
+						strokeLinecap="round"
+						strokeLinejoin="round"
 						x1="134.8"
 						y1="141.7"
 						x2="170.4"

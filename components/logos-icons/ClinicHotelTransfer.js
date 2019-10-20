@@ -1,5 +1,5 @@
 export default () => (
-	<svg x="0px" y="0px" viewBox="0 0 300 249" enable-background="new 0 0 300 249">
+	<svg x="0px" y="0px" viewBox="0 0 300 249" enableBackground="new 0 0 300 249">
 		<g>
 			<path
 				fill="#FFFFFF"

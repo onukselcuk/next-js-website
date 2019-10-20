@@ -607,17 +607,20 @@ const Index = (props) => {
 				}
 				.isc-intro-section {
 					display: flex;
+					justify-content: center;
+					margin: 0 auto;
 					margin-top: 2.5rem;
+					width: 80%;
 				}
 				.clinic-image-collage-div {
 					display: flex;
 					align-items: center;
-					min-width: 50%;
+					width: 40vw;
+					flex-shrink: 0;
 				}
 				.clinic-image-collage {
 					width: 100%;
-					border-top-right-radius: 20px;
-					border-bottom-right-radius: 20px;
+					border-radius: 20px;
 				}
 				.clinic-intro-div {
 					display: flex;
@@ -627,6 +630,7 @@ const Index = (props) => {
 					background-color: ${sTheme.palette.secondary.main};
 					border-top: 1px solid ${sTheme.palette.primary.main};
 					border-bottom: 1px solid ${sTheme.palette.primary.main};
+					border-radius: 20px;
 					margin: 3rem 0;
 					padding: 5rem;
 				}

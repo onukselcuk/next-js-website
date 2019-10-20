@@ -1,5 +1,5 @@
 export default () => (
-	<svg x="0px" y="0px" viewBox="0 0 317 202" enable-background="new 0 0 317 202">
+	<svg x="0px" y="0px" viewBox="0 0 317 202" enableBackground="new 0 0 317 202">
 		<g>
 			<path fill="#FFFFFF" d="M155.9,6.8" />
 			<path fill="url(#SVGID_1_)" d="M155.9,7" />
@@ -11,8 +11,8 @@ export default () => (
 					y="7.4"
 					fill="#EDFCFF"
 					stroke="#004C97"
-					stroke-width="5.1"
-					stroke-miterlimit="10"
+					strokeWidth="5.1"
+					strokeMiterlimit="10"
 					width="301.5"
 					height="185.4"
 				/>

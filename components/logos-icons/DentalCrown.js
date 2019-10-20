@@ -1,13 +1,13 @@
 export default () => (
-	<svg x="0px" y="0px" viewBox="0 0 325 325" enable-background="new 0 0 325 325">
+	<svg x="0px" y="0px" viewBox="0 0 325 325" enableBackground="new 0 0 325 325">
 		<g>
 			<g>
 				<g>
 					<path
 						fill="#FFFFFF"
 						stroke="#004C97"
-						stroke-width="5"
-						stroke-miterlimit="10"
+						strokeWidth="5"
+						strokeMiterlimit="10"
 						d="M110.1,116.1c10.2-3,21.1-3.6,31.7-1.9
 				c5.6,0.9,11.2,1.7,16.9,2.5c2.4,0.3,5.1,0.2,7.5-0.3c14.4-3,29-4.2,43.5-1.2c25.3,5.2,43.9,25.7,47.5,50.9
 				c3.5,24.1-4.3,45.3-18.6,65c-2,2.8-3.2,6.3-3.9,9.6c-3.4,15.3-5.6,30.9-10.1,46c-2.5,8.3-8.2,15.9-13.2,23.4
@@ -21,15 +21,15 @@ export default () => (
 					<path
 						fill="#FFFFFF"
 						stroke="#004C97"
-						stroke-width="5"
-						stroke-miterlimit="10"
+						strokeWidth="5"
+						strokeMiterlimit="10"
 						d="M153.3,116c0,0,31.9,3.4,56.4,24.8"
 					/>
 					<path
 						fill="#494F58"
 						stroke="#004C97"
-						stroke-width="5"
-						stroke-miterlimit="10"
+						strokeWidth="5"
+						strokeMiterlimit="10"
 						d="M209.7,144c-0.8,0-1.5-0.3-2.1-0.8
 				c-23.4-20.4-54.3-24-54.6-24c-1.8-0.2-3.1-1.8-2.9-3.6c0.2-1.8,1.8-3.1,3.6-2.9c1.3,0.1,33.2,3.8,58.2,25.6
 				c1.4,1.2,1.5,3.2,0.3,4.6C211.5,143.6,210.6,144,209.7,144z"
@@ -40,8 +40,8 @@ export default () => (
 				<path
 					fill="#004C97"
 					stroke="#004C97"
-					stroke-width="3"
-					stroke-miterlimit="10"
+					strokeWidth="3"
+					strokeMiterlimit="10"
 					d="M92.5,170.5c-0.3,0-0.6,0-0.8-0.1
 			c-1.7-0.5-2.8-2.2-2.3-4c4.2-15.9,14.6-26.6,30.1-31.1c1.7-0.5,3.5,0.5,4,2.2c0.5,1.7-0.5,3.5-2.2,4c-13.2,3.8-22,13-25.6,26.5
 			C95.2,169.6,93.9,170.5,92.5,170.5z"
@@ -52,8 +52,8 @@ export default () => (
 			<path
 				fill="#DFF0F7"
 				stroke="#004C97"
-				stroke-width="5"
-				stroke-miterlimit="10"
+				strokeWidth="5"
+				strokeMiterlimit="10"
 				d="M249.1,67.2c-2.5,0.5-5.1,0.4-7.5-0.2
 		c-5,7.3-9.1,20-12.2,32.9c-0.1,0.5-0.3,1-0.4,1.5c-1.8,7.7-3.3,15.4-4.5,22c-0.1,0.5-0.2,1.1-0.3,1.6c-0.7,3.8-1.2,7.2-1.6,10
 		c0,0,0,0.1,0,0.1c-0.7,4.5-1,7.3-1,7.3H110.8c0,0-0.1-0.5-0.2-1.3c-0.2-1.2-0.5-3.3-0.9-6.1c0,0,0-0.1,0-0.1
@@ -69,8 +69,8 @@ export default () => (
 				transform="matrix(0.9571 -0.2898 0.2898 0.9571 -24.1996 52.815)"
 				fill="#FFFFFF"
 				stroke="#004C97"
-				stroke-width="5"
-				stroke-miterlimit="10"
+				strokeWidth="5"
+				strokeMiterlimit="10"
 				cx="166.2"
 				cy="108.1"
 				rx="18"
@@ -81,8 +81,8 @@ export default () => (
 			<path
 				fill="#FFFFFF"
 				stroke="#004C97"
-				stroke-width="5"
-				stroke-miterlimit="10"
+				strokeWidth="5"
+				strokeMiterlimit="10"
 				d="M111.3,124.8c5-1.8,8.6-6.5,8.6-12.1
 		c0-7.1-5.8-12.8-12.8-12.8c-0.3,0-0.6,0-0.9,0"
 			/>
@@ -91,8 +91,8 @@ export default () => (
 			<path
 				fill="#FFFFFF"
 				stroke="#004C97"
-				stroke-width="5"
-				stroke-miterlimit="10"
+				strokeWidth="5"
+				strokeMiterlimit="10"
 				d="M226.2,99.9c-0.5-0.1-1.1-0.1-1.6-0.1
 		c-7.1,0-12.8,5.8-12.8,12.8c0,5.9,3.9,10.8,9.3,12.3"
 			/>

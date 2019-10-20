@@ -1,12 +1,12 @@
 export default () => (
-	<svg x="0px" y="0px" viewBox="0 0 280 324" enable-background="new 0 0 280 324">
+	<svg x="0px" y="0px" viewBox="0 0 280 324" enableBackground="new 0 0 280 324">
 		<g>
 			<g>
 				<path
 					fill="#EDFCFF"
 					stroke="#004C97"
-					stroke-width="5.1"
-					stroke-miterlimit="10"
+					strokeWidth="5.1"
+					strokeMiterlimit="10"
 					d="M130.5,33.6c-4.9-6.2-12.2-9.9-20.2-9.9
 			c-9.9,0-18.7,5.6-23.2,14.5l-1,2H64.1v34.1h48.8C114.9,59.1,121.2,45.1,130.5,33.6z"
 				/>
@@ -20,46 +20,46 @@ export default () => (
 				<path
 					fill="none"
 					stroke="#004C97"
-					stroke-width="5.1"
-					stroke-miterlimit="10"
+					strokeWidth="5.1"
+					strokeMiterlimit="10"
 					d="M136.7,36.7c-4.8-9.7-14.7-16.5-26.4-16.5
 			c-11.6,0-21.5,6.8-26.4,16.5H60.5v41.3h55.1"
 				/>
 				<path
 					fill="none"
 					stroke="#004C97"
-					stroke-width="5.1"
-					stroke-miterlimit="10"
+					strokeWidth="5.1"
+					strokeMiterlimit="10"
 					d="M60.5,53.2H6.6V309h201.1
 			c12.8,0,23.4-10.5,23.4-23.4V151.2"
 				/>
 				<polyline
 					fill="none"
 					stroke="#004C97"
-					stroke-width="5.1"
-					stroke-miterlimit="10"
+					strokeWidth="5.1"
+					strokeMiterlimit="10"
 					points="44.2,164.2 54.2,178.6 79.5,147.7 		
 			"
 				/>
 				<polyline
 					fill="none"
 					stroke="#004C97"
-					stroke-width="5.1"
-					stroke-miterlimit="10"
+					strokeWidth="5.1"
+					strokeMiterlimit="10"
 					points="44.2,209.6 54.2,224 79.5,193.1 		"
 				/>
 				<polyline
 					fill="none"
 					stroke="#004C97"
-					stroke-width="5.1"
-					stroke-miterlimit="10"
+					strokeWidth="5.1"
+					strokeMiterlimit="10"
 					points="44.2,255 54.2,269.4 79.5,238.5 		"
 				/>
 				<line
 					fill="none"
 					stroke="#004C97"
-					stroke-width="5.1"
-					stroke-miterlimit="10"
+					strokeWidth="5.1"
+					strokeMiterlimit="10"
 					x1="100.7"
 					y1="178.6"
 					x2="164.5"
@@ -68,8 +68,8 @@ export default () => (
 				<line
 					fill="none"
 					stroke="#004C97"
-					stroke-width="5.1"
-					stroke-miterlimit="10"
+					strokeWidth="5.1"
+					strokeMiterlimit="10"
 					x1="100.7"
 					y1="219.9"
 					x2="195.6"
@@ -78,8 +78,8 @@ export default () => (
 				<line
 					fill="none"
 					stroke="#004C97"
-					stroke-width="5.1"
-					stroke-miterlimit="10"
+					strokeWidth="5.1"
+					strokeMiterlimit="10"
 					x1="100.7"
 					y1="261.2"
 					x2="195.6"
@@ -88,8 +88,8 @@ export default () => (
 				<path
 					fill="#EDFCFF"
 					stroke="#004C97"
-					stroke-width="5.1"
-					stroke-miterlimit="10"
+					strokeWidth="5.1"
+					strokeMiterlimit="10"
 					d="M273.9,85.5c0,43.7-35.4,79.1-79.1,79.1
 			c-43.7,0-79.1-35.4-79.1-79.1c0-43.7,35.4-79.1,79.1-79.1C238.5,6.4,273.9,41.9,273.9,85.5z"
 				/>
@@ -97,10 +97,10 @@ export default () => (
 				<path
 					fill="#FFFFFF"
 					stroke="#004C97"
-					stroke-width="5.1"
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					stroke-miterlimit="10"
+					strokeWidth="5.1"
+					strokeLinecap="round"
+					strokeLinejoin="round"
+					strokeMiterlimit="10"
 					d="
 			M234.9,59.5c-0.3-7.2-3.1-11.3-7.3-14.2c-4.3-2.9-10.4-4.3-16.5-4.3c-5.6,0-11.1,1.2-14.8,2.8l-1.5,0.7l-1.5-0.7
 			c-3-1.4-7.2-2.4-11.6-2.7l-7.6,0.1c-4.5,0.5-8.8,1.8-12.1,4c-4.3,3-7.1,7.1-7.4,14.2c0,0.6,0,1.1,0,1.6
@@ -113,10 +113,10 @@ export default () => (
 				<line
 					fill="none"
 					stroke="#004C97"
-					stroke-width="5.1"
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					stroke-miterlimit="10"
+					strokeWidth="5.1"
+					strokeLinecap="round"
+					strokeLinejoin="round"
+					strokeMiterlimit="10"
 					x1="194.8"
 					y1="44.5"
 					x2="205"

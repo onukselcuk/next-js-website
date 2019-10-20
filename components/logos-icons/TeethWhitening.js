@@ -1,5 +1,5 @@
 export default () => (
-	<svg x="0px" y="0px" viewBox="0 0 325 325" enable-background="new 0 0 325 325">
+	<svg x="0px" y="0px" viewBox="0 0 325 325" enableBackground="new 0 0 325 325">
 		<g>
 			<g>
 				<path
@@ -17,10 +17,10 @@ export default () => (
 				<path
 					fill="none"
 					stroke="#004C97"
-					stroke-width="4.5"
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					stroke-miterlimit="10"
+					strokeWidth="4.5"
+					strokeLinecap="round"
+					strokeLinejoin="round"
+					strokeMiterlimit="10"
 					d="
 			M261,124.2c-0.7-18.4-7.9-28.9-18.9-36.5c-11.1-7.5-26.7-11-42.2-10.9c-14.4,0-28.5,3-38.1,7.3l-3.8,1.7l-3.8-1.7
 			c-7.7-3.5-18.3-6.1-29.7-7l-19.6,0.3c-11.6,1.3-22.6,4.7-31,10.4c-11,7.6-18.2,18.2-18.9,36.5c0,1.5-0.1,2.8-0.1,4.1
@@ -33,10 +33,10 @@ export default () => (
 				<line
 					fill="none"
 					stroke="#295182"
-					stroke-width="4.5"
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					stroke-miterlimit="10"
+					strokeWidth="4.5"
+					strokeLinecap="round"
+					strokeLinejoin="round"
+					strokeMiterlimit="10"
 					x1="158"
 					y1="85.7"
 					x2="184.2"
@@ -46,10 +46,10 @@ export default () => (
 				<path
 					fill="#EDFCFF"
 					stroke="#0178D1"
-					stroke-width="4.5"
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					stroke-miterlimit="10"
+					strokeWidth="4.5"
+					strokeLinecap="round"
+					strokeLinejoin="round"
+					strokeMiterlimit="10"
 					d="
 			M283.7,100.2c0-39.8,31.3-39.8,31.3-39.8c-31.3,0-31.3-39.8-31.3-39.8s0,39.8-31.3,39.8C252.5,60.4,283.7,60.4,283.7,100.2z"
 				/>
@@ -57,10 +57,10 @@ export default () => (
 				<path
 					fill="#EDFCFF"
 					stroke="#0178D1"
-					stroke-width="4.5"
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					stroke-miterlimit="10"
+					strokeWidth="4.5"
+					strokeLinecap="round"
+					strokeLinejoin="round"
+					strokeMiterlimit="10"
 					d="
 			M124.4,188.7c0-39,30.6-39,30.6-39c-30.6,0-30.6-39-30.6-39s0,39-30.6,39C93.8,149.7,124.4,149.7,124.4,188.7z"
 				/>
@@ -68,10 +68,10 @@ export default () => (
 				<path
 					fill="#EDFCFF"
 					stroke="#0178D1"
-					stroke-width="4.5"
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					stroke-miterlimit="10"
+					strokeWidth="4.5"
+					strokeLinecap="round"
+					strokeLinejoin="round"
+					strokeMiterlimit="10"
 					d="
 			M41.5,87.3c0-27.6,21.7-27.6,21.7-27.6c-21.7,0-21.7-27.6-21.7-27.6s0,27.6-21.6,27.6C19.8,59.7,41.5,59.7,41.5,87.3z"
 				/>
@@ -79,9 +79,9 @@ export default () => (
 			<path
 				fill="none"
 				stroke="#0178D1"
-				stroke-width="4"
-				stroke-linecap="round"
-				stroke-miterlimit="10"
+				strokeWidth="4"
+				strokeLinecap="round"
+				strokeMiterlimit="10"
 				d="M218.7,106.5
 		c8.7,7.9,11.1,19.9,10.4,31.2"
 			/>
