@@ -1,9 +1,11 @@
-import Link from "next/link";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import Toolbar from "@material-ui/core/Toolbar";
 import Logo from "./logos-icons/Logo";
 import ActiveLink from "./ActiveLink";
+import WhatsAppIcon from "@material-ui/icons/WhatsApp";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import clsx from "clsx";
 
 const useStyles = makeStyles((theme) => ({
 	"@global": {
@@ -33,19 +35,55 @@ const useStyles = makeStyles((theme) => ({
 	button: {
 		borderRadius: "20px",
 		fontSize: "1.5rem",
-		backgroundColor: theme.palette.primary.main,
+		backgroundColor: theme.palette.secondary.main,
+		color: theme.palette.primary.main,
 		fontFamily: theme.typography.sansSerif,
 		letterSpacing: "1px",
 		padding: "8px 25px",
 		"&:hover": {
-			backgroundColor: theme.palette.secondary.main,
+			backgroundColor: theme.palette.third.dark,
+			color: theme.palette.primary.main
+		}
+	},
+	topBar: {
+		width: "100%",
+		height: "50px",
+		backgroundColor: theme.palette.third.dark,
+		display: "flex",
+		justifyContent: "center",
+		alignItems: "center"
+	},
+	topBarWrapper: {
+		display: "flex",
+		justifyContent: "space-between",
+		alignItems: "center",
+		width: "80%",
+		color: theme.palette.primary.main
+	},
+	topBarContacts: {
+		display: "flex",
+		alignItems: "center",
+		color: theme.palette.primary.main
+	},
+	topBarText: {
+		margin: "0 1rem",
+		fontSize: "1.9rem"
+	},
+	topBarLink: {
+		textDecoration: "none",
+		fontSize: "1.9rem",
+		"&:hover": {
+			textDecoration: "underline"
+		},
+		"&:visited": {
 			color: theme.palette.primary.main
 		}
 	},
 	toolbar: {
 		padding: 0,
 		margin: 0,
-		backgroundColor: theme.palette.secondary.main
+		backgroundColor: theme.palette.primary.main,
+		overflow: "hidden"
 	},
 	header: {
 		width: "100%"
@@ -59,11 +97,15 @@ const useStyles = makeStyles((theme) => ({
 		justifyContent: "space-between",
 		alignItems: "center"
 	},
+	navBar: {
+		display: "flex",
+		alignItems: "baseline"
+	},
 	navLink: {
 		position: "relative",
 		textDecoration: "none",
 		margin: "0 10px",
-		color: theme.palette.secondary.dark,
+		color: theme.palette.secondary.main,
 		fontWeight: "600",
 		fontSize: "2rem",
 		transition: "all 200ms ease-in-out",
@@ -72,20 +114,39 @@ const useStyles = makeStyles((theme) => ({
 			position: "absolute",
 			width: 0,
 			height: "120%",
-			borderBottom: `2px solid ${theme.palette.primary.main} `,
+			borderBottom: `2px solid ${theme.palette.secondary.main} `,
 			top: 0,
 			left: "-5%",
 			transition: "all 400ms ease-in-out"
 		},
 		"&:hover": {
-			color: theme.palette.primary.main,
 			"&::before": {
 				width: "110%"
 			}
 		}
 	},
+	treatmentsLinkDiv: {
+		display: "flex",
+		alignItems: "center",
+		cursor: "pointer"
+	},
+	treatmentsLink: {
+		marginRight: 0
+	},
+	expandMoreIcon: {
+		color: theme.palette.secondary.main,
+		marginTop: ".2rem"
+	},
 	activeLink: {
-		color: theme.palette.primary.main
+		"&::before": {
+			content: "close-quote",
+			position: "absolute",
+			width: "110%",
+			height: "120%",
+			borderBottom: `2px solid ${theme.palette.secondary.main} `,
+			top: 0,
+			left: "-5%"
+		}
 	}
 }));
 
@@ -94,17 +155,31 @@ const Layout = (props) => {
 
 	return (
 		<div className={classes.root}>
+			<div className={classes.topBar}>
+				<div className={classes.topBarWrapper}>
+					<div className={classes.languageSelections}>
+						<a target="_blank" href="https://www.istanbulsmilecenter.com" className={classes.topBarLink} />
+					</div>
+					<div className={classes.topBarContacts}>
+						<WhatsAppIcon />
+						<p className={classes.topBarText}>Call or Text us on Whatsapp</p>
+						<a
+							target="_blank"
+							href="https://wa.me/905309492470?text=Hi+I+have+a+question+about+dental+treatments.+"
+							className={classes.topBarLink}
+						>
+							+90 530 949 24 70
+						</a>
+					</div>
+				</div>
+			</div>
 			<Toolbar className={classes.toolbar} disableGutters={true}>
 				<header className={classes.header}>
 					<div className={classes.headerDiv}>
 						<div>
-							<Link href="/">
-								<a>
-									<Logo />
-								</a>
-							</Link>
+							<Logo />
 						</div>
-						<nav className="navBar">
+						<nav className={classes.navBar}>
 							<ActiveLink href="/" activeClassName={classes.activeLink}>
 								<a className={classes.navLink}>Home</a>
 							</ActiveLink>
@@ -112,7 +187,13 @@ const Layout = (props) => {
 								<a className={classes.navLink}>About Us</a>
 							</ActiveLink>
 							<ActiveLink href="/treatments" activeClassName={classes.activeLink}>
-								<a className={classes.navLink}>Treatments</a>
+								<div className={classes.treatmentsLinkDiv}>
+									<a className={clsx(classes.navLink, classes.treatmentsLink)}>Treatments</a>
+									<ExpandMoreIcon className={classes.expandMoreIcon} />
+								</div>
+							</ActiveLink>
+							<ActiveLink href="/privileges&itinerary" activeClassName={classes.activeLink}>
+								<a className={classes.navLink}>Privileges & Itinerary</a>
 							</ActiveLink>
 							<ActiveLink href="/before-after" activeClassName={classes.activeLink}>
 								<a className={classes.navLink}>Before-After</a>

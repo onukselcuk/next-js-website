@@ -28,8 +28,9 @@ const theme = {
 	},
 	typography: {
 		htmlFontSize: 10,
-		sansSerif: "Source Sans Pro, sans-serif",
+		sansSerif: "'Source Sans Pro', sans-serif",
 		serif: "Sorts Mill Goudy, serif"
+		// serif: "'Libre Baskerville', serif"
 	}
 };
 

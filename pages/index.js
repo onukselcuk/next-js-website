@@ -30,6 +30,8 @@ import CosmeticDentistry from "../components/logos-icons/CosmeticDentistry";
 import PediatricDentistry from "../components/logos-icons/PediatricDentistry";
 import SmileMakeover from "../components/logos-icons/SmileMakeover";
 import TeethWhitening from "../components/logos-icons/TeethWhitening";
+import doctorImg from "../public/shutterstock_1498270505.jpg";
+import doctorImg2 from "../public/stock-photo-beautiful-family-of-mother-and-daughter-together-at-home-smiling-confident-showing-and-pointing-1254258604.jpg";
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -95,7 +97,7 @@ const useStyles = makeStyles((theme) => ({
 		color: theme.palette.primary.main,
 		fontFamily: theme.typography.serif,
 		marginTop: "10px",
-		fontSize: "2rem"
+		fontSize: "2.5rem"
 	},
 	servicePaperText: {
 		textAlign: "center",
@@ -106,7 +108,7 @@ const useStyles = makeStyles((theme) => ({
 		paddingTop: 0
 	},
 	servicePaperCardTitle: {
-		fontSize: "2.8rem"
+		fontSize: "3rem"
 	},
 	servicePaperCardText: {
 		fontSize: "1.7rem"
@@ -131,6 +133,19 @@ const useStyles = makeStyles((theme) => ({
 const Index = (props) => {
 	const paperElevation = 2;
 
+	const pics = {
+		yasin: [ doctorImg, doctorImg2 ],
+		sevil: [ doctorImg, doctorImg2 ],
+		yavuz: [ doctorImg, doctorImg2 ]
+	};
+
+	const handleMouseOver = (e) => {
+		e.target.src = pics[e.target.name][1];
+	};
+	const handleMouseOut = (e) => {
+		e.target.src = pics[e.target.name][0];
+	};
+
 	const classes = useStyles();
 	return (
 		<Layout>
@@ -147,7 +162,7 @@ const Index = (props) => {
 			</div>
 			<section className="our-services-section">
 				<div className="our-services-header">
-					<h2 className="our-services-header-text">Our Services</h2>
+					<h2 className="our-services-header-text">Your Privileges</h2>
 					<p className="our-services-header-paragraph-text">
 						At Istanbul Smile Center, we offer unique and free services to our international patients to
 						make their dental treatments super easy and enjoying like no other clinic can.
@@ -271,6 +286,18 @@ const Index = (props) => {
 							patients are available for amazing tours. */}
 						</Typography>
 					</Paper>
+				</div>
+				<div className="dental-treatments-buttons-div">
+					<Button
+						variant="contained"
+						color="primary"
+						className={clsx(classes.regularButton, classes.treatmentsButton)}
+					>
+						Chat Now
+					</Button>
+					<Link href="/privileges&itinerary">
+						<a className="clinic-intro-link">Learn more abut your privileges and itinerary</a>
+					</Link>
 				</div>
 			</section>
 			<section className="isc-intro-section">
@@ -552,6 +579,94 @@ const Index = (props) => {
 					</Link>
 				</div>
 			</section>
+			<section className="our-doctors-section">
+				<div className="our-services-header">
+					<h2 className="our-services-header-text">Our Doctors</h2>
+					<p className="our-services-header-paragraph-text">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis mollitia deleniti beatae quam
+						incidunt doloribus. Culpa numquam tenetur fugiat modi debitis, est, aut earum perspiciatis ut
+						incidunt dignissimos quos. Voluptate.
+					</p>
+				</div>
+				<div className="our-doctors-wrapper">
+					<div className="doctor-wrapper">
+						<img
+							onMouseOver={handleMouseOver}
+							onMouseOut={handleMouseOut}
+							className="doctor-image"
+							src={doctorImg}
+							alt=""
+							name="yasin"
+						/>
+						<a className="doctor-link">Dr. Yasin Akgül</a>
+						<p className="doctor-specialty">Orthodontics Specialist</p>
+					</div>
+					<div className="doctor-wrapper">
+						<img
+							className="doctor-image"
+							src={doctorImg}
+							alt=""
+							name="sevil"
+							onMouseOver={handleMouseOver}
+							onMouseOut={handleMouseOut}
+						/>
+						<a className="doctor-link">Dr. Sevil Akgül</a>
+						<p className="doctor-specialty">Pedodontics Specialist</p>
+					</div>
+					<div className="doctor-wrapper">
+						<img
+							className="doctor-image"
+							src={doctorImg}
+							alt=""
+							name="yavuz"
+							onMouseOver={handleMouseOver}
+							onMouseOut={handleMouseOut}
+						/>
+						<a className="doctor-link">Dr. Yavuz Eker</a>
+						<p className="doctor-specialty">Dental Aesthetics Specialist</p>
+					</div>
+				</div>
+			</section>
+			<div>
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae ea reiciendis hic fugiat unde quo
+				provident voluptatem sunt vitae quod harum illo quia, quis accusamus, sit officiis voluptas perferendis
+				neque. Architecto, laboriosam assumenda? Eum dicta tempore velit, facilis nam nostrum esse. Assumenda
+				amet iusto debitis, provident dignissimos reprehenderit fuga, suscipit accusamus illum ipsam earum?
+				Molestias ut voluptates quos vitae ipsam! Minima tenetur nam pariatur, distinctio ratione soluta
+				officiis ipsam quidem totam rem commodi est porro. Odio dolores, reprehenderit nemo ea voluptate
+				laboriosam animi dicta obcaecati aliquid, quibusdam possimus? Asperiores, voluptates. Tempora
+				accusantium nisi quos recusandae vel incidunt et mollitia alias, voluptate a consequuntur architecto non
+				aut tempore sapiente reiciendis perspiciatis sunt accusamus saepe officia perferendis! Delectus nobis
+				magnam natus fugiat? Libero reprehenderit possimus dolorem veritatis suscipit laudantium! Voluptate
+				commodi molestiae alias voluptatem officia explicabo itaque. Quisquam at minus similique, voluptates
+				alias quaerat debitis exercitationem error delectus autem asperiores. Quia, ratione. Lorem ipsum dolor
+				sit amet consectetur adipisicing elit. Doloribus rerum saepe non laboriosam, vitae assumenda cupiditate
+				voluptatum, perferendis ipsa aut itaque blanditiis obcaecati commodi? Tenetur velit adipisci
+				consequuntur optio omnis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, ipsum!
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam repellat, dolorum recusandae amet iusto,
+				rerum beatae perferendis illo debitis suscipit consectetur earum. Asperiores harum ipsa rem, dolorum ex
+				eos eligendi? Ratione quaerat eaque nihil repellat sed optio enim quo eius, mollitia amet fugit
+				consequuntur nam tenetur sunt cupiditate architecto asperiores quidem nemo debitis suscipit maxime iusto
+				dolorem facere consectetur. Ex. Voluptates impedit culpa eos, non illo perferendis consequatur, laborum
+				recusandae corrupti eius voluptas assumenda incidunt maiores dolores, perspiciatis aliquam provident
+				debitis atque tempore amet minima laudantium! Nemo obcaecati velit assumenda! Consequatur cupiditate
+				fugiat esse. Minus distinctio perferendis ullam hic, quo dolore architecto autem officiis laborum
+				voluptates, dicta, voluptatum exercitationem amet ipsam iure provident doloremque quia sed fugit
+				expedita omnis aspernatur. Illum recusandae cum deserunt neque nemo exercitationem, assumenda distinctio
+				in facilis est quidem provident iure quis veritatis accusantium, aspernatur modi? A obcaecati, ullam ab
+				nostrum cumque adipisci? Saepe, perferendis harum? Reiciendis expedita dolores sequi inventore velit
+				soluta cum voluptas aliquam quasi quam, sit aspernatur officia possimus consequuntur laboriosam quidem
+				molestias quibusdam eaque reprehenderit quod necessitatibus corrupti! Iste omnis ratione blanditiis?
+				Labore praesentium dolore libero ipsum animi aliquid? Iure hic corrupti illum assumenda nesciunt nostrum
+				ad asperiores incidunt fugiat accusantium debitis, sunt exercitationem suscipit veniam aliquam molestiae
+				sed quo atque unde. Consequuntur laboriosam, excepturi repudiandae est obcaecati doloribus nostrum
+				tenetur porro, velit autem voluptates eveniet iste saepe eius quaerat hic architecto voluptas ut
+				asperiores iure ipsam quam culpa. Id, aut quisquam? Tempora eos nulla modi tenetur similique at, odio et
+				dignissimos, ipsa eius vel accusamus ad sunt! Iusto quibusdam inventore, temporibus error cumque ad
+				nihil sint officia magni aspernatur ipsum hic. Laborum amet eius nemo assumenda eum eaque quod sit totam
+				aliquam perferendis, quo hic nulla vero itaque unde, blanditiis delectus, quibusdam fugiat sequi rerum
+				eos voluptas. Impedit quidem dolorem soluta.
+			</div>
 
 			<style jsx>{`
 				.hero-image-div {
@@ -620,7 +735,8 @@ const Index = (props) => {
 				}
 				.clinic-image-collage {
 					width: 100%;
-					border-radius: 20px;
+					border-top-left-radius: 20px;
+					border-bottom-left-radius: 20px;
 				}
 				.clinic-intro-div {
 					display: flex;
@@ -630,6 +746,7 @@ const Index = (props) => {
 					background-color: ${sTheme.palette.secondary.main};
 					border-top: 1px solid ${sTheme.palette.primary.main};
 					border-bottom: 1px solid ${sTheme.palette.primary.main};
+					border-right: 1px solid ${sTheme.palette.primary.main};
 					border-radius: 20px;
 					margin: 3rem 0;
 					padding: 5rem;
@@ -676,6 +793,45 @@ const Index = (props) => {
 					align-items: baseline;
 					margin: 0 auto;
 					margin-top: 1.5rem;
+				}
+				.our-doctors-section {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					margin-bottom: 100rem;
+					padding: 6rem 0;
+					background-color: ${sTheme.palette.secondary.main};
+				}
+				.our-doctors-wrapper {
+					display: flex;
+					justify-content: center;
+					margin-top: 5rem;
+					width: 80%;
+				}
+				.doctor-wrapper {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					text-align: center;
+				}
+				.doctor-image {
+					margin: 0 1rem;
+					border-radius: 300px;
+					height: 500px;
+				}
+				.doctor-link {
+					font-size: 2.5rem;
+					margin-top: 3rem;
+					color: ${sTheme.palette.secondary.dark};
+					font-family: ${sTheme.typography.sansSerif};
+				}
+				.doctor-link:hover {
+					text-decoration: underline;
+					cursor: pointer;
+				}
+				.doctor-specialty {
+					font-size: 2rem;
+					color: ${sTheme.palette.secondary.dark};
 				}
 			`}</style>
 		</Layout>
