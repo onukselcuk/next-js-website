@@ -12,6 +12,10 @@ const useStyles = makeStyles((theme) => ({
 		"& .st0, & .st1, & .st2": {
 			transition: "fill 400ms ease-in-out"
 		},
+		"& .st0, & .st4": {
+			fill: theme.palette.third.dark
+		},
+
 		"&:hover": {
 			cursor: "pointer",
 			"& .st0 ": {
@@ -170,7 +174,7 @@ const Logo = () => {
 						/>
 						<g>
 							<path
-								className="st1"
+								className="st1 st4"
 								d="M529.2,337.8c-54,0-103.4-31.8-125.8-81.1c-2-4.4-0.1-9.6,4.4-11.7c4.4-2,9.6,0,11.7,4.4
 		c19.6,43,62.6,70.8,109.8,70.8c47.1,0,90.2-27.8,109.7-70.8c2-4.4,7.3-6.4,11.7-4.4c4.4,2,6.4,7.2,4.4,11.7
 		C632.6,306,583.2,337.8,529.2,337.8z"

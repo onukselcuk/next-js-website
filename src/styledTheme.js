@@ -3,16 +3,20 @@ import { red } from "@material-ui/core/colors";
 const theme = {
 	palette: {
 		primary: {
-			main: "#004C97",
+			// main: "#004C97",
+			main: "#1a3a6f",
 			light: "#0060a7"
 		},
 		secondary: {
 			main: "#f9f9f6",
+			// main: "#fff5ee",
 			dark: "#6c675c"
 		},
 		third: {
 			main: "#edfcff",
-			dark: "#dff0f7"
+			// dark: "#dff0f7"
+			// dark: "#c3eef5"
+			dark: "#E94D65"
 		},
 		original: {
 			main: "#038989",

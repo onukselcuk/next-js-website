@@ -42,12 +42,12 @@ const useStyles = makeStyles((theme) => ({
 		padding: "8px 25px",
 		"&:hover": {
 			backgroundColor: theme.palette.third.dark,
-			color: theme.palette.primary.main
+			color: theme.palette.secondary.main
 		}
 	},
 	topBar: {
 		width: "100%",
-		height: "45px",
+		height: "30px",
 		backgroundColor: theme.palette.third.dark,
 		display: "flex",
 		justifyContent: "center",
@@ -63,20 +63,20 @@ const useStyles = makeStyles((theme) => ({
 	topBarContacts: {
 		display: "flex",
 		alignItems: "center",
-		color: theme.palette.primary.main
+		color: theme.palette.third.main
 	},
 	topBarText: {
 		margin: "0 1rem",
-		fontSize: "1.9rem"
+		fontSize: "1.6rem"
 	},
 	topBarLink: {
 		textDecoration: "none",
-		fontSize: "1.9rem",
+		fontSize: "1.6rem",
 		"&:hover": {
 			textDecoration: "underline"
 		},
 		"&:visited": {
-			color: theme.palette.primary.main
+			color: theme.palette.third.main
 		}
 	},
 	toolbar: {
@@ -114,7 +114,7 @@ const useStyles = makeStyles((theme) => ({
 			position: "absolute",
 			width: 0,
 			height: "120%",
-			borderBottom: `2px solid ${theme.palette.secondary.main} `,
+			borderBottom: `2px solid ${theme.palette.third.dark} `,
 			top: 0,
 			left: "-3%",
 			transition: "all 400ms ease-in-out"
@@ -133,11 +133,11 @@ const useStyles = makeStyles((theme) => ({
 		"&::before": {
 			content: "close-quote",
 			position: "absolute",
-			width: "110%",
+			width: "106%",
 			height: "120%",
-			borderBottom: `2px solid ${theme.palette.secondary.main} `,
+			borderBottom: `2px solid ${theme.palette.third.dark} `,
 			top: 0,
-			left: "-5%"
+			left: "-3%"
 		}
 	}
 }));

@@ -32,6 +32,7 @@ import SmileMakeover from "../components/logos-icons/SmileMakeover";
 import TeethWhitening from "../components/logos-icons/TeethWhitening";
 import doctorImg from "../public/shutterstock_1498270505.jpg";
 import doctorImg2 from "../public/stock-photo-beautiful-family-of-mother-and-daughter-together-at-home-smiling-confident-showing-and-pointing-1254258604.jpg";
+import IstanbulSilhouette from "../components/logos-icons/IstanbulSilhouette";
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -39,14 +40,14 @@ const useStyles = makeStyles((theme) => ({
 	},
 	button: {
 		margin: theme.spacing(0),
-		backgroundColor: theme.palette.secondary.main,
+		backgroundColor: theme.palette.third.dark,
 		padding: "20px 120px",
 		marginTop: "30px",
 		borderRadius: "35px",
 		fontFamily: theme.typography.sansSerif,
 		fontSize: "2rem",
 		letterSpacing: "1px",
-		color: theme.palette.primary.main,
+		color: theme.palette.secondary.main,
 		"&:hover": {
 			color: theme.palette.secondary.main,
 			backgroundColor: theme.palette.primary.main
@@ -55,13 +56,13 @@ const useStyles = makeStyles((theme) => ({
 	regularButton: {
 		borderRadius: "20px",
 		fontSize: "1.5rem",
-		backgroundColor: theme.palette.primary.main,
+		backgroundColor: theme.palette.third.dark,
 		fontFamily: theme.typography.sansSerif,
 		letterSpacing: "1px",
 		padding: "10px 25px",
 		"&:hover": {
-			backgroundColor: theme.palette.secondary.main,
-			color: theme.palette.primary.main
+			backgroundColor: theme.palette.primary.main,
+			color: theme.palette.secondary.main
 		}
 	},
 	servicePaper: {
@@ -128,6 +129,10 @@ const useStyles = makeStyles((theme) => ({
 		flexDirection: "column",
 		height: "100%",
 		justifyContent: "flex-start"
+	},
+	istanbulSilhoutteSvg: {
+		width: "1100px",
+		height: "400px"
 	}
 }));
 
@@ -154,7 +159,10 @@ const Index = (props) => {
 				<img className="hero-image" src={heroImage} alt="" />
 				<div className="hero-image-perfect-wrapper">
 					<h1 className="hero-image-perfect">
-						Let's make your <br /> smile perfect
+						Let's make your<br />
+						<span className="hero-image-perfect-smile-text">smile</span>
+						<br />
+						perfect
 					</h1>
 					<Button variant="contained" color="primary" className={classes.button}>
 						Chat with us
@@ -328,7 +336,9 @@ const Index = (props) => {
 				<div className="clinic-intro-div">
 					<div className="clinic-intro-wrapper">
 						<h4 className="clinic-exclusive-text">An Exclusive Dental Clinic</h4>
-						<h2 className="clinic-name-header">Istanbul Smile Center</h2>
+						<h2 className="clinic-name-header">
+							Istanbul <span className="clinic-smile-center-text">Smile </span> Center
+						</h2>
 						<p className="clinic-intro-text">
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel eaque dignissimos error.
 							Fugit, corporis laboriosam. Minus dolor harum facilis, optio eius, saepe, nesciunt
@@ -648,46 +658,26 @@ const Index = (props) => {
 					</div>
 				</div>
 			</section>
-			<div>
-				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae ea reiciendis hic fugiat unde quo
-				provident voluptatem sunt vitae quod harum illo quia, quis accusamus, sit officiis voluptas perferendis
-				neque. Architecto, laboriosam assumenda? Eum dicta tempore velit, facilis nam nostrum esse. Assumenda
-				amet iusto debitis, provident dignissimos reprehenderit fuga, suscipit accusamus illum ipsam earum?
-				Molestias ut voluptates quos vitae ipsam! Minima tenetur nam pariatur, distinctio ratione soluta
-				officiis ipsam quidem totam rem commodi est porro. Odio dolores, reprehenderit nemo ea voluptate
-				laboriosam animi dicta obcaecati aliquid, quibusdam possimus? Asperiores, voluptates. Tempora
-				accusantium nisi quos recusandae vel incidunt et mollitia alias, voluptate a consequuntur architecto non
-				aut tempore sapiente reiciendis perspiciatis sunt accusamus saepe officia perferendis! Delectus nobis
-				magnam natus fugiat? Libero reprehenderit possimus dolorem veritatis suscipit laudantium! Voluptate
-				commodi molestiae alias voluptatem officia explicabo itaque. Quisquam at minus similique, voluptates
-				alias quaerat debitis exercitationem error delectus autem asperiores. Quia, ratione. Lorem ipsum dolor
-				sit amet consectetur adipisicing elit. Doloribus rerum saepe non laboriosam, vitae assumenda cupiditate
-				voluptatum, perferendis ipsa aut itaque blanditiis obcaecati commodi? Tenetur velit adipisci
-				consequuntur optio omnis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, ipsum!
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam repellat, dolorum recusandae amet iusto,
-				rerum beatae perferendis illo debitis suscipit consectetur earum. Asperiores harum ipsa rem, dolorum ex
-				eos eligendi? Ratione quaerat eaque nihil repellat sed optio enim quo eius, mollitia amet fugit
-				consequuntur nam tenetur sunt cupiditate architecto asperiores quidem nemo debitis suscipit maxime iusto
-				dolorem facere consectetur. Ex. Voluptates impedit culpa eos, non illo perferendis consequatur, laborum
-				recusandae corrupti eius voluptas assumenda incidunt maiores dolores, perspiciatis aliquam provident
-				debitis atque tempore amet minima laudantium! Nemo obcaecati velit assumenda! Consequatur cupiditate
-				fugiat esse. Minus distinctio perferendis ullam hic, quo dolore architecto autem officiis laborum
-				voluptates, dicta, voluptatum exercitationem amet ipsam iure provident doloremque quia sed fugit
-				expedita omnis aspernatur. Illum recusandae cum deserunt neque nemo exercitationem, assumenda distinctio
-				in facilis est quidem provident iure quis veritatis accusantium, aspernatur modi? A obcaecati, ullam ab
-				nostrum cumque adipisci? Saepe, perferendis harum? Reiciendis expedita dolores sequi inventore velit
-				soluta cum voluptas aliquam quasi quam, sit aspernatur officia possimus consequuntur laboriosam quidem
-				molestias quibusdam eaque reprehenderit quod necessitatibus corrupti! Iste omnis ratione blanditiis?
-				Labore praesentium dolore libero ipsum animi aliquid? Iure hic corrupti illum assumenda nesciunt nostrum
-				ad asperiores incidunt fugiat accusantium debitis, sunt exercitationem suscipit veniam aliquam molestiae
-				sed quo atque unde. Consequuntur laboriosam, excepturi repudiandae est obcaecati doloribus nostrum
-				tenetur porro, velit autem voluptates eveniet iste saepe eius quaerat hic architecto voluptas ut
-				asperiores iure ipsam quam culpa. Id, aut quisquam? Tempora eos nulla modi tenetur similique at, odio et
-				dignissimos, ipsa eius vel accusamus ad sunt! Iusto quibusdam inventore, temporibus error cumque ad
-				nihil sint officia magni aspernatur ipsum hic. Laborum amet eius nemo assumenda eum eaque quod sit totam
-				aliquam perferendis, quo hic nulla vero itaque unde, blanditiis delectus, quibusdam fugiat sequi rerum
-				eos voluptas. Impedit quidem dolorem soluta.
-			</div>
+			<section className="why-choose-us-section">
+				<div className="our-services-header">
+					<h2 className="our-services-header-text">Why Choose Us?</h2>
+					<h4 className="clinic-exclusive-text">
+						Dental Treatments in Istanbul Smile Center <br /> At Affordable Prices
+					</h4>
+					<p className="our-services-header-paragraph-text">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis mollitia deleniti beatae quam
+						incidunt doloribus. Culpa numquam tenetur fugiat modi debitis, est, aut earum perspiciatis ut
+						incidunt dignissimos quos. Voluptate. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+						Eveniet atque sit fuga consequatur dolorem quia tempore harum in est doloribus, necessitatibus
+						porro earum obcaecati inventore expedita iure eaque voluptate aspernatur.
+					</p>
+				</div>
+				<div className="istanbul-silhouette-wrapper-div">
+					<SvgIcon className={classes.istanbulSilhoutteSvg} viewBox="0 0 5802.9 1838.3">
+						<IstanbulSilhouette />
+					</SvgIcon>
+				</div>
+			</section>
 
 			<style jsx>{`
 				.hero-image-div {
@@ -708,6 +698,9 @@ const Index = (props) => {
 					color: ${sTheme.palette.primary.main};
 					font-weight: normal;
 					font-size: 7rem;
+				}
+				.hero-image-perfect-smile-text {
+					color: ${sTheme.palette.third.dark};
 				}
 				.our-services-section {
 					display: flex;
@@ -782,6 +775,10 @@ const Index = (props) => {
 					font-size: 4rem;
 					margin-top: .5rem;
 				}
+
+				.clinic-smile-center-text {
+					color: ${sTheme.palette.third.dark};
+				}
 				.clinic-intro-text {
 					width: 95%;
 					color: ${sTheme.palette.secondary.dark};
@@ -813,13 +810,13 @@ const Index = (props) => {
 					width: 78%;
 					align-items: baseline;
 					margin: 0 auto;
-					margin-top: 1.5rem;
+					margin-top: 4rem;
 				}
 				.our-doctors-section {
 					display: flex;
 					flex-direction: column;
 					align-items: center;
-					margin-bottom: 100rem;
+					margin-bottom: 2rem;
 					padding: 6rem 0;
 					background-color: ${sTheme.palette.secondary.main};
 				}
@@ -843,8 +840,8 @@ const Index = (props) => {
 				.doctor-link {
 					font-size: 2.5rem;
 					margin-top: 3rem;
-					color: ${sTheme.palette.secondary.dark};
-					font-family: ${sTheme.typography.sansSerif};
+					color: ${sTheme.palette.primary.main};
+					font-family: ${sTheme.typography.serif};
 				}
 				.doctor-link:hover {
 					text-decoration: underline;
@@ -853,6 +850,13 @@ const Index = (props) => {
 				.doctor-specialty {
 					font-size: 2rem;
 					color: ${sTheme.palette.secondary.dark};
+				}
+
+				.why-choose-us-section {
+				}
+				.istanbul-silhouette-wrapper-div {
+					display: flex;
+					justify-content: center;
 				}
 			`}</style>
 		</Layout>
