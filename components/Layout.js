@@ -5,7 +5,7 @@ import Logo from "./logos-icons/Logo";
 import ActiveLink from "./ActiveLink";
 import WhatsAppIcon from "@material-ui/icons/WhatsApp";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import clsx from "clsx";
+import Head from "next/head";
 
 const useStyles = makeStyles((theme) => ({
 	"@global": {
@@ -47,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 	topBar: {
 		width: "100%",
-		height: "50px",
+		height: "45px",
 		backgroundColor: theme.palette.third.dark,
 		display: "flex",
 		justifyContent: "center",
@@ -116,26 +116,18 @@ const useStyles = makeStyles((theme) => ({
 			height: "120%",
 			borderBottom: `2px solid ${theme.palette.secondary.main} `,
 			top: 0,
-			left: "-5%",
+			left: "-3%",
 			transition: "all 400ms ease-in-out"
 		},
 		"&:hover": {
 			"&::before": {
-				width: "110%"
+				width: "106%"
 			}
 		}
 	},
-	treatmentsLinkDiv: {
-		display: "flex",
-		alignItems: "center",
-		cursor: "pointer"
-	},
-	treatmentsLink: {
-		marginRight: 0
-	},
 	expandMoreIcon: {
-		color: theme.palette.secondary.main,
-		marginTop: ".2rem"
+		position: "relative",
+		top: "5px"
 	},
 	activeLink: {
 		"&::before": {
@@ -155,6 +147,9 @@ const Layout = (props) => {
 
 	return (
 		<div className={classes.root}>
+			<Head>
+				<title key="title">{props.title}</title>
+			</Head>
 			<div className={classes.topBar}>
 				<div className={classes.topBarWrapper}>
 					<div className={classes.languageSelections}>
@@ -187,12 +182,11 @@ const Layout = (props) => {
 								<a className={classes.navLink}>About Us</a>
 							</ActiveLink>
 							<ActiveLink href="/treatments" activeClassName={classes.activeLink}>
-								<div className={classes.treatmentsLinkDiv}>
-									<a className={clsx(classes.navLink, classes.treatmentsLink)}>Treatments</a>
-									<ExpandMoreIcon className={classes.expandMoreIcon} />
-								</div>
+								<a className={classes.navLink}>
+									Treatments<ExpandMoreIcon className={classes.expandMoreIcon} />
+								</a>
 							</ActiveLink>
-							<ActiveLink href="/privileges&itinerary" activeClassName={classes.activeLink}>
+							<ActiveLink href="/privileges" activeClassName={classes.activeLink}>
 								<a className={classes.navLink}>Privileges & Itinerary</a>
 							</ActiveLink>
 							<ActiveLink href="/before-after" activeClassName={classes.activeLink}>

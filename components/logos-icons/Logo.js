@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
 		width: "130px",
 		position: "relative",
 		"& .st0, & .st1, & .st2": {
-			transition: "fill 400ms"
+			transition: "fill 400ms ease-in-out"
 		},
 		"&:hover": {
 			cursor: "pointer",
@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
 			height: "600%",
 			opacity: 0,
 			backgroundColor: theme.palette.third.main,
-			transition: "all 300ms ease-in-out"
+			transition: "all 400ms ease-in-out"
 		},
 		"&:hover::before": {
 			opacity: 1

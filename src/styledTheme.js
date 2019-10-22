@@ -30,7 +30,6 @@ const theme = {
 		htmlFontSize: 10,
 		sansSerif: "'Source Sans Pro', sans-serif",
 		serif: "Sorts Mill Goudy, serif"
-		// serif: "'Libre Baskerville', serif"
 	}
 };
 

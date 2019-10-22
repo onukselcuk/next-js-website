@@ -72,6 +72,7 @@ const useStyles = makeStyles((theme) => ({
 		padding: "1rem",
 		border: `1px solid ${theme.palette.primary.main}`,
 		transition: "all 200ms ease-in-out",
+		cursor: "pointer",
 		"&:hover": {
 			transform: "scale(1.05)"
 		}
@@ -148,7 +149,7 @@ const Index = (props) => {
 
 	const classes = useStyles();
 	return (
-		<Layout>
+		<Layout title="Istanbul Smile Center | Let's Make Your Smile Perfect">
 			<div className="hero-image-div">
 				<img className="hero-image" src={heroImage} alt="" />
 				<div className="hero-image-perfect-wrapper">
@@ -169,123 +170,143 @@ const Index = (props) => {
 					</p>
 				</div>
 				<div className="our-services-wrapper">
-					<Paper className={classes.servicePaper} elevation={paperElevation}>
-						<SvgIcon className={classes.svgIcon} viewBox="0 0 84.8 84.8">
-							<LiveChat />
-						</SvgIcon>
-						<Typography variant="h5" component="h3" className={classes.servicePaperTitle}>
-							Live Chat
-						</Typography>
-						<Typography component="p" className={classes.servicePaperText}>
-							{/* Whenever you need us, we are always here to give you the answers you need instantly. */}
-						</Typography>
-					</Paper>
-					<Paper className={classes.servicePaper} elevation={paperElevation}>
-						<SvgIcon className={classes.svgIcon} viewBox="0 0 84.8 84.8">
-							<VideoCallConsultation />
-						</SvgIcon>
-						<Typography variant="h5" component="h3" className={classes.servicePaperTitle}>
-							Video Call Consultation
-						</Typography>
-						<Typography component="p" className={classes.servicePaperText}>
-							{/* Wherever you are in the world, our doctors will give you a free consultation over video
+					<Link href="/privileges&itinerary">
+						<Paper className={classes.servicePaper} elevation={paperElevation}>
+							<SvgIcon className={classes.svgIcon} viewBox="0 0 84.8 84.8">
+								<LiveChat />
+							</SvgIcon>
+							<Typography variant="h5" component="h3" className={classes.servicePaperTitle}>
+								Live Chat
+							</Typography>
+							<Typography component="p" className={classes.servicePaperText}>
+								{/* Whenever you need us, we are always here to give you the answers you need instantly. */}
+							</Typography>
+						</Paper>
+					</Link>
+					<Link href="/privileges&itinerary">
+						<Paper className={classes.servicePaper} elevation={paperElevation}>
+							<SvgIcon className={classes.svgIcon} viewBox="0 0 84.8 84.8">
+								<VideoCallConsultation />
+							</SvgIcon>
+							<Typography variant="h5" component="h3" className={classes.servicePaperTitle}>
+								Video Call Consultation
+							</Typography>
+							<Typography component="p" className={classes.servicePaperText}>
+								{/* Wherever you are in the world, our doctors will give you a free consultation over video
 							call. */}
-						</Typography>
-					</Paper>
-					<Paper className={classes.servicePaper} elevation={paperElevation}>
-						<SvgIcon className={classes.svgIcon} viewBox="0 0 84.8 84.8">
-							<TreatmentPlan />
-						</SvgIcon>
-						<Typography variant="h5" component="h3" className={classes.servicePaperTitle}>
-							Treatment Plan
-						</Typography>
-						<Typography component="p" className={classes.servicePaperText}>
-							{/* Send us your teeth x-ray or pictures via live chat or form, you will get a detailed free
+							</Typography>
+						</Paper>
+					</Link>
+					<Link href="/privileges&itinerary">
+						<Paper className={classes.servicePaper} elevation={paperElevation}>
+							<SvgIcon className={classes.svgIcon} viewBox="0 0 84.8 84.8">
+								<TreatmentPlan />
+							</SvgIcon>
+							<Typography variant="h5" component="h3" className={classes.servicePaperTitle}>
+								Treatment Plan
+							</Typography>
+							<Typography component="p" className={classes.servicePaperText}>
+								{/* Send us your teeth x-ray or pictures via live chat or form, you will get a detailed free
 							treatment plan. */}
-						</Typography>
-					</Paper>
-					<Paper className={classes.servicePaper} elevation={paperElevation}>
-						<SvgIcon className={classes.svgIcon} viewBox="0 0 84.8 84.8">
-							<AirportGreeting />
-						</SvgIcon>
-						<Typography variant="h5" component="h3" className={classes.servicePaperTitle}>
-							Airport Greeting
-						</Typography>
-						<Typography component="p" className={classes.servicePaperText}>
-							{/* Never feel lost in a foreign country, you will be greeted by our professional team right
+							</Typography>
+						</Paper>
+					</Link>
+					<Link href="/privileges&itinerary">
+						<Paper className={classes.servicePaper} elevation={paperElevation}>
+							<SvgIcon className={classes.svgIcon} viewBox="0 0 84.8 84.8">
+								<AirportGreeting />
+							</SvgIcon>
+							<Typography variant="h5" component="h3" className={classes.servicePaperTitle}>
+								Airport Greeting
+							</Typography>
+							<Typography component="p" className={classes.servicePaperText}>
+								{/* Never feel lost in a foreign country, you will be greeted by our professional team right
 							inside the airport. */}
-						</Typography>
-					</Paper>
-					<Paper className={classes.servicePaper} elevation={paperElevation}>
-						<SvgIcon className={classes.svgIcon} viewBox="0 0 84.8 84.8">
-							<AirportHotelTransfer />
-						</SvgIcon>
-						<Typography variant="h5" component="h3" className={classes.servicePaperTitle}>
-							Airport-Hotel Transfers
-						</Typography>
-						<Typography component="p" className={classes.servicePaperText}>
-							{/* Whether you are arriving or leaving, you will be transferred with a VIP car between airport
+							</Typography>
+						</Paper>
+					</Link>
+					<Link href="/privileges&itinerary">
+						<Paper className={classes.servicePaper} elevation={paperElevation}>
+							<SvgIcon className={classes.svgIcon} viewBox="0 0 84.8 84.8">
+								<AirportHotelTransfer />
+							</SvgIcon>
+							<Typography variant="h5" component="h3" className={classes.servicePaperTitle}>
+								Airport-Hotel Transfers
+							</Typography>
+							<Typography component="p" className={classes.servicePaperText}>
+								{/* Whether you are arriving or leaving, you will be transferred with a VIP car between airport
 							and your hotel. */}
-						</Typography>
-					</Paper>
-					<Paper className={classes.servicePaper} elevation={paperElevation}>
-						<SvgIcon className={classes.svgIcon} viewBox="0 0 84.8 84.8">
-							<ClinicHotelTransfer />
-						</SvgIcon>
-						<Typography variant="h5" component="h3" className={classes.servicePaperTitle}>
-							Clinic-Hotel Transfers
-						</Typography>
-						<Typography component="p" className={classes.servicePaperText}>
-							{/* On your every appointment with our clinic, our team will pick you up from and take you back
+							</Typography>
+						</Paper>
+					</Link>
+					<Link href="/privileges&itinerary">
+						<Paper className={classes.servicePaper} elevation={paperElevation}>
+							<SvgIcon className={classes.svgIcon} viewBox="0 0 84.8 84.8">
+								<ClinicHotelTransfer />
+							</SvgIcon>
+							<Typography variant="h5" component="h3" className={classes.servicePaperTitle}>
+								Clinic-Hotel Transfers
+							</Typography>
+							<Typography component="p" className={classes.servicePaperText}>
+								{/* On your every appointment with our clinic, our team will pick you up from and take you back
 							to your hotel free of charge. */}
-						</Typography>
-					</Paper>
-					<Paper className={classes.servicePaper} elevation={paperElevation}>
-						<SvgIcon className={classes.svgIcon} viewBox="0 0 84.8 84.8">
-							<HotelBookingAssistance />
-						</SvgIcon>
-						<Typography variant="h5" component="h3" className={classes.servicePaperTitle}>
-							Hotel Booking Assistance
-						</Typography>
-						<Typography component="p" className={classes.servicePaperText}>
-							{/* No need to spend your time trying to figure out which hotel to book, let us do it for you. */}
-						</Typography>
-					</Paper>
-					<Paper className={classes.servicePaper} elevation={paperElevation}>
-						<SvgIcon className={classes.svgIcon} viewBox="0 0 84.8 84.8">
-							<HotelDiscounts />
-						</SvgIcon>
-						<Typography variant="h5" component="h3" className={classes.servicePaperTitle}>
-							Hotel Discounts
-						</Typography>
-						<Typography component="p" className={classes.servicePaperText}>
-							{/* Special discounts for our patients are available on 4-5 star hotels. */}
-						</Typography>
-					</Paper>
-					<Paper className={classes.servicePaper} elevation={paperElevation}>
-						<SvgIcon className={classes.svgIcon} viewBox="0 0 84.8 84.8">
-							<MultilingualAssistance />
-						</SvgIcon>
-						<Typography variant="h5" component="h3" className={classes.servicePaperTitle}>
-							Multilingual Assistance
-						</Typography>
-						<Typography component="p" className={classes.servicePaperText}>
-							{/* Our international patients coordination team and doctors know perfect English. We even have
+							</Typography>
+						</Paper>
+					</Link>
+					<Link href="/privileges&itinerary">
+						<Paper className={classes.servicePaper} elevation={paperElevation}>
+							<SvgIcon className={classes.svgIcon} viewBox="0 0 84.8 84.8">
+								<HotelBookingAssistance />
+							</SvgIcon>
+							<Typography variant="h5" component="h3" className={classes.servicePaperTitle}>
+								Hotel Booking Assistance
+							</Typography>
+							<Typography component="p" className={classes.servicePaperText}>
+								{/* No need to spend your time trying to figure out which hotel to book, let us do it for you. */}
+							</Typography>
+						</Paper>
+					</Link>
+					<Link href="/privileges&itinerary">
+						<Paper className={classes.servicePaper} elevation={paperElevation}>
+							<SvgIcon className={classes.svgIcon} viewBox="0 0 84.8 84.8">
+								<HotelDiscounts />
+							</SvgIcon>
+							<Typography variant="h5" component="h3" className={classes.servicePaperTitle}>
+								Hotel Discounts
+							</Typography>
+							<Typography component="p" className={classes.servicePaperText}>
+								{/* Special discounts for our patients are available on 4-5 star hotels. */}
+							</Typography>
+						</Paper>
+					</Link>
+					<Link href="/privileges&itinerary">
+						<Paper className={classes.servicePaper} elevation={paperElevation}>
+							<SvgIcon className={classes.svgIcon} viewBox="0 0 84.8 84.8">
+								<MultilingualAssistance />
+							</SvgIcon>
+							<Typography variant="h5" component="h3" className={classes.servicePaperTitle}>
+								Multilingual Assistance
+							</Typography>
+							<Typography component="p" className={classes.servicePaperText}>
+								{/* Our international patients coordination team and doctors know perfect English. We even have
 							Spanish and Russian speaking doctors and staff. */}
-						</Typography>
-					</Paper>
-					<Paper className={classes.servicePaper} elevation={paperElevation}>
-						<SvgIcon className={classes.svgIcon} viewBox="0 0 84.8 84.8">
-							<TravelToursDiscounts />
-						</SvgIcon>
-						<Typography variant="h5" component="h3" className={classes.servicePaperTitle}>
-							Travel Tours Discounts
-						</Typography>
-						<Typography component="p" className={classes.servicePaperText}>
-							{/* Turn your dental treatment to a perfect holiday in Turkey. Special discounts for our
+							</Typography>
+						</Paper>
+					</Link>
+					<Link href="/privileges&itinerary">
+						<Paper className={classes.servicePaper} elevation={paperElevation}>
+							<SvgIcon className={classes.svgIcon} viewBox="0 0 84.8 84.8">
+								<TravelToursDiscounts />
+							</SvgIcon>
+							<Typography variant="h5" component="h3" className={classes.servicePaperTitle}>
+								Travel Tours Discounts
+							</Typography>
+							<Typography component="p" className={classes.servicePaperText}>
+								{/* Turn your dental treatment to a perfect holiday in Turkey. Special discounts for our
 							patients are available for amazing tours. */}
-						</Typography>
-					</Paper>
+							</Typography>
+						</Paper>
+					</Link>
 				</div>
 				<div className="dental-treatments-buttons-div">
 					<Button
@@ -295,7 +316,7 @@ const Index = (props) => {
 					>
 						Chat Now
 					</Button>
-					<Link href="/privileges&itinerary">
+					<Link href="/privileges">
 						<a className="clinic-intro-link">Learn more abut your privileges and itinerary</a>
 					</Link>
 				</div>
@@ -599,7 +620,7 @@ const Index = (props) => {
 							name="yasin"
 						/>
 						<a className="doctor-link">Dr. Yasin Akgül</a>
-						<p className="doctor-specialty">Orthodontics Specialist</p>
+						<p className="doctor-specialty">Orthodontic Specialist</p>
 					</div>
 					<div className="doctor-wrapper">
 						<img
@@ -611,7 +632,7 @@ const Index = (props) => {
 							onMouseOut={handleMouseOut}
 						/>
 						<a className="doctor-link">Dr. Sevil Akgül</a>
-						<p className="doctor-specialty">Pedodontics Specialist</p>
+						<p className="doctor-specialty">Pediatric Dentistry Specialist</p>
 					</div>
 					<div className="doctor-wrapper">
 						<img
@@ -623,7 +644,7 @@ const Index = (props) => {
 							onMouseOut={handleMouseOut}
 						/>
 						<a className="doctor-link">Dr. Yavuz Eker</a>
-						<p className="doctor-specialty">Dental Aesthetics Specialist</p>
+						<p className="doctor-specialty">Aesthetic Dentistry Specialist</p>
 					</div>
 				</div>
 			</section>
@@ -815,9 +836,9 @@ const Index = (props) => {
 					text-align: center;
 				}
 				.doctor-image {
-					margin: 0 1rem;
+					margin: 0 3rem;
 					border-radius: 300px;
-					height: 500px;
+					height: 530px;
 				}
 				.doctor-link {
 					font-size: 2.5rem;

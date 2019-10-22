@@ -2,7 +2,6 @@ import React from "react";
 import App from "next/app";
 import Head from "next/head";
 import { ThemeProvider } from "@material-ui/styles";
-import CssBaseline from "@material-ui/core/CssBaseline";
 import theme from "../src/theme";
 
 class MyApp extends App {
@@ -31,10 +30,9 @@ class MyApp extends App {
 		return (
 			<React.Fragment>
 				<Head>
-					<title>My Page</title>
+					<title key="title">Istanbul Smile Center</title>
 				</Head>
 				<ThemeProvider theme={theme}>
-					{/* Css Baseline kickstart an elegant, consistent, and simple baseline to build upon */}
 					<Component {...pageProps} />
 				</ThemeProvider>
 			</React.Fragment>
