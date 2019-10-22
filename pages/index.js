@@ -33,6 +33,10 @@ import TeethWhitening from "../components/logos-icons/TeethWhitening";
 import doctorImg from "../public/shutterstock_1498270505.jpg";
 import doctorImg2 from "../public/stock-photo-beautiful-family-of-mother-and-daughter-together-at-home-smiling-confident-showing-and-pointing-1254258604.jpg";
 import IstanbulSilhouette from "../components/logos-icons/IstanbulSilhouette";
+import Carousel from "react-multi-carousel";
+import reviewerImg from "../public/IMG_01134212.png";
+import StarIcon from "@material-ui/icons/Star";
+import GoogleLogo from "../components/logos-icons/GoogleLogo";
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -133,11 +137,31 @@ const useStyles = makeStyles((theme) => ({
 	istanbulSilhoutteSvg: {
 		width: "1100px",
 		height: "400px"
+	},
+	".react-multi-carousel-item": {
+		width: "100px",
+		height: "100px",
+		backgroundColor: "black"
+	},
+	reviewPaper: {
+		width: "80%",
+		textAlign: "center"
+	},
+	star: {
+		color: "#FBBC04"
+	},
+	googleSvgIcon: {
+		position: "absolute",
+		width: "20%",
+		height: "30%",
+		top: "12%",
+		right: "3%"
 	}
 }));
 
 const Index = (props) => {
 	const paperElevation = 2;
+	const reviewPaperElevation = 3;
 
 	const pics = {
 		yasin: [ doctorImg, doctorImg2 ],
@@ -153,6 +177,24 @@ const Index = (props) => {
 	};
 
 	const classes = useStyles();
+	const responsive = {
+		desktop: {
+			breakpoint: { max: 3000, min: 1024 },
+			items: 3,
+			slidesToSlide: 1 // optional, default to 1.
+		},
+		tablet: {
+			breakpoint: { max: 1024, min: 464 },
+			items: 2,
+			slidesToSlide: 2 // optional, default to 1.
+		},
+		mobile: {
+			breakpoint: { max: 464, min: 0 },
+			items: 1,
+			slidesToSlide: 1 // optional, default to 1.
+		}
+	};
+
 	return (
 		<Layout title="Istanbul Smile Center | Let's Make Your Smile Perfect">
 			<div className="hero-image-div">
@@ -629,7 +671,9 @@ const Index = (props) => {
 							alt=""
 							name="yasin"
 						/>
-						<a className="doctor-link">Dr. Yasin Akgül</a>
+						<Link href="/about">
+							<a className="doctor-link">Dr. Yasin Akgül</a>
+						</Link>
 						<p className="doctor-specialty">Orthodontic Specialist</p>
 					</div>
 					<div className="doctor-wrapper">
@@ -641,7 +685,9 @@ const Index = (props) => {
 							onMouseOver={handleMouseOver}
 							onMouseOut={handleMouseOut}
 						/>
-						<a className="doctor-link">Dr. Sevil Akgül</a>
+						<Link href="/about">
+							<a className="doctor-link">Dr. Sevil Akgül</a>
+						</Link>
 						<p className="doctor-specialty">Pediatric Dentistry Specialist</p>
 					</div>
 					<div className="doctor-wrapper">
@@ -653,7 +699,9 @@ const Index = (props) => {
 							onMouseOver={handleMouseOver}
 							onMouseOut={handleMouseOut}
 						/>
-						<a className="doctor-link">Dr. Yavuz Eker</a>
+						<Link href="/about">
+							<a className="doctor-link">Dr. Yavuz Eker</a>
+						</Link>
 						<p className="doctor-specialty">Aesthetic Dentistry Specialist</p>
 					</div>
 				</div>
@@ -678,6 +726,236 @@ const Index = (props) => {
 					</SvgIcon>
 				</div>
 			</section>
+			<section className="reviews-section">
+				<div className="our-services-header">
+					<h2 className="our-services-header-text">Our Patients Love Us</h2>
+					<h4 className="clinic-exclusive-text">
+						Dental Treatments in Istanbul Smile Center <br /> At Affordable Prices
+					</h4>
+					<p className="our-services-header-paragraph-text">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis mollitia deleniti beatae quam
+						incidunt doloribus. Culpa numquam tenetur fugiat modi debitis, est, aut earum perspiciatis ut
+						incidunt dignissimos quos. Voluptate. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+						Eveniet atque sit fuga consequatur dolorem quia tempore harum in est doloribus, necessitatibus
+						porro earum obcaecati inventore expedita iure eaque voluptate aspernatur.
+					</p>
+				</div>
+				<div className="reviews-wrapper">
+					<Carousel
+						swipeable={true}
+						draggable={false}
+						showDots={true}
+						responsive={responsive}
+						ssr={true} // means to render carousel on server-side.
+						infinite={true}
+						autoPlay={false}
+						autoPlaySpeed={10000}
+						keyBoardControl={true}
+						customTransition="all .5"
+						transitionDuration={500}
+						containerClass="carousel-container"
+						removeArrowOnDeviceType={[ "tablet", "mobile" ]}
+						deviceType={props.deviceType}
+						dotListClass="custom-dot-list-style"
+						itemClass="carousel-item-padding-40-px"
+					>
+						<div className="carousel-item">
+							<Paper className={classes.reviewPaper} elevation={reviewPaperElevation}>
+								<div className="reviewer-image-wrapper">
+									<img className="reviewer-image" src={reviewerImg} alt="" />
+									<SvgIcon className={classes.googleSvgIcon} viewBox="0 0 533.5 544.3">
+										<GoogleLogo />
+									</SvgIcon>
+								</div>
+								<div className="reviewer-name-wrapper">
+									<h3 className="reviewer-name">Roger Lewis</h3>
+								</div>
+								<div className="reviewer-date-wrapper">
+									<span className="reviewer-date">2 months ago</span>
+								</div>
+								<div className="stars-wrapper">
+									<StarIcon className={classes.star} />
+									<StarIcon className={classes.star} />
+									<StarIcon className={classes.star} />
+									<StarIcon className={classes.star} />
+									<StarIcon className={classes.star} />
+								</div>
+								<div className="review-wrapper">
+									<p className="review">
+										Very competitive price compared to my local implant practice, in fact it was
+										almost half the price ! But the quality of the product used, or execution of the
+										surgery are uncompromised ! Adam my implant surgeon was Very professional and
+										highly skilled, would recommend this practice to anyone thinking of having
+										implants done !!
+									</p>
+								</div>
+							</Paper>
+						</div>
+						<div className="carousel-item">
+							<Paper className={classes.reviewPaper}>
+								<div className="reviewer-image-wrapper">
+									<img className="reviewer-image" src={reviewerImg} alt="" />
+								</div>
+								<div className="reviewer-name-wrapper">
+									<h3 className="reviewer-name">Roger Lewis</h3>
+								</div>
+								<div className="review-wrapper">
+									<p className="review">
+										Very competitive price compared to my local implant practice, in fact it was
+										almost half the price ! But the quality of the product used, or execution of the
+										surgery are uncompromised ! Adam my implant surgeon was Very professional and
+										highly skilled, would recommend this practice to anyone thinking of having
+										implants done !!
+									</p>
+								</div>
+							</Paper>
+						</div>
+						<div className="carousel-item">
+							<Paper className={classes.reviewPaper}>
+								<div className="reviewer-image-wrapper">
+									<img className="reviewer-image" src={reviewerImg} alt="" />
+								</div>
+								<div className="reviewer-name-wrapper">
+									<h3 className="reviewer-name">Roger Lewis</h3>
+								</div>
+								<div className="review-wrapper">
+									<p className="review">
+										Very competitive price compared to my local implant practice, in fact it was
+										almost half the price ! But the quality of the product used, or execution of the
+										surgery are uncompromised ! Adam my implant surgeon was Very professional and
+										highly skilled, would recommend this practice to anyone thinking of having
+										implants done !!
+									</p>
+								</div>
+							</Paper>
+						</div>
+						<div className="carousel-item">
+							<Paper className={classes.reviewPaper}>
+								<div className="reviewer-image-wrapper">
+									<img className="reviewer-image" src={reviewerImg} alt="" />
+								</div>
+								<div className="reviewer-name-wrapper">
+									<h3 className="reviewer-name">Roger Lewis</h3>
+								</div>
+								<div className="review-wrapper">
+									<p className="review">
+										Very competitive price compared to my local implant practice, in fact it was
+										almost half the price ! But the quality of the product used, or execution of the
+										surgery are uncompromised ! Adam my implant surgeon was Very professional and
+										highly skilled, would recommend this practice to anyone thinking of having
+										implants done !!
+									</p>
+								</div>
+							</Paper>
+						</div>
+					</Carousel>
+				</div>
+			</section>
+			<style jsx global>{`
+				.react-multi-carousel-list {
+					display: flex;
+					align-items: center;
+					overflow: hidden;
+					position: relative;
+				}
+				.react-multi-carousel-track {
+					list-style: none;
+					padding: 0;
+					margin: 0;
+					display: flex;
+					flex-direction: row;
+					position: relative;
+					transform-style: preserve-3d;
+					backface-visibility: hidden;
+					will-change: transform, transition;
+				}
+				.react-multiple-carousel__arrow {
+					position: absolute;
+					outline: 0;
+					transition: all .5s;
+					border-radius: 35px;
+					z-index: 1000;
+					border: 0;
+					background: rgba(0, 0, 0, 0.5);
+					min-width: 43px;
+					min-height: 43px;
+					opacity: 1;
+					cursor: pointer;
+				}
+				.react-multiple-carousel__arrow:hover {
+					background: rgba(0, 0, 0, 0.8);
+				}
+				.react-multiple-carousel__arrow::before {
+					font-size: 20px;
+					color: #fff;
+					display: block;
+					font-family: revicons;
+					text-align: center;
+					z-index: 2;
+					position: relative;
+				}
+				.react-multiple-carousel__arrow--left {
+					left: calc(4% + 1px);
+				}
+				.react-multiple-carousel__arrow--left::before {
+					content: "\e824";
+				}
+				.react-multiple-carousel__arrow--right {
+					right: calc(4% + 1px);
+				}
+				.react-multiple-carousel__arrow--right::before {
+					content: "\e825";
+				}
+				.react-multi-carousel-dot-list {
+					position: absolute;
+					bottom: 0;
+					display: flex;
+					left: 0;
+					right: 0;
+					justify-content: center;
+					margin: auto;
+					padding: 0;
+					margin: 0;
+					list-style: none;
+					text-align: center;
+				}
+				.react-multi-carousel-dot button {
+					display: inline-block;
+					width: 12px;
+					height: 12px;
+					border-radius: 50%;
+					opacity: 1;
+					padding: 5px 5px 5px 5px;
+					box-shadow: none;
+					transition: background .5s;
+					border-width: 2px;
+					border-style: solid;
+					border-color: grey;
+					padding: 0;
+					margin: 0;
+					margin-right: 6px;
+					outline: 0;
+					cursor: pointer;
+				}
+				.react-multi-carousel-dot button:hover {
+					background: #080808;
+				}
+				.react-multi-carousel-dot--active button {
+					background: #080808;
+				}
+				.react-multi-carousel-item {
+					transform-style: preserve-3d;
+					backface-visibility: hidden;
+				}
+				@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+					.react-multi-carousel-item {
+						flex-shrink: 0 !important;
+					}
+					.react-multi-carousel-track {
+						overflow: visible !important;
+					}
+				}
+			`}</style>
 
 			<style jsx>{`
 				.hero-image-div {
@@ -838,6 +1116,7 @@ const Index = (props) => {
 					height: 530px;
 				}
 				.doctor-link {
+					text-decoration: none;
 					font-size: 2.5rem;
 					margin-top: 3rem;
 					color: ${sTheme.palette.primary.main};
@@ -857,6 +1136,50 @@ const Index = (props) => {
 				.istanbul-silhouette-wrapper-div {
 					display: flex;
 					justify-content: center;
+				}
+				.reviews-section {
+					margin-bottom: 100rem;
+					background-color: ${sTheme.palette.secondary.main};
+					padding-top: 4rem;
+					padding-bottom: 4rem;
+				}
+
+				.carousel-item {
+					display: flex;
+					justify-content: center;
+				}
+
+				.reviewer-image-wrapper {
+					position: relative;
+				}
+				.reviewer-image {
+					width: 20%;
+					border-radius: 50%;
+					margin-top: 2rem;
+				}
+				.reviewer-date-wrapper {
+					margin-top: .5rem;
+				}
+
+				.reviewer-name-wrapper {
+					margin-top: 1rem;
+				}
+				.reviews-wrapper {
+					margin-top: 3rem;
+					padding-bottom: 3rem;
+				}
+				.stars-wrapper {
+					margin-top: 1rem;
+				}
+				.star {
+					fill: #fbbc04;
+				}
+				.review-wrapper {
+					margin-top: 1rem;
+				}
+				.review {
+					width: 90%;
+					margin: 0 auto;
 				}
 			`}</style>
 		</Layout>

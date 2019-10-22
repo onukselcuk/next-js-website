@@ -76,6 +76,7 @@ const useStyles = makeStyles((theme) => ({
 			textDecoration: "underline"
 		},
 		"&:visited": {
+			textDecoration: "none",
 			color: theme.palette.third.main
 		}
 	},
@@ -160,7 +161,7 @@ const Layout = (props) => {
 						<p className={classes.topBarText}>Call or Text us on Whatsapp</p>
 						<a
 							target="_blank"
-							href="https://wa.me/905309492470?text=Hi+I+have+a+question+about+dental+treatments.+"
+							href="https://wa.me/905309492470?text=Hi+Istanbul+Smile+Center.+I+have+a+question."
 							className={classes.topBarLink}
 						>
 							+90 530 949 24 70
