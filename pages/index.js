@@ -163,7 +163,7 @@ const useStyles = makeStyles((theme) => ({
 		right: 0
 	},
 	googleReviewBannerPaper: {
-		width: "27%",
+		width: "560px",
 		padding: "1rem",
 		borderRadius: "25px"
 	},
@@ -174,7 +174,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 	googleMyBusinessLogo: {
 		width: "150px",
-		height: "80px"
+		height: "100px"
 	}
 }));
 
@@ -780,11 +780,10 @@ const Index = (props) => {
 						<div className="review-summary-wrapper">
 							<div>
 								<h3 className="my-business">My Business</h3>
-								<h2 className="banner-reviews">Patient Reviews</h2>
+								{/* <h2 className="banner-reviews"> Patient Reviews</h2> */}
 							</div>
-							<div>
-								<p>65</p>
-								<p>Review</p>
+							<div className="review-number-div">
+								<p className="review-number">65 Patient Reviews</p>
 							</div>
 						</div>
 					</Paper>
@@ -1245,6 +1244,7 @@ const Index = (props) => {
 					position: relative;
 					bottom: 5px;
 					right: 5px;
+					margin-left: 20px;
 				}
 
 				.rating {
@@ -1256,6 +1256,7 @@ const Index = (props) => {
 
 				.review-summary-wrapper {
 					display: flex;
+					position: relative;
 				}
 
 				.my-business,
@@ -1267,13 +1268,24 @@ const Index = (props) => {
 				.my-business {
 					font-weight: 400;
 					font-size: 3rem;
-					margin-top: -1rem;
+					margin-top: -3.5rem;
 					margin-left: 2rem;
 				}
 
 				.banner-reviews {
 					font-size: 2rem;
 					margin-left: 2rem;
+					font-weight: 400;
+				}
+
+				.review-number-div {
+					position: absolute;
+					right: 25px;
+					bottom: 0;
+					text-align: center;
+					font-size: 1.6rem;
+					font-family: Roboto, sans-serif;
+					color: #747474;
 					font-weight: 400;
 				}
 				.carouselPaper-item {

@@ -29,29 +29,29 @@ export default () => (
 				/>
 			</g>
 			<path
-				fill-rule="evenodd"
-				clip-rule="evenodd"
+				fillRule="evenodd"
+				clipRule="evenodd"
 				fill="#709BE0"
 				d="M626.1,821.6c0,172.5-139.8,312.3-312.3,312.3
 		S1.5,994.1,1.5,821.6H626.1z"
 			/>
 			<path
-				fill-rule="evenodd"
-				clip-rule="evenodd"
+				fillRule="evenodd"
+				clipRule="evenodd"
 				fill="#3C4BA6"
 				d="M1250.8,821.6c0,172.5-139.8,312.3-312.3,312.3
 		S626.1,994.1,626.1,821.6H1250.8z"
 			/>
 			<path
-				fill-rule="evenodd"
-				clip-rule="evenodd"
+				fillRule="evenodd"
+				clipRule="evenodd"
 				fill="#709BE0"
 				d="M1875.4,821.6c0,172.5-139.8,312.3-312.3,312.3
 		s-312.3-139.8-312.3-312.3H1875.4z"
 			/>
 			<path
-				fill-rule="evenodd"
-				clip-rule="evenodd"
+				fillRule="evenodd"
+				clipRule="evenodd"
 				fill="#3C4BA6"
 				d="M2500,821.6c0,172.5-139.8,312.3-312.3,312.3
 		c-172.5,0-312.3-139.8-312.3-312.3H2500z"
