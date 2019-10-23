@@ -120,9 +120,15 @@ const useStyles = makeStyles((theme) => ({
 			left: "-3%",
 			transition: "all 400ms ease-in-out"
 		},
+		"& svg": {
+			transition: "all 400ms ease-in-out"
+		},
 		"&:hover": {
 			"&::before": {
 				width: "106%"
+			},
+			"& svg": {
+				transform: "rotate(180deg)"
 			}
 		}
 	},
@@ -209,6 +215,7 @@ const Layout = (props) => {
 				</header>
 			</Toolbar>
 			{props.children}
+			<Toolbar />
 		</div>
 	);
 };

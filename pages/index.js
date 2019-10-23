@@ -34,9 +34,14 @@ import doctorImg from "../public/shutterstock_1498270505.jpg";
 import doctorImg2 from "../public/stock-photo-beautiful-family-of-mother-and-daughter-together-at-home-smiling-confident-showing-and-pointing-1254258604.jpg";
 import IstanbulSilhouette from "../components/logos-icons/IstanbulSilhouette";
 import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 import reviewerImg from "../public/IMG_01134212.png";
 import StarIcon from "@material-ui/icons/Star";
 import GoogleLogo from "../components/logos-icons/GoogleLogo";
+import MobileDetect from "mobile-detect";
+import { useState } from "react";
+import GoogleLogoFull from "../components/logos-icons/GoogleLogoFull";
+import GoogleMyBusinessLogo from "../components/logos-icons/GoogleMyBusinessLogo";
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -144,24 +149,38 @@ const useStyles = makeStyles((theme) => ({
 		backgroundColor: "black"
 	},
 	reviewPaper: {
-		width: "80%",
+		width: "95%",
 		textAlign: "center"
 	},
 	star: {
-		color: "#FBBC04"
+		color: "#e7711b"
 	},
 	googleSvgIcon: {
 		position: "absolute",
 		width: "20%",
 		height: "30%",
-		top: "12%",
-		right: "3%"
+		top: "15%",
+		right: 0
+	},
+	googleReviewBannerPaper: {
+		width: "27%",
+		padding: "1rem",
+		borderRadius: "25px"
+	},
+	googleLogoFull: {
+		width: "200px",
+		height: "80px",
+		marginLeft: "2rem"
+	},
+	googleMyBusinessLogo: {
+		width: "150px",
+		height: "80px"
 	}
 }));
 
 const Index = (props) => {
 	const paperElevation = 2;
-	const reviewPaperElevation = 3;
+	const reviewPaperElevation = 5;
 
 	const pics = {
 		yasin: [ doctorImg, doctorImg2 ],
@@ -181,7 +200,7 @@ const Index = (props) => {
 		desktop: {
 			breakpoint: { max: 3000, min: 1024 },
 			items: 3,
-			slidesToSlide: 1 // optional, default to 1.
+			slidesToSlide: 3 // optional, default to 1.
 		},
 		tablet: {
 			breakpoint: { max: 1024, min: 464 },
@@ -729,9 +748,7 @@ const Index = (props) => {
 			<section className="reviews-section">
 				<div className="our-services-header">
 					<h2 className="our-services-header-text">Our Patients Love Us</h2>
-					<h4 className="clinic-exclusive-text">
-						Dental Treatments in Istanbul Smile Center <br /> At Affordable Prices
-					</h4>
+
 					<p className="our-services-header-paragraph-text">
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis mollitia deleniti beatae quam
 						incidunt doloribus. Culpa numquam tenetur fugiat modi debitis, est, aut earum perspiciatis ut
@@ -740,38 +757,76 @@ const Index = (props) => {
 						porro earum obcaecati inventore expedita iure eaque voluptate aspernatur.
 					</p>
 				</div>
+				<div className="isc-google-review-banner-wrapper">
+					<Paper className={classes.googleReviewBannerPaper}>
+						<div className="google-logos-wrapper">
+							<SvgIcon className={classes.googleLogoFull} viewBox="0 0 272 92">
+								<GoogleLogoFull />
+							</SvgIcon>
+							<SvgIcon className={classes.googleMyBusinessLogo} viewBox="0 0 2500 2185">
+								<GoogleMyBusinessLogo />
+							</SvgIcon>
+							<div className="rating-stars-div">
+								<h2 className="rating">4.9</h2>
+								<div className="stars-div">
+									<StarIcon className={classes.star} />
+									<StarIcon className={classes.star} />
+									<StarIcon className={classes.star} />
+									<StarIcon className={classes.star} />
+									<StarIcon className={classes.star} />
+								</div>
+							</div>
+						</div>
+						<div className="review-summary-wrapper">
+							<div>
+								<h3 className="my-business">My Business</h3>
+								<h2 className="banner-reviews">Patient Reviews</h2>
+							</div>
+							<div>
+								<p>65</p>
+								<p>Review</p>
+							</div>
+						</div>
+					</Paper>
+				</div>
 				<div className="reviews-wrapper">
 					<Carousel
-						swipeable={true}
+						swipeable={props.deviceType !== "mobile" || "tablet" ? true : false}
 						draggable={false}
-						showDots={true}
+						showDots={false}
+						centerMode={true}
 						responsive={responsive}
 						ssr={true} // means to render carousel on server-side.
 						infinite={true}
 						autoPlay={false}
-						autoPlaySpeed={10000}
+						autoPlaySpeed={1000}
 						keyBoardControl={true}
-						customTransition="all .5"
-						transitionDuration={500}
+						customTransition="all 800ms ease-in-out"
+						transitionDuration={800}
 						containerClass="carousel-container"
 						removeArrowOnDeviceType={[ "tablet", "mobile" ]}
 						deviceType={props.deviceType}
 						dotListClass="custom-dot-list-style"
 						itemClass="carousel-item-padding-40-px"
 					>
-						<div className="carousel-item">
+						<div className="carouselPaper-item">
 							<Paper className={classes.reviewPaper} elevation={reviewPaperElevation}>
 								<div className="reviewer-image-wrapper">
-									<img className="reviewer-image" src={reviewerImg} alt="" />
-									<SvgIcon className={classes.googleSvgIcon} viewBox="0 0 533.5 544.3">
-										<GoogleLogo />
-									</SvgIcon>
+									<a
+										target="_blank"
+										href="https://www.google.com/maps/place/%C4%B0stanbul+Smile+Center+A%C4%9F%C4%B1z+ve+Di%C5%9F+Sa%C4%9Fl%C4%B1%C4%9F%C4%B1+Poliklini%C4%9Fi/@40.9914481,28.832006,17z/data=!4m7!3m6!1s0x14caa3147e2cba65:0xb6eaeab3d94bfd80!8m2!3d40.9914441!4d28.8341947!9m1!1b1"
+									>
+										<img className="reviewer-image" src={reviewerImg} alt="" />
+										<SvgIcon className={classes.googleSvgIcon} viewBox="0 0 533.5 544.3">
+											<GoogleLogo />
+										</SvgIcon>
+									</a>
 								</div>
 								<div className="reviewer-name-wrapper">
 									<h3 className="reviewer-name">Roger Lewis</h3>
 								</div>
-								<div className="reviewer-date-wrapper">
-									<span className="reviewer-date">2 months ago</span>
+								<div className="review-date-wrapper">
+									<span className="review-date">2 months ago</span>
 								</div>
 								<div className="stars-wrapper">
 									<StarIcon className={classes.star} />
@@ -791,7 +846,35 @@ const Index = (props) => {
 								</div>
 							</Paper>
 						</div>
-						<div className="carousel-item">
+						<div className="carouselPaper-item">
+							<Paper className={classes.reviewPaper}>
+								<div className="reviewer-image-wrapper">
+									<img className="reviewer-image" src={reviewerImg} alt="" />
+								</div>
+								<div className="reviewer-name-wrapper">
+									<h3 className="reviewer-name">Roger Lewis</h3>
+								</div>
+								<div className="review-wrapper">
+									<p className="review">
+										Very competitive price compared to my local implant practice, in fact it was
+										almost half the price ! But the quality of the product used, or execution of the
+										surgery are uncompromised ! Adam my implant surgeon was Very professional and
+										highly skilled, would recommend this practice to anyone thinking of having
+										implants done !! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto
+										cum corporis voluptas sunt expedita perferendis, ipsum nulla! Id, quas tenetur
+										perferendis ea aliquid expedita nisi, reiciendis dolorem eum facere velit? Qui
+										temporibus incidunt quam vero eligendi reprehenderit reiciendis in consectetur
+										pariatur, vitae praesentium fuga, sequi quas quos totam hic. Recusandae
+										dignissimos, possimus blanditiis sapiente sint accusantium voluptatibus delectus
+										commodi officiis? Incidunt eius recusandae, repellendus, autem vero a repellat
+										tenetur ex facere suscipit necessitatibus nihil pariatur ratione aliquam. Fugit
+										provident id vero vel distinctio facilis totam iure repellat, reprehenderit
+										assumenda quibusdam.
+									</p>
+								</div>
+							</Paper>
+						</div>
+						<div className="carouselPaper-item">
 							<Paper className={classes.reviewPaper}>
 								<div className="reviewer-image-wrapper">
 									<img className="reviewer-image" src={reviewerImg} alt="" />
@@ -810,7 +893,7 @@ const Index = (props) => {
 								</div>
 							</Paper>
 						</div>
-						<div className="carousel-item">
+						<div className="carouselPaper-item">
 							<Paper className={classes.reviewPaper}>
 								<div className="reviewer-image-wrapper">
 									<img className="reviewer-image" src={reviewerImg} alt="" />
@@ -829,7 +912,7 @@ const Index = (props) => {
 								</div>
 							</Paper>
 						</div>
-						<div className="carousel-item">
+						<div className="carouselPaper-item">
 							<Paper className={classes.reviewPaper}>
 								<div className="reviewer-image-wrapper">
 									<img className="reviewer-image" src={reviewerImg} alt="" />
@@ -894,14 +977,16 @@ const Index = (props) => {
 					z-index: 2;
 					position: relative;
 				}
+				/**this one */
 				.react-multiple-carousel__arrow--left {
-					left: calc(4% + 1px);
+					left: calc(2% + 1px);
 				}
 				.react-multiple-carousel__arrow--left::before {
 					content: "\e824";
 				}
+				/**this one */
 				.react-multiple-carousel__arrow--right {
-					right: calc(4% + 1px);
+					right: calc(2% + 1px);
 				}
 				.react-multiple-carousel__arrow--right::before {
 					content: "\e825";
@@ -1138,13 +1223,60 @@ const Index = (props) => {
 					justify-content: center;
 				}
 				.reviews-section {
-					margin-bottom: 100rem;
 					background-color: ${sTheme.palette.secondary.main};
 					padding-top: 4rem;
 					padding-bottom: 4rem;
 				}
 
-				.carousel-item {
+				.isc-google-review-banner-wrapper {
+					display: flex;
+					justify-content: center;
+					margin: 2rem 0;
+				}
+
+				.google-logos-wrapper {
+					display: flex;
+				}
+
+				.rating-stars-div {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					position: relative;
+					bottom: 5px;
+					right: 5px;
+				}
+
+				.rating {
+					font-size: 5rem;
+					font-family: Roboto, sans-serif;
+					color: #e7711b;
+					font-weight: 400;
+				}
+
+				.review-summary-wrapper {
+					display: flex;
+				}
+
+				.my-business,
+				.banner-reviews {
+					font-family: "Roboto", sans-serif;
+					color: #747474;
+				}
+
+				.my-business {
+					font-weight: 400;
+					font-size: 3rem;
+					margin-top: -1rem;
+					margin-left: 2rem;
+				}
+
+				.banner-reviews {
+					font-size: 2rem;
+					margin-left: 2rem;
+					font-weight: 400;
+				}
+				.carouselPaper-item {
 					display: flex;
 					justify-content: center;
 				}
@@ -1157,12 +1289,23 @@ const Index = (props) => {
 					border-radius: 50%;
 					margin-top: 2rem;
 				}
-				.reviewer-date-wrapper {
+
+				.review-date-wrapper {
+					color: ${sTheme.palette.secondary.dark};
 					margin-top: .5rem;
 				}
 
+				.review-date {
+					font-size: 1.4rem;
+				}
 				.reviewer-name-wrapper {
 					margin-top: 1rem;
+					color: ${sTheme.palette.primary.main};
+					font-size: 1.7rem;
+				}
+
+				.review-wrapper {
+					color: ${sTheme.palette.secondary.dark};
 				}
 				.reviews-wrapper {
 					margin-top: 3rem;
@@ -1171,11 +1314,9 @@ const Index = (props) => {
 				.stars-wrapper {
 					margin-top: 1rem;
 				}
-				.star {
-					fill: #fbbc04;
-				}
 				.review-wrapper {
 					margin-top: 1rem;
+					padding-bottom: 2rem;
 				}
 				.review {
 					width: 90%;
@@ -1184,6 +1325,25 @@ const Index = (props) => {
 			`}</style>
 		</Layout>
 	);
+};
+
+Index.getInitialProps = async ({ req }) => {
+	let userAgent;
+	let deviceType;
+	if (req) {
+		userAgent = req.headers["user-agent"];
+	} else {
+		userAgent = navigator.userAgent;
+	}
+	const md = new MobileDetect(userAgent);
+	if (md.tablet()) {
+		deviceType = "tablet";
+	} else if (md.mobile()) {
+		deviceType = "mobile";
+	} else {
+		deviceType = "desktop";
+	}
+	return { deviceType };
 };
 
 export default Index;
