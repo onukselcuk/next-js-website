@@ -9,7 +9,7 @@ const theme = {
 		},
 		secondary: {
 			main: "#f9f9f6",
-			// main: "#fff5ee",
+			alternative: "#fff5ee",
 			dark: "#6c675c"
 		},
 		third: {

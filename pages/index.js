@@ -797,11 +797,11 @@ const Index = (props) => {
 						responsive={responsive}
 						ssr={true} // means to render carousel on server-side.
 						infinite={true}
-						autoPlay={false}
-						autoPlaySpeed={1000}
+						autoPlay={true}
+						autoPlaySpeed={20000}
 						keyBoardControl={true}
-						customTransition="all 800ms ease-in-out"
-						transitionDuration={800}
+						customTransition="all 600ms ease-in-out"
+						transitionDuration={600}
 						containerClass="carousel-container"
 						removeArrowOnDeviceType={[ "tablet", "mobile" ]}
 						deviceType={props.deviceType}
@@ -846,12 +846,30 @@ const Index = (props) => {
 							</Paper>
 						</div>
 						<div className="carouselPaper-item">
-							<Paper className={classes.reviewPaper}>
+							<Paper className={classes.reviewPaper} elevation={reviewPaperElevation}>
 								<div className="reviewer-image-wrapper">
-									<img className="reviewer-image" src={reviewerImg} alt="" />
+									<a
+										target="_blank"
+										href="https://www.google.com/maps/place/%C4%B0stanbul+Smile+Center+A%C4%9F%C4%B1z+ve+Di%C5%9F+Sa%C4%9Fl%C4%B1%C4%9F%C4%B1+Poliklini%C4%9Fi/@40.9914481,28.832006,17z/data=!4m7!3m6!1s0x14caa3147e2cba65:0xb6eaeab3d94bfd80!8m2!3d40.9914441!4d28.8341947!9m1!1b1"
+									>
+										<img className="reviewer-image" src={reviewerImg} alt="" />
+										<SvgIcon className={classes.googleSvgIcon} viewBox="0 0 533.5 544.3">
+											<GoogleLogo />
+										</SvgIcon>
+									</a>
 								</div>
 								<div className="reviewer-name-wrapper">
 									<h3 className="reviewer-name">Roger Lewis</h3>
+								</div>
+								<div className="review-date-wrapper">
+									<span className="review-date">2 months ago</span>
+								</div>
+								<div className="stars-wrapper">
+									<StarIcon className={classes.star} />
+									<StarIcon className={classes.star} />
+									<StarIcon className={classes.star} />
+									<StarIcon className={classes.star} />
+									<StarIcon className={classes.star} />
 								</div>
 								<div className="review-wrapper">
 									<p className="review">
@@ -859,27 +877,39 @@ const Index = (props) => {
 										almost half the price ! But the quality of the product used, or execution of the
 										surgery are uncompromised ! Adam my implant surgeon was Very professional and
 										highly skilled, would recommend this practice to anyone thinking of having
-										implants done !! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto
-										cum corporis voluptas sunt expedita perferendis, ipsum nulla! Id, quas tenetur
-										perferendis ea aliquid expedita nisi, reiciendis dolorem eum facere velit? Qui
-										temporibus incidunt quam vero eligendi reprehenderit reiciendis in consectetur
-										pariatur, vitae praesentium fuga, sequi quas quos totam hic. Recusandae
-										dignissimos, possimus blanditiis sapiente sint accusantium voluptatibus delectus
-										commodi officiis? Incidunt eius recusandae, repellendus, autem vero a repellat
-										tenetur ex facere suscipit necessitatibus nihil pariatur ratione aliquam. Fugit
-										provident id vero vel distinctio facilis totam iure repellat, reprehenderit
-										assumenda quibusdam.
+										implants done !! Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
+										alias quasi est provident perspiciatis nesciunt ullam cumque, nostrum sequi
+										deserunt harum, sint laudantium accusantium eveniet delectus porro magni ipsa
+										asperiores.
 									</p>
 								</div>
 							</Paper>
 						</div>
 						<div className="carouselPaper-item">
-							<Paper className={classes.reviewPaper}>
+							<Paper className={classes.reviewPaper} elevation={reviewPaperElevation}>
 								<div className="reviewer-image-wrapper">
-									<img className="reviewer-image" src={reviewerImg} alt="" />
+									<a
+										target="_blank"
+										href="https://www.google.com/maps/place/%C4%B0stanbul+Smile+Center+A%C4%9F%C4%B1z+ve+Di%C5%9F+Sa%C4%9Fl%C4%B1%C4%9F%C4%B1+Poliklini%C4%9Fi/@40.9914481,28.832006,17z/data=!4m7!3m6!1s0x14caa3147e2cba65:0xb6eaeab3d94bfd80!8m2!3d40.9914441!4d28.8341947!9m1!1b1"
+									>
+										<img className="reviewer-image" src={reviewerImg} alt="" />
+										<SvgIcon className={classes.googleSvgIcon} viewBox="0 0 533.5 544.3">
+											<GoogleLogo />
+										</SvgIcon>
+									</a>
 								</div>
 								<div className="reviewer-name-wrapper">
 									<h3 className="reviewer-name">Roger Lewis</h3>
+								</div>
+								<div className="review-date-wrapper">
+									<span className="review-date">2 months ago</span>
+								</div>
+								<div className="stars-wrapper">
+									<StarIcon className={classes.star} />
+									<StarIcon className={classes.star} />
+									<StarIcon className={classes.star} />
+									<StarIcon className={classes.star} />
+									<StarIcon className={classes.star} />
 								</div>
 								<div className="review-wrapper">
 									<p className="review">
@@ -893,12 +923,30 @@ const Index = (props) => {
 							</Paper>
 						</div>
 						<div className="carouselPaper-item">
-							<Paper className={classes.reviewPaper}>
+							<Paper className={classes.reviewPaper} elevation={reviewPaperElevation}>
 								<div className="reviewer-image-wrapper">
-									<img className="reviewer-image" src={reviewerImg} alt="" />
+									<a
+										target="_blank"
+										href="https://www.google.com/maps/place/%C4%B0stanbul+Smile+Center+A%C4%9F%C4%B1z+ve+Di%C5%9F+Sa%C4%9Fl%C4%B1%C4%9F%C4%B1+Poliklini%C4%9Fi/@40.9914481,28.832006,17z/data=!4m7!3m6!1s0x14caa3147e2cba65:0xb6eaeab3d94bfd80!8m2!3d40.9914441!4d28.8341947!9m1!1b1"
+									>
+										<img className="reviewer-image" src={reviewerImg} alt="" />
+										<SvgIcon className={classes.googleSvgIcon} viewBox="0 0 533.5 544.3">
+											<GoogleLogo />
+										</SvgIcon>
+									</a>
 								</div>
 								<div className="reviewer-name-wrapper">
 									<h3 className="reviewer-name">Roger Lewis</h3>
+								</div>
+								<div className="review-date-wrapper">
+									<span className="review-date">2 months ago</span>
+								</div>
+								<div className="stars-wrapper">
+									<StarIcon className={classes.star} />
+									<StarIcon className={classes.star} />
+									<StarIcon className={classes.star} />
+									<StarIcon className={classes.star} />
+									<StarIcon className={classes.star} />
 								</div>
 								<div className="review-wrapper">
 									<p className="review">
@@ -912,12 +960,104 @@ const Index = (props) => {
 							</Paper>
 						</div>
 						<div className="carouselPaper-item">
-							<Paper className={classes.reviewPaper}>
+							<Paper className={classes.reviewPaper} elevation={reviewPaperElevation}>
 								<div className="reviewer-image-wrapper">
-									<img className="reviewer-image" src={reviewerImg} alt="" />
+									<a
+										target="_blank"
+										href="https://www.google.com/maps/place/%C4%B0stanbul+Smile+Center+A%C4%9F%C4%B1z+ve+Di%C5%9F+Sa%C4%9Fl%C4%B1%C4%9F%C4%B1+Poliklini%C4%9Fi/@40.9914481,28.832006,17z/data=!4m7!3m6!1s0x14caa3147e2cba65:0xb6eaeab3d94bfd80!8m2!3d40.9914441!4d28.8341947!9m1!1b1"
+									>
+										<img className="reviewer-image" src={reviewerImg} alt="" />
+										<SvgIcon className={classes.googleSvgIcon} viewBox="0 0 533.5 544.3">
+											<GoogleLogo />
+										</SvgIcon>
+									</a>
 								</div>
 								<div className="reviewer-name-wrapper">
 									<h3 className="reviewer-name">Roger Lewis</h3>
+								</div>
+								<div className="review-date-wrapper">
+									<span className="review-date">2 months ago</span>
+								</div>
+								<div className="stars-wrapper">
+									<StarIcon className={classes.star} />
+									<StarIcon className={classes.star} />
+									<StarIcon className={classes.star} />
+									<StarIcon className={classes.star} />
+									<StarIcon className={classes.star} />
+								</div>
+								<div className="review-wrapper">
+									<p className="review">
+										Very competitive price compared to my local implant practice, in fact it was
+										almost half the price ! But the quality of the product used, or execution of the
+										surgery are uncompromised ! Adam my implant surgeon was Very professional and
+										highly skilled, would recommend this practice to anyone thinking of having
+										implants done !!
+									</p>
+								</div>
+							</Paper>
+						</div>
+						<div className="carouselPaper-item">
+							<Paper className={classes.reviewPaper} elevation={reviewPaperElevation}>
+								<div className="reviewer-image-wrapper">
+									<a
+										target="_blank"
+										href="https://www.google.com/maps/place/%C4%B0stanbul+Smile+Center+A%C4%9F%C4%B1z+ve+Di%C5%9F+Sa%C4%9Fl%C4%B1%C4%9F%C4%B1+Poliklini%C4%9Fi/@40.9914481,28.832006,17z/data=!4m7!3m6!1s0x14caa3147e2cba65:0xb6eaeab3d94bfd80!8m2!3d40.9914441!4d28.8341947!9m1!1b1"
+									>
+										<img className="reviewer-image" src={reviewerImg} alt="" />
+										<SvgIcon className={classes.googleSvgIcon} viewBox="0 0 533.5 544.3">
+											<GoogleLogo />
+										</SvgIcon>
+									</a>
+								</div>
+								<div className="reviewer-name-wrapper">
+									<h3 className="reviewer-name">Roger Lewis</h3>
+								</div>
+								<div className="review-date-wrapper">
+									<span className="review-date">2 months ago</span>
+								</div>
+								<div className="stars-wrapper">
+									<StarIcon className={classes.star} />
+									<StarIcon className={classes.star} />
+									<StarIcon className={classes.star} />
+									<StarIcon className={classes.star} />
+									<StarIcon className={classes.star} />
+								</div>
+								<div className="review-wrapper">
+									<p className="review">
+										Very competitive price compared to my local implant practice, in fact it was
+										almost half the price ! But the quality of the product used, or execution of the
+										surgery are uncompromised ! Adam my implant surgeon was Very professional and
+										highly skilled, would recommend this practice to anyone thinking of having
+										implants done !!
+									</p>
+								</div>
+							</Paper>
+						</div>
+						<div className="carouselPaper-item">
+							<Paper className={classes.reviewPaper} elevation={reviewPaperElevation}>
+								<div className="reviewer-image-wrapper">
+									<a
+										target="_blank"
+										href="https://www.google.com/maps/place/%C4%B0stanbul+Smile+Center+A%C4%9F%C4%B1z+ve+Di%C5%9F+Sa%C4%9Fl%C4%B1%C4%9F%C4%B1+Poliklini%C4%9Fi/@40.9914481,28.832006,17z/data=!4m7!3m6!1s0x14caa3147e2cba65:0xb6eaeab3d94bfd80!8m2!3d40.9914441!4d28.8341947!9m1!1b1"
+									>
+										<img className="reviewer-image" src={reviewerImg} alt="" />
+										<SvgIcon className={classes.googleSvgIcon} viewBox="0 0 533.5 544.3">
+											<GoogleLogo />
+										</SvgIcon>
+									</a>
+								</div>
+								<div className="reviewer-name-wrapper">
+									<h3 className="reviewer-name">Roger Lewis</h3>
+								</div>
+								<div className="review-date-wrapper">
+									<span className="review-date">2 months ago</span>
+								</div>
+								<div className="stars-wrapper">
+									<StarIcon className={classes.star} />
+									<StarIcon className={classes.star} />
+									<StarIcon className={classes.star} />
+									<StarIcon className={classes.star} />
+									<StarIcon className={classes.star} />
 								</div>
 								<div className="review-wrapper">
 									<p className="review">
@@ -932,6 +1072,22 @@ const Index = (props) => {
 						</div>
 					</Carousel>
 				</div>
+				<div className="dental-treatments-buttons-div">
+					<Button
+						variant="contained"
+						color="primary"
+						className={clsx(classes.regularButton, classes.treatmentsButton)}
+					>
+						Chat Now
+					</Button>
+					<a
+						target="_blank"
+						href="https://www.google.com/maps/place/%C4%B0stanbul+Smile+Center+A%C4%9F%C4%B1z+ve+Di%C5%9F+Sa%C4%9Fl%C4%B1%C4%9F%C4%B1+Poliklini%C4%9Fi/@40.9914076,28.8309331,17z/data=!4m5!3m4!1s0x14caa3147e2cba65:0xb6eaeab3d94bfd80!8m2!3d40.9914441!4d28.8341947"
+						className="clinic-intro-link"
+					>
+						See all reviews
+					</a>
+				</div>
 			</section>
 			<style jsx global>{`
 				.react-multi-carousel-list {
@@ -943,7 +1099,7 @@ const Index = (props) => {
 				.react-multi-carousel-track {
 					list-style: none;
 					padding: 0;
-					margin: 0;
+					margin: 1rem;
 					display: flex;
 					flex-direction: row;
 					position: relative;
@@ -1230,7 +1386,7 @@ const Index = (props) => {
 				.isc-google-review-banner-wrapper {
 					display: flex;
 					justify-content: center;
-					margin: 2rem 0;
+					margin: 4rem 0;
 				}
 
 				.google-logos-wrapper {
