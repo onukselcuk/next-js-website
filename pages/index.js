@@ -38,7 +38,6 @@ import reviewerImg from "../public/IMG_01134212.png";
 import StarIcon from "@material-ui/icons/Star";
 import GoogleLogo from "../components/logos-icons/GoogleLogo";
 import MobileDetect from "mobile-detect";
-import { useState } from "react";
 import GoogleLogoFull from "../components/logos-icons/GoogleLogoFull";
 import GoogleMyBusinessLogo from "../components/logos-icons/GoogleMyBusinessLogo";
 

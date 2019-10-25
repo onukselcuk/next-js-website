@@ -14,8 +14,8 @@ const theme = {
 		},
 		third: {
 			main: "#edfcff",
-			// dark: "#dff0f7"
-			// dark: "#c3eef5"
+			lightBlue: "#dff0f7",
+			//dark: "#c3eef5",
 			dark: "#E94D65"
 		},
 		original: {

@@ -274,7 +274,12 @@ export default () => {
 			<footer className={classes.secondFooter}>
 				<div className={classes.secondFooterWrapper}>
 					<div>&copy; 2019 Istanbul Smile Center Dental Clinic</div>
-					<a className={classes.developerLink} href="mailto:devonukselcuk@gmail.com">
+					<a
+						className={classes.developerLink}
+						href="mailto:devonukselcuk@gmail.com?subject=Web%20Development%20and%20Design&body=Hey%20onukDesign%2C"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
 						Developed and designed by onukDesign
 					</a>
 				</div>

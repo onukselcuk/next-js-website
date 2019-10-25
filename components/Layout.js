@@ -25,7 +25,8 @@ const useStyles = makeStyles((theme) => ({
 	},
 	root: {
 		margin: 0,
-		padding: 0
+		padding: 0,
+		minHeight: "100vh"
 	}
 }));
 
