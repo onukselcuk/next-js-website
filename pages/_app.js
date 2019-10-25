@@ -3,6 +3,7 @@ import App from "next/app";
 import Head from "next/head";
 import { ThemeProvider } from "@material-ui/styles";
 import theme from "../src/theme";
+import Layout from "../components/Layout";
 
 class MyApp extends App {
 	componentDidMount () {
@@ -30,10 +31,12 @@ class MyApp extends App {
 		return (
 			<React.Fragment>
 				<Head>
-					<title key="title">Istanbul Smile Center</title>
+					<title key="title">{pageProps.title}</title>
 				</Head>
 				<ThemeProvider theme={theme}>
-					<Component {...pageProps} />
+					<Layout>
+						<Component {...pageProps} />
+					</Layout>
 				</ThemeProvider>
 			</React.Fragment>
 		);

@@ -1,4 +1,3 @@
-import Layout from "../components/Layout";
 import Link from "next/link";
 import heroImage from "../public/hero-image-optimized.jpg";
 import atakoyTowersImage from "../public/atakoy-towers-image.jpg";
@@ -215,7 +214,7 @@ const Index = (props) => {
 	};
 
 	return (
-		<Layout title="Istanbul Smile Center | Let's Make Your Smile Perfect">
+		<React.Fragment>
 			<div className="hero-image-div">
 				<img className="hero-image" src={heroImage} alt="" />
 				<div className="hero-image-perfect-wrapper">
@@ -1491,7 +1490,7 @@ const Index = (props) => {
 					margin: 0 auto;
 				}
 			`}</style>
-		</Layout>
+		</React.Fragment>
 	);
 };
 
@@ -1511,7 +1510,8 @@ Index.getInitialProps = async ({ req }) => {
 	} else {
 		deviceType = "desktop";
 	}
-	return { deviceType };
+	const title = "Istanbul Smile Center | Let's Make Your Smile Perfect";
+	return { deviceType, title };
 };
 
 export default Index;

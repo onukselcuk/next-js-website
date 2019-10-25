@@ -1,11 +1,12 @@
 import Layout from "../components/Layout";
 
 const Privileges = () => {
-	return (
-		<Layout title="Patient Privileges & Itinerary | Istanbul Smile Center | Let's Make Your Smile Perfect" >
-			<p>Privileges Page</p>
-		</Layout>
-	);
+	return <p>Privileges Page</p>;
+};
+
+Privileges.getInitialProps = async () => {
+	const title = "Patient Privileges & Itinerary | Istanbul Smile Center | Let's Make Your Smile Perfect";
+	return { title };
 };
 
 export default Privileges;
