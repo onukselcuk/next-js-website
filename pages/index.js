@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Head from "next/head";
 import heroImage from "../public/hero-image-optimized.jpg";
 import atakoyTowersImage from "../public/atakoy-towers-image.jpg";
 import { makeStyles } from "@material-ui/core/styles";
@@ -214,6 +215,9 @@ const Index = (props) => {
 
 	return (
 		<React.Fragment>
+			<Head>
+				<title key="title">Istanbul Smile Center | Let's Make Your Smile Perfect</title>
+			</Head>
 			<div className="hero-image-div">
 				<img className="hero-image" src={heroImage} alt="" />
 				<div className="hero-image-perfect-wrapper">
@@ -1509,8 +1513,8 @@ Index.getInitialProps = async ({ req }) => {
 	} else {
 		deviceType = "desktop";
 	}
-	const title = "Istanbul Smile Center | Let's Make Your Smile Perfect";
-	return { deviceType, title };
+
+	return { deviceType };
 };
 
 export default Index;

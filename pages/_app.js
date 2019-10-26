@@ -1,6 +1,5 @@
 import React from "react";
 import App from "next/app";
-import Head from "next/head";
 import { ThemeProvider } from "@material-ui/styles";
 import theme from "../src/theme";
 import Layout from "../components/Layout";
@@ -30,9 +29,6 @@ class MyApp extends App {
 		const { Component, pageProps } = this.props;
 		return (
 			<React.Fragment>
-				<Head>
-					<title key="title">{pageProps.title}</title>
-				</Head>
 				<ThemeProvider theme={theme}>
 					<Layout>
 						<Component {...pageProps} />

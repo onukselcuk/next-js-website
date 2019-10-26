@@ -96,6 +96,7 @@ const useStyles = makeStyles((theme) => ({
 	currencyButton: {
 		padding: "1rem 12rem",
 		fontSize: "1.7rem",
+		transition: "all 200ms ease-in-out",
 		"&:hover": {
 			backgroundColor: theme.palette.primary.main,
 			color: "white"

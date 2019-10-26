@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Head from "next/head";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import clsx from "clsx";
@@ -33,6 +34,12 @@ const Prices = () => {
 	const classes = useStyles();
 	return (
 		<div className="root">
+			<Head>
+				<title key="title">
+					Prices & Cost Calculator - Transparent Pricing | Istanbul Smile Center | Let's Make Your Smile
+					Perfect
+				</title>
+			</Head>
 			<section className="our-prices-section">
 				<div className="our-prices-header">
 					<h2 className="our-prices-header-text">Our Prices</h2>
@@ -110,12 +117,6 @@ const Prices = () => {
 			`}</style>
 		</div>
 	);
-};
-
-Prices.getInitialProps = async () => {
-	const title =
-		"Prices & Cost Calculator - Transparent Pricing | Istanbul Smile Center | Let's Make Your Smile Perfect";
-	return { title };
 };
 
 export default Prices;
