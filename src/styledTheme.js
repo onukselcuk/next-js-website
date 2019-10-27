@@ -6,7 +6,7 @@ const theme = {
 			// main: "#004C97",
 			main: "#1a3a6f",
 			//main: "#18334e",
-			//main: "rgb(40, 85, 130)",
+			alternative: "rgb(40, 85, 130)",
 			light: "#0060a7"
 		},
 		secondary: {
@@ -14,8 +14,8 @@ const theme = {
 			main: "#eceff4",
 			alternative: "#fff5ee",
 			//dark: "#6c675c"
-			//dark: "#666a6e"
-			dark: "rgb(40, 85, 130)"
+			dark: "#666a6e"
+			//dark: "rgb(40, 85, 130)"
 		},
 		third: {
 			main: "#edfcff",

@@ -1,14 +1,12 @@
 import { withStyles, makeStyles } from "@material-ui/core/styles";
-import { useState } from "react";
+
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
 import TableCell from "@material-ui/core/TableCell";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
-import Grid from "@material-ui/core/Grid";
-import Button from "@material-ui/core/Button";
-import ButtonGroup from "@material-ui/core/ButtonGroup";
+
 import {
 	dentalImplantObj,
 	dentalImplantArr,
@@ -22,6 +20,7 @@ import {
 	pedodonticsArr
 } from "../src/priceList";
 import clsx from "clsx";
+import CurrencySelectorButtonGroup from "./CurrencySelectorButtonGroup";
 
 const StyledTableCell = withStyles((theme) => ({
 	head: {
@@ -66,11 +65,7 @@ const useStyles = makeStyles((theme) => ({
 	table: {
 		minWidth: "300px"
 	},
-	currencySelectorButtonsWrapper: {
-		display: "flex",
-		justifyContent: "center",
-		margin: "5rem 0 2rem 0"
-	},
+
 	priceTableWrapper: {
 		display: "flex",
 		justifyContent: "center",
@@ -92,32 +87,22 @@ const useStyles = makeStyles((theme) => ({
 	otherProceduresPaper: {
 		width: "350px"
 	},
-	currencyChangerButtonGroup: {},
-	currencyButton: {
-		padding: "1rem 12rem",
-		fontSize: "1.7rem",
-		transition: "all 200ms ease-in-out",
-		"&:hover": {
-			backgroundColor: theme.palette.primary.main,
-			color: "white"
-		}
-	},
-	activeButton: {
-		borderColor: theme.palette.third.dark,
-		backgroundColor: theme.palette.third.dark,
-		color: "white"
+	currencySelectorButtonsWrapper: {
+		display: "flex",
+		justifyContent: "center",
+		margin: "5rem 0 2rem 0"
 	}
 }));
 
-export default function CustomizedTables () {
+export default function CustomizedTables ({
+	currentCurrency,
+	setCurrentCurrency,
+	currentSign,
+	setCurrentSign,
+	handleCurrencyChange,
+	language
+}) {
 	const classes = useStyles();
-	const language = "en";
-	const [ currentCurrency, setCurrentCurrency ] = useState("euro");
-	const [ currentSign, setCurrentSign ] = useState("€");
-	const handleCurrencyChange = (e) => {
-		setCurrentCurrency(e.currentTarget.name);
-		setCurrentSign(e.currentTarget.dataset.sign);
-	};
 
 	return (
 		<React.Fragment>
@@ -176,51 +161,11 @@ export default function CustomizedTables () {
 				</Table>
 			</Paper>
 			<div className={classes.currencySelectorButtonsWrapper}>
-				<Grid item xs={12} md={6}>
-					<ButtonGroup
-						className={classes.currencyChangerButtonGroup}
-						fullWidth
-						aria-label="full width outlined button group"
-						color="primary"
-					>
-						<Button
-							variant={currentCurrency == "euro" ? "contained" : "outlined"}
-							name="euro"
-							data-sign="€"
-							onClick={handleCurrencyChange}
-							className={clsx(
-								classes.currencyButton,
-								`${currentCurrency == "euro" ? classes.activeButton : null}`
-							)}
-						>
-							EUR
-						</Button>
-						<Button
-							variant={currentCurrency == "dollar" ? "contained" : "outlined"}
-							name="dollar"
-							data-sign="$"
-							onClick={handleCurrencyChange}
-							className={clsx(
-								classes.currencyButton,
-								`${currentCurrency == "dollar" ? classes.activeButton : null}`
-							)}
-						>
-							USD
-						</Button>
-						<Button
-							variant={currentCurrency == "pound" ? "contained" : "outlined"}
-							name="pound"
-							data-sign="£"
-							onClick={handleCurrencyChange}
-							className={clsx(
-								classes.currencyButton,
-								`${currentCurrency == "pound" ? classes.activeButton : null}`
-							)}
-						>
-							GBP
-						</Button>
-					</ButtonGroup>
-				</Grid>
+				<CurrencySelectorButtonGroup
+					currentCurrency={currentCurrency}
+					handleCurrencyChange={handleCurrencyChange}
+					isInsideCalculator={false}
+				/>
 			</div>
 			<div className={classes.priceTableWrapper}>
 				<div>

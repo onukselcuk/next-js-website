@@ -5,6 +5,8 @@ import Button from "@material-ui/core/Button";
 import clsx from "clsx";
 import sTheme from "../src/styledTheme";
 import PriceTable from "../components/PriceTable";
+import CostCalculator from "../components/CostCalculator";
+import { useState } from "react";
 
 const useStyles = makeStyles((theme) => ({
 	regularButton: {
@@ -32,6 +34,13 @@ const useStyles = makeStyles((theme) => ({
 
 const Prices = () => {
 	const classes = useStyles();
+	const language = "en";
+	const [ currentCurrency, setCurrentCurrency ] = useState("euro");
+	const [ currentSign, setCurrentSign ] = useState("€");
+	const handleCurrencyChange = (e) => {
+		setCurrentCurrency(e.currentTarget.name);
+		setCurrentSign(e.currentTarget.dataset.sign);
+	};
 	return (
 		<div className="root">
 			<Head>
@@ -49,8 +58,67 @@ const Prices = () => {
 						policy. We don't hide our prices. No surprises! No hidden costs!
 					</p>
 				</div>
-				<div className="price-table-wrapper">
-					<PriceTable />
+				<div className="our-prices-wrapper">
+					<PriceTable
+						currentCurrency={currentCurrency}
+						setCurrentCurrency={setCurrentCurrency}
+						currentSign={currentSign}
+						setCurrentSign={setCurrentSign}
+						handleCurrencyChange={handleCurrencyChange}
+						language={language}
+					/>
+				</div>
+
+				<div className="dental-treatments-buttons-div">
+					<Button
+						variant="contained"
+						color="primary"
+						className={clsx(classes.regularButton, classes.pricesButton)}
+					>
+						Chat Now
+					</Button>
+					<Link href="/privileges">
+						<a className="our-prices-link">Learn more abut your privileges and itinerary</a>
+					</Link>
+				</div>
+			</section>
+			<section className="our-prices-section cost-calculator-section">
+				<div className="our-prices-header">
+					<h2 className="our-prices-header-text">Cost Calculator</h2>
+					<p className="our-prices-header-paragraph-text">
+						We even provide you a cost calculator to calculate the dental cost by yourself for your
+						convenience. If you got your teeth checked up by a doctor and know your exact treatment needs,
+						feel free to use the cost calculator.
+					</p>
+				</div>
+				<div className="cost-calculator-wrapper">
+					<CostCalculator currentCurrency={currentCurrency} handleCurrencyChange={handleCurrencyChange} />
+				</div>
+
+				<div className="dental-treatments-buttons-div">
+					<Button
+						variant="contained"
+						color="primary"
+						className={clsx(classes.regularButton, classes.pricesButton)}
+					>
+						Chat Now
+					</Button>
+					<Link href="/privileges">
+						<a className="our-prices-link">Learn more abut your privileges and itinerary</a>
+					</Link>
+				</div>
+			</section>
+			<section className="our-prices-section cost-calculator-section">
+				<div className="our-prices-header">
+					<h2 className="our-prices-header-text">Cost Calculator</h2>
+					<p className="our-prices-header-paragraph-text">
+						We even provide you a cost calculator to calculate the dental cost by yourself for your
+						convenience. If you got your teeth checked up by a doctor and know your exact treatment needs,
+						feel free to use the cost calculator.
+					</p>
+				</div>
+				<div className="cost-calculator-wrapper">
+					<CostCalculator currentCurrency={currentCurrency} handleCurrencyChange={handleCurrencyChange} />
 				</div>
 
 				<div className="dental-treatments-buttons-div">
@@ -113,6 +181,13 @@ const Prices = () => {
 					align-items: baseline;
 					margin: 0 auto;
 					margin-top: 4rem;
+				}
+
+				.cost-calculator-section {
+					background-color: ${sTheme.palette.secondary.main};
+				}
+				.cost-calculator-wrapper {
+					width: 60%;
 				}
 			`}</style>
 		</div>
