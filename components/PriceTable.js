@@ -8,15 +8,10 @@ import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 
 import {
-	dentalImplantObj,
 	dentalImplantArr,
-	dentalVeneerCrownObj,
 	dentalVeneerCrownArr,
-	denturesInvisalignObj,
 	denturesInvisalignArr,
-	otherProceduresObj,
 	otherProceduresArr,
-	pedodonticsObj,
 	pedodonticsArr
 } from "../src/priceList";
 import clsx from "clsx";

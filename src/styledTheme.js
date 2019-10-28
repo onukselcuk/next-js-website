@@ -41,8 +41,9 @@ const theme = {
 		sansSerif: "'Source Sans Pro', sans-serif",
 		// sansSerif: "Avenir, sans-serif",
 		// serif: "Avenir, serif",
-		serif: "Sorts Mill Goudy, serif"
+		serif: "Sorts Mill Goudy, serif",
 		//avenir: "Avenir, sans-serif"
+		fontFamily: [ "Source Sans Pro", "Roboto", "sans-serif" ].join(",")
 	}
 };
 

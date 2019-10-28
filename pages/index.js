@@ -52,7 +52,6 @@ const useStyles = makeStyles((theme) => ({
 		padding: "20px 120px",
 		marginTop: "30px",
 		borderRadius: "35px",
-		fontFamily: theme.typography.sansSerif,
 		fontSize: "2rem",
 		letterSpacing: "1px",
 		color: theme.palette.secondary.main,
@@ -65,7 +64,6 @@ const useStyles = makeStyles((theme) => ({
 		borderRadius: "20px",
 		fontSize: "1.5rem",
 		backgroundColor: theme.palette.third.dark,
-		fontFamily: theme.typography.sansSerif,
 		letterSpacing: "1px",
 		padding: "10px 25px",
 		"&:hover": {
@@ -1471,7 +1469,7 @@ const Index = (props) => {
 				.reviewer-name-wrapper {
 					margin-top: 1rem;
 					color: ${sTheme.palette.primary.main};
-					font-size: 1.7rem;
+					font-size: 1.8rem;
 				}
 
 				.review-wrapper {
@@ -1491,6 +1489,7 @@ const Index = (props) => {
 				.review {
 					width: 90%;
 					margin: 0 auto;
+					font-size: 1.7rem;
 				}
 			`}</style>
 		</React.Fragment>

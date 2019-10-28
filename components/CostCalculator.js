@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
@@ -10,6 +10,16 @@ import sTheme from "../src/styledTheme";
 import CurrencySelectorButtonGroup from "./CurrencySelectorButtonGroup";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import Slider from "@material-ui/core/Slider";
+import Radio from "@material-ui/core/Radio";
+import RadioGroup from "@material-ui/core/RadioGroup";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import FormControl from "@material-ui/core/FormControl";
+import FormLabel from "@material-ui/core/FormLabel";
+import FormGroup from "@material-ui/core/FormGroup";
+import Checkbox from "@material-ui/core/Checkbox";
+import clsx from "clsx";
+import { dentalImplantObj, dentalVeneerCrownObj, denturesInvisalignObj, otherProceduresObj } from "../src/priceList";
+import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -18,7 +28,8 @@ const useStyles = makeStyles((theme) => ({
 		justifyContent: "space-between"
 	},
 	calculatorLeftPart: {
-		width: "70%"
+		width: "70%",
+		zIndex: "3"
 	},
 	expansionPanelSummaryTypography: {
 		fontSize: "1.8rem",
@@ -30,11 +41,14 @@ const useStyles = makeStyles((theme) => ({
 	},
 	calculatorResultPaper: {
 		position: "sticky",
+		borderRadius: "10px",
 		top: "5rem",
-		border: `1px solid ${theme.palette.primary.main}`,
+		border: `2px solid ${theme.palette.primary.main}`,
 		borderTopLeftRadius: 0,
 		borderBottomLeftRadius: 0,
-		borderLeft: "none"
+		borderLeft: "none",
+		marginLeft: "-8px",
+		backgroundColor: theme.palette.third.main
 		// backgroundImage: `linear-gradient(180deg,${theme.palette.primary.light} ,${theme.palette.primary.main} 50%)`
 		// backgroundImage: `linear-gradient(0deg,${theme.palette.primary.alternative},${theme.palette.primary
 		// 	.light} 50%,${theme.palette.secondary.main})`
@@ -43,12 +57,91 @@ const useStyles = makeStyles((theme) => ({
 	implantNumberSliderWrapper: {
 		display: "flex",
 		alignItems: "center",
-		marginTop: "3rem"
+		width: "100%",
+		marginTop: "2.8rem"
 	},
-	implantNumberSlider: {},
+	implantNumberSlider: {
+		width: "55%"
+	},
 	labelText: {
-		width: "300px",
-		marginRight: "1rem"
+		width: "35%",
+		marginRight: "3rem",
+		fontSize: "1.8rem",
+		fontFamily: theme.typography.sansSerif
+	},
+	implantFormWrapper: {
+		marginTop: "1.4rem"
+	},
+	formRadioGroup: {
+		marginTop: "1rem"
+	},
+	radioHeaderLabel: {
+		fontSize: "1.8rem",
+		fontFamily: theme.typography.sansSerif,
+		color: theme.palette.primary.main,
+		fontWeight: "bold"
+	},
+	implantForm: {
+		"& .MuiFormLabel-root": {},
+		"& .MuiTypography-body1": {
+			fontSize: "1.8rem",
+			fontFamily: theme.typography.sansSerif
+		}
+	},
+	radioButton: {
+		"& span": {
+			color: theme.palette.third.dark
+		}
+	},
+	sinusLiftingFormGroup: {
+		marginTop: "1rem"
+	},
+	sinusLiftingCheckBoxGroup: {
+		marginTop: "1rem",
+		"& .MuiTypography-body1": {
+			fontSize: "1.8rem",
+			fontFamily: theme.typography.sansSerif
+		}
+	},
+	radioHeaderLabelDouble: {
+		marginTop: "2rem",
+		marginBottom: "1rem"
+	},
+	totalCostWrapper: {
+		textAlign: "center",
+		padding: "4rem 0",
+		"& *": {
+			fontSize: "5rem",
+			fontWeight: "normal",
+			color: theme.palette.primary.main
+		}
+	},
+	totalCostNumber: {},
+	totalCostText: {
+		fontSize: "3rem"
+	},
+	discountButtonWrapper: {
+		padding: "2rem 0"
+	},
+	regularButton: {
+		borderRadius: "20px",
+		fontSize: "1.5rem",
+		backgroundColor: theme.palette.third.dark,
+		letterSpacing: "1px",
+		padding: "10px 25px",
+		"&:hover": {
+			backgroundColor: theme.palette.primary.main,
+			color: theme.palette.secondary.main
+		}
+	},
+	pricesButton: {
+		marginRight: "auto",
+		marginLeft: "50%",
+		transform: "translateX(-50%)",
+		padding: "1rem 6rem"
+
+		// position: "relative",
+		// left: "50%",
 	}
 }));
 
@@ -106,38 +199,81 @@ const ExpansionPanelSummary = withStyles({
 
 const ExpansionPanelDetails = withStyles((theme) => ({
 	root: {
-		padding: theme.spacing(2)
+		padding: "15px 24px",
+		flexDirection: "column",
+		backgroundColor: theme.palette.third.main
 	}
 }))(MuiExpansionPanelDetails);
+const iOSBoxShadow = "0 3px 1px rgba(0,0,0,0.1),0 4px 8px rgba(0,0,0,0.13),0 0 0 1px rgba(0,0,0,0.02)";
 
-const marks = [
-	{
-		value: 0,
-		label: "0°C"
+const IOSSlider = withStyles({
+	root: {
+		// color: "#3880ff",
+		color: sTheme.palette.third.dark,
+		height: 2,
+		padding: "15px 0"
 	},
-	{
-		value: 20,
-		label: "20°C"
+	thumb: {
+		height: 28,
+		width: 28,
+		// backgroundColor: "#fff",
+		backgroundColor: sTheme.palette.third.dark,
+		// border: `1px ${sTheme.palette.third.dark} solid`,
+		boxShadow: iOSBoxShadow,
+		marginTop: -14,
+		marginLeft: -14,
+		"&:focus,&:hover,&$active": {
+			boxShadow: "0 3px 1px rgba(0,0,0,0.1),0 4px 8px rgba(0,0,0,0.3),0 0 0 1px rgba(0,0,0,0.02)",
+
+			// Reset on touch devices, it doesn't add specificity
+			"@media (hover: none)": {
+				boxShadow: iOSBoxShadow
+			}
+		}
 	},
-	{
-		value: 37,
-		label: "37°C"
+	active: {},
+	valueLabel: {
+		left: "calc(-50% + 11px)",
+		top: -22,
+		"& *": {
+			background: "transparent",
+			color: "#000",
+			fontSize: "1.8rem",
+			fontFamily: sTheme.typography.sansSerif
+		}
 	},
-	{
-		value: 100,
-		label: "100°C"
+	track: {
+		height: 4
+	},
+	rail: {
+		height: 4,
+		opacity: 0.5,
+		backgroundColor: "#bfbfbf"
+	},
+	mark: {
+		backgroundColor: "#bfbfbf",
+		height: 8,
+		width: 1,
+		marginTop: -3
+	},
+	markActive: {
+		opacity: 1,
+		backgroundColor: "currentColor"
 	}
-];
+})(Slider);
 
-function valuetext (value) {
-	return `${value}°C`;
-}
+const GreenCheckbox = withStyles({
+	root: {
+		color: sTheme.palette.third.dark,
+		"&$checked": {
+			color: sTheme.palette.third.dark
+		}
+	},
+	checked: {}
+})((props) => <Checkbox color="default" {...props} />);
 
-function valueLabelFormat (value) {
-	return marks.findIndex((mark) => mark.value === value) + 1;
-}
-
-export default function CustomizedExpansionPanels ({ currentCurrency, handleCurrencyChange }) {
+export default function CustomizedExpansionPanels ({ currentCurrency, handleCurrencyChange, currentSign }) {
+	const classes = useStyles();
 	const [ isOpen, setIsOpen ] = useState({
 		panel1: true,
 		panel2: false,
@@ -145,16 +281,125 @@ export default function CustomizedExpansionPanels ({ currentCurrency, handleCurr
 		panel4: false,
 		panel5: false
 	});
-	const classes = useStyles();
 
-	const handleChange = (e) => {
+	const handleChange = (name) => (e) => {
 		setIsOpen((cur) => {
 			return {
 				...cur,
-				[e.currentTarget.dataset.name]: !cur[e.currentTarget.dataset.name]
+				[name]: !cur[name]
 			};
 		});
 	};
+
+	const [ sliderState, setSliderState ] = useState({
+		numberOfImplants: 0,
+		numberOfCrowns: 0,
+		numberOfVeneers: 0,
+		numberOfPartialDentures: 0,
+		numberOfFullDentures: 0,
+		numberOfBondingTreatments: 0,
+		numberOfDentalFillings: 0,
+		numberOfRootCanals: 0
+	});
+
+	const handleSliderChange = (name) => (e, newValue) => {
+		setSliderState({ ...sliderState, [name]: newValue });
+	};
+
+	const [ checkBoxState, setCheckBoxState ] = useState({
+		sinusLifting: false,
+		onlayInlay: false,
+		laserTeethBleaching: false,
+		homeTeethWhiteningKit: false,
+		professionalDentalCleaning: false,
+		gumContouring: false,
+		nightGuard: false
+	});
+
+	const handleCheckboxChange = (name) => (e) => {
+		setCheckBoxState({ ...checkBoxState, [name]: e.currentTarget.checked });
+	};
+
+	const [ selectState, setSelectState ] = useState({
+		implantBrand: "straumann",
+		crownType: "zirconiumCrownWithCad",
+		veneerType: "laminateVeneerEmax",
+		laserTeethBleaching: "laserBleachingPerJaw"
+	});
+
+	const handleSelectChange = (name) => (e) => {
+		setSelectState({ ...selectState, [name]: e.target.value });
+	};
+
+	const [ totalCostState, setTotalCostState ] = useState(0);
+
+	const calculateTotal = () => {
+		let total = 0;
+		if (sliderState.numberOfImplants > 0) {
+			total += sliderState.numberOfImplants * dentalImplantObj[selectState.implantBrand][currentCurrency];
+		}
+		if (checkBoxState.sinusLifting) {
+			total += dentalImplantObj.sinusLifting[currentCurrency];
+		}
+		if (sliderState.numberOfCrowns > 0) {
+			total += sliderState.numberOfCrowns * dentalVeneerCrownObj[selectState.crownType][currentCurrency];
+		}
+		if (sliderState.numberOfVeneers > 0) {
+			total += sliderState.numberOfVeneers * dentalVeneerCrownObj[selectState.veneerType][currentCurrency];
+		}
+		if (checkBoxState.onlayInlay) {
+			total += dentalVeneerCrownObj.onlayInlay[currentCurrency];
+		}
+		if (sliderState.numberOfPartialDentures > 0) {
+			total += sliderState.numberOfPartialDentures * denturesInvisalignObj.prosthesisSkeleton[currentCurrency];
+		}
+
+		if (sliderState.numberOfFullDentures > 0) {
+			total += sliderState.numberOfFullDentures * denturesInvisalignObj.prosthesisFull[currentCurrency];
+		}
+
+		if (sliderState.numberOfBondingTreatments > 0) {
+			total += sliderState.numberOfBondingTreatments * otherProceduresObj.bonding[currentCurrency];
+		}
+
+		if (sliderState.numberOfDentalFillings > 0) {
+			total += sliderState.numberOfDentalFillings * otherProceduresObj.filling[currentCurrency];
+		}
+
+		if (sliderState.numberOfRootCanals > 0) {
+			total += sliderState.numberOfRootCanals * otherProceduresObj.rootCanal[currentCurrency];
+		}
+
+		if (checkBoxState.laserTeethBleaching) {
+			total += otherProceduresObj[selectState.laserTeethBleaching][currentCurrency];
+		}
+
+		if (checkBoxState.homeTeethWhiteningKit) {
+			total += otherProceduresObj.homeTeethWhiteningKit[currentCurrency];
+		}
+
+		if (checkBoxState.professionalDentalCleaning) {
+			total += otherProceduresObj.dentalCleaningPro[currentCurrency];
+		}
+
+		if (checkBoxState.gumContouring) {
+			total += otherProceduresObj.gumContouring[currentCurrency];
+		}
+
+		if (checkBoxState.nightGuard) {
+			total += otherProceduresObj.nightGuard[currentCurrency];
+		}
+
+		setTotalCostState(total);
+	};
+
+	useEffect(calculateTotal, [ sliderState, checkBoxState, selectState, currentCurrency ]);
+
+	function thousands_separators (num) {
+		var num_parts = num.toString().split(".");
+		num_parts[0] = num_parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+		return num_parts.join(".");
+	}
 
 	return (
 		<div>
@@ -167,26 +412,77 @@ export default function CustomizedExpansionPanels ({ currentCurrency, handleCurr
 				<div className={classes.calculatorLeftPart}>
 					<ExpansionPanel expanded={isOpen.panel1}>
 						<ExpansionPanelSummary
-							onClick={handleChange}
+							onClick={handleChange("panel1")}
 							aria-controls="panel1d-content"
 							id="panel1d-header"
-							data-name="panel1"
 							expandIcon={<ExpandMoreIcon />}
 						>
-							<Typography className={classes.expansionPanelSummaryTypography}>Dental Implants</Typography>
+							<Typography className={classes.expansionPanelSummaryTypography}>
+								Dental Implants & Related Procedures
+							</Typography>
 						</ExpansionPanelSummary>
 						<ExpansionPanelDetails>
+							<FormLabel className={classes.radioHeaderLabel} component="legend">
+								How Many Implants Do You Need?
+							</FormLabel>
 							<div className={classes.implantNumberSliderWrapper}>
-								<p className={classes.labelText}>Number of Teeth</p>
-								<Slider
-									defaultValue={80}
-									getAriaValueText={valuetext}
-									aria-labelledby="discrete-slider-always"
-									step={10}
-									marks={marks}
+								<p className={classes.labelText}>Number of Implants:</p>
+								<IOSSlider
+									aria-label="ios slider"
+									marks={true}
 									valueLabelDisplay="on"
+									step={1}
+									min={0}
+									max={24}
 									className={classes.implantNumberSlider}
+									value={sliderState.numberOfImplants}
+									onChange={handleSliderChange("numberOfImplants")}
 								/>
+							</div>
+							<div className={classes.implantFormWrapper}>
+								<FormControl className={classes.implantForm} component="fieldset">
+									<FormLabel className={classes.radioHeaderLabel} component="legend">
+										Choose An Implant Brand
+									</FormLabel>
+									<RadioGroup
+										aria-label="position"
+										name="position"
+										value={selectState.implantBrand}
+										onChange={handleSelectChange("implantBrand")}
+										column="true"
+										className={classes.formRadioGroup}
+									>
+										<FormControlLabel
+											value="straumann"
+											control={<Radio className={classes.radioButton} />}
+											label="Implant Straumann (Swiss) - abutment included"
+											labelPlacement="end"
+										/>
+										<FormControlLabel
+											value="hiossen"
+											control={<Radio className={classes.radioButton} />}
+											label="Implant Hiossen (U.S. American) - abutment included"
+											labelPlacement="end"
+										/>
+									</RadioGroup>
+								</FormControl>
+							</div>
+							<div className={classes.sinusLiftingFormGroup}>
+								<FormGroup column="true">
+									<FormLabel className={classes.radioHeaderLabel} component="legend">
+										Check If You Need Sinus Lifting Treatment
+									</FormLabel>
+									<FormControlLabel
+										control={
+											<GreenCheckbox
+												checked={checkBoxState.sinusLifting}
+												onChange={handleCheckboxChange("sinusLifting")}
+											/>
+										}
+										label="Sinus Lifting (bone grafting cost is not included, it can only be determined after teeth x-ray examination)"
+										className={classes.sinusLiftingCheckBoxGroup}
+									/>
+								</FormGroup>
 							</div>
 						</ExpansionPanelDetails>
 					</ExpansionPanel>
@@ -194,62 +490,187 @@ export default function CustomizedExpansionPanels ({ currentCurrency, handleCurr
 						<ExpansionPanelSummary
 							aria-controls="panel2d-content"
 							id="panel2d-header"
-							data-name="panel2"
-							onClick={handleChange}
+							onClick={handleChange("panel2")}
 							expandIcon={<ExpandMoreIcon />}
 						>
 							<Typography className={classes.expansionPanelSummaryTypography}>Dental Crowns</Typography>
 						</ExpansionPanelSummary>
 						<ExpansionPanelDetails>
-							<Typography>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-								sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur adipiscing
-								elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.
-							</Typography>
+							<FormLabel className={classes.radioHeaderLabel} component="legend">
+								How Many Crowns Do You Need?
+							</FormLabel>
+							<div className={classes.implantNumberSliderWrapper}>
+								<p className={classes.labelText}>Number of Crowns:</p>
+								<IOSSlider
+									aria-label="ios slider"
+									marks={true}
+									valueLabelDisplay="on"
+									step={1}
+									min={0}
+									max={32}
+									className={classes.implantNumberSlider}
+									value={sliderState.numberOfCrowns}
+									onChange={handleSliderChange("numberOfCrowns")}
+								/>
+							</div>
+							<div className={classes.implantFormWrapper}>
+								<FormControl className={classes.implantForm} component="fieldset">
+									<FormLabel className={classes.radioHeaderLabel} component="legend">
+										Choose A Crown Type
+									</FormLabel>
+									<RadioGroup
+										aria-label="position"
+										name="position"
+										value={selectState.crownType}
+										onChange={handleSelectChange("crownType")}
+										column="true"
+										className={classes.formRadioGroup}
+									>
+										<FormControlLabel
+											value="zirconiumCrownWithCad"
+											control={<Radio className={classes.radioButton} />}
+											label="Zirconium Crown with CAD/CAM System"
+											labelPlacement="end"
+										/>
+										<FormControlLabel
+											value="fullPorcelainCrown"
+											control={<Radio className={classes.radioButton} />}
+											label="Full Porcelain Crown with CAD/CAM System"
+											labelPlacement="end"
+										/>
+									</RadioGroup>
+								</FormControl>
+							</div>
 						</ExpansionPanelDetails>
 					</ExpansionPanel>
 					<ExpansionPanel expanded={isOpen.panel3}>
 						<ExpansionPanelSummary
 							aria-controls="panel3d-content"
 							id="panel3d-header"
-							data-name="panel3"
-							onClick={handleChange}
+							onClick={handleChange("panel3")}
 							expandIcon={<ExpandMoreIcon />}
 						>
 							<Typography className={classes.expansionPanelSummaryTypography}>Dental Veneers</Typography>
 						</ExpansionPanelSummary>
 						<ExpansionPanelDetails>
-							<Typography>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-								sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur adipiscing
-								elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.
-							</Typography>
+							<FormLabel className={classes.radioHeaderLabel} component="legend">
+								How Many Veneers Do You Need?
+							</FormLabel>
+							<div className={classes.implantNumberSliderWrapper}>
+								<p className={classes.labelText}>Number of Veneers:</p>
+								<IOSSlider
+									aria-label="ios slider"
+									marks={true}
+									valueLabelDisplay="on"
+									step={1}
+									min={0}
+									max={32}
+									className={classes.implantNumberSlider}
+									value={sliderState.numberOfVeneers}
+									onChange={handleSliderChange("numberOfVeneers")}
+								/>
+							</div>
+							<div className={classes.implantFormWrapper}>
+								<FormControl className={classes.implantForm} component="fieldset">
+									<FormLabel className={classes.radioHeaderLabel} component="legend">
+										Choose A Veneer Type
+									</FormLabel>
+									<RadioGroup
+										aria-label="position"
+										name="position"
+										value={selectState.veneerType}
+										onChange={handleSelectChange("veneerType")}
+										column="true"
+										className={classes.formRadioGroup}
+									>
+										<FormControlLabel
+											value="laminateVeneer"
+											control={<Radio className={classes.radioButton} />}
+											label="Laminate Veneer"
+											labelPlacement="end"
+										/>
+										<FormControlLabel
+											value="laminateVeneerEmax"
+											control={<Radio className={classes.radioButton} />}
+											label="Laminate Veneer EMAX"
+											labelPlacement="end"
+										/>
+									</RadioGroup>
+								</FormControl>
+							</div>
+							<div className={classes.sinusLiftingFormGroup}>
+								<FormGroup column="true">
+									<FormLabel className={classes.radioHeaderLabel} component="legend">
+										Check If You Need Onlay/Inlay Filling
+									</FormLabel>
+									<FormControlLabel
+										control={
+											<GreenCheckbox
+												checked={checkBoxState.onlayInlay}
+												onChange={handleCheckboxChange("onlayInlay")}
+											/>
+										}
+										label="Onlay/Inlay Filling with CAD/CAM System"
+										className={classes.sinusLiftingCheckBoxGroup}
+									/>
+								</FormGroup>
+							</div>
 						</ExpansionPanelDetails>
 					</ExpansionPanel>
 					<ExpansionPanel expanded={isOpen.panel4}>
 						<ExpansionPanelSummary
 							aria-controls="panel4d-content"
 							id="panel4d-header"
-							data-name="panel4"
-							onClick={handleChange}
+							onClick={handleChange("panel4")}
 							expandIcon={<ExpandMoreIcon />}
 						>
 							<Typography className={classes.expansionPanelSummaryTypography}>Dentures</Typography>
 						</ExpansionPanelSummary>
 						<ExpansionPanelDetails>
-							<Typography>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-								sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur adipiscing
-								elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.
-							</Typography>
+							<FormLabel className={classes.radioHeaderLabel} component="legend">
+								How Many Partial/Skeleton Dentures/Prostheses <br /> Do You Need (Single or Both Jaws) ?
+							</FormLabel>
+							<div className={classes.implantNumberSliderWrapper}>
+								<p className={classes.labelText}>Number of Dentures:</p>
+								<IOSSlider
+									aria-label="ios slider"
+									marks={true}
+									valueLabelDisplay="on"
+									step={1}
+									min={0}
+									max={2}
+									className={classes.implantNumberSlider}
+									value={sliderState.numberOfPartialDentures}
+									onChange={handleSliderChange("numberOfPartialDentures")}
+								/>
+							</div>
+							<FormLabel
+								className={clsx(classes.radioHeaderLabel, classes.radioHeaderLabelDouble)}
+								component="legend"
+							>
+								How Many Full Dentures/Prostheses <br /> Do You Need (Single or Both Jaws) ?
+							</FormLabel>
+							<div className={classes.implantNumberSliderWrapper}>
+								<p className={classes.labelText}>Number of Dentures:</p>
+								<IOSSlider
+									aria-label="ios slider"
+									marks={true}
+									valueLabelDisplay="on"
+									step={1}
+									min={0}
+									max={2}
+									className={classes.implantNumberSlider}
+									value={sliderState.numberOfFullDentures}
+									onChange={handleSliderChange("numberOfFullDentures")}
+								/>
+							</div>
 						</ExpansionPanelDetails>
 					</ExpansionPanel>
 					<ExpansionPanel expanded={isOpen.panel5}>
 						<ExpansionPanelSummary
 							aria-controls="panel5d-content"
 							id="panel5d-header"
-							data-name="panel5"
-							onClick={handleChange}
+							onClick={handleChange("panel5")}
 							expandIcon={<ExpandMoreIcon />}
 						>
 							<Typography className={classes.expansionPanelSummaryTypography}>
@@ -257,37 +678,193 @@ export default function CustomizedExpansionPanels ({ currentCurrency, handleCurr
 							</Typography>
 						</ExpansionPanelSummary>
 						<ExpansionPanelDetails>
-							<Typography>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-								sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur adipiscing
-								elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.
-							</Typography>
+							<FormLabel className={classes.radioHeaderLabel} component="legend">
+								For How Many Teeth Do You Need Bonding Treatment?
+							</FormLabel>
+							<div className={classes.implantNumberSliderWrapper}>
+								<p className={classes.labelText}>Number of Teeth:</p>
+								<IOSSlider
+									aria-label="ios slider"
+									marks={true}
+									valueLabelDisplay="on"
+									step={1}
+									min={0}
+									max={8}
+									className={classes.implantNumberSlider}
+									value={sliderState.numberOfBondingTreatments}
+									onChange={handleSliderChange("numberOfBondingTreatments")}
+								/>
+							</div>
+							<FormLabel
+								className={clsx(classes.radioHeaderLabel, classes.radioHeaderLabelDouble)}
+								component="legend"
+							>
+								For How Many Teeth Do You Need Dental Filling?
+							</FormLabel>
+							<div className={classes.implantNumberSliderWrapper}>
+								<p className={classes.labelText}>Number of Teeth:</p>
+								<IOSSlider
+									aria-label="ios slider"
+									marks={true}
+									valueLabelDisplay="on"
+									step={1}
+									min={0}
+									max={8}
+									className={classes.implantNumberSlider}
+									value={sliderState.numberOfDentalFillings}
+									onChange={handleSliderChange("numberOfDentalFillings")}
+								/>
+							</div>
+							<FormLabel
+								className={clsx(classes.radioHeaderLabel, classes.radioHeaderLabelDouble)}
+								component="legend"
+							>
+								For How Many Root Canals Do You Need Root Canal Treatment?
+							</FormLabel>
+							<div className={classes.implantNumberSliderWrapper}>
+								<p className={classes.labelText}>Number of Root Canals:</p>
+								<IOSSlider
+									aria-label="ios slider"
+									defaultValue={0}
+									marks={true}
+									valueLabelDisplay="on"
+									step={1}
+									min={0}
+									max={8}
+									className={classes.implantNumberSlider}
+									value={sliderState.numberOfRootCanals}
+									onChange={handleSliderChange("numberOfRootCanals")}
+								/>
+							</div>
+							<div className={classes.sinusLiftingFormGroup}>
+								<FormGroup column="true">
+									<FormLabel className={classes.radioHeaderLabel} component="legend">
+										Check If You Want Laser Teeth Bleaching and Choose Number of Jaws
+									</FormLabel>
+									<FormControlLabel
+										control={
+											<GreenCheckbox
+												checked={checkBoxState.laserTeethBleaching}
+												onChange={handleCheckboxChange("laserTeethBleaching")}
+											/>
+										}
+										label="Laser Teeth Bleaching"
+										className={classes.sinusLiftingCheckBoxGroup}
+									/>
+								</FormGroup>
+								<FormControl className={classes.implantForm} component="fieldset">
+									<RadioGroup
+										aria-label="position"
+										name="position"
+										value={selectState.laserTeethBleaching}
+										onChange={handleSelectChange("laserTeethBleaching")}
+										column="true"
+										className={classes.formRadioGroup}
+									>
+										<FormControlLabel
+											value="laserBleachingPerJaw"
+											control={<Radio className={classes.radioButton} />}
+											label="Laser Bleaching Single Jaw"
+											labelPlacement="end"
+										/>
+										<FormControlLabel
+											value="laserBleachingBothJaws"
+											control={<Radio className={classes.radioButton} />}
+											label="Laser Bleaching Both Jaws"
+											labelPlacement="end"
+										/>
+									</RadioGroup>
+								</FormControl>
+							</div>
+							<div className={classes.sinusLiftingFormGroup}>
+								<FormGroup column="true">
+									<FormLabel className={classes.radioHeaderLabel} component="legend">
+										Check If You Want Home Teeth Whitening Kit
+									</FormLabel>
+									<FormControlLabel
+										control={
+											<GreenCheckbox
+												checked={checkBoxState.homeTeethWhiteningKit}
+												onChange={handleCheckboxChange("homeTeethWhiteningKit")}
+											/>
+										}
+										label="Home Teeth Whitening Kit"
+										className={classes.sinusLiftingCheckBoxGroup}
+									/>
+								</FormGroup>
+							</div>
+							<div className={classes.sinusLiftingFormGroup}>
+								<FormGroup column="true">
+									<FormLabel className={classes.radioHeaderLabel} component="legend">
+										Check If You Want Professional Dental Cleaning
+									</FormLabel>
+									<FormControlLabel
+										control={
+											<GreenCheckbox
+												checked={checkBoxState.professionalDentalCleaning}
+												onChange={handleCheckboxChange("professionalDentalCleaning")}
+											/>
+										}
+										label="Professional Dental Cleaning"
+										className={classes.sinusLiftingCheckBoxGroup}
+									/>
+								</FormGroup>
+							</div>
+							<div className={classes.sinusLiftingFormGroup}>
+								<FormGroup column="true">
+									<FormLabel className={classes.radioHeaderLabel} component="legend">
+										Check If You Want Gum Contouring
+									</FormLabel>
+									<FormControlLabel
+										control={
+											<GreenCheckbox
+												checked={checkBoxState.gumContouring}
+												onChange={handleCheckboxChange("gumContouring")}
+											/>
+										}
+										label="Gum Contouring"
+										className={classes.sinusLiftingCheckBoxGroup}
+									/>
+								</FormGroup>
+							</div>
+							<div className={classes.sinusLiftingFormGroup}>
+								<FormGroup column="true">
+									<FormLabel className={classes.radioHeaderLabel} component="legend">
+										Check If You Need A Night Guard :)
+									</FormLabel>
+									<FormControlLabel
+										control={
+											<GreenCheckbox
+												checked={checkBoxState.nightGuard}
+												onChange={handleCheckboxChange("nightGuard")}
+											/>
+										}
+										label="Night Guard"
+										className={classes.sinusLiftingCheckBoxGroup}
+									/>
+								</FormGroup>
+							</div>
 						</ExpansionPanelDetails>
 					</ExpansionPanel>
 				</div>
 				<div className={classes.calculatorRightPart}>
 					<Paper className={classes.calculatorResultPaper}>
-						<Typography variant="h5" component="h3">
-							This is a sheet of paper.
-						</Typography>
-						<Typography component="p">
-							Paper can be used to build surface or other elements for your application.
-						</Typography>
-						<Typography variant="h5" component="h3">
-							This is a sheet of paper.
-						</Typography>
-						<Typography component="p">
-							Paper can be used to build surface or other elements for your application.
-						</Typography>
-						<Typography variant="h5" component="h3">
-							This is a sheet of paper.
-						</Typography>
-						<Typography component="p">
-							Paper can be used to build surface or other elements for your application.
-						</Typography>
-						<Typography variant="h5" component="h3">
-							This is a sheet of paper.
-						</Typography>
+						<div className={classes.totalCostWrapper}>
+							<h3 className={classes.totalCostNumber}>
+								{currentCurrency !== "euro" ? currentSign : null}
+								{thousands_separators(totalCostState)} {currentCurrency == "euro" ? currentSign : null}
+							</h3>
+							<h3 className={classes.totalCostText}>Total Cost</h3>
+						</div>
+						<div className={classes.discountButtonWrapper}>
+							<Button
+								variant="contained"
+								color="primary"
+								className={clsx(classes.regularButton, classes.pricesButton)}
+							>
+								I&nbsp;want&nbsp;discount
+							</Button>
+						</div>
 					</Paper>
 				</div>
 			</div>

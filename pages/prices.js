@@ -13,7 +13,6 @@ const useStyles = makeStyles((theme) => ({
 		borderRadius: "20px",
 		fontSize: "1.5rem",
 		backgroundColor: theme.palette.third.dark,
-		fontFamily: theme.typography.sansSerif,
 		letterSpacing: "1px",
 		padding: "10px 25px",
 		"&:hover": {
@@ -87,12 +86,16 @@ const Prices = () => {
 					<h2 className="our-prices-header-text">Cost Calculator</h2>
 					<p className="our-prices-header-paragraph-text">
 						We even provide you a cost calculator to calculate the dental cost by yourself for your
-						convenience. If you got your teeth checked up by a doctor and know your exact treatment needs,
-						feel free to use the cost calculator.
+						convenience. If you got your teeth checked up by a doctor and know your exact treatment needs or
+						you need an estimated cost, feel free to use our calculator.
 					</p>
 				</div>
 				<div className="cost-calculator-wrapper">
-					<CostCalculator currentCurrency={currentCurrency} handleCurrencyChange={handleCurrencyChange} />
+					<CostCalculator
+						currentCurrency={currentCurrency}
+						handleCurrencyChange={handleCurrencyChange}
+						currentSign={currentSign}
+					/>
 				</div>
 
 				<div className="dental-treatments-buttons-div">
@@ -108,32 +111,7 @@ const Prices = () => {
 					</Link>
 				</div>
 			</section>
-			<section className="our-prices-section cost-calculator-section">
-				<div className="our-prices-header">
-					<h2 className="our-prices-header-text">Cost Calculator</h2>
-					<p className="our-prices-header-paragraph-text">
-						We even provide you a cost calculator to calculate the dental cost by yourself for your
-						convenience. If you got your teeth checked up by a doctor and know your exact treatment needs,
-						feel free to use the cost calculator.
-					</p>
-				</div>
-				<div className="cost-calculator-wrapper">
-					<CostCalculator currentCurrency={currentCurrency} handleCurrencyChange={handleCurrencyChange} />
-				</div>
 
-				<div className="dental-treatments-buttons-div">
-					<Button
-						variant="contained"
-						color="primary"
-						className={clsx(classes.regularButton, classes.pricesButton)}
-					>
-						Chat Now
-					</Button>
-					<Link href="/privileges">
-						<a className="our-prices-link">Learn more abut your privileges and itinerary</a>
-					</Link>
-				</div>
-			</section>
 			<style jsx>{`
 				.root {
 					min-height: calc(100vh - 400px);
@@ -187,7 +165,7 @@ const Prices = () => {
 					background-color: ${sTheme.palette.secondary.main};
 				}
 				.cost-calculator-wrapper {
-					width: 60%;
+					width: 70%;
 				}
 			`}</style>
 		</div>
