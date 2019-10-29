@@ -6,7 +6,6 @@ import React from "react";
 import Document, { Head, Main, NextScript } from "next/document";
 import { ServerStyleSheets } from "@material-ui/styles";
 import theme from "../src/theme";
-import favicon from "../public/favicon/favicon.ico";
 
 class MyDocument extends Document {
 	// static async getInitialProps (ctx) {
@@ -29,7 +28,6 @@ class MyDocument extends Document {
 						href="https://fonts.googleapis.com/css?family=Roboto:400,700|Sorts+Mill+Goudy|Source+Sans+Pro:400,700&display=swap"
 						rel="stylesheet"
 					/>
-					{/* <link rel="shortcut icon" href={favicon} /> */}
 				</Head>
 				<body>
 					<Main />
