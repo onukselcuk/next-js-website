@@ -34,6 +34,8 @@
 		"prop-types": "^15.7.2",
 		"react": "^16.10.2",
 		"react-dom": "^16.10.2",
-		"react-multi-carousel": "^2.3.0"
+		"react-multi-carousel": "^2.3.0",
+		"react-phone-input-2": "^2.10.0",
+		"react-phone-input-mui": "^2.9.4"
 	}
 }

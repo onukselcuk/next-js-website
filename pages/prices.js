@@ -7,6 +7,7 @@ import sTheme from "../src/styledTheme";
 import PriceTable from "../components/PriceTable";
 import CostCalculator from "../components/CostCalculator";
 import { useState } from "react";
+import Form from "../components/Form";
 
 const useStyles = makeStyles((theme) => ({
 	regularButton: {
@@ -109,6 +110,23 @@ const Prices = () => {
 					<Link href="/privileges">
 						<a className="our-prices-link">Learn more abut your privileges and itinerary</a>
 					</Link>
+				</div>
+			</section>
+			<section className="our-prices-section cost-calculator-section form-section">
+				<div className="our-prices-header">
+					<h2 className="our-prices-header-text">Get A Free Quote with Special Discounts</h2>
+					<p className="our-prices-header-paragraph-text">
+						Contacting us through live chat or WhatsApp is always the fastest way but nonetheless, you may
+						prefer contacting us by sending a good old form. Tell us all about your dental needs and don't
+						forget to attach at least the pictures of your teeth to the form. If you have an X-Ray or CT
+						Scan, it's even better and crucial for most patients, this will help our doctors to make the
+						right dental plan for you. It will also help us in giving you a more accurate quote for your
+						treatment. Go ahead and fill out the form! After all, it's free. Who doesn't like a free
+						service? Let's make your smile perfect!
+					</p>
+				</div>
+				<div className="form-wrapper">
+					<Form />
 				</div>
 			</section>
 
