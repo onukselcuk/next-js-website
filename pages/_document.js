@@ -29,7 +29,7 @@ class MyDocument extends Document {
 						href="https://fonts.googleapis.com/css?family=Roboto:400,700|Sorts+Mill+Goudy|Source+Sans+Pro:400,700&display=swap"
 						rel="stylesheet"
 					/>
-					<link rel="shortcut icon" href={favicon} />
+					{/* <link rel="shortcut icon" href={favicon} /> */}
 				</Head>
 				<body>
 					<Main />
