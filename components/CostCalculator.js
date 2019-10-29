@@ -47,8 +47,8 @@ const useStyles = makeStyles((theme) => ({
 		borderTopLeftRadius: 0,
 		borderBottomLeftRadius: 0,
 		borderLeft: "none",
-		marginLeft: "-8px",
-		backgroundColor: theme.palette.third.main
+		marginLeft: "-8px"
+		// backgroundColor: theme.palette.third.main
 		// backgroundImage: `linear-gradient(180deg,${theme.palette.primary.light} ,${theme.palette.primary.main} 50%)`
 		// backgroundImage: `linear-gradient(0deg,${theme.palette.primary.alternative},${theme.palette.primary
 		// 	.light} 50%,${theme.palette.secondary.main})`
@@ -112,7 +112,7 @@ const useStyles = makeStyles((theme) => ({
 		padding: "4rem 0",
 		"& *": {
 			fontSize: "5rem",
-			fontWeight: "normal",
+			// fontWeight: "normal",
 			color: theme.palette.primary.main
 		}
 	},
@@ -148,7 +148,8 @@ const useStyles = makeStyles((theme) => ({
 const ExpansionPanel = withStyles({
 	root: {
 		border: `1px solid ${sTheme.palette.secondary.main}`,
-		boxShadow: "none",
+		// boxShadow: "none",
+		// boxShadow: "3px 5px 5px 2px rgba(0,0,0,.1)",
 		overflow: "hidden",
 
 		"&:first-of-type": {
@@ -200,8 +201,8 @@ const ExpansionPanelSummary = withStyles({
 const ExpansionPanelDetails = withStyles((theme) => ({
 	root: {
 		padding: "15px 24px",
-		flexDirection: "column",
-		backgroundColor: theme.palette.third.main
+		flexDirection: "column"
+		// backgroundColor: theme.palette.third.main
 	}
 }))(MuiExpansionPanelDetails);
 const iOSBoxShadow = "0 3px 1px rgba(0,0,0,0.1),0 4px 8px rgba(0,0,0,0.13),0 0 0 1px rgba(0,0,0,0.02)";
@@ -324,7 +325,7 @@ export default function CustomizedExpansionPanels ({ currentCurrency, handleCurr
 		implantBrand: "straumann",
 		crownType: "zirconiumCrownWithCad",
 		veneerType: "laminateVeneerEmax",
-		laserTeethBleaching: "laserBleachingPerJaw"
+		laserTeethBleaching: "laserBleachingBothJaws"
 	});
 
 	const handleSelectChange = (name) => (e) => {
@@ -395,10 +396,8 @@ export default function CustomizedExpansionPanels ({ currentCurrency, handleCurr
 
 	useEffect(calculateTotal, [ sliderState, checkBoxState, selectState, currentCurrency ]);
 
-	function thousands_separators (num) {
-		var num_parts = num.toString().split(".");
-		num_parts[0] = num_parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-		return num_parts.join(".");
+	function numberWithCommas (x) {
+		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 	}
 
 	return (
@@ -830,7 +829,7 @@ export default function CustomizedExpansionPanels ({ currentCurrency, handleCurr
 							<div className={classes.sinusLiftingFormGroup}>
 								<FormGroup column="true">
 									<FormLabel className={classes.radioHeaderLabel} component="legend">
-										Check If You Need A Night Guard :)
+										Check If You Need A Night Guard
 									</FormLabel>
 									<FormControlLabel
 										control={
@@ -852,7 +851,7 @@ export default function CustomizedExpansionPanels ({ currentCurrency, handleCurr
 						<div className={classes.totalCostWrapper}>
 							<h3 className={classes.totalCostNumber}>
 								{currentCurrency !== "euro" ? currentSign : null}
-								{thousands_separators(totalCostState)} {currentCurrency == "euro" ? currentSign : null}
+								{numberWithCommas(totalCostState)} {currentCurrency == "euro" ? currentSign : null}
 							</h3>
 							<h3 className={classes.totalCostText}>Total Cost</h3>
 						</div>

@@ -47,12 +47,12 @@ const useStyles = makeStyles((theme) => ({
 	topBarLink: {
 		textDecoration: "none",
 		fontSize: "1.6rem",
-		"&:hover": {
-			textDecoration: "underline"
-		},
-		"&:visited": {
+		"&:visited, &:link": {
 			textDecoration: "none",
 			color: theme.palette.third.main
+		},
+		"&:hover": {
+			textDecoration: "underline"
 		}
 	},
 	toolbar: {
