@@ -48,10 +48,6 @@ app.prepare().then(() => {
 	// 	app.render(req, res, "/en");
 	// });
 
-	server.get("/", (req, res) => {
-		return handle(req, res);
-	});
-
 	server.get("/get-reviews", (req, res) => {
 		async function main () {
 			const oauth2Client = new google.auth.OAuth2(process.env.CLIENT_ID, process.env.CLIENT_SECRET);
@@ -74,7 +70,7 @@ app.prepare().then(() => {
 		return handle(req, res);
 	});
 
-	server.listen(3000, (err) => {
+	server.listen(process.env.PORT || 3000, (err) => {
 		if (err) throw err;
 		console.log("Now serving on localhost:3000");
 	});
