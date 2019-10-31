@@ -1,3 +1,11 @@
+// {
+//   "presets": [["next/babel",
+//             {
+//                 "useBuiltIns":"entry",
+//                 "corejs":3
+
+//             }]]
+// }
 {
-  "presets": ["next/babel"]
+  "presets": [["next/babel"]]
 }

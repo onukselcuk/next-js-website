@@ -2,6 +2,8 @@
 // Event handlers like onClick can't be added to this file
 
 // ./pages/_document.js
+import "core-js-pure/stable";
+import "regenerator-runtime/runtime";
 import React from "react";
 import Document, { Head, Main, NextScript } from "next/document";
 import { ServerStyleSheets } from "@material-ui/styles";

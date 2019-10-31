@@ -112,7 +112,7 @@ const Prices = () => {
 					</Link>
 				</div>
 			</section>
-			<section className="our-prices-section cost-calculator-section form-section">
+			<section className="our-prices-section form-section">
 				<div className="our-prices-header">
 					<h2 className="our-prices-header-text">Get A Free Quote with Special Discounts</h2>
 					<p className="our-prices-header-paragraph-text">
@@ -121,8 +121,7 @@ const Prices = () => {
 						forget to attach at least the pictures of your teeth to the form. If you have an X-Ray or CT
 						Scan, it's even better and crucial for most patients, this will help our doctors to make the
 						right dental plan for you. It will also help us in giving you a more accurate quote for your
-						treatment. Go ahead and fill out the form! After all, it's free. Who doesn't like a free
-						service? Let's make your smile perfect!
+						treatment. Go ahead and fill out the form! Let's make your smile perfect!
 					</p>
 				</div>
 				<div className="form-wrapper">

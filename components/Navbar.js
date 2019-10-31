@@ -135,7 +135,7 @@ export default () => {
 					</div>
 					<div className={classes.topBarContacts}>
 						<WhatsAppIcon />
-						<p className={classes.topBarText}>Call or Text us on Whatsapp</p>
+						<p className={classes.topBarText}>Call or Text us on WhatsApp</p>
 						<a
 							target="_blank"
 							href="https://wa.me/905309492470?text=Hi+Istanbul+Smile+Center.+I+have+a+question."

@@ -22,6 +22,7 @@ function PhoneField (props) {
 				onChange={onChange}
 				inputClass={classes.field}
 				dropdownClass={classes.countryList}
+				preferredCountries={[ "us", "de", "gb", "fr", "es", "it", "ch", "nl", "be", "au" ]}
 				component={TextField}
 				inputExtraProps={{
 					margin: "normal",
@@ -32,6 +33,8 @@ function PhoneField (props) {
 					required: true
 				}}
 				enableSearchField={true}
+				disableSearchIcon={true}
+				disableAreaCodes={true}
 			/>
 			<style jsx global>{`
 				.react-tel-input input[type=text],
@@ -40,9 +43,24 @@ function PhoneField (props) {
 				}
 				.react-tel-input .selected-flag {
 					padding-left: 10px;
+					transition: all 300ms ease-in-out;
+					height: 72%;
+					top: 11px;
+				}
+
+				.react-tel-input .selected-flag:hover {
+					background-color: rgba(0, 0, 0, .1);
 				}
 				.react-tel-input {
-					margin-left: 8px;
+					margin-left: 7px;
+				}
+
+				.react-tel-input .selected-flag .flag {
+					margin-top: -5px;
+				}
+
+				.react-tel-input .country-list {
+					margin: 0;
 				}
 			`}</style>
 		</React.Fragment>

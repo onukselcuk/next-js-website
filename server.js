@@ -5,6 +5,17 @@ const dev = process.env.NODE_ENV !== "production";
 const app = next({ dev });
 const handle = app.getRequestHandler();
 const { google } = require("googleapis");
+const bodyParser = require("body-parser");
+const multer = require("multer");
+
+var storage = multer.diskStorage({
+	destination: function (req, file, cb) {
+		cb(null, "public/uploaded-images/");
+	},
+	filename: function (req, file, cb) {
+		cb(null, Date.now() + "-" + file.originalname);
+	}
+});
 
 // async function main () {
 // 	const client = new JWT(keys.client_email, null, keys.private_key, [
@@ -39,6 +50,9 @@ const { google } = require("googleapis");
 
 app.prepare().then(() => {
 	const server = express();
+	server.use(express.static("public"));
+	server.use(bodyParser.urlencoded({ extended: false }));
+	const upload = multer({ storage: storage });
 
 	// server.get("/", (req, res) => {
 	// 	res.redirect("/en");
@@ -64,6 +78,11 @@ app.prepare().then(() => {
 		}
 
 		main().catch(console.error);
+	});
+
+	server.post("/post-form", upload.array("file"), (req, res) => {
+		//console.log(req.body);
+		res.send(req.body);
 	});
 
 	server.get("*", (req, res) => {
