@@ -7,6 +7,10 @@ const handle = app.getRequestHandler();
 const { google } = require("googleapis");
 const bodyParser = require("body-parser");
 const multer = require("multer");
+const AWS = require("aws-sdk");
+const moment = require("moment");
+require("moment/locale/tr");
+moment.locale("tr");
 
 var storage = multer.diskStorage({
 	destination: function (req, file, cb) {
@@ -78,6 +82,46 @@ app.prepare().then(() => {
 		}
 
 		main().catch(console.error);
+	});
+
+	server.get("/signed-url-put-object", async (req, res) => {
+		AWS.config.update({
+			accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+			secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+			region: "eu-west-2",
+			signatureVersion: "v4"
+		});
+
+		const filename = req.headers.filename;
+		const filetype = req.headers.filetype;
+		const name = req.headers.name;
+		const dateStringFull = `${moment().format("l")}-${moment().format("LT").replace(":", ".")}`;
+		const dateStringShort = `${moment().format("l")}`;
+
+		const params = {
+			Bucket: `isc-aws-bucket/isc-public-uploads/${name}-${dateStringShort}`,
+			Key: `${name}-${dateStringFull}-${filename}`,
+			Expires: 10 * 60,
+			ContentType: filetype
+		};
+		const options = {
+			signatureVersion: "v4",
+			region: "eu-west-2",
+			endpoint: new AWS.Endpoint("isc-aws-bucket.s3-accelerate.amazonaws.com"),
+			useAccelerateEndpoint: true
+		};
+		const client = new AWS.S3(options);
+		const signedURL = await new Promise((resolve, reject) => {
+			client.getSignedUrl("putObject", params, (err, data) => {
+				if (err) {
+					reject(err);
+				} else {
+					resolve(data);
+				}
+			});
+		});
+
+		return res.json({ signedURL, dateStringFull, dateStringShort });
 	});
 
 	server.post("/post-form", upload.array("file"), (req, res) => {
