@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Document</title>
+    <style type="text/css">
+        *,
+        ::after,
+        ::before {
+            box-sizing: inherit;
+        }
+
+        body {
+            box-sizing: border-box;
+        }
+
+
+        body,
+        p,
+        div {
+            font-family: inherit;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        h1,
+        h2,
+        b,
+        p {
+            color: #1a3a6f
+        }
+
+        a {
+            text-decoration: none;
+            color: #1a3a6f;
+        }
+
+        a:hover {
+            text-decoration: underline !important;
+        }
+
+        body {
+            background-color: #eceff4;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        .patient-info {
+            padding: 20px 30px 20px 30px;
+            border: 1px solid black;
+            border-top: none;
+            margin: 0 auto;
+            width: 50%;
+            background-color: white;
+        }
+
+        .uploaded-images-wrapper {
+            border: 1px solid black;
+
+            margin: 0 auto;
+
+            background-color: white;
+            width: 50%;
+
+        }
+
+        .patient-image {
+            width: 30%;
+            min-width: 200px;
+            max-width: 350px;
+            margin: 10px 10px 10px 10px;
+
+        }
+
+        .uploaded-image-links-wrapper {
+            border: 1px solid black;
+
+            padding: 20px 20px;
+            margin: 0 auto;
+            background-color: white;
+            width: 50%;
+
+        }
+
+        .image-link {
+            display: block;
+            padding: 10px;
+        }
+
+        .logo {
+            height: 150px;
+        }
+
+        hr {
+            width: 50%;
+        }
+
+        @media screen and (max-width:1400px) {
+            .patient-image {
+                width: 45% !important;
+            }
+
+            .patient-info,
+            .uploaded-images-wrapper,
+            .uploaded-image-links-wrapper {
+                width: 60% !important;
+            }
+
+            .logo {
+                height: 130px !important;
+            }
+        }
+
+        @media screen and (max-width:1000px) {
+            .patient-image {
+                width: 90% !important;
+            }
+
+            .patient-info,
+            .uploaded-images-wrapper,
+            .uploaded-image-links-wrapper {
+                width: 80% !important;
+            }
+
+            .logo {
+                height: 100px !important;
+            }
+        }
+
+        @media screen and (max-width:830px) {
+
+            .patient-info,
+            .uploaded-images-wrapper,
+            .uploaded-image-links-wrapper {
+                width: 90% !important;
+            }
+
+            .logo {
+                height: 90px !important;
+            }
+        }
+
+        @media screen and (max-width:650px) {
+
+            .patient-info,
+            .uploaded-images-wrapper,
+            .uploaded-image-links-wrapper {
+                width: 100% !important;
+                border-left: none !important;
+                border-right: none !important;
+            }
+
+            .logo {
+                height: 80px !important;
+            }
+
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="patient-info">
+        <img class="logo"
+            src="https://isc-website-images.s3.eu-west-2.amazonaws.com/website-images/email-images/istanbul_smile-center-email-logo.png"
+            alt="">
+        <h1>New International Patient Form</h1>
+        <h2>Patient Information</h2>
+        <p><b>Name:
+                <% if(title) { %>
+                <%=title%>
+                <% }%>
+                <%=name%> </b></p>
+        <p><b>Email Address: </b><a href="mailto:<%=email%>"><%=email%></a></p>
+        <p><b>Treatment Choice:
+            </b><%- treatmentChoice != "Select A Treatment You Are Looking For" ? treatmentChoice : "Not Selected" %>
+        </p>
+        <p><b>Age Group: </b><%- ageGroup != "Select Your Age Group" ? ageGroup : "Not Selected" %></p>
+        <p><b>Phone Number: </b> <a target="_blank"
+                href="https://wa.me/<%=country.phoneJoin%>?text=Hi"><%=country.number%></a>
+        </p>
+        <p><b>Country: </b> <%=country.name%></p>
+        <p><b>Patient Message</b></p>
+        <p><%=message%></p>
+    </div>
+
+    <% if (imageLinks.length>0) { %>
+    <div class="uploaded-images-wrapper">
+        <h2>Uploaded Images</h2>
+        <% imageLinks.forEach(cur=>{ %>
+        <a target="_blank" href="<%=cur%>">
+            <img class="patient-image" src="<%=cur%>" alt="">
+        </a>
+        <% }) %>
+    </div>
+    <div class="uploaded-image-links-wrapper">
+        <h2>Links of Uploaded Images</h2>
+        <% imageLinks.forEach((current,index)=>{ %>
+        <a class="image-link" target="_blank" href="<%=current%>"><%=current%></a>
+        <% if (index<imageLinks.length-1){  %>
+        <hr>
+        <% } %>
+        <% }) %>
+    </div>
+    <% } %>
+</body>
+
+</html>

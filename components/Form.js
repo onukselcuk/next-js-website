@@ -8,7 +8,6 @@ import clsx from "clsx";
 import { DropzoneArea } from "material-ui-dropzone";
 import Button from "@material-ui/core/Button";
 import axios from "axios";
-import { async } from "q";
 
 const treatments = [
 	{
@@ -278,8 +277,8 @@ const Form = () => {
 
 	const handleOnChange = (value, countryData) => {
 		setPhoneData({
-			number: value,
-			...countryData
+			...countryData,
+			number: value
 		});
 	};
 
@@ -294,82 +293,56 @@ const Form = () => {
 		e.preventDefault();
 		let imageLinks = [];
 
-		const uploadImages = async () => {
-			if (files.length > 0) {
-				async function asyncForEach (array, callback) {
-					for (let index = 0; index < array.length; index++) {
-						await callback(array[index], index, array);
-					}
+		// const uploadImages = async () => {
+		if (files.length > 0) {
+			async function asyncForEach (array, callback) {
+				for (let index = 0; index < array.length; index++) {
+					await callback(array[index], index, array);
 				}
-
-				await asyncForEach(files, async (cur, index) => {
-					const name = `${encodeURI(formData.name.replace(/ /g, "-"))}`;
-					const filename = `${cur.name}`;
-					const filetype = `${cur.type}`;
-
-					const signedURLRequest = await axios.get("http://localhost:3000/signed-url-put-object", {
-						headers: {
-							filename,
-							filetype,
-							name
-						}
-					});
-
-					const { signedURL, dateStringFull, dateStringShort } = signedURLRequest.data;
-
-					const uploadResponse = await axios.put(signedURL, cur, {
-						headers: {
-							"Content-Type": `${cur.type}`
-						}
-					});
-
-					const imageLink = `https://isc-aws-bucket.s3.eu-west-2.amazonaws.com/isc-public-uploads/${name}-${dateStringShort}/${name}-${dateStringFull}-${filename}`;
-
-					imageLinks.push(imageLink);
-
-					console.log(uploadResponse);
-				});
 			}
+
+			await asyncForEach(files, async (cur, index) => {
+				const name = `${encodeURI(formData.name.replace(/ /g, "-"))}`;
+				const filename = `${cur.name}`;
+				const filetype = `${cur.type}`;
+
+				const signedURLRequest = await axios.get("http://localhost:3000/signed-url-put-object", {
+					headers: {
+						filename,
+						filetype,
+						name
+					}
+				});
+
+				const { signedURL, dateStringFull, dateStringShort } = signedURLRequest.data;
+
+				const uploadResponse = await axios.put(signedURL, cur, {
+					headers: {
+						"Content-Type": `${cur.type}`
+					}
+				});
+
+				const imageLink = `https://isc-aws-bucket.s3.eu-west-2.amazonaws.com/isc-public-uploads/${name}-${dateStringShort}/${name}-${dateStringFull}-${filename}`;
+
+				imageLinks.push(imageLink);
+
+				console.log(uploadResponse);
+			});
+		}
+
+		const data = {
+			...formData,
+			country: { ...phoneData },
+			imageLinks
 		};
 
-		await uploadImages();
+		const response = await axios.post("http://localhost:3000/post-form", data, {
+			headers: {
+				"Content-Type": "application/json"
+			}
+		});
 
-		console.log(imageLinks);
-		// let data = new FormData();
-
-		// files.forEach((cur) => {
-		// 	data.append("file", cur);
-		// });
-
-		// const receivedData = {
-		// 	patientTitle: formData.title,
-		// 	patientName: formData.name,
-		// 	patientEmail: formData.email,
-		// 	patientTreatmentChoice: formData.treatmentChoice,
-		// 	patientAgeGroup: formData.ageGroup,
-		// 	patientMessage: formData.message,
-		// 	phoneNumber: phoneData.number,
-		// 	countryName: phoneData.name,
-		// 	dialCode: phoneData.dialCode,
-		// 	countryCode: phoneData.countryCode
-		// };
-
-		// data.append("patientTitle", formData.title);
-		// data.append("patientName", formData.name);
-		// data.append("patientEmail", formData.email);
-		// data.append("patientTreatmentChoice", formData.treatmentChoice);
-		// data.append("patientAgeGroup", formData.ageGroup);
-		// data.append("patientMessage", receivedData.patientMessage);
-		// data.append("phoneNumber", receivedData.number);
-		// data.append("countryName", receivedData.countryName);
-		// data.append("dialCode", receivedData.dialCode);
-		// data.append("countryCode", receivedData.countryCode);
-
-		// //data.append("file", files[0]);
-
-		// const response = await axios.post("http://localhost:3000/post-form", data);
-
-		// console.log(response);
+		console.log(response);
 	};
 
 	return (

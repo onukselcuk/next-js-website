@@ -41,6 +41,7 @@ import GoogleLogo from "../components/logos-icons/GoogleLogo";
 import MobileDetect from "mobile-detect";
 import GoogleLogoFull from "../components/logos-icons/GoogleLogoFull";
 import GoogleMyBusinessLogo from "../components/logos-icons/GoogleMyBusinessLogo";
+import { useState } from "react";
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -209,6 +210,11 @@ const Index = (props) => {
 			items: 1,
 			slidesToSlide: 1 // optional, default to 1.
 		}
+	};
+
+	const [ autoPlay, setAutoPlay ] = useState(true);
+	const handleReviewPaperAutoPlay = () => {
+		setAutoPlay(!autoPlay);
 	};
 
 	return (
@@ -797,7 +803,7 @@ const Index = (props) => {
 						responsive={responsive}
 						ssr={true} // means to render carousel on server-side.
 						infinite={true}
-						autoPlay={true}
+						autoPlay={autoPlay}
 						autoPlaySpeed={20000}
 						keyBoardControl={true}
 						customTransition="all 600ms ease-in-out"
@@ -809,7 +815,12 @@ const Index = (props) => {
 						itemClass="carousel-item-padding-40-px"
 					>
 						<div className="carouselPaper-item">
-							<Paper className={classes.reviewPaper} elevation={reviewPaperElevation}>
+							<Paper
+								className={classes.reviewPaper}
+								onMouseOver={handleReviewPaperAutoPlay}
+								onMouseOut={handleReviewPaperAutoPlay}
+								elevation={reviewPaperElevation}
+							>
 								<div className="reviewer-image-wrapper">
 									<a
 										target="_blank"
@@ -846,7 +857,12 @@ const Index = (props) => {
 							</Paper>
 						</div>
 						<div className="carouselPaper-item">
-							<Paper className={classes.reviewPaper} elevation={reviewPaperElevation}>
+							<Paper
+								onMouseOver={handleReviewPaperAutoPlay}
+								onMouseOut={handleReviewPaperAutoPlay}
+								className={classes.reviewPaper}
+								elevation={reviewPaperElevation}
+							>
 								<div className="reviewer-image-wrapper">
 									<a
 										target="_blank"
@@ -886,7 +902,12 @@ const Index = (props) => {
 							</Paper>
 						</div>
 						<div className="carouselPaper-item">
-							<Paper className={classes.reviewPaper} elevation={reviewPaperElevation}>
+							<Paper
+								onMouseOver={handleReviewPaperAutoPlay}
+								onMouseOut={handleReviewPaperAutoPlay}
+								className={classes.reviewPaper}
+								elevation={reviewPaperElevation}
+							>
 								<div className="reviewer-image-wrapper">
 									<a
 										target="_blank"
@@ -923,7 +944,12 @@ const Index = (props) => {
 							</Paper>
 						</div>
 						<div className="carouselPaper-item">
-							<Paper className={classes.reviewPaper} elevation={reviewPaperElevation}>
+							<Paper
+								onMouseOver={handleReviewPaperAutoPlay}
+								onMouseOut={handleReviewPaperAutoPlay}
+								className={classes.reviewPaper}
+								elevation={reviewPaperElevation}
+							>
 								<div className="reviewer-image-wrapper">
 									<a
 										target="_blank"
@@ -960,7 +986,12 @@ const Index = (props) => {
 							</Paper>
 						</div>
 						<div className="carouselPaper-item">
-							<Paper className={classes.reviewPaper} elevation={reviewPaperElevation}>
+							<Paper
+								onMouseOver={handleReviewPaperAutoPlay}
+								onMouseOut={handleReviewPaperAutoPlay}
+								className={classes.reviewPaper}
+								elevation={reviewPaperElevation}
+							>
 								<div className="reviewer-image-wrapper">
 									<a
 										target="_blank"
@@ -997,7 +1028,12 @@ const Index = (props) => {
 							</Paper>
 						</div>
 						<div className="carouselPaper-item">
-							<Paper className={classes.reviewPaper} elevation={reviewPaperElevation}>
+							<Paper
+								onMouseOver={handleReviewPaperAutoPlay}
+								onMouseOut={handleReviewPaperAutoPlay}
+								className={classes.reviewPaper}
+								elevation={reviewPaperElevation}
+							>
 								<div className="reviewer-image-wrapper">
 									<a
 										target="_blank"
@@ -1034,7 +1070,12 @@ const Index = (props) => {
 							</Paper>
 						</div>
 						<div className="carouselPaper-item">
-							<Paper className={classes.reviewPaper} elevation={reviewPaperElevation}>
+							<Paper
+								onMouseOver={handleReviewPaperAutoPlay}
+								onMouseOut={handleReviewPaperAutoPlay}
+								className={classes.reviewPaper}
+								elevation={reviewPaperElevation}
+							>
 								<div className="reviewer-image-wrapper">
 									<a
 										target="_blank"

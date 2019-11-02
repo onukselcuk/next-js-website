@@ -6,20 +6,12 @@ const app = next({ dev });
 const handle = app.getRequestHandler();
 const { google } = require("googleapis");
 const bodyParser = require("body-parser");
-const multer = require("multer");
 const AWS = require("aws-sdk");
 const moment = require("moment");
 require("moment/locale/tr");
 moment.locale("tr");
-
-var storage = multer.diskStorage({
-	destination: function (req, file, cb) {
-		cb(null, "public/uploaded-images/");
-	},
-	filename: function (req, file, cb) {
-		cb(null, Date.now() + "-" + file.originalname);
-	}
-});
+const mailer = require("./src/mailer");
+const mailerToUs = require("./src/mailerToUs");
 
 // async function main () {
 // 	const client = new JWT(keys.client_email, null, keys.private_key, [
@@ -56,7 +48,7 @@ app.prepare().then(() => {
 	const server = express();
 	server.use(express.static("public"));
 	server.use(bodyParser.urlencoded({ extended: false }));
-	const upload = multer({ storage: storage });
+	server.use(bodyParser.json());
 
 	// server.get("/", (req, res) => {
 	// 	res.redirect("/en");
@@ -124,9 +116,14 @@ app.prepare().then(() => {
 		return res.json({ signedURL, dateStringFull, dateStringShort });
 	});
 
-	server.post("/post-form", upload.array("file"), (req, res) => {
-		//console.log(req.body);
-		res.send(req.body);
+	server.post("/post-form", async (req, res) => {
+		const { name, email } = req.body;
+
+		await mailer(name, email);
+
+		await mailerToUs(req.body);
+
+		res.status(200).send({ message: "success" });
 	});
 
 	server.get("*", (req, res) => {

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en" style="box-sizing: inherit;">
+
+<head style="box-sizing: inherit;">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+        style="box-sizing: inherit;">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" style="box-sizing: inherit;">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" style="box-sizing: inherit;">
+    <title style="box-sizing: inherit;">Document</title>
+    <style type="text/css" style="box-sizing: inherit;">
+        *,
+        ::after,
+        ::before {
+            box-sizing: inherit;
+        }
+
+        body {
+            box-sizing: border-box;
+        }
+
+
+        body,
+        p,
+        div {
+            font-family: inherit;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        h1,
+        h2,
+        b,
+        p {
+            color: #1a3a6f
+        }
+
+        a {
+            text-decoration: none;
+            color: #1a3a6f;
+        }
+
+        a:hover {
+            text-decoration: underline !important;
+        }
+
+        body {
+            background-color: #eceff4;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        .patient-info {
+            padding: 20px 30px 20px 30px;
+            border: 1px solid black;
+            border-top: none;
+            margin: 0 auto;
+            width: 50%;
+            background-color: white;
+        }
+
+        .uploaded-images-wrapper {
+            border: 1px solid black;
+
+            margin: 0 auto;
+
+            background-color: white;
+            width: 50%;
+
+        }
+
+        .patient-image {
+            width: 30%;
+            min-width: 200px;
+            max-width: 350px;
+            margin: 10px 10px 10px 10px;
+
+        }
+
+        .uploaded-image-links-wrapper {
+            border: 1px solid black;
+
+            padding: 20px 20px;
+            margin: 0 auto;
+            background-color: white;
+            width: 50%;
+
+        }
+
+        .image-link {
+            display: block;
+            padding: 10px;
+        }
+
+        .logo {
+            height: 150px;
+        }
+
+        hr {
+            width: 50%;
+        }
+
+        @media screen and (max-width:1400px) {
+            .patient-image {
+                width: 45% !important;
+            }
+
+            .patient-info,
+            .uploaded-images-wrapper,
+            .uploaded-image-links-wrapper {
+                width: 60% !important;
+            }
+
+            .logo {
+                height: 130px !important;
+            }
+        }
+
+        @media screen and (max-width:1000px) {
+            .patient-image {
+                width: 90% !important;
+            }
+
+            .patient-info,
+            .uploaded-images-wrapper,
+            .uploaded-image-links-wrapper {
+                width: 80% !important;
+            }
+
+            .logo {
+                height: 100px !important;
+            }
+        }
+
+        @media screen and (max-width:830px) {
+
+            .patient-info,
+            .uploaded-images-wrapper,
+            .uploaded-image-links-wrapper {
+                width: 90% !important;
+            }
+
+            .logo {
+                height: 90px !important;
+            }
+        }
+
+        @media screen and (max-width:650px) {
+
+            .patient-info,
+            .uploaded-images-wrapper,
+            .uploaded-image-links-wrapper {
+                width: 100% !important;
+                border-left: none !important;
+                border-right: none !important;
+            }
+
+            .logo {
+                height: 80px !important;
+            }
+
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet"
+        style="box-sizing: inherit;">
+    <style style="box-sizing: inherit;">
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+
+<body
+    style="box-sizing: border-box;background-color: #eceff4;width: 100%;padding: 0;margin: 0;font-family: 'Roboto', sans-serif;font-size: 16px;text-align: center;">
+    <div class="patient-info"
+        style="box-sizing: inherit;font-family: inherit;font-size: 16px;text-align: center;padding: 20px 30px 20px 30px;border: 1px solid black;border-top: none;margin: 0 auto;width: 50%;background-color: white;">
+        <img class="logo"
+            src="https://isc-website-images.s3.eu-west-2.amazonaws.com/website-images/email-images/istanbul_smile-center-email-logo.png"
+            alt="" style="box-sizing: inherit;height: 150px;">
+        <h1 style="box-sizing: inherit;color: #1a3a6f;">New International Patient Form</h1>
+        <h2 style="box-sizing: inherit;color: #1a3a6f;">Patient Information</h2>
+        <p style="box-sizing: inherit;font-family: inherit;font-size: 16px;text-align: center;color: #1a3a6f;"><b
+                style="box-sizing: inherit;color: #1a3a6f;">Name:
+                <% if(title) { %>
+                <%=title%>
+                <% }%>
+                <%=name%> </b></p>
+        <p style="box-sizing: inherit;font-family: inherit;font-size: 16px;text-align: center;color: #1a3a6f;"><b
+                style="box-sizing: inherit;color: #1a3a6f;">Email Address: </b><a href="mailto:<%=email%>"
+                style="box-sizing: inherit;text-decoration: none;color: #1a3a6f;"><%=email%></a></p>
+        <p style="box-sizing: inherit;font-family: inherit;font-size: 16px;text-align: center;color: #1a3a6f;"><b
+                style="box-sizing: inherit;color: #1a3a6f;">Treatment Choice:
+            </b><%- treatmentChoice != "Select A Treatment You Are Looking For" ? treatmentChoice : "Not Selected" %>
+        </p>
+        <p style="box-sizing: inherit;font-family: inherit;font-size: 16px;text-align: center;color: #1a3a6f;"><b
+                style="box-sizing: inherit;color: #1a3a6f;">Age Group:
+            </b><%- ageGroup != "Select Your Age Group" ? ageGroup : "Not Selected" %></p>
+        <p style="box-sizing: inherit;font-family: inherit;font-size: 16px;text-align: center;color: #1a3a6f;"><b
+                style="box-sizing: inherit;color: #1a3a6f;">Phone Number: </b> <a target="_blank"
+                href="https://wa.me/<%=country.phoneJoin%>?text=Hi"
+                style="box-sizing: inherit;text-decoration: none;color: #1a3a6f;"><%=country.number%></a>
+        </p>
+        <p style="box-sizing: inherit;font-family: inherit;font-size: 16px;text-align: center;color: #1a3a6f;"><b
+                style="box-sizing: inherit;color: #1a3a6f;">Country: </b> <%=country.name%></p>
+        <p style="box-sizing: inherit;font-family: inherit;font-size: 16px;text-align: center;color: #1a3a6f;"><b
+                style="box-sizing: inherit;color: #1a3a6f;">Patient Message</b></p>
+        <p style="box-sizing: inherit;font-family: inherit;font-size: 16px;text-align: center;color: #1a3a6f;">
+            <%=message%></p>
+    </div>
+
+    <% if (imageLinks.length>0) { %>
+    <div class="uploaded-images-wrapper"
+        style="box-sizing: inherit;font-family: inherit;font-size: 16px;text-align: center;border: 1px solid black;margin: 0 auto;background-color: white;width: 50%;">
+        <h2 style="box-sizing: inherit;color: #1a3a6f;">Uploaded Images</h2>
+        <% imageLinks.forEach(cur=>{ %>
+        <a target="_blank" href="<%=cur%>" style="box-sizing: inherit;text-decoration: none;color: #1a3a6f;">
+            <img class="patient-image" src="<%=cur%>" alt=""
+                style="box-sizing: inherit;width: 30%;min-width: 200px;max-width: 350px;margin: 10px 10px 10px 10px;">
+        </a>
+        <% }) %>
+    </div>
+    <div class="uploaded-image-links-wrapper"
+        style="box-sizing: inherit;font-family: inherit;font-size: 16px;text-align: center;border: 1px solid black;padding: 20px 20px;margin: 0 auto;background-color: white;width: 50%;">
+        <h2 style="box-sizing: inherit;color: #1a3a6f;">Links of Uploaded Images</h2>
+        <% imageLinks.forEach((current,index)=>{ %>
+        <a class="image-link" target="_blank" href="<%=current%>"
+            style="box-sizing: inherit;text-decoration: none;color: #1a3a6f;display: block;padding: 10px;"><%=current%></a>
+        <% if (index<imageLinks.length-1){  %>
+        <hr style="box-sizing: inherit;width: 50%;">
+        <% } %>
+        <% }) %>
+    </div>
+    <% } %>
+</body>
+
+</html>
