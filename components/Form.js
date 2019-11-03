@@ -1,13 +1,18 @@
 import Paper from "@material-ui/core/Paper";
 import TextField from "@material-ui/core/TextField";
 import MenuItem from "@material-ui/core/MenuItem";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import PhoneField from "./PhoneField";
 import clsx from "clsx";
 import { DropzoneArea } from "material-ui-dropzone";
 import Button from "@material-ui/core/Button";
 import axios from "axios";
+import { parsePhoneNumberFromString as parseMin } from "libphonenumber-js";
+import FormControl from "@material-ui/core/FormControl";
+import InputLabel from "@material-ui/core/InputLabel";
+import OutlinedInput from "@material-ui/core/OutlinedInput";
+import FormHelperText from "@material-ui/core/FormHelperText";
 
 const treatments = [
 	{
@@ -264,8 +269,18 @@ const Form = () => {
 		message: ""
 	});
 
+	const handleValidation = (e) => {
+		setErrors({
+			...errors,
+			[e.target.name]: !labelRefs[e.target.name].current.control.validity.valid
+		});
+	};
+
 	const handleChange = (e) => {
 		setFormData({ ...formData, [e.target.name]: e.target.value });
+		if (e.target.name === "name" || e.target.name === "email" || e.target.name === "message") {
+			handleValidation(e);
+		}
 	};
 
 	const [ phoneData, setPhoneData ] = useState({
@@ -280,7 +295,24 @@ const Form = () => {
 			...countryData,
 			number: value
 		});
+		if (parseMin(value) !== undefined) {
+			handlePhoneValidation(value);
+		}
 	};
+
+	const handlePhoneValidation = (value) => {
+		setErrors({
+			...errors,
+			phone: !parseMin(value).isValid()
+		});
+	};
+
+	const [ errors, setErrors ] = useState({
+		name: false,
+		email: false,
+		phone: false,
+		message: false
+	});
 
 	const [ files, setFiles ] = useState([]);
 
@@ -289,66 +321,112 @@ const Form = () => {
 		setFiles(files);
 	};
 
+	const checkValidity = () => {
+		const validity = Object.keys(errors).every((cur) => errors[cur] === false);
+		const emptiness = Object.keys(formData).every((cur) => formData[cur] !== "");
+		const isNumberFilled = phoneData.number !== "";
+		if (validity && emptiness && isNumberFilled) {
+			return true;
+		} else {
+			let phoneValidError = true;
+			if (parseMin(phoneData.number) !== undefined) {
+				phoneValidError = !parseMin(phoneData.number).isValid();
+			}
+
+			setErrors({
+				name: !labelRefs.name.current.control.validity.valid,
+				email: !labelRefs.email.current.control.validity.valid,
+				message: !labelRefs.message.current.control.validity.valid,
+				phone: phoneValidError
+			});
+			return false;
+		}
+	};
+
 	const handleSubmit = async (e) => {
 		e.preventDefault();
-		let imageLinks = [];
 
-		// const uploadImages = async () => {
-		if (files.length > 0) {
-			async function asyncForEach (array, callback) {
-				for (let index = 0; index < array.length; index++) {
-					await callback(array[index], index, array);
+		console.log(checkValidity());
+
+		if (checkValidity()) {
+			let imageLinks = [];
+
+			if (files.length > 0) {
+				async function asyncForEach (array, callback) {
+					for (let index = 0; index < array.length; index++) {
+						await callback(array[index], index, array);
+					}
 				}
+
+				await asyncForEach(files, async (cur, index) => {
+					const name = `${encodeURI(formData.name.replace(/ /g, "-"))}`;
+					const filename = `${cur.name}`;
+					const filetype = `${cur.type}`;
+
+					const signedURLRequest = await axios.get("http://localhost:3000/signed-url-put-object", {
+						headers: {
+							filename,
+							filetype,
+							name
+						}
+					});
+
+					const { signedURL, dateStringFull, dateStringShort } = signedURLRequest.data;
+
+					const uploadResponse = await axios.put(signedURL, cur, {
+						headers: {
+							"Content-Type": `${cur.type}`
+						}
+					});
+
+					const imageLink = `https://isc-aws-bucket.s3.eu-west-2.amazonaws.com/isc-public-uploads/${name}-${dateStringShort}/${name}-${dateStringFull}-${filename}`;
+
+					imageLinks.push(imageLink);
+
+					console.log(uploadResponse);
+				});
 			}
 
-			await asyncForEach(files, async (cur, index) => {
-				const name = `${encodeURI(formData.name.replace(/ /g, "-"))}`;
-				const filename = `${cur.name}`;
-				const filetype = `${cur.type}`;
+			const data = {
+				...formData,
+				country: { ...phoneData },
+				imageLinks
+			};
 
-				const signedURLRequest = await axios.get("http://localhost:3000/signed-url-put-object", {
-					headers: {
-						filename,
-						filetype,
-						name
-					}
-				});
-
-				const { signedURL, dateStringFull, dateStringShort } = signedURLRequest.data;
-
-				const uploadResponse = await axios.put(signedURL, cur, {
-					headers: {
-						"Content-Type": `${cur.type}`
-					}
-				});
-
-				const imageLink = `https://isc-aws-bucket.s3.eu-west-2.amazonaws.com/isc-public-uploads/${name}-${dateStringShort}/${name}-${dateStringFull}-${filename}`;
-
-				imageLinks.push(imageLink);
-
-				console.log(uploadResponse);
+			const response = await axios.post("http://localhost:3000/post-form", data, {
+				headers: {
+					"Content-Type": "application/json"
+				}
 			});
+
+			console.log(response);
 		}
-
-		const data = {
-			...formData,
-			country: { ...phoneData },
-			imageLinks
-		};
-
-		const response = await axios.post("http://localhost:3000/post-form", data, {
-			headers: {
-				"Content-Type": "application/json"
-			}
-		});
-
-		console.log(response);
 	};
+
+	const [ labelWidth, setLabelWidth ] = useState({
+		email: 0,
+		name: 0,
+		message: 0
+	});
+
+	let labelRefs = {
+		email: useRef(null),
+		name: useRef(null),
+		message: useRef(null)
+	};
+
+	useEffect(() => {
+		setLabelWidth({
+			email: labelRefs.email.current.offsetWidth,
+			name: labelRefs.name.current.offsetWidth,
+			message: labelRefs.message.current.offsetWidth
+		});
+	}, []);
 
 	return (
 		<div>
 			<Paper className={classes.root}>
-				<form onSubmit={handleSubmit} className={classes.container} noValidate>
+				<form onSubmit={handleSubmit} className={classes.container} noValidate autoComplete="on">
 					<div className={classes.formInnerContainer}>
 						<TextField
 							id="outlined-select-title"
@@ -372,34 +450,52 @@ const Form = () => {
 								</MenuItem>
 							))}
 						</TextField>
-						<TextField
-							id="outlined-name-input"
-							label="Name"
+						<FormControl
 							className={clsx(classes.textField, classes.nameField)}
-							type="text"
-							name="name"
-							value={formData.name}
-							autoComplete="current-name"
-							margin="normal"
 							variant="outlined"
-							required
-							onChange={handleChange}
-						/>
-						<TextField
-							id="outlined-email-input"
-							label="E-mail Address"
+							margin="normal"
+							error={errors.name}
+						>
+							<InputLabel ref={labelRefs.name} htmlFor="outlined-name-input">
+								Name*
+							</InputLabel>
+							<OutlinedInput
+								id="outlined-name-input"
+								value={formData.name}
+								onChange={handleChange}
+								name="name"
+								labelWidth={labelWidth.name}
+								autoComplete="current-name"
+								aria-describedby="name-error-text"
+								required
+							/>
+							{errors.name && <FormHelperText id="name-error-text">Name is required</FormHelperText>}
+						</FormControl>
+						<FormControl
 							className={clsx(classes.textField, classes.emailField)}
-							type="email"
-							autoComplete="current-email"
-							margin="normal"
 							variant="outlined"
-							value={formData.email}
-							onChange={handleChange}
-							required
-							name="email"
-						/>
+							margin="normal"
+							error={errors.email}
+						>
+							<InputLabel ref={labelRefs.email} htmlFor="outlined-email-input">
+								E-mail Address*
+							</InputLabel>
+							<OutlinedInput
+								id="outlined-email-input"
+								value={formData.email}
+								onChange={handleChange}
+								name="email"
+								labelWidth={labelWidth.email}
+								type="email"
+								autoComplete="current-email"
+								required
+							/>
+							{errors.email && (
+								<FormHelperText id="name-error-text">Valid email address is required</FormHelperText>
+							)}
+						</FormControl>
 						<div className={classes.phoneInputWrapper}>
-							<PhoneField onChange={handleOnChange} value={phoneData.number} />
+							<PhoneField onChange={handleOnChange} value={phoneData.number} error={errors.phone} />
 						</div>
 						<TextField
 							id="outlined-select-treatments"
@@ -445,19 +541,30 @@ const Form = () => {
 								</MenuItem>
 							))}
 						</TextField>
-						<TextField
-							id="outlined-multiline-static"
-							label="Your Message"
-							multiline
-							rows="8"
+						<FormControl
 							className={clsx(classes.textField, classes.messageField)}
-							margin="normal"
 							variant="outlined"
-							required
-							name="message"
-							value={formData.message}
-							onChange={handleChange}
-						/>
+							margin="normal"
+							error={errors.message}
+						>
+							<InputLabel ref={labelRefs.message} htmlFor="outlined-multiline-static">
+								Your Message*
+							</InputLabel>
+							<OutlinedInput
+								id="outlined-multiline-static"
+								value={formData.message}
+								onChange={handleChange}
+								name="message"
+								labelWidth={labelWidth.message}
+								autoComplete="current-message"
+								multiline
+								rows="8"
+								required
+							/>
+							{errors.message && (
+								<FormHelperText id="name-error-text">Your Message is required</FormHelperText>
+							)}
+						</FormControl>
 						<DropzoneArea
 							onChange={handleFileChange}
 							filesLimit={8}

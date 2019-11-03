@@ -30,6 +30,7 @@
 		"ejs": "^2.7.1",
 		"express": "^4.17.1",
 		"googleapis": "^44.0.0",
+		"libphonenumber-js": "^1.7.26",
 		"material-ui-dropzone": "^2.4.5",
 		"mobile-detect": "^1.4.4",
 		"moment": "^2.24.0",

@@ -12,13 +12,13 @@ const styles = (theme) => ({
 });
 
 function PhoneField (props) {
-	const { value, defaultCountry, onChange, classes } = props;
+	const { value, defaultCountry, onChange, classes, error } = props;
 
 	return (
 		<React.Fragment>
 			<ReactPhoneInput
 				value={value}
-				defaultCountry={defaultCountry || "gb"}
+				defaultCountry={defaultCountry || "tr"}
 				onChange={onChange}
 				inputClass={classes.field}
 				dropdownClass={classes.countryList}
@@ -30,7 +30,9 @@ function PhoneField (props) {
 					name: "custom-username",
 					variant: "outlined",
 					label: "Phone Number",
-					required: true
+					required: true,
+					error: error,
+					helperText: `${error ? "Valid phone number is required" : ""}`
 				}}
 				enableSearchField={true}
 				disableSearchIcon={true}
@@ -44,8 +46,8 @@ function PhoneField (props) {
 				.react-tel-input .selected-flag {
 					padding-left: 10px;
 					transition: all 300ms ease-in-out;
-					height: 72%;
-					top: 11px;
+					height: 56px;
+					top: 10px;
 				}
 
 				.react-tel-input .selected-flag:hover {
