@@ -14,37 +14,6 @@ const mailer = require("./src/mailer");
 const mailerToUs = require("./src/mailerToUs");
 const axios = require("axios");
 
-// async function main () {
-// 	const client = new JWT(keys.client_email, null, keys.private_key, [
-// 		"https://www.googleapis.com/auth/business.manage"
-// 	]);
-// 	const url = `https://mybusiness.googleapis.com/v4/accounts/110663858472950433758/locations`;
-// 	const res = await client.request({ url });
-// 	console.log(res.data);
-// }
-
-// main().catch(console.error);
-
-// generate a url that asks permissions for Blogger and Google Calendar scopes
-// const scopes = [ "https://www.googleapis.com/auth/business.manage" ];
-
-// const url = oauth2Client.generateAuthUrl({
-// 	// 'online' (default) or 'offline' (gets refresh_token)
-// 	access_type: "offline",
-
-// 	// If you only need one scope you can pass it as a string
-// 	scope: scopes
-// });
-
-// oauth2Client.on("tokens", (tokens) => {
-// 	if (tokens.refresh_token) {
-// 		// store the refresh_token in my database!
-// 		console.log(tokens.refresh_token);
-// 		refreshToken = tokens.refresh_token;
-// 	}
-// 	console.log(tokens.access_token);
-// });
-
 app.prepare().then(() => {
 	const server = express();
 	server.use(express.static("public"));

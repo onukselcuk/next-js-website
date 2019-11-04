@@ -33,7 +33,7 @@ const mailerToUs = (contextObject) => {
 		{
 			from: "patientform-no-reply@istanbulsmilecenter.com",
 			to: "contact@istanbulsmilecenter.com",
-			subject: "Hey you, awesome!",
+			subject: `${contextObject.name} ISC Form Submission`,
 			"h:Reply-To": contextObject.email,
 			template: {
 				name: "mailtous.ejs",

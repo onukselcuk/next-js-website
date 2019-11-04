@@ -398,7 +398,7 @@ const Form = () => {
 				}
 				await asyncForEach(files, async (cur, index) => {
 					const name = `${formData.name.replace(/ /g, "-")}`;
-					const filename = `${cur.name}`;
+					const filename = `${cur.name.replace(/ /g, "-")}`;
 					const filetype = `${cur.type}`;
 
 					const fileDetails = {
@@ -416,7 +416,7 @@ const Form = () => {
 					});
 					const imageLink = `https://isc-aws-bucket.s3.eu-west-2.amazonaws.com/isc-public-uploads/${encodeURI(
 						name
-					)}-${dateStringShort}/${encodeURI(name)}-${dateStringFull}-${filename}`;
+					)}-${dateStringShort}/${encodeURI(name)}-${dateStringFull}-${encodeURI(filename)}`;
 					imageLinks.push(imageLink);
 				});
 			}

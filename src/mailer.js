@@ -33,7 +33,7 @@ const mailer = (name, email) => {
 		{
 			from: "patientform-no-reply@istanbulsmilecenter.com",
 			to: email,
-			subject: "Hey you, awesome!",
+			subject: `Hey ${contextObject.patientName}, Thank You`,
 			"h:Reply-To": "contact@istanbulsmilecenter.com",
 			template: {
 				name: "mailToPatient.ejs",
