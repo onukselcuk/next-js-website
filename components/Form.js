@@ -13,7 +13,9 @@ import FormControl from "@material-ui/core/FormControl";
 import InputLabel from "@material-ui/core/InputLabel";
 import OutlinedInput from "@material-ui/core/OutlinedInput";
 import FormHelperText from "@material-ui/core/FormHelperText";
-
+import ReCAPTCHA from "react-google-recaptcha";
+import CircleLoader from "react-spinners/CircleLoader";
+import ErrorSnackBar from "./ErrorSnackBar";
 const treatments = [
 	{
 		value: "Select A Treatment You Are Looking For",
@@ -109,7 +111,9 @@ const useStyles = makeStyles((theme) => ({
 		padding: "20px 20px",
 		margin: "2rem auto",
 		border: `1px solid ${theme.palette.primary.main}`,
-		borderRadius: "20px"
+		borderRadius: "20px",
+		position: "relative",
+		overflow: "hidden"
 	},
 	container: {
 		display: "flex",
@@ -157,8 +161,8 @@ const useStyles = makeStyles((theme) => ({
 		width: "100%"
 	},
 	dropZoneContainer: {
-		minHeight: "50px",
-		width: "75%",
+		minHeight: "76px",
+		width: "55%",
 		margin: "1rem .8rem",
 		padding: ".5rem",
 		"& div[class^='DropzoneArea-dropzoneTextStyle']": {
@@ -221,7 +225,7 @@ const useStyles = makeStyles((theme) => ({
 				minWidth: "300px"
 			}
 		},
-		"@media (max-width:56.25em)": {
+		"@media (max-width:72em)": {
 			width: "100%"
 		}
 	},
@@ -247,15 +251,49 @@ const useStyles = makeStyles((theme) => ({
 		marginLeft: "auto",
 		padding: "1rem 6rem",
 		alignSelf: "center",
-		width: "20%",
+		width: "18%",
 		"@media (max-width:56.25em)": {
 			marginLeft: ".5rem",
 			marginTop: "1rem"
 		}
 		// position: "relative",
 		// left: "50%",
+	},
+	captchaWrapper: {
+		position: "relative",
+		margin: ".5rem .8rem .5rem .8rem",
+		alignSelf: "center"
+	},
+	formSpinnerWrapper: {
+		position: "absolute",
+		width: "100%",
+		height: "100%",
+		backgroundColor: theme.palette.secondary.main,
+		top: 0,
+		left: 0,
+		zIndex: 30,
+		display: "flex",
+		flexDirection: "column",
+		alignItems: "center",
+		justifyContent: "center",
+		textAlign: "center"
+	},
+	spinnerBoxHeader: {
+		fontFamily: theme.typography.serif,
+		color: theme.palette.third.dark,
+		fontSize: "5rem",
+		marginTop: "1rem"
+	},
+	thankYouText: {
+		color: theme.palette.primary.main,
+		fontSize: "4rem"
 	}
 }));
+
+const override = `
+	display: block;
+	margin: 0 auto;
+`;
 
 const Form = () => {
 	const classes = useStyles();
@@ -317,7 +355,6 @@ const Form = () => {
 	const [ files, setFiles ] = useState([]);
 
 	const handleFileChange = (files) => {
-		console.log(files);
 		setFiles(files);
 	};
 
@@ -343,63 +380,68 @@ const Form = () => {
 		}
 	};
 
+	const recaptchaRef = useRef(null);
+
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 
-		console.log(checkValidity());
-
 		if (checkValidity()) {
+			setSpinnerWrapperState(true);
+			setLoading(true);
+			setPerfectSmileState(true);
 			let imageLinks = [];
-
 			if (files.length > 0) {
 				async function asyncForEach (array, callback) {
 					for (let index = 0; index < array.length; index++) {
 						await callback(array[index], index, array);
 					}
 				}
-
 				await asyncForEach(files, async (cur, index) => {
 					const name = `${encodeURI(formData.name.replace(/ /g, "-"))}`;
 					const filename = `${cur.name}`;
 					const filetype = `${cur.type}`;
 
-					const signedURLRequest = await axios.get("http://localhost:3000/signed-url-put-object", {
-						headers: {
-							filename,
-							filetype,
-							name
-						}
-					});
-
+					const fileDetails = {
+						filename,
+						filetype,
+						name,
+						captchaState
+					};
+					const signedURLRequest = await axios.post("/signed-url-put-object", fileDetails);
 					const { signedURL, dateStringFull, dateStringShort } = signedURLRequest.data;
-
 					const uploadResponse = await axios.put(signedURL, cur, {
 						headers: {
 							"Content-Type": `${cur.type}`
 						}
 					});
-
 					const imageLink = `https://isc-aws-bucket.s3.eu-west-2.amazonaws.com/isc-public-uploads/${name}-${dateStringShort}/${name}-${dateStringFull}-${filename}`;
-
 					imageLinks.push(imageLink);
-
-					console.log(uploadResponse);
 				});
 			}
-
 			const data = {
 				...formData,
 				country: { ...phoneData },
-				imageLinks
+				imageLinks,
+				captchaState
 			};
-
 			const response = await axios.post("http://localhost:3000/post-form", data, {
 				headers: {
 					"Content-Type": "application/json"
 				}
 			});
 
-			console.log(response);
+			if (response.data.success) {
+				setLoading(false);
+				setPerfectSmileState(false);
+				setGetReadyState(true);
+			} else if (!response.data.success) {
+				setSpinnerWrapperState(false);
+				setLoading(false);
+				setPerfectSmileState(false);
+				setGetReadyState(false);
+				recaptchaRef.current.reset();
+				setErrorMessageState(true);
+			}
 		}
 	};
 
@@ -422,6 +464,30 @@ const Form = () => {
 			message: labelRefs.message.current.offsetWidth
 		});
 	}, []);
+
+	const [ captchaState, setCaptchaState ] = useState("");
+
+	const handleCaptchaChange = async (response) => {
+		setCaptchaState(response);
+	};
+
+	const [ spinnerWrapperState, setSpinnerWrapperState ] = useState(false);
+	const [ loading, setLoading ] = useState(false);
+	const [ perfectSmileState, setPerfectSmileState ] = useState(false);
+	const [ getReadyState, setGetReadyState ] = useState(false);
+	const [ errorMessageState, setErrorMessageState ] = useState(false);
+
+	const handleClick = () => {
+		setErrorMessageState(true);
+	};
+
+	const handleClose = (event, reason) => {
+		if (reason === "clickaway") {
+			return;
+		}
+
+		setErrorMessageState(false);
+	};
 
 	return (
 		<div>
@@ -574,6 +640,16 @@ const Form = () => {
 							dropzoneParagraphClass={classes.dropZoneParagraph}
 							dropzoneText="Drag and Drop Teeth Pictures, X-Ray or CT Scan Images Here or Click to Select Files"
 						/>
+
+						<div className={classes.captchaWrapper}>
+							<ReCAPTCHA
+								sitekey="6LcM0sAUAAAAAIR7gDii3dPPDk1l-JU6JKrWcW1X"
+								onChange={handleCaptchaChange}
+								badge="inline"
+								ref={recaptchaRef}
+							/>
+						</div>
+
 						<Button
 							variant="contained"
 							color="primary"
@@ -584,7 +660,36 @@ const Form = () => {
 						</Button>
 					</div>
 				</form>
+
+				{spinnerWrapperState && (
+					<div className={classes.formSpinnerWrapper}>
+						{loading && (
+							<div className="sweet-loading">
+								<CircleLoader
+									css={override}
+									sizeUnit={"px"}
+									size={150}
+									color={"#E94D65"}
+									loading={loading}
+								/>
+							</div>
+						)}
+						{perfectSmileState && <h2 className={classes.spinnerBoxHeader}>Perfect Smile Loading ...</h2>}
+						{getReadyState && (
+							<h2 className={clsx(classes.spinnerBoxHeader, classes.thankYouText)}>
+								Thank You For Sending Us A Form. Now Get Ready For Receiving Your Perfect Smile Plan
+								From Us.
+							</h2>
+						)}
+					</div>
+				)}
 			</Paper>
+			<ErrorSnackBar
+				errorMessageState={errorMessageState}
+				setErrorMessageState={setErrorMessageState}
+				handleClick={handleClick}
+				handleClose={handleClose}
+			/>
 		</div>
 	);
 };

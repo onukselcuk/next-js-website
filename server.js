@@ -12,6 +12,7 @@ require("moment/locale/tr");
 moment.locale("tr");
 const mailer = require("./src/mailer");
 const mailerToUs = require("./src/mailerToUs");
+const axios = require("axios");
 
 // async function main () {
 // 	const client = new JWT(keys.client_email, null, keys.private_key, [
@@ -76,54 +77,72 @@ app.prepare().then(() => {
 		main().catch(console.error);
 	});
 
-	server.get("/signed-url-put-object", async (req, res) => {
-		AWS.config.update({
-			accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-			secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
-			region: "eu-west-2",
-			signatureVersion: "v4"
-		});
-
-		const filename = req.headers.filename;
-		const filetype = req.headers.filetype;
-		const name = req.headers.name;
-		const dateStringFull = `${moment().format("l")}-${moment().format("LT").replace(":", ".")}`;
-		const dateStringShort = `${moment().format("l")}`;
-
-		const params = {
-			Bucket: `isc-aws-bucket/isc-public-uploads/${name}-${dateStringShort}`,
-			Key: `${name}-${dateStringFull}-${filename}`,
-			Expires: 10 * 60,
-			ContentType: filetype
-		};
-		const options = {
-			signatureVersion: "v4",
-			region: "eu-west-2",
-			endpoint: new AWS.Endpoint("isc-aws-bucket.s3-accelerate.amazonaws.com"),
-			useAccelerateEndpoint: true
-		};
-		const client = new AWS.S3(options);
-		const signedURL = await new Promise((resolve, reject) => {
-			client.getSignedUrl("putObject", params, (err, data) => {
-				if (err) {
-					reject(err);
-				} else {
-					resolve(data);
-				}
+	server.post("/signed-url-put-object", async (req, res) => {
+		if (
+			(req.body.captchaState === undefined || req.body.captchaState === "" || req.body.captchaState === null) &&
+			req.body.captchaState.length < 20
+		) {
+			return res.send({ success: false });
+		} else {
+			AWS.config.update({
+				accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+				secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+				region: "eu-west-2",
+				signatureVersion: "v4"
 			});
-		});
 
-		return res.json({ signedURL, dateStringFull, dateStringShort });
+			const filename = req.body.filename;
+			const filetype = req.body.filetype;
+			const name = req.body.name;
+			const dateStringFull = `${moment().format("l")}-${moment().format("LT").replace(":", ".")}`;
+			const dateStringShort = `${moment().format("l")}`;
+
+			const params = {
+				Bucket: `isc-aws-bucket/isc-public-uploads/${name}-${dateStringShort}`,
+				Key: `${name}-${dateStringFull}-${filename}`,
+				Expires: 5 * 60,
+				ContentType: filetype
+			};
+			const options = {
+				signatureVersion: "v4",
+				region: "eu-west-2",
+				endpoint: new AWS.Endpoint("isc-aws-bucket.s3-accelerate.amazonaws.com"),
+				useAccelerateEndpoint: true
+			};
+			const client = new AWS.S3(options);
+			const signedURL = await new Promise((resolve, reject) => {
+				client.getSignedUrl("putObject", params, (err, data) => {
+					if (err) {
+						reject(err);
+					} else {
+						resolve(data);
+					}
+				});
+			});
+
+			return res.send({ signedURL, dateStringFull, dateStringShort });
+		}
 	});
 
 	server.post("/post-form", async (req, res) => {
-		const { name, email } = req.body;
+		if (req.body.captchaState === undefined || req.body.captchaState === "" || req.body.captchaState === null) {
+			return res.send({ success: false });
+		} else {
+			const recaptchaResponse = req.body.captchaState;
+			const url = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env
+				.RECAPTCHA_SECRET_KEY}&response=${recaptchaResponse}&remoteip=${req.connection.remoteAddress}`;
 
-		await mailer(name, email);
+			const response = await axios.post(url);
+			if (response.data.success) {
+				const { name, email } = req.body;
 
-		await mailerToUs(req.body);
+				await mailer(name, email);
 
-		res.status(200).send({ message: "success" });
+				await mailerToUs(req.body);
+
+				res.send({ success: true });
+			}
+		}
 	});
 
 	server.get("*", (req, res) => {

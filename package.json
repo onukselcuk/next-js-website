@@ -44,9 +44,11 @@
 		"react": "^16.10.2",
 		"react-dom": "^16.10.2",
 		"react-dropzone": "^10.1.10",
+		"react-google-recaptcha": "^2.0.1",
 		"react-multi-carousel": "^2.3.0",
 		"react-phone-input-2": "^2.10.0",
 		"react-phone-input-mui": "^2.9.4",
+		"react-spinners": "^0.6.1",
 		"regenerator-runtime": "^0.13.3"
 	}
 }
