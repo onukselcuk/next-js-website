@@ -397,7 +397,7 @@ const Form = () => {
 					}
 				}
 				await asyncForEach(files, async (cur, index) => {
-					const name = `${encodeURI(formData.name.replace(/ /g, "-"))}`;
+					const name = `${formData.name.replace(/ /g, "-")}`;
 					const filename = `${cur.name}`;
 					const filetype = `${cur.type}`;
 
@@ -414,7 +414,9 @@ const Form = () => {
 							"Content-Type": `${cur.type}`
 						}
 					});
-					const imageLink = `https://isc-aws-bucket.s3.eu-west-2.amazonaws.com/isc-public-uploads/${name}-${dateStringShort}/${name}-${dateStringFull}-${filename}`;
+					const imageLink = `https://isc-aws-bucket.s3.eu-west-2.amazonaws.com/isc-public-uploads/${encodeURI(
+						name
+					)}-${dateStringShort}/${encodeURI(name)}-${dateStringFull}-${filename}`;
 					imageLinks.push(imageLink);
 				});
 			}
@@ -424,7 +426,7 @@ const Form = () => {
 				imageLinks,
 				captchaState
 			};
-			const response = await axios.post("http://localhost:3000/post-form", data, {
+			const response = await axios.post("/post-form", data, {
 				headers: {
 					"Content-Type": "application/json"
 				}
