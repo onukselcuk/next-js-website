@@ -4,6 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAddressCard } from "@fortawesome/free-regular-svg-icons";
 import { config } from "@fortawesome/fontawesome-svg-core";
+import { faChrome } from "@fortawesome/free-brands-svg-icons";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 config.autoAddCss = false;
 import {
@@ -47,7 +48,8 @@ const useStyles = makeStyles((theme) => ({
 	},
 	footerLinkDiv: {
 		display: "flex",
-		margin: "4px 0"
+		margin: "4px 0",
+		lineHeight: "1.2"
 	},
 	footerLink: {
 		color: theme.palette.secondary.main,
@@ -152,6 +154,14 @@ export default () => {
 							<Link href="/contact">
 								<a className={classes.footerLink}>Contact Us</a>
 							</Link>
+						</div>
+						<div className={classes.footerLinkDiv}>
+							<div className={classes.fontAwesomeIconWrapper}>
+								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faChrome} />
+							</div>
+							<a target="_blank" href="https://istanbulsmilecenter.com" className={classes.footerLink}>
+								Our Turkish Website
+							</a>
 						</div>
 					</div>
 					<div className={classes.footerNavigation}>

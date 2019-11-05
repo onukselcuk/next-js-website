@@ -26,9 +26,6 @@ const useStyles = makeStyles((theme) => ({
 		marginLeft: "50%",
 		transform: "translateX(-50%)",
 		padding: "1rem 6rem"
-
-		// position: "relative",
-		// left: "50%",
 	}
 }));
 

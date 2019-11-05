@@ -167,8 +167,8 @@ export default () => {
 							<ActiveLink href="/privileges" activeClassName={classes.activeLink}>
 								<a className={classes.navLink}>Privileges & Itinerary</a>
 							</ActiveLink>
-							<ActiveLink href="/before-after" activeClassName={classes.activeLink}>
-								<a className={classes.navLink}>Before-After</a>
+							<ActiveLink href="/smile-gallery" activeClassName={classes.activeLink}>
+								<a className={classes.navLink}>Smile Gallery</a>
 							</ActiveLink>
 							<ActiveLink href="/prices" activeClassName={classes.activeLink}>
 								<a className={classes.navLink}>Prices & Cost Calculator</a>
