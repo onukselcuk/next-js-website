@@ -28,7 +28,7 @@ class MyDocument extends Document {
 					{/* PWA primary color */}
 					<meta name="theme-color" content={theme.palette.primary.main} />
 					<link
-						href="https://fonts.googleapis.com/css?family=Laila|Source+Sans+Pro:400,700&display=swap"
+						href="https://fonts.googleapis.com/css?family=Laila|Nunito:400,700&display=swap"
 						rel="stylesheet"
 					/>
 					<link rel="shortcut icon" href={favicon} />

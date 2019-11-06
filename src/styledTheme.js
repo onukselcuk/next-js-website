@@ -39,13 +39,15 @@ const theme = {
 	},
 	typography: {
 		htmlFontSize: 10,
-		sansSerif: "'Source Sans Pro', sans-serif",
+		// sansSerif: "'Source Sans Pro', sans-serif",
+		sansSerif: "'Nunito', sans-serif",
 		// sansSerif: "Avenir, sans-serif",
 		// serif: "Avenir, serif",
 		// serif: "Sorts Mill Goudy, serif",
 		serif: "'Laila',serif",
 		//avenir: "Avenir, sans-serif"
-		fontFamily: [ "Source Sans Pro", "Roboto", "sans-serif" ].join(",")
+		// fontFamily: [ "Source Sans Pro", "Roboto", "sans-serif" ].join(",")
+		fontFamily: [ "Nunito", "Roboto", "sans-serif" ].join(",")
 	}
 };
 
