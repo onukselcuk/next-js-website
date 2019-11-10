@@ -42,16 +42,16 @@ import MobileDetect from "mobile-detect";
 import GoogleLogoFull from "../components/logos-icons/GoogleLogoFull";
 import GoogleMyBusinessLogo from "../components/logos-icons/GoogleMyBusinessLogo";
 import { useState } from "react";
-import patientImg from "../public/patient-pictures/20141115_131428_1000px.jpg";
-import patientImg2 from "../public/patient-pictures/20150530_205855_1000px.jpg";
-import patientImg3 from "../public/patient-pictures/20160306_131956_100px.jpg";
-import patientImg4 from "../public/patient-pictures/20160529_151449_1000px.jpg";
-import patientImg5 from "../public/patient-pictures/20180421_175128_1000px.jpg";
-import patientImg6 from "../public/patient-pictures/20181018_194039_1000px.jpg";
-import patientImg7 from "../public/patient-pictures/20190405_204518_1000px.jpg";
-import patientImg8 from "../public/patient-pictures/DSC_4193_1000px.jpg";
-import patientImg9 from "../public/patient-pictures/DSC_5209_1000px.jpg";
-import patientImg10 from "../public/patient-pictures/DSC_5545_1000px.jpg";
+import patientImg from "../public/patient-pictures/20141115_131428_500px.jpg";
+import patientImg2 from "../public/patient-pictures/20150530_205855_500px.jpg";
+import patientImg3 from "../public/patient-pictures/20160306_131956_500px.jpg";
+import patientImg4 from "../public/patient-pictures/20160529_151449_500px.jpg";
+import patientImg5 from "../public/patient-pictures/20180421_175128_500px.jpg";
+import patientImg6 from "../public/patient-pictures/20181018_194039_500px.jpg";
+import patientImg7 from "../public/patient-pictures/20190405_204518_500px.jpg";
+import patientImg8 from "../public/patient-pictures/DSC_4193_500px.jpg";
+import patientImg9 from "../public/patient-pictures/DSC_5209_500px.jpg";
+import patientImg10 from "../public/patient-pictures/DSC_5545_500px.jpg";
 
 const useStyles = makeStyles((theme) => ({
 	root: {

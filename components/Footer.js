@@ -133,14 +133,6 @@ export default () => {
 						</div>
 						<div className={classes.footerLinkDiv}>
 							<div className={classes.fontAwesomeIconWrapper}>
-								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faTeeth} />
-							</div>
-							<Link href="/before-after">
-								<a className={classes.footerLink}>Before-After</a>
-							</Link>
-						</div>
-						<div className={classes.footerLinkDiv}>
-							<div className={classes.fontAwesomeIconWrapper}>
 								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faTag} />
 							</div>
 							<Link href="/prices">
