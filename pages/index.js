@@ -42,6 +42,16 @@ import MobileDetect from "mobile-detect";
 import GoogleLogoFull from "../components/logos-icons/GoogleLogoFull";
 import GoogleMyBusinessLogo from "../components/logos-icons/GoogleMyBusinessLogo";
 import { useState } from "react";
+import patientImg from "../public/patient-pictures/20141115_131428_1000px.jpg";
+import patientImg2 from "../public/patient-pictures/20150530_205855_1000px.jpg";
+import patientImg3 from "../public/patient-pictures/20160306_131956_100px.jpg";
+import patientImg4 from "../public/patient-pictures/20160529_151449_1000px.jpg";
+import patientImg5 from "../public/patient-pictures/20180421_175128_1000px.jpg";
+import patientImg6 from "../public/patient-pictures/20181018_194039_1000px.jpg";
+import patientImg7 from "../public/patient-pictures/20190405_204518_1000px.jpg";
+import patientImg8 from "../public/patient-pictures/DSC_4193_1000px.jpg";
+import patientImg9 from "../public/patient-pictures/DSC_5209_1000px.jpg";
+import patientImg10 from "../public/patient-pictures/DSC_5545_1000px.jpg";
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -173,6 +183,11 @@ const useStyles = makeStyles((theme) => ({
 	googleMyBusinessLogo: {
 		width: "150px",
 		height: "100px"
+	},
+	patientImg: {
+		height: "500px",
+		borderRadius: "200px",
+		boxShadow: "2px 2px 14px 3px rgba(0,0,0,0.3)"
 	}
 }));
 
@@ -751,9 +766,70 @@ const Index = (props) => {
 					</SvgIcon>
 				</div>
 			</section>
+			<section className="why-choose-us-section perfect-smile-gallery">
+				<div className="our-services-header perfect-smile-header">
+					<h2 className="our-services-header-text">
+						Our Perfect <span style={{ color: "#E94D65" }}>Smile</span> Gallery
+					</h2>
+				</div>
+				<div className="reviews-wrapper">
+					<Carousel
+						swipeable={props.deviceType !== "mobile" || "tablet" ? true : false}
+						draggable={false}
+						showDots={false}
+						centerMode={true}
+						responsive={responsive}
+						ssr={true} // means to render carousel on server-side.
+						infinite={true}
+						autoPlay={autoPlay}
+						autoPlaySpeed={20000}
+						keyBoardControl={true}
+						customTransition="all 600ms ease-in-out"
+						transitionDuration={600}
+						containerClass="carousel-container"
+						removeArrowOnDeviceType={[ "tablet", "mobile" ]}
+						deviceType={props.deviceType}
+						dotListClass="custom-dot-list-style"
+						itemClass="carousel-item-padding-40-px"
+					>
+						<div className="carouselPaper-item">
+							<img className={classes.patientImg} src={patientImg} alt="" />
+						</div>
+						<div className="carouselPaper-item">
+							<img className={classes.patientImg} src={patientImg2} alt="" />
+						</div>
+						<div className="carouselPaper-item">
+							<img className={classes.patientImg} src={patientImg3} alt="" />
+						</div>
+						<div className="carouselPaper-item">
+							<img className={classes.patientImg} src={patientImg4} alt="" />
+						</div>
+						<div className="carouselPaper-item">
+							<img className={classes.patientImg} src={patientImg5} alt="" />
+						</div>
+						<div className="carouselPaper-item">
+							<img className={classes.patientImg} src={patientImg6} alt="" />
+						</div>
+						<div className="carouselPaper-item">
+							<img className={classes.patientImg} src={patientImg7} alt="" />
+						</div>
+						<div className="carouselPaper-item">
+							<img className={classes.patientImg} src={patientImg8} alt="" />
+						</div>
+						<div className="carouselPaper-item">
+							<img className={classes.patientImg} src={patientImg9} alt="" />
+						</div>
+						<div className="carouselPaper-item">
+							<img className={classes.patientImg} src={patientImg10} alt="" />
+						</div>
+					</Carousel>
+				</div>
+			</section>
 			<section className="reviews-section">
 				<div className="our-services-header">
-					<h2 className="our-services-header-text">Our Patients Love Us</h2>
+					<h2 className="our-services-header-text">
+						Our Patients <span style={{ color: "#E94D65" }}>Love</span> Us
+					</h2>
 
 					<p className="our-services-header-paragraph-text">
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis mollitia deleniti beatae quam
@@ -1420,7 +1496,7 @@ const Index = (props) => {
 				}
 				.reviews-section {
 					background-color: ${sTheme.palette.secondary.main};
-					padding-top: 4rem;
+					padding-top: 2rem;
 					padding-bottom: 4rem;
 				}
 
@@ -1531,6 +1607,12 @@ const Index = (props) => {
 					width: 90%;
 					margin: 0 auto;
 					font-size: 1.7rem;
+				}
+				.perfect-smile-gallery {
+					background-color: ${sTheme.palette.secondary.main};
+				}
+				.perfect-smile-header {
+					padding-top: 4rem;
 				}
 			`}</style>
 		</React.Fragment>
