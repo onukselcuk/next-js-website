@@ -118,28 +118,17 @@ const useStyles = makeStyles((theme) => ({
 		marginTop: "10px",
 		fontSize: "2.5rem"
 	},
-	servicePaperText: {
-		textAlign: "center",
-		fontFamily: theme.typography.sansSerif,
-		color: theme.palette.secondary.dark
-	},
 	cardContent: {
 		paddingTop: 0
 	},
 	servicePaperCardTitle: {
 		fontSize: "3rem"
 	},
-	servicePaperCardText: {
-		fontSize: "1.7rem"
-	},
 	treatmentsButton: {
 		marginRight: "auto",
 		marginLeft: "50%",
 		transform: "translateX(-50%)",
 		padding: "1rem 6rem"
-
-		// position: "relative",
-		// left: "50%",
 	},
 	cardActionArea: {
 		display: "flex",
@@ -268,9 +257,6 @@ const Index = (props) => {
 							<Typography variant="h5" component="h3" className={classes.servicePaperTitle}>
 								Live Chat
 							</Typography>
-							<Typography component="p" className={classes.servicePaperText}>
-								{/* Whenever you need us, we are always here to give you the answers you need instantly. */}
-							</Typography>
 						</Paper>
 					</Link>
 					<Link href="/privileges&itinerary">
@@ -280,10 +266,6 @@ const Index = (props) => {
 							</SvgIcon>
 							<Typography variant="h5" component="h3" className={classes.servicePaperTitle}>
 								Video Call Consultation
-							</Typography>
-							<Typography component="p" className={classes.servicePaperText}>
-								{/* Wherever you are in the world, our doctors will give you a free consultation over video
-							call. */}
 							</Typography>
 						</Paper>
 					</Link>
@@ -295,10 +277,6 @@ const Index = (props) => {
 							<Typography variant="h5" component="h3" className={classes.servicePaperTitle}>
 								Treatment Plan
 							</Typography>
-							<Typography component="p" className={classes.servicePaperText}>
-								{/* Send us your teeth x-ray or pictures via live chat or form, you will get a detailed free
-							treatment plan. */}
-							</Typography>
 						</Paper>
 					</Link>
 					<Link href="/privileges&itinerary">
@@ -308,10 +286,6 @@ const Index = (props) => {
 							</SvgIcon>
 							<Typography variant="h5" component="h3" className={classes.servicePaperTitle}>
 								Airport Greeting
-							</Typography>
-							<Typography component="p" className={classes.servicePaperText}>
-								{/* Never feel lost in a foreign country, you will be greeted by our professional team right
-							inside the airport. */}
 							</Typography>
 						</Paper>
 					</Link>
@@ -323,10 +297,6 @@ const Index = (props) => {
 							<Typography variant="h5" component="h3" className={classes.servicePaperTitle}>
 								Airport-Hotel Transfers
 							</Typography>
-							<Typography component="p" className={classes.servicePaperText}>
-								{/* Whether you are arriving or leaving, you will be transferred with a VIP car between airport
-							and your hotel. */}
-							</Typography>
 						</Paper>
 					</Link>
 					<Link href="/privileges&itinerary">
@@ -336,10 +306,6 @@ const Index = (props) => {
 							</SvgIcon>
 							<Typography variant="h5" component="h3" className={classes.servicePaperTitle}>
 								Clinic-Hotel Transfers
-							</Typography>
-							<Typography component="p" className={classes.servicePaperText}>
-								{/* On your every appointment with our clinic, our team will pick you up from and take you back
-							to your hotel free of charge. */}
 							</Typography>
 						</Paper>
 					</Link>
@@ -351,9 +317,6 @@ const Index = (props) => {
 							<Typography variant="h5" component="h3" className={classes.servicePaperTitle}>
 								Hotel Booking Assistance
 							</Typography>
-							<Typography component="p" className={classes.servicePaperText}>
-								{/* No need to spend your time trying to figure out which hotel to book, let us do it for you. */}
-							</Typography>
 						</Paper>
 					</Link>
 					<Link href="/privileges&itinerary">
@@ -363,9 +326,6 @@ const Index = (props) => {
 							</SvgIcon>
 							<Typography variant="h5" component="h3" className={classes.servicePaperTitle}>
 								Hotel Discounts
-							</Typography>
-							<Typography component="p" className={classes.servicePaperText}>
-								{/* Special discounts for our patients are available on 4-5 star hotels. */}
 							</Typography>
 						</Paper>
 					</Link>
@@ -377,10 +337,6 @@ const Index = (props) => {
 							<Typography variant="h5" component="h3" className={classes.servicePaperTitle}>
 								Multilingual Assistance
 							</Typography>
-							<Typography component="p" className={classes.servicePaperText}>
-								{/* Our international patients coordination team and doctors know perfect English. We even have
-							Spanish and Russian speaking doctors and staff. */}
-							</Typography>
 						</Paper>
 					</Link>
 					<Link href="/privileges&itinerary">
@@ -390,10 +346,6 @@ const Index = (props) => {
 							</SvgIcon>
 							<Typography variant="h5" component="h3" className={classes.servicePaperTitle}>
 								Travel Tours Discounts
-							</Typography>
-							<Typography component="p" className={classes.servicePaperText}>
-								{/* Turn your dental treatment to a perfect holiday in Turkey. Special discounts for our
-							patients are available for amazing tours. */}
 							</Typography>
 						</Paper>
 					</Link>
@@ -470,15 +422,6 @@ const Index = (props) => {
 								>
 									Dental Implants
 								</Typography>
-								<Typography
-									variant="body2"
-									component="p"
-									className={clsx(classes.servicePaperText, classes.servicePaperCardText)}
-								>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste sequi libero dolore
-									consequuntur temporibus delectus, in tenetur quaerat aut ea autem, aliquam
-									excepturi, assumenda ab obcaecati magnam aspernatur culpa vitae.
-								</Typography>
 							</CardContent>
 						</CardActionArea>
 					</Card>
@@ -497,15 +440,6 @@ const Index = (props) => {
 									className={clsx(classes.servicePaperTitle, classes.servicePaperCardTitle)}
 								>
 									Dental Crowns
-								</Typography>
-								<Typography
-									variant="body2"
-									component="p"
-									className={clsx(classes.servicePaperText, classes.servicePaperCardText)}
-								>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste sequi libero dolore
-									consequuntur temporibus delectus, in tenetur quaerat aut ea autem, aliquam
-									excepturi, assumenda ab obcaecati magnam aspernatur culpa vitae.
 								</Typography>
 							</CardContent>
 						</CardActionArea>
@@ -526,15 +460,6 @@ const Index = (props) => {
 								>
 									Dental Veneers
 								</Typography>
-								<Typography
-									variant="body2"
-									component="p"
-									className={clsx(classes.servicePaperText, classes.servicePaperCardText)}
-								>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste sequi libero dolore
-									consequuntur temporibus delectus, in tenetur quaerat aut ea autem, aliquam
-									excepturi, assumenda ab obcaecati magnam aspernatur culpa vitae.
-								</Typography>
 							</CardContent>
 						</CardActionArea>
 					</Card>
@@ -553,15 +478,6 @@ const Index = (props) => {
 									className={clsx(classes.servicePaperTitle, classes.servicePaperCardTitle)}
 								>
 									Orthodontics
-								</Typography>
-								<Typography
-									variant="body2"
-									component="p"
-									className={clsx(classes.servicePaperText, classes.servicePaperCardText)}
-								>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste sequi libero dolore
-									consequuntur temporibus delectus, in tenetur quaerat aut ea autem, aliquam
-									excepturi, assumenda ab obcaecati magnam aspernatur culpa vitae.
 								</Typography>
 							</CardContent>
 						</CardActionArea>
@@ -582,15 +498,6 @@ const Index = (props) => {
 								>
 									Cosmetic Dentistry
 								</Typography>
-								<Typography
-									variant="body2"
-									component="p"
-									className={clsx(classes.servicePaperText, classes.servicePaperCardText)}
-								>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste sequi libero dolore
-									consequuntur temporibus delectus, in tenetur quaerat aut ea autem, aliquam
-									excepturi, assumenda ab obcaecati magnam aspernatur culpa vitae.
-								</Typography>
 							</CardContent>
 						</CardActionArea>
 					</Card>
@@ -609,15 +516,6 @@ const Index = (props) => {
 									className={clsx(classes.servicePaperTitle, classes.servicePaperCardTitle)}
 								>
 									Pediatric Dentistry
-								</Typography>
-								<Typography
-									variant="body2"
-									component="p"
-									className={clsx(classes.servicePaperText, classes.servicePaperCardText)}
-								>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste sequi libero dolore
-									consequuntur temporibus delectus, in tenetur quaerat aut ea autem, aliquam
-									excepturi, assumenda ab obcaecati magnam aspernatur culpa vitae.
 								</Typography>
 							</CardContent>
 						</CardActionArea>
@@ -638,15 +536,6 @@ const Index = (props) => {
 								>
 									Smile Makeover
 								</Typography>
-								<Typography
-									variant="body2"
-									component="p"
-									className={clsx(classes.servicePaperText, classes.servicePaperCardText)}
-								>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste sequi libero dolore
-									consequuntur temporibus delectus, in tenetur quaerat aut ea autem, aliquam
-									excepturi, assumenda ab obcaecati magnam aspernatur culpa vitae.
-								</Typography>
 							</CardContent>
 						</CardActionArea>
 					</Card>
@@ -665,15 +554,6 @@ const Index = (props) => {
 									className={clsx(classes.servicePaperTitle, classes.servicePaperCardTitle)}
 								>
 									Teeth Whitening
-								</Typography>
-								<Typography
-									variant="body2"
-									component="p"
-									className={clsx(classes.servicePaperText, classes.servicePaperCardText)}
-								>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste sequi libero dolore
-									consequuntur temporibus delectus, in tenetur quaerat aut ea autem, aliquam Lorem
-									ipsum, dolor sit amet consectetur adipisicing elit.
 								</Typography>
 							</CardContent>
 						</CardActionArea>
@@ -862,10 +742,9 @@ const Index = (props) => {
 						<div className="review-summary-wrapper">
 							<div>
 								<h3 className="my-business">My Business</h3>
-								{/* <h2 className="banner-reviews"> Patient Reviews</h2> */}
 							</div>
 							<div className="review-number-div">
-								<p className="review-number">65 Patient Reviews</p>
+								<p className="review-number">64 Patient Reviews</p>
 							</div>
 						</div>
 					</Paper>
