@@ -66,9 +66,12 @@ const useStyles = makeStyles((theme) => ({
 		fontSize: "2rem",
 		letterSpacing: "1px",
 		color: theme.palette.secondary.main,
+		transition: "background-image 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
 		"&:hover": {
 			color: theme.palette.secondary.main,
-			backgroundColor: theme.palette.primary.main
+			// backgroundColor: theme.palette.primary.main
+			backgroundImage:
+				"linear-gradient(to right, rgba(26,59,112,1) 0%, rgba(40,85,130,1) 52%, rgba(0,164,189,1) 100%)"
 		}
 	},
 	regularButton: {
@@ -77,8 +80,11 @@ const useStyles = makeStyles((theme) => ({
 		backgroundColor: theme.palette.third.dark,
 		letterSpacing: "1px",
 		padding: "10px 25px",
+		transition: "color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
 		"&:hover": {
-			backgroundColor: theme.palette.primary.main,
+			// backgroundColor: theme.palette.primary.main,
+			background:
+				"linear-gradient(to right, rgba(26,59,112,1) 0%, rgba(40,85,130,1) 52%, rgba(0,164,189,1) 100%)",
 			color: theme.palette.secondary.main
 		}
 	},
@@ -90,10 +96,7 @@ const useStyles = makeStyles((theme) => ({
 		padding: "1rem",
 		border: `1px solid ${theme.palette.primary.main}`,
 		transition: "all 200ms ease-in-out",
-		cursor: "pointer",
-		"&:hover": {
-			transform: "scale(1.05)"
-		}
+		cursor: "pointer"
 	},
 	servicePaperCard: {
 		minWidth: "300px",

@@ -290,7 +290,7 @@ export default () => {
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						Developed and designed by onukDesign
+						Designed and Developed by onukDesign
 					</a>
 				</div>
 			</footer>

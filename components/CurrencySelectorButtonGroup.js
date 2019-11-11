@@ -8,9 +8,11 @@ const useStyles = makeStyles((theme) => ({
 	currencyButton: {
 		padding: "1rem 12rem",
 		fontSize: "1.7rem",
-		transition: "all 200ms ease-in-out",
+		transition: "color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
 		"&:hover": {
-			backgroundColor: theme.palette.primary.main,
+			// backgroundColor: theme.palette.primary.main,
+			background:
+				"linear-gradient(to right, rgba(26,59,112,1) 0%, rgba(40,85,130,1) 52%, rgba(0,164,189,1) 100%)",
 			color: "white"
 		}
 	},

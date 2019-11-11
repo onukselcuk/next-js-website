@@ -241,8 +241,11 @@ const useStyles = makeStyles((theme) => ({
 		backgroundColor: theme.palette.third.dark,
 		letterSpacing: "1px",
 		padding: "10px 25px",
+		transition: "color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
 		"&:hover": {
-			backgroundColor: theme.palette.primary.main,
+			// backgroundColor: theme.palette.primary.main,
+			background:
+				"linear-gradient(to right, rgba(26,59,112,1) 0%, rgba(40,85,130,1) 52%, rgba(0,164,189,1) 100%)",
 			color: theme.palette.secondary.main
 		}
 	},
