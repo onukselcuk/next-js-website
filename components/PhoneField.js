@@ -18,7 +18,7 @@ function PhoneField (props) {
 		<React.Fragment>
 			<ReactPhoneInput
 				value={value}
-				defaultCountry={defaultCountry || "tr"}
+				defaultCountry={defaultCountry || "gb"}
 				onChange={onChange}
 				inputClass={classes.field}
 				dropdownClass={classes.countryList}
