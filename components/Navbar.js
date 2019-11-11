@@ -22,8 +22,9 @@ const useStyles = makeStyles((theme) => ({
 	},
 	topBar: {
 		width: "100%",
-		height: "30px",
-		backgroundColor: theme.palette.third.dark,
+		height: "35px",
+		// backgroundColor: theme.palette.primary.alternative9,
+		background: "linear-gradient(to left, rgba(26,59,112,1) 0%, rgba(40,85,130,1) 52%, rgba(0,164,189,1) 100%)",
 		display: "flex",
 		justifyContent: "center",
 		alignItems: "center"
@@ -47,18 +48,20 @@ const useStyles = makeStyles((theme) => ({
 	topBarLink: {
 		textDecoration: "none",
 		fontSize: "1.6rem",
+		transition: "all 250ms ease-in-out",
 		"&:visited, &:link": {
 			textDecoration: "none",
 			color: theme.palette.third.main
 		},
 		"&:hover": {
-			textDecoration: "underline"
+			color: theme.palette.third.dark
 		}
 	},
 	toolbar: {
 		padding: 0,
 		margin: 0,
-		backgroundColor: theme.palette.primary.main,
+		// backgroundColor: theme.palette.primary.main,
+		background: "linear-gradient(to right, rgba(26,59,112,1) 0%, rgba(40,85,130,1) 52%, rgba(0,164,189,1) 100%)",
 		overflow: "hidden"
 	},
 	header: {
@@ -135,7 +138,7 @@ export default () => {
 					</div>
 					<div className={classes.topBarContacts}>
 						<WhatsAppIcon />
-						<p className={classes.topBarText}>Call or Text us on WhatsApp</p>
+						<p className={classes.topBarText}>WhatsApp</p>
 						<a
 							target="_blank"
 							href="https://wa.me/905309492470?text=Hi+Istanbul+Smile+Center.+I+have+a+question."
@@ -156,7 +159,7 @@ export default () => {
 							<ActiveLink href="/" activeClassName={classes.activeLink}>
 								<a className={classes.navLink}>Home</a>
 							</ActiveLink>
-							<ActiveLink href="/treatments" activeClassName={classes.activeLink}>
+							<ActiveLink href="/about" activeClassName={classes.activeLink}>
 								<a className={classes.navLink}>About Us</a>
 							</ActiveLink>
 							<ActiveLink href="/treatments" activeClassName={classes.activeLink}>

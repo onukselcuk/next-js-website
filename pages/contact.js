@@ -85,7 +85,7 @@ const Contact = () => {
 				.contact-us-section-section {
 					width: 100%;
 					background-color: ${sTheme.palette.secondary.main};
-					padding: 3rem 0;
+					padding: 8rem 0;
 					margin-top: -1rem;
 				}
 				.contact-us-section {

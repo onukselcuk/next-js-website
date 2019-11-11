@@ -49,16 +49,22 @@ const useStyles = makeStyles((theme) => ({
 	footerLinkDiv: {
 		display: "flex",
 		margin: "4px 0",
-		lineHeight: "1.2"
+		lineHeight: "1.2",
+		"& svg, & a": {
+			transition: "all 250ms ease-in-out"
+		},
+		"&:hover svg, &:hover a": {
+			color: theme.palette.third.dark
+		}
 	},
 	footerLink: {
 		color: theme.palette.secondary.main,
 		textDecoration: "none",
-		transition: "all 400ms ease-in-out",
+		transition: "all 250ms ease-in-out",
 		marginLeft: "6px",
 		fontSize: "1.7rem",
 		"&:hover": {
-			textDecoration: "underline"
+			color: theme.palette.third.dark
 		}
 	},
 
@@ -82,24 +88,26 @@ const useStyles = makeStyles((theme) => ({
 		fontSize: "1.7rem"
 	},
 	secondFooter: {
-		backgroundColor: theme.palette.third.dark,
-		color: theme.palette.secondary.main
+		backgroundColor: theme.palette.primary.main,
+		color: theme.palette.secondary.main,
+		borderTop: `2px solid ${theme.palette.primary.alternative8}`
 	},
 	secondFooterWrapper: {
 		width: "80%",
 		margin: "0 auto",
-		padding: "5px 0",
+		padding: "10px 0",
 		display: "flex",
 		justifyContent: "space-between"
 	},
 	developerLink: {
 		textDecoration: "none",
 		color: theme.palette.secondary.main,
+		transition: "all 250ms ease-in-out",
 		"&:visited": {
 			textDecoration: "none"
 		},
 		"&:hover": {
-			textDecoration: "underline"
+			color: theme.palette.third.dark
 		}
 	}
 }));

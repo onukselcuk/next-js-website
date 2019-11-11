@@ -43,11 +43,13 @@ const useStyles = makeStyles((theme) => ({
 		position: "sticky",
 		borderRadius: "10px",
 		top: "5rem",
-		border: `2px solid ${theme.palette.primary.main}`,
+		// border: `2px solid ${theme.palette.primary.main}`,
 		borderTopLeftRadius: 0,
 		borderBottomLeftRadius: 0,
 		borderLeft: "none",
-		marginLeft: "-8px"
+		marginLeft: "-8px",
+		background:
+			"linear-gradient(to bottom right, rgba(26,59,112,1) 0%, rgba(40,85,130,1) 52%, rgba(0,164,189,1) 100%)"
 		// backgroundColor: theme.palette.third.main
 		// backgroundImage: `linear-gradient(180deg,${theme.palette.primary.light} ,${theme.palette.primary.main} 50%)`
 		// backgroundImage: `linear-gradient(0deg,${theme.palette.primary.alternative},${theme.palette.primary
@@ -113,7 +115,7 @@ const useStyles = makeStyles((theme) => ({
 		"& *": {
 			fontSize: "5rem",
 			// fontWeight: "normal",
-			color: theme.palette.primary.main
+			color: theme.palette.secondary.main
 		}
 	},
 	totalCostNumber: {},
@@ -129,9 +131,10 @@ const useStyles = makeStyles((theme) => ({
 		backgroundColor: theme.palette.third.dark,
 		letterSpacing: "1px",
 		padding: "10px 25px",
+		transition: "all 250ms ease-in-out",
 		"&:hover": {
-			backgroundColor: theme.palette.primary.main,
-			color: theme.palette.secondary.main
+			backgroundColor: theme.palette.secondary.main,
+			color: theme.palette.primary.main
 		}
 	},
 	pricesButton: {

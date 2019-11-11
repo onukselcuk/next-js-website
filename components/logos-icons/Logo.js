@@ -14,40 +14,40 @@ const useStyles = makeStyles((theme) => ({
 		},
 		"& .st0, & .st4": {
 			fill: theme.palette.third.dark
-		},
-
-		"&:hover": {
-			cursor: "pointer",
-			"& .st0 ": {
-				fill: theme.palette.original.main
-			},
-			"& .st1": {
-				fill: theme.palette.original.secondary
-			},
-			"& .st2": {
-				fill: theme.palette.original.third
-			}
 		}
+
+		// "&:hover": {
+		// 	cursor: "pointer",
+		// 	"& .st0 ": {
+		// 		fill: theme.palette.original.main
+		// 	},
+		// 	"& .st1": {
+		// 		fill: theme.palette.original.secondary
+		// 	},
+		// 	"& .st2": {
+		// 		fill: theme.palette.original.third
+		// 	}
+		// }
 	},
 	svgLogoAnchor: {
-		position: "relative",
-		"&::before": {
-			position: "absolute",
-			content: "close-quote",
-			width: 0,
-			height: 0,
-			borderRadius: "50%",
-			top: "-450%",
-			left: "-27%",
-			width: "140%",
-			height: "600%",
-			opacity: 0,
-			backgroundColor: theme.palette.third.main,
-			transition: "all 400ms ease-in-out"
-		},
-		"&:hover::before": {
-			opacity: 1
-		}
+		position: "relative"
+		// "&::before": {
+		// 	position: "absolute",
+		// 	content: "close-quote",
+		// 	width: 0,
+		// 	height: 0,
+		// 	borderRadius: "50%",
+		// 	top: "-450%",
+		// 	left: "-27%",
+		// 	width: "140%",
+		// 	height: "600%",
+		// 	opacity: 0,
+		// 	backgroundColor: theme.palette.third.main,
+		// 	transition: "all 400ms ease-in-out"
+		// },
+		// "&:hover::before": {
+		// 	opacity: 1
+		// }
 	}
 }));
 
