@@ -5,6 +5,9 @@ const About = () => {
 	return (
 		<React.Fragment>
 			<section className="about-us-section">
+				<div className="clinic-image-wrapper">
+					<img className="clinic-image" src={clinicImg} alt="" />
+				</div>
 				<div className="our-prices-header">
 					<h2 className="our-prices-header-text">About Us</h2>
 					<p className="our-prices-header-paragraph-text">
@@ -15,23 +18,17 @@ const About = () => {
 						beatae aliquid harum quo fuga enim. Aliquid libero optio aspernatur voluptate.
 					</p>
 				</div>
-				<div className="clinic-image-wrapper">
-					<img className="clinic-image" src={clinicImg} alt="" />
-				</div>
 			</section>
 			<style jsx>{`
 				.about-us-section {
-					width: 100%;
-					margin-top: 3rem;
-				}
-				.our-prices-header {
+					width: 80%;
+					margin: 3rem auto;
 					display: flex;
 					justify-content: center;
-					flex-direction: column;
-					align-items: center;
-					width: 100%;
-					text-align: center;
-					margin-bottom: 2rem;
+				}
+				.our-prices-header {
+					width: 45%;
+					padding: 3rem;
 				}
 				.our-prices-header-text {
 					font-family: ${sTheme.typography.serif};
@@ -41,12 +38,11 @@ const About = () => {
 				.our-prices-header-paragraph-text {
 					color: ${sTheme.palette.secondary.dark};
 					font-size: 2rem;
-					width: 50%;
+					width: 80%;
 				}
 
 				.clinic-image-wrapper {
-					width: 70%;
-					margin: 0 auto;
+					width: 55%;
 				}
 				.clinic-image {
 					width: 100%;

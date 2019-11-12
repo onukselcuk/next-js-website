@@ -241,11 +241,30 @@ const useStyles = makeStyles((theme) => ({
 		backgroundColor: theme.palette.third.dark,
 		letterSpacing: "1px",
 		padding: "10px 25px",
-		transition: "color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
+		position: "relative",
+		zIndex: 100,
+		"&::before": {
+			borderRadius: "inherit",
+			content: "close-quote",
+			backgroundImage:
+				"linear-gradient(to right, rgba(26,59,112,1) 0%, rgba(40,85,130,1) 52%, rgba(0,164,189,1) 100%)",
+			position: "absolute",
+			top: 0,
+			left: 0,
+			opacity: 0,
+			width: "100%",
+			height: "100%",
+			zIndex: -100,
+			transition: "opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
+			display: "block"
+		},
 		"&:hover": {
 			// backgroundColor: theme.palette.primary.main,
-			background:
-				"linear-gradient(to right, rgba(26,59,112,1) 0%, rgba(40,85,130,1) 52%, rgba(0,164,189,1) 100%)",
+			"&::before": {
+				opacity: 1
+			},
+			// background:
+			// 	"linear-gradient(to right, rgba(26,59,112,1) 0%, rgba(40,85,130,1) 52%, rgba(0,164,189,1) 100%)",
 			color: theme.palette.secondary.main
 		}
 	},

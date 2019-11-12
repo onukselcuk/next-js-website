@@ -43,6 +43,11 @@ const Contact = () => {
 								+90 530 949 24 70
 							</a>
 						</p>
+						<p>
+							<a className="contact-us-link" href="#form">
+								Send Us A Form
+							</a>
+						</p>
 						<p>Email: contact@istanbulsmilecenter.com</p>
 					</div>
 				</section>
@@ -57,7 +62,7 @@ const Contact = () => {
 					allowfullscreen
 				/>
 			</section>
-			<section className="our-prices-section form-section">
+			<section id="form" className="our-prices-section form-section">
 				<div className="our-prices-header">
 					<h2 className="our-prices-header-text">Send Us A Form</h2>
 					<p className="our-prices-header-paragraph-text">

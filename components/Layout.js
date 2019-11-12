@@ -13,7 +13,8 @@ const useStyles = makeStyles((theme) => ({
 		html: {
 			fontSize: "62.5%",
 			boxSizing: "border-box",
-			fontFamily: theme.typography.sansSerif
+			fontFamily: theme.typography.sansSerif,
+			scrollBehavior: "smooth"
 		},
 		body: {
 			fontSize: "1.6rem",

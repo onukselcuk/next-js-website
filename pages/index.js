@@ -59,33 +59,75 @@ const useStyles = makeStyles((theme) => ({
 	},
 	button: {
 		margin: theme.spacing(0),
-		backgroundColor: theme.palette.third.dark,
+		// backgroundColor: theme.palette.third.dark,
+		backgroundImage: `linear-gradient(to right,${theme.palette.third.dark},${theme.palette.third.dark})`,
 		padding: "20px 120px",
 		marginTop: "30px",
 		borderRadius: "35px",
 		fontSize: "2rem",
 		letterSpacing: "1px",
 		color: theme.palette.secondary.main,
-		transition: "background-image 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
-		"&:hover": {
-			color: theme.palette.secondary.main,
-			// backgroundColor: theme.palette.primary.main
+		position: "relative",
+		zIndex: 100,
+		"&::before": {
+			borderRadius: "inherit",
+			content: "close-quote",
 			backgroundImage:
-				"linear-gradient(to right, rgba(26,59,112,1) 0%, rgba(40,85,130,1) 52%, rgba(0,164,189,1) 100%)"
+				"linear-gradient(to right, rgba(26,59,112,1) 0%, rgba(40,85,130,1) 52%, rgba(0,164,189,1) 100%)",
+			position: "absolute",
+			top: 0,
+			left: 0,
+			opacity: 0,
+			width: "100%",
+			height: "100%",
+			zIndex: -100,
+			transition: "opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
+			display: "block"
+		},
+		"&:hover": {
+			// color: theme.palette.secondary.main,
+			// backgroundColor: theme.palette.primary.main
+			"&::before": {
+				opacity: 1
+			}
+			// backgroundImage:
+			// 	"linear-gradient(to right, rgba(26,59,112,1) 0%, rgba(40,85,130,1) 52%, rgba(0,164,189,1) 100%)"
 		}
 	},
 	regularButton: {
 		borderRadius: "20px",
 		fontSize: "1.5rem",
-		backgroundColor: theme.palette.third.dark,
+		// backgroundColor: theme.palette.third.dark,
+		backgroundImage: `linear-gradient(to right,${theme.palette.third.dark},${theme.palette.third.dark})`,
+		zIndex: 100,
 		letterSpacing: "1px",
 		padding: "10px 25px",
-		transition: "color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
+		color: theme.palette.secondary.main,
+		position: "relative",
+		"&::before": {
+			borderRadius: "inherit",
+			content: "close-quote",
+			letterSpacing: "inherit",
+			backgroundImage:
+				"linear-gradient(to right, rgba(26,59,112,1) 0%, rgba(40,85,130,1) 52%, rgba(0,164,189,1) 100%)",
+			position: "absolute",
+			top: 0,
+			left: 0,
+			opacity: 0,
+			width: "100%",
+			height: "100%",
+			zIndex: -100,
+			transition: "opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
+			display: "block"
+		},
 		"&:hover": {
 			// backgroundColor: theme.palette.primary.main,
-			background:
-				"linear-gradient(to right, rgba(26,59,112,1) 0%, rgba(40,85,130,1) 52%, rgba(0,164,189,1) 100%)",
-			color: theme.palette.secondary.main
+			"&::before": {
+				opacity: 1
+			}
+			// background:
+			// 	"linear-gradient(to right, rgba(26,59,112,1) 0%, rgba(40,85,130,1) 52%, rgba(0,164,189,1) 100%)",
+			// color: theme.palette.secondary.main
 		}
 	},
 	servicePaper: {

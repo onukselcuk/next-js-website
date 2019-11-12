@@ -16,11 +16,30 @@ const useStyles = makeStyles((theme) => ({
 		backgroundColor: theme.palette.third.dark,
 		letterSpacing: "1px",
 		padding: "10px 25px",
-		transition: "color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
+		position: "relative",
+		zIndex: 100,
+		"&::before": {
+			borderRadius: "inherit",
+			content: "close-quote",
+			backgroundImage:
+				"linear-gradient(to right, rgba(26,59,112,1) 0%, rgba(40,85,130,1) 52%, rgba(0,164,189,1) 100%)",
+			position: "absolute",
+			top: 0,
+			left: 0,
+			opacity: 0,
+			width: "100%",
+			height: "100%",
+			zIndex: -100,
+			transition: "opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
+			display: "block"
+		},
 		"&:hover": {
 			// backgroundColor: theme.palette.primary.main,
-			background:
-				"linear-gradient(to right, rgba(26,59,112,1) 0%, rgba(40,85,130,1) 52%, rgba(0,164,189,1) 100%)",
+			// background:
+			// 	"linear-gradient(to right, rgba(26,59,112,1) 0%, rgba(40,85,130,1) 52%, rgba(0,164,189,1) 100%)",
+			"&::before": {
+				opacity: 1
+			},
 			color: theme.palette.secondary.main
 		}
 	},
@@ -114,7 +133,7 @@ const Prices = () => {
 			</section>
 			<section className="our-prices-section form-section">
 				<div className="our-prices-header">
-					<h2 className="our-prices-header-text">Get A Free Quote with Special Discounts</h2>
+					<h2 className="our-prices-header-text">Get A Free Quote</h2>
 					<p className="our-prices-header-paragraph-text">
 						Contacting us through live chat or WhatsApp is always the fastest way, but you may prefer
 						sending us a good old form. Tell us your dental needs, and don't forget to attach at least the
