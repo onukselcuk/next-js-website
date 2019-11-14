@@ -109,7 +109,6 @@ const Contact = () => {
 					justify-content: center;
 					width: 50%;
 					padding: 0 2rem;
-					color: ;
 				}
 				.contact-us-right-div p {
 					font-size: 1.8rem;

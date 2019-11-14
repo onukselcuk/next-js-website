@@ -1,13 +1,18 @@
 import { makeStyles } from "@material-ui/core/styles";
 import SvgIcon from "@material-ui/core/SvgIcon";
 import Link from "next/link";
+import sizes from "../../src/sizes";
 
 const useStyles = makeStyles((theme) => ({
 	svgLogo: {
 		position: "relative",
 		fill: theme.palette.secondary.main,
 		height: "175px",
-		width: "175px"
+		width: "175px",
+		[sizes.down("lg")]: {
+			height: "150px",
+			width: "150px"
+		}
 	}
 }));
 

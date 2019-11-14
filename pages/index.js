@@ -1,7 +1,5 @@
 import Link from "next/link";
 import Head from "next/head";
-import heroImage from "../public/hero-image-optimized.jpg";
-import atakoyTowersImage from "../public/atakoy-towers-image.jpg";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import Paper from "@material-ui/core/Paper";
@@ -52,6 +50,7 @@ import patientImg7 from "../public/patient-pictures/20190405_204518_500px.jpg";
 import patientImg8 from "../public/patient-pictures/DSC_4193_500px.jpg";
 import patientImg9 from "../public/patient-pictures/DSC_5209_500px.jpg";
 import patientImg10 from "../public/patient-pictures/DSC_5545_500px.jpg";
+import sizes from "../src/sizes";
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -132,7 +131,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 	servicePaper: {
 		textAlign: "center",
-		minWidth: "160px",
+		minWidth: "12rem",
 		width: "18%",
 		margin: "1rem 1rem",
 		padding: "1rem",
@@ -141,17 +140,26 @@ const useStyles = makeStyles((theme) => ({
 		cursor: "pointer"
 	},
 	servicePaperCard: {
-		minWidth: "300px",
+		minWidth: "12rem",
 		width: "23%",
-		padding: 0,
-		"&:hover": {
-			transform: "scale(1)"
-		}
+		padding: 0
 	},
 	svgIcon: {
 		marginTop: "5px",
-		width: "100px",
-		minHeight: "100px"
+		width: "10rem",
+		minHeight: "10rem",
+		[sizes.down("xl")]: {
+			width: "9rem",
+			minHeight: "9rem"
+		},
+		[sizes.down("lg")]: {
+			width: "8rem",
+			minHeight: "8rem"
+		},
+		[sizes.down("md")]: {
+			width: "6rem",
+			minHeight: "6rem"
+		}
 	},
 	svgIconTreatment: {
 		marginTop: "15px"
@@ -159,15 +167,26 @@ const useStyles = makeStyles((theme) => ({
 	servicePaperTitle: {
 		textAlign: "center",
 		color: theme.palette.primary.main,
-		fontFamily: theme.typography.serif,
 		marginTop: "10px",
-		fontSize: "2.5rem"
+		fontSize: "2.5rem",
+		[sizes.down("xl")]: {
+			fontSize: "2rem"
+		},
+		[sizes.down("lg")]: {
+			fontSize: "1.8rem"
+		}
 	},
 	cardContent: {
 		paddingTop: 0
 	},
 	servicePaperCardTitle: {
-		fontSize: "3rem"
+		fontSize: "3rem",
+		[sizes.down("xl")]: {
+			fontSize: "2.5rem"
+		},
+		[sizes.down("lg")]: {
+			fontSize: "2rem"
+		}
 	},
 	treatmentsButton: {
 		marginRight: "auto",
@@ -182,8 +201,17 @@ const useStyles = makeStyles((theme) => ({
 		justifyContent: "flex-start"
 	},
 	istanbulSilhoutteSvg: {
-		width: "1100px",
-		height: "400px"
+		width: "100%",
+		height: "400px",
+		[sizes.down("md")]: {
+			height: "300px"
+		},
+		[sizes.down("sm")]: {
+			height: "250px"
+		},
+		[sizes.down("xs")]: {
+			height: "200px"
+		}
 	},
 	".react-multi-carousel-item": {
 		width: "100px",
@@ -219,9 +247,12 @@ const useStyles = makeStyles((theme) => ({
 		height: "100px"
 	},
 	patientImg: {
-		height: "500px",
+		width: "90%",
 		borderRadius: "200px",
-		boxShadow: "2px 2px 14px 3px rgba(0,0,0,0.3)"
+		boxShadow: "2px 2px 14px 3px rgba(0,0,0,0.3)",
+		[sizes.down("xl")]: {
+			fontSize: "2.5rem"
+		}
 	}
 }));
 
@@ -272,7 +303,6 @@ const Index = (props) => {
 				<title key="title">Istanbul Smile Center | Let's Make Your Smile Perfect</title>
 			</Head>
 			<div className="hero-image-div">
-				<img className="hero-image" src={heroImage} alt="" />
 				<div className="hero-image-perfect-wrapper">
 					<h1 className="hero-image-perfect">
 						Let's make your<br />
@@ -401,7 +431,7 @@ const Index = (props) => {
 						color="primary"
 						className={clsx(classes.regularButton, classes.treatmentsButton)}
 					>
-						Chat Now
+						Chat&nbsp;Now
 					</Button>
 					<Link href="/privileges">
 						<a className="clinic-intro-link">Learn more abut your privileges and itinerary</a>
@@ -409,9 +439,7 @@ const Index = (props) => {
 				</div>
 			</section>
 			<section className="isc-intro-section">
-				<div className="clinic-image-collage-div">
-					<img className="clinic-image-collage" src={atakoyTowersImage} alt="" />
-				</div>
+				<div className="clinic-image-collage-div" />
 				<div className="clinic-intro-div">
 					<div className="clinic-intro-wrapper">
 						<h4 className="clinic-exclusive-text">An Exclusive Dental Clinic</h4>
@@ -1240,17 +1268,22 @@ const Index = (props) => {
 
 			<style jsx>{`
 				.hero-image-div {
-					width: 100%;
-					height: 100%;
+					width: 100vw;
+					height: calc(100vh - 141px);
 					position: relative;
+					background-image: url("/hero-image-alternative.jpg");
+					background-repeat: no-repeat;
+					background-size: cover;
+					background-position: right 25% bottom 30%;
 				}
-				.hero-image {
-					width: 100%;
-				}
+
 				.hero-image-perfect-wrapper {
 					position: absolute;
+					padding: 2rem;
+					border-radius: 10px;
 					left: 10%;
-					top: 18%;
+					top: 23%;
+					background-color: rgba(255, 255, 255, .2);
 				}
 				.hero-image-perfect {
 					font-family: ${sTheme.typography.serif};
@@ -1258,6 +1291,25 @@ const Index = (props) => {
 					font-weight: normal;
 					font-size: 7rem;
 				}
+
+				@media (max-width: ${sizes.sizes.xl}) {
+					.hero-image-perfect-wrapper {
+						left: 5%;
+					}
+					.hero-image-perfect {
+						font-size: 5rem;
+					}
+				}
+
+				@media (max-width: ${sizes.sizes.lg}) {
+					.hero-image-perfect-wrapper {
+						left: 2.5%;
+					}
+					.hero-image-perfect {
+						font-size: 4.5rem;
+					}
+				}
+
 				.hero-image-perfect-smile-text {
 					color: ${sTheme.palette.third.dark};
 				}
@@ -1293,27 +1345,71 @@ const Index = (props) => {
 					width: 80%;
 					margin-top: 3rem;
 				}
+
+				@media (max-width: ${sizes.sizes.xl}) {
+					.our-services-wrapper {
+						width: 90%;
+					}
+				}
+
+				@media (max-width: ${sizes.sizes.lg}) {
+					.our-services-wrapper {
+						width: 95%;
+					}
+				}
+
 				.isc-intro-section {
 					display: flex;
 					justify-content: center;
+					align-items: center;
 					margin: 0 auto;
 					margin-top: 2.5rem;
 					width: 80%;
 				}
-				.clinic-image-collage-div {
-					display: flex;
-					align-items: center;
-					width: 40vw;
-					flex-shrink: 0;
+
+				@media (max-width: ${sizes.sizes.xl}) {
+					.isc-intro-section {
+						width: 95%;
+					}
 				}
-				.clinic-image-collage {
-					width: 100%;
+
+				@media (max-width: ${sizes.sizes.lg}) {
+					.isc-intro-section {
+						width: 100%;
+						flex-wrap: wrap;
+					}
+				}
+				.clinic-image-collage-div {
+					width: 50%;
+					height: 50rem;
+					background-image: url("/atakoy-towers-image.jpg");
+					background-repeat: no-repeat;
+					background-position: center;
+					background-size: cover;
 					border-top-left-radius: 20px;
 					border-bottom-left-radius: 20px;
 				}
+
+				@media (max-width: ${sizes.sizes.lg}) {
+					.clinic-image-collage-div {
+						width: 100%;
+						height: 30rem;
+						border-radius: 0;
+					}
+				}
+
 				.clinic-intro-div {
+					width: 50%;
 					display: flex;
 					align-items: center;
+				}
+
+				@media (max-width: ${sizes.sizes.lg}) {
+					.clinic-intro-div {
+						width: 100%;
+						justify-content: center;
+						text-align: center;
+					}
 				}
 				.clinic-intro-wrapper {
 					background-color: ${sTheme.palette.secondary.main};
@@ -1324,6 +1420,22 @@ const Index = (props) => {
 					margin: 3rem 0;
 					padding: 5rem;
 				}
+
+				@media (max-width: ${sizes.sizes.lg}) {
+					.clinic-intro-wrapper {
+						border: none;
+						border-radius: 0;
+						margin: 0;
+						padding: 3rem;
+					}
+				}
+
+				@media (max-width: ${sizes.sizes.md}) {
+					.clinic-intro-wrapper {
+						padding: 2rem;
+					}
+				}
+
 				.clinic-exclusive-text {
 					color: ${sTheme.palette.secondary.dark};
 					font-size: 1.8rem;
@@ -1385,16 +1497,43 @@ const Index = (props) => {
 					margin-top: 5rem;
 					width: 80%;
 				}
+
+				@media (max-width: ${sizes.sizes.xl}) {
+					.our-doctors-wrapper {
+						width: 95%;
+					}
+				}
+
+				@media (max-width: ${sizes.sizes.md}) {
+					.our-doctors-wrapper {
+						flex-wrap: wrap;
+					}
+				}
 				.doctor-wrapper {
 					display: flex;
 					flex-direction: column;
 					align-items: center;
 					text-align: center;
-				}
-				.doctor-image {
+					width: 30%;
+					min-width: 28rem;
 					margin: 0 3rem;
+				}
+
+				@media (max-width: ${sizes.sizes.md}) {
+					.doctor-wrapper {
+						width: 35%;
+					}
+				}
+
+				@media (max-width: ${sizes.sizes.sm}) {
+					.doctor-wrapper {
+						width: 50%;
+					}
+				}
+
+				.doctor-image {
 					border-radius: 300px;
-					height: 530px;
+					width: 100%;
 				}
 				.doctor-link {
 					text-decoration: none;
@@ -1413,10 +1552,25 @@ const Index = (props) => {
 				}
 
 				.why-choose-us-section {
+					width: 100%;
 				}
 				.istanbul-silhouette-wrapper-div {
 					display: flex;
 					justify-content: center;
+					margin: 0 auto;
+					width: 80%;
+				}
+
+				@media (max-width: ${sizes.sizes.lg}) {
+					.istanbul-silhouette-wrapper-div {
+						width: 90%;
+					}
+				}
+
+				@media (max-width: ${sizes.sizes.md}) {
+					.istanbul-silhouette-wrapper-div {
+						width: 95%;
+					}
 				}
 				.reviews-section {
 					background-color: ${sTheme.palette.secondary.main};

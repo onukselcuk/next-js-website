@@ -14,10 +14,12 @@ import {
 	faPhoneAlt,
 	faTooth,
 	faMapMarkerAlt,
-	faGlobe
+	faGlobe,
+	faHome
 } from "@fortawesome/free-solid-svg-icons";
 import LogoFooter from "./logos-icons/LogoFooter";
 import clsx from "clsx";
+import sizes from "../src/sizes";
 
 const useStyles = makeStyles((theme) => ({
 	footerToolbar: {
@@ -29,23 +31,30 @@ const useStyles = makeStyles((theme) => ({
 		width: "80%",
 		margin: "1rem auto",
 		justifyContent: "space-between",
-		paddingBottom: "1.5rem"
+		paddingBottom: "1.5rem",
+		[sizes.down("xl")]: {
+			width: "90%"
+		},
+		[sizes.down("lg")]: {
+			width: "95%"
+		},
+		[sizes.down("md")]: {
+			flexWrap: "wrap"
+		}
 	},
 	footerHeader: {
 		fontSize: "2.1rem",
 		fontWeight: "400",
 		margin: "10px 0 5px 0"
 	},
-	treatmentsWrapperBox: {
-		display: "flex"
-	},
-	treatmentsRightBox: {
-		marginLeft: "3rem"
-	},
+	treatmentsWrapperBox: {},
+	treatmentsRightBox: {},
 	footerNavigation: {
 		display: "flex",
-		flexDirection: "column"
+		flexDirection: "column",
+		minWidth: "22rem"
 	},
+	popularTreatmentsNavigation: {},
 	footerLinkDiv: {
 		display: "flex",
 		margin: "4px 0",
@@ -57,6 +66,9 @@ const useStyles = makeStyles((theme) => ({
 			color: theme.palette.third.dark
 		}
 	},
+	treatmentLinkDiv: {
+		marginBottom: ".8rem"
+	},
 	footerLink: {
 		color: theme.palette.secondary.main,
 		textDecoration: "none",
@@ -67,6 +79,12 @@ const useStyles = makeStyles((theme) => ({
 			color: theme.palette.third.dark
 		}
 	},
+	logoDiv: {
+		marginRight: "2rem",
+		[sizes.down("md")]: {
+			marginRight: 0
+		}
+	},
 
 	fontAwesomeIconWrapper: {
 		width: "20px"
@@ -75,7 +93,8 @@ const useStyles = makeStyles((theme) => ({
 		display: "flex"
 	},
 	footerGetInTouchDiv: {
-		width: "35%"
+		minWidth: "27rem",
+		maxWidth: "50rem"
 	},
 	addressLink: {
 		marginLeft: 0
@@ -90,14 +109,26 @@ const useStyles = makeStyles((theme) => ({
 	secondFooter: {
 		backgroundColor: theme.palette.primary.main,
 		color: theme.palette.secondary.main,
-		borderTop: `2px solid ${theme.palette.primary.alternative8}`
+		borderTop: `1px solid ${theme.palette.primary.alternative3}`
 	},
 	secondFooterWrapper: {
 		width: "80%",
 		margin: "0 auto",
-		padding: "10px 0",
+		padding: "10px 20px",
 		display: "flex",
-		justifyContent: "space-between"
+		justifyContent: "space-between",
+		[sizes.down("xl")]: {
+			width: "90%"
+		},
+		[sizes.down("lg")]: {
+			width: "95%"
+		},
+		[sizes.down("sm")]: {
+			flexWrap: "wrap",
+			justifyContent: "center",
+			textAlign: "center",
+			padding: "10px 0"
+		}
 	},
 	developerLink: {
 		textDecoration: "none",
@@ -118,11 +149,19 @@ export default () => {
 		<React.Fragment>
 			<Toolbar className={classes.footerToolbar}>
 				<footer className={classes.footer}>
-					<div>
+					<div className={classes.logoDiv}>
 						<LogoFooter />
 					</div>
 					<div className={classes.footerNavigation}>
 						<h3 className={classes.footerHeader}>Navigation</h3>
+						<div className={classes.footerLinkDiv}>
+							<div className={classes.fontAwesomeIconWrapper}>
+								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faHome} />
+							</div>
+							<Link href="/">
+								<a className={classes.footerLink}>Home</a>
+							</Link>
+						</div>
 						<div className={classes.footerLinkDiv}>
 							<div className={classes.fontAwesomeIconWrapper}>
 								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faAddressCard} />
@@ -164,11 +203,11 @@ export default () => {
 							</a>
 						</div>
 					</div>
-					<div className={classes.footerNavigation}>
+					<div className={clsx(classes.footerNavigation, classes.popularTreatmentsNavigation)}>
 						<h3 className={classes.footerHeader}>Popular Treatments</h3>
 						<div className={classes.treatmentsWrapperBox}>
 							<div className={classes.treatmentsLeftBox}>
-								<div className={classes.footerLinkDiv}>
+								<div className={clsx(classes.footerLinkDiv, classes.treatmentLinkDiv)}>
 									<div className={classes.fontAwesomeIconWrapper}>
 										<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faTooth} />
 									</div>
@@ -176,7 +215,7 @@ export default () => {
 										<a className={classes.footerLink}>Dental Implants</a>
 									</Link>
 								</div>
-								<div className={classes.footerLinkDiv}>
+								<div className={clsx(classes.footerLinkDiv, classes.treatmentLinkDiv)}>
 									<div className={classes.fontAwesomeIconWrapper}>
 										<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faTooth} />
 									</div>
@@ -184,7 +223,7 @@ export default () => {
 										<a className={classes.footerLink}>Dental Crowns</a>
 									</Link>
 								</div>
-								<div className={classes.footerLinkDiv}>
+								<div className={clsx(classes.footerLinkDiv, classes.treatmentLinkDiv)}>
 									<div className={classes.fontAwesomeIconWrapper}>
 										<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faTooth} />
 									</div>
@@ -192,7 +231,7 @@ export default () => {
 										<a className={classes.footerLink}>Dental Veneers</a>
 									</Link>
 								</div>
-								<div className={classes.footerLinkDiv}>
+								<div className={clsx(classes.footerLinkDiv, classes.treatmentLinkDiv)}>
 									<div className={classes.fontAwesomeIconWrapper}>
 										<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faTooth} />
 									</div>
@@ -202,7 +241,7 @@ export default () => {
 								</div>
 							</div>
 							<div className={classes.treatmentsRightBox}>
-								<div className={classes.footerLinkDiv}>
+								<div className={clsx(classes.footerLinkDiv, classes.treatmentLinkDiv)}>
 									<div className={classes.fontAwesomeIconWrapper}>
 										<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faTooth} />
 									</div>
@@ -210,7 +249,7 @@ export default () => {
 										<a className={classes.footerLink}>Cosmetic Dentistry</a>
 									</Link>
 								</div>
-								<div className={classes.footerLinkDiv}>
+								<div className={clsx(classes.footerLinkDiv, classes.treatmentLinkDiv)}>
 									<div className={classes.fontAwesomeIconWrapper}>
 										<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faTooth} />
 									</div>
@@ -218,7 +257,7 @@ export default () => {
 										<a className={classes.footerLink}>Pediatric Dentistry</a>
 									</Link>
 								</div>
-								<div className={classes.footerLinkDiv}>
+								<div className={clsx(classes.footerLinkDiv, classes.treatmentLinkDiv)}>
 									<div className={classes.fontAwesomeIconWrapper}>
 										<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faTooth} />
 									</div>
@@ -226,7 +265,7 @@ export default () => {
 										<a className={classes.footerLink}>Smile Makeover</a>
 									</Link>
 								</div>
-								<div className={classes.footerLinkDiv}>
+								<div className={clsx(classes.footerLinkDiv, classes.treatmentLinkDiv)}>
 									<div className={classes.fontAwesomeIconWrapper}>
 										<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faTooth} />
 									</div>
@@ -263,12 +302,16 @@ export default () => {
 						<a target="_blank" href="/" className={clsx(classes.footerLink, classes.addressLink)}>
 							Chat with Us
 						</a>
+
 						<a
 							target="_blank"
 							href="https://wa.me/905309492470?text=Hi+Istanbul+Smile+Center.+I+have+a+question."
 							className={clsx(classes.footerLink, classes.addressLink)}
 						>
-							Call Us On Whatsapp Free at +90 530 949 24 70
+							Whatsapp: +90 530 949 24 70
+						</a>
+						<a href="/contact#form" className={clsx(classes.footerLink, classes.addressLink)}>
+							Send Us A Form
 						</a>
 
 						<a
@@ -276,7 +319,7 @@ export default () => {
 							href="mailto:contact@istanbulsmilecenter.com"
 							className={clsx(classes.footerLink, classes.addressLink)}
 						>
-							Or Send us an email at contact@istanbulsmilecenter.com
+							Email: contact@istanbulsmilecenter.com
 						</a>
 					</div>
 				</footer>

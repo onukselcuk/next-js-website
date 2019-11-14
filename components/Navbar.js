@@ -10,6 +10,7 @@ import clsx from "clsx";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
+import sizes from "../src/sizes";
 
 const useStyles = makeStyles((theme) => ({
 	button: {
@@ -39,7 +40,13 @@ const useStyles = makeStyles((theme) => ({
 		justifyContent: "space-between",
 		alignItems: "center",
 		width: "80%",
-		color: theme.palette.primary.main
+		color: theme.palette.primary.main,
+		[sizes.down("xl")]: {
+			width: "90%"
+		},
+		[sizes.down("lg")]: {
+			width: "95%"
+		}
 	},
 	topBarContacts: {
 		display: "flex",
@@ -78,7 +85,13 @@ const useStyles = makeStyles((theme) => ({
 		width: "80%",
 		display: "flex",
 		justifyContent: "space-between",
-		alignItems: "center"
+		alignItems: "center",
+		[sizes.down("xl")]: {
+			width: "90%"
+		},
+		[sizes.down("lg")]: {
+			width: "95%"
+		}
 	},
 	navBar: {
 		display: "flex",
@@ -172,6 +185,9 @@ const useStyles = makeStyles((theme) => ({
 			opacity: 0.95
 		}
 	},
+	treatmentLink: {
+		textDecoration: "none"
+	},
 	dropdownListWrapper: {
 		paddingTop: 0,
 		paddingBottom: 0
@@ -228,47 +244,69 @@ export default () => {
 										component="nav"
 										aria-label="secondary treatments"
 									>
-										<Link href="/treatments/dental-implants">
-											<ListItem button>
-												<ListItemText
-													className={classes.dropdownItemText}
-													primary="Dental Implants"
-												/>
-											</ListItem>
+										<Link href="/treatments/[pid]" as="/treatments/dental-implants">
+											<a className={classes.treatmentLink}>
+												<ListItem className={classes.dropdownItemText} button>
+													<ListItemText primary="Dental Implants" />
+												</ListItem>
+											</a>
 										</Link>
-										<ListItem className={classes.dropdownItemText} button>
-											<ListItemText primary="Dental Veneers" />
-										</ListItem>
-										<ListItem className={classes.dropdownItemText} button>
-											<ListItemText primary="Dental Crowns" />
-										</ListItem>
-										<ListItem className={classes.dropdownItemText} button>
-											<ListItemText primary="Pediatric Dentistry" />
-										</ListItem>
-										<ListItem className={classes.dropdownItemText} button>
-											<ListItemText primary="Smile Makeover" />
-										</ListItem>
-										<ListItem className={classes.dropdownItemText} button>
-											<ListItemText primary="Teeth Whitening" />
-										</ListItem>
-										<ListItem className={classes.dropdownItemText} button>
-											<ListItemText primary="Dental Prosthesis" />
-										</ListItem>
-										<ListItem className={classes.dropdownItemText} button>
-											<ListItemText primary="Dental Bridge" />
-										</ListItem>
-										<ListItem className={classes.dropdownItemText} button>
-											<ListItemText primary="Inlay and Onlay Dental Restorations" />
-										</ListItem>
-										<ListItem className={classes.dropdownItemText} button>
-											<ListItemText primary="Root Canal Treatment" />
-										</ListItem>
-										<ListItem className={classes.dropdownItemText} button>
-											<ListItemText primary="Gummy Smile Correction" />
-										</ListItem>
-										<ListItem className={classes.dropdownItemText} button>
-											<ListItemText primary="Composite Fillings" />
-										</ListItem>
+										<Link href="/treatments/dental-crowns">
+											<a className={classes.treatmentLink}>
+												<ListItem className={classes.dropdownItemText} button>
+													<ListItemText primary="Dental Crowns" />
+												</ListItem>
+											</a>
+										</Link>
+										<Link href="/treatments/dental-veneers">
+											<a className={classes.treatmentLink}>
+												<ListItem className={classes.dropdownItemText} button>
+													<ListItemText primary="Dental Veneers" />
+												</ListItem>
+											</a>
+										</Link>
+										<Link href="/treatments/cosmetic-dentistry">
+											<a className={classes.treatmentLink}>
+												<ListItem className={classes.dropdownItemText} button>
+													<ListItemText primary="Cosmetic Dentistry" />
+												</ListItem>
+											</a>
+										</Link>
+										<Link href="/treatments/cosmetic-dentistry">
+											<a className={classes.treatmentLink}>
+												<ListItem className={classes.dropdownItemText} button>
+													<ListItemText primary="Orthodontics & Invisalign" />
+												</ListItem>
+											</a>
+										</Link>
+										<Link href="/treatments/dentures">
+											<a className={classes.treatmentLink}>
+												<ListItem className={classes.dropdownItemText} button>
+													<ListItemText primary="Dentures" />
+												</ListItem>
+											</a>
+										</Link>
+										<Link href="/treatments/pediatric-dentistry">
+											<a className={classes.treatmentLink}>
+												<ListItem className={classes.dropdownItemText} button>
+													<ListItemText primary="Pediatric Dentistry" />
+												</ListItem>
+											</a>
+										</Link>
+										<Link href="/treatments/root-canal-treatment">
+											<a className={classes.treatmentLink}>
+												<ListItem className={classes.dropdownItemText} button>
+													<ListItemText primary="Root Canal Treatment" />
+												</ListItem>
+											</a>
+										</Link>
+										<Link href="/treatments/teeth-whitening">
+											<a className={classes.treatmentLink}>
+												<ListItem className={classes.dropdownItemText} button>
+													<ListItemText primary="Teeth Whitening" />
+												</ListItem>
+											</a>
+										</Link>
 									</List>
 								</div>
 							</div>
@@ -284,7 +322,7 @@ export default () => {
 						</nav>
 						<div>
 							<Button variant="contained" color="primary" className={classes.button}>
-								Chat Now
+								Chat&nbsp;Now
 							</Button>
 						</div>
 					</div>
