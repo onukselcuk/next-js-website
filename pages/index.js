@@ -767,18 +767,18 @@ const Index = (props) => {
 				</div>
 				<div className="reviews-wrapper">
 					<Carousel
-						swipeable={props.deviceType !== "mobile" || "tablet" ? true : false}
+						swipeable={props.deviceType === "mobile" || "tablet" ? true : false}
 						draggable={false}
 						showDots={false}
 						centerMode={true}
 						responsive={responsive}
 						ssr={true} // means to render carousel on server-side.
 						infinite={true}
-						autoPlay={autoPlay}
+						autoPlay={props.deviceType !== "mobile" ? autoPlay : false}
 						autoPlaySpeed={20000}
 						keyBoardControl={true}
-						customTransition="all 600ms ease-in-out"
-						transitionDuration={600}
+						customTransition="all 400ms ease-in-out"
+						transitionDuration={400}
 						containerClass="carousel-container"
 						removeArrowOnDeviceType={[ "tablet", "mobile" ]}
 						deviceType={props.deviceType}
@@ -864,18 +864,18 @@ const Index = (props) => {
 				</div>
 				<div className="reviews-wrapper">
 					<Carousel
-						swipeable={props.deviceType !== "mobile" || "tablet" ? true : false}
+						swipeable={props.deviceType === "mobile" || "tablet" ? true : false}
 						draggable={false}
 						showDots={false}
 						centerMode={true}
 						responsive={responsive}
 						ssr={true} // means to render carousel on server-side.
 						infinite={true}
-						autoPlay={autoPlay}
+						autoPlay={props.deviceType !== "mobile" ? autoPlay : false}
 						autoPlaySpeed={20000}
 						keyBoardControl={true}
-						customTransition="all 600ms ease-in-out"
-						transitionDuration={600}
+						customTransition="all 400ms ease-in-out"
+						transitionDuration={400}
 						containerClass="carousel-container"
 						removeArrowOnDeviceType={[ "tablet", "mobile" ]}
 						deviceType={props.deviceType}
