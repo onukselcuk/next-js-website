@@ -61,53 +61,51 @@ export default ({ currentCurrency, handleCurrencyChange, isInsideCalculator }) =
 
 	const classes = useStyles();
 	return (
-		<div>
-			<ButtonGroup
-				className={clsx(classes.buttonGroup, `${isInsideCalculator ? classes.calculatorButtonGroup : null}`)}
-				fullWidth
-				aria-label="full width outlined button group"
-				color="primary"
+		<ButtonGroup
+			className={clsx(classes.buttonGroup, `${isInsideCalculator ? classes.calculatorButtonGroup : null}`)}
+			fullWidth
+			aria-label="full width outlined button group"
+			color="primary"
+		>
+			<Button
+				variant={currentCurrency == "euro" ? "contained" : "outlined"}
+				name="euro"
+				data-sign="€"
+				onClick={changeCurrency}
+				className={clsx(
+					classes.currencyButton,
+					`${currentCurrency == "euro" ? classes.activeButton : null}`,
+					classes.calculatorButton
+				)}
 			>
-				<Button
-					variant={currentCurrency == "euro" ? "contained" : "outlined"}
-					name="euro"
-					data-sign="€"
-					onClick={changeCurrency}
-					className={clsx(
-						classes.currencyButton,
-						`${currentCurrency == "euro" ? classes.activeButton : null}`,
-						`${isInsideCalculator ? classes.calculatorButton : null}`
-					)}
-				>
-					EUR
-				</Button>
-				<Button
-					variant={currentCurrency == "dollar" ? "contained" : "outlined"}
-					name="dollar"
-					data-sign="$"
-					onClick={changeCurrency}
-					className={clsx(
-						classes.currencyButton,
-						`${currentCurrency == "dollar" ? classes.activeButton : null}`,
-						`${isInsideCalculator ? classes.calculatorButton : null}`
-					)}
-				>
-					USD
-				</Button>
-				<Button
-					variant={currentCurrency == "pound" ? "contained" : "outlined"}
-					name="pound"
-					data-sign="£"
-					onClick={changeCurrency}
-					className={clsx(
-						classes.currencyButton,
-						`${currentCurrency == "pound" ? classes.activeButton : null}`,
-						`${isInsideCalculator ? classes.calculatorButton : null}`
-					)}
-				>
-					GBP
-				</Button>
-			</ButtonGroup>
-		</div>
+				EUR
+			</Button>
+			<Button
+				variant={currentCurrency == "dollar" ? "contained" : "outlined"}
+				name="dollar"
+				data-sign="$"
+				onClick={changeCurrency}
+				className={clsx(
+					classes.currencyButton,
+					`${currentCurrency == "dollar" ? classes.activeButton : null}`,
+					classes.calculatorButton
+				)}
+			>
+				USD
+			</Button>
+			<Button
+				variant={currentCurrency == "pound" ? "contained" : "outlined"}
+				name="pound"
+				data-sign="£"
+				onClick={changeCurrency}
+				className={clsx(
+					classes.currencyButton,
+					`${currentCurrency == "pound" ? classes.activeButton : null}`,
+					classes.calculatorButton
+				)}
+			>
+				GBP
+			</Button>
+		</ButtonGroup>
 	);
 };

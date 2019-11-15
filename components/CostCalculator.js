@@ -20,68 +20,101 @@ import Checkbox from "@material-ui/core/Checkbox";
 import clsx from "clsx";
 import { dentalImplantObj, dentalVeneerCrownObj, denturesInvisalignObj, otherProceduresObj } from "../src/priceList";
 import Button from "@material-ui/core/Button";
+import sizes from "../src/sizes";
 
 const useStyles = makeStyles((theme) => ({
 	root: {
 		padding: theme.spacing(3, 2),
 		display: "flex",
-		justifyContent: "space-between"
+		justifyContent: "space-between",
+		[sizes.down("mdsm")]: {
+			flexWrap: "wrap",
+			justifyContent: "center",
+			padding: theme.spacing(2, 0)
+		}
 	},
 	calculatorLeftPart: {
 		width: "70%",
-		zIndex: "3"
+		zIndex: "3",
+		[sizes.down("mdsm")]: {
+			width: "100%"
+		}
 	},
 	expansionPanelSummaryTypography: {
 		fontSize: "1.8rem",
 		fontFamily: theme.typography.sansSerif
 	},
 	calculatorRightPart: {
-		width: "30%"
+		width: "30%",
+		minWidth: "260px",
+		[sizes.down("mdsm")]: {
+			order: -1,
+			width: "100%"
+		}
 		// position: "relative"
 	},
 	calculatorResultPaper: {
 		position: "sticky",
 		borderRadius: "10px",
 		top: "5rem",
-		// border: `2px solid ${theme.palette.primary.main}`,
 		borderTopLeftRadius: 0,
 		borderBottomLeftRadius: 0,
 		borderLeft: "none",
 		marginLeft: "-8px",
 		background:
-			"linear-gradient(to bottom right, rgba(26,59,112,1) 0%, rgba(40,85,130,1) 52%, rgba(0,164,189,1) 100%)"
-		// backgroundColor: theme.palette.third.main
-		// backgroundImage: `linear-gradient(180deg,${theme.palette.primary.light} ,${theme.palette.primary.main} 50%)`
-		// backgroundImage: `linear-gradient(0deg,${theme.palette.primary.alternative},${theme.palette.primary
-		// 	.light} 50%,${theme.palette.secondary.main})`
-		// backgroundColor: `${theme.palette.third.main}`
+			"linear-gradient(to bottom right, rgba(26,59,112,1) 0%, rgba(40,85,130,1) 52%, rgba(0,164,189,1) 100%)",
+		[sizes.down("mdsm")]: {
+			position: "static",
+			borderRadius: "10px",
+			borderBottomLeftRadius: 0,
+			borderBottomRightRadius: 0,
+			marginLeft: 0
+		}
 	},
 	implantNumberSliderWrapper: {
 		display: "flex",
 		alignItems: "center",
 		width: "100%",
-		marginTop: "2.8rem"
+		marginTop: "2.8rem",
+		[sizes.down("xs")]: {
+			flexWrap: "wrap"
+		}
 	},
 	implantNumberSlider: {
-		width: "55%"
+		width: "55%",
+		minWidth: "270px",
+		[sizes.down("xs")]: {
+			marginTop: "3rem",
+			marginLeft: "1rem",
+			width: "90%"
+		}
 	},
 	labelText: {
 		width: "35%",
 		marginRight: "3rem",
 		fontSize: "1.8rem",
-		fontFamily: theme.typography.sansSerif
+		fontFamily: theme.typography.sansSerif,
+		minWidth: "175px"
 	},
 	implantFormWrapper: {
 		marginTop: "1.4rem"
 	},
 	formRadioGroup: {
-		marginTop: "1rem"
+		marginTop: "1rem",
+		"& span": {
+			[sizes.down("sm")]: {
+				fontSize: "1.6rem !important"
+			}
+		}
 	},
 	radioHeaderLabel: {
 		fontSize: "1.8rem",
 		fontFamily: theme.typography.sansSerif,
 		color: theme.palette.primary.main,
-		fontWeight: "bold"
+		fontWeight: "bold",
+		[sizes.down("sm")]: {
+			fontSize: "1.6rem"
+		}
 	},
 	implantForm: {
 		"& .MuiFormLabel-root": {},
@@ -102,7 +135,10 @@ const useStyles = makeStyles((theme) => ({
 		marginTop: "1rem",
 		"& .MuiTypography-body1": {
 			fontSize: "1.8rem",
-			fontFamily: theme.typography.sansSerif
+			fontFamily: theme.typography.sansSerif,
+			[sizes.down("sm")]: {
+				fontSize: "1.6rem !important"
+			}
 		}
 	},
 	radioHeaderLabelDouble: {
@@ -111,11 +147,14 @@ const useStyles = makeStyles((theme) => ({
 	},
 	totalCostWrapper: {
 		textAlign: "center",
-		padding: "4rem 0",
+		padding: "4rem 0 3rem 0",
 		"& *": {
 			fontSize: "5rem",
 			// fontWeight: "normal",
 			color: theme.palette.secondary.main
+		},
+		[sizes.down("mdsm")]: {
+			padding: "4rem 0"
 		}
 	},
 	totalCostNumber: {},
@@ -135,6 +174,10 @@ const useStyles = makeStyles((theme) => ({
 		"&:hover": {
 			backgroundColor: theme.palette.secondary.main,
 			color: theme.palette.primary.main
+		},
+		[sizes.down("lg")]: {
+			fontSize: "1.3rem",
+			padding: "5px 5px"
 		}
 	},
 	pricesButton: {
@@ -150,14 +193,18 @@ const useStyles = makeStyles((theme) => ({
 
 const ExpansionPanel = withStyles({
 	root: {
-		border: `1px solid ${sTheme.palette.secondary.main}`,
+		// borderTop: `1px solid ${sTheme.palette.secondary.main}`,
 		// boxShadow: "none",
 		// boxShadow: "3px 5px 5px 2px rgba(0,0,0,.1)",
 		overflow: "hidden",
 
 		"&:first-of-type": {
 			borderTopRightRadius: "10px",
-			borderTopLeftRadius: "10px"
+			borderTopLeftRadius: "10px",
+			[sizes.down("mdsm")]: {
+				borderTopRightRadius: 0,
+				borderTopLeftRadius: 0
+			}
 		},
 		"&:last-of-type": {
 			borderBottomRightRadius: "10px",
@@ -182,15 +229,26 @@ const ExpansionPanelSummary = withStyles({
 		backgroundColor: `${sTheme.palette.primary.main}`,
 		// backgroundColor: `${sTheme.palette.third.main}`,
 		color: `white`,
-		borderBottom: "1px solid rgba(0, 0, 0, .125)",
-
-		marginBottom: -1,
+		"&:not(:last-of-type)": {
+			borderBottom: `1px solid ${sTheme.palette.secondary.main}`
+		},
 		minHeight: 56,
 		"&$expanded": {
-			minHeight: 56
+			minHeight: 56,
+			[sizes.down("sm")]: {
+				minHeight: 40
+			}
 		},
 		"& svg": {
 			fill: `white`
+		},
+		"& *": {
+			[sizes.down("sm")]: {
+				fontSize: "1.6rem"
+			}
+		},
+		[sizes.down("sm")]: {
+			minHeight: 40
 		}
 	},
 	content: {
@@ -204,8 +262,12 @@ const ExpansionPanelSummary = withStyles({
 const ExpansionPanelDetails = withStyles((theme) => ({
 	root: {
 		padding: "15px 24px",
-		flexDirection: "column"
-		// backgroundColor: theme.palette.third.main
+		flexDirection: "column",
+		"& *": {
+			[sizes.down("sm")]: {
+				fontSize: "1.6rem"
+			}
+		}
 	}
 }))(MuiExpansionPanelDetails);
 const iOSBoxShadow = "0 3px 1px rgba(0,0,0,0.1),0 4px 8px rgba(0,0,0,0.13),0 0 0 1px rgba(0,0,0,0.02)";
@@ -243,7 +305,10 @@ const IOSSlider = withStyles({
 			background: "transparent",
 			color: "#000",
 			fontSize: "1.8rem",
-			fontFamily: sTheme.typography.sansSerif
+			fontFamily: sTheme.typography.sansSerif,
+			[sizes.down("sm")]: {
+				fontSize: "1.6rem !important"
+			}
 		}
 	},
 	track: {

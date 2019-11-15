@@ -6,6 +6,7 @@ import TableCell from "@material-ui/core/TableCell";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
+import sizes from "../src/sizes";
 
 import {
 	dentalImplantArr,
@@ -22,11 +23,20 @@ const StyledTableCell = withStyles((theme) => ({
 		backgroundColor: theme.palette.primary.main,
 		color: theme.palette.common.white,
 		fontSize: "1.8rem",
-		fontFamily: theme.typography.sansSerif
+		[sizes.down("mdsm")]: {
+			minWidth: "130px",
+			width: "30%",
+			fontSize: "1.5rem",
+			padding: "12px"
+		}
 	},
 	body: {
-		fontFamily: theme.typography.sansSerif,
-		fontSize: "1.7rem"
+		fontSize: "1.7rem",
+		[sizes.down("mdsm")]: {
+			fontSize: "1.4rem",
+			padding: "10px",
+			width: "70%"
+		}
 	}
 }))(TableCell);
 
@@ -45,9 +55,6 @@ const useStyles = makeStyles((theme) => ({
 		overflowX: "auto",
 		marginRight: "1rem"
 	},
-	table: {
-		minWidth: "300px"
-	},
 
 	priceTableWrapper: {
 		display: "flex",
@@ -56,21 +63,46 @@ const useStyles = makeStyles((theme) => ({
 	},
 	freeServicesPaper: {
 		width: "600px",
-		margin: "2rem auto"
+		margin: "2rem auto",
+		[sizes.down("mdsm")]: {
+			width: "70%"
+		},
+		[sizes.down("sm")]: {
+			width: "90%"
+		}
 	},
 	implantsPaper: {
-		width: "600px"
+		width: "620px",
+		[sizes.down("mdsm")]: {
+			width: "70%"
+		},
+		[sizes.down("sm")]: {
+			width: "90%"
+		}
 	},
 	veneersPaper: {
-		width: "540px"
+		width: "540px",
+		[sizes.down("mdsm")]: {
+			width: "70%"
+		},
+		[sizes.down("sm")]: {
+			width: "90%"
+		}
 	},
 	otherProceduresPaper: {
-		width: "360px"
+		width: "380px",
+		[sizes.down("mdsm")]: {
+			width: "70%"
+		},
+		[sizes.down("sm")]: {
+			width: "90%"
+		}
 	},
 	currencySelectorButtonsWrapper: {
 		display: "flex",
 		justifyContent: "center",
-		margin: "5rem 0 2rem 0"
+		width: "70%",
+		margin: "0 auto"
 	}
 }));
 
@@ -141,106 +173,102 @@ export default function CustomizedTables ({ currentCurrency, currentSign, handle
 				/>
 			</div>
 			<div className={classes.priceTableWrapper}>
-				<div>
-					<Paper className={clsx(classes.root, classes.implantsPaper)}>
-						<Table className={classes.table} aria-label="customized table">
-							<TableHead>
-								<TableRow>
-									<StyledTableCell>Dental Implants</StyledTableCell>
-									<StyledTableCell align="center">Price</StyledTableCell>
-								</TableRow>
-							</TableHead>
-							<TableBody>
-								{dentalImplantArr.map((treatment) => (
-									<StyledTableRow key={treatment.name[language]}>
-										<StyledTableCell component="th" scope="row">
-											{treatment.name[language]}
-										</StyledTableCell>
-										<StyledTableCell align="center">
-											{currentCurrency === "euro" ? (
-												`${treatment[currentCurrency]} ${currentSign}`
-											) : (
-												`${currentSign}${treatment[currentCurrency]}`
-											)}
-										</StyledTableCell>
-									</StyledTableRow>
-								))}
-							</TableBody>
-							<TableHead>
-								<TableRow>
-									<StyledTableCell>Dentures & Invisalign</StyledTableCell>
-									<StyledTableCell align="center">Price</StyledTableCell>
-								</TableRow>
-							</TableHead>
-							<TableBody>
-								{denturesInvisalignArr.map((treatment) => (
-									<StyledTableRow key={treatment.name[language]}>
-										<StyledTableCell component="th" scope="row">
-											{treatment.name[language]}
-										</StyledTableCell>
-										<StyledTableCell align="center">
-											{currentCurrency === "euro" ? (
-												`${treatment[currentCurrency]} ${currentSign}`
-											) : (
-												`${currentSign}${treatment[currentCurrency]}`
-											)}
-										</StyledTableCell>
-									</StyledTableRow>
-								))}
-							</TableBody>
-						</Table>
-					</Paper>
-				</div>
-				<div>
-					<Paper className={clsx(classes.root, classes.veneersPaper)}>
-						<Table className={classes.table} aria-label="customized table">
-							<TableHead>
-								<TableRow>
-									<StyledTableCell>Dental Veneers & Crowns</StyledTableCell>
-									<StyledTableCell align="center">Price</StyledTableCell>
-								</TableRow>
-							</TableHead>
-							<TableBody>
-								{dentalVeneerCrownArr.map((treatment) => (
-									<StyledTableRow key={treatment.name[language]}>
-										<StyledTableCell component="th" scope="row">
-											{treatment.name[language]}
-										</StyledTableCell>
-										<StyledTableCell align="center">
-											{currentCurrency === "euro" ? (
-												`${treatment[currentCurrency]} ${currentSign}`
-											) : (
-												`${currentSign}${treatment[currentCurrency]}`
-											)}
-										</StyledTableCell>
-									</StyledTableRow>
-								))}
-							</TableBody>
-							<TableHead>
-								<TableRow>
-									<StyledTableCell>Pediatric Dentistry</StyledTableCell>
-									<StyledTableCell align="center">Price</StyledTableCell>
-								</TableRow>
-							</TableHead>
-							<TableBody>
-								{pedodonticsArr.map((treatment) => (
-									<StyledTableRow key={treatment.name[language]}>
-										<StyledTableCell component="th" scope="row">
-											{treatment.name[language]}
-										</StyledTableCell>
-										<StyledTableCell align="center">
-											{currentCurrency === "euro" ? (
-												`${treatment[currentCurrency]} ${currentSign}`
-											) : (
-												`${currentSign}${treatment[currentCurrency]}`
-											)}
-										</StyledTableCell>
-									</StyledTableRow>
-								))}
-							</TableBody>
-						</Table>
-					</Paper>
-				</div>
+				<Paper className={clsx(classes.root, classes.implantsPaper)}>
+					<Table className={classes.table} aria-label="customized table">
+						<TableHead>
+							<TableRow>
+								<StyledTableCell>Dental Implants</StyledTableCell>
+								<StyledTableCell align="center">Price</StyledTableCell>
+							</TableRow>
+						</TableHead>
+						<TableBody>
+							{dentalImplantArr.map((treatment) => (
+								<StyledTableRow key={treatment.name[language]}>
+									<StyledTableCell component="th" scope="row">
+										{treatment.name[language]}
+									</StyledTableCell>
+									<StyledTableCell align="center">
+										{currentCurrency === "euro" ? (
+											`${treatment[currentCurrency]} ${currentSign}`
+										) : (
+											`${currentSign}${treatment[currentCurrency]}`
+										)}
+									</StyledTableCell>
+								</StyledTableRow>
+							))}
+						</TableBody>
+						<TableHead>
+							<TableRow>
+								<StyledTableCell>Dentures & Invisalign</StyledTableCell>
+								<StyledTableCell align="center">Price</StyledTableCell>
+							</TableRow>
+						</TableHead>
+						<TableBody>
+							{denturesInvisalignArr.map((treatment) => (
+								<StyledTableRow key={treatment.name[language]}>
+									<StyledTableCell component="th" scope="row">
+										{treatment.name[language]}
+									</StyledTableCell>
+									<StyledTableCell align="center">
+										{currentCurrency === "euro" ? (
+											`${treatment[currentCurrency]} ${currentSign}`
+										) : (
+											`${currentSign}${treatment[currentCurrency]}`
+										)}
+									</StyledTableCell>
+								</StyledTableRow>
+							))}
+						</TableBody>
+					</Table>
+				</Paper>
+				<Paper className={clsx(classes.root, classes.veneersPaper)}>
+					<Table className={classes.table} aria-label="customized table">
+						<TableHead>
+							<TableRow>
+								<StyledTableCell>Dental Veneers & Crowns</StyledTableCell>
+								<StyledTableCell align="center">Price</StyledTableCell>
+							</TableRow>
+						</TableHead>
+						<TableBody>
+							{dentalVeneerCrownArr.map((treatment) => (
+								<StyledTableRow key={treatment.name[language]}>
+									<StyledTableCell component="th" scope="row">
+										{treatment.name[language]}
+									</StyledTableCell>
+									<StyledTableCell align="center">
+										{currentCurrency === "euro" ? (
+											`${treatment[currentCurrency]} ${currentSign}`
+										) : (
+											`${currentSign}${treatment[currentCurrency]}`
+										)}
+									</StyledTableCell>
+								</StyledTableRow>
+							))}
+						</TableBody>
+						<TableHead>
+							<TableRow>
+								<StyledTableCell>Pediatric Dentistry</StyledTableCell>
+								<StyledTableCell align="center">Price</StyledTableCell>
+							</TableRow>
+						</TableHead>
+						<TableBody>
+							{pedodonticsArr.map((treatment) => (
+								<StyledTableRow key={treatment.name[language]}>
+									<StyledTableCell component="th" scope="row">
+										{treatment.name[language]}
+									</StyledTableCell>
+									<StyledTableCell align="center">
+										{currentCurrency === "euro" ? (
+											`${treatment[currentCurrency]} ${currentSign}`
+										) : (
+											`${currentSign}${treatment[currentCurrency]}`
+										)}
+									</StyledTableCell>
+								</StyledTableRow>
+							))}
+						</TableBody>
+					</Table>
+				</Paper>
 				<Paper className={clsx(classes.root, classes.otherProceduresPaper)}>
 					<Table className={classes.table} aria-label="customized table">
 						<TableHead>

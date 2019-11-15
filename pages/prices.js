@@ -8,6 +8,7 @@ import PriceTable from "../components/PriceTable";
 import CostCalculator from "../components/CostCalculator";
 import { useState } from "react";
 import Form from "../components/Form";
+import sizes from "../src/sizes";
 
 const useStyles = makeStyles((theme) => ({
 	regularButton: {
@@ -197,11 +198,43 @@ const Prices = () => {
 					margin-top: 4rem;
 				}
 
+				.our-prices-wrapper {
+					width: 100%;
+				}
+
 				.cost-calculator-section {
 					background-color: ${sTheme.palette.secondary.main};
 				}
 				.cost-calculator-wrapper {
 					width: 70%;
+				}
+
+				@media (max-width: ${sizes.sizes.xl}) {
+					.cost-calculator-wrapper {
+						width: 80%;
+					}
+				}
+
+				@media (max-width: ${sizes.sizes.lg}) {
+					.cost-calculator-wrapper {
+						width: 90%;
+					}
+				}
+
+				@media (max-width: ${sizes.sizes.md}) {
+					.cost-calculator-wrapper {
+						width: 95%;
+					}
+				}
+
+				@media (max-width: ${sizes.sizes.sm}) {
+					.cost-calculator-wrapper {
+						width: 100%;
+					}
+				}
+
+				.form-wrapper {
+					width: 100%;
 				}
 			`}</style>
 		</div>

@@ -297,6 +297,10 @@ const Index = (props) => {
 		setAutoPlay(!autoPlay);
 	};
 
+	const handleChat = () => {
+		Tawk_API.maximize();
+	};
+
 	return (
 		<React.Fragment>
 			<Head>
@@ -310,7 +314,7 @@ const Index = (props) => {
 						<br />
 						perfect
 					</h1>
-					<Button variant="contained" color="primary" className={classes.button}>
+					<Button variant="contained" color="primary" className={classes.button} onClick={handleChat}>
 						Chat with us
 					</Button>
 				</div>
@@ -430,6 +434,7 @@ const Index = (props) => {
 						variant="contained"
 						color="primary"
 						className={clsx(classes.regularButton, classes.treatmentsButton)}
+						onClick={handleChat}
 					>
 						Chat&nbsp;Now
 					</Button>
@@ -459,7 +464,12 @@ const Index = (props) => {
 							distinctio laudantium odio, quidem suscipit accusamus?
 						</p>
 						<div className="clinic-intro-buttons-div">
-							<Button variant="contained" color="primary" className={classes.regularButton}>
+							<Button
+								variant="contained"
+								color="primary"
+								className={classes.regularButton}
+								onClick={handleChat}
+							>
 								Chat Now
 							</Button>
 							<Link href="/about">
@@ -637,6 +647,7 @@ const Index = (props) => {
 						variant="contained"
 						color="primary"
 						className={clsx(classes.regularButton, classes.treatmentsButton)}
+						onClick={handleChat}
 					>
 						Chat Now
 					</Button>
@@ -1146,6 +1157,7 @@ const Index = (props) => {
 						variant="contained"
 						color="primary"
 						className={clsx(classes.regularButton, classes.treatmentsButton)}
+						onClick={handleChat}
 					>
 						Chat Now
 					</Button>

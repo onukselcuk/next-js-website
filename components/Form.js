@@ -16,6 +16,7 @@ import FormHelperText from "@material-ui/core/FormHelperText";
 import ReCAPTCHA from "react-google-recaptcha";
 import CircleLoader from "react-spinners/CircleLoader";
 import ErrorSnackBar from "./ErrorSnackBar";
+import sizes from "../src/sizes";
 const treatments = [
 	{
 		value: "Select A Treatment You Are Looking For",
@@ -113,7 +114,23 @@ const useStyles = makeStyles((theme) => ({
 		border: `1px solid ${theme.palette.primary.main}`,
 		borderRadius: "20px",
 		position: "relative",
-		overflow: "hidden"
+		overflow: "hidden",
+		[sizes.down("lg")]: {
+			width: "80%"
+		},
+		[sizes.down("lg")]: {
+			width: "85%"
+		},
+		[sizes.down("md")]: {
+			width: "90%"
+		},
+		[sizes.down("mdsm")]: {
+			width: "95%",
+			padding: "10px 10px"
+		},
+		[sizes.down("xs")]: {
+			width: "97%"
+		}
 	},
 	container: {
 		display: "flex",
@@ -123,7 +140,7 @@ const useStyles = makeStyles((theme) => ({
 		marginLeft: theme.spacing(1),
 		marginRight: theme.spacing(1),
 		flexGrow: 1,
-		minWidth: "300px"
+		minWidth: "200px"
 	},
 	menu: {
 		width: 200
@@ -139,7 +156,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 	phoneInputWrapper: {
 		width: "30%",
-		minWidth: "300px",
+		minWidth: "200px",
 		display: "inline-block",
 		position: "relative",
 		top: "6px",
@@ -162,7 +179,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 	dropZoneContainer: {
 		minHeight: "76px",
-		width: "55%",
+		width: "45%",
 		margin: "1rem .8rem",
 		padding: ".5rem",
 		"& div[class^='DropzoneArea-dropzoneTextStyle']": {
@@ -225,7 +242,7 @@ const useStyles = makeStyles((theme) => ({
 				minWidth: "300px"
 			}
 		},
-		"@media (max-width:72em)": {
+		"@media (max-width:86.25em)": {
 			width: "100%"
 		}
 	},
@@ -259,12 +276,9 @@ const useStyles = makeStyles((theme) => ({
 			display: "block"
 		},
 		"&:hover": {
-			// backgroundColor: theme.palette.primary.main,
 			"&::before": {
 				opacity: 1
 			},
-			// background:
-			// 	"linear-gradient(to right, rgba(26,59,112,1) 0%, rgba(40,85,130,1) 52%, rgba(0,164,189,1) 100%)",
 			color: theme.palette.secondary.main
 		}
 	},
@@ -274,12 +288,10 @@ const useStyles = makeStyles((theme) => ({
 		padding: "1rem 6rem",
 		alignSelf: "center",
 		width: "18%",
-		"@media (max-width:56.25em)": {
+		[sizes.down("xxs")]: {
 			marginLeft: ".5rem",
 			marginTop: "1rem"
 		}
-		// position: "relative",
-		// left: "50%",
 	},
 	captchaWrapper: {
 		position: "relative",

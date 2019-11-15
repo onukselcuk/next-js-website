@@ -236,6 +236,10 @@ export default () => {
 		setState({ ...state, [side]: open });
 	};
 
+	const handleChat = () => {
+		Tawk_API.maximize();
+	};
+
 	return (
 		<React.Fragment>
 			<div className={classes.topBar}>
@@ -358,7 +362,7 @@ export default () => {
 							</ActiveLink>
 						</nav>
 						<div>
-							<Button variant="contained" color="primary" className={classes.button}>
+							<Button variant="contained" color="primary" className={classes.button} onClick={handleChat}>
 								Chat&nbsp;Now
 							</Button>
 						</div>

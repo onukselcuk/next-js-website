@@ -74,6 +74,7 @@ const useStyles = makeStyles((theme) => ({
 		transition: "all 250ms ease-in-out",
 		marginLeft: "6px",
 		fontSize: "1.7rem",
+		cursor: "pointer",
 		"&:hover": {
 			color: theme.palette.third.dark
 		}
@@ -144,6 +145,9 @@ const useStyles = makeStyles((theme) => ({
 
 export default () => {
 	const classes = useStyles();
+	const handleChat = () => {
+		Tawk_API.maximize();
+	};
 	return (
 		<React.Fragment>
 			<Toolbar className={classes.footerToolbar}>
@@ -298,7 +302,7 @@ export default () => {
 							</div>
 							<p className={classes.footerParagraph}>International Patients Department</p>
 						</div>
-						<a target="_blank" href="/" className={clsx(classes.footerLink, classes.addressLink)}>
+						<a onClick={handleChat} className={clsx(classes.footerLink, classes.addressLink)}>
 							Chat with Us
 						</a>
 
