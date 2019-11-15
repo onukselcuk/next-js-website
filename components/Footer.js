@@ -9,7 +9,6 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 config.autoAddCss = false;
 import {
 	faClipboardList,
-	faTeeth,
 	faTag,
 	faPhoneAlt,
 	faTooth,

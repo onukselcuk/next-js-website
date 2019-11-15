@@ -1,6 +1,7 @@
 import ActiveLink from "./ActiveLink";
 import Link from "next/link";
 import { makeStyles } from "@material-ui/core/styles";
+import { useState } from "react";
 import Button from "@material-ui/core/Button";
 import Toolbar from "@material-ui/core/Toolbar";
 import Logo from "./logos-icons/Logo";
@@ -11,6 +12,9 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import sizes from "../src/sizes";
+import IconButton from "@material-ui/core/IconButton";
+import MenuIcon from "@material-ui/icons/Menu";
+import NavDrawer from "./NavDrawer";
 
 const useStyles = makeStyles((theme) => ({
 	button: {
@@ -24,6 +28,9 @@ const useStyles = makeStyles((theme) => ({
 		"&:hover": {
 			backgroundColor: theme.palette.third.dark,
 			color: theme.palette.secondary.main
+		},
+		[sizes.down("lg")]: {
+			display: "none"
 		}
 	},
 	topBar: {
@@ -125,6 +132,9 @@ const useStyles = makeStyles((theme) => ({
 			"& svg": {
 				transform: "rotate(180deg)"
 			}
+		},
+		[sizes.down("lg")]: {
+			display: "none"
 		}
 	},
 	expandMoreIcon: {
@@ -194,11 +204,38 @@ const useStyles = makeStyles((theme) => ({
 	},
 	dropdownItemText: {
 		color: theme.palette.secondary.main
+	},
+	drawerButtonWrapper: {
+		display: "none",
+
+		[sizes.down("lg")]: {
+			display: "block"
+		}
+	},
+	menuButton: {},
+	menuIcon: {
+		fontSize: "3.5rem"
 	}
 }));
 
 export default () => {
 	const classes = useStyles();
+
+	const [ state, setState ] = useState({
+		top: false,
+		left: false,
+		bottom: false,
+		right: false
+	});
+
+	const toggleDrawer = (side, open) => (event) => {
+		if (event.type === "keydown" && (event.key === "Tab" || event.key === "Shift")) {
+			return;
+		}
+
+		setState({ ...state, [side]: open });
+	};
+
 	return (
 		<React.Fragment>
 			<div className={classes.topBar}>
@@ -325,9 +362,23 @@ export default () => {
 								Chat&nbsp;Now
 							</Button>
 						</div>
+						<div className={classes.drawerButtonWrapper}>
+							<IconButton
+								onClick={toggleDrawer("right", true)}
+								edge="start"
+								className={classes.menuButton}
+								color="secondary"
+								aria-label="menu"
+							>
+								<MenuIcon className={classes.menuIcon} />
+							</IconButton>
+						</div>
 					</div>
 				</header>
 			</Toolbar>
+			<div>
+				<NavDrawer state={state} setState={setState} toggleDrawer={toggleDrawer} />
+			</div>
 		</React.Fragment>
 	);
 };
