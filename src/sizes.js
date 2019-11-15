@@ -2,6 +2,7 @@ export default {
 	up () {},
 	down (size) {
 		const sizes = {
+			xxxs: "26.875em", //430px
 			xxs: "31.25em", //500px
 			xs: "36em", // 576px
 			sm: "46.875em", // 750px
@@ -13,6 +14,7 @@ export default {
 		return `@media (max-width:${sizes[size]})`;
 	},
 	sizes: {
+		xxxs: "26.875em", //430px
 		xxs: "31.25em", //500px
 		xs: "36em", // 576px
 		sm: "46.875em", // 750px

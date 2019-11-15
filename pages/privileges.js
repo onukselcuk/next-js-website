@@ -11,6 +11,7 @@ import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
 import sTheme from "../src/styledTheme";
 import Form from "../components/Form";
+import sizes from "../src/sizes";
 
 const useStyles = makeStyles((theme) => ({
 	privilegeActionButton: {
@@ -247,10 +248,10 @@ const Privileges = () => {
 						<img className="privilege-image" src={istanbulDepartureImg} alt="" />
 					</div>
 				</section>
-				<section className="our-prices-section form-section">
+				<section className="our-prices-section">
 					<div className="our-prices-header">
-						<h2 className="our-prices-header-text">Get A Free Quote</h2>
-						<p className="our-prices-header-paragraph-text">
+						<h2 className="your-privileges-header-text">Get A Free Quote</h2>
+						<p className="your-privileges-header-paragraph-text">
 							Contacting us through live chat or WhatsApp is always the fastest way, but you may prefer
 							sending us a good old form. Tell us your dental needs, and don't forget to attach at least
 							the pictures of your teeth to the form. If you have an X-Ray or CT Scan, it's even better
@@ -287,10 +288,42 @@ const Privileges = () => {
 						color: ${sTheme.palette.primary.main};
 						font-size: 4rem;
 					}
+
+					@media (max-width: ${sizes.sizes.lg}) {
+						.your-privileges-header-text {
+							font-size: 3.5rem;
+						}
+					}
+
+					@media (max-width: ${sizes.sizes.md}) {
+						.your-privileges-header-text {
+							font-size: 3rem;
+						}
+					}
 					.your-privileges-header-paragraph-text {
 						color: ${sTheme.palette.secondary.dark};
 						font-size: 2rem;
 						width: 50%;
+					}
+
+					@media (max-width: ${sizes.sizes.xl}) {
+						.your-privileges-header-paragraph-text {
+							width: 60%;
+						}
+					}
+
+					@media (max-width: ${sizes.sizes.lg}) {
+						.your-privileges-header-paragraph-text {
+							width: 70%;
+							font-size: 1.8rem;
+						}
+					}
+
+					@media (max-width: ${sizes.sizes.md}) {
+						.your-privileges-header-paragraph-text {
+							width: 80%;
+							font-size: 1.6rem;
+						}
 					}
 					.privilege-section {
 						display: flex;
@@ -359,15 +392,8 @@ const Privileges = () => {
 						width: 100%;
 						text-align: center;
 					}
-					.our-prices-header-text {
-						font-family: ${sTheme.typography.serif};
-						color: ${sTheme.palette.primary.main};
-						font-size: 4rem;
-					}
-					.our-prices-header-paragraph-text {
-						color: ${sTheme.palette.secondary.dark};
-						font-size: 2rem;
-						width: 50%;
+					.form-wrapper {
+						width: 100%;
 					}
 				`}</style>
 			</section>

@@ -97,9 +97,6 @@ const Prices = () => {
 					>
 						Chat Now
 					</Button>
-					<Link href="/privileges">
-						<a className="our-prices-link">Learn more abut your privileges and itinerary</a>
-					</Link>
 				</div>
 			</section>
 			<section className="our-prices-section cost-calculator-section">
@@ -127,9 +124,6 @@ const Prices = () => {
 					>
 						Chat Now
 					</Button>
-					<Link href="/privileges">
-						<a className="our-prices-link">Learn more abut your privileges and itinerary</a>
-					</Link>
 				</div>
 			</section>
 			<section className="our-prices-section form-section">
@@ -173,10 +167,42 @@ const Prices = () => {
 					color: ${sTheme.palette.primary.main};
 					font-size: 4rem;
 				}
+
+				@media (max-width: ${sizes.sizes.lg}) {
+					.our-prices-header-text {
+						font-size: 3.5rem;
+					}
+				}
+
+				@media (max-width: ${sizes.sizes.md}) {
+					.our-prices-header-text {
+						font-size: 3rem;
+					}
+				}
 				.our-prices-header-paragraph-text {
 					color: ${sTheme.palette.secondary.dark};
 					font-size: 2rem;
 					width: 50%;
+				}
+
+				@media (max-width: ${sizes.sizes.xl}) {
+					.our-prices-header-paragraph-text {
+						width: 60%;
+					}
+				}
+
+				@media (max-width: ${sizes.sizes.lg}) {
+					.our-prices-header-paragraph-text {
+						width: 70%;
+						font-size: 1.8rem;
+					}
+				}
+
+				@media (max-width: ${sizes.sizes.md}) {
+					.our-prices-header-paragraph-text {
+						width: 80%;
+						font-size: 1.6rem;
+					}
 				}
 
 				.our-prices-link {

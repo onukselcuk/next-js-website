@@ -91,6 +91,20 @@ const useStyles = makeStyles((theme) => ({
 			}
 			// backgroundImage:
 			// 	"linear-gradient(to right, rgba(26,59,112,1) 0%, rgba(40,85,130,1) 52%, rgba(0,164,189,1) 100%)"
+		},
+		[sizes.down("lg")]: {
+			padding: "20px 90px"
+		},
+		[sizes.down("mdsm")]: {
+			padding: "15px 70px",
+			fontSize: "1.8rem"
+		},
+		[sizes.down("sm")]: {
+			padding: "10px 50px",
+			fontSize: "1.6rem"
+		},
+		[sizes.down("xs")]: {
+			padding: "5px 40px"
 		}
 	},
 	regularButton: {
@@ -223,7 +237,10 @@ const useStyles = makeStyles((theme) => ({
 		textAlign: "center"
 	},
 	star: {
-		color: "#e7711b"
+		color: "#e7711b",
+		[sizes.down("xxxs")]: {
+			fontSize: "2rem"
+		}
 	},
 	googleSvgIcon: {
 		position: "absolute",
@@ -235,16 +252,29 @@ const useStyles = makeStyles((theme) => ({
 	googleReviewBannerPaper: {
 		width: "560px",
 		padding: "1rem",
-		borderRadius: "25px"
+		borderRadius: "25px",
+		[sizes.down("xs")]: {
+			width: "400px"
+		},
+		[sizes.down("xxxs")]: {
+			width: "290px"
+		}
 	},
 	googleLogoFull: {
 		width: "200px",
 		height: "80px",
-		marginLeft: "2rem"
+		marginLeft: "2rem",
+		[sizes.down("xxxs")]: {
+			width: "125px",
+			height: "50px"
+		}
 	},
 	googleMyBusinessLogo: {
 		width: "150px",
-		height: "100px"
+		height: "100px",
+		[sizes.down("xs")]: {
+			display: "none"
+		}
 	},
 	patientImg: {
 		width: "90%",
@@ -309,10 +339,9 @@ const Index = (props) => {
 			<div className="hero-image-div">
 				<div className="hero-image-perfect-wrapper">
 					<h1 className="hero-image-perfect">
-						Let's make your<br />
+						Let's make your <br className="perfect-break" />
 						<span className="hero-image-perfect-smile-text">smile</span>
-						<br />
-						perfect
+						<br className="perfect-break" /> perfect
 					</h1>
 					<Button variant="contained" color="primary" className={classes.button} onClick={handleChat}>
 						Chat with us
@@ -1322,6 +1351,32 @@ const Index = (props) => {
 					}
 				}
 
+				@media (max-width: ${sizes.sizes.sm}) {
+					.hero-image-perfect-wrapper {
+						top: 65%;
+						background-color: rgba(255, 255, 255, .7);
+						padding: 1rem;
+					}
+					.hero-image-perfect {
+						font-size: 4rem;
+					}
+
+					.perfect-break {
+						display: none;
+					}
+				}
+
+				@media (max-width: ${sizes.sizes.xs}) {
+					.hero-image-perfect-wrapper {
+						top: 60%;
+						padding: .5rem;
+						padding-bottom: 1rem;
+					}
+					.hero-image-perfect {
+						font-size: 3rem;
+					}
+				}
+
 				.hero-image-perfect-smile-text {
 					color: ${sTheme.palette.third.dark};
 				}
@@ -1345,10 +1400,41 @@ const Index = (props) => {
 					color: ${sTheme.palette.primary.main};
 					font-size: 4rem;
 				}
+				@media (max-width: ${sizes.sizes.lg}) {
+					.our-services-header-text {
+						font-size: 3.5rem;
+					}
+				}
+
+				@media (max-width: ${sizes.sizes.md}) {
+					.our-services-header-text {
+						font-size: 3rem;
+					}
+				}
 				.our-services-header-paragraph-text {
 					color: ${sTheme.palette.secondary.dark};
 					font-size: 2rem;
 					width: 50%;
+				}
+
+				@media (max-width: ${sizes.sizes.xl}) {
+					.our-services-header-paragraph-text {
+						width: 60%;
+					}
+				}
+
+				@media (max-width: ${sizes.sizes.lg}) {
+					.our-services-header-paragraph-text {
+						width: 70%;
+						font-size: 1.8rem;
+					}
+				}
+
+				@media (max-width: ${sizes.sizes.md}) {
+					.our-services-header-paragraph-text {
+						width: 80%;
+						font-size: 1.6rem;
+					}
 				}
 				.our-services-wrapper {
 					display: flex;
@@ -1483,6 +1569,12 @@ const Index = (props) => {
 					font-size: 1.7rem;
 					transition: all 200ms ease-in-out;
 				}
+
+				@media (max-width: ${sizes.sizes.md}) {
+					.clinic-intro-link {
+						margin-top: 1.5rem;
+					}
+				}
 				.clinic-intro-link:hover {
 					text-decoration: underline;
 				}
@@ -1494,6 +1586,25 @@ const Index = (props) => {
 					align-items: baseline;
 					margin: 0 auto;
 					margin-top: 4rem;
+				}
+
+				@media (max-width: ${sizes.sizes.xl}) {
+					.dental-treatments-buttons-div {
+						width: 88%;
+					}
+				}
+
+				@media (max-width: ${sizes.sizes.lg}) {
+					.dental-treatments-buttons-div {
+						width: 93%;
+					}
+				}
+
+				@media (max-width: ${sizes.sizes.md}) {
+					.dental-treatments-buttons-div {
+						flex-direction: column;
+						align-items: center;
+					}
 				}
 				.our-doctors-section {
 					display: flex;
@@ -1610,11 +1721,23 @@ const Index = (props) => {
 					margin-left: 20px;
 				}
 
+				@media (max-width: ${sizes.sizes.xxxs}) {
+					.rating-stars-div {
+						margin-left: 10px;
+					}
+				}
+
 				.rating {
 					font-size: 5rem;
 					font-family: Roboto, sans-serif;
 					color: #e7711b;
 					font-weight: 400;
+				}
+
+				@media (max-width: ${sizes.sizes.xxxs}) {
+					.rating {
+						font-size: 3rem;
+					}
 				}
 
 				.review-summary-wrapper {
@@ -1635,6 +1758,19 @@ const Index = (props) => {
 					margin-left: 2rem;
 				}
 
+				@media (max-width: ${sizes.sizes.xs}) {
+					.my-business {
+						margin-top: -2.2rem;
+					}
+				}
+
+				@media (max-width: ${sizes.sizes.xxxs}) {
+					.my-business {
+						font-size: 2rem;
+						margin-top: -2rem;
+					}
+				}
+
 				.banner-reviews {
 					font-size: 2rem;
 					margin-left: 2rem;
@@ -1651,6 +1787,23 @@ const Index = (props) => {
 					color: #747474;
 					font-weight: 400;
 				}
+
+				@media (max-width: ${sizes.sizes.xs}) {
+					.review-number-div {
+						right: 20px;
+						font-size: 1.5rem;
+						bottom: 5px;
+					}
+				}
+
+				@media (max-width: ${sizes.sizes.xxxs}) {
+					.review-number-div {
+						right: 15px;
+						font-size: 1.3rem;
+						bottom: 2px;
+					}
+				}
+
 				.carouselPaper-item {
 					display: flex;
 					justify-content: center;
