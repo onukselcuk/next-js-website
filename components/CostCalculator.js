@@ -21,6 +21,8 @@ import clsx from "clsx";
 import { dentalImplantObj, dentalVeneerCrownObj, denturesInvisalignObj, otherProceduresObj } from "../src/priceList";
 import Button from "@material-ui/core/Button";
 import sizes from "../src/sizes";
+import { faArrowAltCircleRight } from "@fortawesome/free-regular-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -188,6 +190,13 @@ const useStyles = makeStyles((theme) => ({
 
 		// position: "relative",
 		// left: "50%",
+	},
+	fontAwesomeIcon: {
+		fontSize: "2.5rem",
+		marginRight: "5px",
+		[sizes.down("lg")]: {
+			fontSize: "2rem"
+		}
 	}
 }));
 
@@ -929,7 +938,10 @@ export default function CustomizedExpansionPanels ({ currentCurrency, handleCurr
 								color="primary"
 								className={clsx(classes.regularButton, classes.pricesButton)}
 							>
-								I&nbsp;want&nbsp;discount
+								<FontAwesomeIcon
+									className={classes.fontAwesomeIcon}
+									icon={faArrowAltCircleRight}
+								/>&nbsp;I&nbsp;want&nbsp;discount
 							</Button>
 						</div>
 					</Paper>
