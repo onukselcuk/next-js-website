@@ -257,9 +257,14 @@ const useStyles = makeStyles((theme) => ({
 		fontSize: "1.5rem",
 		backgroundColor: theme.palette.third.dark,
 		letterSpacing: "1px",
-		padding: "10px 25px",
 		position: "relative",
 		zIndex: 100,
+		marginRight: ".5rem",
+		marginLeft: "auto",
+		padding: "10px 30px",
+		alignSelf: "center",
+		width: "18%",
+		minWidth: "14rem",
 		"&::before": {
 			borderRadius: "inherit",
 			content: "close-quote",
@@ -280,14 +285,10 @@ const useStyles = makeStyles((theme) => ({
 				opacity: 1
 			},
 			color: theme.palette.secondary.main
-		}
-	},
-	pricesButton: {
-		marginRight: ".5rem",
-		marginLeft: "auto",
-		padding: "1rem 6rem",
-		alignSelf: "center",
-		width: "18%",
+		},
+		[sizes.down("mdsm")]: {
+			fontSize: "1.3rem"
+		},
 		[sizes.down("xxs")]: {
 			marginLeft: ".5rem",
 			marginTop: "1rem"
@@ -686,12 +687,7 @@ const Form = () => {
 							/>
 						</div>
 
-						<Button
-							variant="contained"
-							color="primary"
-							className={clsx(classes.regularButton, classes.pricesButton)}
-							type="submit"
-						>
+						<Button variant="contained" color="primary" className={classes.regularButton} type="submit">
 							Submit&nbsp;Now
 						</Button>
 					</div>

@@ -1,12 +1,4 @@
 import Head from "next/head";
-import contactUsImg from "../public/privileges-page/stock-photo-contact-us-businesswoman-work-by-modern-devices-she-uses-digital-tablet-computer-mobile-1214757019.jpg";
-import doctorChatImg from "../public/privileges-page/stock-photo-video-chat-with-patient-by-doctor-1145467625.jpg";
-import schedulingImg from "../public/privileges-page/stock-photo-regular-medical-examination-concept-stethoscope-on-calendar-page-219952843.jpg";
-import hotelBookingImg from "../public/privileges-page/stock-photo-young-traveler-planning-vacation-trip-and-searching-information-or-booking-hotel-on-laptop-travel-1334566982.jpg";
-import arrivalCollageImg from "../public/privileges-page/istanbul-arrival-collage.jpg";
-import yourTreatmentImg from "../public/privileges-page/stock-photo-dentist-examining-a-patient-s-teeth-in-the-dentist-364820018.jpg";
-import istanbulHolidayCollageImg from "../public/privileges-page/istanbul-holiday-collage.jpg";
-import istanbulDepartureImg from "../public/privileges-page/stock-photo-young-woman-at-the-airport-is-rushing-to-customs-control-behind-the-back-of-the-passenger-is-a-714368362.jpg";
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
 import sTheme from "../src/styledTheme";
@@ -45,6 +37,10 @@ const useStyles = makeStyles((theme) => ({
 			// background:
 			// 	"linear-gradient(to right, rgba(26,59,112,1) 0%, rgba(40,85,130,1) 52%, rgba(0,164,189,1) 100%)",
 			color: theme.palette.secondary.main
+		},
+		[sizes.down("md")]: {
+			padding: "8px 20px",
+			fontSize: "1.3rem"
 		}
 	}
 }));
@@ -70,9 +66,7 @@ const Privileges = () => {
 					</div>
 				</section>
 				<section className="privilege-section">
-					<div className="privilege-image-div">
-						<img className="privilege-image" src={contactUsImg} alt="" />
-					</div>
+					<div className="privilege-image-div privilege-image-1" />
 					<div className="privilege-explanation-div">
 						<div className="privilege-name-wrapper">
 							<h2 className="privilege-name-header">1) Contacting Us</h2>
@@ -111,14 +105,10 @@ const Privileges = () => {
 							</div>
 						</div>
 					</div>
-					<div className="privilege-image-div">
-						<img className="privilege-image" src={doctorChatImg} alt="" />
-					</div>
+					<div className="privilege-image-div privilege-image-2" />
 				</section>
 				<section className="privilege-section">
-					<div className="privilege-image-div">
-						<img className="privilege-image" src={schedulingImg} alt="" />
-					</div>
+					<div className="privilege-image-div privilege-image-3" />
 					<div className="privilege-explanation-div">
 						<div className="privilege-name-wrapper">
 							<h2 className="privilege-name-header">3) Scheduling An Appointment</h2>
@@ -157,14 +147,10 @@ const Privileges = () => {
 							</div>
 						</div>
 					</div>
-					<div className="privilege-image-div">
-						<img className="privilege-image" src={hotelBookingImg} alt="" />
-					</div>
+					<div className="privilege-image-div privilege-image-4" />
 				</section>
 				<section className="privilege-section">
-					<div className="privilege-image-div">
-						<img className="privilege-image" src={arrivalCollageImg} alt="" />
-					</div>
+					<div className="privilege-image-div privilege-image-5" />
 					<div className="privilege-explanation-div">
 						<div className="privilege-name-wrapper">
 							<h2 className="privilege-name-header">5) Arrival to Istanbul</h2>
@@ -203,14 +189,10 @@ const Privileges = () => {
 							</div>
 						</div>
 					</div>
-					<div className="privilege-image-div">
-						<img className="privilege-image" src={yourTreatmentImg} alt="" />
-					</div>
+					<div className="privilege-image-div privilege-image-6" />
 				</section>
 				<section className="privilege-section">
-					<div className="privilege-image-div">
-						<img className="privilege-image" src={istanbulHolidayCollageImg} alt="" />
-					</div>
+					<div className="privilege-image-div privilege-image-7" />
 					<div className="privilege-explanation-div">
 						<div className="privilege-name-wrapper">
 							<h2 className="privilege-name-header">7) Dental Holiday in Istanbul</h2>
@@ -244,9 +226,7 @@ const Privileges = () => {
 							</div>
 						</div>
 					</div>
-					<div className="privilege-image-div">
-						<img className="privilege-image" src={istanbulDepartureImg} alt="" />
-					</div>
+					<div className="privilege-image-div privilege-image-8" />
 				</section>
 				<section className="our-prices-section">
 					<div className="our-prices-header">
@@ -332,16 +312,58 @@ const Privileges = () => {
 						margin-top: 1rem;
 						width: 80%;
 					}
+
 					.privilege-image-div {
 						display: flex;
 						align-items: center;
 						width: 49%;
 						flex-shrink: 0;
-					}
-					.privilege-image {
-						width: 100%;
+						background-size: cover;
+						background-repeat: no-repeat;
+						background-position: right 25% bottom 30%;
 						border-radius: 20px;
 					}
+
+					.privilege-image-1 {
+						background-image: url("/privileges-page/stock-photo-contact-us-businesswoman-work-by-modern-devices-she-uses-digital-tablet-computer-mobile-1214757019.jpg");
+					}
+
+					.privilege-image-2 {
+						background-image: url("/privileges-page/stock-photo-video-chat-with-patient-by-doctor-1145467625.jpg");
+						background-position: right 50% bottom 55%;
+					}
+
+					.privilege-image-3 {
+						background-image: url("/privileges-page/stock-photo-regular-medical-examination-concept-stethoscope-on-calendar-page-219952843.jpg");
+					}
+
+					.privilege-image-4 {
+						background-image: url("/privileges-page/stock-photo-young-traveler-planning-vacation-trip-and-searching-information-or-booking-hotel-on-laptop-travel-1334566982.jpg");
+					}
+
+					.privilege-image-5 {
+						background-image: url("/privileges-page/istanbul-arrival-collage.jpg");
+						background-color: ${sTheme.palette.secondary.main};
+						background-position: center;
+					}
+
+					.privilege-image-6 {
+						background-image: url("/privileges-page/stock-photo-dentist-examining-a-patient-s-teeth-in-the-dentist-364820018.jpg");
+						background-position: right 25% bottom 40%;
+					}
+
+					.privilege-image-7 {
+						background-image: url("/privileges-page/istanbul-holiday-collage.jpg");
+						height: 700px;
+						background-color: ${sTheme.palette.secondary.main};
+						background-position: center;
+					}
+
+					.privilege-image-8 {
+						background-image: url("/privileges-page/stock-photo-young-woman-at-the-airport-is-rushing-to-customs-control-behind-the-back-of-the-passenger-is-a-714368362.jpg");
+						background-position: right 60% bottom 50%;
+					}
+
 					.privilege-explanation-div {
 						display: flex;
 						align-items: center;
@@ -360,7 +382,7 @@ const Privileges = () => {
 					.privilege-name-header {
 						font-family: ${sTheme.typography.serif};
 						color: ${sTheme.palette.primary.main};
-						font-size: 4rem;
+						font-size: 3.5rem;
 						margin-top: .5rem;
 					}
 					.privilege-text-paragraph {
@@ -373,16 +395,110 @@ const Privileges = () => {
 					.privilege-action-button-div {
 						margin-top: 2rem;
 						display: flex;
-						justify-content: space-between;
-						align-items: baseline;
+						justify-content: flex-end;
 						width: 95%;
 					}
+
+					@media (max-width: ${sizes.sizes.xl}) {
+						.privilege-image-div.privilege-image-5 {
+							width: 55%;
+						}
+					}
+
+					@media (max-width: ${sizes.sizes.lg}) {
+						.privilege-section {
+							width: 90%;
+						}
+						.privilege-name-header {
+							font-size: 3rem;
+						}
+					}
+
+					@media (max-width: ${sizes.sizes.md}) {
+						.privilege-section {
+							width: 100%;
+						}
+						.privilege-name-header {
+							font-size: 2.5rem;
+						}
+						.privilege-text-paragraph {
+							font-size: 1.5rem;
+						}
+					}
+
+					@media (max-width: ${sizes.sizes.mdsm}) {
+						.your-privileges-header-section {
+							background-color: ${sTheme.palette.secondary.main};
+						}
+						.privilege-section {
+							flex-direction: column;
+						}
+						.privilege-image-div {
+							width: 100%;
+							height: 300px;
+							border-radius: 0;
+							margin-top: -10px;
+						}
+
+						.privilege-image-div.privilege-image-5 {
+							height: 600px;
+							background-position: center;
+							background-size: contain;
+							width: 100%;
+						}
+
+						.privilege-image-div.privilege-image-7 {
+							height: 600px;
+							background-size: contain;
+							background-position: center;
+						}
+						.privilege-image-div:nth-of-type(even) {
+							order: -1;
+						}
+						.privilege-name-wrapper {
+							border-radius: 0;
+							border: none;
+							margin: 0;
+							text-align: center;
+							padding: 3rem;
+						}
+						.privilege-action-button-div {
+							justify-content: center;
+							width: 100%;
+						}
+					}
+
+					@media (max-width: ${sizes.sizes.sm}) {
+						.privilege-image-div.privilege-image-5 {
+							height: 400px;
+						}
+						.privilege-image-div.privilege-image-7 {
+							height: 500px;
+						}
+					}
+
+					@media (max-width: ${sizes.sizes.xs}) {
+						.privilege-image-div.privilege-image-5 {
+							height: 300px;
+						}
+					}
+
+					@media (max-width: ${sizes.sizes.xxs}) {
+						.privilege-image-div.privilege-image-5 {
+							height: 250px;
+						}
+
+						.privilege-image-div.privilege-image-7 {
+							height: 350px;
+						}
+					}
+
 					.our-prices-section {
 						display: flex;
 						justify-content: center;
 						flex-wrap: wrap;
 						margin-top: -5px;
-						padding: 4rem 0;
+						padding: 4rem 0 0 0;
 					}
 					.our-prices-header {
 						display: flex;
