@@ -157,9 +157,9 @@ const Privileges = () => {
 							<p className="privilege-text-paragraph">
 								You will never feel lost in Istanbul. Before your flight's landing, our professional
 								team will be waiting for you and greet you right inside the airport when you land. You
-								will be accompanied to your VIP car, which will take you directly to your hotel. You
-								won't be wasting your time with the airport shuttle or public transportation to arrive
-								at your hotel.
+								will be accompanied to your VIP car, which will take you directly to your hotel (free of
+								charge). You won't be wasting your time with the airport shuttle or public
+								transportation to arrive at your hotel.
 							</p>
 							<div className="privilege-action-button-div">
 								<Button variant="contained" color="primary" className={classes.privilegeActionButton}>

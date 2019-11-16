@@ -278,6 +278,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 	patientImg: {
 		width: "90%",
+		minWidth: "144px",
 		borderRadius: "200px",
 		boxShadow: "2px 2px 14px 3px rgba(0,0,0,0.3)",
 		[sizes.down("xl")]: {
