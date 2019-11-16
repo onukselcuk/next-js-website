@@ -1,4 +1,3 @@
-import clinicImg from "../public/clinic-image.jpg";
 import sTheme from "../src/styledTheme";
 
 const About = () => {
@@ -6,7 +5,7 @@ const About = () => {
 		<React.Fragment>
 			<section className="about-us-section">
 				<div className="clinic-image-wrapper">
-					<img className="clinic-image" src={clinicImg} alt="" />
+					<img className="clinic-image" src="/clinic-image.jpg" alt="" />
 				</div>
 				<div className="our-prices-header">
 					<h2 className="our-prices-header-text">About Us</h2>

@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
 		fontSize: "2rem",
 		width: "20px !important",
 		height: "20px",
-		marginRight: "1.3rem",
+		marginRight: "1.4rem",
 		marginLeft: ".5rem",
 		margin: "0 auto",
 		color: theme.palette.third.dark,
@@ -54,52 +54,47 @@ const Contact = () => {
 							<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faMapMarkedAlt} /> Our Address
 						</h3>
 						<p className="contact-us-location-paragraph">
-							<p className="contact-us-clinic-name">Istanbul Smile Center Ağız ve Diş Sağlığı Kliniği</p>
 							<a
 								className="contact-link contact-link-location"
 								target="_blank"
 								href="https://www.google.com/maps/place/%C4%B0stanbul+Smile+Center+A%C4%9F%C4%B1z+ve+Di%C5%9F+Sa%C4%9Fl%C4%B1%C4%9F%C4%B1+Poliklini%C4%9Fi/@40.9914481,28.832006,17z/data=!3m1!4b1!4m5!3m4!1s0x14caa3147e2cba65:0xb6eaeab3d94bfd80!8m2!3d40.9914441!4d28.8341947"
 							>
-								Ataköy 7-8-9-10. Kısım Mah. Çobançeşme E-5 Yanyol Cad. Ataköy Towers B Blok No:20 Kat:1
-								Daire:24, 34212 Bakırköy/Istanbul/Turkey
+								Istanbul Smile Center Ağız ve Diş Sağlığı Kliniği<br />Ataköy 7-8-9-10. Kısım Mah.
+								Çobançeşme E-5 Yanyol Cad. Ataköy Towers B Blok No:20 Kat:1 Daire:24, 34212
+								Bakırköy/Istanbul/Turkey
 							</a>
 						</p>
 						<h3 className="contact-us-small-header">
 							<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faGlobe} /> International
 							Patients Department
 						</h3>
-						<p>
+						<p className="paragraph">
 							<FontAwesomeIcon className={classes.fontAwesomeIconSmall} icon={faComments} />{" "}
 							<a onClick={handleChat} className="contact-link">
 								Chat With Us
 							</a>
 						</p>
-						<p>
+						<p className="paragraph">
 							<FontAwesomeIcon className={classes.fontAwesomeIconSmall} icon={faWhatsapp} />{" "}
-							WhatsApp:&nbsp;
 							<a
 								target="_blank"
 								href="https://wa.me/905309492470?text=Hi+Istanbul+Smile+Center.+I+have+a+question."
 								className="contact-link"
 							>
-								+90 530 949 24 70
+								WhatsApp: +90 530 949 24 70
 							</a>
 						</p>
-						<p>
+						<p className="paragraph">
 							<FontAwesomeIcon className={classes.fontAwesomeIconSmall} icon={faFileSignature} />{" "}
 							<a className="contact-link" href="#form">
 								Send Us A Form
 							</a>
 						</p>
 
-						<p>
-							<FontAwesomeIcon className={classes.fontAwesomeIconSmall} icon={faAt} /> Email:<a
-								target="_blank"
-								href="mailto:contact@istanbulsmilecenter.com"
-								className="contact-link"
-							>
-								{" "}
-								contact@istanbulsmilecenter.com
+						<p className="paragraph">
+							<FontAwesomeIcon className={classes.fontAwesomeIconSmall} icon={faAt} />{" "}
+							<a target="_blank" href="mailto:contact@istanbulsmilecenter.com" className="contact-link">
+								Email: contact@istanbulsmilecenter.com
 							</a>
 						</p>
 					</div>
@@ -110,9 +105,9 @@ const Contact = () => {
 					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.544768220102!2d28.832006015661566!3d40.991448128408756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa3147e2cba65%3A0xb6eaeab3d94bfd80!2sIstanbul%20Smile%20Center%20Dental%20Clinic!5e0!3m2!1sen!2str!4v1573457209825!5m2!1sen!2str"
 					width="100%"
 					height="350"
-					frameborder="0"
+					frameBorder="0"
 					style={{ border: 0 }}
-					allowfullscreen
+					allowFullScreen
 				/>
 			</section>
 			<section id="form" className="our-services-section form-section">
@@ -136,10 +131,15 @@ const Contact = () => {
 				.atakoy-towers-img-div {
 					background-image: url("/atakoy-towers/atakoy-towers-horizontal.jpg");
 					width: 100%;
-					height: 350px;
+					height: 370px;
 					background-repeat: no-repeat;
 					background-size: cover;
-					background-position: left 20% bottom 50%;
+					background-position: left 20% bottom 70%;
+				}
+
+				.contact-us-section-section {
+					width: 100%;
+					padding: 2rem 0;
 				}
 
 				.our-services-header {
@@ -192,10 +192,6 @@ const Contact = () => {
 					}
 				}
 
-				.contact-us-section-section {
-					width: 100%;
-					padding: 2rem 0;
-				}
 				.contact-us-section {
 					display: flex;
 					margin: 0 auto;
@@ -231,37 +227,31 @@ const Contact = () => {
 					font-size: 3rem;
 				}
 
-				.contact-us-right-div p {
+				.contact-us-location-paragraph {
+					margin-left: 4.8rem;
+					max-width: 500px;
+				}
+
+				.paragraph {
 					font-size: 2rem;
 					color: ${sTheme.palette.primary.main};
 					margin-top: 1rem;
 				}
 
-				.contact-us-right-div p.contact-us-location-paragraph {
-					margin-top: .5rem;
-				}
-
-				.contact-us-right-div p.contact-us-clinic-name {
-					margin-top: 0;
-				}
-
 				.contact-link {
 					text-decoration: none;
 					cursor: pointer;
+					font-size: 2rem;
+					color: ${sTheme.palette.primary.main};
 				}
 
 				.contact-link:link,
 				.contact-link:visited {
 					text-decoration: none;
-					color: inherit;
+					color: ${sTheme.palette.primary.main};
 				}
 				.contact-link:hover {
 					color: ${sTheme.palette.third.dark};
-				}
-
-				.contact-us-location-paragraph {
-					margin-left: 4.5rem;
-					max-width: 500px;
 				}
 
 				@media (max-width: ${sizes.sizes.xl}) {
@@ -282,7 +272,7 @@ const Contact = () => {
 					.contact-us-small-header {
 						font-size: 2.5rem;
 					}
-					.contact-us-right-div p {
+					.paragraph {
 						font-size: 1.6rem;
 					}
 				}

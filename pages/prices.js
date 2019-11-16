@@ -95,7 +95,7 @@ const Prices = () => {
 						color="primary"
 						className={clsx(classes.regularButton, classes.pricesButton)}
 					>
-						Chat Now
+						Chat&nbsp;Now
 					</Button>
 				</div>
 			</section>
@@ -122,7 +122,7 @@ const Prices = () => {
 						color="primary"
 						className={clsx(classes.regularButton, classes.pricesButton)}
 					>
-						Chat Now
+						Chat&nbsp;Now
 					</Button>
 				</div>
 			</section>
@@ -146,6 +146,7 @@ const Prices = () => {
 			<style jsx>{`
 				.root {
 					min-height: calc(100vh - 400px);
+					overflow-x: hidden;
 				}
 				.our-prices-section {
 					display: flex;
@@ -253,14 +254,8 @@ const Prices = () => {
 					}
 				}
 
-				@media (max-width: ${sizes.sizes.sm}) {
-					.cost-calculator-wrapper {
-						width: 100%;
-					}
-				}
-
 				.form-wrapper {
-					width: 100%;
+					width: 97%;
 				}
 			`}</style>
 		</div>

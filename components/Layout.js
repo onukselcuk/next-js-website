@@ -18,7 +18,8 @@ const useStyles = makeStyles((theme) => ({
 		},
 		body: {
 			fontSize: "1.6rem",
-			fontWeight: 400
+			fontWeight: 400,
+			overflowX: "hidden"
 		},
 		".colorPath": {
 			transition: "all 200ms"

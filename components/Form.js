@@ -297,7 +297,12 @@ const useStyles = makeStyles((theme) => ({
 	captchaWrapper: {
 		position: "relative",
 		margin: ".5rem .8rem .5rem .8rem",
-		alignSelf: "center"
+		alignSelf: "center",
+		[sizes.down("xxxs")]: {
+			transform: "scale(0.8)",
+			marginLeft: "-2.2rem",
+			marginTop: "-.6rem"
+		}
 	},
 	formSpinnerWrapper: {
 		position: "absolute",
