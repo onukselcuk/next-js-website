@@ -881,7 +881,7 @@ const Index = (props) => {
 									elevation={reviewPaperElevation}
 								>
 									<div className="reviewer-image-wrapper">
-										<a target="_blank" href={cur.reviewUrl}>
+										<a target="_blank" rel="noopener noreferrer" href={cur.reviewUrl}>
 											<img className="reviewer-image" src={cur.reviewer.profilePhotoUrl} alt="" />
 											<SvgIcon className={classes.googleSvgIcon} viewBox="0 0 533.5 544.3">
 												<GoogleLogo />
@@ -922,6 +922,7 @@ const Index = (props) => {
 					</Button>
 					<a
 						target="_blank"
+						rel="noopener noreferrer"
 						href="https://www.google.com/maps/place/%C4%B0stanbul+Smile+Center+A%C4%9F%C4%B1z+ve+Di%C5%9F+Sa%C4%9Fl%C4%B1%C4%9F%C4%B1+Poliklini%C4%9Fi/@40.9914076,28.8309331,17z/data=!4m5!3m4!1s0x14caa3147e2cba65:0xb6eaeab3d94bfd80!8m2!3d40.9914441!4d28.8341947"
 						className="clinic-intro-link"
 					>

@@ -57,6 +57,7 @@ const Contact = () => {
 							<a
 								className="contact-link contact-link-location"
 								target="_blank"
+								rel="noopener noreferrer"
 								href="https://www.google.com/maps/place/%C4%B0stanbul+Smile+Center+A%C4%9F%C4%B1z+ve+Di%C5%9F+Sa%C4%9Fl%C4%B1%C4%9F%C4%B1+Poliklini%C4%9Fi/@40.9914481,28.832006,17z/data=!3m1!4b1!4m5!3m4!1s0x14caa3147e2cba65:0xb6eaeab3d94bfd80!8m2!3d40.9914441!4d28.8341947"
 							>
 								Istanbul Smile Center Ağız ve Diş Sağlığı Kliniği<br />Ataköy 7-8-9-10. Kısım Mah.
@@ -78,6 +79,7 @@ const Contact = () => {
 							<FontAwesomeIcon className={classes.fontAwesomeIconSmall} icon={faWhatsapp} />{" "}
 							<a
 								target="_blank"
+								rel="noopener noreferrer"
 								href="https://wa.me/905309492470?text=Hi+Istanbul+Smile+Center.+I+have+a+question."
 								className="contact-link"
 							>
@@ -93,7 +95,12 @@ const Contact = () => {
 
 						<p className="paragraph">
 							<FontAwesomeIcon className={classes.fontAwesomeIconSmall} icon={faAt} />{" "}
-							<a target="_blank" href="mailto:contact@istanbulsmilecenter.com" className="contact-link">
+							<a
+								target="_blank"
+								rel="noopener noreferrer"
+								href="mailto:contact@istanbulsmilecenter.com"
+								className="contact-link"
+							>
 								Email: contact@istanbulsmilecenter.com
 							</a>
 						</p>

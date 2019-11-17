@@ -201,7 +201,12 @@ export default () => {
 							<div className={classes.fontAwesomeIconWrapper}>
 								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faChrome} />
 							</div>
-							<a target="_blank" href="https://istanbulsmilecenter.com" className={classes.footerLink}>
+							<a
+								target="_blank"
+								rel="noopener noreferrer"
+								href="https://istanbulsmilecenter.com"
+								className={classes.footerLink}
+							>
 								Our Turkish Website
 							</a>
 						</div>
@@ -290,6 +295,7 @@ export default () => {
 						</div>
 						<a
 							target="_blank"
+							rel="noopener noreferrer"
 							href="https://www.google.com/maps/place/%C4%B0stanbul+Smile+Center+A%C4%9F%C4%B1z+ve+Di%C5%9F+Sa%C4%9Fl%C4%B1%C4%9F%C4%B1+Poliklini%C4%9Fi/@40.9914481,28.832006,17z/data=!3m1!4b1!4m5!3m4!1s0x14caa3147e2cba65:0xb6eaeab3d94bfd80!8m2!3d40.9914441!4d28.8341947"
 							className={clsx(classes.footerLink, classes.addressLink)}
 						>
@@ -308,6 +314,7 @@ export default () => {
 
 						<a
 							target="_blank"
+							rel="noopener noreferrer"
 							href="https://wa.me/905309492470?text=Hi+Istanbul+Smile+Center.+I+have+a+question."
 							className={clsx(classes.footerLink, classes.addressLink)}
 						>
@@ -319,6 +326,7 @@ export default () => {
 
 						<a
 							target="_blank"
+							rel="noopener noreferrer"
 							href="mailto:contact@istanbulsmilecenter.com"
 							className={clsx(classes.footerLink, classes.addressLink)}
 						>

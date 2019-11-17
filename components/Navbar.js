@@ -245,13 +245,19 @@ export default () => {
 			<div className={classes.topBar}>
 				<div className={classes.topBarWrapper}>
 					<div className={classes.languageSelections}>
-						<a target="_blank" href="https://www.istanbulsmilecenter.com" className={classes.topBarLink} />
+						<a
+							target="_blank"
+							rel="noopener noreferrer"
+							href="https://www.istanbulsmilecenter.com"
+							className={classes.topBarLink}
+						/>
 					</div>
 					<div className={classes.topBarContacts}>
 						<WhatsAppIcon />
 						<p className={classes.topBarText}>WhatsApp</p>
 						<a
 							target="_blank"
+							rel="noopener noreferrer"
 							href="https://wa.me/905309492470?text=Hi+Istanbul+Smile+Center.+I+have+a+question."
 							className={classes.topBarLink}
 						>
