@@ -295,11 +295,18 @@ const Privileges = () => {
 					}
 
 					.privilege-vip-img-div {
-						background-image: url("/privileges-page/stock-vector-vip-glass-label-with-golden-crown-and-frame-on-a-gray-pattern-background-premium-design-luxury-1467750287.jpg");
-						height: 500px;
+						background-image: url("/privileges-page/vip-intro-img.jpg");
+						height: 62vh;
 						background-repeat: no-repeat;
 						background-size: cover;
-						background-position: bottom 60% right 50%;
+						background-position: bottom 63% right 50%;
+						clip-path: ellipse(100% 100% at 50% 0%);
+					}
+
+					@media (max-width: ${sizes.sizes.mdsm}) {
+						.your-privileges-section {
+							background-color: ${sTheme.palette.secondary.main};
+						}
 					}
 
 					.your-privileges-header-section {
@@ -379,31 +386,31 @@ const Privileges = () => {
 					}
 
 					.privilege-image-1 {
-						background-image: url("/privileges-page/stock-photo-contact-us-businesswoman-work-by-modern-devices-she-uses-digital-tablet-computer-mobile-1214757019.jpg");
+						background-image: url("/privileges-page/contact-us-img.jpg");
 					}
 
 					.privilege-image-2 {
-						background-image: url("/privileges-page/stock-photo-video-chat-with-patient-by-doctor-1145467625.jpg");
+						background-image: url("/privileges-page/video-call-img.jpg");
 						background-position: right 50% bottom 55%;
 					}
 
 					.privilege-image-3 {
-						background-image: url("/privileges-page/stock-photo-regular-medical-examination-concept-stethoscope-on-calendar-page-219952843.jpg");
+						background-image: url("/privileges-page/schedule-an-appointment-img.jpg");
 					}
 
 					.privilege-image-4 {
-						background-image: url("/privileges-page/stock-photo-young-traveler-planning-vacation-trip-and-searching-information-or-booking-hotel-on-laptop-travel-1334566982.jpg");
+						background-image: url("/privileges-page/hotel-booking-img.jpg");
 					}
 
 					.privilege-image-5 {
-						background-image: url("/privileges-page/istanbul-arrival-collage.jpg");
+						background-image: url("/privileges-page/istanbul-arrival-collage-img.jpg");
 						background-color: ${sTheme.palette.secondary.main};
 						background-position: center;
 					}
 
 					.privilege-image-6 {
-						background-image: url("/privileges-page/stock-photo-dentist-examining-a-patient-s-teeth-in-the-dentist-364820018.jpg");
-						background-position: right 25% bottom 40%;
+						background-image: url("/privileges-page/your-treatment-img.jpg");
+						background-position: right 10% bottom 40%;
 					}
 
 					.privilege-image-7 {

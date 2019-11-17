@@ -70,8 +70,8 @@ const Prices = () => {
 		<div className="root">
 			<Head>
 				<title key="title">
-					Prices & Cost Calculator - Transparent Pricing | Istanbul Smile Center | Let's Make Your Smile
-					Perfect
+					Dental Prices & Cost Calculator - Transparent Pricing | Istanbul Smile Center | Let's Make Your
+					Smile Perfect
 				</title>
 			</Head>
 			<section className="our-prices-section">
@@ -164,12 +164,13 @@ const Prices = () => {
 				}
 
 				.calculator-img-div {
-					background-image: url("/stock-photo-calculator-near-model-tooth-over-white-desk-against-gray-wall-1516326851.jpg");
-					height: 500px;
+					background-image: url("/prices-page/teeth-and-calculator-img.jpg");
+					height: 60vh;
 					width: 100%;
 					background-repeat: no-repeat;
-					background-size: contain;
-					background-position: center;
+					background-size: cover;
+					background-position: bottom 50% right 60%;
+					clip-path: ellipse(100% 100% at 50% 0%);
 				}
 				.our-prices-header {
 					display: flex;

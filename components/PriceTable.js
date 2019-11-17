@@ -53,7 +53,10 @@ const useStyles = makeStyles((theme) => ({
 		width: "100%",
 		marginTop: theme.spacing(3),
 		overflowX: "auto",
-		marginRight: "1rem"
+		marginRight: "1rem",
+		[sizes.down("mdsm")]: {
+			marginRight: 0
+		}
 	},
 
 	priceTableWrapper: {
