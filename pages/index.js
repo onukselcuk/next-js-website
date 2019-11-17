@@ -40,16 +40,6 @@ import MobileDetect from "mobile-detect";
 import GoogleLogoFull from "../components/logos-icons/GoogleLogoFull";
 import GoogleMyBusinessLogo from "../components/logos-icons/GoogleMyBusinessLogo";
 import { useState } from "react";
-import patientImg from "../public/patient-pictures/20141115_131428_500px.jpg";
-import patientImg2 from "../public/patient-pictures/20150530_205855_500px.jpg";
-import patientImg3 from "../public/patient-pictures/20160306_131956_500px.jpg";
-import patientImg4 from "../public/patient-pictures/20160529_151449_500px.jpg";
-import patientImg5 from "../public/patient-pictures/20180421_175128_500px.jpg";
-import patientImg6 from "../public/patient-pictures/20181018_194039_500px.jpg";
-import patientImg7 from "../public/patient-pictures/20190405_204518_500px.jpg";
-import patientImg8 from "../public/patient-pictures/DSC_4193_500px.jpg";
-import patientImg9 from "../public/patient-pictures/DSC_5209_500px.jpg";
-import patientImg10 from "../public/patient-pictures/DSC_5545_500px.jpg";
 import sizes from "../src/sizes";
 
 const useStyles = makeStyles((theme) => ({
@@ -151,7 +141,8 @@ const useStyles = makeStyles((theme) => ({
 		padding: "1rem",
 		border: `1px solid ${theme.palette.primary.main}`,
 		transition: "all 200ms ease-in-out",
-		cursor: "pointer"
+		cursor: "pointer",
+		backgroundColor: theme.palette.secondary.alternative2
 	},
 	servicePaperCard: {
 		minWidth: "12rem",
@@ -787,34 +778,31 @@ const Index = (props) => {
 						itemClass="carousel-item-padding-40-px"
 					>
 						<div className="carouselPaper-item">
-							<img className={classes.patientImg} src={patientImg} alt="" />
+							<img className={classes.patientImg} src="/patient-pictures/patient-1-img.jpg" alt="" />
 						</div>
 						<div className="carouselPaper-item">
-							<img className={classes.patientImg} src={patientImg2} alt="" />
+							<img className={classes.patientImg} src="/patient-pictures/patient-2-img.jpg" alt="" />
 						</div>
 						<div className="carouselPaper-item">
-							<img className={classes.patientImg} src={patientImg3} alt="" />
+							<img className={classes.patientImg} src="/patient-pictures/patient-3-img.jpg" alt="" />
 						</div>
 						<div className="carouselPaper-item">
-							<img className={classes.patientImg} src={patientImg4} alt="" />
+							<img className={classes.patientImg} src="/patient-pictures/patient-4-img.jpg" alt="" />
 						</div>
 						<div className="carouselPaper-item">
-							<img className={classes.patientImg} src={patientImg5} alt="" />
+							<img className={classes.patientImg} src="/patient-pictures/patient-5-img.jpg" alt="" />
 						</div>
 						<div className="carouselPaper-item">
-							<img className={classes.patientImg} src={patientImg6} alt="" />
+							<img className={classes.patientImg} src="/patient-pictures/patient-6-img.jpg" alt="" />
 						</div>
 						<div className="carouselPaper-item">
-							<img className={classes.patientImg} src={patientImg7} alt="" />
+							<img className={classes.patientImg} src="/patient-pictures/patient-7-img.jpg" alt="" />
 						</div>
 						<div className="carouselPaper-item">
-							<img className={classes.patientImg} src={patientImg8} alt="" />
+							<img className={classes.patientImg} src="/patient-pictures/patient-8-img.jpg" alt="" />
 						</div>
 						<div className="carouselPaper-item">
-							<img className={classes.patientImg} src={patientImg9} alt="" />
-						</div>
-						<div className="carouselPaper-item">
-							<img className={classes.patientImg} src={patientImg10} alt="" />
+							<img className={classes.patientImg} src="/patient-pictures/patient-9-img.jpg" alt="" />
 						</div>
 					</Carousel>
 				</div>
@@ -1334,6 +1322,12 @@ const Index = (props) => {
 					font-size: 7rem;
 				}
 
+				@media (min-width: ${sizes.sizes.fullhd}) {
+					.hero-image-div {
+						background-position: right 25% bottom 60%;
+					}
+				}
+
 				@media (max-width: ${sizes.sizes.xl}) {
 					.hero-image-perfect-wrapper {
 						left: 5%;
@@ -1613,7 +1607,6 @@ const Index = (props) => {
 					align-items: center;
 					margin-bottom: 2rem;
 					padding: 6rem 0;
-					background-color: ${sTheme.palette.secondary.main};
 				}
 				.our-doctors-wrapper {
 					display: flex;
@@ -1697,7 +1690,6 @@ const Index = (props) => {
 					}
 				}
 				.reviews-section {
-					background-color: ${sTheme.palette.secondary.main};
 					padding-top: 2rem;
 					padding-bottom: 4rem;
 				}
@@ -1853,7 +1845,6 @@ const Index = (props) => {
 					font-size: 1.7rem;
 				}
 				.perfect-smile-gallery {
-					background-color: ${sTheme.palette.secondary.main};
 				}
 				.perfect-smile-header {
 					padding-top: 4rem;

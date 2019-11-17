@@ -1,5 +1,10 @@
 export default {
-	up () {},
+	up (size) {
+		const sizes = {
+			fullhd: "120em" //1920px
+		};
+		return `@media (min-width:${sizes[size]})`;
+	},
 	down (size) {
 		const sizes = {
 			xxxs: "26.875em", //430px
@@ -21,6 +26,7 @@ export default {
 		mdsm: "59.375em", // 950px
 		md: "68.75em", //1100px
 		lg: "82.5em", //1320px
-		xl: "93.75em" //1500px
+		xl: "93.75em", //1500px
+		fullhd: "120em" //1920px
 	}
 };

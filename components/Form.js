@@ -112,6 +112,7 @@ const useStyles = makeStyles((theme) => ({
 		padding: "20px 20px",
 		margin: "2rem auto",
 		border: `1px solid ${theme.palette.primary.main}`,
+		backgroundColor: theme.palette.secondary.alternative2,
 		borderRadius: "20px",
 		position: "relative",
 		overflow: "hidden",

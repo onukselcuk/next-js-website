@@ -70,6 +70,7 @@ const Prices = () => {
 				</title>
 			</Head>
 			<section className="our-prices-section">
+				<div className="calculator-img-div" />
 				<div className="our-prices-header">
 					<h2 className="our-prices-header-text">Our Prices</h2>
 					<p className="our-prices-header-paragraph-text">
@@ -146,14 +147,22 @@ const Prices = () => {
 			<style jsx>{`
 				.root {
 					min-height: calc(100vh - 400px);
-					overflow-x: hidden;
 				}
 				.our-prices-section {
 					display: flex;
 					justify-content: center;
 					flex-wrap: wrap;
 					margin-top: -5px;
-					padding: 4rem 0;
+					padding-bottom: 4rem;
+				}
+
+				.calculator-img-div {
+					background-image: url("/stock-photo-calculator-near-model-tooth-over-white-desk-against-gray-wall-1516326851.jpg");
+					height: 500px;
+					width: 100%;
+					background-repeat: no-repeat;
+					background-size: contain;
+					background-position: center;
 				}
 				.our-prices-header {
 					display: flex;
@@ -230,7 +239,6 @@ const Prices = () => {
 				}
 
 				.cost-calculator-section {
-					background-color: ${sTheme.palette.secondary.main};
 				}
 				.cost-calculator-wrapper {
 					width: 70%;

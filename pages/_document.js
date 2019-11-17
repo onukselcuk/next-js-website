@@ -8,7 +8,6 @@ import React from "react";
 import Document, { Head, Main, NextScript } from "next/document";
 import { ServerStyleSheets } from "@material-ui/styles";
 import theme from "../src/theme";
-import favicon from "../public/favicon/favicon.ico";
 
 class MyDocument extends Document {
 	// static async getInitialProps (ctx) {
@@ -31,7 +30,7 @@ class MyDocument extends Document {
 						href="https://fonts.googleapis.com/css?family=Laila:400,700|Nunito:400,700&display=swap"
 						rel="stylesheet"
 					/>
-					<link rel="shortcut icon" href={favicon} />
+					<link rel="icon" type="image/png" href="/favicon/favicon.png" />
 				</Head>
 				<body>
 					<Main />

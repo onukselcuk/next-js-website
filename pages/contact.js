@@ -243,6 +243,7 @@ const Contact = () => {
 					cursor: pointer;
 					font-size: 2rem;
 					color: ${sTheme.palette.primary.main};
+					transition: all 250ms ease-in-out;
 				}
 
 				.contact-link:link,

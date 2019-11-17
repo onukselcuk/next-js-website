@@ -56,6 +56,7 @@ const Privileges = () => {
 				</title>
 			</Head>
 			<section className="your-privileges-section">
+				<div className="privilege-vip-img-div" />
 				<section className="your-privileges-header-section">
 					<div className="your-privileges-header-wrapper">
 						<h2 className="your-privileges-header-text">Patient Privileges and Itinerary</h2>
@@ -248,6 +249,15 @@ const Privileges = () => {
 					.your-privileges-section {
 						margin-bottom: 2rem;
 					}
+
+					.privilege-vip-img-div {
+						background-image: url("/privileges-page/stock-vector-vip-glass-label-with-golden-crown-and-frame-on-a-gray-pattern-background-premium-design-luxury-1467750287.jpg");
+						height: 500px;
+						background-repeat: no-repeat;
+						background-size: cover;
+						background-position: bottom 60% right 50%;
+					}
+
 					.your-privileges-header-section {
 						display: flex;
 						justify-content: center;
