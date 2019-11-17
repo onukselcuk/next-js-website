@@ -477,6 +477,10 @@ export default function CustomizedExpansionPanels ({ currentCurrency, handleCurr
 		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 	}
 
+	const handleChat = () => {
+		Tawk_API.maximize();
+	};
+
 	return (
 		<div>
 			<CurrencySelectorButtonGroup
@@ -937,6 +941,7 @@ export default function CustomizedExpansionPanels ({ currentCurrency, handleCurr
 								variant="contained"
 								color="primary"
 								className={clsx(classes.regularButton, classes.pricesButton)}
+								onClick={handleChat}
 							>
 								<FontAwesomeIcon
 									className={classes.fontAwesomeIcon}

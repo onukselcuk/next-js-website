@@ -61,6 +61,11 @@ const Prices = () => {
 		setCurrentCurrency(e.currentTarget.name);
 		setCurrentSign(e.currentTarget.dataset.sign);
 	};
+
+	const handleChat = () => {
+		Tawk_API.maximize();
+	};
+
 	return (
 		<div className="root">
 			<Head>
@@ -95,6 +100,7 @@ const Prices = () => {
 						variant="contained"
 						color="primary"
 						className={clsx(classes.regularButton, classes.pricesButton)}
+						onClick={handleChat}
 					>
 						Chat&nbsp;Now
 					</Button>
@@ -122,6 +128,7 @@ const Prices = () => {
 						variant="contained"
 						color="primary"
 						className={clsx(classes.regularButton, classes.pricesButton)}
+						onClick={handleChat}
 					>
 						Chat&nbsp;Now
 					</Button>

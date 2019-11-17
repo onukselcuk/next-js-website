@@ -28,23 +28,24 @@ app.prepare().then(() => {
 	// 	app.render(req, res, "/en");
 	// });
 
-	server.get("/get-reviews", (req, res) => {
-		async function main () {
-			const oauth2Client = new google.auth.OAuth2(process.env.CLIENT_ID, process.env.CLIENT_SECRET);
+	// server.get("/get-reviews", (req, res) => {
+	// 	async function main () {
+	// 		const oauth2Client = new google.auth.OAuth2(process.env.CLIENT_ID, process.env.CLIENT_SECRET);
 
-			oauth2Client.setCredentials({
-				code: process.env.AUTHORIZATION_CODE,
-				refresh_token: process.env.REFRESH_TOKEN
-			});
-			const url = `https://mybusiness.googleapis.com/v4/accounts/110663858472950433758/locations/6251002188613810282/reviews?pageSize=12`;
+	// 		oauth2Client.setCredentials({
+	// 			code: process.env.AUTHORIZATION_CODE,
+	// 			refresh_token: process.env.REFRESH_TOKEN
+	// 		});
+	// 		// const url = `https://mybusiness.googleapis.com/v4/accounts/110663858472950433758/locations/6251002188613810282/reviews?pageSize=12`;
+	// 		const url = `https://mybusiness.googleapis.com/v4/accounts/110663858472950433758/locations/6251002188613810282/reviews`;
 
-			const response = await oauth2Client.request({ url });
+	// 		const response = await oauth2Client.request({ url });
 
-			res.send(response.data);
-		}
+	// 		res.send(response.data);
+	// 	}
 
-		main().catch(console.error);
-	});
+	// 	main().catch(console.error);
+	// });
 
 	server.post("/signed-url-put-object", async (req, res) => {
 		if (
@@ -110,6 +111,8 @@ app.prepare().then(() => {
 				await mailerToUs(req.body);
 
 				res.send({ success: true });
+			} else {
+				return res.send({ success: false });
 			}
 		}
 	});

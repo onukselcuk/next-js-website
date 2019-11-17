@@ -48,6 +48,10 @@ const useStyles = makeStyles((theme) => ({
 const Privileges = () => {
 	const classes = useStyles();
 
+	const handleChat = () => {
+		Tawk_API.maximize();
+	};
+
 	return (
 		<React.Fragment>
 			<Head>
@@ -80,8 +84,13 @@ const Privileges = () => {
 								and a treatment plan. You can also request a video call consultation.
 							</p>
 							<div className="privilege-action-button-div">
-								<Button variant="contained" color="primary" className={classes.privilegeActionButton}>
-									Chat Now
+								<Button
+									onClick={handleChat}
+									variant="contained"
+									color="primary"
+									className={classes.privilegeActionButton}
+								>
+									Chat&nbsp;Now
 								</Button>
 							</div>
 						</div>
@@ -100,8 +109,13 @@ const Privileges = () => {
 								quote.
 							</p>
 							<div className="privilege-action-button-div">
-								<Button variant="contained" color="primary" className={classes.privilegeActionButton}>
-									Chat Now
+								<Button
+									onClick={handleChat}
+									variant="contained"
+									color="primary"
+									className={classes.privilegeActionButton}
+								>
+									Chat&nbsp;Now
 								</Button>
 							</div>
 						</div>
@@ -120,8 +134,13 @@ const Privileges = () => {
 								you request or maybe the next day but not further. We value our patient's time.
 							</p>
 							<div className="privilege-action-button-div">
-								<Button variant="contained" color="primary" className={classes.privilegeActionButton}>
-									Chat Now
+								<Button
+									onClick={handleChat}
+									variant="contained"
+									color="primary"
+									className={classes.privilegeActionButton}
+								>
+									Chat&nbsp;Now
 								</Button>
 							</div>
 						</div>
@@ -142,8 +161,13 @@ const Privileges = () => {
 								prefer yourself.
 							</p>
 							<div className="privilege-action-button-div">
-								<Button variant="contained" color="primary" className={classes.privilegeActionButton}>
-									Chat Now
+								<Button
+									onClick={handleChat}
+									variant="contained"
+									color="primary"
+									className={classes.privilegeActionButton}
+								>
+									Chat&nbsp;Now
 								</Button>
 							</div>
 						</div>
@@ -163,8 +187,13 @@ const Privileges = () => {
 								transportation to arrive at your hotel.
 							</p>
 							<div className="privilege-action-button-div">
-								<Button variant="contained" color="primary" className={classes.privilegeActionButton}>
-									Chat Now
+								<Button
+									onClick={handleChat}
+									variant="contained"
+									color="primary"
+									className={classes.privilegeActionButton}
+								>
+									Chat&nbsp;Now
 								</Button>
 							</div>
 						</div>
@@ -184,8 +213,13 @@ const Privileges = () => {
 								appointment, you will be picked up from and taken back to your hotel.
 							</p>
 							<div className="privilege-action-button-div">
-								<Button variant="contained" color="primary" className={classes.privilegeActionButton}>
-									Chat Now
+								<Button
+									onClick={handleChat}
+									variant="contained"
+									color="primary"
+									className={classes.privilegeActionButton}
+								>
+									Chat&nbsp;Now
 								</Button>
 							</div>
 						</div>
@@ -202,8 +236,13 @@ const Privileges = () => {
 								the oldest and most historical cities in the world.
 							</p>
 							<div className="privilege-action-button-div">
-								<Button variant="contained" color="primary" className={classes.privilegeActionButton}>
-									Chat Now
+								<Button
+									onClick={handleChat}
+									variant="contained"
+									color="primary"
+									className={classes.privilegeActionButton}
+								>
+									Chat&nbsp;Now
 								</Button>
 							</div>
 						</div>
@@ -221,8 +260,13 @@ const Privileges = () => {
 								didn't request a video call), we will send you a detailed treatment plan and a quote.
 							</p>
 							<div className="privilege-action-button-div">
-								<Button variant="contained" color="primary" className={classes.privilegeActionButton}>
-									Chat Now
+								<Button
+									onClick={handleChat}
+									variant="contained"
+									color="primary"
+									className={classes.privilegeActionButton}
+								>
+									Chat&nbsp;Now
 								</Button>
 							</div>
 						</div>

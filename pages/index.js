@@ -33,7 +33,6 @@ import doctorImg2 from "../public/stock-photo-beautiful-family-of-mother-and-dau
 import IstanbulSilhouette from "../components/logos-icons/IstanbulSilhouette";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import reviewerImg from "../public/IMG_01134212.png";
 import StarIcon from "@material-ui/icons/Star";
 import GoogleLogo from "../components/logos-icons/GoogleLogo";
 import MobileDetect from "mobile-detect";
@@ -41,6 +40,8 @@ import GoogleLogoFull from "../components/logos-icons/GoogleLogoFull";
 import GoogleMyBusinessLogo from "../components/logos-icons/GoogleMyBusinessLogo";
 import { useState } from "react";
 import sizes from "../src/sizes";
+import reviews from "../src/reviews";
+import moment from "moment";
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -491,7 +492,7 @@ const Index = (props) => {
 								className={classes.regularButton}
 								onClick={handleChat}
 							>
-								Chat Now
+								Chat&nbsp;Now
 							</Button>
 							<Link href="/about">
 								<a className="clinic-intro-link">Learn more about us</a>
@@ -670,7 +671,7 @@ const Index = (props) => {
 						className={clsx(classes.regularButton, classes.treatmentsButton)}
 						onClick={handleChat}
 					>
-						Chat Now
+						Chat&nbsp;Now
 					</Button>
 					<Link href="/treatments">
 						<a className="clinic-intro-link">See all treatments</a>
@@ -871,303 +872,43 @@ const Index = (props) => {
 						dotListClass="custom-dot-list-style"
 						itemClass="carousel-item-padding-40-px"
 					>
-						<div className="carouselPaper-item">
-							<Paper
-								className={classes.reviewPaper}
-								onMouseOver={handleReviewPaperAutoPlay}
-								onMouseOut={handleReviewPaperAutoPlay}
-								elevation={reviewPaperElevation}
-							>
-								<div className="reviewer-image-wrapper">
-									<a
-										target="_blank"
-										href="https://www.google.com/maps/place/%C4%B0stanbul+Smile+Center+A%C4%9F%C4%B1z+ve+Di%C5%9F+Sa%C4%9Fl%C4%B1%C4%9F%C4%B1+Poliklini%C4%9Fi/@40.9914481,28.832006,17z/data=!4m7!3m6!1s0x14caa3147e2cba65:0xb6eaeab3d94bfd80!8m2!3d40.9914441!4d28.8341947!9m1!1b1"
-									>
-										<img className="reviewer-image" src={reviewerImg} alt="" />
-										<SvgIcon className={classes.googleSvgIcon} viewBox="0 0 533.5 544.3">
-											<GoogleLogo />
-										</SvgIcon>
-									</a>
-								</div>
-								<div className="reviewer-name-wrapper">
-									<h3 className="reviewer-name">Roger Lewis</h3>
-								</div>
-								<div className="review-date-wrapper">
-									<span className="review-date">2 months ago</span>
-								</div>
-								<div className="stars-wrapper">
-									<StarIcon className={classes.star} />
-									<StarIcon className={classes.star} />
-									<StarIcon className={classes.star} />
-									<StarIcon className={classes.star} />
-									<StarIcon className={classes.star} />
-								</div>
-								<div className="review-wrapper">
-									<p className="review">
-										Very competitive price compared to my local implant practice, in fact it was
-										almost half the price ! But the quality of the product used, or execution of the
-										surgery are uncompromised ! Adam my implant surgeon was Very professional and
-										highly skilled, would recommend this practice to anyone thinking of having
-										implants done !!
-									</p>
-								</div>
-							</Paper>
-						</div>
-						<div className="carouselPaper-item">
-							<Paper
-								onMouseOver={handleReviewPaperAutoPlay}
-								onMouseOut={handleReviewPaperAutoPlay}
-								className={classes.reviewPaper}
-								elevation={reviewPaperElevation}
-							>
-								<div className="reviewer-image-wrapper">
-									<a
-										target="_blank"
-										href="https://www.google.com/maps/place/%C4%B0stanbul+Smile+Center+A%C4%9F%C4%B1z+ve+Di%C5%9F+Sa%C4%9Fl%C4%B1%C4%9F%C4%B1+Poliklini%C4%9Fi/@40.9914481,28.832006,17z/data=!4m7!3m6!1s0x14caa3147e2cba65:0xb6eaeab3d94bfd80!8m2!3d40.9914441!4d28.8341947!9m1!1b1"
-									>
-										<img className="reviewer-image" src={reviewerImg} alt="" />
-										<SvgIcon className={classes.googleSvgIcon} viewBox="0 0 533.5 544.3">
-											<GoogleLogo />
-										</SvgIcon>
-									</a>
-								</div>
-								<div className="reviewer-name-wrapper">
-									<h3 className="reviewer-name">Roger Lewis</h3>
-								</div>
-								<div className="review-date-wrapper">
-									<span className="review-date">2 months ago</span>
-								</div>
-								<div className="stars-wrapper">
-									<StarIcon className={classes.star} />
-									<StarIcon className={classes.star} />
-									<StarIcon className={classes.star} />
-									<StarIcon className={classes.star} />
-									<StarIcon className={classes.star} />
-								</div>
-								<div className="review-wrapper">
-									<p className="review">
-										Very competitive price compared to my local implant practice, in fact it was
-										almost half the price ! But the quality of the product used, or execution of the
-										surgery are uncompromised ! Adam my implant surgeon was Very professional and
-										highly skilled, would recommend this practice to anyone thinking of having
-										implants done !! Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
-										alias quasi est provident perspiciatis nesciunt ullam cumque, nostrum sequi
-										deserunt harum, sint laudantium accusantium eveniet delectus porro magni ipsa
-										asperiores.
-									</p>
-								</div>
-							</Paper>
-						</div>
-						<div className="carouselPaper-item">
-							<Paper
-								onMouseOver={handleReviewPaperAutoPlay}
-								onMouseOut={handleReviewPaperAutoPlay}
-								className={classes.reviewPaper}
-								elevation={reviewPaperElevation}
-							>
-								<div className="reviewer-image-wrapper">
-									<a
-										target="_blank"
-										href="https://www.google.com/maps/place/%C4%B0stanbul+Smile+Center+A%C4%9F%C4%B1z+ve+Di%C5%9F+Sa%C4%9Fl%C4%B1%C4%9F%C4%B1+Poliklini%C4%9Fi/@40.9914481,28.832006,17z/data=!4m7!3m6!1s0x14caa3147e2cba65:0xb6eaeab3d94bfd80!8m2!3d40.9914441!4d28.8341947!9m1!1b1"
-									>
-										<img className="reviewer-image" src={reviewerImg} alt="" />
-										<SvgIcon className={classes.googleSvgIcon} viewBox="0 0 533.5 544.3">
-											<GoogleLogo />
-										</SvgIcon>
-									</a>
-								</div>
-								<div className="reviewer-name-wrapper">
-									<h3 className="reviewer-name">Roger Lewis</h3>
-								</div>
-								<div className="review-date-wrapper">
-									<span className="review-date">2 months ago</span>
-								</div>
-								<div className="stars-wrapper">
-									<StarIcon className={classes.star} />
-									<StarIcon className={classes.star} />
-									<StarIcon className={classes.star} />
-									<StarIcon className={classes.star} />
-									<StarIcon className={classes.star} />
-								</div>
-								<div className="review-wrapper">
-									<p className="review">
-										Very competitive price compared to my local implant practice, in fact it was
-										almost half the price ! But the quality of the product used, or execution of the
-										surgery are uncompromised ! Adam my implant surgeon was Very professional and
-										highly skilled, would recommend this practice to anyone thinking of having
-										implants done !!
-									</p>
-								</div>
-							</Paper>
-						</div>
-						<div className="carouselPaper-item">
-							<Paper
-								onMouseOver={handleReviewPaperAutoPlay}
-								onMouseOut={handleReviewPaperAutoPlay}
-								className={classes.reviewPaper}
-								elevation={reviewPaperElevation}
-							>
-								<div className="reviewer-image-wrapper">
-									<a
-										target="_blank"
-										href="https://www.google.com/maps/place/%C4%B0stanbul+Smile+Center+A%C4%9F%C4%B1z+ve+Di%C5%9F+Sa%C4%9Fl%C4%B1%C4%9F%C4%B1+Poliklini%C4%9Fi/@40.9914481,28.832006,17z/data=!4m7!3m6!1s0x14caa3147e2cba65:0xb6eaeab3d94bfd80!8m2!3d40.9914441!4d28.8341947!9m1!1b1"
-									>
-										<img className="reviewer-image" src={reviewerImg} alt="" />
-										<SvgIcon className={classes.googleSvgIcon} viewBox="0 0 533.5 544.3">
-											<GoogleLogo />
-										</SvgIcon>
-									</a>
-								</div>
-								<div className="reviewer-name-wrapper">
-									<h3 className="reviewer-name">Roger Lewis</h3>
-								</div>
-								<div className="review-date-wrapper">
-									<span className="review-date">2 months ago</span>
-								</div>
-								<div className="stars-wrapper">
-									<StarIcon className={classes.star} />
-									<StarIcon className={classes.star} />
-									<StarIcon className={classes.star} />
-									<StarIcon className={classes.star} />
-									<StarIcon className={classes.star} />
-								</div>
-								<div className="review-wrapper">
-									<p className="review">
-										Very competitive price compared to my local implant practice, in fact it was
-										almost half the price ! But the quality of the product used, or execution of the
-										surgery are uncompromised ! Adam my implant surgeon was Very professional and
-										highly skilled, would recommend this practice to anyone thinking of having
-										implants done !!
-									</p>
-								</div>
-							</Paper>
-						</div>
-						<div className="carouselPaper-item">
-							<Paper
-								onMouseOver={handleReviewPaperAutoPlay}
-								onMouseOut={handleReviewPaperAutoPlay}
-								className={classes.reviewPaper}
-								elevation={reviewPaperElevation}
-							>
-								<div className="reviewer-image-wrapper">
-									<a
-										target="_blank"
-										href="https://www.google.com/maps/place/%C4%B0stanbul+Smile+Center+A%C4%9F%C4%B1z+ve+Di%C5%9F+Sa%C4%9Fl%C4%B1%C4%9F%C4%B1+Poliklini%C4%9Fi/@40.9914481,28.832006,17z/data=!4m7!3m6!1s0x14caa3147e2cba65:0xb6eaeab3d94bfd80!8m2!3d40.9914441!4d28.8341947!9m1!1b1"
-									>
-										<img className="reviewer-image" src={reviewerImg} alt="" />
-										<SvgIcon className={classes.googleSvgIcon} viewBox="0 0 533.5 544.3">
-											<GoogleLogo />
-										</SvgIcon>
-									</a>
-								</div>
-								<div className="reviewer-name-wrapper">
-									<h3 className="reviewer-name">Roger Lewis</h3>
-								</div>
-								<div className="review-date-wrapper">
-									<span className="review-date">2 months ago</span>
-								</div>
-								<div className="stars-wrapper">
-									<StarIcon className={classes.star} />
-									<StarIcon className={classes.star} />
-									<StarIcon className={classes.star} />
-									<StarIcon className={classes.star} />
-									<StarIcon className={classes.star} />
-								</div>
-								<div className="review-wrapper">
-									<p className="review">
-										Very competitive price compared to my local implant practice, in fact it was
-										almost half the price ! But the quality of the product used, or execution of the
-										surgery are uncompromised ! Adam my implant surgeon was Very professional and
-										highly skilled, would recommend this practice to anyone thinking of having
-										implants done !!
-									</p>
-								</div>
-							</Paper>
-						</div>
-						<div className="carouselPaper-item">
-							<Paper
-								onMouseOver={handleReviewPaperAutoPlay}
-								onMouseOut={handleReviewPaperAutoPlay}
-								className={classes.reviewPaper}
-								elevation={reviewPaperElevation}
-							>
-								<div className="reviewer-image-wrapper">
-									<a
-										target="_blank"
-										href="https://www.google.com/maps/place/%C4%B0stanbul+Smile+Center+A%C4%9F%C4%B1z+ve+Di%C5%9F+Sa%C4%9Fl%C4%B1%C4%9F%C4%B1+Poliklini%C4%9Fi/@40.9914481,28.832006,17z/data=!4m7!3m6!1s0x14caa3147e2cba65:0xb6eaeab3d94bfd80!8m2!3d40.9914441!4d28.8341947!9m1!1b1"
-									>
-										<img className="reviewer-image" src={reviewerImg} alt="" />
-										<SvgIcon className={classes.googleSvgIcon} viewBox="0 0 533.5 544.3">
-											<GoogleLogo />
-										</SvgIcon>
-									</a>
-								</div>
-								<div className="reviewer-name-wrapper">
-									<h3 className="reviewer-name">Roger Lewis</h3>
-								</div>
-								<div className="review-date-wrapper">
-									<span className="review-date">2 months ago</span>
-								</div>
-								<div className="stars-wrapper">
-									<StarIcon className={classes.star} />
-									<StarIcon className={classes.star} />
-									<StarIcon className={classes.star} />
-									<StarIcon className={classes.star} />
-									<StarIcon className={classes.star} />
-								</div>
-								<div className="review-wrapper">
-									<p className="review">
-										Very competitive price compared to my local implant practice, in fact it was
-										almost half the price ! But the quality of the product used, or execution of the
-										surgery are uncompromised ! Adam my implant surgeon was Very professional and
-										highly skilled, would recommend this practice to anyone thinking of having
-										implants done !!
-									</p>
-								</div>
-							</Paper>
-						</div>
-						<div className="carouselPaper-item">
-							<Paper
-								onMouseOver={handleReviewPaperAutoPlay}
-								onMouseOut={handleReviewPaperAutoPlay}
-								className={classes.reviewPaper}
-								elevation={reviewPaperElevation}
-							>
-								<div className="reviewer-image-wrapper">
-									<a
-										target="_blank"
-										href="https://www.google.com/maps/place/%C4%B0stanbul+Smile+Center+A%C4%9F%C4%B1z+ve+Di%C5%9F+Sa%C4%9Fl%C4%B1%C4%9F%C4%B1+Poliklini%C4%9Fi/@40.9914481,28.832006,17z/data=!4m7!3m6!1s0x14caa3147e2cba65:0xb6eaeab3d94bfd80!8m2!3d40.9914441!4d28.8341947!9m1!1b1"
-									>
-										<img className="reviewer-image" src={reviewerImg} alt="" />
-										<SvgIcon className={classes.googleSvgIcon} viewBox="0 0 533.5 544.3">
-											<GoogleLogo />
-										</SvgIcon>
-									</a>
-								</div>
-								<div className="reviewer-name-wrapper">
-									<h3 className="reviewer-name">Roger Lewis</h3>
-								</div>
-								<div className="review-date-wrapper">
-									<span className="review-date">2 months ago</span>
-								</div>
-								<div className="stars-wrapper">
-									<StarIcon className={classes.star} />
-									<StarIcon className={classes.star} />
-									<StarIcon className={classes.star} />
-									<StarIcon className={classes.star} />
-									<StarIcon className={classes.star} />
-								</div>
-								<div className="review-wrapper">
-									<p className="review">
-										Very competitive price compared to my local implant practice, in fact it was
-										almost half the price ! But the quality of the product used, or execution of the
-										surgery are uncompromised ! Adam my implant surgeon was Very professional and
-										highly skilled, would recommend this practice to anyone thinking of having
-										implants done !!
-									</p>
-								</div>
-							</Paper>
-						</div>
+						{reviews.reviews.map((cur) => (
+							<div key={cur.reviewId} className="carouselPaper-item">
+								<Paper
+									className={classes.reviewPaper}
+									onMouseOver={handleReviewPaperAutoPlay}
+									onMouseOut={handleReviewPaperAutoPlay}
+									elevation={reviewPaperElevation}
+								>
+									<div className="reviewer-image-wrapper">
+										<a target="_blank" href={cur.reviewUrl}>
+											<img className="reviewer-image" src={cur.reviewer.profilePhotoUrl} alt="" />
+											<SvgIcon className={classes.googleSvgIcon} viewBox="0 0 533.5 544.3">
+												<GoogleLogo />
+											</SvgIcon>
+										</a>
+									</div>
+									<div className="reviewer-name-wrapper">
+										<h3 className="reviewer-name">{cur.reviewer.displayName}</h3>
+									</div>
+									<div className="review-date-wrapper">
+										<span className="review-date">
+											{moment(cur.updateTime).startOf("day").fromNow()}
+										</span>
+									</div>
+									<div className="stars-wrapper">
+										<StarIcon className={classes.star} />
+										<StarIcon className={classes.star} />
+										<StarIcon className={classes.star} />
+										<StarIcon className={classes.star} />
+										<StarIcon className={classes.star} />
+									</div>
+									<div className="review-wrapper">
+										<p className="review">{cur.comment}</p>
+									</div>
+								</Paper>
+							</div>
+						))}
 					</Carousel>
 				</div>
 				<div className="dental-treatments-buttons-div">
@@ -1177,7 +918,7 @@ const Index = (props) => {
 						className={clsx(classes.regularButton, classes.treatmentsButton)}
 						onClick={handleChat}
 					>
-						Chat Now
+						Chat&nbsp;Now
 					</Button>
 					<a
 						target="_blank"
