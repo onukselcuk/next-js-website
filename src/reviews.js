@@ -5,7 +5,7 @@ const reviews = {
 				"AIe9_BEV1VP1woYvuPRixSBHlWg49q04r63-_KbwkUNHRXY88--IcUQrWjFVbiSuIZYkQXMBrDqIQku5xOcrt-EKcuAiYoy9j1DNRKSmEsUTDO5JYx0gLQA",
 			reviewer: {
 				profilePhotoUrl:
-					"https://lh6.googleusercontent.com/-c-cD7TJ0t-c/AAAAAAAAAAI/AAAAAAAAAAA/Ze1r3eijgsc/c-rp-mo-br100/photo.jpg",
+					"https://lh6.googleusercontent.com/-c-cD7TJ0t-c/AAAAAAAAAAI/AAAAAAAAAAA/Ze1r3eijgsc/c-rp-mo-br100-s125/photo.jpg",
 				displayName: "Kübra Kamaç"
 			},
 			starRating: "FIVE",
@@ -22,7 +22,7 @@ const reviews = {
 				"AIe9_BH-Y7Lwr6IxuH7aUb2G6RG2CX-x6Ga4JcZi01PDtYIFvN-Mp8NZtgF01G9OMHLjwc2DA52t5y3YaOI2PJQzxLZuJjDJsIkSJ9Dq4CLvQpjehwPS8r0",
 			reviewer: {
 				profilePhotoUrl:
-					"https://lh4.googleusercontent.com/-he4NQc3_9KE/AAAAAAAAAAI/AAAAAAAAAAA/O3YTBZ2Q8CE/c-rp-mo-br100/photo.jpg",
+					"https://lh4.googleusercontent.com/-he4NQc3_9KE/AAAAAAAAAAI/AAAAAAAAAAA/O3YTBZ2Q8CE/c-rp-mo-br100-s125/photo.jpg",
 				displayName: "Atakan Songül"
 			},
 			starRating: "FIVE",
@@ -39,7 +39,7 @@ const reviews = {
 				"AIe9_BGvUJd9etQojwpjZIMsiFnex7dA4Ea5GuI6CsGkoFgaFpv9f6rHjRG_zpWBuyUr_tonuvUMpG5f8ck3rJuJYd1uNAiEOSSVNQ5vCqSM7EuWGTFcsB4",
 			reviewer: {
 				profilePhotoUrl:
-					"https://lh5.googleusercontent.com/-KeCK5ZEoMVo/AAAAAAAAAAI/AAAAAAAAAAA/cYIVyqRlR0Y/c-rp-mo-ba2-br100/photo.jpg",
+					"https://lh5.googleusercontent.com/-KeCK5ZEoMVo/AAAAAAAAAAI/AAAAAAAAAAA/cYIVyqRlR0Y/c-rp-mo-ba2-br100-s125/photo.jpg",
 				displayName: "Rashad"
 			},
 			starRating: "FIVE",
@@ -55,7 +55,7 @@ const reviews = {
 				"AIe9_BG84YPnR8vhxeJfV_lAYVNiHdQbTgqWyexzaMUjY2V7OU-7HK16iCDl7wN78gN6f4jDF8ObUTIj7gr1MJO61VQyq1V1RabmlrJ4cW-rOmKptQmYKmI",
 			reviewer: {
 				profilePhotoUrl:
-					"https://lh6.googleusercontent.com/-tgODL2OCsbs/AAAAAAAAAAI/AAAAAAAAAAA/KBdWaciGFlI/c-rp-mo-br100/photo.jpg",
+					"https://lh6.googleusercontent.com/-tgODL2OCsbs/AAAAAAAAAAI/AAAAAAAAAAA/KBdWaciGFlI/c-rp-mo-br100-s125/photo.jpg",
 				displayName: "Muat Cantimur"
 			},
 			starRating: "FIVE",
@@ -72,7 +72,7 @@ const reviews = {
 				"AIe9_BFMK6FB7k24ANEBV5CospTTYh8fc7pRnV8MHh9v6gaT5A3X5rLGK5b1IiRZGLw93OD0guxd5d6r3l6iydT4mJxDQIt65FguuJB85CGDEXCJiL3B0ec",
 			reviewer: {
 				profilePhotoUrl:
-					"https://lh4.googleusercontent.com/-CunNp0pTAoE/AAAAAAAAAAI/AAAAAAAAAAA/cjg9uxMSoOI/c-rp-mo-br100/photo.jpg",
+					"https://lh4.googleusercontent.com/-CunNp0pTAoE/AAAAAAAAAAI/AAAAAAAAAAA/cjg9uxMSoOI/c-rp-mo-br100-s125/photo.jpg",
 				displayName: "Rasim Kandemir"
 			},
 			starRating: "FIVE",
@@ -88,7 +88,7 @@ const reviews = {
 				"AIe9_BHVBnWjBJvk55vq2QEm0wl-xYy50QyqWlJOam5hOIV7tvyYZEJgbG0xALPLy9Ld9cYwMHSNoOU-9n5Oj8jD5XmGBTgWarycnxvm7gPR-_uPByx6C-8",
 			reviewer: {
 				profilePhotoUrl:
-					"https://lh6.googleusercontent.com/-0ZamP2pqvBU/AAAAAAAAAAI/AAAAAAAAAAA/nFdwCsRjSUw/c-rp-mo-br100/photo.jpg",
+					"https://lh6.googleusercontent.com/-0ZamP2pqvBU/AAAAAAAAAAI/AAAAAAAAAAA/nFdwCsRjSUw/c-rp-mo-br100-s125/photo.jpg",
 				displayName: "Melis Melis"
 			},
 			starRating: "FIVE",
@@ -105,7 +105,7 @@ const reviews = {
 				"AIe9_BGhYIk2KhOdF8fekWDvq8JULqpzSkbblF2qel6Cyv-iOMceHr0wW4mjvn_C1mhqvpMNc14UxLI-7lzmlP8WE--RaF8w434lORwb8DcbigJN9wQAa6Q",
 			reviewer: {
 				profilePhotoUrl:
-					"https://lh5.googleusercontent.com/-ElhkyENTeyg/AAAAAAAAAAI/AAAAAAAAAAA/9QYmYLp1_RI/c-rp-mo-br100/photo.jpg",
+					"https://lh5.googleusercontent.com/-ElhkyENTeyg/AAAAAAAAAAI/AAAAAAAAAAA/9QYmYLp1_RI/c-rp-mo-br100-s125/photo.jpg",
 				displayName: "Müzeyyen Karahan"
 			},
 			starRating: "FIVE",
@@ -122,7 +122,7 @@ const reviews = {
 				"AIe9_BFqh_zr355jzGaEpH7666zcWCDegZR_eq6R-BPKSikDwNEWWq1tVKxrroK-1kk6bSqTqr-EkKZVWUrCe1ZYVw1cc7WYwp8y7FWWWvdyFODIoWfnJtg",
 			reviewer: {
 				profilePhotoUrl:
-					"https://lh5.googleusercontent.com/-akglmJpzvkI/AAAAAAAAAAI/AAAAAAAAAAA/SPaoe30T5Ok/c-rp-mo-br100/photo.jpg",
+					"https://lh5.googleusercontent.com/-akglmJpzvkI/AAAAAAAAAAI/AAAAAAAAAAA/SPaoe30T5Ok/c-rp-mo-br100-s125/photo.jpg",
 				displayName: "Muharrem Aydın"
 			},
 			starRating: "FIVE",
@@ -139,7 +139,7 @@ const reviews = {
 				"AIe9_BGZuRKHeO1iYrcf4B001kE2DQfEw0zTiPavsrr5qk99QU42EXYWkhA1iUQuTG85nIBMBH66gxk9Pi51295n-p3X8nM5Ek_XYvnA_eoOCAad-cLHxo8",
 			reviewer: {
 				profilePhotoUrl:
-					"https://lh3.googleusercontent.com/-oyqGP-KQbbI/AAAAAAAAAAI/AAAAAAAAAAA/_jEv8AeQSv8/c-rp-mo-br100/photo.jpg",
+					"https://lh3.googleusercontent.com/-oyqGP-KQbbI/AAAAAAAAAAI/AAAAAAAAAAA/_jEv8AeQSv8/c-rp-mo-br100-s125/photo.jpg",
 				displayName: "Özlem vural"
 			},
 			starRating: "FIVE",
@@ -156,7 +156,7 @@ const reviews = {
 				"AIe9_BFqh_zr355jzGaEpH7666zclmYhicsynZ5AaYcYtg2YtrkPRuaPU5e-WSR2JRev4P5x3adzUrQsHfzl_7_TWgZEVZiH9cjX3sTzUe9OSmIz1Zj69wM",
 			reviewer: {
 				profilePhotoUrl:
-					"https://lh5.googleusercontent.com/-hJjLR9CETjA/AAAAAAAAAAI/AAAAAAAAAAA/4dOS1Q5SkjA/c-rp-mo-br100/photo.jpg",
+					"https://lh5.googleusercontent.com/-hJjLR9CETjA/AAAAAAAAAAI/AAAAAAAAAAA/4dOS1Q5SkjA/c-rp-mo-br100-s125/photo.jpg",
 				displayName: "Eylem Eylem"
 			},
 			starRating: "FIVE",
@@ -173,7 +173,7 @@ const reviews = {
 				"AIe9_BEUgL1r3GxZ6pSpn17DD2M7M-q_chrHfn2BB36aoxtyUzaGOPxoW3ZAdrwYkw-MQMqqKMlZyrTtpO7fhNBB4X7qqwLhMm_mj3rByjyGVp1vT5GKIZc",
 			reviewer: {
 				profilePhotoUrl:
-					"https://lh3.googleusercontent.com/-9TRV_xvJSic/AAAAAAAAAAI/AAAAAAAAAAA/J1Y6IFM1KrQ/c-rp-mo-br100/photo.jpg",
+					"https://lh3.googleusercontent.com/-9TRV_xvJSic/AAAAAAAAAAI/AAAAAAAAAAA/J1Y6IFM1KrQ/c-rp-mo-br100-s125/photo.jpg",
 				displayName: "hakan erol"
 			},
 			starRating: "FIVE",
@@ -190,7 +190,7 @@ const reviews = {
 				"AIe9_BHZM2k_MpOhRgkb8w5Bn_urx_OsoiNXpUsfXjOXdK3jehiOBaGxrRHTZDNmrUVQa8wV_d2U_ZDvaigz1QLzSSGwigimLMCKD4vsCEIKuzuYzPSoVEE",
 			reviewer: {
 				profilePhotoUrl:
-					"https://lh3.googleusercontent.com/-DT2CsTjkUjg/AAAAAAAAAAI/AAAAAAAAAAA/JcFZh-HUJPA/c-rp-mo-ba3-br100/photo.jpg",
+					"https://lh3.googleusercontent.com/-DT2CsTjkUjg/AAAAAAAAAAI/AAAAAAAAAAA/JcFZh-HUJPA/c-rp-mo-ba3-br100-s125/photo.jpg",
 				displayName: "Burçin Özer"
 			},
 			starRating: "FIVE",
@@ -207,7 +207,7 @@ const reviews = {
 				"AIe9_BGvUJd9etQojwpjZIMsiFneEltM2O4t5tvditrKY9MeVXVT7Mqc29bkCouKUdatyB0Qeof_rfDMrUpDXlGdVUYOBB3Cmv9U7xRcbjf6FItqW-lau50",
 			reviewer: {
 				profilePhotoUrl:
-					"https://lh6.googleusercontent.com/-f1KpXIogw-M/AAAAAAAAAAI/AAAAAAAAAAA/mFAmpp6Ay1M/c-rp-mo-br100/photo.jpg",
+					"https://lh6.googleusercontent.com/-f1KpXIogw-M/AAAAAAAAAAI/AAAAAAAAAAA/mFAmpp6Ay1M/c-rp-mo-br100-s125/photo.jpg",
 				displayName: "Gülçin GÜMÜŞ"
 			},
 			starRating: "FIVE",
@@ -223,7 +223,7 @@ const reviews = {
 				"AIe9_BHZM2k_MpOhRgkb8w5Bn_urZu64uHjQb5eU5EJtzoZCXKk06xXB7ecFjxtoGPqmB1-5ZC780h_dvzIsw0fIiM3AiBlHAUh8lTHZ52qK7lGXGhSwYW4",
 			reviewer: {
 				profilePhotoUrl:
-					"https://lh4.googleusercontent.com/-5K_Kkcq9wkA/AAAAAAAAAAI/AAAAAAAAAAA/7c_2kQX7HyE/c-rp-mo-br100/photo.jpg",
+					"https://lh4.googleusercontent.com/-5K_Kkcq9wkA/AAAAAAAAAAI/AAAAAAAAAAA/7c_2kQX7HyE/c-rp-mo-br100-s125/photo.jpg",
 				displayName: "Fatma Cakir"
 			},
 			starRating: "FIVE",
@@ -240,7 +240,7 @@ const reviews = {
 				"AIe9_BHx9wW5OAXpNIH08blLdli04TugFrHPirlyfM6TDCe3hHHM0ii855fCzdf0g5iRT52G4gLKaHilpbKQLJY6tDEFwonZiOV6sssnXT8XI3xyLIcHz7s",
 			reviewer: {
 				profilePhotoUrl:
-					"https://lh6.googleusercontent.com/-Wuw_fOtx4_Y/AAAAAAAAAAI/AAAAAAAAAAA/fdzguWigfYc/c-rp-mo-br100/photo.jpg",
+					"https://lh6.googleusercontent.com/-Wuw_fOtx4_Y/AAAAAAAAAAI/AAAAAAAAAAA/fdzguWigfYc/c-rp-mo-br100-s125/photo.jpg",
 				displayName: "Ervanur Küçük"
 			},
 			starRating: "FIVE",
