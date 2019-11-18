@@ -5,16 +5,16 @@ import { supportsWebp } from "../components/helpers";
 import { useEffect } from "react";
 
 const About = () => {
-	// const checkSupport = () => {
-	// 	if (supportsWebp()) {
-	// 		console.log("supported");
-	// 		console.log(supportsWebp());
-	// 	} else {
-	// 		console.log("not supported");
-	// 	}
-	// };
+	const checkSupport = () => {
+		if (supportsWebp()) {
+			console.log("supported");
+			console.log(supportsWebp());
+		} else {
+			console.log("not supported");
+		}
+	};
 
-	// useEffect(checkSupport);
+	useEffect(checkSupport);
 
 	return (
 		<React.Fragment>
