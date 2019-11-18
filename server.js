@@ -13,14 +13,14 @@ moment.locale("tr");
 const mailer = require("./src/mailer");
 const mailerToUs = require("./src/mailerToUs");
 const axios = require("axios");
-const compression = require("compression");
+//const compression = require("compression");
 
 app.prepare().then(() => {
 	const server = express();
 	server.use(express.static("public"));
 	server.use(bodyParser.urlencoded({ extended: false }));
 	server.use(bodyParser.json());
-	server.use(compression());
+	//server.use(compression());
 
 	// server.get("/", (req, res) => {
 	// 	res.redirect("/en");

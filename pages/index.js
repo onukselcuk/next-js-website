@@ -698,7 +698,7 @@ const Index = (props) => {
 							name="yasin"
 						/>
 						<Link href="/about">
-							<a className="doctor-link">Dr. Yasin Akgül</a>
+							<a className="doctor-link">Spec. Dr. Yasin Akgül</a>
 						</Link>
 						<p className="doctor-specialty">Orthodontic Specialist</p>
 					</div>
@@ -712,7 +712,7 @@ const Index = (props) => {
 							onMouseOut={handleMouseOut}
 						/>
 						<Link href="/about">
-							<a className="doctor-link">Dr. Sevil Akgül</a>
+							<a className="doctor-link">Spec. Dr. Sevil Akgül</a>
 						</Link>
 						<p className="doctor-specialty">Pediatric Dentistry Specialist</p>
 					</div>

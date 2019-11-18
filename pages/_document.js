@@ -34,8 +34,9 @@ class MyDocument extends Document {
 				</Head>
 				<body>
 					<Main />
+					<script type="text/javascript" src="/scripts/modernizr-custom.js" />
 					<NextScript />
-					<script type="text/javascript" src="/tawkScript.js" />
+					<script type="text/javascript" src="/scripts/tawkScript.js" />
 				</body>
 			</html>
 		);
