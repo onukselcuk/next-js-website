@@ -294,8 +294,14 @@ const Privileges = () => {
 						margin-bottom: 2rem;
 					}
 
-					.privilege-vip-img-div {
+					:global(.webp) .privilege-vip-img-div {
+						background-image: url("/privileges-page/vip-intro-img.webp");
+					}
+					:global(.no-webp) .privilege-vip-img-div {
 						background-image: url("/privileges-page/vip-intro-img.jpg");
+					}
+
+					.privilege-vip-img-div {
 						height: 62vh;
 						background-repeat: no-repeat;
 						background-size: cover;
@@ -385,31 +391,57 @@ const Privileges = () => {
 						border-radius: 20px;
 					}
 
-					.privilege-image-1 {
+					:global(.webp) .privilege-image-1 {
+						background-image: url("/privileges-page/contact-us-img.webp");
+					}
+					:global(.no-webp) .privilege-image-1 {
 						background-image: url("/privileges-page/contact-us-img.jpg");
 					}
 
-					.privilege-image-2 {
+					:global(.webp) .privilege-image-2 {
+						background-image: url("/privileges-page/video-call-img.webp");
+					}
+					:global(.no-webp) .privilege-image-2 {
 						background-image: url("/privileges-page/video-call-img.jpg");
-						background-position: right 50% bottom 55%;
 					}
 
-					.privilege-image-3 {
+					.privilege-image-2 {
+						background-position: right 50% bottom 55%;
+					}
+					:global(.webp) .privilege-image-3 {
+						background-image: url("/privileges-page/schedule-an-appointment-img.webp");
+					}
+					:global(.no-webp) .privilege-image-3 {
 						background-image: url("/privileges-page/schedule-an-appointment-img.jpg");
 					}
 
-					.privilege-image-4 {
+					:global(.webp) .privilege-image-4 {
+						background-image: url("/privileges-page/hotel-booking-img.webp");
+					}
+					:global(.no-webp) .privilege-image-4 {
 						background-image: url("/privileges-page/hotel-booking-img.jpg");
 					}
 
-					.privilege-image-5 {
+					:global(.webp) .privilege-image-5 {
+						background-image: url("/privileges-page/istanbul-arrival-collage-img.webp");
+					}
+					:global(.no-webp) .privilege-image-5 {
 						background-image: url("/privileges-page/istanbul-arrival-collage-img.jpg");
+					}
+
+					.privilege-image-5 {
 						background-color: ${sTheme.palette.secondary.main};
 						background-position: center;
 					}
 
-					.privilege-image-6 {
+					:global(.webp) .privilege-image-6 {
+						background-image: url("/privileges-page/your-treatment-img.webp");
+					}
+					:global(.no-webp) .privilege-image-6 {
 						background-image: url("/privileges-page/your-treatment-img.jpg");
+					}
+
+					.privilege-image-6 {
 						background-position: right 10% bottom 40%;
 					}
 

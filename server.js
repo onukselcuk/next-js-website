@@ -4,7 +4,7 @@ const next = require("next");
 const dev = process.env.NODE_ENV !== "production";
 const app = next({ dev });
 const handle = app.getRequestHandler();
-const { google } = require("googleapis");
+// const { google } = require("googleapis");
 const bodyParser = require("body-parser");
 const AWS = require("aws-sdk");
 const moment = require("moment");
@@ -13,14 +13,16 @@ moment.locale("tr");
 const mailer = require("./src/mailer");
 const mailerToUs = require("./src/mailerToUs");
 const axios = require("axios");
-//const compression = require("compression");
+const compression = require("compression");
 
 app.prepare().then(() => {
 	const server = express();
 	server.use(express.static("public"));
 	server.use(bodyParser.urlencoded({ extended: false }));
 	server.use(bodyParser.json());
-	//server.use(compression());
+	if (dev === false) {
+		server.use(compression());
+	}
 
 	// server.get("/", (req, res) => {
 	// 	res.redirect("/en");

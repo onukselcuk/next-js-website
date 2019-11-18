@@ -697,7 +697,7 @@ const Index = (props) => {
 							alt=""
 							name="yasin"
 						/>
-						<Link href="/about">
+						<Link href="/about#dr-yasin-akgul">
 							<a className="doctor-link">Spec. Dr. Yasin Akgül</a>
 						</Link>
 						<p className="doctor-specialty">Orthodontic Specialist</p>
@@ -711,7 +711,7 @@ const Index = (props) => {
 							onMouseOver={handleMouseOver}
 							onMouseOut={handleMouseOut}
 						/>
-						<Link href="/about">
+						<Link href="/about#dr-sevil-akgul">
 							<a className="doctor-link">Spec. Dr. Sevil Akgül</a>
 						</Link>
 						<p className="doctor-specialty">Pediatric Dentistry Specialist</p>
@@ -725,7 +725,7 @@ const Index = (props) => {
 							onMouseOver={handleMouseOver}
 							onMouseOut={handleMouseOut}
 						/>
-						<Link href="/about">
+						<Link href="/about#dr-yavuz-eker">
 							<a className="doctor-link">Dr. Yavuz Eker</a>
 						</Link>
 						<p className="doctor-specialty">Aesthetic Dentistry Specialist</p>
@@ -778,33 +778,87 @@ const Index = (props) => {
 						dotListClass="custom-dot-list-style"
 						itemClass="carousel-item-padding-40-px"
 					>
-						<div className="carouselPaper-item">
-							<img className={classes.patientImg} src="/patient-pictures/patient-1-img.jpg" alt="" />
-						</div>
-						<div className="carouselPaper-item">
-							<img className={classes.patientImg} src="/patient-pictures/patient-2-img.jpg" alt="" />
-						</div>
-						<div className="carouselPaper-item">
-							<img className={classes.patientImg} src="/patient-pictures/patient-3-img.jpg" alt="" />
-						</div>
-						<div className="carouselPaper-item">
-							<img className={classes.patientImg} src="/patient-pictures/patient-4-img.jpg" alt="" />
-						</div>
-						<div className="carouselPaper-item">
-							<img className={classes.patientImg} src="/patient-pictures/patient-5-img.jpg" alt="" />
-						</div>
-						<div className="carouselPaper-item">
-							<img className={classes.patientImg} src="/patient-pictures/patient-6-img.jpg" alt="" />
-						</div>
-						<div className="carouselPaper-item">
-							<img className={classes.patientImg} src="/patient-pictures/patient-7-img.jpg" alt="" />
-						</div>
-						<div className="carouselPaper-item">
-							<img className={classes.patientImg} src="/patient-pictures/patient-8-img.jpg" alt="" />
-						</div>
-						<div className="carouselPaper-item">
-							<img className={classes.patientImg} src="/patient-pictures/patient-9-img.jpg" alt="" />
-						</div>
+						<picture className="carouselPaper-item">
+							<source srcSet="/patient-pictures/patient-1-img.webp" type="image/webp" />
+							<source srcSet="/patient-pictures/patient-1-img.jpg" type="image/jpeg" />
+							<img
+								className={classes.patientImg}
+								src="/patient-pictures/patient-1-img.jpg"
+								alt="Patient Image 1"
+							/>
+						</picture>
+						<picture className="carouselPaper-item">
+							<source srcSet="/patient-pictures/patient-2-img.webp" type="image/webp" />
+							<source srcSet="/patient-pictures/patient-2-img.jpg" type="image/jpeg" />
+							<img
+								className={classes.patientImg}
+								src="/patient-pictures/patient-2-img.jpg"
+								alt="Patient Image 2"
+							/>
+						</picture>
+						<picture className="carouselPaper-item">
+							<source srcSet="/patient-pictures/patient-3-img.webp" type="image/webp" />
+							<source srcSet="/patient-pictures/patient-3-img.jpg" type="image/jpeg" />
+							<img
+								className={classes.patientImg}
+								src="/patient-pictures/patient-3-img.jpg"
+								alt="Patient Image 3"
+							/>
+						</picture>
+						<picture className="carouselPaper-item">
+							<source srcSet="/patient-pictures/patient-4-img.webp" type="image/webp" />
+							<source srcSet="/patient-pictures/patient-4-img.jpg" type="image/jpeg" />
+							<img
+								className={classes.patientImg}
+								src="/patient-pictures/patient-4-img.jpg"
+								alt="Patient Image 4"
+							/>
+						</picture>
+						<picture className="carouselPaper-item">
+							<source srcSet="/patient-pictures/patient-5-img.webp" type="image/webp" />
+							<source srcSet="/patient-pictures/patient-5-img.jpg" type="image/jpeg" />
+							<img
+								className={classes.patientImg}
+								src="/patient-pictures/patient-5-img.jpg"
+								alt="Patient Image 5"
+							/>
+						</picture>
+						<picture className="carouselPaper-item">
+							<source srcSet="/patient-pictures/patient-6-img.webp" type="image/webp" />
+							<source srcSet="/patient-pictures/patient-6-img.jpg" type="image/jpeg" />
+							<img
+								className={classes.patientImg}
+								src="/patient-pictures/patient-6-img.jpg"
+								alt="Patient Image 6"
+							/>
+						</picture>
+						<picture className="carouselPaper-item">
+							<source srcSet="/patient-pictures/patient-7-img.webp" type="image/webp" />
+							<source srcSet="/patient-pictures/patient-7-img.jpg" type="image/jpeg" />
+							<img
+								className={classes.patientImg}
+								src="/patient-pictures/patient-7-img.jpg"
+								alt="Patient Image 7"
+							/>
+						</picture>
+						<picture className="carouselPaper-item">
+							<source srcSet="/patient-pictures/patient-8-img.webp" type="image/webp" />
+							<source srcSet="/patient-pictures/patient-8-img.jpg" type="image/jpeg" />
+							<img
+								className={classes.patientImg}
+								src="/patient-pictures/patient-8-img.jpg"
+								alt="Patient Image 8"
+							/>
+						</picture>
+						<picture className="carouselPaper-item">
+							<source srcSet="/patient-pictures/patient-9-img.webp" type="image/webp" />
+							<source srcSet="/patient-pictures/patient-9-img.jpg" type="image/jpeg" />
+							<img
+								className={classes.patientImg}
+								src="/patient-pictures/patient-9-img.jpg"
+								alt="Patient Image 9"
+							/>
+						</picture>
 					</Carousel>
 				</div>
 			</section>
@@ -1039,11 +1093,18 @@ const Index = (props) => {
 			`}</style>
 
 			<style jsx>{`
+				:global(.webp) .hero-image-div {
+					background-image: url("/hero-image.webp");
+				}
+
+				:global(.no-webp) .hero-image-div {
+					background-image: url("/hero-image.jpg");
+				}
+
 				.hero-image-div {
 					width: 100vw;
 					height: calc(100vh - 141px);
 					position: relative;
-					background-image: url("/hero-image-alternative.jpg");
 					background-repeat: no-repeat;
 					background-size: cover;
 					background-position: right 25% bottom 30%;
@@ -1280,6 +1341,7 @@ const Index = (props) => {
 					color: ${sTheme.palette.primary.main};
 					font-size: 4rem;
 					margin-top: .5rem;
+					font-size: 4.5rem;
 				}
 
 				.clinic-smile-center-text {
@@ -1396,14 +1458,16 @@ const Index = (props) => {
 				}
 				.doctor-link {
 					text-decoration: none;
-					font-size: 2.5rem;
+					font-size: 2.8rem;
 					margin-top: 3rem;
 					color: ${sTheme.palette.primary.main};
 					font-family: ${sTheme.typography.serif};
+					font-weight: bold;
+					transition: all 250ms ease-in-out;
 				}
 				.doctor-link:hover {
-					text-decoration: underline;
 					cursor: pointer;
+					color: ${sTheme.palette.third.dark};
 				}
 				.doctor-specialty {
 					font-size: 2rem;

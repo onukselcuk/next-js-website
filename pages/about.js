@@ -1,21 +1,8 @@
 import sTheme from "../src/styledTheme";
 import sizes from "../src/sizes";
 import Form from "../components/Form";
-import { supportsWebp } from "../components/helpers";
-import { useEffect } from "react";
 
 const About = () => {
-	const checkSupport = () => {
-		if (supportsWebp()) {
-			console.log("supported");
-			console.log(supportsWebp());
-		} else {
-			console.log("not supported");
-		}
-	};
-
-	useEffect(checkSupport);
-
 	return (
 		<React.Fragment>
 			<section className="about-us-whole-section">
@@ -37,7 +24,7 @@ const About = () => {
 						<img className="clinic-image" src="/clinic-image.jpg" alt="" />
 					</div>
 				</section>
-				<section className="your-privileges-section">
+				<section id="dr-yasin-akgul" className="your-privileges-section">
 					<section className="your-privileges-header-section">
 						<div className="your-privileges-header-wrapper">
 							<h2 className="your-privileges-header-text">Our Doctors</h2>
@@ -64,7 +51,7 @@ const About = () => {
 							</div>
 						</div>
 					</section>
-					<section className="privilege-section">
+					<section id="dr-sevil-akgul" className="privilege-section">
 						<div className="privilege-explanation-div privilege-explanation-div-reverse">
 							<div className="privilege-name-wrapper privilege-name-wrapper-reverse">
 								<h2 className="privilege-name-header">Spec. Dr. Sevil Borbay Akgül</h2>
@@ -80,7 +67,7 @@ const About = () => {
 						</div>
 						<div className="privilege-image-div privilege-image-2" />
 					</section>
-					<section className="privilege-section">
+					<section id="dr-yavuz-eker" className="privilege-section">
 						<div className="privilege-image-div privilege-image-3" />
 						<div className="privilege-explanation-div">
 							<div className="privilege-name-wrapper">

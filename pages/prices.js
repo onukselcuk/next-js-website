@@ -163,8 +163,14 @@ const Prices = () => {
 					padding-bottom: 4rem;
 				}
 
-				.calculator-img-div {
+				:global(.webp) .calculator-img-div {
+					background-image: url("/prices-page/teeth-and-calculator-img.webp");
+				}
+				:global(.no-webp) .calculator-img-div {
 					background-image: url("/prices-page/teeth-and-calculator-img.jpg");
+				}
+
+				.calculator-img-div {
 					height: 60vh;
 					width: 100%;
 					background-repeat: no-repeat;

@@ -31,6 +31,7 @@ const Contact = () => {
 	const handleChat = () => {
 		Tawk_API.maximize();
 	};
+
 	return (
 		<React.Fragment>
 			<section className="atakoy-towers-img-section">
@@ -135,8 +136,14 @@ const Contact = () => {
 				.atakoy-towers-img-section {
 					width: 100%;
 				}
-				.atakoy-towers-img-div {
+				:global(.webp) .atakoy-towers-img-div {
+					background-image: url("/contact-page/atakoy-towers-night-img.webp");
+				}
+				:global(.no-webp) .atakoy-towers-img-div {
 					background-image: url("/contact-page/atakoy-towers-night-img.jpg");
+				}
+
+				.atakoy-towers-img-div {
 					width: 100%;
 					height: 66vh;
 					background-repeat: no-repeat;
@@ -175,11 +182,6 @@ const Contact = () => {
 					}
 				}
 
-				@media (max-width: ${sizes.sizes.mdsm}) {
-					.atakoy-towers-img-section {
-						background-color: ${sTheme.palette.secondary.main};
-					}
-				}
 				.our-services-header-paragraph-text {
 					color: ${sTheme.palette.secondary.dark};
 					font-size: 2rem;
@@ -215,9 +217,15 @@ const Contact = () => {
 					padding-bottom: 1.5rem;
 				}
 
+				:global(.webp) .contact-us-left-div {
+					background-image: url("/contact-page/atakoy-towers-entrance-img.webp");
+				}
+				:global(.no-webp) .contact-us-left-div {
+					background-image: url("/contact-page/atakoy-towers-entrance-img.jpg");
+				}
+
 				.contact-us-left-div {
 					width: 50%;
-					background-image: url("/contact-page/atakoy-towers-entrance-img.jpg");
 					border-radius: 20px;
 					background-size: cover;
 					background-repeat: no-repeat;
@@ -294,6 +302,9 @@ const Contact = () => {
 
 				@media (max-width: ${sizes.sizes.mdsm}) {
 					.contact-us-section-section {
+						background-color: ${sTheme.palette.secondary.main};
+					}
+					.atakoy-towers-img-section {
 						background-color: ${sTheme.palette.secondary.main};
 					}
 					.contact-us-section {

@@ -34,8 +34,10 @@ class MyDocument extends Document {
 				</Head>
 				<body>
 					<Main />
+					{/* Modernizr Webp Detection Script */}
 					<script type="text/javascript" src="/scripts/modernizr-custom.js" />
 					<NextScript />
+					{/* Tawk Script */}
 					<script type="text/javascript" src="/scripts/tawkScript.js" />
 				</body>
 			</html>
