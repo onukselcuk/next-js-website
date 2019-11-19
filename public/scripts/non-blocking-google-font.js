@@ -1,5 +1,5 @@
 WebFontConfig = {
-	google: { families: [ "Laila:400,700", "Nunito:400,700" ] }
+	google: { families: [ "Laila:400,700", "Nunito:400,700&display=swap" ] }
 };
 (function () {
 	var wf = document.createElement("script");
