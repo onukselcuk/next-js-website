@@ -51,6 +51,15 @@ app.prepare().then(() => {
 	// 	main().catch(console.error);
 	// });
 
+	//* set Cache-Control Headers for static files only if they are under static folder
+
+	if (process.env.NODE_ENV === "production") {
+		server.get(/^\/_next\/static\/(images|fonts)\//, (_, res, nextHandler) => {
+			res.setHeader("Cache-Control", "public, max-age=31536000, immutable");
+			nextHandler();
+		});
+	}
+
 	server.post("/signed-url-put-object", async (req, res) => {
 		if (
 			(req.body.captchaState === undefined || req.body.captchaState === "" || req.body.captchaState === null) &&

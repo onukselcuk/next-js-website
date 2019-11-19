@@ -4,7 +4,7 @@ const withCSS = require("@zeit/next-css");
 const withFonts = require("next-fonts");
 const optimizedImages = require("next-optimized-images");
 const dev = process.env.NODE_ENV !== "production";
-//const dev = true;
+// const dev = true;
 
 module.exports = withPlugins(
 	[

@@ -32,7 +32,8 @@ const useStyles = makeStyles((theme) => ({
 		[sizes.down("mdsm")]: {
 			flexWrap: "wrap",
 			justifyContent: "center",
-			padding: theme.spacing(2, 0)
+			padding: theme.spacing(2, 0),
+			overflowX: "hidden"
 		}
 	},
 	calculatorLeftPart: {

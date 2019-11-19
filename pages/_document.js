@@ -26,20 +26,21 @@ class MyDocument extends Document {
 					/>
 					{/* PWA primary color */}
 					<meta name="theme-color" content={theme.palette.primary.main} />
-					<link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin={true} />
-					<link rel="preconnect" href="https://cdn.jsdelivr.net" crossOrigin={true} />
-					{/* <link rel="preconnect" href="https://embed.tawk.to" crossOrigin={true} /> */}
-					<link rel="icon" type="image/png" href="/favicon/favicon.png" />
+					<link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="true" />
+					{/* <link rel="preconnect" href="https://embed.tawk.to" crossOrigin="true" /> */}
+					<link rel="icon" type="image/png" href={require("../public/favicon/favicon.png")} />
+					<link
+						href="https://fonts.googleapis.com/css?family=Laila:400,700|Nunito:400,700&display=swap"
+						rel="stylesheet"
+					/>
 				</Head>
 				<body>
 					<Main />
 					{/* Modernizr Webp Detection Script */}
 					<script type="text/javascript" src="/scripts/modernizr-custom.js" />
 					<NextScript />
-					{/* Tawk Script */}
+					{/* Tawk Live Script Script */}
 					{/* <script type="text/javascript" src="/scripts/tawkScript.js" /> */}
-					{/* Google Font Non-Blocking Script */}
-					<script type="text/javascript" src="/scripts/non-blocking-google-font.js" />
 				</body>
 			</html>
 		);
