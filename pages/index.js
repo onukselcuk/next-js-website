@@ -345,7 +345,7 @@ const Index = (props) => {
 					<h2 className="our-services-header-text">Your Privileges</h2>
 					<p className="our-services-header-paragraph-text">
 						At Istanbul Smile Center, we offer unique and free services to our international patients to
-						make their dental treatments super easy and enjoying as no other clinic can.
+						make their dental treatments super easy and enjoying as no other clinic can. Change
 					</p>
 				</div>
 				<div className="our-services-wrapper">
