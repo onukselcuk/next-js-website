@@ -1,9 +1,24 @@
 const withPlugins = require("next-compose-plugins");
 const withCSS = require("@zeit/next-css");
-const withImages = require("next-images");
+// const withImages = require("next-images");
 const withFonts = require("next-fonts");
+const optimizedImages = require("next-optimized-images");
+const dev = process.env.NODE_ENV !== "production";
+//const dev = true;
 
-module.exports = withPlugins([ withCSS, withImages, withFonts ], { target: "serverless" });
+module.exports = withPlugins(
+	[
+		[
+			optimizedImages,
+			{
+				imagesPublicPath: dev ? "/_next/static/images/" : "https://dvmbzs0q2ij2d.cloudfront.net"
+			}
+		],
+		withCSS,
+		withFonts
+	],
+	{ target: "serverless" }
+);
 
 // module.exports = withFonts(
 // 	withImages({

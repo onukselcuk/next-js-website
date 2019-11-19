@@ -28,8 +28,6 @@ import CosmeticDentistry from "../components/logos-icons/CosmeticDentistry";
 import PediatricDentistry from "../components/logos-icons/PediatricDentistry";
 import SmileMakeover from "../components/logos-icons/SmileMakeover";
 import TeethWhitening from "../components/logos-icons/TeethWhitening";
-import doctorImg from "../public/shutterstock_1498270505.jpg";
-import doctorImg2 from "../public/stock-photo-beautiful-family-of-mother-and-daughter-together-at-home-smiling-confident-showing-and-pointing-1254258604.jpg";
 import IstanbulSilhouette from "../components/logos-icons/IstanbulSilhouette";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -271,6 +269,7 @@ const useStyles = makeStyles((theme) => ({
 	patientImg: {
 		width: "90%",
 		minWidth: "144px",
+		flexShrink: 0,
 		borderRadius: "200px",
 		boxShadow: "2px 2px 14px 3px rgba(0,0,0,0.3)",
 		[sizes.down("xl")]: {
@@ -283,18 +282,18 @@ const Index = (props) => {
 	const paperElevation = 2;
 	const reviewPaperElevation = 5;
 
-	const pics = {
-		yasin: [ doctorImg, doctorImg2 ],
-		sevil: [ doctorImg, doctorImg2 ],
-		yavuz: [ doctorImg, doctorImg2 ]
-	};
+	// const pics = {
+	// 	yasin: [ doctorImg, doctorImg2 ],
+	// 	sevil: [ doctorImg, doctorImg2 ],
+	// 	yavuz: [ doctorImg, doctorImg2 ]
+	// };
 
-	const handleMouseOver = (e) => {
-		e.target.src = pics[e.target.name][1];
-	};
-	const handleMouseOut = (e) => {
-		e.target.src = pics[e.target.name][0];
-	};
+	// const handleMouseOver = (e) => {
+	// 	e.target.src = pics[e.target.name][1];
+	// };
+	// const handleMouseOut = (e) => {
+	// 	e.target.src = pics[e.target.name][0];
+	// };
 
 	const classes = useStyles();
 	const responsive = {
@@ -690,10 +689,8 @@ const Index = (props) => {
 				<div className="our-doctors-wrapper">
 					<div className="doctor-wrapper">
 						<img
-							onMouseOver={handleMouseOver}
-							onMouseOut={handleMouseOut}
 							className="doctor-image"
-							src={doctorImg}
+							src={require("../public/shutterstock_1498270505.jpg")}
 							alt=""
 							name="yasin"
 						/>
@@ -705,11 +702,9 @@ const Index = (props) => {
 					<div className="doctor-wrapper">
 						<img
 							className="doctor-image"
-							src={doctorImg}
+							src={require("../public/shutterstock_1498270505.jpg")}
 							alt=""
 							name="sevil"
-							onMouseOver={handleMouseOver}
-							onMouseOut={handleMouseOut}
 						/>
 						<Link href="/about#dr-sevil-akgul">
 							<a className="doctor-link">Spec. Dr. Sevil Akgül</a>
@@ -719,11 +714,9 @@ const Index = (props) => {
 					<div className="doctor-wrapper">
 						<img
 							className="doctor-image"
-							src={doctorImg}
+							src={require("../public/shutterstock_1498270505.jpg")}
 							alt=""
 							name="yavuz"
-							onMouseOver={handleMouseOver}
-							onMouseOut={handleMouseOut}
 						/>
 						<Link href="/about#dr-yavuz-eker">
 							<a className="doctor-link">Dr. Yavuz Eker</a>
@@ -779,83 +772,137 @@ const Index = (props) => {
 						itemClass="carousel-item-padding-40-px"
 					>
 						<picture className="carouselPaper-item">
-							<source srcSet="/patient-pictures/patient-1-img.webp" type="image/webp" />
-							<source srcSet="/patient-pictures/patient-1-img.jpg" type="image/jpeg" />
+							<source
+								srcSet={require("../public/patient-pictures/patient-1-img.webp")}
+								type="image/webp"
+							/>
+							<source
+								srcSet={require("../public/patient-pictures/patient-1-img.jpg")}
+								type="image/jpeg"
+							/>
 							<img
 								className={classes.patientImg}
-								src="/patient-pictures/patient-1-img.jpg"
+								src={require("../public/patient-pictures/patient-1-img.jpg")}
 								alt="Patient Image 1"
 							/>
 						</picture>
 						<picture className="carouselPaper-item">
-							<source srcSet="/patient-pictures/patient-2-img.webp" type="image/webp" />
-							<source srcSet="/patient-pictures/patient-2-img.jpg" type="image/jpeg" />
+							<source
+								srcSet={require("../public/patient-pictures/patient-2-img.webp")}
+								type="image/webp"
+							/>
+							<source
+								srcSet={require("../public/patient-pictures/patient-2-img.jpg")}
+								type="image/jpeg"
+							/>
 							<img
 								className={classes.patientImg}
-								src="/patient-pictures/patient-2-img.jpg"
+								src={require("../public/patient-pictures/patient-2-img.jpg")}
 								alt="Patient Image 2"
 							/>
 						</picture>
 						<picture className="carouselPaper-item">
-							<source srcSet="/patient-pictures/patient-3-img.webp" type="image/webp" />
-							<source srcSet="/patient-pictures/patient-3-img.jpg" type="image/jpeg" />
+							<source
+								srcSet={require("../public/patient-pictures/patient-3-img.webp")}
+								type="image/webp"
+							/>
+							<source
+								srcSet={require("../public/patient-pictures/patient-3-img.jpg")}
+								type="image/jpeg"
+							/>
 							<img
 								className={classes.patientImg}
-								src="/patient-pictures/patient-3-img.jpg"
+								src={require("../public/patient-pictures/patient-3-img.jpg")}
 								alt="Patient Image 3"
 							/>
 						</picture>
 						<picture className="carouselPaper-item">
-							<source srcSet="/patient-pictures/patient-4-img.webp" type="image/webp" />
-							<source srcSet="/patient-pictures/patient-4-img.jpg" type="image/jpeg" />
+							<source
+								srcSet={require("../public/patient-pictures/patient-4-img.webp")}
+								type="image/webp"
+							/>
+							<source
+								srcSet={require("../public/patient-pictures/patient-4-img.jpg")}
+								type="image/jpeg"
+							/>
 							<img
 								className={classes.patientImg}
-								src="/patient-pictures/patient-4-img.jpg"
+								src={require("../public/patient-pictures/patient-4-img.jpg")}
 								alt="Patient Image 4"
 							/>
 						</picture>
 						<picture className="carouselPaper-item">
-							<source srcSet="/patient-pictures/patient-5-img.webp" type="image/webp" />
-							<source srcSet="/patient-pictures/patient-5-img.jpg" type="image/jpeg" />
+							<source
+								srcSet={require("../public/patient-pictures/patient-5-img.webp")}
+								type="image/webp"
+							/>
+							<source
+								srcSet={require("../public/patient-pictures/patient-5-img.jpg")}
+								type="image/jpeg"
+							/>
 							<img
 								className={classes.patientImg}
-								src="/patient-pictures/patient-5-img.jpg"
+								src={require("../public/patient-pictures/patient-5-img.jpg")}
 								alt="Patient Image 5"
 							/>
 						</picture>
 						<picture className="carouselPaper-item">
-							<source srcSet="/patient-pictures/patient-6-img.webp" type="image/webp" />
-							<source srcSet="/patient-pictures/patient-6-img.jpg" type="image/jpeg" />
+							<source
+								srcSet={require("../public/patient-pictures/patient-6-img.webp")}
+								type="image/webp"
+							/>
+							<source
+								srcSet={require("../public/patient-pictures/patient-6-img.jpg")}
+								type="image/jpeg"
+							/>
 							<img
 								className={classes.patientImg}
-								src="/patient-pictures/patient-6-img.jpg"
+								src={require("../public/patient-pictures/patient-6-img.jpg")}
 								alt="Patient Image 6"
 							/>
 						</picture>
 						<picture className="carouselPaper-item">
-							<source srcSet="/patient-pictures/patient-7-img.webp" type="image/webp" />
-							<source srcSet="/patient-pictures/patient-7-img.jpg" type="image/jpeg" />
+							<source
+								srcSet={require("../public/patient-pictures/patient-7-img.webp")}
+								type="image/webp"
+							/>
+							<source
+								srcSet={require("../public/patient-pictures/patient-7-img.jpg")}
+								type="image/jpeg"
+							/>
 							<img
 								className={classes.patientImg}
-								src="/patient-pictures/patient-7-img.jpg"
+								src={require("../public/patient-pictures/patient-7-img.jpg")}
 								alt="Patient Image 7"
 							/>
 						</picture>
 						<picture className="carouselPaper-item">
-							<source srcSet="/patient-pictures/patient-8-img.webp" type="image/webp" />
-							<source srcSet="/patient-pictures/patient-8-img.jpg" type="image/jpeg" />
+							<source
+								srcSet={require("../public/patient-pictures/patient-8-img.webp")}
+								type="image/webp"
+							/>
+							<source
+								srcSet={require("../public/patient-pictures/patient-8-img.jpg")}
+								type="image/jpeg"
+							/>
 							<img
 								className={classes.patientImg}
-								src="/patient-pictures/patient-8-img.jpg"
+								src={require("../public/patient-pictures/patient-8-img.jpg")}
 								alt="Patient Image 8"
 							/>
 						</picture>
 						<picture className="carouselPaper-item">
-							<source srcSet="/patient-pictures/patient-9-img.webp" type="image/webp" />
-							<source srcSet="/patient-pictures/patient-9-img.jpg" type="image/jpeg" />
+							<source
+								srcSet={require("../public/patient-pictures/patient-9-img.webp")}
+								type="image/webp"
+							/>
+							<source
+								srcSet={require("../public/patient-pictures/patient-9-img.jpg")}
+								type="image/jpeg"
+							/>
 							<img
 								className={classes.patientImg}
-								src="/patient-pictures/patient-9-img.jpg"
+								src={require("../public/patient-pictures/patient-9-img.jpg")}
 								alt="Patient Image 9"
 							/>
 						</picture>
@@ -1094,11 +1141,11 @@ const Index = (props) => {
 
 			<style jsx>{`
 				:global(.webp) .hero-image-div {
-					background-image: url("/hero-image.webp");
+					background-image: url(${require("../public/hero-image.webp")});
 				}
 
 				:global(.no-webp) .hero-image-div {
-					background-image: url("/hero-image.jpg");
+					background-image: url(${require("../public/hero-image.jpg")});
 				}
 
 				.hero-image-div {

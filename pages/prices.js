@@ -164,10 +164,10 @@ const Prices = () => {
 				}
 
 				:global(.webp) .calculator-img-div {
-					background-image: url("/prices-page/teeth-and-calculator-img.webp");
+					background-image: url(${require("../public/prices-page/teeth-and-calculator-img.webp")});
 				}
 				:global(.no-webp) .calculator-img-div {
-					background-image: url("/prices-page/teeth-and-calculator-img.jpg");
+					background-image: url(${require("../public/prices-page/teeth-and-calculator-img.jpg")});
 				}
 
 				.calculator-img-div {

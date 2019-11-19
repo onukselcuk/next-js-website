@@ -137,10 +137,10 @@ const Contact = () => {
 					width: 100%;
 				}
 				:global(.webp) .atakoy-towers-img-div {
-					background-image: url("/contact-page/atakoy-towers-night-img.webp");
+					background-image: url(${require("../public/contact-page/atakoy-towers-night-img.webp")});
 				}
 				:global(.no-webp) .atakoy-towers-img-div {
-					background-image: url("/contact-page/atakoy-towers-night-img.jpg");
+					background-image: url(${require("../public/contact-page/atakoy-towers-night-img.jpg")});
 				}
 
 				.atakoy-towers-img-div {
@@ -218,10 +218,10 @@ const Contact = () => {
 				}
 
 				:global(.webp) .contact-us-left-div {
-					background-image: url("/contact-page/atakoy-towers-entrance-img.webp");
+					background-image: url(${require("../public/contact-page/atakoy-towers-entrance-img.webp")});
 				}
 				:global(.no-webp) .contact-us-left-div {
-					background-image: url("/contact-page/atakoy-towers-entrance-img.jpg");
+					background-image: url(${require("../public/contact-page/atakoy-towers-entrance-img.jpg")});
 				}
 
 				.contact-us-left-div {

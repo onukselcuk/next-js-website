@@ -21,7 +21,7 @@ const About = () => {
 						</p>
 					</div>
 					<div className="clinic-image-wrapper">
-						<img className="clinic-image" src="/clinic-image.jpg" alt="" />
+						<img className="clinic-image" src={require("../public/clinic-image.jpg")} alt="" />
 					</div>
 				</section>
 				<section id="dr-yasin-akgul" className="your-privileges-section">
@@ -108,7 +108,7 @@ const About = () => {
 						width: 100%;
 					}
 					.clinic-entrance-img-div {
-						background-image: url("/about-page/isc-entrance-img.jpg");
+						background-image: url(${require("../public/about-page/isc-entrance-img.jpg")});
 						width: 100%;
 						height: 55vh;
 						background-repeat: no-repeat;
@@ -239,15 +239,15 @@ const About = () => {
 					}
 
 					.privilege-image-1 {
-						background-image: url("/shutterstock_1498270505.jpg");
+						background-image: url(${require("../public/shutterstock_1498270505.jpg")});
 					}
 
 					.privilege-image-2 {
-						background-image: url("/stock-photo-beautiful-family-of-mother-and-daughter-together-at-home-smiling-confident-showing-and-pointing-1254258604.jpg");
+						background-image: url(${require("../public/stock-photo-beautiful-family-of-mother-and-daughter-together-at-home-smiling-confident-showing-and-pointing-1254258604.jpg")});
 					}
 
 					.privilege-image-3 {
-						background-image: url("/privileges-page/schedule-an-appointment-img.jpg");
+						background-image: url(${require("../public/privileges-page/schedule-an-appointment-img.jpg")});
 					}
 
 					.privilege-explanation-div {

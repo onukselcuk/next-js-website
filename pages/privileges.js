@@ -295,10 +295,10 @@ const Privileges = () => {
 					}
 
 					:global(.webp) .privilege-vip-img-div {
-						background-image: url("/privileges-page/vip-intro-img.webp");
+						background-image: url(${require("../public/privileges-page/vip-intro-img.webp")});
 					}
 					:global(.no-webp) .privilege-vip-img-div {
-						background-image: url("/privileges-page/vip-intro-img.jpg");
+						background-image: url(${require("../public/privileges-page/vip-intro-img.jpg")});
 					}
 
 					.privilege-vip-img-div {
@@ -392,41 +392,41 @@ const Privileges = () => {
 					}
 
 					:global(.webp) .privilege-image-1 {
-						background-image: url("/privileges-page/contact-us-img.webp");
+						background-image: url(${require("../public/privileges-page/contact-us-img.webp")});
 					}
 					:global(.no-webp) .privilege-image-1 {
-						background-image: url("/privileges-page/contact-us-img.jpg");
+						background-image: url(${require("../public/privileges-page/contact-us-img.jpg")});
 					}
 
 					:global(.webp) .privilege-image-2 {
-						background-image: url("/privileges-page/video-call-img.webp");
+						background-image: url(${require("../public/privileges-page/video-call-img.webp")});
 					}
 					:global(.no-webp) .privilege-image-2 {
-						background-image: url("/privileges-page/video-call-img.jpg");
+						background-image: url(${require("../public/privileges-page/video-call-img.jpg")});
 					}
 
 					.privilege-image-2 {
 						background-position: right 50% bottom 55%;
 					}
 					:global(.webp) .privilege-image-3 {
-						background-image: url("/privileges-page/schedule-an-appointment-img.webp");
+						background-image: url(${require("../public/privileges-page/schedule-an-appointment-img.webp")});
 					}
 					:global(.no-webp) .privilege-image-3 {
-						background-image: url("/privileges-page/schedule-an-appointment-img.jpg");
+						background-image: url(${require("../public/privileges-page/schedule-an-appointment-img.jpg")});
 					}
 
 					:global(.webp) .privilege-image-4 {
-						background-image: url("/privileges-page/hotel-booking-img.webp");
+						background-image: url(${require("../public/privileges-page/hotel-booking-img.webp")});
 					}
 					:global(.no-webp) .privilege-image-4 {
-						background-image: url("/privileges-page/hotel-booking-img.jpg");
+						background-image: url(${require("../public/privileges-page/hotel-booking-img.jpg")});
 					}
 
 					:global(.webp) .privilege-image-5 {
-						background-image: url("/privileges-page/istanbul-arrival-collage-img.webp");
+						background-image: url(${require("../public/privileges-page/istanbul-arrival-collage-img.webp")});
 					}
 					:global(.no-webp) .privilege-image-5 {
-						background-image: url("/privileges-page/istanbul-arrival-collage-img.jpg");
+						background-image: url(${require("../public/privileges-page/istanbul-arrival-collage-img.jpg")});
 					}
 
 					.privilege-image-5 {
@@ -435,10 +435,10 @@ const Privileges = () => {
 					}
 
 					:global(.webp) .privilege-image-6 {
-						background-image: url("/privileges-page/your-treatment-img.webp");
+						background-image: url(${require("../public/privileges-page/your-treatment-img.webp")});
 					}
 					:global(.no-webp) .privilege-image-6 {
-						background-image: url("/privileges-page/your-treatment-img.jpg");
+						background-image: url(${require("../public/privileges-page/your-treatment-img.jpg")});
 					}
 
 					.privilege-image-6 {
@@ -446,14 +446,14 @@ const Privileges = () => {
 					}
 
 					.privilege-image-7 {
-						background-image: url("/privileges-page/istanbul-holiday-collage.jpg");
+						background-image: url(${require("../public/privileges-page/istanbul-holiday-collage.jpg")});
 						height: 700px;
 						background-color: ${sTheme.palette.secondary.main};
 						background-position: center;
 					}
 
 					.privilege-image-8 {
-						background-image: url("/privileges-page/stock-photo-young-woman-at-the-airport-is-rushing-to-customs-control-behind-the-back-of-the-passenger-is-a-714368362.jpg");
+						background-image: url(${require("../public/privileges-page/stock-photo-young-woman-at-the-airport-is-rushing-to-customs-control-behind-the-back-of-the-passenger-is-a-714368362.jpg")});
 						background-position: right 60% bottom 50%;
 					}
 
