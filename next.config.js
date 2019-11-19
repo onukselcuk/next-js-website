@@ -11,7 +11,8 @@ module.exports = withPlugins(
 		[
 			optimizedImages,
 			{
-				imagesPublicPath: dev ? "/_next/static/images/" : "https://dvmbzs0q2ij2d.cloudfront.net"
+				imagesPublicPath: dev ? "/_next/static/images/" : "https://dvmbzs0q2ij2d.cloudfront.net",
+				optimizeImages: false
 			}
 		],
 		withCSS,
