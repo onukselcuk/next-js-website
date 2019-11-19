@@ -26,10 +26,9 @@ class MyDocument extends Document {
 					/>
 					{/* PWA primary color */}
 					<meta name="theme-color" content={theme.palette.primary.main} />
-					<link
-						href="https://fonts.googleapis.com/css?family=Laila:400,700|Nunito:400,700&display=swap"
-						rel="stylesheet"
-					/>
+					<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+					<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+					<link rel="preconnect" href="https://embed.tawk.to" crossorigin />
 					<link rel="icon" type="image/png" href="/favicon/favicon.png" />
 				</Head>
 				<body>
@@ -39,6 +38,8 @@ class MyDocument extends Document {
 					<NextScript />
 					{/* Tawk Script */}
 					<script type="text/javascript" src="/scripts/tawkScript.js" />
+					{/* Google Font Non-Blocking Script */}
+					<script type="text/javascript" src="/scripts/non-blocking-google-font.js" />
 				</body>
 			</html>
 		);
