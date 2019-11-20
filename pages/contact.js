@@ -1,4 +1,5 @@
 import sTheme from "../src/styledTheme";
+import Head from "next/head";
 import Form from "../components/Form";
 import { makeStyles } from "@material-ui/core/styles";
 import sizes from "../src/sizes";
@@ -29,11 +30,18 @@ const useStyles = makeStyles((theme) => ({
 const Contact = () => {
 	const classes = useStyles();
 	const handleChat = () => {
-		Tawk_API.maximize();
+		if (typeof Tawk_API !== "undefined") {
+			Tawk_API.maximize();
+		}
 	};
 
 	return (
 		<React.Fragment>
+			<Head>
+				<title key="title">
+					Contact Us - 7/24 Instant Communication | Istanbul Smile Center | Let's Make Your Smile Perfect
+				</title>
+			</Head>
 			<section className="atakoy-towers-img-section">
 				<div className="atakoy-towers-img-div" />
 			</section>

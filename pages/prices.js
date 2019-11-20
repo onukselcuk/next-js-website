@@ -63,14 +63,16 @@ const Prices = () => {
 	};
 
 	const handleChat = () => {
-		Tawk_API.maximize();
+		if (typeof Tawk_API !== "undefined") {
+			Tawk_API.maximize();
+		}
 	};
 
 	return (
 		<div className="root">
 			<Head>
 				<title key="title">
-					Dental Prices & Cost Calculator - Transparent Pricing | Istanbul Smile Center | Let's Make Your
+					Our Prices & Dental Cost Calculator - Transparent Pricing | Istanbul Smile Center | Let's Make Your
 					Smile Perfect
 				</title>
 			</Head>

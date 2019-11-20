@@ -1,6 +1,6 @@
 import sTheme from "../src/styledTheme";
 import Link from "next/link";
-import Form from "../components/Form";
+import Head from "next/head";
 import { makeStyles } from "@material-ui/core/styles";
 import sizes from "../src/sizes";
 import { faGlobe, faComments, faFileSignature, faAt, faHome } from "@fortawesome/free-solid-svg-icons";
@@ -36,11 +36,16 @@ const useStyles = makeStyles((theme) => ({
 const thankYou = () => {
 	const classes = useStyles();
 	const handleChat = () => {
-		Tawk_API.maximize();
+		if (typeof Tawk_API !== "undefined") {
+			Tawk_API.maximize();
+		}
 	};
 
 	return (
 		<React.Fragment>
+			<Head>
+				<title key="title">Thank You | Istanbul Smile Center | Let's Make Your Smile Perfect</title>
+			</Head>
 			<section className="atakoy-towers-img-section">
 				<div className="atakoy-towers-img-div" />
 			</section>
@@ -209,11 +214,6 @@ const thankYou = () => {
 					font-size: 3rem;
 				}
 
-				.contact-us-location-paragraph {
-					margin-left: 4.8rem;
-					max-width: 500px;
-				}
-
 				.paragraph {
 					font-size: 2rem;
 					color: ${sTheme.palette.primary.main};
@@ -271,12 +271,6 @@ const thankYou = () => {
 						flex-direction: column;
 						padding-bottom: .5rem;
 					}
-					.contact-us-left-div {
-						height: 400px;
-						width: 100%;
-						border-radius: 0;
-						background-size: contain;
-					}
 
 					.contact-us-right-div {
 						width: 100%;
@@ -284,36 +278,6 @@ const thankYou = () => {
 						text-align: center;
 						border: none;
 						border-radius: 0;
-					}
-					.contact-us-location-paragraph {
-						text-align: center;
-						margin-left: 0;
-					}
-					.contact-us-clinic-name {
-						text-align: center;
-					}
-					.form-section {
-						background-color: ${sTheme.palette.secondary.main};
-						margin-top: -10px;
-						padding-top: 2rem;
-						padding-bottom: 2rem;
-					}
-				}
-				@media (max-width: ${sizes.sizes.xs}) {
-					.contact-us-left-div {
-						height: 300px;
-					}
-				}
-
-				@media (max-width: ${sizes.sizes.xxs}) {
-					.contact-us-left-div {
-						height: 250px;
-					}
-				}
-
-				@media (max-width: ${sizes.sizes.xxxs}) {
-					.contact-us-left-div {
-						height: 200px;
 					}
 				}
 

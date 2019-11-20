@@ -320,7 +320,9 @@ const Index = (props) => {
 	};
 
 	const handleChat = () => {
-		Tawk_API.maximize();
+		if (typeof Tawk_API !== "undefined") {
+			Tawk_API.maximize();
+		}
 	};
 
 	return (

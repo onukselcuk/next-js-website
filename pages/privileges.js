@@ -49,14 +49,17 @@ const Privileges = () => {
 	const classes = useStyles();
 
 	const handleChat = () => {
-		Tawk_API.maximize();
+		if (typeof Tawk_API !== "undefined") {
+			Tawk_API.maximize();
+		}
 	};
 
 	return (
 		<React.Fragment>
 			<Head>
 				<title key="title">
-					Patient Privileges & Itinerary | Istanbul Smile Center | Let's Make Your Smile Perfect
+					Patient Privileges & Itinerary | VIP Treatment | Istanbul Smile Center | Let's Make Your Smile
+					Perfect
 				</title>
 			</Head>
 			<section className="your-privileges-section">

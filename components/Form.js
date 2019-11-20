@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import Paper from "@material-ui/core/Paper";
 import TextField from "@material-ui/core/TextField";
 import MenuItem from "@material-ui/core/MenuItem";
@@ -338,6 +339,7 @@ const override = `
 
 const Form = () => {
 	const classes = useStyles();
+	const router = useRouter();
 
 	const [ formData, setFormData ] = useState({
 		title: "Select Your Title",
@@ -477,6 +479,7 @@ const Form = () => {
 				setLoading(false);
 				setPerfectSmileState(false);
 				setGetReadyState(true);
+				router.push("/thank-you");
 			} else if (!response.data.success) {
 				setSpinnerWrapperState(false);
 				setLoading(false);

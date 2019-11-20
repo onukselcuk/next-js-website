@@ -1,6 +1,6 @@
 import sTheme from "../src/styledTheme";
 import Link from "next/link";
-import Form from "../components/Form";
+import Head from "next/head";
 import { makeStyles } from "@material-ui/core/styles";
 import sizes from "../src/sizes";
 import { faGlobe, faComments, faFileSignature, faAt, faHome } from "@fortawesome/free-solid-svg-icons";
@@ -36,17 +36,22 @@ const useStyles = makeStyles((theme) => ({
 const thankYou = () => {
 	const classes = useStyles();
 	const handleChat = () => {
-		Tawk_API.maximize();
+		if (typeof Tawk_API !== "undefined") {
+			Tawk_API.maximize();
+		}
 	};
 
 	return (
 		<React.Fragment>
+			<Head>
+				<title key="title">Oops.. 404 Error | Istanbul Smile Center | Let's Make Your Smile Perfect</title>
+			</Head>
 			<section className="atakoy-towers-img-section">
 				<div className="atakoy-towers-img-div" />
 			</section>
 			<section className="contact-us-section-section">
 				<div className="our-services-header">
-					<h1 className="our-services-header-text">404 Error Oops...</h1>
+					<h1 className="our-services-header-text">Oops... 404 Error</h1>
 
 					<p className="our-services-header-paragraph-text">Sorry this page doesn't exist</p>
 					<p className="paragraph home-link">
@@ -203,11 +208,6 @@ const thankYou = () => {
 					font-size: 3rem;
 				}
 
-				.contact-us-location-paragraph {
-					margin-left: 4.8rem;
-					max-width: 500px;
-				}
-
 				.paragraph {
 					font-size: 2rem;
 					color: ${sTheme.palette.primary.main};
@@ -265,12 +265,6 @@ const thankYou = () => {
 						flex-direction: column;
 						padding-bottom: .5rem;
 					}
-					.contact-us-left-div {
-						height: 400px;
-						width: 100%;
-						border-radius: 0;
-						background-size: contain;
-					}
 
 					.contact-us-right-div {
 						width: 100%;
@@ -279,45 +273,24 @@ const thankYou = () => {
 						border: none;
 						border-radius: 0;
 					}
-					.contact-us-location-paragraph {
-						text-align: center;
-						margin-left: 0;
-					}
-					.contact-us-clinic-name {
-						text-align: center;
-					}
-					.form-section {
-						background-color: ${sTheme.palette.secondary.main};
-						margin-top: -10px;
-						padding-top: 2rem;
-						padding-bottom: 2rem;
-					}
+
 					.atakoy-towers-img-div {
 						height: 50vh;
 					}
 				}
 				@media (max-width: ${sizes.sizes.xs}) {
-					.contact-us-left-div {
-						height: 300px;
-					}
 					.atakoy-towers-img-div {
 						height: 40vh;
 					}
 				}
 
 				@media (max-width: ${sizes.sizes.xxs}) {
-					.contact-us-left-div {
-						height: 250px;
-					}
 					.atakoy-towers-img-div {
 						height: 30vh;
 					}
 				}
 
 				@media (max-width: ${sizes.sizes.xxxs}) {
-					.contact-us-left-div {
-						height: 200px;
-					}
 					.atakoy-towers-img-div {
 						height: 25vh;
 					}

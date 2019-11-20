@@ -146,7 +146,9 @@ const useStyles = makeStyles((theme) => ({
 export default () => {
 	const classes = useStyles();
 	const handleChat = () => {
-		Tawk_API.maximize();
+		if (typeof Tawk_API !== "undefined") {
+			Tawk_API.maximize();
+		}
 	};
 	return (
 		<React.Fragment>

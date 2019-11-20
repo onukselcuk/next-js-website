@@ -1,10 +1,14 @@
 import sTheme from "../src/styledTheme";
 import sizes from "../src/sizes";
 import Form from "../components/Form";
+import Head from "next/head";
 
 const About = () => {
 	return (
 		<React.Fragment>
+			<Head>
+				<title key="title">About Us | Istanbul Smile Center | Let's Make Your Smile Perfect</title>
+			</Head>
 			<section className="about-us-whole-section">
 				<section className="clinic-entrance-img-section">
 					<div className="clinic-entrance-img-div" />
