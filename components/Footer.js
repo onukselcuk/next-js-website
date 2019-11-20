@@ -315,10 +315,10 @@ export default () => {
 						<a
 							target="_blank"
 							rel="noopener noreferrer"
-							href="https://wa.me/905309492470?text=Hi+Istanbul+Smile+Center.+I+have+a+question."
+							href="https://wa.me/905510413230?text=Hi%20Istanbul%20Smile%20Center"
 							className={clsx(classes.footerLink, classes.addressLink)}
 						>
-							Whatsapp: +90 530 949 24 70
+							WhatsApp: +90 551 041 32 30
 						</a>
 						<a href="/contact#form" className={clsx(classes.footerLink, classes.addressLink)}>
 							Send Us A Form

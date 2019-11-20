@@ -311,6 +311,7 @@ const Privileges = () => {
 
 					@media (max-width: ${sizes.sizes.mdsm}) {
 						.your-privileges-section {
+							margin-bottom: 0;
 							background-color: ${sTheme.palette.secondary.main};
 						}
 					}
@@ -445,15 +446,27 @@ const Privileges = () => {
 						background-position: right 10% bottom 40%;
 					}
 
-					.privilege-image-7 {
+					:global(.webp) .privilege-image-7 {
+						background-image: url(${require("../public/privileges-page/istanbul-holiday-collage.webp")});
+					}
+					:global(.no-webp) .privilege-image-7 {
 						background-image: url(${require("../public/privileges-page/istanbul-holiday-collage.jpg")});
+					}
+
+					.privilege-image-7 {
 						height: 700px;
 						background-color: ${sTheme.palette.secondary.main};
 						background-position: center;
 					}
 
+					:global(.webp) .privilege-image-8 {
+						background-image: url(${require("../public/privileges-page/departure-img.webp")});
+					}
+					:global(.no-webp) .privilege-image-8 {
+						background-image: url(${require("../public/privileges-page/departure-img.jpg")});
+					}
+
 					.privilege-image-8 {
-						background-image: url(${require("../public/privileges-page/stock-photo-young-woman-at-the-airport-is-rushing-to-customs-control-behind-the-back-of-the-passenger-is-a-714368362.jpg")});
 						background-position: right 60% bottom 50%;
 					}
 

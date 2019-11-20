@@ -1,10 +1,12 @@
 import sTheme from "../src/styledTheme";
+import Link from "next/link";
 import Form from "../components/Form";
 import { makeStyles } from "@material-ui/core/styles";
 import sizes from "../src/sizes";
-import { faMapMarkedAlt, faGlobe, faComments, faFileSignature, faAt } from "@fortawesome/free-solid-svg-icons";
+import { faGlobe, faComments, faFileSignature, faAt, faHome } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import clsx from "clsx";
 
 const useStyles = makeStyles((theme) => ({
 	fontAwesomeIcon: {
@@ -23,10 +25,15 @@ const useStyles = makeStyles((theme) => ({
 		[sizes.down("mdsm")]: {
 			marginRight: ".5rem"
 		}
+	},
+	fontAwesomeIconHome: {
+		marginRight: ".5rem",
+		width: "25px !important",
+		height: "25px"
 	}
 }));
 
-const Contact = () => {
+const thankYou = () => {
 	const classes = useStyles();
 	const handleChat = () => {
 		Tawk_API.maximize();
@@ -39,33 +46,21 @@ const Contact = () => {
 			</section>
 			<section className="contact-us-section-section">
 				<div className="our-services-header">
-					<h1 className="our-services-header-text">Contact Us</h1>
+					<h1 className="our-services-header-text">404 Error Oops...</h1>
 
-					<p className="our-services-header-paragraph-text">
-						Our clinic is located in prestigious, luxurious and spacious Ataköy Towers Plaza in Istanbul
-						Ataköy district. We have the shortest response time among all dental clinics. Day or night, you
-						can contact us through many channels, live chat, WhatsApp, form or email, whenever you need us
-						we are here.
+					<p className="our-services-header-paragraph-text">Sorry this page doesn't exist</p>
+					<p className="paragraph home-link">
+						<FontAwesomeIcon
+							className={clsx(classes.fontAwesomeIconSmall, classes.fontAwesomeIconHome)}
+							icon={faHome}
+						/>{" "}
+						<Link href="/">
+							<a className="contact-link home-page-link">Go to Home Page</a>
+						</Link>
 					</p>
 				</div>
 				<section className="contact-us-section">
-					<div className="contact-us-left-div" />
 					<div className="contact-us-right-div">
-						<h3 className="contact-us-small-header">
-							<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faMapMarkedAlt} /> Our Address
-						</h3>
-						<p className="contact-us-location-paragraph">
-							<a
-								className="contact-link contact-link-location"
-								target="_blank"
-								rel="noopener noreferrer"
-								href="https://www.google.com/maps/place/%C4%B0stanbul+Smile+Center+A%C4%9F%C4%B1z+ve+Di%C5%9F+Sa%C4%9Fl%C4%B1%C4%9F%C4%B1+Poliklini%C4%9Fi/@40.9914481,28.832006,17z/data=!3m1!4b1!4m5!3m4!1s0x14caa3147e2cba65:0xb6eaeab3d94bfd80!8m2!3d40.9914441!4d28.8341947"
-							>
-								Istanbul Smile Center Ağız ve Diş Sağlığı Kliniği<br />Ataköy 7-8-9-10. Kısım Mah.
-								Çobançeşme E-5 Yanyol Cad. Ataköy Towers B Blok No:20 Kat:1 Daire:24, 34212
-								Bakırköy/Istanbul/Turkey
-							</a>
-						</p>
 						<h3 className="contact-us-small-header">
 							<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faGlobe} /> International
 							Patients Department
@@ -108,47 +103,19 @@ const Contact = () => {
 					</div>
 				</section>
 			</section>
-			<section className="google-map-section">
-				<iframe
-					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.544768220102!2d28.832006015661566!3d40.991448128408756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa3147e2cba65%3A0xb6eaeab3d94bfd80!2sIstanbul%20Smile%20Center%20Dental%20Clinic!5e0!3m2!1sen!2str!4v1573457209825!5m2!1sen!2str"
-					width="100%"
-					height="450"
-					frameBorder="0"
-					style={{ border: 0 }}
-					allowFullScreen
-				/>
-			</section>
-			<section id="form" className="our-services-section form-section">
-				<div className="our-services-header">
-					<h2 className="our-services-header-text">Send Us A Form</h2>
-					<p className="our-services-header-paragraph-text">
-						Contacting us through live chat or WhatsApp is always the fastest way, but you may prefer
-						sending us a good old form. Tell us your dental needs, and don't forget to attach at least the
-						pictures of your teeth to the form.
-					</p>
-				</div>
-				<div className="form-wrapper">
-					<Form />
-				</div>
-			</section>
 
 			<style jsx>{`
 				.atakoy-towers-img-section {
 					width: 100%;
 				}
-				:global(.webp) .atakoy-towers-img-div {
-					background-image: url(${require("../public/contact-page/atakoy-towers-night-img.webp")});
-				}
-				:global(.no-webp) .atakoy-towers-img-div {
-					background-image: url(${require("../public/contact-page/atakoy-towers-night-img.jpg")});
-				}
 
 				.atakoy-towers-img-div {
+					background-image: url(${require("../public/error-page/stock-photo-studio-portrait-of-attractive-redhead-freckled-teenager-having-broad-smile-shrugging-her-shoulders-648905923.jpg")});
 					width: 100%;
-					height: 66vh;
+					height: 80vh;
 					background-repeat: no-repeat;
 					background-size: cover;
-					background-position: left 21% bottom 80%;
+					background-position: left 50% bottom 50%;
 					clip-path: ellipse(100% 100% at 50% 0%);
 				}
 
@@ -168,24 +135,25 @@ const Contact = () => {
 				.our-services-header-text {
 					font-family: ${sTheme.typography.serif};
 					color: ${sTheme.palette.primary.main};
-					font-size: 4rem;
+					font-size: 5rem;
 				}
 				@media (max-width: ${sizes.sizes.lg}) {
 					.our-services-header-text {
-						font-size: 3.5rem;
+						font-size: 4.5rem;
 					}
 				}
 
 				@media (max-width: ${sizes.sizes.md}) {
 					.our-services-header-text {
-						font-size: 3rem;
+						font-size: 4rem;
 					}
 				}
 
 				.our-services-header-paragraph-text {
 					color: ${sTheme.palette.secondary.dark};
-					font-size: 2rem;
+					font-size: 2.3rem;
 					width: 50%;
+					margin-bottom: 1.5rem;
 				}
 
 				@media (max-width: ${sizes.sizes.xl}) {
@@ -197,14 +165,14 @@ const Contact = () => {
 				@media (max-width: ${sizes.sizes.lg}) {
 					.our-services-header-paragraph-text {
 						width: 70%;
-						font-size: 1.8rem;
+						font-size: 2rem;
 					}
 				}
 
 				@media (max-width: ${sizes.sizes.md}) {
 					.our-services-header-paragraph-text {
 						width: 80%;
-						font-size: 1.6rem;
+						font-size: 1.8rem;
 					}
 				}
 
@@ -217,25 +185,11 @@ const Contact = () => {
 					padding-bottom: 1.5rem;
 				}
 
-				:global(.webp) .contact-us-left-div {
-					background-image: url(${require("../public/contact-page/atakoy-towers-entrance-img.webp")});
-				}
-				:global(.no-webp) .contact-us-left-div {
-					background-image: url(${require("../public/contact-page/atakoy-towers-entrance-img.jpg")});
-				}
-
-				.contact-us-left-div {
-					width: 50%;
-					border-radius: 20px;
-					background-size: cover;
-					background-repeat: no-repeat;
-					background-position: center;
-				}
 				.contact-us-right-div {
 					display: flex;
 					flex-direction: column;
 					justify-content: center;
-					width: 50%;
+					width: 40%;
 					padding: 2rem;
 					background-color: ${sTheme.palette.secondary.main};
 					border-radius: 20px;
@@ -338,10 +292,16 @@ const Contact = () => {
 						padding-top: 2rem;
 						padding-bottom: 2rem;
 					}
+					.atakoy-towers-img-div {
+						height: 50vh;
+					}
 				}
 				@media (max-width: ${sizes.sizes.xs}) {
 					.contact-us-left-div {
 						height: 300px;
+					}
+					.atakoy-towers-img-div {
+						height: 40vh;
 					}
 				}
 
@@ -349,11 +309,27 @@ const Contact = () => {
 					.contact-us-left-div {
 						height: 250px;
 					}
+					.atakoy-towers-img-div {
+						height: 30vh;
+					}
 				}
 
 				@media (max-width: ${sizes.sizes.xxxs}) {
 					.contact-us-left-div {
 						height: 200px;
+					}
+					.atakoy-towers-img-div {
+						height: 25vh;
+					}
+				}
+
+				.home-page-link {
+					font-size: 2.5rem;
+				}
+
+				@media (max-width: ${sizes.sizes.md}) {
+					.home-page-link {
+						font-size: 2rem;
 					}
 				}
 			`}</style>
@@ -361,4 +337,4 @@ const Contact = () => {
 	);
 };
 
-export default Contact;
+export default thankYou;
