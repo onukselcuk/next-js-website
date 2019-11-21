@@ -479,7 +479,7 @@ const Form = () => {
 				setLoading(false);
 				setPerfectSmileState(false);
 				setGetReadyState(true);
-				router.push("/thank-you");
+				router.replace("/thank-you");
 			} else if (!response.data.success) {
 				setSpinnerWrapperState(false);
 				setLoading(false);

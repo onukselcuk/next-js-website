@@ -21,7 +21,7 @@ const mailer = (name, email) => {
 			}
 			return nameArray.join(" ");
 		} else {
-			return string.charAt(0).toUpperCase() + string.split(1);
+			return string.charAt(0).toUpperCase() + string.slice(1);
 		}
 	}
 

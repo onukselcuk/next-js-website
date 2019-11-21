@@ -164,20 +164,13 @@ const Prices = () => {
 					margin-top: -5px;
 					padding-bottom: 4rem;
 				}
-
-				:global(.webp) .calculator-img-div {
-					background-image: url(${require("../public/prices-page/teeth-and-calculator-img.webp")});
-				}
-				:global(.no-webp) .calculator-img-div {
-					background-image: url(${require("../public/prices-page/teeth-and-calculator-img.jpg")});
-				}
-
 				.calculator-img-div {
-					height: 60vh;
+					background-image: url(${require("../public/prices-page/money-saving-img-220231984.jpg")});
+					height: 70vh;
 					width: 100%;
 					background-repeat: no-repeat;
 					background-size: cover;
-					background-position: bottom 50% right 60%;
+					background-position: bottom 50% right 40%;
 					clip-path: ellipse(100% 100% at 50% 0%);
 				}
 				.our-prices-header {
