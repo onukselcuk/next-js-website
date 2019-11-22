@@ -4,13 +4,12 @@ import { makeStyles } from "@material-ui/core/styles";
 import sizes from "../../src/sizes";
 import {
 	faStarOfLife,
-	faTooth,
 	faCalendarCheck,
 	faCalendarAlt,
 	faHeartbeat,
-	faHeart as faHeartFull
+	faHeart as faHeartFull,
+	faCrown
 } from "@fortawesome/free-solid-svg-icons";
-import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import CostCalculator from "../../components/CostCalculator";
 import Button from "@material-ui/core/Button";
@@ -103,7 +102,7 @@ const treatmentTemplate = () => {
 		<React.Fragment>
 			<Head>
 				<title key="title">
-					Dental Implants in Istanbul, Turkey | Istanbul Smile Center | Let's Make Your Smile Perfect
+					Dental Crowns in Istanbul, Turkey | Istanbul Smile Center | Let's Make Your Smile Perfect
 				</title>
 			</Head>
 			<section className="treatment-img-section">
@@ -111,13 +110,13 @@ const treatmentTemplate = () => {
 			</section>
 			<section className="treatment-section">
 				<div className="treatment-header">
-					<h1 className="treatment-header-text">Dental Implants</h1>
+					<h1 className="treatment-header-text">Dental Crowns</h1>
 				</div>
 				<section className="treatment-paragraph-section">
-					<DentalImplantsInIstanbul treatmentName="Implants" />
+					<DentalImplantsInIstanbul treatmentName="Crowns" />
 				</section>
 				<section className="treatment-paragraph-section">
-					<WhyChooseIsc treatmentName="implant" />
+					<WhyChooseIsc treatmentName="" />
 				</section>
 				<section className="our-prices-section cost-calculator-section">
 					<div className="our-prices-header">
@@ -155,34 +154,67 @@ const treatmentTemplate = () => {
 						<div className="treatment-general-text-side-div">
 							<h2 className="treatment-paragraph-header">
 								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faStarOfLife} /> What Are
-								Dental Implants?
+								Dental Crowns?
 							</h2>
 							<p className="treatment-paragraph">
-								The implant can be referred to as the screw-like structure made of titanium. Usually,
-								the missing teeth are filled with implants. The treatment begins with engraving of the
-								jawbone in the area of the tooth. This is done in a very simple way. A suitable implant
-								is selected according to the size of the location and placed in this area. There is
-								nothing to be afraid of the placement process. Unless there are extreme conditions, the
-								screws will be placed in the jawbone within 10 minutes. Following implant placement and
-								healing period, the upper part is mounted with porcelain, E-max, or zirconium crowns.
+								A crown is a cover that put over a tooth. The crown looks like a natural tooth. It can
+								make your smile perfect. There are mainly three types of crowns. These are Porcelain
+								Crowns, E-Max Crowns and Zirconium Crowns.
 							</p>
 						</div>
 						<div className="treatment-general-text-side-div">
 							<h2 className="treatment-paragraph-header">
-								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faStarOfLife} /> Who Is
-								Suitable For Implant Treatment?
+								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faStarOfLife} /> Who Needs
+								Dental Crowns?
 							</h2>
 							<p className="treatment-paragraph">
-								The main reason for implant treatment is missing teeth. Bone tissue and structure should
-								be suitable for the treatment. If there is a weakness in the bone structure, the bone
-								grafting is added to the area, and the structure is strengthened. This is very common.
-								In addition, implantation may be inconvenient if there are diseases or conditions such
-								as heart disease, diabetes, pregnancy, breastfeeding, hemophilia problems. Patients who
-								have health issues should consult their doctors before implant treatment. The patient is
-								expected to be able to tend to implant area after the procedure. Apart from these
-								exceptions, there is no circumstance to prevent dental implant treatment.
+								If you have a large cavity that is not suitable for filling or you had a root canal
+								treatment with amalgam filler or you want to make your smile perfect by covering a
+								discolored or badly shaped tooth, you may need dental crown treatment. Of course if you
+								had implants placed in your mouth, crowns are also placed on top of those implants.
 							</p>
 						</div>
+						<div className="treatment-general-text-side-div">
+							<h2 className="treatment-paragraph-header">
+								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faStarOfLife} /> Porcelain
+								Crowns
+							</h2>
+							<p className="treatment-paragraph">
+								Porcelain crowns are metal-supported. This makes the crown stronger than regular
+								porcelain. These are also extremely durable and generally used for rear teeth to handle
+								chewing pressure. However, porcelain crowns have low light transmittance and that is why
+								we do not recommend for front teeth. Porcelains used in the past years for classical
+								dental restorations may present some disadvantages in terms of durability. Zirconium and
+								E-max crowns designed to avoid these disadvantages have reached the desired resistance
+								level. These crowns are not only durable but also provide an ideal permeability.
+							</p>
+						</div>
+						<div className="treatment-general-text-side-div">
+							<h2 className="treatment-paragraph-header">
+								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faStarOfLife} /> Zirconium
+								Crowns
+							</h2>
+							<p className="treatment-paragraph">
+								Zirconium crowns are made from zirconium dioxide, a white powdered metal oxide combined
+								with ceramic. They are incredibly strong and perfect for not to crack. After deciding on
+								dental treatment, the process begins with modeling and screening. The measurements are
+								generated using digital methods. 3D digital scans produce the appropriate measurements
+								in a short time. Following the measurement, design and model formation are performed.
+								This stage, using a system called CAD CAM, involves the construction of blocks. After
+								construction, the color selection is made.
+							</p>
+						</div>
+						<div className="treatment-general-text-side-div">
+							<h2 className="treatment-paragraph-header">
+								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faStarOfLife} /> E-Max Crowns
+							</h2>
+							<p className="treatment-paragraph">
+								E-Max crowns are made from lithium disilicate ceramic. E-max crowns have incredible
+								translucency and look like natural teeth. However, zirconium crowns are slightly more
+								durable than E-Max crowns.
+							</p>
+						</div>
+
 						<div className="dental-treatments-buttons-div">
 							<Button
 								variant="contained"
@@ -196,18 +228,22 @@ const treatmentTemplate = () => {
 					</div>
 				</section>
 				<section className="treatment-paragraph-section">
-					<div className="treatment-paragraph-img-div-div">
-						<div className="treatment-paragraph-img-div treatment-paragraph-img-4" />
-					</div>
-					<div className="treatment-general-text-div">
+					<div className="treatment-general-text-div treatment-general-text-div-single">
 						<h2 className="treatment-paragraph-header">
-							<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faTooth} /> Implant Brands We Use
+							<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faStarOfLife} /> What Are The
+							Differences Between Zirconium and Porcelain Crowns?
 						</h2>
 						<p className="treatment-paragraph">
-							Implants should be very durable, comfortable, and aesthetic since they will be used for a
-							lifetime. In Istanbul Smile Center, our dentists use the best implant brands that are well
-							known and have worldwide use. Our implant brands are{" "}
-							<b> Straumann (Made in Switzerland ) </b> and <b> Hiossen (Made in the USA)</b>.
+							Porcelain crowns show a very thin and fragile structure. Metal bridges are also used to
+							prevent this fragility. Materials such as platinum or palladium will be preferred for
+							support. Porcelain teeth have become durable with developing methods but still produce a
+							short-term solution. Porcelain crowns are not preferred in long-term treatments.
+						</p>
+						<p className="treatment-paragraph">
+							Zirconium crown is a semi-metal and therefore it combines durability and sensitivity. The
+							permeability of zirconium is better than porcelain, so, the natural color of the tooth is
+							more easily captured. Zirconium crown also offers a longer life span compared to the
+							porcelain crown.
 						</p>
 						<div className="dental-treatments-buttons-div">
 							<Button
@@ -224,8 +260,8 @@ const treatmentTemplate = () => {
 				<section className="treatment-paragraph-section">
 					<div className="treatment-general-text-div treatment-general-text-div-double treatment-general-text-div-multiple">
 						<h2 className="treatment-paragraph-header treatment-process-header">
-							<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faCalendarCheck} /> Dental
-							Implant Treatment Process
+							<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faCalendarCheck} /> Dental Crown
+							Treatment Process
 						</h2>
 						<div className="treatment-general-text-side-div">
 							<h2 className="treatment-paragraph-header">
@@ -244,46 +280,42 @@ const treatmentTemplate = () => {
 						</div>
 						<div className="treatment-general-text-side-div">
 							<h2 className="treatment-paragraph-header">
-								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faHeartbeat} /> 2) Treatment
+								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faHeartbeat} /> 2) First
+								Visit
 							</h2>
 							<p className="treatment-paragraph">
 								On the day of your appointment with our clinic, you will be picked up by one of our
 								international patient coordinators right from your hotel. At the clinic, you will be
 								greeted by our doctors, and your treatment will start. Our doctor will initially examine
-								your teeth physically and take an X-Ray image. For implant patients, our doctors usually
-								request an MRI Image to be taken for perfect accuracy in implant locations. After the
-								tests, the diameter and length of the implant are selected, local anesthesia will be
-								applied, and the implant area will be prepared with dental burr. This process is not
-								painful and takes only 5-10 minutes per implant. Later, the implants will be placed, and
-								the upper sides of your gum will be stitched. After your treatment, you will be taken
-								back to your hotel.
+								your teeth physically and take measurements of your teeth for the crowns to be designed
+								with Computer Aided Design (CAD/CAM) software. Later the measurements are sent to the
+								lab for crowns to be designed. Then your your teeth are prepared for crowns. Our doctor
+								will reshape the teeth that the crowns will be placed. Later, you will be taken back to
+								your hotel.
 							</p>
 						</div>
 						<div className="treatment-general-text-side-div">
 							<h2 className="treatment-paragraph-header">
-								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faHeart} /> 3) Initial
-								Healing
+								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faHeartFull} /> 3) Trials
+								Visit
 							</h2>
 							<p className="treatment-paragraph">
-								After the implants are placed, an average period of waiting is about at least 4 or 5
-								days. After this period, stitches are removed. You can either stay here in Turkey and
-								come back to our clinic for stitch removal, or you can go back home and get the stitches
-								removed by a local dentist. But we usually suggest our patients to stay here and come
-								back to the clinic for a final check and stitch removal before you leave.
+								After the crowns are designed and made, you will visit our clinic. In this visit, our
+								doctor will place the crowns on your teeth temporarily so that our doctor can see if
+								they fit. Also in trials, you get the opportunity to see how the crowns look and feel.
+								During trials you can discuss the shape and color of the crowns to match them with your
+								other teeth for a natural look and smile. After the trials visit the lab will make the
+								last adjustments to the crowns.
 							</p>
 						</div>
 						<div className="treatment-general-text-side-div">
 							<h2 className="treatment-paragraph-header">
-								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faHeartFull} /> 4) Complete
-								Recovery
+								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faCrown} /> 4) Coronation :)
 							</h2>
 							<p className="treatment-paragraph">
-								Depending on your bone structure, age, and number of implants, you need to wait for 2 to
-								6 months to achieve complete recovery. This is crucial for the success of the treatment.
-								If there are specific conditions, this period may be reduced or increased. This period
-								must pass for the implant to bond with the bone to complete the healing process. After
-								recovery, you will need to come to our clinic for a second visit. In that visit, the
-								crowns are placed on the implants as the last stage of your treatment.
+								On this last visit, your crowns will be placed on your teeth permanently. We suggest
+								staying in Turkey for a day or two more, if you have time, so that you can try your
+								crowns and can come back to our clinic for a final check.
 							</p>
 						</div>
 						<div className="dental-treatments-buttons-div">
@@ -324,12 +356,12 @@ const treatmentTemplate = () => {
 				}
 
 				.treatment-img-div {
-					background-image: url(${require("../../public/treatments/dental-implants-page/dental-implant-intro-background-img.jpg")});
+					background-image: url(${require("../../public/treatments/dental-crowns-page/dental-crowns-intro-img-622399763.jpg")});
 					width: 100%;
-					height: 66vh;
+					height: 90vh;
 					background-repeat: no-repeat;
 					background-size: cover;
-					background-position: left 37% bottom 80%;
+					background-position: left 37% bottom 68%;
 					clip-path: ellipse(100% 100% at 50% 0%);
 				}
 
@@ -368,7 +400,6 @@ const treatmentTemplate = () => {
 					width: 65%;
 				}
 				.treatment-paragraph-img-div {
-					background-image: url(${require("../../public/treatments/dental-implants-page/istanbul-bosphorous-img.jpg")});
 					height: 300px;
 					border-top-left-radius: 20px;
 					border-top-right-radius: 20px;
@@ -379,22 +410,9 @@ const treatmentTemplate = () => {
 				}
 
 				.treatment-paragraph-img-3 {
-					background-image: url(${require("../../public/treatments/dental-implants-page/dental-implant-img.jpg")});
+					background-image: url(${require("../../public/treatments/dental-crowns-page/dental-crown-img.jpg")});
 					max-height: 750px;
-					height: 50vmax;
-					background-position: left 70% bottom 80%;
-				}
-
-				.treatment-paragraph-img-4 {
-					background-image: url(${require("../../public/treatments/dental-implants-page/implant-brands-img.jpg")});
-					height: 300px;
-					background-position: left 50% bottom 80%;
-				}
-
-				.treatment-paragraph-img-5 {
-					background-image: url(${require("../../public/treatments/dental-implants-page/affordable-prices-img-220231984.jpg")});
-					height: 40vmax;
-					max-height: 600px;
+					height: 35vmax;
 					background-position: left 60% bottom 80%;
 				}
 
@@ -407,6 +425,9 @@ const treatmentTemplate = () => {
 					padding: 3rem;
 					background-color: ${sTheme.palette.secondary.main};
 					margin-top: 0;
+				}
+				.treatment-general-text-div-single {
+					border-radius: 20px;
 				}
 
 				.treatment-general-text-div-double {
@@ -600,9 +621,6 @@ const treatmentTemplate = () => {
 					.treatment-paragraph-img-1 {
 						height: 250px;
 					}
-					.treatment-paragraph-img-4 {
-						height: 250px;
-					}
 				}
 
 				@media (max-width: ${sizes.sizes.sm}) {
@@ -611,9 +629,6 @@ const treatmentTemplate = () => {
 					}
 					.treatment-general-text-div {
 						padding: 2.5rem;
-					}
-					.treatment-paragraph-img-4 {
-						height: 200px;
 					}
 				}
 
@@ -633,17 +648,11 @@ const treatmentTemplate = () => {
 					.treatment-general-text-div {
 						text-align: center;
 					}
-					.treatment-paragraph-img-4 {
-						height: 175px;
-					}
 				}
 
 				@media (max-width: ${sizes.sizes.xxs}) {
 					.treatment-general-text-div {
 						padding: 2rem;
-					}
-					.treatment-paragraph-img-4 {
-						height: 100px;
 					}
 				}
 			`}</style>

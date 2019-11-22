@@ -4,11 +4,11 @@ import { makeStyles } from "@material-ui/core/styles";
 import sizes from "../../src/sizes";
 import {
 	faStarOfLife,
-	faTooth,
 	faCalendarCheck,
 	faCalendarAlt,
 	faHeartbeat,
-	faHeart as faHeartFull
+	faHeart as faHeartFull,
+	faChevronCircleRight
 } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -38,6 +38,7 @@ const useStyles = makeStyles((theme) => ({
 		position: "relative",
 		top: "3px",
 		marginRight: "1rem",
+		color: theme.palette.third.dark,
 		[sizes.down("lg")]: {
 			fontSize: "2.3rem"
 		},
@@ -103,7 +104,7 @@ const treatmentTemplate = () => {
 		<React.Fragment>
 			<Head>
 				<title key="title">
-					Dental Implants in Istanbul, Turkey | Istanbul Smile Center | Let's Make Your Smile Perfect
+					Dental Veneers in Istanbul, Turkey | Istanbul Smile Center | Let's Make Your Smile Perfect
 				</title>
 			</Head>
 			<section className="treatment-img-section">
@@ -111,13 +112,13 @@ const treatmentTemplate = () => {
 			</section>
 			<section className="treatment-section">
 				<div className="treatment-header">
-					<h1 className="treatment-header-text">Dental Implants</h1>
+					<h1 className="treatment-header-text">Dental Veneers</h1>
 				</div>
 				<section className="treatment-paragraph-section">
-					<DentalImplantsInIstanbul treatmentName="Implants" />
+					<DentalImplantsInIstanbul treatmentName="Veneers" />
 				</section>
 				<section className="treatment-paragraph-section">
-					<WhyChooseIsc treatmentName="implant" />
+					<WhyChooseIsc treatmentName="" />
 				</section>
 				<section className="our-prices-section cost-calculator-section">
 					<div className="our-prices-header">
@@ -155,60 +156,150 @@ const treatmentTemplate = () => {
 						<div className="treatment-general-text-side-div">
 							<h2 className="treatment-paragraph-header">
 								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faStarOfLife} /> What Are
-								Dental Implants?
+								Dental Veneers?
 							</h2>
 							<p className="treatment-paragraph">
-								The implant can be referred to as the screw-like structure made of titanium. Usually,
-								the missing teeth are filled with implants. The treatment begins with engraving of the
-								jawbone in the area of the tooth. This is done in a very simple way. A suitable implant
-								is selected according to the size of the location and placed in this area. There is
-								nothing to be afraid of the placement process. Unless there are extreme conditions, the
-								screws will be placed in the jawbone within 10 minutes. Following implant placement and
-								healing period, the upper part is mounted with porcelain, E-max, or zirconium crowns.
+								Leaf teeth, leaf porcelain, leaf veneer and similar names actually show the same
+								process. However, the most accurate explanation of this treatment is the veneer coating.
+								Veneer coating provides an effective solution against problems such as fracture on tooth
+								surfaces or deformations. Porcelains that offer a similar texture and a similar color to
+								the natural tooth are integrated into the front surfaces of the teeth. Perfectly matched
+								with other teeth, veneers are as durable as possible, although they appear
+								semi-permeable and thin.
+							</p>
+							<p className="treatment-paragraph">
+								Veneer coating can also be applied after the procedures such as implant treatment.
+								During the process, small abrasions are made on the tooth surfaces ranging from 0.3
+								millimeters to 0.5 millimeters. This ensures that healthy tooth tissue is not lost.
+							</p>
+							<p className="treatment-paragraph">
+								Conditions such as fractures or deformations due to traumas adversely affect dental
+								health. In addition, caries may occur if dental care is ignored. Veneer coating gives
+								perfect results to prevent negative conditions on the tooth such as breaking or
+								deforming.
+							</p>
+						</div>
+
+						<div className="treatment-general-text-side-div">
+							<h2 className="treatment-paragraph-header">
+								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faStarOfLife} /> What Are The
+								Advantages of Dental Veneers?
+							</h2>
+							<p className="treatment-paragraph">
+								<FontAwesomeIcon
+									className={classes.fontAwesomeIconCheck}
+									icon={faChevronCircleRight}
+								/>{" "}
+								Veneers are very close to the natural tooth. They are as durable as possible despite
+								their thin structure, so they can be used for a long time.
+							</p>
+							<p className="treatment-paragraph">
+								<FontAwesomeIcon
+									className={classes.fontAwesomeIconCheck}
+									icon={faChevronCircleRight}
+								/>{" "}
+								Neighboring teeth are not filed down. As a result of the scans performed on your teeth,
+								the model is determined and the created model is bonded directly onto the teeth.
+							</p>
+							<p className="treatment-paragraph">
+								<FontAwesomeIcon
+									className={classes.fontAwesomeIconCheck}
+									icon={faChevronCircleRight}
+								/>{" "}
+								You can choose veneers regardless of the number of teeth to be treated
+							</p>
+							<p className="treatment-paragraph">
+								<FontAwesomeIcon
+									className={classes.fontAwesomeIconCheck}
+									icon={faChevronCircleRight}
+								/>{" "}
+								The color of the veneers doesn't change over time.
+							</p>
+							<p className="treatment-paragraph">
+								<FontAwesomeIcon
+									className={classes.fontAwesomeIconCheck}
+									icon={faChevronCircleRight}
+								/>{" "}
+								Veneers are like natural teeth. You do not feel any difference during chewing
+							</p>
+							<p className="treatment-paragraph">
+								<FontAwesomeIcon
+									className={classes.fontAwesomeIconCheck}
+									icon={faChevronCircleRight}
+								/>{" "}
+								Veneers show high resistance to fracture
 							</p>
 						</div>
 						<div className="treatment-general-text-side-div">
 							<h2 className="treatment-paragraph-header">
-								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faStarOfLife} /> Who Is
-								Suitable For Implant Treatment?
+								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faStarOfLife} /> How Long
+								Does The Treatment Process Take?
 							</h2>
 							<p className="treatment-paragraph">
-								The main reason for implant treatment is missing teeth. Bone tissue and structure should
-								be suitable for the treatment. If there is a weakness in the bone structure, the bone
-								grafting is added to the area, and the structure is strengthened. This is very common.
-								In addition, implantation may be inconvenient if there are diseases or conditions such
-								as heart disease, diabetes, pregnancy, breastfeeding, hemophilia problems. Patients who
-								have health issues should consult their doctors before implant treatment. The patient is
-								expected to be able to tend to implant area after the procedure. Apart from these
-								exceptions, there is no circumstance to prevent dental implant treatment.
+								Veneer coating is considered as one of the fastest and easiest treatment processes among
+								aesthetic applications. Depending on the number and structure of the teeth to be coated,
+								the veneers can be completed in 2-3 visits.
 							</p>
 						</div>
-						<div className="dental-treatments-buttons-div">
-							<Button
-								variant="contained"
-								color="primary"
-								className={clsx(classes.regularButton, classes.pricesButton)}
-								onClick={handleChat}
-							>
-								Chat&nbsp;Now
-							</Button>
+						<div className="treatment-general-text-side-div">
+							<h2 className="treatment-paragraph-header">
+								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faStarOfLife} /> Who Needs
+								Dental Veneers?
+							</h2>
+							<p className="treatment-paragraph">
+								If you have one of the following conditions you may need dental veneer treatment.
+							</p>
+							<p className="treatment-paragraph">
+								<FontAwesomeIcon
+									className={classes.fontAwesomeIconCheck}
+									icon={faChevronCircleRight}
+								/>{" "}
+								A detachment between anterior teeth (front teeth)
+							</p>
+							<p className="treatment-paragraph">
+								<FontAwesomeIcon
+									className={classes.fontAwesomeIconCheck}
+									icon={faChevronCircleRight}
+								/>{" "}
+								Structural defects on tooth surfaces
+							</p>
+							<p className="treatment-paragraph">
+								<FontAwesomeIcon
+									className={classes.fontAwesomeIconCheck}
+									icon={faChevronCircleRight}
+								/>{" "}
+								Deformation of color
+							</p>
+							<p className="treatment-paragraph">
+								<FontAwesomeIcon
+									className={classes.fontAwesomeIconCheck}
+									icon={faChevronCircleRight}
+								/>{" "}
+								Aging of fillings
+							</p>
+							<p className="treatment-paragraph">
+								<FontAwesomeIcon
+									className={classes.fontAwesomeIconCheck}
+									icon={faChevronCircleRight}
+								/>{" "}
+								Yellow spots due to lack of care
+							</p>
+							<p className="treatment-paragraph">
+								<FontAwesomeIcon
+									className={classes.fontAwesomeIconCheck}
+									icon={faChevronCircleRight}
+								/>{" "}
+								Curved or skewed teeth
+							</p>
+							<p className="treatment-paragraph">
+								<FontAwesomeIcon
+									className={classes.fontAwesomeIconCheck}
+									icon={faChevronCircleRight}
+								/>{" "}
+								Restoration requirement for tooth fractures
+							</p>
 						</div>
-					</div>
-				</section>
-				<section className="treatment-paragraph-section">
-					<div className="treatment-paragraph-img-div-div">
-						<div className="treatment-paragraph-img-div treatment-paragraph-img-4" />
-					</div>
-					<div className="treatment-general-text-div">
-						<h2 className="treatment-paragraph-header">
-							<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faTooth} /> Implant Brands We Use
-						</h2>
-						<p className="treatment-paragraph">
-							Implants should be very durable, comfortable, and aesthetic since they will be used for a
-							lifetime. In Istanbul Smile Center, our dentists use the best implant brands that are well
-							known and have worldwide use. Our implant brands are{" "}
-							<b> Straumann (Made in Switzerland ) </b> and <b> Hiossen (Made in the USA)</b>.
-						</p>
+
 						<div className="dental-treatments-buttons-div">
 							<Button
 								variant="contained"
@@ -224,8 +315,8 @@ const treatmentTemplate = () => {
 				<section className="treatment-paragraph-section">
 					<div className="treatment-general-text-div treatment-general-text-div-double treatment-general-text-div-multiple">
 						<h2 className="treatment-paragraph-header treatment-process-header">
-							<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faCalendarCheck} /> Dental
-							Implant Treatment Process
+							<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faCalendarCheck} /> Dental Veneer
+							Treatment Process
 						</h2>
 						<div className="treatment-general-text-side-div">
 							<h2 className="treatment-paragraph-header">
@@ -244,46 +335,43 @@ const treatmentTemplate = () => {
 						</div>
 						<div className="treatment-general-text-side-div">
 							<h2 className="treatment-paragraph-header">
-								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faHeartbeat} /> 2) Treatment
+								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faHeartbeat} /> 2) First
+								Visit
 							</h2>
 							<p className="treatment-paragraph">
 								On the day of your appointment with our clinic, you will be picked up by one of our
 								international patient coordinators right from your hotel. At the clinic, you will be
 								greeted by our doctors, and your treatment will start. Our doctor will initially examine
-								your teeth physically and take an X-Ray image. For implant patients, our doctors usually
-								request an MRI Image to be taken for perfect accuracy in implant locations. After the
-								tests, the diameter and length of the implant are selected, local anesthesia will be
-								applied, and the implant area will be prepared with dental burr. This process is not
-								painful and takes only 5-10 minutes per implant. Later, the implants will be placed, and
-								the upper sides of your gum will be stitched. After your treatment, you will be taken
-								back to your hotel.
+								your teeth physically and take measurements of your teeth for the veneers to be designed
+								with Computer Aided Design (CAD/CAM) software. Later the measurements are sent to the
+								lab for veneers to be designed. Then your your teeth are prepared for veneers. Our
+								doctor will file down the teeth that the veneers will be placed very slightly
+								(0,3-0,5mm). (Veneers are going to be placed on the filed down teeth later when they are
+								ready) Later, you will be taken back to your hotel.
 							</p>
 						</div>
 						<div className="treatment-general-text-side-div">
 							<h2 className="treatment-paragraph-header">
-								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faHeart} /> 3) Initial
-								Healing
+								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faHeart} /> 3) Trials Visit
 							</h2>
 							<p className="treatment-paragraph">
-								After the implants are placed, an average period of waiting is about at least 4 or 5
-								days. After this period, stitches are removed. You can either stay here in Turkey and
-								come back to our clinic for stitch removal, or you can go back home and get the stitches
-								removed by a local dentist. But we usually suggest our patients to stay here and come
-								back to the clinic for a final check and stitch removal before you leave.
+								After the veneers are designed and made, you will visit our clinic. In this visit, our
+								doctor will place the veneers on your teeth temporarily so that our doctor can see if
+								they fit. Also in trials, you get the opportunity to see how the veneers look and feel.
+								During trials you can discuss the shape and color of the veneers to match them with your
+								other teeth for a natural look and smile. After the trials visit the lab will make the
+								final adjustments to the veneers.
 							</p>
 						</div>
 						<div className="treatment-general-text-side-div">
 							<h2 className="treatment-paragraph-header">
-								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faHeartFull} /> 4) Complete
-								Recovery
+								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faHeartFull} /> 4)
+								Finalization
 							</h2>
 							<p className="treatment-paragraph">
-								Depending on your bone structure, age, and number of implants, you need to wait for 2 to
-								6 months to achieve complete recovery. This is crucial for the success of the treatment.
-								If there are specific conditions, this period may be reduced or increased. This period
-								must pass for the implant to bond with the bone to complete the healing process. After
-								recovery, you will need to come to our clinic for a second visit. In that visit, the
-								crowns are placed on the implants as the last stage of your treatment.
+								On this last visit, your veneers will be placed on your teeth permanently. We suggest
+								staying in Turkey for a day or two more, if you have time, so that you can try your
+								veneers and can come back to our clinic for a final check.
 							</p>
 						</div>
 						<div className="dental-treatments-buttons-div">
@@ -324,12 +412,12 @@ const treatmentTemplate = () => {
 				}
 
 				.treatment-img-div {
-					background-image: url(${require("../../public/treatments/dental-implants-page/dental-implant-intro-background-img.jpg")});
+					background-image: url(${require("../../public/treatments/dental-veneers-page/dental-veneers-entrance-img-287811182.jpg")});
 					width: 100%;
-					height: 66vh;
+					height: 65vh;
 					background-repeat: no-repeat;
 					background-size: cover;
-					background-position: left 37% bottom 80%;
+					background-position: left 42% bottom 80%;
 					clip-path: ellipse(100% 100% at 50% 0%);
 				}
 
@@ -368,7 +456,6 @@ const treatmentTemplate = () => {
 					width: 65%;
 				}
 				.treatment-paragraph-img-div {
-					background-image: url(${require("../../public/treatments/dental-implants-page/istanbul-bosphorous-img.jpg")});
 					height: 300px;
 					border-top-left-radius: 20px;
 					border-top-right-radius: 20px;
@@ -379,23 +466,10 @@ const treatmentTemplate = () => {
 				}
 
 				.treatment-paragraph-img-3 {
-					background-image: url(${require("../../public/treatments/dental-implants-page/dental-implant-img.jpg")});
+					background-image: url(${require("../../public/treatments/dental-veneers-page/dental-veneers-img-572414821.jpg")});
 					max-height: 750px;
-					height: 50vmax;
-					background-position: left 70% bottom 80%;
-				}
-
-				.treatment-paragraph-img-4 {
-					background-image: url(${require("../../public/treatments/dental-implants-page/implant-brands-img.jpg")});
-					height: 300px;
-					background-position: left 50% bottom 80%;
-				}
-
-				.treatment-paragraph-img-5 {
-					background-image: url(${require("../../public/treatments/dental-implants-page/affordable-prices-img-220231984.jpg")});
-					height: 40vmax;
-					max-height: 600px;
-					background-position: left 60% bottom 80%;
+					height: 35vmax;
+					background-position: left 20% bottom 80%;
 				}
 
 				.treatment-general-text-div {
@@ -407,6 +481,9 @@ const treatmentTemplate = () => {
 					padding: 3rem;
 					background-color: ${sTheme.palette.secondary.main};
 					margin-top: 0;
+				}
+				.treatment-general-text-div-single {
+					border-radius: 20px;
 				}
 
 				.treatment-general-text-div-double {
@@ -536,10 +613,6 @@ const treatmentTemplate = () => {
 				}
 
 				@media (max-width: ${sizes.sizes.lg}) {
-					.treatment-img-div {
-						height: 60vh;
-					}
-
 					.treatment-paragraph-img-div-div,
 					.treatment-general-text-div {
 						width: 80%;
@@ -590,9 +663,6 @@ const treatmentTemplate = () => {
 				}
 
 				@media (max-width: ${sizes.sizes.mdsm}) {
-					.treatment-img-div {
-						height: 40vh;
-					}
 					.treatment-paragraph-img-div-div,
 					.treatment-general-text-div {
 						width: 100%;
@@ -600,26 +670,17 @@ const treatmentTemplate = () => {
 					.treatment-paragraph-img-1 {
 						height: 250px;
 					}
-					.treatment-paragraph-img-4 {
-						height: 250px;
-					}
 				}
 
 				@media (max-width: ${sizes.sizes.sm}) {
-					.treatment-img-div {
-						height: 30vh;
-					}
 					.treatment-general-text-div {
 						padding: 2.5rem;
-					}
-					.treatment-paragraph-img-4 {
-						height: 200px;
 					}
 				}
 
 				@media (max-width: ${sizes.sizes.xs}) {
 					.treatment-img-div {
-						height: 25vh;
+						height: 40vh;
 					}
 					.treatment-paragraph-img-1 {
 						height: 200px;
@@ -633,17 +694,11 @@ const treatmentTemplate = () => {
 					.treatment-general-text-div {
 						text-align: center;
 					}
-					.treatment-paragraph-img-4 {
-						height: 175px;
-					}
 				}
 
 				@media (max-width: ${sizes.sizes.xxs}) {
 					.treatment-general-text-div {
 						padding: 2rem;
-					}
-					.treatment-paragraph-img-4 {
-						height: 100px;
 					}
 				}
 			`}</style>

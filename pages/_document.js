@@ -27,7 +27,7 @@ class MyDocument extends Document {
 					{/* PWA primary color */}
 					<meta name="theme-color" content={theme.palette.primary.main} />
 					<link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="true" />
-					<link rel="preconnect" href="https://embed.tawk.to" crossOrigin="true" />
+					{/* <link rel="preconnect" href="https://embed.tawk.to" crossOrigin="true" /> */}
 					<link rel="icon" type="image/png" href={require("../public/favicon/favicon.png")} />
 					<link
 						href="https://fonts.googleapis.com/css?family=Laila:400,700|Nunito:400,700&display=swap"
@@ -40,7 +40,7 @@ class MyDocument extends Document {
 					<script type="text/javascript" src="/scripts/modernizr-custom.js" />
 					<NextScript />
 					{/* Tawk Live Script Script */}
-					<script type="text/javascript" src="/scripts/tawkScript.js" />
+					{/* <script type="text/javascript" src="/scripts/tawkScript.js" /> */}
 				</body>
 			</html>
 		);
