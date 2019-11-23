@@ -221,7 +221,7 @@ export default () => {
 									<div className={classes.fontAwesomeIconWrapper}>
 										<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faTooth} />
 									</div>
-									<Link href="/about">
+									<Link href="/treatments/dental-implants">
 										<a className={classes.footerLink}>Dental Implants</a>
 									</Link>
 								</div>
@@ -229,7 +229,7 @@ export default () => {
 									<div className={classes.fontAwesomeIconWrapper}>
 										<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faTooth} />
 									</div>
-									<Link href="/privileges">
+									<Link hhref="/treatments/dental-crowns">
 										<a className={classes.footerLink}>Dental Crowns</a>
 									</Link>
 								</div>
@@ -237,7 +237,7 @@ export default () => {
 									<div className={classes.fontAwesomeIconWrapper}>
 										<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faTooth} />
 									</div>
-									<Link href="/before-after">
+									<Link href="/treatments/dental-veneers">
 										<a className={classes.footerLink}>Dental Veneers</a>
 									</Link>
 								</div>
@@ -245,8 +245,8 @@ export default () => {
 									<div className={classes.fontAwesomeIconWrapper}>
 										<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faTooth} />
 									</div>
-									<Link href="/prices">
-										<a className={classes.footerLink}>Orthodontics</a>
+									<Link href="/treatments/invisalign">
+										<a className={classes.footerLink}>Invisalign</a>
 									</Link>
 								</div>
 							</div>
@@ -255,7 +255,7 @@ export default () => {
 									<div className={classes.fontAwesomeIconWrapper}>
 										<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faTooth} />
 									</div>
-									<Link href="/contact">
+									<Link href="/treatments/cosmetic-dentistry">
 										<a className={classes.footerLink}>Cosmetic Dentistry</a>
 									</Link>
 								</div>
@@ -263,7 +263,7 @@ export default () => {
 									<div className={classes.fontAwesomeIconWrapper}>
 										<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faTooth} />
 									</div>
-									<Link href="/contact">
+									<Link href="/treatments/pediatric-dentistry">
 										<a className={classes.footerLink}>Pediatric Dentistry</a>
 									</Link>
 								</div>
@@ -271,15 +271,15 @@ export default () => {
 									<div className={classes.fontAwesomeIconWrapper}>
 										<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faTooth} />
 									</div>
-									<Link href="/contact">
-										<a className={classes.footerLink}>Smile Makeover</a>
+									<Link href="/treatments/root-canal-treatment">
+										<a className={classes.footerLink}>Root Canal Treatment</a>
 									</Link>
 								</div>
 								<div className={clsx(classes.footerLinkDiv, classes.treatmentLinkDiv)}>
 									<div className={classes.fontAwesomeIconWrapper}>
 										<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faTooth} />
 									</div>
-									<Link href="/contact">
+									<Link href="/treatments/teeth-whitening">
 										<a className={classes.footerLink}>Teeth Whitening</a>
 									</Link>
 								</div>
@@ -348,6 +348,7 @@ export default () => {
 					>
 						Designed and Developed by onukDesign
 					</a>
+					<div />
 				</div>
 			</footer>
 		</React.Fragment>

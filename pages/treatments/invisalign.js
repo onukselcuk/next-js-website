@@ -2,15 +2,7 @@ import sTheme from "../../src/styledTheme";
 import Head from "next/head";
 import { makeStyles } from "@material-ui/core/styles";
 import sizes from "../../src/sizes";
-import {
-	faStarOfLife,
-	faTooth,
-	faCalendarCheck,
-	faCalendarAlt,
-	faHeartbeat,
-	faHeart as faHeartFull
-} from "@fortawesome/free-solid-svg-icons";
-import { faHeart } from "@fortawesome/free-regular-svg-icons";
+import { faStarOfLife, faChevronCircleRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import CostCalculator from "../../components/CostCalculator";
 import Button from "@material-ui/core/Button";
@@ -38,6 +30,7 @@ const useStyles = makeStyles((theme) => ({
 		position: "relative",
 		top: "3px",
 		marginRight: "1rem",
+		color: theme.palette.third.dark,
 		[sizes.down("lg")]: {
 			fontSize: "2.3rem"
 		},
@@ -103,8 +96,8 @@ const treatmentTemplate = () => {
 		<React.Fragment>
 			<Head>
 				<title key="title">
-					Dental Implants in Istanbul, Turkey | Dental Cost Calculator | Istanbul Smile Center | Let's Make
-					Your Smile Perfect
+					Invisalign in Istanbul, Turkey | Dental Cost Calculator | Istanbul Smile Center | Let's Make Your
+					Smile Perfect
 				</title>
 			</Head>
 			<section className="treatment-img-section">
@@ -112,13 +105,13 @@ const treatmentTemplate = () => {
 			</section>
 			<section className="treatment-section">
 				<div className="treatment-header">
-					<h1 className="treatment-header-text">Dental Implants</h1>
+					<h1 className="treatment-header-text">Invisalign</h1>
 				</div>
 				<section className="treatment-paragraph-section">
-					<DentalImplantsInIstanbul treatmentName="Dental Implants" />
+					<DentalImplantsInIstanbul treatmentName="Invisalign" />
 				</section>
 				<section className="treatment-paragraph-section">
-					<WhyChooseIsc treatmentName="implant" />
+					<WhyChooseIsc treatmentName="" />
 				</section>
 				<section className="our-prices-section cost-calculator-section">
 					<div className="our-prices-header">
@@ -149,41 +142,109 @@ const treatmentTemplate = () => {
 					</div>
 				</section>
 				<section className="treatment-paragraph-section">
-					<div className="treatment-paragraph-img-div-div">
-						<div className="treatment-paragraph-img-div treatment-paragraph-img-3" />
+					<div className="treatment-paragraph-img-div-div treatment-paragraph-img-2">
+						<iframe
+							width="100%"
+							height="100%"
+							src="https://www.youtube.com/embed/IBIAev9OX6U"
+							frameborder="0"
+							allow="accelerometer; encrypted-media; gyroscope;"
+							allowfullscreen
+						/>
 					</div>
 					<div className="treatment-general-text-div treatment-general-text-div-double treatment-general-text-div-double-extra ">
 						<div className="treatment-general-text-side-div">
 							<h2 className="treatment-paragraph-header">
-								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faStarOfLife} /> What Are
-								Dental Implants?
+								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faStarOfLife} /> What Is
+								Invisalign?
 							</h2>
 							<p className="treatment-paragraph">
-								The implant can be referred to as the screw-like structure made of titanium. Usually,
-								the missing teeth are filled with implants. The treatment begins with engraving of the
-								jawbone in the area of the tooth. This is done in a very simple way. A suitable implant
-								is selected according to the size of the location and placed in this area. There is
-								nothing to be afraid of the placement process. Unless there are extreme conditions, the
-								screws will be placed in the jawbone within 10 minutes. Following implant placement and
-								healing period, the upper part is mounted with porcelain, E-max, or zirconium crowns.
+								Invisalign aligners are used for alignment mismatches or positioning problems between
+								teeth. Plaques can be easily removed during the day. Invisalign aligners are an
+								alternative to metal braces for adults. Elimination of the braces have a positive impact
+								on the quality of daily life.
+							</p>
+							<p className="treatment-paragraph">
+								Metal braces which are frequently preferred, have been replaced by Invisalign over the
+								years. With Invisalign, you can enjoy all the benefits of metal braces. The main
+								advantage of Invisalign is that it is not visible from the outside, plaques are
+								transparent. Especially young patients may not enjoy the appearance of braces. This
+								disadvantage is gone with Invisalign.
+							</p>
+							<h2 className="treatment-paragraph-header">
+								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faStarOfLife} /> What Is The
+								Treatment Process?
+							</h2>
+							<p className="treatment-paragraph">
+								Before producing plaques, digital scanning is performed with iTero Element 2 (Original
+								3D Scanner Product of Invisalign) in our clinic. Our specialist orthodontist determines
+								the duration and the number of plaques needed for the treatment. Oral measurements are
+								taken and these measurements are transferred to partner Invisalign Lab. Tooth motions
+								are examined by simulation techniques and transparent plaques are produced for every 0.5
+								mm movement. After the Invisalign treatment is completed, wires are attached to the
+								inside of your teeth. However, these wires are quite thin and small, invisible from the
+								outside.
 							</p>
 						</div>
 						<div className="treatment-general-text-side-div">
 							<h2 className="treatment-paragraph-header">
-								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faStarOfLife} /> Who Is
-								Suitable For Implant Treatment?
+								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faStarOfLife} /> What Are The
+								Features of Invisalign?
 							</h2>
 							<p className="treatment-paragraph">
-								The main reason for implant treatment is missing teeth. Bone tissue and structure should
-								be suitable for the treatment. If there is a weakness in the bone structure, the bone
-								grafting is added to the area, and the structure is strengthened. This is very common.
-								In addition, implantation may be inconvenient if there are diseases or conditions such
-								as heart disease, diabetes, pregnancy, breastfeeding, hemophilia problems. Patients who
-								have health issues should consult their doctors before implant treatment. The patient is
-								expected to be able to tend to implant area after the procedure. Apart from these
-								exceptions, there is no circumstance to prevent dental implant treatment.
+								<FontAwesomeIcon
+									className={classes.fontAwesomeIconCheck}
+									icon={faChevronCircleRight}
+								/>{" "}
+								Invisalign should be worn for 20 hours in a day. The removable plaques makes it very
+								easy to use in daily life.
+							</p>
+							<p className="treatment-paragraph">
+								<FontAwesomeIcon
+									className={classes.fontAwesomeIconCheck}
+									icon={faChevronCircleRight}
+								/>{" "}
+								It is very easy to clean. Invisalign can be cleaned during the day with water and
+								toothbrush.
+							</p>
+							<p className="treatment-paragraph">
+								<FontAwesomeIcon
+									className={classes.fontAwesomeIconCheck}
+									icon={faChevronCircleRight}
+								/>{" "}
+								Invisalign does not have a negative effect on speech. In the early days, a
+								familiarization process may be necessary, but later the plaques do not cause any
+								discomfort.
+							</p>
+							<p className="treatment-paragraph">
+								<FontAwesomeIcon
+									className={classes.fontAwesomeIconCheck}
+									icon={faChevronCircleRight}
+								/>{" "}
+								There is no problem with eating and drinking. You can easily remove the plaques during
+								meals.
+							</p>
+							<p className="treatment-paragraph">
+								<FontAwesomeIcon
+									className={classes.fontAwesomeIconCheck}
+									icon={faChevronCircleRight}
+								/>{" "}
+								The plaques also have the advantage of being very painless compared metal braces.
+							</p>
+							<h2 className="treatment-paragraph-header">
+								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faStarOfLife} /> How Long
+								Does The Treatment Take?
+							</h2>
+							<p className="treatment-paragraph">
+								You only need to visit our clinic once for the treatment plan and 3D digital scan.
+								Later, we can either ship the plaques to your country or you can pick up your plaques in
+								2-3 days from our clinic once they are prepared. The treatment duration itself depends
+								on the structure and the positions of the teeth. Our specialist doctor will determine
+								this depending on the treatment and plaques will be prepared according to that duration.
+								But it is safe to say the duration of the treatment is 3 to 18 months.
 							</p>
 						</div>
+
 						<div className="dental-treatments-buttons-div">
 							<Button
 								variant="contained"
@@ -196,109 +257,7 @@ const treatmentTemplate = () => {
 						</div>
 					</div>
 				</section>
-				<section className="treatment-paragraph-section">
-					<div className="treatment-paragraph-img-div-div">
-						<div className="treatment-paragraph-img-div treatment-paragraph-img-4" />
-					</div>
-					<div className="treatment-general-text-div">
-						<h2 className="treatment-paragraph-header">
-							<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faTooth} /> Implant Brands We Use
-						</h2>
-						<p className="treatment-paragraph">
-							Implants should be very durable, comfortable, and aesthetic since they will be used for a
-							lifetime. In Istanbul Smile Center, our dentists use the best implant brands that are well
-							known and have worldwide use. Our implant brands are{" "}
-							<b> Straumann (Made in Switzerland ) </b> and <b> Hiossen (Made in the USA)</b>.
-						</p>
-						<div className="dental-treatments-buttons-div">
-							<Button
-								variant="contained"
-								color="primary"
-								className={clsx(classes.regularButton, classes.pricesButton)}
-								onClick={handleChat}
-							>
-								Chat&nbsp;Now
-							</Button>
-						</div>
-					</div>
-				</section>
-				<section className="treatment-paragraph-section">
-					<div className="treatment-general-text-div treatment-general-text-div-double treatment-general-text-div-multiple">
-						<h2 className="treatment-paragraph-header treatment-process-header">
-							<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faCalendarCheck} /> Dental
-							Implant Treatment Process
-						</h2>
-						<div className="treatment-general-text-side-div">
-							<h2 className="treatment-paragraph-header">
-								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faCalendarAlt} /> 1)
-								Scheduling
-							</h2>
-							<p className="treatment-paragraph">
-								You can contact us through many channels, the fastest way is{" "}
-								<b> Live Chat and WhatsApp </b>, you can also send us a form or an email. Sending an
-								X-Ray image is crucial in pinpointing your treatment plan and cost. You can also request
-								a video call with a doctor. After the treatment plan is determined, our international
-								patients' department will be in contact with you to find the perfect date for your
-								treatment. There is no waiting period, we will schedule your appointment to the exact
-								date you request or maybe the next day but not further. We value our patient's time.
-							</p>
-						</div>
-						<div className="treatment-general-text-side-div">
-							<h2 className="treatment-paragraph-header">
-								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faHeartbeat} /> 2) Treatment
-							</h2>
-							<p className="treatment-paragraph">
-								On the day of your appointment with our clinic, you will be picked up by one of our
-								international patient coordinators right from your hotel. At the clinic, you will be
-								greeted by our doctors, and your treatment will start. Our doctor will initially examine
-								your teeth physically and take an X-Ray image. For implant patients, our doctors usually
-								request an MRI Image to be taken for perfect accuracy in implant locations. After the
-								tests, the diameter and length of the implant are selected, local anesthesia will be
-								applied, and the implant area will be prepared with dental burr. This process is not
-								painful and takes only 5-10 minutes per implant. Later, the implants will be placed, and
-								the upper sides of your gum will be stitched. After your treatment, you will be taken
-								back to your hotel.
-							</p>
-						</div>
-						<div className="treatment-general-text-side-div">
-							<h2 className="treatment-paragraph-header">
-								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faHeart} /> 3) Initial
-								Healing
-							</h2>
-							<p className="treatment-paragraph">
-								After the implants are placed, an average period of waiting is about at least 4 or 5
-								days. After this period, stitches are removed. You can either stay here in Turkey and
-								come back to our clinic for stitch removal, or you can go back home and get the stitches
-								removed by a local dentist. But we usually suggest our patients to stay here and come
-								back to the clinic for a final check and stitch removal before you leave.
-							</p>
-						</div>
-						<div className="treatment-general-text-side-div">
-							<h2 className="treatment-paragraph-header">
-								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faHeartFull} /> 4) Complete
-								Recovery
-							</h2>
-							<p className="treatment-paragraph">
-								Depending on your bone structure, age, and number of implants, you need to wait for 2 to
-								6 months to achieve complete recovery. This is crucial for the success of the treatment.
-								If there are specific conditions, this period may be reduced or increased. This period
-								must pass for the implant to bond with the bone to complete the healing process. After
-								recovery, you will need to come to our clinic for a second visit. In that visit, the
-								crowns are placed on the implants as the last stage of your treatment.
-							</p>
-						</div>
-						<div className="dental-treatments-buttons-div">
-							<Button
-								variant="contained"
-								color="primary"
-								className={clsx(classes.regularButton, classes.pricesButton)}
-								onClick={handleChat}
-							>
-								Chat&nbsp;Now
-							</Button>
-						</div>
-					</div>
-				</section>
+
 				<section className="treatment-paragraph-section">
 					<HowAreWeAffordable />
 				</section>
@@ -325,12 +284,12 @@ const treatmentTemplate = () => {
 				}
 
 				.treatment-img-div {
-					background-image: url(${require("../../public/treatments/dental-implants-page/dental-implant-intro-background-img.jpg")});
+					background-image: url(${require("../../public/treatments/invisalign-page/invisalign-intro-img-1515575501.jpg")});
 					width: 100%;
-					height: 66vh;
+					height: 90vh;
 					background-repeat: no-repeat;
 					background-size: cover;
-					background-position: left 37% bottom 80%;
+					background-position: left 42% bottom 65%;
 					clip-path: ellipse(100% 100% at 50% 0%);
 				}
 
@@ -369,7 +328,6 @@ const treatmentTemplate = () => {
 					width: 65%;
 				}
 				.treatment-paragraph-img-div {
-					background-image: url(${require("../../public/treatments/dental-implants-page/istanbul-bosphorous-img.jpg")});
 					height: 300px;
 					border-top-left-radius: 20px;
 					border-top-right-radius: 20px;
@@ -379,24 +337,9 @@ const treatmentTemplate = () => {
 					background-color: ${sTheme.palette.secondary.main};
 				}
 
-				.treatment-paragraph-img-3 {
-					background-image: url(${require("../../public/treatments/dental-implants-page/dental-implant-img.jpg")});
-					max-height: 750px;
-					height: 50vmax;
-					background-position: left 70% bottom 80%;
-				}
-
-				.treatment-paragraph-img-4 {
-					background-image: url(${require("../../public/treatments/dental-implants-page/implant-brands-img.jpg")});
-					height: 300px;
-					background-position: left 50% bottom 80%;
-				}
-
-				.treatment-paragraph-img-5 {
-					background-image: url(${require("../../public/treatments/dental-implants-page/affordable-prices-img-220231984.jpg")});
-					height: 40vmax;
-					max-height: 600px;
-					background-position: left 60% bottom 80%;
+				.treatment-paragraph-img-2 {
+					height: 30vmax;
+					overflow: hidden;
 				}
 
 				.treatment-general-text-div {
@@ -408,6 +351,10 @@ const treatmentTemplate = () => {
 					padding: 3rem;
 					background-color: ${sTheme.palette.secondary.main};
 					margin-top: 0;
+				}
+
+				.treatment-general-text-div-single {
+					border-radius: 20px;
 				}
 
 				.treatment-general-text-div-double {
@@ -439,6 +386,11 @@ const treatmentTemplate = () => {
 					font-size: 2rem;
 					font-weight: normal;
 					margin-bottom: 1rem;
+				}
+				.treatment-paragraph-small-header {
+					color: ${sTheme.palette.primary.main};
+					font-family: ${sTheme.typography.serif};
+					font-weight: bold;
 				}
 
 				.our-prices-section {
@@ -520,11 +472,6 @@ const treatmentTemplate = () => {
 					font-weight: bold;
 					color: ${sTheme.palette.primary.main};
 				}
-				@media (min-width: ${sizes.sizes.fullhd}) {
-					.treatment-paragraph-img-4 {
-						height: 400px;
-					}
-				}
 
 				@media (max-width: ${sizes.sizes.xl}) {
 					.treatment-paragraph-img-div-div,
@@ -537,10 +484,6 @@ const treatmentTemplate = () => {
 				}
 
 				@media (max-width: ${sizes.sizes.lg}) {
-					.treatment-img-div {
-						height: 60vh;
-					}
-
 					.treatment-paragraph-img-div-div,
 					.treatment-general-text-div {
 						width: 80%;
@@ -591,9 +534,6 @@ const treatmentTemplate = () => {
 				}
 
 				@media (max-width: ${sizes.sizes.mdsm}) {
-					.treatment-img-div {
-						height: 40vh;
-					}
 					.treatment-paragraph-img-div-div,
 					.treatment-general-text-div {
 						width: 100%;
@@ -601,26 +541,17 @@ const treatmentTemplate = () => {
 					.treatment-paragraph-img-1 {
 						height: 250px;
 					}
-					.treatment-paragraph-img-4 {
-						height: 250px;
-					}
 				}
 
 				@media (max-width: ${sizes.sizes.sm}) {
-					.treatment-img-div {
-						height: 30vh;
-					}
 					.treatment-general-text-div {
 						padding: 2.5rem;
-					}
-					.treatment-paragraph-img-4 {
-						height: 200px;
 					}
 				}
 
 				@media (max-width: ${sizes.sizes.xs}) {
 					.treatment-img-div {
-						height: 25vh;
+						height: 40vh;
 					}
 					.treatment-paragraph-img-1 {
 						height: 200px;
@@ -634,17 +565,11 @@ const treatmentTemplate = () => {
 					.treatment-general-text-div {
 						text-align: center;
 					}
-					.treatment-paragraph-img-4 {
-						height: 175px;
-					}
 				}
 
 				@media (max-width: ${sizes.sizes.xxs}) {
 					.treatment-general-text-div {
 						padding: 2rem;
-					}
-					.treatment-paragraph-img-4 {
-						height: 100px;
 					}
 				}
 			`}</style>

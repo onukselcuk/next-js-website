@@ -562,7 +562,7 @@ export default function CustomizedExpansionPanels ({ currentCurrency, handleCurr
 												onChange={handleCheckboxChange("sinusLifting")}
 											/>
 										}
-										label="Sinus Lifting (bone grafting cost is not included, it can only be determined after teeth X-Ray and/or CT Scan examination)"
+										label="Sinus Lifting (bone grafting cost is not included, it can only be determined after teeth X-Ray/CT Scan examination)"
 										className={classes.sinusLiftingCheckBoxGroup}
 									/>
 								</FormGroup>

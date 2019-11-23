@@ -73,7 +73,7 @@ const DentalImplantsInIstanbul = ({ treatmentName }) => {
 			</div>
 			<div className="treatment-general-text-div">
 				<h2 className="treatment-paragraph-header">
-					<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faLocationArrow} /> Dental{" "}
+					<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faLocationArrow} />
 					{treatmentName} in Istanbul, Turkey
 				</h2>
 				<p className="treatment-paragraph">

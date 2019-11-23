@@ -99,15 +99,7 @@ export default function NavDrawer ({ state, toggleDrawer }) {
 				</ListItem>
 				<Collapse in={open} timeout="auto" unmountOnExit>
 					<List component="div" disablePadding>
-						<ActiveLink activeClassName={classes.activeLink} href="/about">
-							<ListItem button className={classes.nested}>
-								<ListItemIcon className={classes.listItemIcon}>
-									<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faTooth} />
-								</ListItemIcon>
-								<ListItemText primary="All Treatments" />
-							</ListItem>
-						</ActiveLink>
-						<ActiveLink activeClassName={classes.activeLink} href="/about">
+						<ActiveLink activeClassName={classes.activeLink} href="/treatments/dental-implants">
 							<ListItem button className={classes.nested}>
 								<ListItemIcon className={classes.listItemIcon}>
 									<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faTooth} />
@@ -115,7 +107,7 @@ export default function NavDrawer ({ state, toggleDrawer }) {
 								<ListItemText primary="Dental Implants" />
 							</ListItem>
 						</ActiveLink>
-						<ActiveLink activeClassName={classes.activeLink} href="/about">
+						<ActiveLink activeClassName={classes.activeLink} href="/treatments/dental-crowns">
 							<ListItem button className={classes.nested}>
 								<ListItemIcon className={classes.listItemIcon}>
 									<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faTooth} />
@@ -123,7 +115,7 @@ export default function NavDrawer ({ state, toggleDrawer }) {
 								<ListItemText primary="Dental Crowns" />
 							</ListItem>
 						</ActiveLink>
-						<ActiveLink activeClassName={classes.activeLink} href="/about">
+						<ActiveLink activeClassName={classes.activeLink} href="/treatments/dental-veneers">
 							<ListItem button className={classes.nested}>
 								<ListItemIcon className={classes.listItemIcon}>
 									<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faTooth} />
@@ -131,7 +123,7 @@ export default function NavDrawer ({ state, toggleDrawer }) {
 								<ListItemText primary="Dental Veneers" />
 							</ListItem>
 						</ActiveLink>
-						<ActiveLink activeClassName={classes.activeLink} href="/about">
+						<ActiveLink activeClassName={classes.activeLink} href="/treatments/cosmetic-dentistry">
 							<ListItem button className={classes.nested}>
 								<ListItemIcon className={classes.listItemIcon}>
 									<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faTooth} />
@@ -139,15 +131,15 @@ export default function NavDrawer ({ state, toggleDrawer }) {
 								<ListItemText primary="Cosmetic Dentistry" />
 							</ListItem>
 						</ActiveLink>
-						<ActiveLink activeClassName={classes.activeLink} href="/about">
+						<ActiveLink activeClassName={classes.activeLink} href="/treatments/invisalign">
 							<ListItem button className={classes.nested}>
 								<ListItemIcon className={classes.listItemIcon}>
 									<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faTooth} />
 								</ListItemIcon>
-								<ListItemText primary="Orthodontics & Invisalign" />
+								<ListItemText primary="Invisalign" />
 							</ListItem>
 						</ActiveLink>
-						<ActiveLink activeClassName={classes.activeLink} href="/about">
+						<ActiveLink activeClassName={classes.activeLink} href="/treatments/dentures">
 							<ListItem button className={classes.nested}>
 								<ListItemIcon className={classes.listItemIcon}>
 									<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faTooth} />
@@ -155,7 +147,7 @@ export default function NavDrawer ({ state, toggleDrawer }) {
 								<ListItemText primary="Dentures" />
 							</ListItem>
 						</ActiveLink>
-						<ActiveLink activeClassName={classes.activeLink} href="/about">
+						<ActiveLink activeClassName={classes.activeLink} href="/treatments/pediatric-dentistry">
 							<ListItem button className={classes.nested}>
 								<ListItemIcon className={classes.listItemIcon}>
 									<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faTooth} />
@@ -163,7 +155,7 @@ export default function NavDrawer ({ state, toggleDrawer }) {
 								<ListItemText primary="Pediatric Dentistry" />
 							</ListItem>
 						</ActiveLink>
-						<ActiveLink activeClassName={classes.activeLink} href="/about">
+						<ActiveLink activeClassName={classes.activeLink} href="/treatments/root-canal-treatment">
 							<ListItem button className={classes.nested}>
 								<ListItemIcon className={classes.listItemIcon}>
 									<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faTooth} />
@@ -171,7 +163,7 @@ export default function NavDrawer ({ state, toggleDrawer }) {
 								<ListItemText primary="Root Canal Treatment" />
 							</ListItem>
 						</ActiveLink>
-						<ActiveLink activeClassName={classes.activeLink} href="/about">
+						<ActiveLink activeClassName={classes.activeLink} href="/treatments/teeth-whitening">
 							<ListItem button className={classes.nested}>
 								<ListItemIcon className={classes.listItemIcon}>
 									<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faTooth} />

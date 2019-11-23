@@ -104,7 +104,8 @@ const treatmentTemplate = () => {
 		<React.Fragment>
 			<Head>
 				<title key="title">
-					Dental Veneers in Istanbul, Turkey | Istanbul Smile Center | Let's Make Your Smile Perfect
+					Dental Veneers in Istanbul, Turkey | Dental Cost Calculator | Istanbul Smile Center | Let's Make
+					Your Smile Perfect
 				</title>
 			</Head>
 			<section className="treatment-img-section">
@@ -115,7 +116,7 @@ const treatmentTemplate = () => {
 					<h1 className="treatment-header-text">Dental Veneers</h1>
 				</div>
 				<section className="treatment-paragraph-section">
-					<DentalImplantsInIstanbul treatmentName="Veneers" />
+					<DentalImplantsInIstanbul treatmentName="Dental Veneers" />
 				</section>
 				<section className="treatment-paragraph-section">
 					<WhyChooseIsc treatmentName="" />

@@ -2,15 +2,7 @@ import sTheme from "../../src/styledTheme";
 import Head from "next/head";
 import { makeStyles } from "@material-ui/core/styles";
 import sizes from "../../src/sizes";
-import {
-	faStarOfLife,
-	faTooth,
-	faCalendarCheck,
-	faCalendarAlt,
-	faHeartbeat,
-	faHeart as faHeartFull
-} from "@fortawesome/free-solid-svg-icons";
-import { faHeart } from "@fortawesome/free-regular-svg-icons";
+import { faStarOfLife } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import CostCalculator from "../../components/CostCalculator";
 import Button from "@material-ui/core/Button";
@@ -38,6 +30,7 @@ const useStyles = makeStyles((theme) => ({
 		position: "relative",
 		top: "3px",
 		marginRight: "1rem",
+		color: theme.palette.third.dark,
 		[sizes.down("lg")]: {
 			fontSize: "2.3rem"
 		},
@@ -103,8 +96,8 @@ const treatmentTemplate = () => {
 		<React.Fragment>
 			<Head>
 				<title key="title">
-					Dental Implants in Istanbul, Turkey | Dental Cost Calculator | Istanbul Smile Center | Let's Make
-					Your Smile Perfect
+					Cosmetic Dentistry in Istanbul, Turkey | Hollywood Smile | Gum Contouring | Dental Cost Calculator |
+					Istanbul Smile Center | Let's Make Your Smile Perfect
 				</title>
 			</Head>
 			<section className="treatment-img-section">
@@ -112,13 +105,13 @@ const treatmentTemplate = () => {
 			</section>
 			<section className="treatment-section">
 				<div className="treatment-header">
-					<h1 className="treatment-header-text">Dental Implants</h1>
+					<h1 className="treatment-header-text">Cosmetic Dentistry</h1>
 				</div>
 				<section className="treatment-paragraph-section">
-					<DentalImplantsInIstanbul treatmentName="Dental Implants" />
+					<DentalImplantsInIstanbul treatmentName="Cosmetic Dentistry" />
 				</section>
 				<section className="treatment-paragraph-section">
-					<WhyChooseIsc treatmentName="implant" />
+					<WhyChooseIsc treatmentName="" />
 				</section>
 				<section className="our-prices-section cost-calculator-section">
 					<div className="our-prices-header">
@@ -148,42 +141,72 @@ const treatmentTemplate = () => {
 						</Button>
 					</div>
 				</section>
-				<section className="treatment-paragraph-section">
+				<section className="treatment-paragraph-section" id="hollywood-smile">
 					<div className="treatment-paragraph-img-div-div">
 						<div className="treatment-paragraph-img-div treatment-paragraph-img-3" />
 					</div>
 					<div className="treatment-general-text-div treatment-general-text-div-double treatment-general-text-div-double-extra ">
 						<div className="treatment-general-text-side-div">
 							<h2 className="treatment-paragraph-header">
-								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faStarOfLife} /> What Are
-								Dental Implants?
+								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faStarOfLife} /> Hollywood
+								Smile
 							</h2>
 							<p className="treatment-paragraph">
-								The implant can be referred to as the screw-like structure made of titanium. Usually,
-								the missing teeth are filled with implants. The treatment begins with engraving of the
-								jawbone in the area of the tooth. This is done in a very simple way. A suitable implant
-								is selected according to the size of the location and placed in this area. There is
-								nothing to be afraid of the placement process. Unless there are extreme conditions, the
-								screws will be placed in the jawbone within 10 minutes. Following implant placement and
-								healing period, the upper part is mounted with porcelain, E-max, or zirconium crowns.
+								A perfect smile makes you feel better and improves your self-confidence. Hollywood Smile
+								not only makes your smile perfect but also removes your other dental problems. This
+								treatment will provide the patient an aesthetic smile.
+							</p>
+							<p className="treatment-paragraph">
+								Our doctors examine patient's mouth and decide the stages of the treatment. The
+								treatment may vary from person to person such as using veneers or crowns, teeth
+								whitening, implantation, and gummy smile correction.
+							</p>
+
+							<h2 className="treatment-paragraph-header">
+								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faStarOfLife} /> How Long
+								Does The Treatment Take?
+							</h2>
+							<p className="treatment-paragraph">
+								After examination, the treatment is planned according to the shape of teeth and gums.
+								Thanks to the latest and advanced computer technology, it is possible to design a
+								perfect smile in a few hours. Even if the treatment can vary depending on the process,
+								it only takes 5 to 7 days if your treatment plan doesn't include dental implants.
 							</p>
 						</div>
 						<div className="treatment-general-text-side-div">
 							<h2 className="treatment-paragraph-header">
-								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faStarOfLife} /> Who Is
-								Suitable For Implant Treatment?
+								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faStarOfLife} /> What
+								Treatments Are Applied?
 							</h2>
+
+							<p className="treatment-paragraph treatment-paragraph-small-header">Dental Implants</p>
 							<p className="treatment-paragraph">
-								The main reason for implant treatment is missing teeth. Bone tissue and structure should
-								be suitable for the treatment. If there is a weakness in the bone structure, the bone
-								grafting is added to the area, and the structure is strengthened. This is very common.
-								In addition, implantation may be inconvenient if there are diseases or conditions such
-								as heart disease, diabetes, pregnancy, breastfeeding, hemophilia problems. Patients who
-								have health issues should consult their doctors before implant treatment. The patient is
-								expected to be able to tend to implant area after the procedure. Apart from these
-								exceptions, there is no circumstance to prevent dental implant treatment.
+								The implant can be referred to as screw-like structures made of titanium. If you have
+								missing teeth, then missing teeth are filled with implants.
+							</p>
+							<p className="treatment-paragraph treatment-paragraph-small-header">Dental Veneers</p>
+							<p className="treatment-paragraph">
+								Porcelain veneer provides an effective solution against problems such as fracture on
+								tooth surfaces or deformations and applied to the front of the teeth. Porcelain offers a
+								very similar texture and color as natural tooth.
+							</p>
+							<p className="treatment-paragraph treatment-paragraph-small-header">
+								Gummy Smile Correction
+							</p>
+							<p className="treatment-paragraph">
+								Gums are important as teeth. It is necessary that the teeth and gums match with each
+								other for a healthy and beautiful-looking smile. Pink aesthetic treatment is applied to
+								make the gum structure, mouth, and tooth structure ideal.
+							</p>
+							<p className="treatment-paragraph treatment-paragraph-small-header">Teeth Whitening</p>
+							<p className="treatment-paragraph">
+								Teeth Whitening is essential for a perfect smile. Teeth whitening can be applied in a
+								method determined by your dentist. There are home teeth whitening and clinic teeth
+								whitening. Depending on the patient's condition, home or clinic teeth whitening is
+								applied to the patient.
 							</p>
 						</div>
+
 						<div className="dental-treatments-buttons-div">
 							<Button
 								variant="contained"
@@ -200,16 +223,71 @@ const treatmentTemplate = () => {
 					<div className="treatment-paragraph-img-div-div">
 						<div className="treatment-paragraph-img-div treatment-paragraph-img-4" />
 					</div>
-					<div className="treatment-general-text-div">
-						<h2 className="treatment-paragraph-header">
-							<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faTooth} /> Implant Brands We Use
-						</h2>
-						<p className="treatment-paragraph">
-							Implants should be very durable, comfortable, and aesthetic since they will be used for a
-							lifetime. In Istanbul Smile Center, our dentists use the best implant brands that are well
-							known and have worldwide use. Our implant brands are{" "}
-							<b> Straumann (Made in Switzerland ) </b> and <b> Hiossen (Made in the USA)</b>.
-						</p>
+					<div className="treatment-general-text-div treatment-general-text-div-double treatment-general-text-div-double-extra ">
+						<div className="treatment-general-text-side-div">
+							<h2 className="treatment-paragraph-header">
+								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faStarOfLife} /> Gummy Smile
+								Correction
+							</h2>
+							<p className="treatment-paragraph">
+								Gummy Smile Correction is also known as pink aesthetic, gum contouring or gummy
+								aesthetics. Gummy smile correction is a treatment that make the gum look more beautiful
+								and healthy. In practice, the gums are treated with the help of laser. The entire gums
+								are considered during treatment and the necessary procedures are applied during the
+								process. If level differences are observed, cuts can be performed for shortening or
+								lengthening purposes. Surgical interventions are performed in the gummy smile problem.
+								If surgical procedures are not sufficient, the botox method can also be considered.
+							</p>
+							<h2 className="treatment-paragraph-header">
+								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faStarOfLife} /> Who Should
+								Have Gummy Smile Correction?
+							</h2>
+							<p className="treatment-paragraph">
+								Gummy smile correction treatment can be applied to any adult who wants to add aesthetic
+								beauty to his/her smile. There are many situations in which it is recommended, with or
+								without an aesthetic concern. Gummy smile correction make the gum structure, the mouth
+								and teeth structure ideal. For this reason, this treatment method can be recommended for
+								those who have different tooth lengths. The problematic teeth will be equal to other
+								teeth with pink aesthetics. Aesthetics can also be used in cases of gingival
+								inflammation or teeth inflammation. One of the effective solutions for those problems is
+								the pink aesthetic treatment. Because the treatment process is completely without any
+								pain.
+							</p>
+						</div>
+
+						<div className="treatment-general-text-side-div">
+							<h2 className="treatment-paragraph-header">
+								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faStarOfLife} /> How Is The
+								Treatment Process?
+							</h2>
+							<p className="treatment-paragraph">
+								After veneer, zirconium coating, or root canal treatment, pink aesthetic might be
+								necessary. Problems in the gums are removed and aesthetic operations start. The
+								treatment varies according to the patient's gum status. Respective and regeneration can
+								be mentioned in aesthetic procedures for the gum. Respective procedures are performed
+								for problems such as irregularities of the gums and occasional growth. In these
+								procedures, the gums are cut with the help of laser. If these procedures do not solve
+								the problem, a larger treatment can be applied. In addition to the gums, styling touches
+								to the bones around the teeth can be also required. In regeneration procedures, tissue
+								is added to the areas where the gum is extracted. With this added tissue, teeth lengths
+								have reach their ideal levels. Pink aesthetic dental treatments are very short. It
+								depends on the patient's mouth structure and it can take approximately 30 minutes. If
+								the post-treatment care is performed completely, complete recovery may occur within a
+								period of two weeks. Detailed information about what the patient should do after the
+								treatment, what to pay attention to and what to avoid will be clearly stated by our
+								specialist dentists before and after the treatment.
+							</p>
+							<h2 className="treatment-paragraph-header">
+								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faStarOfLife} /> How Long
+								Does The Treatment Take?
+							</h2>
+							<p className="treatment-paragraph">
+								Pink aesthetic dental treatments are very short. It depends on the patient's mouth
+								structure and it can take approximately 30 minutes. If the post-treatment care is
+								performed completely, complete recovery may occur within a period of two weeks.
+							</p>
+						</div>
+
 						<div className="dental-treatments-buttons-div">
 							<Button
 								variant="contained"
@@ -222,83 +300,7 @@ const treatmentTemplate = () => {
 						</div>
 					</div>
 				</section>
-				<section className="treatment-paragraph-section">
-					<div className="treatment-general-text-div treatment-general-text-div-double treatment-general-text-div-multiple">
-						<h2 className="treatment-paragraph-header treatment-process-header">
-							<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faCalendarCheck} /> Dental
-							Implant Treatment Process
-						</h2>
-						<div className="treatment-general-text-side-div">
-							<h2 className="treatment-paragraph-header">
-								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faCalendarAlt} /> 1)
-								Scheduling
-							</h2>
-							<p className="treatment-paragraph">
-								You can contact us through many channels, the fastest way is{" "}
-								<b> Live Chat and WhatsApp </b>, you can also send us a form or an email. Sending an
-								X-Ray image is crucial in pinpointing your treatment plan and cost. You can also request
-								a video call with a doctor. After the treatment plan is determined, our international
-								patients' department will be in contact with you to find the perfect date for your
-								treatment. There is no waiting period, we will schedule your appointment to the exact
-								date you request or maybe the next day but not further. We value our patient's time.
-							</p>
-						</div>
-						<div className="treatment-general-text-side-div">
-							<h2 className="treatment-paragraph-header">
-								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faHeartbeat} /> 2) Treatment
-							</h2>
-							<p className="treatment-paragraph">
-								On the day of your appointment with our clinic, you will be picked up by one of our
-								international patient coordinators right from your hotel. At the clinic, you will be
-								greeted by our doctors, and your treatment will start. Our doctor will initially examine
-								your teeth physically and take an X-Ray image. For implant patients, our doctors usually
-								request an MRI Image to be taken for perfect accuracy in implant locations. After the
-								tests, the diameter and length of the implant are selected, local anesthesia will be
-								applied, and the implant area will be prepared with dental burr. This process is not
-								painful and takes only 5-10 minutes per implant. Later, the implants will be placed, and
-								the upper sides of your gum will be stitched. After your treatment, you will be taken
-								back to your hotel.
-							</p>
-						</div>
-						<div className="treatment-general-text-side-div">
-							<h2 className="treatment-paragraph-header">
-								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faHeart} /> 3) Initial
-								Healing
-							</h2>
-							<p className="treatment-paragraph">
-								After the implants are placed, an average period of waiting is about at least 4 or 5
-								days. After this period, stitches are removed. You can either stay here in Turkey and
-								come back to our clinic for stitch removal, or you can go back home and get the stitches
-								removed by a local dentist. But we usually suggest our patients to stay here and come
-								back to the clinic for a final check and stitch removal before you leave.
-							</p>
-						</div>
-						<div className="treatment-general-text-side-div">
-							<h2 className="treatment-paragraph-header">
-								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faHeartFull} /> 4) Complete
-								Recovery
-							</h2>
-							<p className="treatment-paragraph">
-								Depending on your bone structure, age, and number of implants, you need to wait for 2 to
-								6 months to achieve complete recovery. This is crucial for the success of the treatment.
-								If there are specific conditions, this period may be reduced or increased. This period
-								must pass for the implant to bond with the bone to complete the healing process. After
-								recovery, you will need to come to our clinic for a second visit. In that visit, the
-								crowns are placed on the implants as the last stage of your treatment.
-							</p>
-						</div>
-						<div className="dental-treatments-buttons-div">
-							<Button
-								variant="contained"
-								color="primary"
-								className={clsx(classes.regularButton, classes.pricesButton)}
-								onClick={handleChat}
-							>
-								Chat&nbsp;Now
-							</Button>
-						</div>
-					</div>
-				</section>
+
 				<section className="treatment-paragraph-section">
 					<HowAreWeAffordable />
 				</section>
@@ -325,12 +327,12 @@ const treatmentTemplate = () => {
 				}
 
 				.treatment-img-div {
-					background-image: url(${require("../../public/treatments/dental-implants-page/dental-implant-intro-background-img.jpg")});
+					background-image: url(${require("../../public/treatments/cosmetic-dentistry-page/cosmetic-dentistry-intro-img-709191712.jpg")});
 					width: 100%;
-					height: 66vh;
+					height: 75vh;
 					background-repeat: no-repeat;
 					background-size: cover;
-					background-position: left 37% bottom 80%;
+					background-position: left 42% bottom 100%;
 					clip-path: ellipse(100% 100% at 50% 0%);
 				}
 
@@ -369,7 +371,6 @@ const treatmentTemplate = () => {
 					width: 65%;
 				}
 				.treatment-paragraph-img-div {
-					background-image: url(${require("../../public/treatments/dental-implants-page/istanbul-bosphorous-img.jpg")});
 					height: 300px;
 					border-top-left-radius: 20px;
 					border-top-right-radius: 20px;
@@ -380,23 +381,17 @@ const treatmentTemplate = () => {
 				}
 
 				.treatment-paragraph-img-3 {
-					background-image: url(${require("../../public/treatments/dental-implants-page/dental-implant-img.jpg")});
+					background-image: url(${require("../../public/treatments/cosmetic-dentistry-page/hollywood-smile-img-1457907785.jpg")});
 					max-height: 750px;
-					height: 50vmax;
-					background-position: left 70% bottom 80%;
+					height: 30vmax;
+					background-position: left 10% bottom 80%;
 				}
 
 				.treatment-paragraph-img-4 {
-					background-image: url(${require("../../public/treatments/dental-implants-page/implant-brands-img.jpg")});
-					height: 300px;
-					background-position: left 50% bottom 80%;
-				}
-
-				.treatment-paragraph-img-5 {
-					background-image: url(${require("../../public/treatments/dental-implants-page/affordable-prices-img-220231984.jpg")});
-					height: 40vmax;
-					max-height: 600px;
-					background-position: left 60% bottom 80%;
+					background-image: url(${require("../../public/treatments/cosmetic-dentistry-page/gummy-smile-correction-img.jpg")});
+					background-position: center;
+					background-size: contain;
+					height: 12vmax;
 				}
 
 				.treatment-general-text-div {
@@ -410,6 +405,10 @@ const treatmentTemplate = () => {
 					margin-top: 0;
 				}
 
+				.treatment-general-text-div-single {
+					border-radius: 20px;
+				}
+
 				.treatment-general-text-div-double {
 					display: flex;
 					justify-content: space-between;
@@ -417,7 +416,7 @@ const treatmentTemplate = () => {
 				}
 
 				.treatment-general-text-div-double-extra {
-					align-items: center;
+					align-items: flex-start;
 				}
 
 				.treatment-general-text-div-multiple {
@@ -439,6 +438,11 @@ const treatmentTemplate = () => {
 					font-size: 2rem;
 					font-weight: normal;
 					margin-bottom: 1rem;
+				}
+				.treatment-paragraph-small-header {
+					color: ${sTheme.palette.primary.main};
+					font-family: ${sTheme.typography.serif};
+					font-weight: bold;
 				}
 
 				.our-prices-section {
@@ -520,11 +524,6 @@ const treatmentTemplate = () => {
 					font-weight: bold;
 					color: ${sTheme.palette.primary.main};
 				}
-				@media (min-width: ${sizes.sizes.fullhd}) {
-					.treatment-paragraph-img-4 {
-						height: 400px;
-					}
-				}
 
 				@media (max-width: ${sizes.sizes.xl}) {
 					.treatment-paragraph-img-div-div,
@@ -537,10 +536,6 @@ const treatmentTemplate = () => {
 				}
 
 				@media (max-width: ${sizes.sizes.lg}) {
-					.treatment-img-div {
-						height: 60vh;
-					}
-
 					.treatment-paragraph-img-div-div,
 					.treatment-general-text-div {
 						width: 80%;
@@ -591,9 +586,6 @@ const treatmentTemplate = () => {
 				}
 
 				@media (max-width: ${sizes.sizes.mdsm}) {
-					.treatment-img-div {
-						height: 40vh;
-					}
 					.treatment-paragraph-img-div-div,
 					.treatment-general-text-div {
 						width: 100%;
@@ -601,26 +593,17 @@ const treatmentTemplate = () => {
 					.treatment-paragraph-img-1 {
 						height: 250px;
 					}
-					.treatment-paragraph-img-4 {
-						height: 250px;
-					}
 				}
 
 				@media (max-width: ${sizes.sizes.sm}) {
-					.treatment-img-div {
-						height: 30vh;
-					}
 					.treatment-general-text-div {
 						padding: 2.5rem;
-					}
-					.treatment-paragraph-img-4 {
-						height: 200px;
 					}
 				}
 
 				@media (max-width: ${sizes.sizes.xs}) {
 					.treatment-img-div {
-						height: 25vh;
+						height: 40vh;
 					}
 					.treatment-paragraph-img-1 {
 						height: 200px;
@@ -634,17 +617,11 @@ const treatmentTemplate = () => {
 					.treatment-general-text-div {
 						text-align: center;
 					}
-					.treatment-paragraph-img-4 {
-						height: 175px;
-					}
 				}
 
 				@media (max-width: ${sizes.sizes.xxs}) {
 					.treatment-general-text-div {
 						padding: 2rem;
-					}
-					.treatment-paragraph-img-4 {
-						height: 100px;
 					}
 				}
 			`}</style>

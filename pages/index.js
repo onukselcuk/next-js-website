@@ -512,158 +512,200 @@ const Index = (props) => {
 					</p>
 				</div>
 				<div className="our-services-wrapper">
-					<Card className={clsx(classes.servicePaper, classes.servicePaperCard)} elevation={paperElevation}>
-						<CardActionArea className={classes.cardActionArea}>
-							<SvgIcon
-								className={clsx(classes.svgIcon, classes.svgIconTreatment)}
-								viewBox="0 0 84.8 84.8"
-							>
-								<DentalImplant />
-							</SvgIcon>
-							<CardContent className={classes.cardContent}>
-								<Typography
-									variant="h5"
-									component="h3"
-									className={clsx(classes.servicePaperTitle, classes.servicePaperCardTitle)}
+					<Link href="/treatments/dental-implants">
+						<Card
+							className={clsx(classes.servicePaper, classes.servicePaperCard)}
+							elevation={paperElevation}
+						>
+							<CardActionArea className={classes.cardActionArea}>
+								<SvgIcon
+									className={clsx(classes.svgIcon, classes.svgIconTreatment)}
+									viewBox="0 0 84.8 84.8"
 								>
-									Dental Implants
-								</Typography>
-							</CardContent>
-						</CardActionArea>
-					</Card>
-					<Card className={clsx(classes.servicePaper, classes.servicePaperCard)} elevation={paperElevation}>
-						<CardActionArea className={classes.cardActionArea}>
-							<SvgIcon
-								className={clsx(classes.svgIcon, classes.svgIconTreatment)}
-								viewBox="0 0 84.8 84.8"
-							>
-								<DentalCrown />
-							</SvgIcon>
-							<CardContent className={classes.cardContent}>
-								<Typography
-									variant="h5"
-									component="h3"
-									className={clsx(classes.servicePaperTitle, classes.servicePaperCardTitle)}
+									<DentalImplant />
+								</SvgIcon>
+								<CardContent className={classes.cardContent}>
+									<Typography
+										variant="h5"
+										component="h3"
+										className={clsx(classes.servicePaperTitle, classes.servicePaperCardTitle)}
+									>
+										Dental Implants
+									</Typography>
+								</CardContent>
+							</CardActionArea>
+						</Card>
+					</Link>
+					<Link href="/treatments/dental-crowns">
+						<Card
+							className={clsx(classes.servicePaper, classes.servicePaperCard)}
+							elevation={paperElevation}
+						>
+							<CardActionArea className={classes.cardActionArea}>
+								<SvgIcon
+									className={clsx(classes.svgIcon, classes.svgIconTreatment)}
+									viewBox="0 0 84.8 84.8"
 								>
-									Dental Crowns
-								</Typography>
-							</CardContent>
-						</CardActionArea>
-					</Card>
-					<Card className={clsx(classes.servicePaper, classes.servicePaperCard)} elevation={paperElevation}>
-						<CardActionArea className={classes.cardActionArea}>
-							<SvgIcon
-								className={clsx(classes.svgIcon, classes.svgIconTreatment)}
-								viewBox="0 0 84.8 84.8"
-							>
-								<DentalVeneer />
-							</SvgIcon>
-							<CardContent className={classes.cardContent}>
-								<Typography
-									variant="h5"
-									component="h3"
-									className={clsx(classes.servicePaperTitle, classes.servicePaperCardTitle)}
+									<DentalCrown />
+								</SvgIcon>
+								<CardContent className={classes.cardContent}>
+									<Typography
+										variant="h5"
+										component="h3"
+										className={clsx(classes.servicePaperTitle, classes.servicePaperCardTitle)}
+									>
+										Dental Crowns
+									</Typography>
+								</CardContent>
+							</CardActionArea>
+						</Card>
+					</Link>
+					<Link href="/treatments/dental-veneers">
+						<Card
+							className={clsx(classes.servicePaper, classes.servicePaperCard)}
+							elevation={paperElevation}
+						>
+							<CardActionArea className={classes.cardActionArea}>
+								<SvgIcon
+									className={clsx(classes.svgIcon, classes.svgIconTreatment)}
+									viewBox="0 0 84.8 84.8"
 								>
-									Dental Veneers
-								</Typography>
-							</CardContent>
-						</CardActionArea>
-					</Card>
-					<Card className={clsx(classes.servicePaper, classes.servicePaperCard)} elevation={paperElevation}>
-						<CardActionArea className={classes.cardActionArea}>
-							<SvgIcon
-								className={clsx(classes.svgIcon, classes.svgIconTreatment)}
-								viewBox="0 0 84.8 84.8"
-							>
-								<Braces />
-							</SvgIcon>
-							<CardContent className={classes.cardContent}>
-								<Typography
-									variant="h5"
-									component="h3"
-									className={clsx(classes.servicePaperTitle, classes.servicePaperCardTitle)}
+									<DentalVeneer />
+								</SvgIcon>
+								<CardContent className={classes.cardContent}>
+									<Typography
+										variant="h5"
+										component="h3"
+										className={clsx(classes.servicePaperTitle, classes.servicePaperCardTitle)}
+									>
+										Dental Veneers
+									</Typography>
+								</CardContent>
+							</CardActionArea>
+						</Card>
+					</Link>
+					<Link href="/treatments/cosmetic-dentistry">
+						<Card
+							className={clsx(classes.servicePaper, classes.servicePaperCard)}
+							elevation={paperElevation}
+						>
+							<CardActionArea className={classes.cardActionArea}>
+								<SvgIcon
+									className={clsx(classes.svgIcon, classes.svgIconTreatment)}
+									viewBox="0 0 84.8 84.8"
 								>
-									Orthodontics
-								</Typography>
-							</CardContent>
-						</CardActionArea>
-					</Card>
-					<Card className={clsx(classes.servicePaper, classes.servicePaperCard)} elevation={paperElevation}>
-						<CardActionArea className={classes.cardActionArea}>
-							<SvgIcon
-								className={clsx(classes.svgIcon, classes.svgIconTreatment)}
-								viewBox="0 0 84.8 84.8"
-							>
-								<CosmeticDentistry />
-							</SvgIcon>
-							<CardContent className={classes.cardContent}>
-								<Typography
-									variant="h5"
-									component="h3"
-									className={clsx(classes.servicePaperTitle, classes.servicePaperCardTitle)}
+									<CosmeticDentistry />
+								</SvgIcon>
+								<CardContent className={classes.cardContent}>
+									<Typography
+										variant="h5"
+										component="h3"
+										className={clsx(classes.servicePaperTitle, classes.servicePaperCardTitle)}
+									>
+										Cosmetic Dentistry
+									</Typography>
+								</CardContent>
+							</CardActionArea>
+						</Card>
+					</Link>
+					<Link href="/treatments/invisalign">
+						<Card
+							className={clsx(classes.servicePaper, classes.servicePaperCard)}
+							elevation={paperElevation}
+						>
+							<CardActionArea className={classes.cardActionArea}>
+								<SvgIcon
+									className={clsx(classes.svgIcon, classes.svgIconTreatment)}
+									viewBox="0 0 84.8 84.8"
 								>
-									Cosmetic Dentistry
-								</Typography>
-							</CardContent>
-						</CardActionArea>
-					</Card>
-					<Card className={clsx(classes.servicePaper, classes.servicePaperCard)} elevation={paperElevation}>
-						<CardActionArea className={classes.cardActionArea}>
-							<SvgIcon
-								className={clsx(classes.svgIcon, classes.svgIconTreatment)}
-								viewBox="0 0 84.8 84.8"
-							>
-								<PediatricDentistry />
-							</SvgIcon>
-							<CardContent className={classes.cardContent}>
-								<Typography
-									variant="h5"
-									component="h3"
-									className={clsx(classes.servicePaperTitle, classes.servicePaperCardTitle)}
+									<Braces />
+								</SvgIcon>
+								<CardContent className={classes.cardContent}>
+									<Typography
+										variant="h5"
+										component="h3"
+										className={clsx(classes.servicePaperTitle, classes.servicePaperCardTitle)}
+									>
+										Invisalign
+									</Typography>
+								</CardContent>
+							</CardActionArea>
+						</Card>
+					</Link>
+					<Link href="/treatments/cosmetic-dentistry#hollywood-smile">
+						<Card
+							className={clsx(classes.servicePaper, classes.servicePaperCard)}
+							elevation={paperElevation}
+						>
+							<CardActionArea className={classes.cardActionArea}>
+								<SvgIcon
+									className={clsx(classes.svgIcon, classes.svgIconTreatment)}
+									viewBox="0 0 84.8 84.8"
 								>
-									Pediatric Dentistry
-								</Typography>
-							</CardContent>
-						</CardActionArea>
-					</Card>
-					<Card className={clsx(classes.servicePaper, classes.servicePaperCard)} elevation={paperElevation}>
-						<CardActionArea className={classes.cardActionArea}>
-							<SvgIcon
-								className={clsx(classes.svgIcon, classes.svgIconTreatment)}
-								viewBox="0 0 84.8 84.8"
-							>
-								<SmileMakeover />
-							</SvgIcon>
-							<CardContent className={classes.cardContent}>
-								<Typography
-									variant="h5"
-									component="h3"
-									className={clsx(classes.servicePaperTitle, classes.servicePaperCardTitle)}
+									<SmileMakeover />
+								</SvgIcon>
+								<CardContent className={classes.cardContent}>
+									<Typography
+										variant="h5"
+										component="h3"
+										className={clsx(classes.servicePaperTitle, classes.servicePaperCardTitle)}
+									>
+										Hollywood Smile
+									</Typography>
+								</CardContent>
+							</CardActionArea>
+						</Card>
+					</Link>
+
+					<Link href="/treatments/pediatric-dentistry">
+						<Card
+							className={clsx(classes.servicePaper, classes.servicePaperCard)}
+							elevation={paperElevation}
+						>
+							<CardActionArea className={classes.cardActionArea}>
+								<SvgIcon
+									className={clsx(classes.svgIcon, classes.svgIconTreatment)}
+									viewBox="0 0 84.8 84.8"
 								>
-									Smile Makeover
-								</Typography>
-							</CardContent>
-						</CardActionArea>
-					</Card>
-					<Card className={clsx(classes.servicePaper, classes.servicePaperCard)} elevation={paperElevation}>
-						<CardActionArea className={classes.cardActionArea}>
-							<SvgIcon
-								className={clsx(classes.svgIcon, classes.svgIconTreatment)}
-								viewBox="0 0 84.8 84.8"
-							>
-								<TeethWhitening />
-							</SvgIcon>
-							<CardContent className={classes.cardContent}>
-								<Typography
-									variant="h5"
-									component="h3"
-									className={clsx(classes.servicePaperTitle, classes.servicePaperCardTitle)}
+									<PediatricDentistry />
+								</SvgIcon>
+								<CardContent className={classes.cardContent}>
+									<Typography
+										variant="h5"
+										component="h3"
+										className={clsx(classes.servicePaperTitle, classes.servicePaperCardTitle)}
+									>
+										Pediatric Dentistry
+									</Typography>
+								</CardContent>
+							</CardActionArea>
+						</Card>
+					</Link>
+
+					<Link href="/treatments/teeth-whitening">
+						<Card
+							className={clsx(classes.servicePaper, classes.servicePaperCard)}
+							elevation={paperElevation}
+						>
+							<CardActionArea className={classes.cardActionArea}>
+								<SvgIcon
+									className={clsx(classes.svgIcon, classes.svgIconTreatment)}
+									viewBox="0 0 84.8 84.8"
 								>
-									Teeth Whitening
-								</Typography>
-							</CardContent>
-						</CardActionArea>
-					</Card>
+									<TeethWhitening />
+								</SvgIcon>
+								<CardContent className={classes.cardContent}>
+									<Typography
+										variant="h5"
+										component="h3"
+										className={clsx(classes.servicePaperTitle, classes.servicePaperCardTitle)}
+									>
+										Teeth Whitening
+									</Typography>
+								</CardContent>
+							</CardActionArea>
+						</Card>
+					</Link>
 				</div>
 				<div className="dental-treatments-buttons-div">
 					<Button
@@ -674,9 +716,6 @@ const Index = (props) => {
 					>
 						Chat&nbsp;Now
 					</Button>
-					<Link href="/treatments">
-						<a className="clinic-intro-link">See all treatments</a>
-					</Link>
 				</div>
 			</section>
 			<section className="our-doctors-section">
