@@ -99,7 +99,7 @@ const Privileges = () => {
 						</div>
 					</div>
 				</section>
-				<section className="privilege-section">
+				<section className="privilege-section" id="treatment-and-video-call">
 					<div className="privilege-explanation-div">
 						<div className="privilege-name-wrapper">
 							<h2 className="privilege-name-header">2) Treatment Plan & Video Call</h2>
@@ -149,7 +149,7 @@ const Privileges = () => {
 						</div>
 					</div>
 				</section>
-				<section className="privilege-section">
+				<section className="privilege-section" id="hotel-booking">
 					<div className="privilege-explanation-div">
 						<div className="privilege-name-wrapper">
 							<h2 className="privilege-name-header">4) Hotel Booking & Travel Plan</h2>
@@ -159,7 +159,7 @@ const Privileges = () => {
 								the benefit of our patients. During the scheduling, we will send you current hotel deals
 								and selection of hotels you can choose. And upon your choice, we will book the hotel for
 								you. You don't need to do anything else. Your room will be ready and waiting for you
-								when you arrive. We only partner with 5-star hotels and value our patients' comfort
+								when you arrive. We only partner with 4-5 star hotels and value our patients' comfort
 								during their stay in Istanbul. Of course, if you wish, you can always book a hotel you
 								prefer yourself.
 							</p>
@@ -177,7 +177,7 @@ const Privileges = () => {
 					</div>
 					<div className="privilege-image-div privilege-image-4" />
 				</section>
-				<section className="privilege-section">
+				<section className="privilege-section" id="arrival-to-istanbul">
 					<div className="privilege-image-div privilege-image-5" />
 					<div className="privilege-explanation-div">
 						<div className="privilege-name-wrapper">
@@ -202,7 +202,7 @@ const Privileges = () => {
 						</div>
 					</div>
 				</section>
-				<section className="privilege-section">
+				<section className="privilege-section" id="your-treatment">
 					<div className="privilege-explanation-div">
 						<div className="privilege-name-wrapper">
 							<h2 className="privilege-name-header">6) Your Treatment</h2>
@@ -229,7 +229,7 @@ const Privileges = () => {
 					</div>
 					<div className="privilege-image-div privilege-image-6" />
 				</section>
-				<section className="privilege-section">
+				<section className="privilege-section" id="dental-holiday">
 					<div className="privilege-image-div privilege-image-7" />
 					<div className="privilege-explanation-div">
 						<div className="privilege-name-wrapper">

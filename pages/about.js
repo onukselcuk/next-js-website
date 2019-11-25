@@ -42,7 +42,7 @@ const About = () => {
 						<div className="privilege-image-div privilege-image-1" />
 						<div className="privilege-explanation-div">
 							<div className="privilege-name-wrapper">
-								<h2 className="privilege-name-header">Spec. Dr. Yasin Erdem Akgül</h2>
+								<h2 className="privilege-name-header">Asst. Prof. Dr. Yasin Erdem Akgül</h2>
 								<p className="privilege-text-paragraph">
 									The fastest way of contacting us is through Live Chat or WhatsApp. You may prefer
 									sending us a form or even just an e-mail. When you contact us, you can ask us
@@ -155,10 +155,6 @@ const About = () => {
 						font-size: 2rem;
 					}
 
-					.your-privileges-section {
-						margin-bottom: 2rem;
-					}
-
 					@media (max-width: ${sizes.sizes.mdsm}) {
 						.your-privileges-section {
 							background-color: ${sTheme.palette.secondary.main};
@@ -237,45 +233,52 @@ const About = () => {
 						flex-shrink: 0;
 						background-size: cover;
 						background-repeat: no-repeat;
-						background-position: center;
+						background-position: left 50% bottom 100%;
 						border-radius: 200px;
 						z-index: 10;
 					}
 
-					.privilege-image-1 {
-						background-image: url(${require("../public/shutterstock_1498270505.jpg")});
+					:global(.webp) .privilege-image-1 {
+						background-image: url(${require("../public/about-page/dr-yasin-akgul.webp")});
+					}
+					:global(.no-webp) .privilege-image-1 {
+						background-image: url(${require("../public/about-page/dr-yasin-akgul.jpg")});
 					}
 
-					.privilege-image-2 {
-						background-image: url(${require("../public/stock-photo-beautiful-family-of-mother-and-daughter-together-at-home-smiling-confident-showing-and-pointing-1254258604.jpg")});
+					:global(.webp) .privilege-image-2 {
+						background-image: url(${require("../public/about-page/dr-sevil-akgul.webp")});
+					}
+					:global(.no-webp) .privilege-image-2 {
+						background-image: url(${require("../public/about-page/dr-sevil-akgul.jpg")});
 					}
 
-					.privilege-image-3 {
-						background-image: url(${require("../public/privileges-page/schedule-an-appointment-img.jpg")});
+					:global(.webp) .privilege-image-3 {
+						background-image: url(${require("../public/about-page/dr-yavuz-eker.webp")});
+					}
+					:global(.no-webp) .privilege-image-3 {
+						background-image: url(${require("../public/about-page/dr-yavuz-eker.jpg")});
 					}
 
 					.privilege-explanation-div {
 						display: flex;
 						align-items: center;
 						width: 60%;
-						margin-left: -100px;
+						margin-left: -7px;
 					}
 					.privilege-explanation-div-reverse {
 						margin-left: 0;
-						margin-right: -100px;
+						margin-right: -7px;
 					}
 					.privilege-name-wrapper {
 						background-color: ${sTheme.palette.secondary.main};
-						border: 1px solid ${sTheme.palette.primary.main};
 						border-radius: 20px;
 						margin: 3rem 0;
 						padding: 5rem;
-						padding-left: 15rem;
+						border-left: none;
 					}
 
 					.privilege-name-wrapper-reverse {
 						padding-left: 5rem;
-						padding-right: 15rem;
 					}
 					.privilege-name-header {
 						font-family: ${sTheme.typography.serif};
@@ -324,6 +327,7 @@ const About = () => {
 							height: 400px;
 							margin-top: -10px;
 							background-size: cover;
+							border-radius: 0;
 						}
 
 						.privilege-image-div:nth-of-type(even) {
@@ -338,10 +342,35 @@ const About = () => {
 						}
 						.privilege-explanation-div {
 							margin-left: 0;
+							width: 90%;
 						}
 
 						.privilege-explanation-div-reverse {
 							margin-right: 0;
+						}
+					}
+
+					@media (max-width: ${sizes.sizes.sm}) {
+						.privilege-image-div {
+							width: 60%;
+						}
+					}
+
+					@media (max-width: ${sizes.sizes.xs}) {
+						.privilege-explanation-div {
+							width: 95%;
+						}
+					}
+
+					@media (max-width: ${sizes.sizes.xxs}) {
+						.privilege-image-div {
+							width: 70%;
+						}
+					}
+
+					@media (max-width: ${sizes.sizes.xxxs}) {
+						.privilege-image-div {
+							width: 90%;
 						}
 					}
 

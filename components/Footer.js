@@ -229,7 +229,7 @@ export default () => {
 									<div className={classes.fontAwesomeIconWrapper}>
 										<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faTooth} />
 									</div>
-									<Link hhref="/treatments/dental-crowns">
+									<Link href="/treatments/dental-crowns">
 										<a className={classes.footerLink}>Dental Crowns</a>
 									</Link>
 								</div>
@@ -313,7 +313,6 @@ export default () => {
 						<a onClick={handleChat} className={clsx(classes.footerLink, classes.addressLink)}>
 							Chat with Us
 						</a>
-
 						<a
 							target="_blank"
 							rel="noopener noreferrer"
@@ -325,7 +324,6 @@ export default () => {
 						<a href="/contact#form" className={clsx(classes.footerLink, classes.addressLink)}>
 							Send Us A Form
 						</a>
-
 						<a
 							target="_blank"
 							rel="noopener noreferrer"
@@ -348,7 +346,6 @@ export default () => {
 					>
 						Designed and Developed by onukDesign
 					</a>
-					<div />
 				</div>
 			</footer>
 		</React.Fragment>

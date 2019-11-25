@@ -145,7 +145,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 	servicePaperCard: {
 		minWidth: "12rem",
-		width: "23%",
+		width: "21%",
 		padding: 0
 	},
 	svgIcon: {
@@ -184,7 +184,7 @@ const useStyles = makeStyles((theme) => ({
 		paddingTop: 0
 	},
 	servicePaperCardTitle: {
-		fontSize: "3rem",
+		fontSize: "2.8rem",
 		[sizes.down("xl")]: {
 			fontSize: "2.5rem"
 		},
@@ -282,18 +282,24 @@ const Index = (props) => {
 	const paperElevation = 2;
 	const reviewPaperElevation = 5;
 
-	// const pics = {
-	// 	yasin: [ doctorImg, doctorImg2 ],
-	// 	sevil: [ doctorImg, doctorImg2 ],
-	// 	yavuz: [ doctorImg, doctorImg2 ]
-	// };
+	const pics = {
+		yasin: [
+			require("../public/home-page/dr-yasin-akgul.jpg"),
+			require("../public/home-page/dr-yasin-akgul-2.jpg")
+		],
+		sevil: [
+			require("../public/home-page/dr-sevil-akgul.jpg"),
+			require("../public/home-page/dr-sevil-akgul-2.jpg")
+		],
+		yavuz: [ require("../public/home-page/dr-yavuz-eker.jpg"), require("../public/home-page/dr-yavuz-eker-2.jpg") ]
+	};
 
-	// const handleMouseOver = (e) => {
-	// 	e.target.src = pics[e.target.name][1];
-	// };
-	// const handleMouseOut = (e) => {
-	// 	e.target.src = pics[e.target.name][0];
-	// };
+	const handleMouseOver = (e) => {
+		e.target.src = pics[e.target.name][1];
+	};
+	const handleMouseOut = (e) => {
+		e.target.src = pics[e.target.name][0];
+	};
 
 	const classes = useStyles();
 	const responsive = {
@@ -351,17 +357,16 @@ const Index = (props) => {
 					</p>
 				</div>
 				<div className="our-services-wrapper">
-					<Link href="/privileges&itinerary">
-						<Paper className={classes.servicePaper} elevation={paperElevation}>
-							<SvgIcon className={classes.svgIcon} viewBox="0 0 84.8 84.8">
-								<LiveChat />
-							</SvgIcon>
-							<Typography variant="h5" component="h3" className={classes.servicePaperTitle}>
-								Live Chat
-							</Typography>
-						</Paper>
-					</Link>
-					<Link href="/privileges&itinerary">
+					<Paper onClick={handleChat} className={classes.servicePaper} elevation={paperElevation}>
+						<SvgIcon className={classes.svgIcon} viewBox="0 0 84.8 84.8">
+							<LiveChat />
+						</SvgIcon>
+						<Typography variant="h5" component="h3" className={classes.servicePaperTitle}>
+							Live Chat
+						</Typography>
+					</Paper>
+
+					<Link href="/privileges#treatment-and-video-call">
 						<Paper className={classes.servicePaper} elevation={paperElevation}>
 							<SvgIcon className={classes.svgIcon} viewBox="0 0 84.8 84.8">
 								<VideoCallConsultation />
@@ -371,7 +376,7 @@ const Index = (props) => {
 							</Typography>
 						</Paper>
 					</Link>
-					<Link href="/privileges&itinerary">
+					<Link href="/privileges#treatment-and-video-call">
 						<Paper className={classes.servicePaper} elevation={paperElevation}>
 							<SvgIcon className={classes.svgIcon} viewBox="0 0 84.8 84.8">
 								<TreatmentPlan />
@@ -381,7 +386,7 @@ const Index = (props) => {
 							</Typography>
 						</Paper>
 					</Link>
-					<Link href="/privileges&itinerary">
+					<Link href="/privileges#arrival-to-istanbul">
 						<Paper className={classes.servicePaper} elevation={paperElevation}>
 							<SvgIcon className={classes.svgIcon} viewBox="0 0 84.8 84.8">
 								<AirportGreeting />
@@ -391,7 +396,7 @@ const Index = (props) => {
 							</Typography>
 						</Paper>
 					</Link>
-					<Link href="/privileges&itinerary">
+					<Link href="/privileges#arrival-to-istanbul">
 						<Paper className={classes.servicePaper} elevation={paperElevation}>
 							<SvgIcon className={classes.svgIcon} viewBox="0 0 84.8 84.8">
 								<AirportHotelTransfer />
@@ -401,7 +406,7 @@ const Index = (props) => {
 							</Typography>
 						</Paper>
 					</Link>
-					<Link href="/privileges&itinerary">
+					<Link href="/privileges#your-treatment">
 						<Paper className={classes.servicePaper} elevation={paperElevation}>
 							<SvgIcon className={classes.svgIcon} viewBox="0 0 84.8 84.8">
 								<ClinicHotelTransfer />
@@ -411,7 +416,7 @@ const Index = (props) => {
 							</Typography>
 						</Paper>
 					</Link>
-					<Link href="/privileges&itinerary">
+					<Link href="/privileges#hotel-booking">
 						<Paper className={classes.servicePaper} elevation={paperElevation}>
 							<SvgIcon className={classes.svgIcon} viewBox="0 0 84.8 84.8">
 								<HotelBookingAssistance />
@@ -421,7 +426,7 @@ const Index = (props) => {
 							</Typography>
 						</Paper>
 					</Link>
-					<Link href="/privileges&itinerary">
+					<Link href="/privileges#hotel-booking">
 						<Paper className={classes.servicePaper} elevation={paperElevation}>
 							<SvgIcon className={classes.svgIcon} viewBox="0 0 84.8 84.8">
 								<HotelDiscounts />
@@ -431,7 +436,7 @@ const Index = (props) => {
 							</Typography>
 						</Paper>
 					</Link>
-					<Link href="/privileges&itinerary">
+					<Link href="/privileges">
 						<Paper className={classes.servicePaper} elevation={paperElevation}>
 							<SvgIcon className={classes.svgIcon} viewBox="0 0 84.8 84.8">
 								<MultilingualAssistance />
@@ -441,7 +446,7 @@ const Index = (props) => {
 							</Typography>
 						</Paper>
 					</Link>
-					<Link href="/privileges&itinerary">
+					<Link href="/privileges#dental-holiday">
 						<Paper className={classes.servicePaper} elevation={paperElevation}>
 							<SvgIcon className={classes.svgIcon} viewBox="0 0 84.8 84.8">
 								<TravelToursDiscounts />
@@ -505,11 +510,7 @@ const Index = (props) => {
 			<section className="our-services-section">
 				<div className="our-services-header">
 					<h2 className="our-services-header-text">Dental Treatments</h2>
-					<p className="our-services-header-paragraph-text">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis mollitia deleniti beatae quam
-						incidunt doloribus. Culpa numquam tenetur fugiat modi debitis, est, aut earum perspiciatis ut
-						incidunt dignissimos quos. Voluptate.
-					</p>
+					<p className="our-services-header-paragraph-text" />
 				</div>
 				<div className="our-services-wrapper">
 					<Link href="/treatments/dental-implants">
@@ -722,30 +723,32 @@ const Index = (props) => {
 				<div className="our-services-header">
 					<h2 className="our-services-header-text">Our Doctors</h2>
 					<p className="our-services-header-paragraph-text">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis mollitia deleniti beatae quam
-						incidunt doloribus. Culpa numquam tenetur fugiat modi debitis, est, aut earum perspiciatis ut
-						incidunt dignissimos quos. Voluptate.
+						Meet our dream team of awesome and compassionate doctors.
 					</p>
 				</div>
 				<div className="our-doctors-wrapper">
 					<div className="doctor-wrapper">
 						<img
 							className="doctor-image"
-							src={require("../public/shutterstock_1498270505.jpg")}
-							alt=""
+							src={require("../public/home-page/dr-yasin-akgul.jpg")}
+							alt="Dr. Yasin Akgül Picture"
 							name="yasin"
+							onMouseOver={handleMouseOver}
+							onMouseOut={handleMouseOut}
 						/>
 						<Link href="/about#dr-yasin-akgul">
-							<a className="doctor-link">Spec. Dr. Yasin Akgül</a>
+							<a className="doctor-link">Asst. Prof. Dr. Yasin Akgül</a>
 						</Link>
 						<p className="doctor-specialty">Orthodontic Specialist</p>
 					</div>
 					<div className="doctor-wrapper">
 						<img
 							className="doctor-image"
-							src={require("../public/shutterstock_1498270505.jpg")}
-							alt=""
+							src={require("../public/home-page/dr-sevil-akgul.jpg")}
+							alt="Dr. Sevil Akgül Picture"
 							name="sevil"
+							onMouseOver={handleMouseOver}
+							onMouseOut={handleMouseOut}
 						/>
 						<Link href="/about#dr-sevil-akgul">
 							<a className="doctor-link">Spec. Dr. Sevil Akgül</a>
@@ -755,9 +758,11 @@ const Index = (props) => {
 					<div className="doctor-wrapper">
 						<img
 							className="doctor-image"
-							src={require("../public/shutterstock_1498270505.jpg")}
-							alt=""
+							src={require("../public/home-page/dr-yavuz-eker.jpg")}
+							alt="Dr. Yavuz Eker Picture"
 							name="yavuz"
+							onMouseOver={handleMouseOver}
+							onMouseOut={handleMouseOut}
 						/>
 						<Link href="/about#dr-yavuz-eker">
 							<a className="doctor-link">Dr. Yavuz Eker</a>
@@ -1498,7 +1503,7 @@ const Index = (props) => {
 					flex-direction: column;
 					align-items: center;
 					margin-bottom: 2rem;
-					padding: 6rem 0;
+					padding: 2rem 0 5rem 0;
 				}
 				.our-doctors-wrapper {
 					display: flex;
@@ -1541,7 +1546,6 @@ const Index = (props) => {
 				}
 
 				.doctor-image {
-					border-radius: 300px;
 					width: 100%;
 				}
 				.doctor-link {

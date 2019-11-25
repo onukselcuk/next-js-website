@@ -96,8 +96,8 @@ const treatmentTemplate = () => {
 		<React.Fragment>
 			<Head>
 				<title key="title">
-					Invisalign in Istanbul, Turkey | Dental Cost Calculator | Istanbul Smile Center | Let's Make Your
-					Smile Perfect
+					Root Canal Treatment in Istanbul, Turkey | Dental Cost Calculator | Istanbul Smile Center | Let's
+					Make Your Smile Perfect
 				</title>
 			</Head>
 			<section className="treatment-img-section">
@@ -105,10 +105,10 @@ const treatmentTemplate = () => {
 			</section>
 			<section className="treatment-section">
 				<div className="treatment-header">
-					<h1 className="treatment-header-text">Invisalign</h1>
+					<h1 className="treatment-header-text">Root Canal Treatment</h1>
 				</div>
 				<section className="treatment-paragraph-section">
-					<DentalImplantsInIstanbul treatmentName="Invisalign" />
+					<DentalImplantsInIstanbul treatmentName="Root Canal Treatment" />
 				</section>
 				<section className="treatment-paragraph-section">
 					<WhyChooseIsc treatmentName="" />
@@ -142,107 +142,78 @@ const treatmentTemplate = () => {
 					</div>
 				</section>
 				<section className="treatment-paragraph-section">
-					<div className="treatment-paragraph-img-div-div treatment-paragraph-img-2">
-						<iframe
-							width="100%"
-							height="100%"
-							src="https://www.youtube.com/embed/IBIAev9OX6U"
-							frameborder="0"
-							allow="accelerometer; encrypted-media; gyroscope;"
-							allowfullscreen
-						/>
+					<div className="treatment-paragraph-img-div-div">
+						<div className="treatment-paragraph-img-div treatment-paragraph-img-2" />
 					</div>
 					<div className="treatment-general-text-div treatment-general-text-div-double treatment-general-text-div-double-extra ">
 						<div className="treatment-general-text-side-div">
 							<h2 className="treatment-paragraph-header">
-								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faStarOfLife} /> What Is
-								Invisalign?
+								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faStarOfLife} /> What Is Root
+								Canal Treatment?
 							</h2>
 							<p className="treatment-paragraph">
-								Invisalign aligners are used for alignment mismatches or positioning problems between
-								teeth. Plaques can be easily removed during the day. Invisalign aligners are an
-								alternative to metal braces for adults. Elimination of the braces have a positive impact
-								on the quality of daily life.
+								The process of removing the nerve of the tooth, cleaning and shaping the cavity and
+								filling special canal filling materials is referred to as root canal treatment. The
+								patient's condition is important for staging the process. Results can be obtained in one
+								or two sessions. Not only the problems in the teeth but also the problems in the gums
+								may require canal treatment. Cases requiring root canal treatment can be;
 							</p>
 							<p className="treatment-paragraph">
-								Metal braces, which are frequently preferred, have been replaced by Invisalign over the
-								years. With Invisalign, you can enjoy all the benefits of metal braces. The main
-								advantage of Invisalign is that it is not visible from the outside, plaques are
-								transparent. Especially young patients may not enjoy the appearance of braces. This
-								disadvantage is gone with Invisalign.
+								<FontAwesomeIcon
+									className={classes.fontAwesomeIconCheck}
+									icon={faChevronCircleRight}
+								/>{" "}
+								Severe pain in contact with hot or cold foods
+							</p>
+							<p className="treatment-paragraph">
+								<FontAwesomeIcon
+									className={classes.fontAwesomeIconCheck}
+									icon={faChevronCircleRight}
+								/>{" "}
+								Unknown pain
+							</p>
+							<p className="treatment-paragraph">
+								<FontAwesomeIcon
+									className={classes.fontAwesomeIconCheck}
+									icon={faChevronCircleRight}
+								/>{" "}
+								Aggravated pain during sleep
 							</p>
 							<h2 className="treatment-paragraph-header">
-								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faStarOfLife} /> What Is The
-								Treatment Process?
+								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faStarOfLife} /> Is The
+								Treatment Painful?
 							</h2>
 							<p className="treatment-paragraph">
-								Before producing plaques, digital scanning is performed with iTero Element 2 (Original
-								3D Scanner Product of Invisalign) in our clinic. Our specialist orthodontist determines
-								the duration and the number of plaques needed for the treatment. Oral measurements are
-								taken, and these measurements are transferred to partner Invisalign Lab. Tooth motions
-								are examined by simulation techniques, and transparent plaques are produced for every
-								0.5 mm movement. After the Invisalign treatment is completed, wires are attached to the
-								inside of your teeth. However, these wires are quite thin and small, invisible from the
-								outside.
+								Root canal treatment does not cause any pain during treatment. Since local anesthesia is
+								applied, the patient feels no pain at all. However, it is also possible to experience
+								some pain after treatment. It is recommended that the patient does not use that tooth
+								during the healing period. Then the pain in the tooth will gradually end.
 							</p>
 						</div>
 						<div className="treatment-general-text-side-div">
 							<h2 className="treatment-paragraph-header">
-								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faStarOfLife} /> What Are The
-								Features of Invisalign?
+								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faStarOfLife} /> How Is The
+								Treatment Process?
 							</h2>
 							<p className="treatment-paragraph">
-								<FontAwesomeIcon
-									className={classes.fontAwesomeIconCheck}
-									icon={faChevronCircleRight}
-								/>{" "}
-								Invisalign should be worn for 20 hours in a day. The removable plaques makes it very
-								easy to use in daily life.
+								Before the treatment, rubber cover is applied to ensure sterilization. The rubber cover
+								is intended to eliminate the possibility of bacteria in the saliva entering the canal
+								during canal treatment. Thus, the process proceeds in a more comfortable and hygienic
+								way. Local anesthesia is carried out after the rubber cover.
 							</p>
 							<p className="treatment-paragraph">
-								<FontAwesomeIcon
-									className={classes.fontAwesomeIconCheck}
-									icon={faChevronCircleRight}
-								/>{" "}
-								It is effortless to clean. Invisalign can be cleaned during the day with water and
-								toothbrush.
+								First, all caries on the tooth surface are removed and the decays are cleaned. At this
+								stage, the entrance to the section called the canal room starts in the middle of the
+								tooth. The canal length is determined using signaling instruments to ensure that the
+								detection of the canal ends is perfect. It is possible to open one or more canals as
+								required. At this stage of treatment, canal forming procedures are performed. Hand tools
+								are used at the beginning of the stage. Then it comes to rotating tools. With the help
+								of rotating tools, interventions to shape the root canals are made.
 							</p>
 							<p className="treatment-paragraph">
-								<FontAwesomeIcon
-									className={classes.fontAwesomeIconCheck}
-									icon={faChevronCircleRight}
-								/>{" "}
-								Invisalign does not have a negative effect on speech. In the early days, a
-								familiarization process may be necessary, but later the plaques do not cause any
-								discomfort.
-							</p>
-							<p className="treatment-paragraph">
-								<FontAwesomeIcon
-									className={classes.fontAwesomeIconCheck}
-									icon={faChevronCircleRight}
-								/>{" "}
-								There is no problem with eating and drinking. You can easily remove the plaques during
-								meals.
-							</p>
-							<p className="treatment-paragraph">
-								<FontAwesomeIcon
-									className={classes.fontAwesomeIconCheck}
-									icon={faChevronCircleRight}
-								/>{" "}
-								The plaques also have the advantage of being very painless compared to metal braces.
-							</p>
-							<h2 className="treatment-paragraph-header">
-								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faStarOfLife} /> How Long
-								Does The Treatment Take?
-							</h2>
-							<p className="treatment-paragraph">
-								You only need to visit our clinic once for the treatment plan and 3D digital scan.
-								Later, either we can ship the plaques to your country, or you can pick up your plaques
-								in 2-3 days from our clinic once they are prepared. Duration of the treatment itself
-								depends on the structure and the positions of the teeth. Our specialist doctor will
-								determine this depending on the treatment, and plaques will be prepared according to
-								that duration. But it is safe to say that 60% of the treatments are completed in 3 to 12
-								months.
+								The canals are now open and shaped. With the help of an antibacterial solution, all
+								canals are purified from bacteria. Opened, cleaned, shaped canals are filled with
+								special dental fillings.
 							</p>
 						</div>
 
@@ -285,12 +256,12 @@ const treatmentTemplate = () => {
 				}
 
 				.treatment-img-div {
-					background-image: url(${require("../../public/treatments/invisalign-page/invisalign-intro-img-1515575501.jpg")});
+					background-image: url(${require("../../public/treatments/root-canal-treatment-page/root-canal-treatment-intro-img-400668181.jpg")});
 					width: 100%;
-					height: 50vmax;
+					height: 65vh;
 					background-repeat: no-repeat;
 					background-size: cover;
-					background-position: left 42% bottom 65%;
+					background-position: left 42% bottom 60%;
 					clip-path: ellipse(100% 100% at 50% 0%);
 				}
 
@@ -339,8 +310,10 @@ const treatmentTemplate = () => {
 				}
 
 				.treatment-paragraph-img-2 {
-					height: 30vmax;
-					overflow: hidden;
+					background-image: url(${require("../../public/treatments/root-canal-treatment-page/root-canal-treatment-img-1405987151.jpg")});
+					height: 55vmax;
+					max-height: 1000px;
+					background-position: left 50% bottom 80%;
 				}
 
 				.treatment-general-text-div {

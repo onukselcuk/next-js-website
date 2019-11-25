@@ -290,7 +290,7 @@ export default () => {
 								<a className={classes.navLink}>About Us</a>
 							</ActiveLink>
 							<div className={classes.treatmentsLinkWrapper}>
-								<Link href="/" activeClassName={classes.activeLink}>
+								<Link href="#">
 									<a className={clsx(classes.navLink, classes.treatmentsLink, "treatmentLinkExtra")}>
 										Treatments<ExpandMoreIcon className={classes.expandMoreIcon} />
 									</a>
