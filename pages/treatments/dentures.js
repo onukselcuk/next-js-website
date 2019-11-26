@@ -258,13 +258,20 @@ const treatmentTemplate = () => {
 					width: 100%;
 				}
 
+				:global(.webp) .treatment-img-div {
+					background-image: url(${require("../../public/treatments/dentures-page/dentures-intro-img.webp")});
+				}
+
+				:global(.no-webp) .treatment-img-div {
+					background-image: url(${require("../../public/treatments/dentures-page/dentures-intro-img.jpg")});
+				}
+
 				.treatment-img-div {
-					background-image: url(${require("../../public/treatments/dentures-page/dentures-intro-img-1494062714.jpg")});
 					width: 100%;
 					height: 65vh;
 					background-repeat: no-repeat;
 					background-size: cover;
-					background-position: left 42% bottom 30%;
+					background-position: left 45% bottom 30%;
 					clip-path: ellipse(100% 100% at 50% 0%);
 				}
 
@@ -312,8 +319,15 @@ const treatmentTemplate = () => {
 					background-color: ${sTheme.palette.secondary.main};
 				}
 
+				:global(.webp) .treatment-paragraph-img-2 {
+					background-image: url(${require("../../public/treatments/dentures-page/dentures-set-img.webp")});
+				}
+
+				:global(.no-webp) .treatment-paragraph-img-2 {
+					background-image: url(${require("../../public/treatments/dentures-page/dentures-set-img.jpg")});
+				}
+
 				.treatment-paragraph-img-2 {
-					background-image: url(${require("../../public/treatments/dentures-page/dentures-set-img-427105573.jpg")});
 					max-height: 750px;
 					height: 35vmax;
 					background-position: left 50% bottom 80%;

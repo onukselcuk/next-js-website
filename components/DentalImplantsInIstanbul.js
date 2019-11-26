@@ -103,8 +103,15 @@ const DentalImplantsInIstanbul = ({ treatmentName }) => {
 				.treatment-paragraph-img-div-div {
 					width: 65%;
 				}
-				.treatment-paragraph-img-div {
+
+				:global(.webp) .treatment-paragraph-img-div {
+					background-image: url(${require("../public/treatments/dental-implants-page/istanbul-bosphorous-img.webp")});
+				}
+
+				:global(.no-webp) .treatment-paragraph-img-div {
 					background-image: url(${require("../public/treatments/dental-implants-page/istanbul-bosphorous-img.jpg")});
+				}
+				.treatment-paragraph-img-div {
 					height: 300px;
 					border-top-left-radius: 20px;
 					border-top-right-radius: 20px;

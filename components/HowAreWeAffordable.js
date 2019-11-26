@@ -108,14 +108,21 @@ const HowAreWeAffordable = () => {
 				.treatment-paragraph-img-div-div {
 					width: 65%;
 				}
+
+				:global(.webp) .treatment-paragraph-img-div {
+					background-image: url(${require("../public/treatments/dental-implants-page/affordable-prices-img.webp")});
+				}
+
+				:global(.no-webp) .treatment-paragraph-img-div {
+					background-image: url(${require("../public/treatments/dental-implants-page/affordable-prices-img.jpg")});
+				}
+
 				.treatment-paragraph-img-div {
 					border-top-left-radius: 20px;
 					border-top-right-radius: 20px;
 					background-repeat: no-repeat;
 					background-size: cover;
-
 					background-color: ${sTheme.palette.secondary.main};
-					background-image: url(${require("../public/treatments/dental-implants-page/affordable-prices-img-220231984.jpg")});
 					height: 40vmax;
 					max-height: 600px;
 					background-position: left 60% bottom 80%;

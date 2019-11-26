@@ -96,8 +96,8 @@ const treatmentTemplate = () => {
 		<React.Fragment>
 			<Head>
 				<title key="title">
-					Pediatric Dentistry in Istanbul, Turkey | Dental Cost Calculator | Istanbul Smile Center | Let's
-					Make Your Smile Perfect
+					Pediatric Dentistry in Istanbul, Turkey | General Anesthesia and Sedation in Children | Dental Cost
+					Calculator | Istanbul Smile Center | Let's Make Your Smile Perfect
 				</title>
 			</Head>
 			<section className="treatment-img-section">
@@ -148,75 +148,232 @@ const treatmentTemplate = () => {
 					<div className="treatment-general-text-div treatment-general-text-div-double treatment-general-text-div-double-extra ">
 						<div className="treatment-general-text-side-div">
 							<h2 className="treatment-paragraph-header">
-								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faStarOfLife} /> What Are
-								Dentures/Prosthetic Teeth?
+								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faStarOfLife} /> Pediatric
+								Dentistry
 							</h2>
 							<p className="treatment-paragraph">
-								Artificial teeth placed in order to complete dental deficiencies due to different
-								reasons and to ensure oral integrity are referred to as prostheses. Deficiencies and
-								disruption of oral health can be solved by prosthetic teeth.
+								Pediatric dentistry is a science that examines and provides solutions to oral and dental
+								health problems of children from birth to the end of adolescence. As the teeth of the
+								children start to emerge, the dental system goes through different periods until the
+								permanent teeth emerge. Pediatric dentistry includes different applications such as;
 							</p>
 							<p className="treatment-paragraph">
-								There are fixed dentures and removable dentures. Fixed dentures are applied by the
-								bonding method. Crowns, bridges or similar applications form fixed dentures. These
-								dentures can be worn and removed by dentists because they are fixed in the structural
-								context and do not show mobility. Methods such as zirconium or porcelain tooth coating
-								may be preferred for fixed dentures.
+								<FontAwesomeIcon
+									className={classes.fontAwesomeIconCheck}
+									icon={faChevronCircleRight}
+								/>{" "}
+								Following and preventing dental disorders
 							</p>
 							<p className="treatment-paragraph">
-								Removable prostheses, on the other hand, can be easily removed and worn by the patient.
-								There are total prosthesis, partial prosthesis, sensitive prosthesis and overdentures in
-								this category of prostheses.
+								<FontAwesomeIcon
+									className={classes.fontAwesomeIconCheck}
+									icon={faChevronCircleRight}
+								/>{" "}
+								Treatment of decay in milk (baby teeth) and permanent teeth
+							</p>
+							<p className="treatment-paragraph">
+								<FontAwesomeIcon
+									className={classes.fontAwesomeIconCheck}
+									icon={faChevronCircleRight}
+								/>{" "}
+								Preservation of toothless areas that will occur as a result of early tooth extraction
 							</p>
 							<h2 className="treatment-paragraph-header">
-								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faStarOfLife} /> How Is The
-								Treatment Process?
+								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faStarOfLife} /> General
+								Anesthesia and Sedation in Children
 							</h2>
 							<p className="treatment-paragraph">
-								In the first stage of treatment, the dentist takes the measurements. Three-dimensional
-								digital scanning methods are used in the measurements performed in Istanbul Smile
-								Center. With these methods, the process is made comfortable and fast. After the
-								measurement, the color tone is selected and modeling occurs. In order to observe the
-								harmony of the model in the mouth, a test is performed first. Some corrections can be
-								made according to the result of the test. Prostheses bonded with special adhesives
-								become ready for use.
+								General anesthesia and sedation in children make the treatments easier, faster and
+								practical. With the new anesthesia techniques we use, anesthesia is a very easy process
+								in Istanbul Smile Center. Our clinic is considered one of the best places in Pediatric
+								Dentistry.
 							</p>
 							<p className="treatment-paragraph">
-								In the treatment of removable prosthesis, measurement procedures are done first.
-								Following the measurement procedures, dental samples formed by special methods are
-								placed in the patient to observe the harmony in the mouth. If there are no problems,
-								prostheses are created. Finally, the integration process is done.
+								Sedation is different from general anesthesia. In sedation applications, children can
+								communicate with dentists during treatment as well as answer questions. No respiratory
+								support is required in sedations.
 							</p>
 						</div>
+
 						<div className="treatment-general-text-side-div">
 							<h2 className="treatment-paragraph-header">
-								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faStarOfLife} /> Who Needs
-								Dentures?
+								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faStarOfLife} /> Why Is
+								Anesthesia Applied In Children's Dental Problems?
 							</h2>
 							<p className="treatment-paragraph">
-								Denture Treatment can be applied to anyone who has missing teeth. Fixed dentures are
-								applied to patients who have partial teeth loss. Removable dentures are made in case of
-								loss of all teeth.
+								Dental caries are the most common problem in the oral health of children. Dental caries
+								may occur in children who do not brush their teeth regularly. In addition, general
+								anesthesia can be applied if there are suitable conditions for tooth fractures or bigger
+								problems in children.
+							</p>
+							<p className="treatment-paragraph">
+								<FontAwesomeIcon
+									className={classes.fontAwesomeIconCheck}
+									icon={faChevronCircleRight}
+								/>{" "}
+								If local anesthesia or sedation is not sufficient for the treatment
+							</p>
+							<p className="treatment-paragraph">
+								<FontAwesomeIcon
+									className={classes.fontAwesomeIconCheck}
+									icon={faChevronCircleRight}
+								/>{" "}
+								To prevent intense fear and anxiety
+							</p>
+							<p className="treatment-paragraph">
+								<FontAwesomeIcon
+									className={classes.fontAwesomeIconCheck}
+									icon={faChevronCircleRight}
+								/>{" "}
+								Physical or mental disability
+							</p>
+							<p className="treatment-paragraph">
+								<FontAwesomeIcon
+									className={classes.fontAwesomeIconCheck}
+									icon={faChevronCircleRight}
+								/>{" "}
+								Communication is not possible with the patient
+							</p>
+							<p className="treatment-paragraph">
+								<FontAwesomeIcon
+									className={classes.fontAwesomeIconCheck}
+									icon={faChevronCircleRight}
+								/>{" "}
+								If baby bottle caries are seen at an early age
 							</p>
 							<h2 className="treatment-paragraph-header">
-								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faStarOfLife} /> What Are The
-								Features of Dentures?
+								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faStarOfLife} /> After
+								General Anesthesia
 							</h2>
 							<p className="treatment-paragraph">
-								Dental deficiencies in the mouth can cause damage not only in the region where they are
-								located but also in the surrounding areas. The absence of teeth in a region also affects
-								the teeth on the right and left of the cavity to a large extent. Teeth positioned next
-								to the cavity will bend over time. In addition, if regular maintenance is not done,
-								inflammation will occur, and this inflammation will spread to the adjacent teeth. The
-								inflammation of the teeth and gums causes further problems.
+								After general anesthesia, the parents and the patient are hosted in our clinic for a
+								period of one to two hours. The waiting time may vary depending on the condition of the
+								patient. After a day's rest, patient can continue their daily life.
+							</p>
+						</div>
+
+						<div className="dental-treatments-buttons-div">
+							<Button
+								variant="contained"
+								color="primary"
+								className={clsx(classes.regularButton, classes.pricesButton)}
+								onClick={handleChat}
+							>
+								Chat&nbsp;Now
+							</Button>
+						</div>
+					</div>
+				</section>
+				<section className="treatment-paragraph-section">
+					<div className="treatment-paragraph-img-div-div">
+						<div className="treatment-paragraph-img-div treatment-paragraph-img-3" />
+					</div>
+					<div className="treatment-general-text-div treatment-general-text-div-double treatment-general-text-div-double-extra ">
+						<div className="treatment-general-text-side-div">
+							<h2 className="treatment-paragraph-header">
+								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faStarOfLife} /> What Is
+								Fluoride Treatment?
+							</h2>
+							<p className="treatment-paragraph">
+								The World Health Organization report states that inadequate intake of fluoride adversely
+								affects health and leads to tooth decay. The UK National Health Service's (NHS) study of
+								children with and without drinking water fluoride reported that children who drink
+								fluorinated water have less than 60 percent tooth decay.
 							</p>
 							<p className="treatment-paragraph">
-								The main advantage of prosthetic teeth includes the protection of adjacent teeth. The
-								displacement, slipping or inclination of natural teeth can be prevented by a prosthesis.
-								The deficiencies in the teeth make it difficult to chew, prevent speech, and extend the
-								grinding process. With these prosthesis applications, these problems are completely
-								eliminated. Missing teeth also cause some psychological problems in daily life. In some
-								cases, providing a good appearance and aesthetic smile is possible with prosthesis.
+								Fluoride treatment in children is the safest and cost-effective preventive application
+								that has been developed both to protect teeth and prevent the progression of caries. It
+								reduces tooth decay by 30-40%.
+							</p>
+						</div>
+
+						<div className="treatment-general-text-side-div">
+							<h2 className="treatment-paragraph-header">
+								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faStarOfLife} /> How Does
+								Fluoride Treatment Protect Teeth?
+							</h2>
+							<p className="treatment-paragraph">
+								Milk teeth complete an important part of the development before birth. Jaws continue to
+								develop slowly over the years. In a 7-8-year-old child, the development of permanent
+								teeth is completed.
+							</p>
+							<p className="treatment-paragraph">
+								During the development of the teeth, the fluoride taken by the child using fluorinated
+								water is dispersed throughout the body and some of them participate in the structure of
+								the developing teeth. Fluoride strengthens the tooth structure and increases its
+								resistance to caries.
+							</p>
+						</div>
+
+						<div className="dental-treatments-buttons-div">
+							<Button
+								variant="contained"
+								color="primary"
+								className={clsx(classes.regularButton, classes.pricesButton)}
+								onClick={handleChat}
+							>
+								Chat&nbsp;Now
+							</Button>
+						</div>
+					</div>
+				</section>
+				<section className="treatment-paragraph-section">
+					<div className="treatment-paragraph-img-div-div">
+						<div className="treatment-paragraph-img-div treatment-paragraph-img-4" />
+					</div>
+					<div className="treatment-general-text-div treatment-general-text-div-double treatment-general-text-div-double-extra ">
+						<div className="treatment-general-text-side-div">
+							<h2 className="treatment-paragraph-header">
+								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faStarOfLife} /> What Is
+								Fissure Sealant?
+							</h2>
+							<p className="treatment-paragraph">
+								No matter how much we brush our teeth, in some cases, we may not be able to prevent
+								caries. Because toothbrushes cannot be designed to reach every point of the tooth.
+								Fissures formed on molar teeth located at the back of our mouth cause caries. However,
+								with the application of fissure sealant, we can prevent the formation of caries by
+								sealing these fissures. Fissure sealing process, especially applied to molars in
+								children, is done to prevent the accumulation of nutrients in the recesses and grooves
+								that may cause caries formation.
+							</p>
+							<h2 className="treatment-paragraph-header">
+								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faStarOfLife} /> Is It An
+								Easy Procedure?
+							</h2>
+							<p className="treatment-paragraph">
+								It is an easy and painless procedure. The treatment duration is 3-5 minutes depending on
+								the adaptation of the child.
+							</p>
+
+							<h2 className="treatment-paragraph-header">
+								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faStarOfLife} /> Is Fissure
+								Sealing a Repeated Application Like Fluoride?
+							</h2>
+							<p className="treatment-paragraph">
+								Fissure sealing is not a repeated application like fluoride. It is done once per tooth.
+							</p>
+						</div>
+
+						<div className="treatment-general-text-side-div">
+							<h2 className="treatment-paragraph-header">
+								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faStarOfLife} /> When Should
+								Fissure Sealant Be Applied?
+							</h2>
+							<p className="treatment-paragraph">
+								It is necessary to consult a pediatric dentist for a fissure sealing process at the time
+								when the molars of the child and the permanent teeth start to come out. Because new
+								teeth can decay much faster. Therefore, it is very important to start preventive
+								applications in the early period.
+							</p>
+							<h2 className="treatment-paragraph-header">
+								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faStarOfLife} /> What Happens
+								If The Fissure Sealing Is Not Done?
+							</h2>
+							<p className="treatment-paragraph">
+								If the fissure sealing is not made on time, the teeth are at risk of caries. Over time,
+								the teeth may begin to decay from the pitted surfaces prone to caries. Depending on the
+								depth of caries, filling, root canal treatment or tooth extraction may be required.
+								These treatments are both higher in cost and more tedious for children.
 							</p>
 						</div>
 
@@ -258,13 +415,20 @@ const treatmentTemplate = () => {
 					width: 100%;
 				}
 
+				:global(.webp) .treatment-img-div {
+					background-image: url(${require("../../public/treatments/pediatric-dentistry-page/pediatric-dentistry-intro-img.webp")});
+				}
+
+				:global(.no-webp) .treatment-img-div {
+					background-image: url(${require("../../public/treatments/pediatric-dentistry-page/pediatric-dentistry-intro-img.jpg")});
+				}
+
 				.treatment-img-div {
-					background-image: url(${require("../../public/treatments/dentures-page/dentures-intro-img-1494062714.jpg")});
 					width: 100%;
-					height: 65vh;
+					height: 70vh;
 					background-repeat: no-repeat;
 					background-size: cover;
-					background-position: left 42% bottom 30%;
+					background-position: left 50% bottom 50%;
 					clip-path: ellipse(100% 100% at 50% 0%);
 				}
 
@@ -312,11 +476,44 @@ const treatmentTemplate = () => {
 					background-color: ${sTheme.palette.secondary.main};
 				}
 
+				:global(.webp) .treatment-paragraph-img-2 {
+					background-image: url(${require("../../public/treatments/pediatric-dentistry-page/pediatric-dentistry-img.webp")});
+				}
+
+				:global(.no-webp) .treatment-paragraph-img-2 {
+					background-image: url(${require("../../public/treatments/pediatric-dentistry-page/pediatric-dentistry-img.jpg")});
+				}
+
 				.treatment-paragraph-img-2 {
-					background-image: url(${require("../../public/treatments/dentures-page/dentures-set-img-427105573.jpg")});
 					max-height: 750px;
-					height: 35vmax;
-					background-position: left 50% bottom 80%;
+					height: 32vmax;
+					background-position: left 50% bottom 65%;
+				}
+
+				:global(.webp) .treatment-paragraph-img-3 {
+					background-image: url(${require("../../public/treatments/pediatric-dentistry-page/fluoride-treatment-img.webp")});
+				}
+
+				:global(.no-webp) .treatment-paragraph-img-3 {
+					background-image: url(${require("../../public/treatments/pediatric-dentistry-page/fluoride-treatment-img.jpg")});
+				}
+				.treatment-paragraph-img-3 {
+					max-height: 750px;
+					height: 32vmax;
+					background-position: left 60% bottom 55%;
+				}
+
+				:global(.webp) .treatment-paragraph-img-4 {
+					background-image: url(${require("../../public/treatments/pediatric-dentistry-page/fissure-sealing-img.webp")});
+				}
+
+				:global(.no-webp) .treatment-paragraph-img-4 {
+					background-image: url(${require("../../public/treatments/pediatric-dentistry-page/fissure-sealing-img.jpg")});
+				}
+				.treatment-paragraph-img-4 {
+					max-height: 750px;
+					height: 30vmax;
+					background-position: left 40% bottom 65%;
 				}
 
 				.treatment-general-text-div {

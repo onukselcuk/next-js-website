@@ -110,7 +110,7 @@ const Prices = () => {
 			</section>
 			<section className="our-prices-section cost-calculator-section">
 				<div className="our-prices-header">
-					<h2 className="our-prices-header-text">Cost Calculator</h2>
+					<h2 className="our-prices-header-text">Dental Cost Calculator</h2>
 					<p className="our-prices-header-paragraph-text">
 						We even provide you a cost calculator to calculate the dental cost by yourself for your
 						convenience. If you got your teeth checked up by a doctor and know your exact treatment needs or
@@ -164,13 +164,20 @@ const Prices = () => {
 					margin-top: -5px;
 					padding-bottom: 4rem;
 				}
+
+				:global(.webp) .calculator-img-div {
+					background-image: url(${require("../public/prices-page/money-saving-img.webp")});
+				}
+
+				:global(.no-webp) .calculator-img-div {
+					background-image: url(${require("../public/prices-page/money-saving-img.jpg")});
+				}
 				.calculator-img-div {
-					background-image: url(${require("../public/prices-page/money-saving-img-220231984.jpg")});
-					height: 70vh;
+					height: 40vmax;
 					width: 100%;
 					background-repeat: no-repeat;
 					background-size: cover;
-					background-position: bottom 50% right 40%;
+					background-position: bottom 30% right 40%;
 					clip-path: ellipse(100% 100% at 50% 0%);
 				}
 				.our-prices-header {

@@ -237,13 +237,20 @@ const treatmentTemplate = () => {
 					width: 100%;
 				}
 
+				:global(.webp) .treatment-img-div {
+					background-image: url(${require("../../public/treatments/teeth-whitening-page/teeth-whitening-intro-img.webp")});
+				}
+
+				:global(.no-webp) .treatment-img-div {
+					background-image: url(${require("../../public/treatments/teeth-whitening-page/teeth-whitening-intro-img.jpg")});
+				}
+
 				.treatment-img-div {
-					background-image: url(${require("../../public/treatments/teeth-whitening-page/teeth-whitening-intro-img-714591517.jpg")});
 					width: 100%;
-					height: 70vh;
+					height: 75vh;
 					background-repeat: no-repeat;
 					background-size: cover;
-					background-position: left 42% bottom 80%;
+					background-position: left 48% bottom 80%;
 					clip-path: ellipse(100% 100% at 50% 0%);
 				}
 
@@ -291,8 +298,15 @@ const treatmentTemplate = () => {
 					background-color: ${sTheme.palette.secondary.main};
 				}
 
+				:global(.webp) .treatment-paragraph-img-2 {
+					background-image: url(${require("../../public/treatments/teeth-whitening-page/teeth-whitening-img.webp")});
+				}
+
+				:global(.no-webp) .treatment-paragraph-img-2 {
+					background-image: url(${require("../../public/treatments/teeth-whitening-page/teeth-whitening-img.jpg")});
+				}
+
 				.treatment-paragraph-img-2 {
-					background-image: url(${require("../../public/treatments/teeth-whitening-page/teeth-whitening-img-364819988.jpg")});
 					height: 35vmax;
 					max-height: 750px;
 					background-position: left 60% bottom 80%;

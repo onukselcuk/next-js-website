@@ -175,7 +175,7 @@ const treatmentTemplate = () => {
 							</h2>
 							<p className="treatment-paragraph">
 								The main reason for implant treatment is missing teeth. Bone tissue and structure should
-								be suitable for the treatment. If there is a weakness in the bone structure, the bone
+								be suitable for the treatment. If there is a weakness in the bone structure, bone
 								grafting is added to the area, and the structure is strengthened. This is very common.
 								In addition, implantation may be inconvenient if there are diseases or conditions such
 								as heart disease, diabetes, pregnancy, breastfeeding, hemophilia problems. Patients who
@@ -324,8 +324,15 @@ const treatmentTemplate = () => {
 					width: 100%;
 				}
 
-				.treatment-img-div {
+				:global(.webp) .treatment-img-div {
+					background-image: url(${require("../../public/treatments/dental-implants-page/dental-implant-intro-background-img.webp")});
+				}
+
+				:global(.no-webp) .treatment-img-div {
 					background-image: url(${require("../../public/treatments/dental-implants-page/dental-implant-intro-background-img.jpg")});
+				}
+
+				.treatment-img-div {
 					width: 100%;
 					height: 66vh;
 					background-repeat: no-repeat;
@@ -369,7 +376,6 @@ const treatmentTemplate = () => {
 					width: 65%;
 				}
 				.treatment-paragraph-img-div {
-					background-image: url(${require("../../public/treatments/dental-implants-page/istanbul-bosphorous-img.jpg")});
 					height: 300px;
 					border-top-left-radius: 20px;
 					border-top-right-radius: 20px;
@@ -379,24 +385,31 @@ const treatmentTemplate = () => {
 					background-color: ${sTheme.palette.secondary.main};
 				}
 
-				.treatment-paragraph-img-3 {
+				:global(.webp) .treatment-paragraph-img-3 {
+					background-image: url(${require("../../public/treatments/dental-implants-page/dental-implant-img.webp")});
+				}
+
+				:global(.no-webp) .treatment-paragraph-img-3 {
 					background-image: url(${require("../../public/treatments/dental-implants-page/dental-implant-img.jpg")});
+				}
+
+				.treatment-paragraph-img-3 {
 					max-height: 750px;
 					height: 50vmax;
 					background-position: left 70% bottom 80%;
 				}
 
-				.treatment-paragraph-img-4 {
-					background-image: url(${require("../../public/treatments/dental-implants-page/implant-brands-img.jpg")});
-					height: 300px;
-					background-position: left 50% bottom 80%;
+				:global(.webp) .treatment-paragraph-img-4 {
+					background-image: url(${require("../../public/treatments/dental-implants-page/implant-brands-img.webp")});
 				}
 
-				.treatment-paragraph-img-5 {
-					background-image: url(${require("../../public/treatments/dental-implants-page/affordable-prices-img-220231984.jpg")});
-					height: 40vmax;
-					max-height: 600px;
-					background-position: left 60% bottom 80%;
+				:global(.no-webp) .treatment-paragraph-img-4 {
+					background-image: url(${require("../../public/treatments/dental-implants-page/implant-brands-img.jpg")});
+				}
+
+				.treatment-paragraph-img-4 {
+					height: 300px;
+					background-position: left 50% bottom 80%;
 				}
 
 				.treatment-general-text-div {

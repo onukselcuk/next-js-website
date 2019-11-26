@@ -187,7 +187,7 @@ const treatmentTemplate = () => {
 								Root canal treatment does not cause any pain during treatment. Since local anesthesia is
 								applied, the patient feels no pain at all. However, it is also possible to experience
 								some pain after treatment. It is recommended that the patient does not use that tooth
-								during the healing period. Then the pain in the tooth will gradually end.
+								during the healing period. Then the pain in the tooth will gradually go away.
 							</p>
 						</div>
 						<div className="treatment-general-text-side-div">
@@ -207,13 +207,13 @@ const treatmentTemplate = () => {
 								tooth. The canal length is determined using signaling instruments to ensure that the
 								detection of the canal ends is perfect. It is possible to open one or more canals as
 								required. At this stage of treatment, canal forming procedures are performed. Hand tools
-								are used at the beginning of the stage. Then it comes to rotating tools. With the help
-								of rotating tools, interventions to shape the root canals are made.
+								are used at the beginning of the stage. With the help of rotating tools, interventions
+								to shape the root canals are made.
 							</p>
 							<p className="treatment-paragraph">
 								The canals are now open and shaped. With the help of an antibacterial solution, all
 								canals are purified from bacteria. Opened, cleaned, shaped canals are filled with
-								special dental fillings.
+								special dental fillings which completes the treatment.
 							</p>
 						</div>
 
@@ -255,8 +255,15 @@ const treatmentTemplate = () => {
 					width: 100%;
 				}
 
+				:global(.webp) .treatment-img-div {
+					background-image: url(${require("../../public/treatments/root-canal-treatment-page/root-canal-treatment-intro-img.webp")});
+				}
+
+				:global(.no-webp) .treatment-img-div {
+					background-image: url(${require("../../public/treatments/root-canal-treatment-page/root-canal-treatment-intro-img.jpg")});
+				}
+
 				.treatment-img-div {
-					background-image: url(${require("../../public/treatments/root-canal-treatment-page/root-canal-treatment-intro-img-400668181.jpg")});
 					width: 100%;
 					height: 65vh;
 					background-repeat: no-repeat;
@@ -309,11 +316,18 @@ const treatmentTemplate = () => {
 					background-color: ${sTheme.palette.secondary.main};
 				}
 
+				:global(.webp) .treatment-paragraph-img-2 {
+					background-image: url(${require("../../public/treatments/root-canal-treatment-page/root-canal-treatment-img.webp")});
+				}
+
+				:global(.no-webp) .treatment-paragraph-img-2 {
+					background-image: url(${require("../../public/treatments/root-canal-treatment-page/root-canal-treatment-img.jpg")});
+				}
+
 				.treatment-paragraph-img-2 {
-					background-image: url(${require("../../public/treatments/root-canal-treatment-page/root-canal-treatment-img-1405987151.jpg")});
-					height: 55vmax;
+					height: 40vmax;
 					max-height: 1000px;
-					background-position: left 50% bottom 80%;
+					background-position: left 50% bottom 60%;
 				}
 
 				.treatment-general-text-div {

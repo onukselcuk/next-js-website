@@ -326,8 +326,15 @@ const treatmentTemplate = () => {
 					width: 100%;
 				}
 
+				:global(.webp) .treatment-img-div {
+					background-image: url(${require("../../public/treatments/cosmetic-dentistry-page/cosmetic-dentistry-intro-img.webp")});
+				}
+
+				:global(.no-webp) .treatment-img-div {
+					background-image: url(${require("../../public/treatments/cosmetic-dentistry-page/cosmetic-dentistry-intro-img.jpg")});
+				}
+
 				.treatment-img-div {
-					background-image: url(${require("../../public/treatments/cosmetic-dentistry-page/cosmetic-dentistry-intro-img-709191712.jpg")});
 					width: 100%;
 					height: 75vh;
 					background-repeat: no-repeat;
@@ -380,18 +387,32 @@ const treatmentTemplate = () => {
 					background-color: ${sTheme.palette.secondary.main};
 				}
 
+				:global(.webp) .treatment-paragraph-img-3 {
+					background-image: url(${require("../../public/treatments/cosmetic-dentistry-page/hollywood-smile-img.webp")});
+				}
+
+				:global(.no-webp) .treatment-paragraph-img-3 {
+					background-image: url(${require("../../public/treatments/cosmetic-dentistry-page/hollywood-smile-img.jpg")});
+				}
+
 				.treatment-paragraph-img-3 {
-					background-image: url(${require("../../public/treatments/cosmetic-dentistry-page/hollywood-smile-img-1457907785.jpg")});
 					max-height: 750px;
 					height: 30vmax;
 					background-position: left 10% bottom 80%;
 				}
 
-				.treatment-paragraph-img-4 {
+				:global(.webp) .treatment-paragraph-img-4 {
+					background-image: url(${require("../../public/treatments/cosmetic-dentistry-page/gummy-smile-correction-img.webp")});
+				}
+
+				:global(.no-webp) .treatment-paragraph-img-4 {
 					background-image: url(${require("../../public/treatments/cosmetic-dentistry-page/gummy-smile-correction-img.jpg")});
+				}
+
+				.treatment-paragraph-img-4 {
 					background-position: center;
 					background-size: contain;
-					height: 12vmax;
+					height: 14vmax;
 				}
 
 				.treatment-general-text-div {

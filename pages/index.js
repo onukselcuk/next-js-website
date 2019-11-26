@@ -365,7 +365,6 @@ const Index = (props) => {
 							Live Chat
 						</Typography>
 					</Paper>
-
 					<Link href="/privileges#treatment-and-video-call">
 						<Paper className={classes.servicePaper} elevation={paperElevation}>
 							<SvgIcon className={classes.svgIcon} viewBox="0 0 84.8 84.8">

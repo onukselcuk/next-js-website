@@ -120,10 +120,17 @@ const thankYou = () => {
 					width: 100%;
 				}
 
+				:global(.webp) .atakoy-towers-img-div {
+					background-image: url(${require("../public/thank-you-page/thank-you-intro-img.webp")});
+				}
+
+				:global(.no-webp) .atakoy-towers-img-div {
+					background-image: url(${require("../public/thank-you-page/thank-you-intro-img.jpg")});
+				}
+
 				.atakoy-towers-img-div {
-					background-image: url(${require("../public/thank-you-page/stock-photo-healthcare-medical-and-radiology-concept-group-of-doctors-looking-at-x-ray-148220459.jpg")});
 					width: 100%;
-					height: 75vh;
+					height: 35vmax;
 					background-repeat: no-repeat;
 					background-size: cover;
 					background-position: left 21% bottom 60%;

@@ -114,13 +114,20 @@ const thankYou = () => {
 					width: 100%;
 				}
 
+				:global(.webp) .atakoy-towers-img-div {
+					background-image: url(${require("../public/error-page/error-page-img.webp")});
+				}
+
+				:global(.no-webp) .atakoy-towers-img-div {
+					background-image: url(${require("../public/error-page/error-page-img.jpg")});
+				}
+
 				.atakoy-towers-img-div {
-					background-image: url(${require("../public/error-page/stock-photo-studio-portrait-of-attractive-redhead-freckled-teenager-having-broad-smile-shrugging-her-shoulders-648905923.jpg")});
 					width: 100%;
 					height: 80vh;
 					background-repeat: no-repeat;
 					background-size: cover;
-					background-position: left 50% bottom 50%;
+					background-position: left 50% bottom 10%;
 					clip-path: ellipse(100% 100% at 50% 0%);
 				}
 

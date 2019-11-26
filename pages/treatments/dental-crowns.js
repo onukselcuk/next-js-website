@@ -356,10 +356,17 @@ const treatmentTemplate = () => {
 					width: 100%;
 				}
 
+				:global(.webp) .treatment-img-div {
+					background-image: url(${require("../../public/treatments/dental-crowns-page/dental-crowns-intro-img.webp")});
+				}
+
+				:global(.no-webp) .treatment-img-div {
+					background-image: url(${require("../../public/treatments/dental-crowns-page/dental-crowns-intro-img.jpg")});
+				}
+
 				.treatment-img-div {
-					background-image: url(${require("../../public/treatments/dental-crowns-page/dental-crowns-intro-img-622399763.jpg")});
 					width: 100%;
-					height: 90vh;
+					height: 80vh;
 					background-repeat: no-repeat;
 					background-size: cover;
 					background-position: left 37% bottom 68%;
@@ -410,8 +417,15 @@ const treatmentTemplate = () => {
 					background-color: ${sTheme.palette.secondary.main};
 				}
 
-				.treatment-paragraph-img-3 {
+				:global(.webp) .treatment-paragraph-img-3 {
+					background-image: url(${require("../../public/treatments/dental-crowns-page/dental-crown-img.webp")});
+				}
+
+				:global(.no-webp) .treatment-paragraph-img-3 {
 					background-image: url(${require("../../public/treatments/dental-crowns-page/dental-crown-img.jpg")});
+				}
+
+				.treatment-paragraph-img-3 {
 					max-height: 750px;
 					height: 35vmax;
 					background-position: left 60% bottom 80%;

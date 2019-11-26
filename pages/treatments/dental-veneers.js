@@ -412,8 +412,15 @@ const treatmentTemplate = () => {
 					width: 100%;
 				}
 
+				:global(.webp) .treatment-img-div {
+					background-image: url(${require("../../public/treatments/dental-veneers-page/dental-veneers-entrance-img.webp")});
+				}
+
+				:global(.no-webp) .treatment-img-div {
+					background-image: url(${require("../../public/treatments/dental-veneers-page/dental-veneers-entrance-img.jpg")});
+				}
+
 				.treatment-img-div {
-					background-image: url(${require("../../public/treatments/dental-veneers-page/dental-veneers-entrance-img-287811182.jpg")});
 					width: 100%;
 					height: 65vh;
 					background-repeat: no-repeat;
@@ -466,8 +473,15 @@ const treatmentTemplate = () => {
 					background-color: ${sTheme.palette.secondary.main};
 				}
 
+				:global(.webp) .treatment-paragraph-img-3 {
+					background-image: url(${require("../../public/treatments/dental-veneers-page/dental-veneers-img.webp")});
+				}
+
+				:global(.no-webp) .treatment-paragraph-img-3 {
+					background-image: url(${require("../../public/treatments/dental-veneers-page/dental-veneers-img.jpg")});
+				}
+
 				.treatment-paragraph-img-3 {
-					background-image: url(${require("../../public/treatments/dental-veneers-page/dental-veneers-img-572414821.jpg")});
 					max-height: 750px;
 					height: 35vmax;
 					background-position: left 20% bottom 80%;

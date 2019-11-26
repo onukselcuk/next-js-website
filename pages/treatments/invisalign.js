@@ -284,8 +284,15 @@ const treatmentTemplate = () => {
 					width: 100%;
 				}
 
+				:global(.webp) .treatment-img-div {
+					background-image: url(${require("../../public/treatments/invisalign-page/invisalign-intro-img.webp")});
+				}
+
+				:global(.no-webp) .treatment-img-div {
+					background-image: url(${require("../../public/treatments/invisalign-page/invisalign-intro-img.jpg")});
+				}
+
 				.treatment-img-div {
-					background-image: url(${require("../../public/treatments/invisalign-page/invisalign-intro-img-1515575501.jpg")});
 					width: 100%;
 					height: 50vmax;
 					background-repeat: no-repeat;
