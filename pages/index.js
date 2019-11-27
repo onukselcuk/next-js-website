@@ -268,7 +268,6 @@ const useStyles = makeStyles((theme) => ({
 	},
 	patientImg: {
 		width: "90%",
-		minWidth: "144px",
 		flexShrink: 0,
 		borderRadius: "200px",
 		boxShadow: "2px 2px 14px 3px rgba(0,0,0,0.3)",
@@ -811,7 +810,7 @@ const Index = (props) => {
 						customTransition="all 400ms ease-in-out"
 						transitionDuration={400}
 						containerClass="carousel-container"
-						removeArrowOnDeviceType={[ "tablet", "mobile" ]}
+						removeArrowOnDeviceType={[ "mobile" ]}
 						deviceType={props.deviceType}
 						dotListClass="custom-dot-list-style"
 						itemClass="carousel-item-padding-40-px"
@@ -1013,7 +1012,7 @@ const Index = (props) => {
 						customTransition="all 400ms ease-in-out"
 						transitionDuration={400}
 						containerClass="carousel-container"
-						removeArrowOnDeviceType={[ "tablet", "mobile" ]}
+						removeArrowOnDeviceType={[ "mobile" ]}
 						deviceType={props.deviceType}
 						dotListClass="custom-dot-list-style"
 						itemClass="carousel-item-padding-40-px"
@@ -1518,8 +1517,18 @@ const Index = (props) => {
 				}
 
 				@media (max-width: ${sizes.sizes.md}) {
+					.our-doctors-section {
+						margin-bottom: 0;
+						padding-bottom: 2rem;
+					}
 					.our-doctors-wrapper {
 						flex-wrap: wrap;
+					}
+				}
+
+				@media (max-width: ${sizes.sizes.sm}) {
+					.our-doctors-wrapper {
+						margin-top: 2rem;
 					}
 				}
 				.doctor-wrapper {
@@ -1530,18 +1539,6 @@ const Index = (props) => {
 					width: 30%;
 					min-width: 28rem;
 					margin: 0 3rem;
-				}
-
-				@media (max-width: ${sizes.sizes.md}) {
-					.doctor-wrapper {
-						width: 35%;
-					}
-				}
-
-				@media (max-width: ${sizes.sizes.sm}) {
-					.doctor-wrapper {
-						width: 50%;
-					}
 				}
 
 				.doctor-image {
@@ -1563,6 +1560,26 @@ const Index = (props) => {
 				.doctor-specialty {
 					font-size: 2rem;
 					color: ${sTheme.palette.secondary.dark};
+				}
+
+				@media (max-width: ${sizes.sizes.md}) {
+					.doctor-wrapper {
+						width: 35%;
+						margin-bottom: 3rem;
+					}
+
+					.doctor-link {
+						font-size: 2.5rem;
+					}
+					.doctor-specialty {
+						font-size: 1.8rem;
+					}
+				}
+
+				@media (max-width: ${sizes.sizes.sm}) {
+					.doctor-wrapper {
+						width: 50%;
+					}
 				}
 
 				.why-choose-us-section {
@@ -1745,6 +1762,40 @@ const Index = (props) => {
 				}
 				.perfect-smile-header {
 					padding-top: 4rem;
+				}
+
+				@media (max-width: ${sizes.sizes.md}) {
+					.reviewer-name-wrapper {
+						font-size: 1.6rem;
+					}
+					.stars-wrapper {
+						margin-top: .5rem;
+					}
+					.review-date-wrapper {
+						margin-top: .3rem;
+					}
+					.review-wrapper {
+						margin-top: .5rem;
+						padding-bottom: 1rem;
+					}
+					.review {
+						font-size: 1.5rem;
+					}
+					.review-date {
+						font-size: 1.2rem;
+					}
+				}
+
+				@media (max-width: ${sizes.sizes.xs}) {
+					.reviewer-name-wrapper {
+						font-size: 1.5rem;
+					}
+					.review {
+						font-size: 1.4rem;
+					}
+					.review-date {
+						font-size: 1.1rem;
+					}
 				}
 			`}</style>
 		</React.Fragment>

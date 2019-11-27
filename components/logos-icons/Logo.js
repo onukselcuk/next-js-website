@@ -1,6 +1,7 @@
 import { makeStyles } from "@material-ui/core/styles";
 import SvgIcon from "@material-ui/core/SvgIcon";
 import Link from "next/link";
+import sizes from "../../src/sizes";
 
 const useStyles = makeStyles((theme) => ({
 	svgLogo: {
@@ -14,6 +15,14 @@ const useStyles = makeStyles((theme) => ({
 		},
 		"& .st0, & .st4": {
 			fill: theme.palette.third.dark
+		},
+		[sizes.down("sm")]: {
+			height: "80px",
+			width: "100px"
+		},
+		[sizes.down("xxs")]: {
+			height: "60px",
+			width: "80px"
 		}
 
 		// "&:hover": {

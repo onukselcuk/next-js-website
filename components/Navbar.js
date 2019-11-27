@@ -62,7 +62,10 @@ const useStyles = makeStyles((theme) => ({
 	},
 	topBarText: {
 		margin: "0 1rem",
-		fontSize: "1.6rem"
+		fontSize: "1.6rem",
+		[sizes.down("xxs")]: {
+			fontSize: "1.5rem"
+		}
 	},
 	topBarLink: {
 		textDecoration: "none",
@@ -74,6 +77,9 @@ const useStyles = makeStyles((theme) => ({
 		},
 		"&:hover": {
 			color: theme.palette.third.dark
+		},
+		[sizes.down("xxs")]: {
+			fontSize: "1.5rem"
 		}
 	},
 	toolbar: {
@@ -222,7 +228,13 @@ const useStyles = makeStyles((theme) => ({
 	},
 	menuButton: {},
 	menuIcon: {
-		fontSize: "3.5rem"
+		fontSize: "3.5rem",
+		[sizes.down("sm")]: {
+			fontSize: "3.2rem"
+		},
+		[sizes.down("xxs")]: {
+			fontSize: "2.9rem"
+		}
 	}
 }));
 
