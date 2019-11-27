@@ -113,24 +113,30 @@ const useStyles = makeStyles((theme) => ({
 	},
 	secondFooterWrapper: {
 		width: "80%",
-		margin: "0 auto",
 		padding: "10px 20px",
 		display: "flex",
 		justifyContent: "space-between",
+		margin: "0 auto",
 		[sizes.down("xl")]: {
 			width: "90%"
 		},
 		[sizes.down("lg")]: {
 			width: "95%"
 		},
-		[sizes.down("sm")]: {
+		[sizes.down("md")]: {
 			flexWrap: "wrap",
-			justifyContent: "center",
-			textAlign: "center",
-			padding: "10px 0"
+			padding: "10px 0",
+			width: "90%"
+		}
+	},
+	copyright: {
+		width: "40%",
+		[sizes.down("md")]: {
+			width: "100%"
 		}
 	},
 	developerLink: {
+		width: "60%",
 		textDecoration: "none",
 		color: theme.palette.secondary.main,
 		transition: "all 250ms ease-in-out",
@@ -139,6 +145,9 @@ const useStyles = makeStyles((theme) => ({
 		},
 		"&:hover": {
 			color: theme.palette.third.dark
+		},
+		[sizes.down("md")]: {
+			width: "100%"
 		}
 	}
 }));
@@ -337,7 +346,7 @@ export default () => {
 			</Toolbar>
 			<footer className={classes.secondFooter}>
 				<div className={classes.secondFooterWrapper}>
-					<div>&copy; 2019 Istanbul Smile Center Dental Clinic</div>
+					<div className={classes.copyright}>&copy; 2019 Istanbul Smile Center Dental Clinic</div>
 					<a
 						className={classes.developerLink}
 						href="mailto:devonukselcuk@gmail.com?subject=Web%20Development%20and%20Design&body=Hey%20onukDesign%2C"

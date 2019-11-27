@@ -179,6 +179,7 @@ const Prices = () => {
 					background-size: cover;
 					background-position: bottom 30% right 40%;
 					clip-path: ellipse(100% 100% at 50% 0%);
+					margin-bottom: 3rem;
 				}
 				.our-prices-header {
 					display: flex;

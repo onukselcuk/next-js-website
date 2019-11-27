@@ -162,7 +162,7 @@ const Contact = () => {
 
 				.contact-us-section-section {
 					width: 100%;
-					padding: 2rem 0;
+					padding: 2rem 0 4rem 0;
 				}
 
 				.our-services-header {
@@ -221,7 +221,7 @@ const Contact = () => {
 					margin: 0 auto;
 					width: 80%;
 					justify-content: center;
-					padding-top: 2rem;
+					padding-top: 4rem;
 					padding-bottom: 1.5rem;
 				}
 
@@ -233,7 +233,7 @@ const Contact = () => {
 				}
 
 				.contact-us-left-div {
-					width: 50%;
+					width: 55%;
 					border-radius: 20px;
 					background-size: cover;
 					background-repeat: no-repeat;
@@ -243,7 +243,7 @@ const Contact = () => {
 					display: flex;
 					flex-direction: column;
 					justify-content: center;
-					width: 50%;
+					width: 45%;
 					padding: 2rem;
 					background-color: ${sTheme.palette.secondary.main};
 					border-radius: 20px;

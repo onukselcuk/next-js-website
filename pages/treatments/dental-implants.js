@@ -122,7 +122,7 @@ const treatmentTemplate = () => {
 				</section>
 				<section className="our-prices-section cost-calculator-section">
 					<div className="our-prices-header">
-						<h2 className="our-prices-header-text">Cost Calculator</h2>
+						<h2 className="our-prices-header-text">Dental Cost Calculator</h2>
 						<p className="our-prices-header-paragraph-text">
 							We even provide you a cost calculator to calculate the dental cost by yourself for your
 							convenience. If you got your teeth checked up by a doctor and know your exact treatment

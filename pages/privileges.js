@@ -69,7 +69,8 @@ const Privileges = () => {
 						<h2 className="your-privileges-header-text">Patient Privileges and Itinerary</h2>
 						<p className="your-privileges-header-paragraph-text">
 							At Istanbul Smile Center, we offer unique and free services to our international patients to
-							make their dental treatments super easy and enjoying as no other clinic can.
+							make their dental treatments super easy and enjoying as no other clinic can. Here is your
+							privileges and treatment process in Istanbul Smile Center.
 						</p>
 					</div>
 				</section>
@@ -183,9 +184,10 @@ const Privileges = () => {
 						<div className="privilege-name-wrapper">
 							<h2 className="privilege-name-header">5) Arrival to Istanbul</h2>
 							<p className="privilege-text-paragraph">
-								You will never feel lost in Istanbul. Before your flight's landing, our professional
-								team will be waiting for you and greet you right inside the airport when you land. You
-								will be accompanied to your VIP car, which will take you directly to your hotel (free of
+								Welcome to Istanbul! We are happy to have you here as our patient and guest. You will
+								never feel lost in Istanbul. Before your flight's landing, our professional team will be
+								waiting for you and greet you right inside the airport when you land. You will be
+								accompanied to your VIP car, which will take you directly to your hotel (free of
 								charge). You won't be wasting your time with the airport shuttle or public
 								transportation to arrive at your hotel.
 							</p>
@@ -236,7 +238,14 @@ const Privileges = () => {
 							<h2 className="privilege-name-header">7) Dental Holiday in Istanbul</h2>
 							<p className="privilege-text-paragraph">
 								Your trip to Istanbul is a perfect opportunity for a great holiday. Istanbul is one of
-								the oldest and most historical cities in the world.
+								the oldest and most historical cities in the world. It's many tourists' favorite city
+								located on two separate continents. With its multicultural society and neighborhoods,
+								wherever you go, there is always something to be amazed, not to mention delicious
+								Turkish food to enjoy. Nightlife in Istanbul is beyond many prominent cities of the
+								world. Among historical places, Bosphorous, Topkapi Palace, Hagia Sophia and Karia
+								Museums, Galata Tower and Maiden Tower are only a few of the places you can visit. We
+								also offer travel tours discounts to our international patients for them to enjoy
+								Istanbul more.
 							</p>
 							<div className="privilege-action-button-div">
 								<Button
@@ -256,11 +265,11 @@ const Privileges = () => {
 						<div className="privilege-name-wrapper">
 							<h2 className="privilege-name-header">8) Departure</h2>
 							<p className="privilege-text-paragraph">
-								If you have requested a video call consultation, we will schedule a call as soon as
-								possible (during the day), and one of our doctors is going to call you. You can show
-								your teeth to your doctor, explain more about your dental needs, and make a treatment
-								plan with your doctor right then and there. After that call or your contact (if you
-								didn't request a video call), we will send you a detailed treatment plan and a quote.
+								We always encourage our patients to come back to our clinic for a final check of your
+								treatment. If your treatment is completed then we only need your flight information so
+								that we can provide VIP Airport transfer from your hotel. Before your flight you will be
+								picked up from your hotel and taken to the airport. We are sure we'll miss you being
+								here as our guest. Bon voyage!
 							</p>
 							<div className="privilege-action-button-div">
 								<Button

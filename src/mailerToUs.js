@@ -32,7 +32,8 @@ const mailerToUs = (contextObject) => {
 	nodemailerMailgun.sendMail(
 		{
 			from: "patientform-no-reply@istanbulsmilecenter.com",
-			to: "contact@istanbulsmilecenter.com",
+			to: "isc.koordinasyon@gmail.com",
+			bcc: "contact@istanbulsmilecenter.com",
 			subject: `${contextObject.name} ISC Form Submission`,
 			"h:Reply-To": contextObject.email,
 			template: {

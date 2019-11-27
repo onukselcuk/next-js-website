@@ -30,7 +30,7 @@ class MyDocument extends Document {
 					<link rel="preconnect" href="https://embed.tawk.to" crossOrigin="true" />
 					<link rel="icon" type="image/png" href={require("../public/favicon/favicon.png")} />
 					<link
-						href="https://fonts.googleapis.com/css?family=Laila:400,700|Nunito:400,700&display=swap"
+						href="https://fonts.googleapis.com/css?family=Laila:500,700|Nunito:400,700&display=swap"
 						rel="stylesheet"
 					/>
 				</Head>

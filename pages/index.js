@@ -23,7 +23,6 @@ import sTheme from "../src/styledTheme";
 import clsx from "clsx";
 import DentalCrown from "../components/logos-icons/DentalCrown";
 import DentalVeneer from "../components/logos-icons/DentalVeneer";
-import Braces from "../components/logos-icons/Braces";
 import CosmeticDentistry from "../components/logos-icons/CosmeticDentistry";
 import PediatricDentistry from "../components/logos-icons/PediatricDentistry";
 import SmileMakeover from "../components/logos-icons/SmileMakeover";
@@ -40,6 +39,7 @@ import { useState } from "react";
 import sizes from "../src/sizes";
 import reviews from "../src/reviews";
 import moment from "moment";
+import Invisalign from "../components/logos-icons/Invisalign";
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -617,7 +617,7 @@ const Index = (props) => {
 									className={clsx(classes.svgIcon, classes.svgIconTreatment)}
 									viewBox="0 0 84.8 84.8"
 								>
-									<Braces />
+									<Invisalign />
 								</SvgIcon>
 								<CardContent className={classes.cardContent}>
 									<Typography
@@ -794,6 +794,9 @@ const Index = (props) => {
 					<h2 className="our-services-header-text">
 						Our Perfect <span style={{ color: "#E94D65" }}>Smile</span> Gallery
 					</h2>
+					<p className="our-services-header-paragraph-text">
+						We are proud of the smiles our awesome doctors design.
+					</p>
 				</div>
 				<div className="reviews-wrapper">
 					<Carousel
@@ -960,11 +963,8 @@ const Index = (props) => {
 					</h2>
 
 					<p className="our-services-header-paragraph-text">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis mollitia deleniti beatae quam
-						incidunt doloribus. Culpa numquam tenetur fugiat modi debitis, est, aut earum perspiciatis ut
-						incidunt dignissimos quos. Voluptate. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-						Eveniet atque sit fuga consequatur dolorem quia tempore harum in est doloribus, necessitatibus
-						porro earum obcaecati inventore expedita iure eaque voluptate aspernatur.
+						We are one of the most successful clinics in Turkey. Have a look at what people told about our
+						doctors and clinic.
 					</p>
 				</div>
 				<div className="isc-google-review-banner-wrapper">
@@ -992,7 +992,7 @@ const Index = (props) => {
 								<h3 className="my-business">My Business</h3>
 							</div>
 							<div className="review-number-div">
-								<p className="review-number">64 Patient Reviews</p>
+								<p className="review-number">65 Patient Reviews</p>
 							</div>
 						</div>
 					</Paper>
@@ -1207,12 +1207,12 @@ const Index = (props) => {
 					border-radius: 10px;
 					left: 10%;
 					top: 23%;
-					background-color: rgba(255, 255, 255, .2);
+					background-color: rgba(255, 255, 255, .4);
 				}
 				.hero-image-perfect {
 					font-family: ${sTheme.typography.serif};
 					color: ${sTheme.palette.primary.main};
-					font-weight: normal;
+					font-weight: 500;
 					font-size: 7rem;
 				}
 
