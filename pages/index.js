@@ -1714,6 +1714,7 @@ const Index = (props) => {
 				.carouselPaper-item {
 					display: flex;
 					justify-content: center;
+					width: 100%;
 				}
 
 				.reviewer-image-wrapper {
