@@ -6,6 +6,7 @@ import Button from "@material-ui/core/Button";
 import Toolbar from "@material-ui/core/Toolbar";
 import Logo from "./logos-icons/Logo";
 import WhatsAppIcon from "@material-ui/icons/WhatsApp";
+import CallIcon from "@material-ui/icons/Call";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import clsx from "clsx";
 import List from "@material-ui/core/List";
@@ -35,12 +36,14 @@ const useStyles = makeStyles((theme) => ({
 	},
 	topBar: {
 		width: "100%",
-		height: "35px",
 		// backgroundColor: theme.palette.primary.alternative9,
 		background: "linear-gradient(to left, rgba(26,59,112,1) 0%, rgba(40,85,130,1) 52%, rgba(0,164,189,1) 100%)",
 		display: "flex",
 		justifyContent: "center",
-		alignItems: "center"
+		alignItems: "center",
+		[sizes.down("xs")]: {
+			display: "none"
+		}
 	},
 	topBarWrapper: {
 		display: "flex",
@@ -58,10 +61,20 @@ const useStyles = makeStyles((theme) => ({
 	topBarContacts: {
 		display: "flex",
 		alignItems: "center",
-		color: theme.palette.third.main
+		justifyContent: "space-between",
+		color: theme.palette.third.main,
+		margin: "0 auto",
+		width: "100%",
+		flexWrap: "wrap"
+	},
+	topBarContact: {
+		display: "flex",
+		alignItems: "center",
+		color: theme.palette.third.main,
+		margin: ".7rem 0"
 	},
 	topBarText: {
-		margin: "0 1rem",
+		margin: "0 1rem 0 .5rem",
 		fontSize: "1.6rem",
 		[sizes.down("xxs")]: {
 			fontSize: "1.5rem"
@@ -81,6 +94,9 @@ const useStyles = makeStyles((theme) => ({
 		[sizes.down("xxs")]: {
 			fontSize: "1.5rem"
 		}
+	},
+	topBarIcon: {
+		color: theme.palette.third.dark
 	},
 	toolbar: {
 		padding: 0,
@@ -266,25 +282,63 @@ export default () => {
 		<React.Fragment>
 			<div className={classes.topBar}>
 				<div className={classes.topBarWrapper}>
-					<div className={classes.languageSelections}>
+					{/* <div className={classes.languageSelections}>
 						<a
 							target="_blank"
 							rel="noopener noreferrer"
 							href="https://www.istanbulsmilecenter.com"
 							className={classes.topBarLink}
 						/>
-					</div>
+					</div> */}
 					<div className={classes.topBarContacts}>
-						<WhatsAppIcon />
-						<p className={classes.topBarText}>WhatsApp</p>
-						<a
-							target="_blank"
-							rel="noopener noreferrer"
-							href="https://wa.me/905510413230?text=Hi%20Istanbul%20Smile%20Center"
-							className={classes.topBarLink}
-						>
-							+90 551 041 32 30
-						</a>
+						<div className={classes.topBarContact}>
+							<WhatsAppIcon className={classes.topBarIcon} />
+							<p className={classes.topBarText}>WhatsApp</p>
+							<a
+								target="_blank"
+								rel="noopener noreferrer"
+								href="https://wa.me/905510413230?text=Hi%20Istanbul%20Smile%20Center"
+								className={classes.topBarLink}
+							>
+								+90 551 041 32 30
+							</a>
+						</div>
+						<div className={classes.topBarContact}>
+							<CallIcon className={classes.topBarIcon} />
+							<p className={classes.topBarText}>International</p>
+							<a
+								target="_blank"
+								rel="noopener noreferrer"
+								href="tel:+909492470"
+								className={classes.topBarLink}
+							>
+								+90 530 949 24 70
+							</a>
+						</div>
+						<div className={classes.topBarContact}>
+							<CallIcon className={classes.topBarIcon} />
+							<p className={classes.topBarText}>UK</p>
+							<a
+								target="_blank"
+								rel="noopener noreferrer"
+								href="tel:+4402081238053"
+								className={classes.topBarLink}
+							>
+								+44 020 8123 8053
+							</a>
+						</div>
+						<div className={classes.topBarContact}>
+							<CallIcon className={classes.topBarIcon} />
+							<p className={classes.topBarText}>USA</p>
+							<a
+								target="_blank"
+								rel="noopener noreferrer"
+								href="tel:+18312048370"
+								className={classes.topBarLink}
+							>
+								+1 831 204 83 70
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>

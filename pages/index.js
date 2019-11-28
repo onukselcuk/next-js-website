@@ -48,10 +48,10 @@ const useStyles = makeStyles((theme) => ({
 		padding: theme.spacing(3, 2)
 	},
 	button: {
-		margin: theme.spacing(0),
+		margin: "0 2rem 1rem 0",
 		// backgroundColor: theme.palette.third.dark,
 		backgroundImage: `linear-gradient(to right,${theme.palette.third.dark},${theme.palette.third.dark})`,
-		padding: "20px 120px",
+		padding: "20px 60px",
 		marginTop: "30px",
 		borderRadius: "35px",
 		fontSize: "2rem",
@@ -84,19 +84,24 @@ const useStyles = makeStyles((theme) => ({
 			// 	"linear-gradient(to right, rgba(26,59,112,1) 0%, rgba(40,85,130,1) 52%, rgba(0,164,189,1) 100%)"
 		},
 		[sizes.down("lg")]: {
-			padding: "20px 90px"
+			padding: "20px 50px"
 		},
 		[sizes.down("mdsm")]: {
-			padding: "15px 70px",
+			padding: "15px 45px",
 			fontSize: "1.8rem"
 		},
 		[sizes.down("sm")]: {
-			padding: "10px 50px",
+			padding: "10px 40px",
 			fontSize: "1.6rem"
 		},
 		[sizes.down("xs")]: {
-			padding: "5px 40px"
+			padding: "5px 30px",
+			marginTop: "10px",
+			fontSize: "1.4rem"
 		}
+	},
+	callButton: {
+		backgroundImage: `linear-gradient(to right,${theme.palette.primary.main},${theme.palette.primary.main})`
 	},
 	regularButton: {
 		borderRadius: "20px",
@@ -305,6 +310,7 @@ const useStyles = makeStyles((theme) => ({
 const Index = (props) => {
 	const paperElevation = 2;
 	const reviewPaperElevation = 5;
+	const handleCallbackOpen = props.handleCallbackOpen;
 
 	const pics = {
 		yasin: [
@@ -369,6 +375,14 @@ const Index = (props) => {
 					</h1>
 					<Button variant="contained" color="primary" className={classes.button} onClick={handleChat}>
 						Chat with us
+					</Button>
+					<Button
+						variant="contained"
+						color="primary"
+						className={clsx(classes.button, classes.callButton)}
+						onClick={handleCallbackOpen}
+					>
+						Call Me Back
 					</Button>
 				</div>
 			</div>
@@ -1338,7 +1352,7 @@ const Index = (props) => {
 
 				@media (max-width: ${sizes.sizes.sm}) {
 					.hero-image-perfect-wrapper {
-						top: 65%;
+						top: 57%;
 						background-color: rgba(255, 255, 255, .7);
 						padding: 1rem;
 					}
@@ -1353,7 +1367,7 @@ const Index = (props) => {
 
 				@media (max-width: ${sizes.sizes.xs}) {
 					.hero-image-perfect-wrapper {
-						top: 60%;
+						top: 55%;
 						padding: .5rem;
 						padding-bottom: 1rem;
 					}

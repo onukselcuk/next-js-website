@@ -14,6 +14,7 @@ const mailer = require("./src/mailer");
 const mailerToUs = require("./src/mailerToUs");
 const axios = require("axios");
 const compression = require("compression");
+const callbackMailer = require("./src/callbackMailer");
 
 app.prepare().then(() => {
 	const server = express();
@@ -104,6 +105,25 @@ app.prepare().then(() => {
 			});
 
 			return res.send({ signedURL, dateStringFull, dateStringShort });
+		}
+	});
+
+	server.post("/post-callback-request", async (req, res) => {
+		if (req.body.captchaState === undefined || req.body.captchaState === "" || req.body.captchaState === null) {
+			return res.send({ success: false });
+		} else {
+			const recaptchaResponse = req.body.captchaState;
+			const url = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env
+				.RECAPTCHA_SECRET_KEY}&response=${recaptchaResponse}&remoteip=${req.connection.remoteAddress}`;
+
+			const response = await axios.post(url);
+			if (response.data.success) {
+				await callbackMailer(req.body);
+
+				res.send({ success: true });
+			} else {
+				return res.send({ success: false });
+			}
 		}
 	});
 

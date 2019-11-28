@@ -3,7 +3,7 @@ import Link from "next/link";
 import Head from "next/head";
 import { makeStyles } from "@material-ui/core/styles";
 import sizes from "../src/sizes";
-import { faGlobe, faComments, faFileSignature, faAt, faHome } from "@fortawesome/free-solid-svg-icons";
+import { faGlobe, faComments, faFileSignature, faAt, faHome, faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import clsx from "clsx";
@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
 	}
 }));
 
-const thankYou = () => {
+const thankYou = (props) => {
 	const classes = useStyles();
 	const handleChat = () => {
 		if (typeof Tawk_API !== "undefined") {
@@ -53,13 +53,24 @@ const thankYou = () => {
 				<div className="our-services-header">
 					<h1 className="our-services-header-text">Thank You</h1>
 
-					<p className="our-services-header-paragraph-text">
-						Thank you for sending us a form. Now you can relax. Our doctors will examine your request and
-						get back to you as soon as possible. We have the shortest response time among all dental
-						clinics. Day or night, you can contact us through many channels, live chat, WhatsApp, form or
-						email, whenever you need us we are here. In case you need to reach us faster, international
-						patients department contact info is below.
-					</p>
+					{props.type === "form" ? (
+						<p className="our-services-header-paragraph-text">
+							Thank you for sending us a form. Now you can relax. Our doctors will examine your request
+							and get back to you as soon as possible. We have the shortest response time among all dental
+							clinics. Day or night, you can contact us through many channels, live chat, WhatsApp, form
+							or email, whenever you need us we are here. In case you need to reach us faster,
+							international patients department contact info is below.
+						</p>
+					) : (
+						<p className="our-services-header-paragraph-text">
+							Thank you for sending us a callback request. Now you can relax. We will call you as soon as
+							possible. We have the shortest response time among all dental clinics. Day or night, you can
+							contact us through many channels, live chat, WhatsApp, form or email, whenever you need us
+							we are here. In case you need to reach us faster, international patients department contact
+							info is below.
+						</p>
+					)}
+
 					<p className="paragraph home-link">
 						<FontAwesomeIcon
 							className={clsx(classes.fontAwesomeIconSmall, classes.fontAwesomeIconHome)}
@@ -91,6 +102,39 @@ const thankYou = () => {
 								className="contact-link"
 							>
 								WhatsApp: +90 551 041 32 30
+							</a>
+						</p>
+						<p className="paragraph">
+							<FontAwesomeIcon className={classes.fontAwesomeIconSmall} icon={faPhoneAlt} />{" "}
+							<a
+								target="_blank"
+								rel="noopener noreferrer"
+								href="tel:+905309492470"
+								className="contact-link"
+							>
+								International: +90 530 949 24 70
+							</a>
+						</p>
+						<p className="paragraph">
+							<FontAwesomeIcon className={classes.fontAwesomeIconSmall} icon={faPhoneAlt} />{" "}
+							<a
+								target="_blank"
+								rel="noopener noreferrer"
+								href="tel:+4402081238053"
+								className="contact-link"
+							>
+								UK: +44 020 8123 8053
+							</a>
+						</p>
+						<p className="paragraph">
+							<FontAwesomeIcon className={classes.fontAwesomeIconSmall} icon={faPhoneAlt} />{" "}
+							<a
+								target="_blank"
+								rel="noopener noreferrer"
+								href="tel:+18312048370"
+								className="contact-link"
+							>
+								USA: +1 831 204 83 70
 							</a>
 						</p>
 						<p className="paragraph">
@@ -300,6 +344,11 @@ const thankYou = () => {
 			`}</style>
 		</React.Fragment>
 	);
+};
+
+thankYou.getInitialProps = async (req) => {
+	const type = req.query.type;
+	return { type };
 };
 
 export default thankYou;

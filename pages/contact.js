@@ -3,7 +3,14 @@ import Head from "next/head";
 import Form from "../components/Form";
 import { makeStyles } from "@material-ui/core/styles";
 import sizes from "../src/sizes";
-import { faMapMarkedAlt, faGlobe, faComments, faFileSignature, faAt } from "@fortawesome/free-solid-svg-icons";
+import {
+	faMapMarkedAlt,
+	faGlobe,
+	faComments,
+	faFileSignature,
+	faAt,
+	faPhoneAlt
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
@@ -27,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
 	}
 }));
 
-const Contact = () => {
+const Contact = ({ handleCallbackOpen }) => {
 	const classes = useStyles();
 	const handleChat = () => {
 		if (typeof Tawk_API !== "undefined") {
@@ -93,6 +100,45 @@ const Contact = () => {
 								className="contact-link"
 							>
 								WhatsApp: +90 551 041 32 30
+							</a>
+						</p>
+						<p className="paragraph">
+							<FontAwesomeIcon className={classes.fontAwesomeIconSmall} icon={faPhoneAlt} />{" "}
+							<a
+								target="_blank"
+								rel="noopener noreferrer"
+								href="tel:+905309492470"
+								className="contact-link"
+							>
+								International: +90 530 949 24 70
+							</a>
+						</p>
+						<p className="paragraph">
+							<FontAwesomeIcon className={classes.fontAwesomeIconSmall} icon={faPhoneAlt} />{" "}
+							<a
+								target="_blank"
+								rel="noopener noreferrer"
+								href="tel:+4402081238053"
+								className="contact-link"
+							>
+								UK: +44 020 8123 8053
+							</a>
+						</p>
+						<p className="paragraph">
+							<FontAwesomeIcon className={classes.fontAwesomeIconSmall} icon={faPhoneAlt} />{" "}
+							<a
+								target="_blank"
+								rel="noopener noreferrer"
+								href="tel:+18312048370"
+								className="contact-link"
+							>
+								USA: +1 831 204 83 70
+							</a>
+						</p>
+						<p className="paragraph">
+							<FontAwesomeIcon className={classes.fontAwesomeIconSmall} icon={faPhoneAlt} />{" "}
+							<a className="contact-link" onClick={handleCallbackOpen}>
+								Request A Callback
 							</a>
 						</p>
 						<p className="paragraph">

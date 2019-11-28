@@ -3,8 +3,26 @@ import App from "next/app";
 import { ThemeProvider } from "@material-ui/styles";
 import theme from "../src/theme";
 import Layout from "../components/Layout";
+import Callback from "../components/Callback";
 
 class MyApp extends App {
+	constructor (props) {
+		super(props);
+		this.state = {
+			open: false
+		};
+		this.handleCallbackOpen = this.handleCallbackOpen.bind(this);
+		this.handleCallbackClose = this.handleCallbackClose.bind(this);
+	}
+
+	handleCallbackOpen () {
+		this.setState({ open: true });
+	}
+
+	handleCallbackClose () {
+		this.setState({ open: false });
+	}
+
 	componentDidMount () {
 		//Remove the server-side injected CSS
 		const jssStyles = document.querySelector("#jss-server-side");
@@ -25,13 +43,37 @@ class MyApp extends App {
 	//   return { ...appProps }
 	// }
 
+	// const [ open, setOpen ] = React.useState(false);
+
+	// const handleClickOpen = () => {
+	// 	setOpen(true);
+	// };
+
+	// const handleClose = () => {
+	// 	setOpen(false);
+	// };
+
 	render () {
 		const { Component, pageProps } = this.props;
 		return (
 			<React.Fragment>
 				<ThemeProvider theme={theme}>
-					<Layout>
-						<Component {...pageProps} />
+					<Layout
+						openCallback={this.state.open}
+						handleCallbackOpen={this.handleCallbackOpen}
+						handleCallbackClose={this.handleCallbackClose}
+					>
+						<Component
+							{...pageProps}
+							openCallback={this.state.open}
+							handleCallbackOpen={this.handleCallbackOpen}
+							handleCallbackClose={this.handleCallbackClose}
+						/>
+						<Callback
+							openCallback={this.state.open}
+							handleCallbackOpen={this.handleCallbackOpen}
+							handleCallbackClose={this.handleCallbackClose}
+						/>
 					</Layout>
 				</ThemeProvider>
 			</React.Fragment>

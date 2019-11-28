@@ -40,7 +40,7 @@ const Layout = (props) => {
 		<div className={classes.root}>
 			<Navbar />
 			{props.children}
-			<Footer />
+			<Footer handleCallbackOpen={props.handleCallbackOpen} />
 		</div>
 	);
 };

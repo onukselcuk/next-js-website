@@ -152,13 +152,14 @@ const useStyles = makeStyles((theme) => ({
 	}
 }));
 
-export default () => {
+export default ({ handleCallbackOpen }) => {
 	const classes = useStyles();
 	const handleChat = () => {
 		if (typeof Tawk_API !== "undefined") {
 			Tawk_API.maximize();
 		}
 	};
+
 	return (
 		<React.Fragment>
 			<Toolbar className={classes.footerToolbar}>
@@ -329,6 +330,33 @@ export default () => {
 							className={clsx(classes.footerLink, classes.addressLink)}
 						>
 							WhatsApp: +90 551 041 32 30
+						</a>
+						<a
+							target="_blank"
+							rel="noopener noreferrer"
+							href="tel:+905309492470"
+							className={clsx(classes.footerLink, classes.addressLink)}
+						>
+							International: +90 530 949 24 70
+						</a>
+						<a
+							target="_blank"
+							rel="noopener noreferrer"
+							href="tel:+4402081238053"
+							className={clsx(classes.footerLink, classes.addressLink)}
+						>
+							UK: +44 020 8123 8053
+						</a>
+						<a
+							target="_blank"
+							rel="noopener noreferrer"
+							href="tel:+18312048370"
+							className={clsx(classes.footerLink, classes.addressLink)}
+						>
+							USA: +1 831 204 83 70
+						</a>
+						<a className={clsx(classes.footerLink, classes.addressLink)} onClick={handleCallbackOpen}>
+							Request A Call Back
 						</a>
 						<a href="/contact#form" className={clsx(classes.footerLink, classes.addressLink)}>
 							Send Us A Form

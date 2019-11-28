@@ -302,7 +302,7 @@ const useStyles = makeStyles((theme) => ({
 		alignSelf: "center",
 		[sizes.down("xxxs")]: {
 			transform: "scale(0.8)",
-			marginLeft: "-2.2rem",
+			transformOrigin: "left",
 			marginTop: "-.6rem"
 		}
 	},
@@ -405,7 +405,8 @@ const Form = () => {
 		const validity = Object.keys(errors).every((cur) => errors[cur] === false);
 		const emptiness = Object.keys(formData).every((cur) => formData[cur] !== "");
 		const isNumberFilled = phoneData.number !== "";
-		if (validity && emptiness && isNumberFilled) {
+		const isCaptchaFilled = captchaState !== "";
+		if (validity && emptiness && isNumberFilled && isCaptchaFilled) {
 			return true;
 		} else {
 			let phoneValidError = true;
@@ -479,7 +480,10 @@ const Form = () => {
 				setLoading(false);
 				setPerfectSmileState(false);
 				setGetReadyState(true);
-				router.replace("/thank-you");
+				router.replace({
+					pathname: "/thank-you",
+					query: { type: "form" }
+				});
 			} else if (!response.data.success) {
 				setSpinnerWrapperState(false);
 				setLoading(false);
