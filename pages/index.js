@@ -1281,11 +1281,11 @@ const Index = (props) => {
 
 			<style jsx>{`
 				:global(.webp) .hero-image-div {
-					background-image: url(${require("../public/hero-image.webp")});
+					background-image: url(${require("../public/home-page/hero-image.webp")});
 				}
 
 				:global(.no-webp) .hero-image-div {
-					background-image: url(${require("../public/hero-image.jpg")});
+					background-image: url(${require("../public/home-page/hero-image.jpg")});
 				}
 
 				.hero-image-div {
