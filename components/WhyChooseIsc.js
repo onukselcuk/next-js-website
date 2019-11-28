@@ -156,7 +156,7 @@ const WhyChooseIsc = ({ treatmentName }) => {
 				<p className="treatment-paragraph">
 					<b>
 						{" "}
-						Our clinic is an exclusive and one of the rare clinics that treat and tend the patients
+						Our clinic is an exclusive and one of the rare clinics that treat and tend to patients
 						individually.
 					</b>{" "}
 					We do not accept groups of patients and treat them in batches. Because we believe it lowers the

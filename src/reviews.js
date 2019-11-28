@@ -2,6 +2,23 @@ const reviews = {
 	reviews: [
 		{
 			reviewId:
+				"AIe9_BGvUJd9etQojwpjZIMsiFne3VWs38NtZIHAfSoSW64nlsBryoslzbDS15xJ2QEyiAiIIZSmiiZ4mtOKj_Mce4kjsYQbKUiFtQWFLsKVKzq5sFJIdoQ",
+			reviewer: {
+				profilePhotoUrl:
+					"https://lh6.googleusercontent.com/-EMT3VBhzFiw/AAAAAAAAAAI/AAAAAAAAAAA/VJCqyuF_8Kk/c-rp-mo-br100-s125/photo.jpg",
+				displayName: "ALaa Duski"
+			},
+			starRating: "FIVE",
+			comment:
+				"The staff is great and the doctors are very loved and the results and accuracy are very excellent I recommend to everyone",
+			createTime: "2019-11-26T16:50:38.453Z",
+			updateTime: "2019-11-26T16:50:38.453Z",
+			name:
+				"accounts/110663858472950433758/locations/6251002188613810282/reviews/AIe9_BGvUJd9etQojwpjZIMsiFne3VWs38NtZIHAfSoSW64nlsBryoslzbDS15xJ2QEyiAiIIZSmiiZ4mtOKj_Mce4kjsYQbKUiFtQWFLsKVKzq5sFJIdoQ",
+			reviewUrl: "https://goo.gl/maps/3QgpCo7SDQcxfhNUA"
+		},
+		{
+			reviewId:
 				"AIe9_BEV1VP1woYvuPRixSBHlWg49q04r63-_KbwkUNHRXY88--IcUQrWjFVbiSuIZYkQXMBrDqIQku5xOcrt-EKcuAiYoy9j1DNRKSmEsUTDO5JYx0gLQA",
 			reviewer: {
 				profilePhotoUrl:

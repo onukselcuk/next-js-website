@@ -235,7 +235,7 @@ const treatmentTemplate = () => {
 							</h2>
 							<p className="treatment-paragraph">
 								You can contact us through many channels, the fastest way is{" "}
-								<b> Live Chat and WhatsApp </b>, you can also send us a form or an email. Sending an
+								<b> Live Chat and WhatsApp</b>, you can also send us a form or an email. Sending an
 								X-Ray image is crucial in pinpointing your treatment plan and cost. You can also request
 								a video call with a doctor. After the treatment plan is determined, our international
 								patients' department will be in contact with you to find the perfect date for your

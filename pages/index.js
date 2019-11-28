@@ -40,6 +40,8 @@ import sizes from "../src/sizes";
 import reviews from "../src/reviews";
 import moment from "moment";
 import Invisalign from "../components/logos-icons/Invisalign";
+import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -203,6 +205,29 @@ const useStyles = makeStyles((theme) => ({
 		flexDirection: "column",
 		height: "100%",
 		justifyContent: "flex-start"
+	},
+	fontAwesomeIcon: {
+		fontSize: "3rem",
+		marginRight: ".5rem",
+		color: theme.palette.third.dark,
+		[sizes.down("lg")]: {
+			fontSize: "2.8rem"
+		},
+		[sizes.down("md")]: {
+			fontSize: "2.5rem"
+		}
+	},
+	fontAwesomeIconCheck: {
+		fontSize: "2.5rem",
+		position: "relative",
+		top: "3px",
+		marginRight: "1rem",
+		[sizes.down("lg")]: {
+			fontSize: "2.3rem"
+		},
+		[sizes.down("md")]: {
+			fontSize: "2rem"
+		}
 	},
 	istanbulSilhoutteSvg: {
 		width: "100%",
@@ -772,15 +797,86 @@ const Index = (props) => {
 			<section className="why-choose-us-section">
 				<div className="our-services-header">
 					<h2 className="our-services-header-text">Why Choose Us?</h2>
-					<h4 className="clinic-exclusive-text">
+					{/* <h4 className="clinic-exclusive-text">
 						Dental Treatments in Istanbul Smile Center <br /> At Affordable Prices
-					</h4>
+					</h4> */}
+
+					<div className="guarantees-div">
+						<p className="treatment-paragraph">In Istanbul Smile Center, we guarantee;</p>
+						<div className="choose-us-check-divs-wrapper">
+							<div className="choose-us-check-div">
+								<p className="treatment-paragraph">
+									<FontAwesomeIcon
+										className={clsx(classes.fontAwesomeIcon, classes.fontAwesomeIconCheck)}
+										icon={faCheckCircle}
+									/>
+									Experienced and Top Quality Doctors
+								</p>
+								<p className="treatment-paragraph">
+									<FontAwesomeIcon
+										className={clsx(classes.fontAwesomeIcon, classes.fontAwesomeIconCheck)}
+										icon={faCheckCircle}
+									/>
+									Only Top Quality Dental Materials{" "}
+								</p>
+								<p className="treatment-paragraph">
+									<FontAwesomeIcon
+										className={clsx(classes.fontAwesomeIcon, classes.fontAwesomeIconCheck)}
+										icon={faCheckCircle}
+									/>
+									Transparent Pricing & Pinpoint Accuracy Quote
+								</p>
+								<p className="treatment-paragraph">
+									<FontAwesomeIcon
+										className={clsx(classes.fontAwesomeIcon, classes.fontAwesomeIconCheck)}
+										icon={faCheckCircle}
+									/>
+									Affordable and The Most Competitive Prices
+								</p>
+							</div>
+							<div className="choose-us-check-div">
+								<p className="treatment-paragraph">
+									<FontAwesomeIcon
+										className={clsx(classes.fontAwesomeIcon, classes.fontAwesomeIconCheck)}
+										icon={faCheckCircle}
+									/>
+									Free Airport-Hotel-Clinic Transfers
+								</p>
+								<p className="treatment-paragraph">
+									<FontAwesomeIcon
+										className={clsx(classes.fontAwesomeIcon, classes.fontAwesomeIconCheck)}
+										icon={faCheckCircle}
+									/>
+									Hotel Discounts
+								</p>
+								<p className="treatment-paragraph">
+									<FontAwesomeIcon
+										className={clsx(classes.fontAwesomeIcon, classes.fontAwesomeIconCheck)}
+										icon={faCheckCircle}
+									/>
+									Multilingual Assistance
+								</p>
+								<p className="treatment-paragraph">
+									<FontAwesomeIcon
+										className={clsx(classes.fontAwesomeIcon, classes.fontAwesomeIconCheck)}
+										icon={faCheckCircle}
+									/>
+									Travel Tours Discounts
+								</p>
+							</div>
+						</div>
+					</div>
 					<p className="our-services-header-paragraph-text">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis mollitia deleniti beatae quam
-						incidunt doloribus. Culpa numquam tenetur fugiat modi debitis, est, aut earum perspiciatis ut
-						incidunt dignissimos quos. Voluptate. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-						Eveniet atque sit fuga consequatur dolorem quia tempore harum in est doloribus, necessitatibus
-						porro earum obcaecati inventore expedita iure eaque voluptate aspernatur.
+						No need to pour tons of money for your dental treatment in your local dentist. Istanbul Smile
+						Center is the perfect place to get high quality and affordable dental treatment. Our clinic is
+						an exclusive and one of the rare clinics that treat and tend to patients individually. We do not
+						accept groups of patients and treat them in batches. Because we believe it lowers the quality of
+						the treatment and the comfort of the patient. We do not see the number of patients and their
+						treatments as a numbers game. We do not compromise quality for the sake of quantity. You will
+						feel yourself unique in Istanbul Smile Center. Because you are special to us as every other
+						patient, we have. Besides, who doesn't want to turn their dental treatment into a holiday in a
+						beautiful and historical place like Istanbul? Enjoy historical sites, Bosphorus, multicultural
+						society of Istanbul, and our delicious Turkish food during your stay here.
 					</p>
 				</div>
 				<div className="istanbul-silhouette-wrapper-div">
@@ -1585,6 +1681,50 @@ const Index = (props) => {
 				.why-choose-us-section {
 					width: 100%;
 				}
+
+				.guarantees-div {
+					margin: 1rem 0 2rem 0;
+				}
+				.choose-us-check-divs-wrapper {
+					display: flex;
+					justify-content: center;
+					text-align: left;
+					margin: 0 auto;
+				}
+
+				.choose-us-check-div {
+					margin: 1rem;
+				}
+				.treatment-paragraph {
+					font-size: 2rem;
+					font-weight: normal;
+					margin-bottom: 1rem;
+					color: ${sTheme.palette.primary.main};
+					font-weight: bold;
+				}
+
+				@media (max-width: ${sizes.sizes.lg}) {
+					.treatment-paragraph {
+						font-size: 1.8rem;
+					}
+				}
+
+				@media (max-width: ${sizes.sizes.md}) {
+					.treatment-paragraph {
+						font-size: 1.6rem;
+					}
+				}
+
+				@media (max-width: ${sizes.sizes.xs}) {
+					.choose-us-check-divs-wrapper {
+						flex-direction: column;
+						text-align: center;
+					}
+					.choose-us-check-div {
+						margin: 0 1rem;
+					}
+				}
+
 				.istanbul-silhouette-wrapper-div {
 					display: flex;
 					justify-content: center;
@@ -1796,6 +1936,9 @@ const Index = (props) => {
 					}
 					.review-date {
 						font-size: 1.1rem;
+					}
+					.perfect-smile-header {
+						padding-top: 1rem;
 					}
 				}
 			`}</style>
