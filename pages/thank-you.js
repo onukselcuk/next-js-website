@@ -1,6 +1,6 @@
 import sTheme from "../src/styledTheme";
 import Link from "next/link";
-import Head from "next/head";
+import { NextSeo } from "next-seo";
 import { makeStyles } from "@material-ui/core/styles";
 import sizes from "../src/sizes";
 import { faGlobe, faComments, faFileSignature, faAt, faHome, faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
@@ -43,9 +43,7 @@ const thankYou = (props) => {
 
 	return (
 		<React.Fragment>
-			<Head>
-				<title key="title">Thank You | Istanbul Smile Center | Let's Make Your Smile Perfect</title>
-			</Head>
+			<NextSeo title="Thank You | Istanbul Smile Center | Let's Make Your Smile Perfect" />
 			<section className="atakoy-towers-img-section">
 				<div className="atakoy-towers-img-div" />
 			</section>

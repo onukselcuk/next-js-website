@@ -1,4 +1,4 @@
-import Head from "next/head";
+import { NextSeo } from "next-seo";
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
 import sTheme from "../src/styledTheme";
@@ -56,12 +56,11 @@ const Privileges = () => {
 
 	return (
 		<React.Fragment>
-			<Head>
-				<title key="title">
-					Patient Privileges & Itinerary | VIP Treatment | Istanbul Smile Center | Let's Make Your Smile
-					Perfect
-				</title>
-			</Head>
+			<NextSeo
+				title="Patient Privileges & Dental Tourism Process | Istanbul Smile Center"
+				description="Our patients have privileges. We offer unique and free services to our international patients to make their dental treatments super easy and enjoying as no other clinic can."
+			/>
+
 			<section className="your-privileges-section">
 				<div className="privilege-vip-img-div" />
 				<section className="your-privileges-header-section">

@@ -1,12 +1,12 @@
 import sTheme from "../src/styledTheme";
 import Link from "next/link";
-import Head from "next/head";
 import { makeStyles } from "@material-ui/core/styles";
 import sizes from "../src/sizes";
 import { faGlobe, faComments, faFileSignature, faAt, faHome } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import clsx from "clsx";
+import { NextSeo } from "next-seo";
 
 const useStyles = makeStyles((theme) => ({
 	fontAwesomeIcon: {
@@ -43,9 +43,7 @@ const thankYou = () => {
 
 	return (
 		<React.Fragment>
-			<Head>
-				<title key="title">Oops.. 404 Error | Istanbul Smile Center | Let's Make Your Smile Perfect</title>
-			</Head>
+			<NextSeo title="Oops.. 404 Error | Istanbul Smile Center | Let's Make Your Smile Perfect" />
 			<section className="atakoy-towers-img-section">
 				<div className="atakoy-towers-img-div" />
 			</section>

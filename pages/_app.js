@@ -4,6 +4,7 @@ import { ThemeProvider } from "@material-ui/styles";
 import theme from "../src/theme";
 import Layout from "../components/Layout";
 import Callback from "../components/Callback";
+import { DefaultSeo } from "next-seo";
 
 class MyApp extends App {
 	constructor (props) {
@@ -57,6 +58,14 @@ class MyApp extends App {
 		const { Component, pageProps } = this.props;
 		return (
 			<React.Fragment>
+				<DefaultSeo
+					openGraph={{
+						type: "website",
+						locale: "en_USA",
+						url: "https://www.istanbulsmilecenter.co/",
+						site_name: "Istanbul Smile Center Dental Clinic"
+					}}
+				/>
 				<ThemeProvider theme={theme}>
 					<Layout
 						openCallback={this.state.open}

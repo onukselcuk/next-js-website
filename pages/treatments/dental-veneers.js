@@ -1,5 +1,5 @@
 import sTheme from "../../src/styledTheme";
-import Head from "next/head";
+import { NextSeo } from "next-seo";
 import { makeStyles } from "@material-ui/core/styles";
 import sizes from "../../src/sizes";
 import {
@@ -102,12 +102,10 @@ const treatmentTemplate = () => {
 	};
 	return (
 		<React.Fragment>
-			<Head>
-				<title key="title">
-					Dental Veneers in Istanbul, Turkey | Dental Cost Calculator | Istanbul Smile Center | Let's Make
-					Your Smile Perfect
-				</title>
-			</Head>
+			<NextSeo
+				title="Dental Veneers in Istanbul, Turkey - Dental Cost Calculator | Istanbul Smile Center"
+				description="Calculate your dental veneer cost with our dental cost calculator. We provide high quality and affordable dental veneer treatments. Learn more about our easy dental veneer treatment process."
+			/>
 			<section className="treatment-img-section">
 				<div className="treatment-img-div" />
 			</section>

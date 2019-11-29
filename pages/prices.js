@@ -1,5 +1,4 @@
-import Link from "next/link";
-import Head from "next/head";
+import { NextSeo } from "next-seo";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import clsx from "clsx";
@@ -70,12 +69,10 @@ const Prices = () => {
 
 	return (
 		<div className="root">
-			<Head>
-				<title key="title">
-					Our Prices & Dental Cost Calculator - Transparent Pricing | Istanbul Smile Center | Let's Make Your
-					Smile Perfect
-				</title>
-			</Head>
+			<NextSeo
+				title="Our Prices & Dental Cost Calculator - Transparent Pricing | Istanbul Smile Center"
+				description="Top quality treatment and affordable prices in top rated dental clinic in Istanbul, Turkey. Use our cost calculator to calculate your dental treatment cost."
+			/>
 			<section className="our-prices-section">
 				<div className="calculator-img-div" />
 				<div className="our-prices-header">

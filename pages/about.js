@@ -1,14 +1,15 @@
 import sTheme from "../src/styledTheme";
 import sizes from "../src/sizes";
 import Form from "../components/Form";
-import Head from "next/head";
+import { NextSeo } from "next-seo";
 
 const About = () => {
 	return (
 		<React.Fragment>
-			<Head>
-				<title key="title">About Us | Istanbul Smile Center | Let's Make Your Smile Perfect</title>
-			</Head>
+			<NextSeo
+				title="Our Modern Clinic - Top Quality Doctors and Staff | Istanbul Smile Center"
+				description="Learn more about our modern clinic, awesome and experienced doctors and staff. "
+			/>
 			<section className="about-us-whole-section">
 				<section className="clinic-entrance-img-section">
 					<div className="clinic-entrance-img-div" />

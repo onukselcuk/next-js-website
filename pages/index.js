@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Head from "next/head";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import Paper from "@material-ui/core/Paper";
@@ -42,6 +41,7 @@ import moment from "moment";
 import Invisalign from "../components/logos-icons/Invisalign";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { NextSeo } from "next-seo";
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -363,9 +363,10 @@ const Index = (props) => {
 
 	return (
 		<React.Fragment>
-			<Head>
-				<title key="title">Istanbul Smile Center | Let's Make Your Smile Perfect</title>
-			</Head>
+			<NextSeo
+				title="Istanbul Smile Center | Let's Make Your Smile Perfect"
+				description="Top rated dental clinic in Istanbul, Turkey. We provide high quality and affordable dental treatments. Use our cost calculator to calculate your dental treatment cost."
+			/>
 			<div className="hero-image-div">
 				<div className="hero-image-perfect-wrapper">
 					<h1 className="hero-image-perfect">

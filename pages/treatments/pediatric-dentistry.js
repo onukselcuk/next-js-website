@@ -1,5 +1,5 @@
 import sTheme from "../../src/styledTheme";
-import Head from "next/head";
+import { NextSeo } from "next-seo";
 import { makeStyles } from "@material-ui/core/styles";
 import sizes from "../../src/sizes";
 import { faStarOfLife, faChevronCircleRight } from "@fortawesome/free-solid-svg-icons";
@@ -94,12 +94,11 @@ const treatmentTemplate = () => {
 	};
 	return (
 		<React.Fragment>
-			<Head>
-				<title key="title">
-					Pediatric Dentistry in Istanbul, Turkey | General Anesthesia and Sedation in Children | Dental Cost
-					Calculator | Istanbul Smile Center | Let's Make Your Smile Perfect
-				</title>
-			</Head>
+			<NextSeo
+				title="Pediatric Dentistry in Istanbul, Turkey - General Anesthesia and Sedation in Children - Dental Cost
+					Calculator | Istanbul Smile Center"
+				description="Calculate general anesthesia and sedation treatment costs with our dental cost calculator. We provide high quality and affordable pediatric dentistry treatments. Learn more about fluoride treatment and fissure sealant."
+			/>
 			<section className="treatment-img-section">
 				<div className="treatment-img-div" />
 			</section>
