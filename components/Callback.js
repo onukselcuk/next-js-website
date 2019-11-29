@@ -1,9 +1,5 @@
-import Button from "@material-ui/core/Button";
-import TextField from "@material-ui/core/TextField";
 import Dialog from "@material-ui/core/Dialog";
-import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
-import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import CallbackForm from "./CallbackForm";
 import { makeStyles } from "@material-ui/core/styles";
@@ -35,6 +31,7 @@ const useStyles = makeStyles((theme) => ({
 		paddingBottom: 0,
 		width: "100%",
 		position: "relative",
+		paddingTop: "5rem",
 		"& h2": {
 			fontFamily: theme.typography.serif,
 			fontSize: "2.8rem",
@@ -55,8 +52,8 @@ const useStyles = makeStyles((theme) => ({
 	},
 	closeIconButton: {
 		position: "absolute",
-		right: "3%",
-		top: "3%"
+		right: "1%",
+		top: "5%"
 	}
 }));
 
@@ -64,9 +61,6 @@ export default function FormDialog ({ openCallback, handleCallbackOpen, handleCa
 	const classes = useStyles();
 	return (
 		<div>
-			{/* <Button variant="outlined" color="primary" onClick={handleCallbackOpen}>
-				Open form dialog
-			</Button> */}
 			<Dialog
 				className={classes.dialogBox}
 				open={openCallback}
@@ -86,11 +80,6 @@ export default function FormDialog ({ openCallback, handleCallbackOpen, handleCa
 					</IconButton>
 				</DialogTitle>
 				<DialogContent className={classes.dialogContent}>
-					{/* <DialogContentText>
-						To subscribe to this website, please enter your email address here. We will send updates
-						occasionally.
-					</DialogContentText>
-					<TextField autoFocus margin="dense" id="name" label="Email Address" type="email" fullWidth /> */}
 					<CallbackForm handleCallbackClose={handleCallbackClose} />
 				</DialogContent>
 			</Dialog>

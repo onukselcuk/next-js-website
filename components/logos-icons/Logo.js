@@ -64,7 +64,7 @@ const Logo = () => {
 	const classes = useStyles();
 	return (
 		<Link href="/">
-			<a className={classes.svgLogoAnchor}>
+			<a>
 				<SvgIcon className={classes.svgLogo} viewBox="0 0 668 425">
 					<svg className="svgLogoWrapper" x="0px" y="0px" viewBox="0 0 668 425">
 						<path

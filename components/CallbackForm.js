@@ -19,16 +19,16 @@ import sizes from "../src/sizes";
 const useStyles = makeStyles((theme) => ({
 	root: {
 		width: "100%",
-		padding: "0 2rem 2rem 2rem",
+		padding: "0 2rem 5rem 2rem",
 		margin: "0 auto",
 		backgroundColor: theme.palette.secondary.main,
 		position: "relative",
-		overflow: "hidden",
 		[sizes.down("lg")]: {},
 		[sizes.down("lg")]: {},
 		[sizes.down("md")]: {},
 		[sizes.down("mdsm")]: {
-			padding: "10px 10px"
+			padding: "10px 10px",
+			paddingBottom: "5rem"
 		},
 		[sizes.down("xs")]: {}
 	},
@@ -58,7 +58,8 @@ const useStyles = makeStyles((theme) => ({
 		flexWrap: "wrap",
 		width: "100%",
 		margin: "0 auto",
-		alignItems: "center"
+		alignItems: "center",
+		borderBottom: "none"
 	},
 	regularButton: {
 		borderRadius: "20px",
@@ -323,11 +324,14 @@ const CallbackForm = ({ handleCallbackClose }) => {
 								name="name"
 								labelWidth={labelWidth.name}
 								autoComplete="current-name"
-								aria-describedby="name-error-text"
 								required
+								autoFocus={true}
 							/>
 							{errors.name && <FormHelperText id="name-error-text">Name is required</FormHelperText>}
 						</FormControl>
+						<div className={classes.phoneInputWrapper}>
+							<PhoneField onChange={handleOnChange} value={phoneData.number} error={errors.phone} />
+						</div>
 						<FormControl
 							className={clsx(classes.textField, classes.emailField)}
 							variant="outlined"
@@ -351,9 +355,6 @@ const CallbackForm = ({ handleCallbackClose }) => {
 								<FormHelperText id="name-error-text">Valid email address is required</FormHelperText>
 							)}
 						</FormControl>
-						<div className={classes.phoneInputWrapper}>
-							<PhoneField onChange={handleOnChange} value={phoneData.number} error={errors.phone} />
-						</div>
 
 						<div className={classes.captchaWrapper}>
 							<ReCAPTCHA

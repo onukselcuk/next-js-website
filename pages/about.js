@@ -45,13 +45,15 @@ const About = () => {
 							<div className="privilege-name-wrapper">
 								<h2 className="privilege-name-header">Asst. Prof. Dr. Yasin Erdem Akgül</h2>
 								<p className="privilege-text-paragraph">
-									The fastest way of contacting us is through Live Chat or WhatsApp. You may prefer
-									sending us a form or even just an e-mail. When you contact us, you can ask us
-									anything and tell us your dental needs. You can send your teeth pictures and/or
-									X-Ray images through all channels, including live chat. Please keep in mind,
-									providing us as much information as possible, and an X-Ray image will help us in
-									giving you an exact quote and a treatment plan. You can also request a video call
-									consultation.
+									Assistant Professor Doctor Yasin Erdem Akgül graduated from{" "}
+									<b>Istanbul University Dental School</b> which is the <b>best dental school</b> in
+									Turkey. Later, he completed his doctorate in orthodontics and continued his academic
+									studies. He focused on expedited orthodontic treatments on his thesis work. He made
+									presentations in countless <b>international congresses</b>. He continues his
+									research in orthodontics for national and international journals. He is a member of
+									both Turkish and <b>European Orthodontic Society</b>. He is an
+									<b> Invisalign Silver Provider. </b> He has <b>14 years of experience</b> in dental
+									treatments.
 								</p>
 							</div>
 						</div>
@@ -61,12 +63,14 @@ const About = () => {
 							<div className="privilege-name-wrapper privilege-name-wrapper-reverse">
 								<h2 className="privilege-name-header">Spec. Dr. Sevil Borbay Akgül</h2>
 								<p className="privilege-text-paragraph">
-									If you have requested a video call consultation, we will schedule a call as soon as
-									possible (usually the same day), and one of our doctors is going to call you. You
-									can show your teeth to your doctor, explain more about your dental needs, and make a
-									treatment plan with your doctor right then and there. After that call or your
-									contact (if you didn't request a video call), we will send you a detailed treatment
-									plan and a quote.
+									Specialist Doctor Sevil Borbay Akgül graduated from the <b>best dental school</b> of
+									Turkey, <b>Istanbul University Dental School</b>. Later, she completed her doctorate
+									and specialist dentist training in pedodontics. Her doctorate thesis on ....
+									attracted a lot of attention from international community. During her doctorate, she
+									participated in clinical researches on tooth traumas and PRP root cell treatment in
+									root canal treatments(regenerative endodontics and revascularization treatment). She
+									participated to many national and international congresses and symposiums and made
+									presentations. She has <b>14 years of experience</b> in dental treatments.
 								</p>
 							</div>
 						</div>
@@ -78,11 +82,10 @@ const About = () => {
 							<div className="privilege-name-wrapper">
 								<h2 className="privilege-name-header">Dr. Yavuz Eker</h2>
 								<p className="privilege-text-paragraph">
-									Scheduling an appointment for your treatment in Istanbul Smile Center is so easy.
-									Our international patients' department will be in contact with you to find the
-									perfect date for you. There is no waiting period, we will schedule your appointment
-									to the exact date you request or maybe the next day but not further. We value our
-									patient's time.
+									Doctor Yavuz Eker graduated from Crimea State University Dental School. He completed
+									his internship in Ukraine. <b>As dentistry is his family profession,</b> he also
+									excelled in dentistry following in the steps of his family. He focused his work on{" "}
+									<b>Aesthetic Dentistry, Dental Implants and Smile Aesthetics.</b>
 								</p>
 							</div>
 						</div>

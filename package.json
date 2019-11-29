@@ -47,6 +47,7 @@
 		"next-fonts": "^0.19.0",
 		"next-optimized-images": "^2.5.4",
 		"next-seo": "^3.0.0",
+		"nextjs-sitemap-generator": "^0.4.1",
 		"nodemailer": "^6.3.1",
 		"nodemailer-mailgun-transport": "^1.4.0",
 		"prop-types": "^15.7.2",

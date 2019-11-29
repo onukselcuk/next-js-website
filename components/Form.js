@@ -582,7 +582,6 @@ const Form = () => {
 								name="name"
 								labelWidth={labelWidth.name}
 								autoComplete="current-name"
-								aria-describedby="name-error-text"
 								required
 							/>
 							{errors.name && <FormHelperText id="name-error-text">Name is required</FormHelperText>}

@@ -881,17 +881,24 @@ const Index = (props) => {
 							</div>
 						</div>
 					</div>
-					<p className="our-services-header-paragraph-text">
-						No need to pour tons of money for your dental treatment in your local dentist. Istanbul Smile
-						Center is the perfect place to get high quality and affordable dental treatment. Our clinic is
-						an exclusive and one of the rare clinics that treat and tend to patients individually. We do not
-						accept groups of patients and treat them in batches. Because we believe it lowers the quality of
-						the treatment and the comfort of the patient. We do not see the number of patients and their
-						treatments as a numbers game. We do not compromise quality for the sake of quantity. You will
-						feel yourself unique in Istanbul Smile Center. Because you are special to us as every other
-						patient, we have. Besides, who doesn't want to turn their dental treatment into a holiday in a
-						beautiful and historical place like Istanbul? Enjoy historical sites, Bosphorus, multicultural
-						society of Istanbul, and our delicious Turkish food during your stay here.
+					<p className="our-services-paragraph">
+						<b>No need to pour tons of money for your dental treatment</b> in your local dentist.{" "}
+						<b>
+							Istanbul Smile Center is the perfect place to get high quality and affordable dental
+							treatment.
+						</b>{" "}
+						Our clinic is an exclusive and one of the rare clinics that treat and{" "}
+						<b>tend to patients individually</b>. We do not accept groups of patients and treat them in
+						batches. Because we believe it lowers the quality of the treatment and the comfort of the
+						patient. We do not see the number of patients and their treatments as a numbers game.{" "}
+						<b>We do not compromise quality for the sake of quantity.</b> You will feel yourself unique in
+						Istanbul Smile Center. Because you are special to us as every other patient, we have. Besides,
+						who doesn't want to turn their dental treatment into a holiday in a beautiful and historical
+						place like Istanbul?{" "}
+						<b>
+							Enjoy historical sites, Bosphorus, multicultural society of Istanbul, and our delicious
+							Turkish food during your stay here.
+						</b>
 					</p>
 				</div>
 				<div className="istanbul-silhouette-wrapper-div">
@@ -905,9 +912,7 @@ const Index = (props) => {
 					<h2 className="our-services-header-text">
 						Our Perfect <span style={{ color: "#E94D65" }}>Smile</span> Gallery
 					</h2>
-					<p className="our-services-header-paragraph-text">
-						We are proud of the smiles our awesome doctors design.
-					</p>
+					<p className="our-services-header-paragraph-text">We are very proud of the smiles we design.</p>
 				</div>
 				<div className="reviews-wrapper">
 					<Carousel
@@ -1416,6 +1421,11 @@ const Index = (props) => {
 					font-size: 2rem;
 					width: 50%;
 				}
+				.our-services-paragraph {
+					color: ${sTheme.palette.secondary.dark};
+					font-size: 2rem;
+					width: 80%;
+				}
 
 				@media (max-width: ${sizes.sizes.xl}) {
 					.our-services-header-paragraph-text {
@@ -1428,6 +1438,9 @@ const Index = (props) => {
 						width: 70%;
 						font-size: 1.8rem;
 					}
+					.our-services-paragraph {
+						font-size: 1.8rem;
+					}
 				}
 
 				@media (max-width: ${sizes.sizes.md}) {
@@ -1435,7 +1448,12 @@ const Index = (props) => {
 						width: 80%;
 						font-size: 1.6rem;
 					}
+					.our-services-paragraph {
+						font-size: 1.6rem;
+						width: 90%;
+					}
 				}
+
 				.our-services-wrapper {
 					display: flex;
 					flex-wrap: wrap;
@@ -1699,6 +1717,7 @@ const Index = (props) => {
 
 				.guarantees-div {
 					margin: 1rem 0 2rem 0;
+					padding: 0 2rem;
 				}
 				.choose-us-check-divs-wrapper {
 					display: flex;
@@ -1737,6 +1756,10 @@ const Index = (props) => {
 					}
 					.choose-us-check-div {
 						margin: 0 1rem;
+					}
+					.guarantees-div {
+						margin: 1rem 0 2rem 0;
+						padding: 0 1rem;
 					}
 				}
 
