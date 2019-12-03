@@ -96,14 +96,30 @@ const WhyChooseIsc = ({ treatmentName }) => {
 							className={clsx(classes.fontAwesomeIcon, classes.fontAwesomeIconCheck)}
 							icon={faCheckCircle}
 						/>
-						Experienced and Top Quality Doctors
+						14+ Years of Experience and Top Quality Doctors
 					</p>
 					<p className="treatment-paragraph">
 						<FontAwesomeIcon
 							className={clsx(classes.fontAwesomeIcon, classes.fontAwesomeIconCheck)}
 							icon={faCheckCircle}
 						/>
-						Only Top Quality{" "}
+						Top Quality Doctors
+					</p>
+					{treatmentName === "implant" ? (
+						<p className="treatment-paragraph">
+							<FontAwesomeIcon
+								className={clsx(classes.fontAwesomeIcon, classes.fontAwesomeIconCheck)}
+								icon={faCheckCircle}
+							/>
+							10,000+ Implant Installs
+						</p>
+					) : null}
+					<p className="treatment-paragraph">
+						<FontAwesomeIcon
+							className={clsx(classes.fontAwesomeIcon, classes.fontAwesomeIconCheck)}
+							icon={faCheckCircle}
+						/>
+						Only The Highest Quality{" "}
 						{treatmentName === "implant" ? (
 							"and FDA Approved Implants with Worldwide Use"
 						) : (
@@ -115,7 +131,14 @@ const WhyChooseIsc = ({ treatmentName }) => {
 							className={clsx(classes.fontAwesomeIcon, classes.fontAwesomeIconCheck)}
 							icon={faCheckCircle}
 						/>
-						Transparent Pricing & Pinpoint Accuracy Quote
+						Transparent Pricing
+					</p>
+					<p className="treatment-paragraph">
+						<FontAwesomeIcon
+							className={clsx(classes.fontAwesomeIcon, classes.fontAwesomeIconCheck)}
+							icon={faCheckCircle}
+						/>
+						No Price Change, Very Accurate Quotes
 					</p>
 					<p className="treatment-paragraph">
 						<FontAwesomeIcon
@@ -124,6 +147,15 @@ const WhyChooseIsc = ({ treatmentName }) => {
 						/>
 						Affordable and The Most Competitive Prices
 					</p>
+					{treatmentName === "implant" ? (
+						<p className="treatment-paragraph">
+							<FontAwesomeIcon
+								className={clsx(classes.fontAwesomeIcon, classes.fontAwesomeIconCheck)}
+								icon={faCheckCircle}
+							/>
+							Lifetime Guarantee on Implant Materials
+						</p>
+					) : null}
 					<p className="treatment-paragraph">
 						<FontAwesomeIcon
 							className={clsx(classes.fontAwesomeIcon, classes.fontAwesomeIconCheck)}

@@ -522,16 +522,20 @@ const Index = (props) => {
 							Istanbul <span className="clinic-smile-center-text">Smile </span> Center
 						</h2>
 						<p className="clinic-intro-text">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel eaque dignissimos error.
-							Fugit, corporis laboriosam. Minus dolor harum facilis, optio eius, saepe, nesciunt
-							voluptatem suscipit temporibus labore expedita quidem molestiae! Lorem ipsum, dolor sit amet
-							consectetur adipisicing elit. Doloribus rem ducimus quidem tempore fugiat obcaecati.
-							Necessitatibus quod consequuntur libero error vel dicta ad ullam ea! Facilis beatae sapiente
-							voluptatem vel. Error optio, totam laborum rem nihil culpa quidem odio numquam corporis sunt
-							tenetur veniam, reiciendis dicta eum obcaecati eaque similique hic quae voluptate sapiente,
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti soluta alias aliquam ipsa
-							a, ducimus dolorem quisquam inventore! Sapiente velit quae facilis aperiam possimus
-							distinctio laudantium odio, quidem suscipit accusamus?
+							As a unique dental clinic in Istanbul, Turkey,{" "}
+							<b>we've been designing smiles for over a decade.</b> Our never ending quest to using{" "}
+							<b>the latest and best technologies</b> in dental treatments placed us to be one of the best
+							dental clinics in Turkey.
+						</p>
+						<p className="clinic-intro-text">
+							Our <b>patient-first mentality</b> is loved by our patients. Comfort of our patients and the
+							quality of the treatments has the utmost priority in Istanbul Smile Center. Although our
+							patients love our modern clinic and the waiting area, we doubt that you will be using the
+							waiting area much. Because <b>we never make our patients wait.</b>
+						</p>
+						<p className="clinic-intro-text">
+							We invite you to <b>come to our clinic and enjoy high quality dental treatments</b>, the
+							warm smile and hospitality of our doctors and staff.
 						</p>
 						<div className="clinic-intro-buttons-div">
 							<Button
@@ -829,22 +833,38 @@ const Index = (props) => {
 										className={clsx(classes.fontAwesomeIcon, classes.fontAwesomeIconCheck)}
 										icon={faCheckCircle}
 									/>
-									Experienced and Top Quality Doctors
+									14+ Years of Experience
 								</p>
 								<p className="treatment-paragraph">
 									<FontAwesomeIcon
 										className={clsx(classes.fontAwesomeIcon, classes.fontAwesomeIconCheck)}
 										icon={faCheckCircle}
 									/>
-									Only Top Quality Dental Materials{" "}
+									Top Quality Doctors
 								</p>
 								<p className="treatment-paragraph">
 									<FontAwesomeIcon
 										className={clsx(classes.fontAwesomeIcon, classes.fontAwesomeIconCheck)}
 										icon={faCheckCircle}
 									/>
-									Transparent Pricing & Pinpoint Accuracy Quote
+									Highest Quality Dental Materials{" "}
 								</p>
+								<p className="treatment-paragraph">
+									<FontAwesomeIcon
+										className={clsx(classes.fontAwesomeIcon, classes.fontAwesomeIconCheck)}
+										icon={faCheckCircle}
+									/>
+									Transparent Pricing
+								</p>
+								<p className="treatment-paragraph">
+									<FontAwesomeIcon
+										className={clsx(classes.fontAwesomeIcon, classes.fontAwesomeIconCheck)}
+										icon={faCheckCircle}
+									/>
+									No Price Change, Very Accurate Quotes
+								</p>
+							</div>
+							<div className="choose-us-check-div">
 								<p className="treatment-paragraph">
 									<FontAwesomeIcon
 										className={clsx(classes.fontAwesomeIcon, classes.fontAwesomeIconCheck)}
@@ -852,8 +872,6 @@ const Index = (props) => {
 									/>
 									Affordable and The Most Competitive Prices
 								</p>
-							</div>
-							<div className="choose-us-check-div">
 								<p className="treatment-paragraph">
 									<FontAwesomeIcon
 										className={clsx(classes.fontAwesomeIcon, classes.fontAwesomeIconCheck)}
@@ -1520,8 +1538,9 @@ const Index = (props) => {
 				@media (max-width: ${sizes.sizes.lg}) {
 					.clinic-image-collage-div {
 						width: 100%;
-						height: 30rem;
+						height: 40rem;
 						border-radius: 0;
+						background-position: left 50% top 40%;
 					}
 				}
 
@@ -1581,7 +1600,7 @@ const Index = (props) => {
 				.clinic-intro-text {
 					width: 95%;
 					color: ${sTheme.palette.secondary.dark};
-					font-size: 1.7rem;
+					font-size: 1.8rem;
 					line-height: 1.6;
 				}
 
@@ -1625,15 +1644,32 @@ const Index = (props) => {
 				}
 
 				@media (max-width: ${sizes.sizes.lg}) {
+					.clinic-name-header {
+						font-size: 4rem;
+					}
+
 					.dental-treatments-buttons-div {
 						width: 93%;
 					}
 				}
 
 				@media (max-width: ${sizes.sizes.md}) {
+					.clinic-name-header {
+						font-size: 3.5rem;
+					}
+
 					.dental-treatments-buttons-div {
 						flex-direction: column;
 						align-items: center;
+					}
+				}
+
+				@media (max-width: ${sizes.sizes.xs}) {
+					.clinic-exclusive-text {
+						font-size: 1.7rem;
+					}
+					.clinic-intro-text {
+						font-size: 1.6rem;
 					}
 				}
 				.our-doctors-section {

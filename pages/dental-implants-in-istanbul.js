@@ -7,7 +7,6 @@ import sTheme from "../src/styledTheme";
 import clsx from "clsx";
 import IstanbulSilhouette from "../components/logos-icons/IstanbulSilhouette";
 import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
 import StarIcon from "@material-ui/icons/Star";
 import GoogleLogo from "../components/logos-icons/GoogleLogo";
 import MobileDetect from "mobile-detect";

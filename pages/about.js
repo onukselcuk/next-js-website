@@ -18,13 +18,12 @@ const About = (props) => {
 				</section>
 				<section className="about-us-section">
 					<div className="about-us-header">
-						<h1 className="about-us-header-text">About Us</h1>
+						<h1 className="about-us-header-text">Our Team</h1>
 						<p className="about-us-header-paragraph-text">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt minus ipsa ea ratione
-							aperiam voluptates fuga explicabo perferendis, voluptatum beatae recusandae vero voluptate
-							molestias, vitae natus nisi aliquid ad officiis.Eos, ad? Distinctio voluptas doloribus atque
-							incidunt laborum saepe aliquam officiis eius nulla deserunt quasi molestias voluptatibus,
-							eum natus, beatae aliquid harum quo fuga enim. Aliquid libero optio aspernatur voluptate.
+							We are very proud of our experienced team. Our always smiling doctors and staff are at your
+							service in Istanbul Smile Center. You can also enjoy our modern and comfortable clinic
+							during your visit. We are very excited to see you join our Happy Family along with thousands
+							of people!
 						</p>
 					</div>
 					<div className="clinic-image-wrapper">
@@ -68,8 +67,8 @@ const About = (props) => {
 									presentations in countless <b>international congresses</b>. He continues his
 									research in orthodontics for national and international journals. He is a member of
 									both Turkish and <b>European Orthodontic Society</b>. He is an
-									<b> Invisalign Silver Provider. </b> He has <b>14 years of experience</b> in dental
-									treatments.
+									<b> Invisalign Silver Provider. </b> He has more than <b>14 years of experience</b>{" "}
+									in dental treatments.
 								</p>
 							</div>
 						</div>
@@ -81,12 +80,15 @@ const About = (props) => {
 								<p className="privilege-text-paragraph">
 									Specialist Doctor Sevil Borbay Akgül graduated from the <b>best dental school</b> of
 									Turkey, <b>Istanbul University Dental School</b>. Later, she completed her doctorate
-									and specialist dentist training in pedodontics. Her doctorate thesis on ....
-									attracted a lot of attention from international community. During her doctorate, she
-									participated in clinical researches on tooth traumas and PRP root cell treatment in
-									root canal treatments(regenerative endodontics and revascularization treatment). She
-									participated to many national and international congresses and symposiums and made
-									presentations. She has <b>14 years of experience</b> in dental treatments.
+									and specialist dentist training in pedodontics. <b>Her doctorate thesis</b> on
+									in-vitro evaluation of influence on antibacterial and physical properties of
+									cetrimide and silver nanoparticles incorporation in glass ionomer cement{" "}
+									<b>attracted a lot of attention from international community.</b> During her
+									doctorate, she participated in clinical researches on tooth traumas and PRP root
+									cell treatment in root canal treatments(regenerative endodontics and
+									revascularization treatment). She went to many national and international congresses
+									and symposiums and made presentations. She has more than{" "}
+									<b>14 years of experience</b> in dental treatments.
 								</p>
 							</div>
 						</div>
@@ -101,7 +103,11 @@ const About = (props) => {
 									Doctor Yavuz Eker graduated from Crimea State University Dental School. He completed
 									his internship in Ukraine. <b>As dentistry is his family profession,</b> he also
 									excelled in dentistry following in the steps of his family. He focused his work on{" "}
-									<b>Aesthetic Dentistry, Dental Implants and Smile Aesthetics.</b>
+									<b>
+										Aesthetic Dentistry, Dental Implants and Smile Aesthetics and got more than 30
+										certificates on Smile Aesthetics.
+									</b>{" "}
+									He has more than <b>13 years of experience</b> in dental treatments.
 								</p>
 							</div>
 						</div>
