@@ -2,9 +2,12 @@ import React from "react";
 import App from "next/app";
 import { ThemeProvider } from "@material-ui/styles";
 import theme from "../src/theme";
-import Layout from "../components/Layout";
 import Callback from "../components/Callback";
 import { DefaultSeo } from "next-seo";
+import "react-multi-carousel/lib/styles.css";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false;
 
 class MyApp extends App {
 	constructor (props) {
