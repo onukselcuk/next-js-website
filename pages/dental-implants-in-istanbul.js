@@ -2,30 +2,9 @@ import Link from "next/link";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import Paper from "@material-ui/core/Paper";
-import Typography from "@material-ui/core/Typography";
-import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
-import CardContent from "@material-ui/core/CardContent";
 import SvgIcon from "@material-ui/core/SvgIcon";
-import LiveChat from "../components/logos-icons/LiveChat";
-import VideoCallConsultation from "../components/logos-icons/VideoCallConsultation";
-import TreatmentPlan from "../components/logos-icons/TreatmentPlan";
-import AirportGreeting from "../components/logos-icons/AirportGreeting";
-import AirportHotelTransfer from "../components/logos-icons/AirportHotelTransfer";
-import ClinicHotelTransfer from "../components/logos-icons/ClinicHotelTransfer";
-import HotelBookingAssistance from "../components/logos-icons/HotelBookingAssistance";
-import HotelDiscounts from "../components/logos-icons/HotelDiscounts";
-import MultilingualAssistance from "../components/logos-icons/MultilingualAssistance";
-import TravelToursDiscounts from "../components/logos-icons/TravelToursDiscounts";
-import DentalImplant from "../components/logos-icons/DentalImplants";
 import sTheme from "../src/styledTheme";
 import clsx from "clsx";
-import DentalCrown from "../components/logos-icons/DentalCrown";
-import DentalVeneer from "../components/logos-icons/DentalVeneer";
-import CosmeticDentistry from "../components/logos-icons/CosmeticDentistry";
-import PediatricDentistry from "../components/logos-icons/PediatricDentistry";
-import SmileMakeover from "../components/logos-icons/SmileMakeover";
-import TeethWhitening from "../components/logos-icons/TeethWhitening";
 import IstanbulSilhouette from "../components/logos-icons/IstanbulSilhouette";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -38,11 +17,12 @@ import { useState } from "react";
 import sizes from "../src/sizes";
 import reviews from "../src/reviews";
 import moment from "moment";
-import Invisalign from "../components/logos-icons/Invisalign";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NextSeo } from "next-seo";
-import Layout from "../components/Layout";
+import LayoutAd from "../components/LayoutAd";
+import CostCalculator from "../components/CostCalculator";
+import Form from "../components/Form";
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -315,6 +295,13 @@ const Index = (props) => {
 	const paperElevation = 2;
 	const reviewPaperElevation = 5;
 	const { open, handleCallbackClose, handleCallbackOpen } = props;
+	const language = "en";
+	const [ currentCurrency, setCurrentCurrency ] = useState("euro");
+	const [ currentSign, setCurrentSign ] = useState("€");
+	const handleCurrencyChange = (e) => {
+		setCurrentCurrency(e.currentTarget.name);
+		setCurrentSign(e.currentTarget.dataset.sign);
+	};
 
 	const pics = {
 		yasin: [
@@ -366,7 +353,7 @@ const Index = (props) => {
 	};
 
 	return (
-		<Layout openCallback={open} handleCallbackOpen={handleCallbackOpen} handleCallbackClose={handleCallbackClose}>
+		<LayoutAd openCallback={open} handleCallbackOpen={handleCallbackOpen} handleCallbackClose={handleCallbackClose}>
 			<NextSeo
 				title="Istanbul Smile Center | Let's Make Your Smile Perfect"
 				description="Top rated dental clinic in Istanbul, Turkey. We provide high quality and affordable dental treatments. Use our cost calculator to calculate your dental treatment cost."
@@ -391,128 +378,51 @@ const Index = (props) => {
 					</Button>
 				</div>
 			</div>
-			<section className="our-services-section">
-				<div className="our-services-header">
-					<h2 className="our-services-header-text">Your Privileges</h2>
-					<p className="our-services-header-paragraph-text">
-						At Istanbul Smile Center, we offer unique and free services to our international patients to
-						make their dental treatments super easy and enjoying as no other clinic can.
+			<section className="our-prices-section cost-calculator-section">
+				<div className="our-prices-header">
+					<h2 className="our-prices-header-text">Dental Cost Calculator</h2>
+					<p className="our-prices-header-paragraph-text">
+						We even provide you a cost calculator to calculate the dental cost by yourself for your
+						convenience. If you got your teeth checked up by a doctor and know your exact treatment needs or
+						you need an estimated cost, feel free to use our calculator.
 					</p>
 				</div>
-				<div className="our-services-wrapper">
-					<Paper onClick={handleChat} className={classes.servicePaper} elevation={paperElevation}>
-						<SvgIcon className={classes.svgIcon} viewBox="0 0 84.8 84.8">
-							<LiveChat />
-						</SvgIcon>
-						<Typography variant="h5" component="h3" className={classes.servicePaperTitle}>
-							Live Chat
-						</Typography>
-					</Paper>
-					<Link href="/privileges#treatment-and-video-call">
-						<Paper className={classes.servicePaper} elevation={paperElevation}>
-							<SvgIcon className={classes.svgIcon} viewBox="0 0 84.8 84.8">
-								<VideoCallConsultation />
-							</SvgIcon>
-							<Typography variant="h5" component="h3" className={classes.servicePaperTitle}>
-								Video Call Consultation
-							</Typography>
-						</Paper>
-					</Link>
-					<Link href="/privileges#treatment-and-video-call">
-						<Paper className={classes.servicePaper} elevation={paperElevation}>
-							<SvgIcon className={classes.svgIcon} viewBox="0 0 84.8 84.8">
-								<TreatmentPlan />
-							</SvgIcon>
-							<Typography variant="h5" component="h3" className={classes.servicePaperTitle}>
-								Treatment Plan
-							</Typography>
-						</Paper>
-					</Link>
-					<Link href="/privileges#arrival-to-istanbul">
-						<Paper className={classes.servicePaper} elevation={paperElevation}>
-							<SvgIcon className={classes.svgIcon} viewBox="0 0 84.8 84.8">
-								<AirportGreeting />
-							</SvgIcon>
-							<Typography variant="h5" component="h3" className={classes.servicePaperTitle}>
-								Airport Greeting
-							</Typography>
-						</Paper>
-					</Link>
-					<Link href="/privileges#arrival-to-istanbul">
-						<Paper className={classes.servicePaper} elevation={paperElevation}>
-							<SvgIcon className={classes.svgIcon} viewBox="0 0 84.8 84.8">
-								<AirportHotelTransfer />
-							</SvgIcon>
-							<Typography variant="h5" component="h3" className={classes.servicePaperTitle}>
-								Airport-Hotel Transfers
-							</Typography>
-						</Paper>
-					</Link>
-					<Link href="/privileges#your-treatment">
-						<Paper className={classes.servicePaper} elevation={paperElevation}>
-							<SvgIcon className={classes.svgIcon} viewBox="0 0 84.8 84.8">
-								<ClinicHotelTransfer />
-							</SvgIcon>
-							<Typography variant="h5" component="h3" className={classes.servicePaperTitle}>
-								Clinic-Hotel Transfers
-							</Typography>
-						</Paper>
-					</Link>
-					<Link href="/privileges#hotel-booking">
-						<Paper className={classes.servicePaper} elevation={paperElevation}>
-							<SvgIcon className={classes.svgIcon} viewBox="0 0 84.8 84.8">
-								<HotelBookingAssistance />
-							</SvgIcon>
-							<Typography variant="h5" component="h3" className={classes.servicePaperTitle}>
-								Hotel Booking Assistance
-							</Typography>
-						</Paper>
-					</Link>
-					<Link href="/privileges#hotel-booking">
-						<Paper className={classes.servicePaper} elevation={paperElevation}>
-							<SvgIcon className={classes.svgIcon} viewBox="0 0 84.8 84.8">
-								<HotelDiscounts />
-							</SvgIcon>
-							<Typography variant="h5" component="h3" className={classes.servicePaperTitle}>
-								Hotel Discounts
-							</Typography>
-						</Paper>
-					</Link>
-					<Link href="/privileges">
-						<Paper className={classes.servicePaper} elevation={paperElevation}>
-							<SvgIcon className={classes.svgIcon} viewBox="0 0 84.8 84.8">
-								<MultilingualAssistance />
-							</SvgIcon>
-							<Typography variant="h5" component="h3" className={classes.servicePaperTitle}>
-								Multilingual Assistance
-							</Typography>
-						</Paper>
-					</Link>
-					<Link href="/privileges#dental-holiday">
-						<Paper className={classes.servicePaper} elevation={paperElevation}>
-							<SvgIcon className={classes.svgIcon} viewBox="0 0 84.8 84.8">
-								<TravelToursDiscounts />
-							</SvgIcon>
-							<Typography variant="h5" component="h3" className={classes.servicePaperTitle}>
-								Travel Tours Discounts
-							</Typography>
-						</Paper>
-					</Link>
+				<div className="cost-calculator-wrapper">
+					<CostCalculator
+						currentCurrency={currentCurrency}
+						handleCurrencyChange={handleCurrencyChange}
+						currentSign={currentSign}
+					/>
 				</div>
+
 				<div className="dental-treatments-buttons-div">
 					<Button
 						variant="contained"
 						color="primary"
-						className={clsx(classes.regularButton, classes.treatmentsButton)}
+						className={clsx(classes.regularButton, classes.pricesButton)}
 						onClick={handleChat}
 					>
 						Chat&nbsp;Now
 					</Button>
-					<Link href="/privileges">
-						<a className="clinic-intro-link">Learn more abut your privileges and itinerary</a>
-					</Link>
 				</div>
 			</section>
+			<section className="our-prices-section form-section">
+				<div className="our-prices-header">
+					<h2 className="our-prices-header-text">Get A Free Quote</h2>
+					<p className="our-prices-header-paragraph-text">
+						Contacting us through live chat or WhatsApp is always the fastest way, but you may prefer
+						sending us a good old form. Tell us your dental needs, and don't forget to attach at least the
+						pictures of your teeth to the form. If you have an X-Ray or CT Scan, it's even better and
+						crucial for most patients; this will help our doctors to make the right dental plan for you. It
+						will also help us in giving you a more accurate quote for your treatment. Go ahead and fill out
+						the form! Let's make your smile perfect!
+					</p>
+				</div>
+				<div className="form-wrapper">
+					<Form />
+				</div>
+			</section>
+
 			<section className="isc-intro-section">
 				<div className="clinic-image-collage-div" />
 				<div className="clinic-intro-div">
@@ -549,218 +459,7 @@ const Index = (props) => {
 					</div>
 				</div>
 			</section>
-			<section className="our-services-section">
-				<div className="our-services-header">
-					<h2 className="our-services-header-text">Dental Treatments</h2>
-					<p className="our-services-header-paragraph-text" />
-				</div>
-				<div className="our-services-wrapper">
-					<Link href="/treatments/dental-implants">
-						<Card
-							className={clsx(classes.servicePaper, classes.servicePaperCard)}
-							elevation={paperElevation}
-						>
-							<CardActionArea className={classes.cardActionArea}>
-								<SvgIcon
-									className={clsx(classes.svgIcon, classes.svgIconTreatment)}
-									viewBox="0 0 84.8 84.8"
-								>
-									<DentalImplant />
-								</SvgIcon>
-								<CardContent className={classes.cardContent}>
-									<Typography
-										variant="h5"
-										component="h3"
-										className={clsx(classes.servicePaperTitle, classes.servicePaperCardTitle)}
-									>
-										Dental Implants
-									</Typography>
-								</CardContent>
-							</CardActionArea>
-						</Card>
-					</Link>
-					<Link href="/treatments/dental-crowns">
-						<Card
-							className={clsx(classes.servicePaper, classes.servicePaperCard)}
-							elevation={paperElevation}
-						>
-							<CardActionArea className={classes.cardActionArea}>
-								<SvgIcon
-									className={clsx(classes.svgIcon, classes.svgIconTreatment)}
-									viewBox="0 0 84.8 84.8"
-								>
-									<DentalCrown />
-								</SvgIcon>
-								<CardContent className={classes.cardContent}>
-									<Typography
-										variant="h5"
-										component="h3"
-										className={clsx(classes.servicePaperTitle, classes.servicePaperCardTitle)}
-									>
-										Dental Crowns
-									</Typography>
-								</CardContent>
-							</CardActionArea>
-						</Card>
-					</Link>
-					<Link href="/treatments/dental-veneers">
-						<Card
-							className={clsx(classes.servicePaper, classes.servicePaperCard)}
-							elevation={paperElevation}
-						>
-							<CardActionArea className={classes.cardActionArea}>
-								<SvgIcon
-									className={clsx(classes.svgIcon, classes.svgIconTreatment)}
-									viewBox="0 0 84.8 84.8"
-								>
-									<DentalVeneer />
-								</SvgIcon>
-								<CardContent className={classes.cardContent}>
-									<Typography
-										variant="h5"
-										component="h3"
-										className={clsx(classes.servicePaperTitle, classes.servicePaperCardTitle)}
-									>
-										Dental Veneers
-									</Typography>
-								</CardContent>
-							</CardActionArea>
-						</Card>
-					</Link>
-					<Link href="/treatments/cosmetic-dentistry">
-						<Card
-							className={clsx(classes.servicePaper, classes.servicePaperCard)}
-							elevation={paperElevation}
-						>
-							<CardActionArea className={classes.cardActionArea}>
-								<SvgIcon
-									className={clsx(classes.svgIcon, classes.svgIconTreatment)}
-									viewBox="0 0 84.8 84.8"
-								>
-									<CosmeticDentistry />
-								</SvgIcon>
-								<CardContent className={classes.cardContent}>
-									<Typography
-										variant="h5"
-										component="h3"
-										className={clsx(classes.servicePaperTitle, classes.servicePaperCardTitle)}
-									>
-										Cosmetic Dentistry
-									</Typography>
-								</CardContent>
-							</CardActionArea>
-						</Card>
-					</Link>
-					<Link href="/treatments/invisalign">
-						<Card
-							className={clsx(classes.servicePaper, classes.servicePaperCard)}
-							elevation={paperElevation}
-						>
-							<CardActionArea className={classes.cardActionArea}>
-								<SvgIcon
-									className={clsx(classes.svgIcon, classes.svgIconTreatment)}
-									viewBox="0 0 84.8 84.8"
-								>
-									<Invisalign />
-								</SvgIcon>
-								<CardContent className={classes.cardContent}>
-									<Typography
-										variant="h5"
-										component="h3"
-										className={clsx(classes.servicePaperTitle, classes.servicePaperCardTitle)}
-									>
-										Invisalign
-									</Typography>
-								</CardContent>
-							</CardActionArea>
-						</Card>
-					</Link>
-					<Link href="/treatments/cosmetic-dentistry#hollywood-smile">
-						<Card
-							className={clsx(classes.servicePaper, classes.servicePaperCard)}
-							elevation={paperElevation}
-						>
-							<CardActionArea className={classes.cardActionArea}>
-								<SvgIcon
-									className={clsx(classes.svgIcon, classes.svgIconTreatment)}
-									viewBox="0 0 84.8 84.8"
-								>
-									<SmileMakeover />
-								</SvgIcon>
-								<CardContent className={classes.cardContent}>
-									<Typography
-										variant="h5"
-										component="h3"
-										className={clsx(classes.servicePaperTitle, classes.servicePaperCardTitle)}
-									>
-										Hollywood Smile
-									</Typography>
-								</CardContent>
-							</CardActionArea>
-						</Card>
-					</Link>
 
-					<Link href="/treatments/pediatric-dentistry">
-						<Card
-							className={clsx(classes.servicePaper, classes.servicePaperCard)}
-							elevation={paperElevation}
-						>
-							<CardActionArea className={classes.cardActionArea}>
-								<SvgIcon
-									className={clsx(classes.svgIcon, classes.svgIconTreatment)}
-									viewBox="0 0 84.8 84.8"
-								>
-									<PediatricDentistry />
-								</SvgIcon>
-								<CardContent className={classes.cardContent}>
-									<Typography
-										variant="h5"
-										component="h3"
-										className={clsx(classes.servicePaperTitle, classes.servicePaperCardTitle)}
-									>
-										Pediatric Dentistry
-									</Typography>
-								</CardContent>
-							</CardActionArea>
-						</Card>
-					</Link>
-
-					<Link href="/treatments/teeth-whitening">
-						<Card
-							className={clsx(classes.servicePaper, classes.servicePaperCard)}
-							elevation={paperElevation}
-						>
-							<CardActionArea className={classes.cardActionArea}>
-								<SvgIcon
-									className={clsx(classes.svgIcon, classes.svgIconTreatment)}
-									viewBox="0 0 84.8 84.8"
-								>
-									<TeethWhitening />
-								</SvgIcon>
-								<CardContent className={classes.cardContent}>
-									<Typography
-										variant="h5"
-										component="h3"
-										className={clsx(classes.servicePaperTitle, classes.servicePaperCardTitle)}
-									>
-										Teeth Whitening
-									</Typography>
-								</CardContent>
-							</CardActionArea>
-						</Card>
-					</Link>
-				</div>
-				<div className="dental-treatments-buttons-div">
-					<Button
-						variant="contained"
-						color="primary"
-						className={clsx(classes.regularButton, classes.treatmentsButton)}
-						onClick={handleChat}
-					>
-						Chat&nbsp;Now
-					</Button>
-				</div>
-			</section>
 			<section className="our-doctors-section">
 				<div className="our-services-header">
 					<h2 className="our-services-header-text">Our Doctors</h2>
@@ -1386,6 +1085,65 @@ const Index = (props) => {
 					}
 				}
 
+				.our-prices-section {
+					display: flex;
+					justify-content: center;
+					flex-wrap: wrap;
+					margin-top: -5px;
+					padding-bottom: 4rem;
+				}
+
+				.our-prices-header {
+					display: flex;
+					justify-content: center;
+					flex-direction: column;
+					align-items: center;
+					width: 100%;
+					text-align: center;
+				}
+				.our-prices-header-text {
+					font-family: ${sTheme.typography.serif};
+					color: ${sTheme.palette.primary.main};
+					font-size: 4rem;
+				}
+
+				@media (max-width: ${sizes.sizes.lg}) {
+					.our-prices-header-text {
+						font-size: 3.5rem;
+					}
+				}
+
+				@media (max-width: ${sizes.sizes.md}) {
+					.our-prices-header-text {
+						font-size: 3rem;
+					}
+				}
+				.our-prices-header-paragraph-text {
+					color: ${sTheme.palette.secondary.dark};
+					font-size: 2rem;
+					width: 50%;
+				}
+
+				@media (max-width: ${sizes.sizes.xl}) {
+					.our-prices-header-paragraph-text {
+						width: 60%;
+					}
+				}
+
+				@media (max-width: ${sizes.sizes.lg}) {
+					.our-prices-header-paragraph-text {
+						width: 70%;
+						font-size: 1.8rem;
+					}
+				}
+
+				@media (max-width: ${sizes.sizes.md}) {
+					.our-prices-header-paragraph-text {
+						width: 80%;
+						font-size: 1.6rem;
+					}
+				}
+
 				.hero-image-perfect-smile-text {
 					color: ${sTheme.palette.third.dark};
 				}
@@ -1478,6 +1236,32 @@ const Index = (props) => {
 					}
 				}
 
+				.cost-calculator-wrapper {
+					width: 70%;
+				}
+
+				@media (max-width: ${sizes.sizes.xl}) {
+					.cost-calculator-wrapper {
+						width: 80%;
+					}
+				}
+
+				@media (max-width: ${sizes.sizes.lg}) {
+					.cost-calculator-wrapper {
+						width: 90%;
+					}
+				}
+
+				@media (max-width: ${sizes.sizes.md}) {
+					.cost-calculator-wrapper {
+						width: 95%;
+					}
+				}
+
+				.form-wrapper {
+					width: 97%;
+				}
+
 				.isc-intro-section {
 					display: flex;
 					justify-content: center;
@@ -1499,19 +1283,12 @@ const Index = (props) => {
 						flex-wrap: wrap;
 					}
 				}
-
-				:global(.webp) .clinic-image-collage-div {
-					background-image: url(${require("../public/home-page/home-page-isc-intro-img.webp")});
-				}
-
-				:global(.no-webp) .clinic-image-collage-div {
-					background-image: url(${require("../public/home-page/home-page-isc-intro-img.jpg")});
-				}
 				.clinic-image-collage-div {
 					width: 50%;
 					height: 50rem;
+					background-image: url("/atakoy-towers-image.jpg");
 					background-repeat: no-repeat;
-					background-position: left 50% top 0%;
+					background-position: center;
 					background-size: cover;
 					border-top-left-radius: 20px;
 					border-bottom-left-radius: 20px;
@@ -1611,7 +1388,7 @@ const Index = (props) => {
 
 				.dental-treatments-buttons-div {
 					display: flex;
-					justify-content: flex-start;
+					justify-content: center;
 					width: 78%;
 					align-items: baseline;
 					margin: 0 auto;
@@ -1991,7 +1768,7 @@ const Index = (props) => {
 					}
 				}
 			`}</style>
-		</Layout>
+		</LayoutAd>
 	);
 };
 

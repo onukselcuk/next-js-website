@@ -11,6 +11,7 @@ import clsx from "clsx";
 import Form from "../../components/Form";
 import DentalImplantsInIstanbul from "../../components/DentalImplantsInIstanbul";
 import WhyChooseIsc from "../../components/WhyChooseIsc";
+import Layout from "../../components/Layout";
 import HowAreWeAffordable from "../../components/HowAreWeAffordable";
 
 const useStyles = makeStyles((theme) => ({
@@ -79,7 +80,7 @@ const useStyles = makeStyles((theme) => ({
 	}
 }));
 
-const treatmentTemplate = () => {
+const treatmentTemplate = (props) => {
 	const classes = useStyles();
 	const [ currentCurrency, setCurrentCurrency ] = useState("euro");
 	const [ currentSign, setCurrentSign ] = useState("€");
@@ -92,8 +93,9 @@ const treatmentTemplate = () => {
 			Tawk_API.maximize();
 		}
 	};
+	const { open, handleCallbackClose, handleCallbackOpen } = props;
 	return (
-		<React.Fragment>
+		<Layout openCallback={open} handleCallbackOpen={handleCallbackOpen} handleCallbackClose={handleCallbackClose}>
 			<NextSeo
 				title="Pediatric Dentistry in Istanbul, Turkey - General Anesthesia and Sedation in Children - Dental Cost
 					Calculator | Istanbul Smile Center"
@@ -746,7 +748,7 @@ const treatmentTemplate = () => {
 					}
 				}
 			`}</style>
-		</React.Fragment>
+		</Layout>
 	);
 };
 

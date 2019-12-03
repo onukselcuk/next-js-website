@@ -4,6 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import sTheme from "../src/styledTheme";
 import Form from "../components/Form";
 import sizes from "../src/sizes";
+import Layout from "../components/Layout";
 
 const useStyles = makeStyles((theme) => ({
 	privilegeActionButton: {
@@ -45,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
 	}
 }));
 
-const Privileges = () => {
+const Privileges = (props) => {
 	const classes = useStyles();
 
 	const handleChat = () => {
@@ -54,8 +55,10 @@ const Privileges = () => {
 		}
 	};
 
+	const { open, handleCallbackClose, handleCallbackOpen } = props;
+
 	return (
-		<React.Fragment>
+		<Layout openCallback={open} handleCallbackOpen={handleCallbackOpen} handleCallbackClose={handleCallbackClose}>
 			<NextSeo
 				title="Patient Privileges & Dental Tourism Process | Istanbul Smile Center"
 				description="Our patients have privileges. We offer unique and free services to our international patients to make their dental treatments super easy and enjoying as no other clinic can."
@@ -630,7 +633,7 @@ const Privileges = () => {
 					}
 				`}</style>
 			</section>
-		</React.Fragment>
+		</Layout>
 	);
 };
 

@@ -12,6 +12,7 @@ import Form from "../../components/Form";
 import DentalImplantsInIstanbul from "../../components/DentalImplantsInIstanbul";
 import WhyChooseIsc from "../../components/WhyChooseIsc";
 import HowAreWeAffordable from "../../components/HowAreWeAffordable";
+import Layout from "../../components/Layout";
 
 const useStyles = makeStyles((theme) => ({
 	fontAwesomeIcon: {
@@ -79,7 +80,7 @@ const useStyles = makeStyles((theme) => ({
 	}
 }));
 
-const treatmentTemplate = () => {
+const treatmentTemplate = (props) => {
 	const classes = useStyles();
 	const [ currentCurrency, setCurrentCurrency ] = useState("euro");
 	const [ currentSign, setCurrentSign ] = useState("€");
@@ -92,8 +93,10 @@ const treatmentTemplate = () => {
 			Tawk_API.maximize();
 		}
 	};
+
+	const { open, handleCallbackClose, handleCallbackOpen } = props;
 	return (
-		<React.Fragment>
+		<Layout openCallback={open} handleCallbackOpen={handleCallbackOpen} handleCallbackClose={handleCallbackClose}>
 			<NextSeo
 				title="Cosmetic Dentistry - Smile Makeover in Istanbul, Turkey - Hollywood Smile - Dental Cost Calculator |
 					Istanbul Smile Center"
@@ -645,7 +648,7 @@ const treatmentTemplate = () => {
 					}
 				}
 			`}</style>
-		</React.Fragment>
+		</Layout>
 	);
 };
 

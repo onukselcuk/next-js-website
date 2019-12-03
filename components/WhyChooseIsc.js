@@ -206,6 +206,14 @@ const WhyChooseIsc = ({ treatmentName }) => {
 				.treatment-paragraph-img-div-div {
 					width: 65%;
 				}
+
+				:global(.webp) .treatment-paragraph-img-div {
+					background-image: url(${require("../public/treatments/isc-entrance-img-1200.webp")});
+				}
+
+				:global(.no-webp) .treatment-paragraph-img-div {
+					background-image: url(${require("../public/treatments/isc-entrance-img-1200.jpg")});
+				}
 				.treatment-paragraph-img-div {
 					height: 300px;
 					border-top-left-radius: 20px;
@@ -214,7 +222,6 @@ const WhyChooseIsc = ({ treatmentName }) => {
 					background-size: cover;
 					background-position: left 50% bottom 80%;
 					background-color: ${sTheme.palette.secondary.main};
-					background-image: url(${require("../public/about-page/isc-entrance-img.jpg")});
 				}
 
 				.treatment-general-text-div {

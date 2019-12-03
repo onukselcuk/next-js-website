@@ -67,23 +67,17 @@ class MyApp extends App {
 					}}
 				/>
 				<ThemeProvider theme={theme}>
-					<Layout
+					<Component
+						{...pageProps}
 						openCallback={this.state.open}
 						handleCallbackOpen={this.handleCallbackOpen}
 						handleCallbackClose={this.handleCallbackClose}
-					>
-						<Component
-							{...pageProps}
-							openCallback={this.state.open}
-							handleCallbackOpen={this.handleCallbackOpen}
-							handleCallbackClose={this.handleCallbackClose}
-						/>
-						<Callback
-							openCallback={this.state.open}
-							handleCallbackOpen={this.handleCallbackOpen}
-							handleCallbackClose={this.handleCallbackClose}
-						/>
-					</Layout>
+					/>
+					<Callback
+						openCallback={this.state.open}
+						handleCallbackOpen={this.handleCallbackOpen}
+						handleCallbackClose={this.handleCallbackClose}
+					/>
 				</ThemeProvider>
 			</React.Fragment>
 		);

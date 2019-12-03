@@ -6,6 +6,7 @@ import sizes from "../src/sizes";
 import { faGlobe, faComments, faFileSignature, faAt, faHome, faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import Layout from "../components/Layout";
 import clsx from "clsx";
 
 const useStyles = makeStyles((theme) => ({
@@ -41,8 +42,10 @@ const thankYou = (props) => {
 		}
 	};
 
+	const { open, handleCallbackClose, handleCallbackOpen } = props;
+
 	return (
-		<React.Fragment>
+		<Layout openCallback={open} handleCallbackOpen={handleCallbackOpen} handleCallbackClose={handleCallbackClose}>
 			<NextSeo title="Thank You | Istanbul Smile Center | Let's Make Your Smile Perfect" />
 			<section className="atakoy-towers-img-section">
 				<div className="atakoy-towers-img-div" />
@@ -340,7 +343,7 @@ const thankYou = (props) => {
 					}
 				}
 			`}</style>
-		</React.Fragment>
+		</Layout>
 	);
 };
 

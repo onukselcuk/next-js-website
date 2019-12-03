@@ -2,10 +2,12 @@ import sTheme from "../src/styledTheme";
 import sizes from "../src/sizes";
 import Form from "../components/Form";
 import { NextSeo } from "next-seo";
+import Layout from "../components/Layout";
 
-const About = () => {
+const About = (props) => {
+	const { open, handleCallbackClose, handleCallbackOpen } = props;
 	return (
-		<React.Fragment>
+		<Layout openCallback={open} handleCallbackOpen={handleCallbackOpen} handleCallbackClose={handleCallbackClose}>
 			<NextSeo
 				title="Our Modern Clinic - Top Quality Doctors and Staff | Istanbul Smile Center"
 				description="Learn more about our modern clinic, awesome and experienced doctors and staff. "
@@ -26,20 +28,34 @@ const About = () => {
 						</p>
 					</div>
 					<div className="clinic-image-wrapper">
-						<img className="clinic-image" src={require("../public/clinic-image.jpg")} alt="" />
+						<picture className="clinic-image-wrapper">
+							<source
+								srcSet={require("../public/about-page/about-us-everyone-img.webp")}
+								type="image/webp"
+							/>
+							<source
+								srcSet={require("../public/about-page/about-us-everyone-img.jpg")}
+								type="image/jpeg"
+							/>
+							<img
+								className="clinic-image"
+								src={require("../public/about-page/about-us-everyone-img.jpg")}
+								alt="Patient Image 3"
+							/>
+						</picture>
 					</div>
 				</section>
-				<section id="dr-yasin-akgul" className="your-privileges-section">
+				<section className="your-privileges-section">
 					<section className="your-privileges-header-section">
 						<div className="your-privileges-header-wrapper">
 							<h2 className="your-privileges-header-text">Our Doctors</h2>
-							<p className="your-privileges-header-paragraph-text">
+							{/* <p className="your-privileges-header-paragraph-text">
 								At Istanbul Smile Center, we offer unique and free services to our international
 								patients to make their dental treatments super easy and enjoying as no other clinic can.
-							</p>
+							</p> */}
 						</div>
 					</section>
-					<section className="privilege-section">
+					<section id="dr-yasin-akgul" className="privilege-section">
 						<div className="privilege-image-div privilege-image-1" />
 						<div className="privilege-explanation-div">
 							<div className="privilege-name-wrapper">
@@ -115,13 +131,19 @@ const About = () => {
 					.clinic-entrance-img-section {
 						width: 100%;
 					}
-					.clinic-entrance-img-div {
+					:global(.webp) .clinic-entrance-img-div {
+						background-image: url(${require("../public/about-page/isc-entrance-img.webp")});
+					}
+
+					:global(.no-webp) .clinic-entrance-img-div {
 						background-image: url(${require("../public/about-page/isc-entrance-img.jpg")});
+					}
+					.clinic-entrance-img-div {
 						width: 100%;
 						height: 55vh;
 						background-repeat: no-repeat;
 						background-size: cover;
-						background-position: left 45% bottom 60%;
+						background-position: left 49% bottom 60%;
 						clip-path: ellipse(100% 100% at 50% 0%);
 					}
 
@@ -131,21 +153,21 @@ const About = () => {
 						}
 					}
 					.about-us-section {
-						width: 80%;
-						margin: 6rem auto 0 auto;
+						width: 95%;
+						margin: 4rem auto 0 auto;
 						display: flex;
 						justify-content: center;
 						align-items: center;
 					}
 					.clinic-image-wrapper {
-						width: 55%;
+						width: 65%;
 					}
 					.clinic-image {
 						width: 100%;
 						border-radius: 30px;
 					}
 					.about-us-header {
-						width: 45%;
+						width: 35%;
 						padding: 3rem;
 						text-align: center;
 					}
@@ -157,6 +179,9 @@ const About = () => {
 					.about-us-header-paragraph-text {
 						color: ${sTheme.palette.secondary.dark};
 						font-size: 2rem;
+					}
+					.your-privileges-section {
+						margin-top: 3rem;
 					}
 
 					@media (max-width: ${sizes.sizes.mdsm}) {
@@ -186,14 +211,32 @@ const About = () => {
 					}
 
 					@media (max-width: ${sizes.sizes.lg}) {
+						.about-us-header-text {
+							font-size: 3.5rem;
+						}
+						.about-us-header-paragraph-text {
+							font-size: 1.8rem;
+						}
 						.your-privileges-header-text {
 							font-size: 3.5rem;
 						}
 					}
 
 					@media (max-width: ${sizes.sizes.md}) {
+						.about-us-header-text {
+							font-size: 3.2rem;
+						}
+						.about-us-header-paragraph-text {
+							font-size: 1.6rem;
+						}
 						.your-privileges-header-text {
 							font-size: 3rem;
+						}
+					}
+
+					@media (max-width: ${sizes.sizes.xs}) {
+						.about-us-header {
+							padding: 2rem;
 						}
 					}
 					.your-privileges-header-paragraph-text {
@@ -307,6 +350,9 @@ const About = () => {
 					}
 
 					@media (max-width: ${sizes.sizes.md}) {
+						.about-us-section {
+							width: 100%;
+						}
 						.privilege-section {
 							width: 100%;
 						}
@@ -319,6 +365,24 @@ const About = () => {
 					}
 
 					@media (max-width: ${sizes.sizes.mdsm}) {
+						.about-us-whole-section {
+							background-color: ${sTheme.palette.secondary.main};
+						}
+						.about-us-section {
+							flex-direction: column;
+							margin-top: .5rem;
+							background-color: ${sTheme.palette.secondary.main};
+						}
+						.clinic-image-wrapper {
+							width: 100%;
+						}
+						.clinic-image {
+							border-radius: 0;
+						}
+
+						.about-us-header {
+							width: 100%;
+						}
 						.your-privileges-header-section {
 							background-color: ${sTheme.palette.secondary.main};
 						}
@@ -398,7 +462,7 @@ const About = () => {
 					}
 				`}</style>
 			</section>
-		</React.Fragment>
+		</Layout>
 	);
 };
 

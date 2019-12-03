@@ -20,6 +20,7 @@ import Form from "../../components/Form";
 import DentalImplantsInIstanbul from "../../components/DentalImplantsInIstanbul";
 import WhyChooseIsc from "../../components/WhyChooseIsc";
 import HowAreWeAffordable from "../../components/HowAreWeAffordable";
+import Layout from "../../components/Layout";
 
 const useStyles = makeStyles((theme) => ({
 	fontAwesomeIcon: {
@@ -86,7 +87,7 @@ const useStyles = makeStyles((theme) => ({
 	}
 }));
 
-const treatmentTemplate = () => {
+const treatmentTemplate = (props) => {
 	const classes = useStyles();
 	const [ currentCurrency, setCurrentCurrency ] = useState("euro");
 	const [ currentSign, setCurrentSign ] = useState("€");
@@ -99,8 +100,9 @@ const treatmentTemplate = () => {
 			Tawk_API.maximize();
 		}
 	};
+	const { open, handleCallbackClose, handleCallbackOpen } = props;
 	return (
-		<React.Fragment>
+		<Layout openCallback={open} handleCallbackOpen={handleCallbackOpen} handleCallbackClose={handleCallbackClose}>
 			<NextSeo
 				title="Dental Implants in Istanbul, Turkey - Dental Cost Calculator | Istanbul Smile Center"
 				description="Calculate your dental implant cost with our dental cost calculator. We provide high quality and affordable dental implant treatments. Learn more about our easy dental implant treatment process."
@@ -659,7 +661,7 @@ const treatmentTemplate = () => {
 					}
 				}
 			`}</style>
-		</React.Fragment>
+		</Layout>
 	);
 };
 

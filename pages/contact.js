@@ -13,6 +13,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import Layout from "../components/Layout";
 
 const useStyles = makeStyles((theme) => ({
 	fontAwesomeIcon: {
@@ -34,16 +35,17 @@ const useStyles = makeStyles((theme) => ({
 	}
 }));
 
-const Contact = ({ handleCallbackOpen }) => {
+const Contact = (props) => {
 	const classes = useStyles();
 	const handleChat = () => {
 		if (typeof Tawk_API !== "undefined") {
 			Tawk_API.maximize();
 		}
 	};
+	const { open, handleCallbackClose, handleCallbackOpen } = props;
 
 	return (
-		<React.Fragment>
+		<Layout openCallback={open} handleCallbackOpen={handleCallbackOpen} handleCallbackClose={handleCallbackClose}>
 			<NextSeo
 				title="Contact Us - 7/24 Instant Communication | Istanbul Smile Center"
 				description="We have the shortest response time among all dental clinics. Day or night, you can contact us through many channels, live chat, WhatsApp, callback, form or email, whenever you need us we are here."
@@ -189,19 +191,21 @@ const Contact = ({ handleCallbackOpen }) => {
 				.atakoy-towers-img-section {
 					width: 100%;
 				}
+
 				:global(.webp) .atakoy-towers-img-div {
 					background-image: url(${require("../public/contact-page/atakoy-towers-night-img.webp")});
 				}
+
 				:global(.no-webp) .atakoy-towers-img-div {
 					background-image: url(${require("../public/contact-page/atakoy-towers-night-img.jpg")});
 				}
 
 				.atakoy-towers-img-div {
 					width: 100%;
-					height: 66vh;
+					height: 80vh;
 					background-repeat: no-repeat;
 					background-size: cover;
-					background-position: left 21% bottom 80%;
+					background-position: left 6% bottom 80%;
 					clip-path: ellipse(100% 100% at 50% 0%);
 				}
 
@@ -271,14 +275,15 @@ const Contact = ({ handleCallbackOpen }) => {
 				}
 
 				:global(.webp) .contact-us-left-div {
-					background-image: url(${require("../public/contact-page/atakoy-towers-entrance-img.webp")});
+					background-image: url(${require("../public/contact-page/atakoy-towers-image.webp")});
 				}
+
 				:global(.no-webp) .contact-us-left-div {
-					background-image: url(${require("../public/contact-page/atakoy-towers-entrance-img.jpg")});
+					background-image: url(${require("../public/contact-page/atakoy-towers-image.jpg")});
 				}
 
 				.contact-us-left-div {
-					width: 55%;
+					width: 50%;
 					border-radius: 20px;
 					background-size: cover;
 					background-repeat: no-repeat;
@@ -288,7 +293,7 @@ const Contact = ({ handleCallbackOpen }) => {
 					display: flex;
 					flex-direction: column;
 					justify-content: center;
-					width: 45%;
+					width: 50%;
 					padding: 2rem;
 					background-color: ${sTheme.palette.secondary.main};
 					border-radius: 20px;
@@ -410,7 +415,7 @@ const Contact = ({ handleCallbackOpen }) => {
 					}
 				}
 			`}</style>
-		</React.Fragment>
+		</Layout>
 	);
 };
 

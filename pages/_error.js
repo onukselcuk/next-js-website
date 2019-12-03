@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import clsx from "clsx";
 import { NextSeo } from "next-seo";
-
+import Layout from "../components/Layout";
 const useStyles = makeStyles((theme) => ({
 	fontAwesomeIcon: {
 		fontSize: "3rem",
@@ -33,16 +33,17 @@ const useStyles = makeStyles((theme) => ({
 	}
 }));
 
-const thankYou = () => {
+const thankYou = (props) => {
 	const classes = useStyles();
 	const handleChat = () => {
 		if (typeof Tawk_API !== "undefined") {
 			Tawk_API.maximize();
 		}
 	};
+	const { open, handleCallbackClose, handleCallbackOpen } = props;
 
 	return (
-		<React.Fragment>
+		<Layout openCallback={open} handleCallbackOpen={handleCallbackOpen} handleCallbackClose={handleCallbackClose}>
 			<NextSeo title="Oops.. 404 Error | Istanbul Smile Center | Let's Make Your Smile Perfect" />
 			<section className="atakoy-towers-img-section">
 				<div className="atakoy-towers-img-div" />
@@ -311,7 +312,7 @@ const thankYou = () => {
 					}
 				}
 			`}</style>
-		</React.Fragment>
+		</Layout>
 	);
 };
 

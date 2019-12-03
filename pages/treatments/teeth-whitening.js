@@ -12,6 +12,7 @@ import Form from "../../components/Form";
 import DentalImplantsInIstanbul from "../../components/DentalImplantsInIstanbul";
 import WhyChooseIsc from "../../components/WhyChooseIsc";
 import HowAreWeAffordable from "../../components/HowAreWeAffordable";
+import Layout from "../../components/Layout";
 
 const useStyles = makeStyles((theme) => ({
 	fontAwesomeIcon: {
@@ -79,7 +80,7 @@ const useStyles = makeStyles((theme) => ({
 	}
 }));
 
-const treatmentTemplate = () => {
+const treatmentTemplate = (props) => {
 	const classes = useStyles();
 	const [ currentCurrency, setCurrentCurrency ] = useState("euro");
 	const [ currentSign, setCurrentSign ] = useState("€");
@@ -92,9 +93,13 @@ const treatmentTemplate = () => {
 			Tawk_API.maximize();
 		}
 	};
+	const { open, handleCallbackClose, handleCallbackOpen } = props;
 	return (
-		<React.Fragment>
-			<NextSeo title="Teeth Whitening in Istanbul, Turkey - Dental Cost Calculator | Istanbul Smile Center" description="Calculate teeth whitening cost with our dental cost calculator. We provide high quality and affordable teeth whitening treatments." />
+		<Layout openCallback={open} handleCallbackOpen={handleCallbackOpen} handleCallbackClose={handleCallbackClose}>
+			<NextSeo
+				title="Teeth Whitening in Istanbul, Turkey - Dental Cost Calculator | Istanbul Smile Center"
+				description="Calculate teeth whitening cost with our dental cost calculator. We provide high quality and affordable teeth whitening treatments."
+			/>
 			<section className="treatment-img-section">
 				<div className="treatment-img-div" />
 			</section>
@@ -538,7 +543,7 @@ const treatmentTemplate = () => {
 					}
 				}
 			`}</style>
-		</React.Fragment>
+		</Layout>
 	);
 };
 
