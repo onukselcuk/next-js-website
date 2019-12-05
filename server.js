@@ -16,6 +16,17 @@ const axios = require("axios");
 const compression = require("compression");
 const callbackMailer = require("./src/callbackMailer");
 
+const sitemap = require("nextjs-sitemap-generator");
+if (dev === false) {
+	sitemap({
+		baseUrl: "https://www.istanbulsmilecenter.co",
+		pagesDirectory: __dirname + "/pages",
+		targetDirectory: __dirname + "/.next/static",
+		nextConfigPath: __dirname + "/next.config.js",
+		ignoredExtensions: [ "png", "jpg" ]
+	});
+}
+
 app.prepare().then(() => {
 	const server = express();
 	server.use(express.static("public"));
