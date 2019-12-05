@@ -96,14 +96,7 @@ const WhyChooseIsc = ({ treatmentName }) => {
 							className={clsx(classes.fontAwesomeIcon, classes.fontAwesomeIconCheck)}
 							icon={faCheckCircle}
 						/>
-						14+ Years of Experience and Top Quality Doctors
-					</p>
-					<p className="treatment-paragraph">
-						<FontAwesomeIcon
-							className={clsx(classes.fontAwesomeIcon, classes.fontAwesomeIconCheck)}
-							icon={faCheckCircle}
-						/>
-						Top Quality Doctors
+						Top Quality Doctors with 14+ Years of Experience
 					</p>
 					{treatmentName === "implant" ? (
 						<p className="treatment-paragraph">

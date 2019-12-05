@@ -212,8 +212,9 @@ const treatmentTemplate = (props) => {
 							</h2>
 							<p className="treatment-paragraph">
 								E-Max crowns are made from lithium disilicate ceramic. E-max crowns have incredible
-								translucency and look like natural teeth. However, zirconium crowns are slightly more
-								durable than E-Max crowns.
+								translucency and look like natural teeth. E-Max crowns are constructed using CAD/CAM
+								system same as zirconium crowns. However, zirconium crowns are slightly more durable
+								than E-Max crowns.
 							</p>
 						</div>
 

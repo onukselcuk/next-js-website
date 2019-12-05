@@ -451,9 +451,6 @@ const Index = (props) => {
 							>
 								Chat&nbsp;Now
 							</Button>
-							<Link href="/about">
-								<a className="clinic-intro-link">Learn more about us</a>
-							</Link>
 						</div>
 					</div>
 				</div>
@@ -476,9 +473,9 @@ const Index = (props) => {
 							onMouseOver={handleMouseOver}
 							onMouseOut={handleMouseOut}
 						/>
-						<Link href="/about#dr-yasin-akgul">
-							<a className="doctor-link">Asst. Prof. Dr. Yasin Akgül</a>
-						</Link>
+
+						<p className="doctor-link">Asst. Prof. Dr. Yasin Akgül</p>
+
 						<p className="doctor-specialty">Orthodontic Specialist</p>
 					</div>
 					<div className="doctor-wrapper">
@@ -490,9 +487,9 @@ const Index = (props) => {
 							onMouseOver={handleMouseOver}
 							onMouseOut={handleMouseOut}
 						/>
-						<Link href="/about#dr-sevil-akgul">
-							<a className="doctor-link">Spec. Dr. Sevil Akgül</a>
-						</Link>
+
+						<p className="doctor-link">Spec. Dr. Sevil Akgül</p>
+
 						<p className="doctor-specialty">Pediatric Dentistry Specialist</p>
 					</div>
 					<div className="doctor-wrapper">
@@ -504,111 +501,14 @@ const Index = (props) => {
 							onMouseOver={handleMouseOver}
 							onMouseOut={handleMouseOut}
 						/>
-						<Link href="/about#dr-yavuz-eker">
-							<a className="doctor-link">Dr. Yavuz Eker</a>
-						</Link>
+
+						<p className="doctor-link">Dr. Yavuz Eker</p>
+
 						<p className="doctor-specialty">Aesthetic Dentistry Specialist</p>
 					</div>
 				</div>
 			</section>
-			<section className="why-choose-us-section">
-				<div className="our-services-header">
-					<h2 className="our-services-header-text">Why Choose Us?</h2>
-					{/* <h4 className="clinic-exclusive-text">
-						Dental Treatments in Istanbul Smile Center <br /> At Affordable Prices
-					</h4> */}
 
-					<div className="guarantees-div">
-						<p className="treatment-paragraph">In Istanbul Smile Center, we guarantee;</p>
-						<div className="choose-us-check-divs-wrapper">
-							<div className="choose-us-check-div">
-								<p className="treatment-paragraph">
-									<FontAwesomeIcon
-										className={clsx(classes.fontAwesomeIcon, classes.fontAwesomeIconCheck)}
-										icon={faCheckCircle}
-									/>
-									Experienced and Top Quality Doctors
-								</p>
-								<p className="treatment-paragraph">
-									<FontAwesomeIcon
-										className={clsx(classes.fontAwesomeIcon, classes.fontAwesomeIconCheck)}
-										icon={faCheckCircle}
-									/>
-									Only Top Quality Dental Materials{" "}
-								</p>
-								<p className="treatment-paragraph">
-									<FontAwesomeIcon
-										className={clsx(classes.fontAwesomeIcon, classes.fontAwesomeIconCheck)}
-										icon={faCheckCircle}
-									/>
-									Transparent Pricing & Pinpoint Accuracy Quote
-								</p>
-								<p className="treatment-paragraph">
-									<FontAwesomeIcon
-										className={clsx(classes.fontAwesomeIcon, classes.fontAwesomeIconCheck)}
-										icon={faCheckCircle}
-									/>
-									Affordable and The Most Competitive Prices
-								</p>
-							</div>
-							<div className="choose-us-check-div">
-								<p className="treatment-paragraph">
-									<FontAwesomeIcon
-										className={clsx(classes.fontAwesomeIcon, classes.fontAwesomeIconCheck)}
-										icon={faCheckCircle}
-									/>
-									Free Airport-Hotel-Clinic Transfers
-								</p>
-								<p className="treatment-paragraph">
-									<FontAwesomeIcon
-										className={clsx(classes.fontAwesomeIcon, classes.fontAwesomeIconCheck)}
-										icon={faCheckCircle}
-									/>
-									Hotel Discounts
-								</p>
-								<p className="treatment-paragraph">
-									<FontAwesomeIcon
-										className={clsx(classes.fontAwesomeIcon, classes.fontAwesomeIconCheck)}
-										icon={faCheckCircle}
-									/>
-									Multilingual Assistance
-								</p>
-								<p className="treatment-paragraph">
-									<FontAwesomeIcon
-										className={clsx(classes.fontAwesomeIcon, classes.fontAwesomeIconCheck)}
-										icon={faCheckCircle}
-									/>
-									Travel Tours Discounts
-								</p>
-							</div>
-						</div>
-					</div>
-					<p className="our-services-paragraph">
-						<b>No need to pour tons of money for your dental treatment</b> in your local dentist.{" "}
-						<b>
-							Istanbul Smile Center is the perfect place to get high quality and affordable dental
-							treatment.
-						</b>{" "}
-						Our clinic is an exclusive and one of the rare clinics that treat and{" "}
-						<b>tend to patients individually</b>. We do not accept groups of patients and treat them in
-						batches. Because we believe it lowers the quality of the treatment and the comfort of the
-						patient. We do not see the number of patients and their treatments as a numbers game.{" "}
-						<b>We do not compromise quality for the sake of quantity.</b> You will feel yourself unique in
-						Istanbul Smile Center. Because you are special to us as every other patient, we have. Besides,
-						who doesn't want to turn their dental treatment into a holiday in a beautiful and historical
-						place like Istanbul?{" "}
-						<b>
-							Enjoy historical sites, Bosphorus, multicultural society of Istanbul, and our delicious
-							Turkish food during your stay here.
-						</b>
-					</p>
-				</div>
-				<div className="istanbul-silhouette-wrapper-div">
-					<SvgIcon className={classes.istanbulSilhoutteSvg} viewBox="0 0 5802.9 1838.3">
-						<IstanbulSilhouette />
-					</SvgIcon>
-				</div>
-			</section>
 			<section className="why-choose-us-section perfect-smile-gallery">
 				<div className="our-services-header perfect-smile-header">
 					<h2 className="our-services-header-text">
@@ -844,12 +744,10 @@ const Index = (props) => {
 									elevation={reviewPaperElevation}
 								>
 									<div className="reviewer-image-wrapper">
-										<a target="_blank" rel="noopener noreferrer" href={cur.reviewUrl}>
-											<img className="reviewer-image" src={cur.reviewer.profilePhotoUrl} alt="" />
-											<SvgIcon className={classes.googleSvgIcon} viewBox="0 0 533.5 544.3">
-												<GoogleLogo />
-											</SvgIcon>
-										</a>
+										<img className="reviewer-image" src={cur.reviewer.profilePhotoUrl} alt="" />
+										<SvgIcon className={classes.googleSvgIcon} viewBox="0 0 533.5 544.3">
+											<GoogleLogo />
+										</SvgIcon>
 									</div>
 									<div className="reviewer-name-wrapper">
 										<h3 className="reviewer-name">{cur.reviewer.displayName}</h3>
@@ -883,14 +781,6 @@ const Index = (props) => {
 					>
 						Chat&nbsp;Now
 					</Button>
-					<a
-						target="_blank"
-						rel="noopener noreferrer"
-						href="https://www.google.com/maps/place/%C4%B0stanbul+Smile+Center+A%C4%9F%C4%B1z+ve+Di%C5%9F+Sa%C4%9Fl%C4%B1%C4%9F%C4%B1+Poliklini%C4%9Fi/@40.9914076,28.8309331,17z/data=!4m5!3m4!1s0x14caa3147e2cba65:0xb6eaeab3d94bfd80!8m2!3d40.9914441!4d28.8341947"
-						className="clinic-intro-link"
-					>
-						See all reviews
-					</a>
 				</div>
 			</section>
 			<style jsx global>{`
@@ -1282,12 +1172,18 @@ const Index = (props) => {
 						flex-wrap: wrap;
 					}
 				}
+				:global(.webp) .clinic-image-collage-div {
+					background-image: url(${require("../public/home-page/home-page-isc-intro-img.webp")});
+				}
+
+				:global(.no-webp) .clinic-image-collage-div {
+					background-image: url(${require("../public/home-page/home-page-isc-intro-img.jpg")});
+				}
 				.clinic-image-collage-div {
 					width: 50%;
 					height: 50rem;
-					background-image: url("/atakoy-towers-image.jpg");
 					background-repeat: no-repeat;
-					background-position: center;
+					background-position: left 50% top 0%;
 					background-size: cover;
 					border-top-left-radius: 20px;
 					border-bottom-left-radius: 20px;
@@ -1469,10 +1365,7 @@ const Index = (props) => {
 					font-weight: bold;
 					transition: all 250ms ease-in-out;
 				}
-				.doctor-link:hover {
-					cursor: pointer;
-					color: ${sTheme.palette.third.dark};
-				}
+
 				.doctor-specialty {
 					font-size: 2rem;
 					color: ${sTheme.palette.secondary.dark};

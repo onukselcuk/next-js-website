@@ -92,7 +92,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 	footerGetInTouchDiv: {
 		minWidth: "27rem",
-		maxWidth: "50rem"
+		maxWidth: "35rem"
 	},
 	addressLink: {
 		marginLeft: 0
@@ -165,135 +165,6 @@ export default ({ handleCallbackOpen }) => {
 					<div className={classes.logoDiv}>
 						<LogoFooter />
 					</div>
-					<div className={classes.footerNavigation}>
-						<h3 className={classes.footerHeader}>Navigation</h3>
-						<div className={classes.footerLinkDiv}>
-							<div className={classes.fontAwesomeIconWrapper}>
-								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faHome} />
-							</div>
-							<Link href="/">
-								<a className={classes.footerLink}>Home</a>
-							</Link>
-						</div>
-						<div className={classes.footerLinkDiv}>
-							<div className={classes.fontAwesomeIconWrapper}>
-								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faAddressCard} />
-							</div>
-							<Link href="/about">
-								<a className={classes.footerLink}>About Us</a>
-							</Link>
-						</div>
-						<div className={classes.footerLinkDiv}>
-							<div className={classes.fontAwesomeIconWrapper}>
-								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faClipboardList} />
-							</div>
-							<Link href="/privileges">
-								<a className={classes.footerLink}>Privileges & Itinerary</a>
-							</Link>
-						</div>
-						<div className={classes.footerLinkDiv}>
-							<div className={classes.fontAwesomeIconWrapper}>
-								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faTag} />
-							</div>
-							<Link href="/prices">
-								<a className={classes.footerLink}>Prices & Cost Calculator</a>
-							</Link>
-						</div>
-						<div className={classes.footerLinkDiv}>
-							<div className={classes.fontAwesomeIconWrapper}>
-								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faPhoneAlt} />
-							</div>
-							<Link href="/contact">
-								<a className={classes.footerLink}>Contact Us</a>
-							</Link>
-						</div>
-						<div className={classes.footerLinkDiv}>
-							<div className={classes.fontAwesomeIconWrapper}>
-								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faChrome} />
-							</div>
-							<a
-								target="_blank"
-								rel="noopener noreferrer"
-								href="https://istanbulsmilecenter.com"
-								className={classes.footerLink}
-							>
-								Our Turkish Website
-							</a>
-						</div>
-					</div>
-					<div className={clsx(classes.footerNavigation, classes.popularTreatmentsNavigation)}>
-						<h3 className={classes.footerHeader}>Popular Treatments</h3>
-						<div className={classes.treatmentsWrapperBox}>
-							<div className={classes.treatmentsLeftBox}>
-								<div className={clsx(classes.footerLinkDiv, classes.treatmentLinkDiv)}>
-									<div className={classes.fontAwesomeIconWrapper}>
-										<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faTooth} />
-									</div>
-									<Link href="/treatments/dental-implants">
-										<a className={classes.footerLink}>Dental Implants</a>
-									</Link>
-								</div>
-								<div className={clsx(classes.footerLinkDiv, classes.treatmentLinkDiv)}>
-									<div className={classes.fontAwesomeIconWrapper}>
-										<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faTooth} />
-									</div>
-									<Link href="/treatments/dental-crowns">
-										<a className={classes.footerLink}>Dental Crowns</a>
-									</Link>
-								</div>
-								<div className={clsx(classes.footerLinkDiv, classes.treatmentLinkDiv)}>
-									<div className={classes.fontAwesomeIconWrapper}>
-										<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faTooth} />
-									</div>
-									<Link href="/treatments/dental-veneers">
-										<a className={classes.footerLink}>Dental Veneers</a>
-									</Link>
-								</div>
-								<div className={clsx(classes.footerLinkDiv, classes.treatmentLinkDiv)}>
-									<div className={classes.fontAwesomeIconWrapper}>
-										<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faTooth} />
-									</div>
-									<Link href="/treatments/invisalign">
-										<a className={classes.footerLink}>Invisalign</a>
-									</Link>
-								</div>
-							</div>
-							<div className={classes.treatmentsRightBox}>
-								<div className={clsx(classes.footerLinkDiv, classes.treatmentLinkDiv)}>
-									<div className={classes.fontAwesomeIconWrapper}>
-										<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faTooth} />
-									</div>
-									<Link href="/treatments/cosmetic-dentistry">
-										<a className={classes.footerLink}>Cosmetic Dentistry</a>
-									</Link>
-								</div>
-								<div className={clsx(classes.footerLinkDiv, classes.treatmentLinkDiv)}>
-									<div className={classes.fontAwesomeIconWrapper}>
-										<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faTooth} />
-									</div>
-									<Link href="/treatments/pediatric-dentistry">
-										<a className={classes.footerLink}>Pediatric Dentistry</a>
-									</Link>
-								</div>
-								<div className={clsx(classes.footerLinkDiv, classes.treatmentLinkDiv)}>
-									<div className={classes.fontAwesomeIconWrapper}>
-										<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faTooth} />
-									</div>
-									<Link href="/treatments/root-canal-treatment">
-										<a className={classes.footerLink}>Root Canal Treatment</a>
-									</Link>
-								</div>
-								<div className={clsx(classes.footerLinkDiv, classes.treatmentLinkDiv)}>
-									<div className={classes.fontAwesomeIconWrapper}>
-										<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faTooth} />
-									</div>
-									<Link href="/treatments/teeth-whitening">
-										<a className={classes.footerLink}>Teeth Whitening</a>
-									</Link>
-								</div>
-							</div>
-						</div>
-					</div>
 
 					<div className={clsx(classes.footerNavigation, classes.footerGetInTouchDiv)}>
 						<h3 className={classes.footerHeader}>Get in Touch</h3>
@@ -312,12 +183,10 @@ export default ({ handleCallbackOpen }) => {
 							Ataköy 7-8-9-10. Kısım Mah. Çobançeşme E-5 Yanyol Cad. Ataköy Towers B Blok No:20 Kat:1
 							Daire:24, 34212 Bakırköy/Istanbul/Turkey
 						</a>
-						<div className={clsx(classes.footerAddressWrapper, classes.footerInternationalWrapper)}>
-							<div className={classes.fontAwesomeIconWrapper}>
-								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faGlobe} />
-							</div>
-							<p className={classes.footerParagraph}>International Patients Department</p>
-						</div>
+					</div>
+					<div className={clsx(classes.footerNavigation, classes.footerGetInTouchDiv)}>
+						<h3 className={classes.footerHeader}>International Patients Department</h3>
+
 						<a onClick={handleChat} className={clsx(classes.footerLink, classes.addressLink)}>
 							Chat with Us
 						</a>

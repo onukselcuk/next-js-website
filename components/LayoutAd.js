@@ -1,6 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 import NavbarAd from "./NavbarAd";
-import Footer from "./Footer";
+import FooterAd from "./FooterAd";
 
 const useStyles = makeStyles((theme) => ({
 	"@global": {
@@ -40,7 +40,7 @@ const LayoutAd = (props) => {
 		<div className={classes.root}>
 			<NavbarAd />
 			{props.children}
-			<Footer handleCallbackOpen={props.handleCallbackOpen} />
+			<FooterAd handleCallbackOpen={props.handleCallbackOpen} />
 		</div>
 	);
 };

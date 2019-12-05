@@ -58,7 +58,14 @@ const useStyles = makeStyles((theme) => ({
 			marginRight: 0
 		}
 	},
-
+	validFor: {
+		padding: "1rem 0",
+		fontSize: "1.5rem",
+		marginLeft: "1rem",
+		[sizes.down("mdsm")]: {
+			fontSize: "1.3rem"
+		}
+	},
 	priceTableWrapper: {
 		display: "flex",
 		justifyContent: "center",
@@ -137,19 +144,19 @@ export default function CustomizedTables ({ currentCurrency, currentSign, handle
 						</StyledTableRow>
 						<StyledTableRow key="Volumetric Tomography (3D Scan)">
 							<StyledTableCell component="th" scope="row">
-								Volumetric Tomography (3D Scan)
+								Volumetric Tomography (3D Scan) *
 							</StyledTableCell>
 							<StyledTableCell align="center">FREE</StyledTableCell>
 						</StyledTableRow>
 						<StyledTableRow key="Airport-Hotel Transfers">
 							<StyledTableCell component="th" scope="row">
-								Airport-Hotel Transfers
+								Airport-Hotel Transfers *
 							</StyledTableCell>
 							<StyledTableCell align="center">FREE</StyledTableCell>
 						</StyledTableRow>
 						<StyledTableRow key="Hotel-Clinic Transfers">
 							<StyledTableCell component="th" scope="row">
-								Hotel-Clinic Transfers
+								Hotel-Clinic Transfers *
 							</StyledTableCell>
 							<StyledTableCell align="center">FREE</StyledTableCell>
 						</StyledTableRow>
@@ -166,6 +173,7 @@ export default function CustomizedTables ({ currentCurrency, currentSign, handle
 							<StyledTableCell align="center">FREE</StyledTableCell>
 						</StyledTableRow>
 					</TableBody>
+					<p className={classes.validFor}>* Valid for treatments cost 1500 € and above.</p>
 				</Table>
 			</Paper>
 			<div className={classes.currencySelectorButtonsWrapper}>
