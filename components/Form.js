@@ -1,7 +1,5 @@
 import { useRouter } from "next/router";
 import Paper from "@material-ui/core/Paper";
-import TextField from "@material-ui/core/TextField";
-import MenuItem from "@material-ui/core/MenuItem";
 import { useState, useEffect, useRef } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import PhoneField from "./PhoneField";
@@ -18,94 +16,6 @@ import ReCAPTCHA from "react-google-recaptcha";
 import CircleLoader from "react-spinners/CircleLoader";
 import ErrorSnackBar from "./ErrorSnackBar";
 import sizes from "../src/sizes";
-const treatments = [
-	{
-		value: "Select A Treatment You Are Looking For",
-		label: "Select A Treatment You Are Looking For"
-	},
-
-	{
-		value: "Dental Implants",
-		label: "Dental Implants"
-	},
-	{
-		value: "Dental Crowns",
-		label: "Dental Crowns"
-	},
-	{
-		value: "Dental Veneers",
-		label: "Dental Veneers"
-	},
-
-	{
-		value: "Dentures",
-		label: "Dentures"
-	},
-	{
-		value: "Orthodontics/Invisalign",
-		label: "Orthodontics/Invisalign"
-	},
-	{
-		value: "Pediatric Dentistry",
-		label: "Pediatric Dentistry"
-	},
-	{
-		value: "Other",
-		label: "Other"
-	}
-];
-const ages = [
-	{
-		value: "Select Your Age Group",
-		label: "Select Your Age Group"
-	},
-	{
-		value: "under 21",
-		label: "under 21"
-	},
-	{
-		value: "21-30",
-		label: "21-30"
-	},
-	{
-		value: "31-40",
-		label: "31-40"
-	},
-	{
-		value: "41-50",
-		label: "41-50"
-	},
-	{
-		value: "51-60",
-		label: "51-60"
-	},
-	{
-		value: "61-70",
-		label: "61-70"
-	},
-	{
-		value: "over 70",
-		label: "over 70"
-	}
-];
-const titles = [
-	{
-		value: "Select Your Title",
-		label: "Select Your Title"
-	},
-	{
-		value: "Mr.",
-		label: "Mr."
-	},
-	{
-		value: "Mrs.",
-		label: "Mrs."
-	},
-	{
-		value: "Ms.",
-		label: "Ms."
-	}
-];
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -147,9 +57,6 @@ const useStyles = makeStyles((theme) => ({
 	menu: {
 		width: 200
 	},
-	titleField: {
-		width: "20%"
-	},
 	nameField: {
 		width: "30%"
 	},
@@ -164,12 +71,6 @@ const useStyles = makeStyles((theme) => ({
 		top: "6px",
 		marginRight: "8px",
 		flexGrow: 1
-	},
-	treatmentField: {
-		width: "30%"
-	},
-	ageField: {
-		width: "20%"
 	},
 	messageField: {
 		width: "99%"
@@ -342,11 +243,8 @@ const Form = () => {
 	const router = useRouter();
 
 	const [ formData, setFormData ] = useState({
-		title: "Select Your Title",
 		name: "",
 		email: "",
-		treatmentChoice: "Select A Treatment You Are Looking For",
-		ageGroup: "Select Your Age Group",
 		message: ""
 	});
 
@@ -544,28 +442,6 @@ const Form = () => {
 			<Paper className={classes.root}>
 				<form onSubmit={handleSubmit} className={classes.container} noValidate autoComplete="on">
 					<div className={classes.formInnerContainer}>
-						<TextField
-							id="outlined-select-title"
-							select
-							label="Title"
-							className={clsx(classes.textField, classes.titleField)}
-							value={formData.title}
-							onChange={handleChange}
-							SelectProps={{
-								MenuProps: {
-									className: classes.menu
-								}
-							}}
-							margin="normal"
-							variant="outlined"
-							name="title"
-						>
-							{titles.map((option) => (
-								<MenuItem key={option.value} value={option.value}>
-									{option.label}
-								</MenuItem>
-							))}
-						</TextField>
 						<FormControl
 							className={clsx(classes.textField, classes.nameField)}
 							variant="outlined"
@@ -612,50 +488,7 @@ const Form = () => {
 						<div className={classes.phoneInputWrapper}>
 							<PhoneField onChange={handleOnChange} value={phoneData.number} error={errors.phone} />
 						</div>
-						<TextField
-							id="outlined-select-treatments"
-							select
-							label="Treatment"
-							className={clsx(classes.textField, classes.treatmentField)}
-							value={formData.treatmentChoice}
-							onChange={handleChange}
-							SelectProps={{
-								MenuProps: {
-									className: classes.menu
-								}
-							}}
-							margin="normal"
-							variant="outlined"
-							name="treatmentChoice"
-						>
-							{treatments.map((option) => (
-								<MenuItem key={option.value} value={option.value}>
-									{option.label}
-								</MenuItem>
-							))}
-						</TextField>
-						<TextField
-							id="outlined-select-treatments"
-							select
-							label="Age"
-							className={clsx(classes.textField, classes.ageField)}
-							value={formData.ageGroup}
-							name="ageGroup"
-							onChange={handleChange}
-							SelectProps={{
-								MenuProps: {
-									className: classes.menu
-								}
-							}}
-							margin="normal"
-							variant="outlined"
-						>
-							{ages.map((option) => (
-								<MenuItem key={option.value} value={option.value}>
-									{option.label}
-								</MenuItem>
-							))}
-						</TextField>
+
 						<FormControl
 							className={clsx(classes.textField, classes.messageField)}
 							variant="outlined"

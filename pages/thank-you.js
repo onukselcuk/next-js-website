@@ -139,6 +139,12 @@ const thankYou = (props) => {
 							</a>
 						</p>
 						<p className="paragraph">
+							<FontAwesomeIcon className={classes.fontAwesomeIconSmall} icon={faPhoneAlt} />{" "}
+							<a className="contact-link" onClick={handleCallbackOpen}>
+								Request A Callback
+							</a>
+						</p>
+						<p className="paragraph">
 							<FontAwesomeIcon className={classes.fontAwesomeIconSmall} icon={faFileSignature} />{" "}
 							<a className="contact-link" href="#form">
 								Send Us A Form
@@ -252,7 +258,7 @@ const thankYou = (props) => {
 					display: flex;
 					flex-direction: column;
 					justify-content: center;
-					width: 40%;
+					width: 55%;
 					padding: 2rem;
 					background-color: ${sTheme.palette.secondary.main};
 					border-radius: 20px;

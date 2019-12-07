@@ -15,8 +15,8 @@ const mailerToUs = require("./src/mailerToUs");
 const axios = require("axios");
 const compression = require("compression");
 const callbackMailer = require("./src/callbackMailer");
-
 const sitemap = require("nextjs-sitemap-generator");
+
 if (dev === false) {
 	sitemap({
 		baseUrl: "https://www.istanbulsmilecenter.co",

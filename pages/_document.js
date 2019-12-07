@@ -33,6 +33,8 @@ class MyDocument extends Document {
 						href="https://fonts.googleapis.com/css?family=Laila:500,700|Nunito:400,700&display=swap"
 						rel="stylesheet"
 					/>
+					{/* Hotjar Tracking Code for www.istanbulsmilecenter.co */}
+					<script src="/scripts/hotjar.js" />
 				</Head>
 				<body>
 					<Main />

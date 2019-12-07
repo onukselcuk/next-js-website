@@ -892,34 +892,26 @@ const Index = (props) => {
 			`}</style>
 
 			<style jsx>{`
-				:global(.webp) .hero-image-div {
-					background-image: url(${require("../public/home-page/hero-image.webp")});
-				}
-
-				:global(.no-webp) .hero-image-div {
-					background-image: url(${require("../public/home-page/hero-image.jpg")});
-				}
-
 				.hero-image-div {
+					background-image: url(${require("../public/dental-implant-ad-page/dental-implant-intro-ad-img-1128843602.jpg")});
 					width: 100vw;
 					height: calc(100vh - 141px);
 					position: relative;
 					background-repeat: no-repeat;
 					background-size: cover;
-					background-position: right 25% bottom 30%;
+					background-position: right 25% bottom 85%;
 				}
 
 				.hero-image-perfect-wrapper {
 					position: absolute;
 					padding: 2rem;
 					border-radius: 10px;
-					left: 10%;
+					left: 45%;
 					top: 23%;
-					background-color: rgba(255, 255, 255, .4);
 				}
 				.hero-image-perfect {
 					font-family: ${sTheme.typography.serif};
-					color: ${sTheme.palette.primary.main};
+					color: ${sTheme.palette.secondary.alternative2};
 					font-weight: 500;
 					font-size: 7rem;
 				}
@@ -980,6 +972,9 @@ const Index = (props) => {
 					flex-wrap: wrap;
 					margin-top: -5px;
 					padding-bottom: 4rem;
+				}
+				.cost-calculator-section {
+					padding-top: 3rem;
 				}
 
 				.our-prices-header {
