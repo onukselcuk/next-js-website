@@ -1322,11 +1322,27 @@ const Index = (props) => {
 
 			<style jsx>{`
 				:global(.webp) .hero-image-div {
-					background-image: url(${require("../public/home-page/hero-image.webp")});
+					background-image: linear-gradient(
+							115deg,
+							rgba(0, 0, 0, .5) 0%,
+							rgba(0, 0, 0, .5) 10%,
+							rgba(0, 0, 0, .3) 35%,
+							transparent 55%,
+							transparent 100%
+						),
+						url(${require("../public/home-page/hero-image.webp")});
 				}
 
 				:global(.no-webp) .hero-image-div {
-					background-image: url(${require("../public/home-page/hero-image.jpg")});
+					background-image: linear-gradient(
+							115deg,
+							rgba(0, 0, 0, .5) 0%,
+							rgba(0, 0, 0, .5) 10%,
+							rgba(0, 0, 0, .3) 35%,
+							transparent 55%,
+							transparent 100%
+						),
+						url(${require("../public/home-page/hero-image.jpg")});
 				}
 
 				.hero-image-div {
@@ -1344,13 +1360,17 @@ const Index = (props) => {
 					border-radius: 10px;
 					left: 10%;
 					top: 23%;
-					background-color: rgba(255, 255, 255, .4);
 				}
 				.hero-image-perfect {
 					font-family: ${sTheme.typography.serif};
-					color: ${sTheme.palette.primary.main};
+					color: ${sTheme.palette.secondary.alternative2};
 					font-weight: 500;
 					font-size: 7rem;
+				}
+
+				.hero-image-perfect-smile-text {
+					color: ${sTheme.palette.third.dark};
+					font-weight: bold;
 				}
 
 				@media (min-width: ${sizes.sizes.fullhd}) {
@@ -1380,11 +1400,16 @@ const Index = (props) => {
 				@media (max-width: ${sizes.sizes.sm}) {
 					.hero-image-perfect-wrapper {
 						top: 57%;
-						background-color: rgba(255, 255, 255, .7);
+
 						padding: 1rem;
 					}
 					.hero-image-perfect {
 						font-size: 4rem;
+					}
+
+					.hero-image-perfect-smile-text {
+						color: ${sTheme.palette.secondary.alternative2};
+						font-weight: 500;
 					}
 
 					.perfect-break {
@@ -1403,9 +1428,6 @@ const Index = (props) => {
 					}
 				}
 
-				.hero-image-perfect-smile-text {
-					color: ${sTheme.palette.third.dark};
-				}
 				.our-services-section {
 					display: flex;
 					justify-content: center;
