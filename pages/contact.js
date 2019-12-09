@@ -183,7 +183,7 @@ const Contact = (props) => {
 					</p>
 				</div>
 				<div className="form-wrapper">
-					<Form />
+					<Form countryCode={props.countryCode} />
 				</div>
 			</section>
 
@@ -417,6 +417,21 @@ const Contact = (props) => {
 			`}</style>
 		</Layout>
 	);
+};
+
+Contact.getInitialProps = async ({ req }) => {
+	let countryCode = "";
+	if (req) {
+		if (req.header("cf-ipcountry")) {
+			countryCode = req.header("cf-ipcountry");
+			if (countryCode === "XX" || countryCode === "T1") {
+				countryCode = "";
+			}
+			countryCode = countryCode.toLowerCase();
+		}
+	}
+
+	return { countryCode };
 };
 
 export default Contact;

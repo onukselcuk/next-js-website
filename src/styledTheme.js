@@ -22,7 +22,8 @@ const theme = {
 			main: "#eceff4",
 			alternative: "#fff5ee",
 			//dark: "#6c675c"
-			dark: "#666a6e"
+			dark: "#666a6e",
+			corporate: "#F5F5F5"
 			//dark: "rgb(40, 85, 130)"
 		},
 		third: {

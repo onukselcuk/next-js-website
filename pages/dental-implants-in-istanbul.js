@@ -1,11 +1,9 @@
-import Link from "next/link";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import Paper from "@material-ui/core/Paper";
 import SvgIcon from "@material-ui/core/SvgIcon";
 import sTheme from "../src/styledTheme";
 import clsx from "clsx";
-import IstanbulSilhouette from "../components/logos-icons/IstanbulSilhouette";
 import Carousel from "react-multi-carousel";
 import StarIcon from "@material-ui/icons/Star";
 import GoogleLogo from "../components/logos-icons/GoogleLogo";
@@ -29,9 +27,8 @@ const useStyles = makeStyles((theme) => ({
 	},
 	button: {
 		margin: "0 2rem 1rem 0",
-		// backgroundColor: theme.palette.third.dark,
 		backgroundImage: `linear-gradient(to right,${theme.palette.third.dark},${theme.palette.third.dark})`,
-		padding: "20px 60px",
+		padding: "20px 120px",
 		marginTop: "30px",
 		borderRadius: "35px",
 		fontSize: "2rem",
@@ -55,38 +52,30 @@ const useStyles = makeStyles((theme) => ({
 			display: "block"
 		},
 		"&:hover": {
-			// color: theme.palette.secondary.main,
-			// backgroundColor: theme.palette.primary.main
 			"&::before": {
 				opacity: 1
 			}
-			// backgroundImage:
-			// 	"linear-gradient(to right, rgba(26,59,112,1) 0%, rgba(40,85,130,1) 52%, rgba(0,164,189,1) 100%)"
 		},
 		[sizes.down("lg")]: {
-			padding: "20px 50px"
+			padding: "20px 100px"
 		},
 		[sizes.down("mdsm")]: {
-			padding: "15px 45px",
+			padding: "18px 90px",
 			fontSize: "1.8rem"
 		},
 		[sizes.down("sm")]: {
-			padding: "10px 40px",
+			padding: "15px 80px",
 			fontSize: "1.6rem"
 		},
 		[sizes.down("xs")]: {
-			padding: "5px 30px",
+			padding: "13px 60px",
 			marginTop: "10px",
 			fontSize: "1.4rem"
 		}
 	},
-	callButton: {
-		backgroundImage: `linear-gradient(to right,${theme.palette.primary.main},${theme.palette.primary.main})`
-	},
 	regularButton: {
 		borderRadius: "20px",
 		fontSize: "1.5rem",
-		// backgroundColor: theme.palette.third.dark,
 		backgroundImage: `linear-gradient(to right,${theme.palette.third.dark},${theme.palette.third.dark})`,
 		zIndex: 100,
 		letterSpacing: "1px",
@@ -110,13 +99,9 @@ const useStyles = makeStyles((theme) => ({
 			display: "block"
 		},
 		"&:hover": {
-			// backgroundColor: theme.palette.primary.main,
 			"&::before": {
 				opacity: 1
 			}
-			// background:
-			// 	"linear-gradient(to right, rgba(26,59,112,1) 0%, rgba(40,85,130,1) 52%, rgba(0,164,189,1) 100%)",
-			// color: theme.palette.secondary.main
 		}
 	},
 	servicePaper: {
@@ -203,31 +188,16 @@ const useStyles = makeStyles((theme) => ({
 		}
 	},
 	fontAwesomeIconCheck: {
-		fontSize: "2.5rem",
+		fontSize: "4rem",
 		position: "relative",
-		top: "3px",
+		top: "5px",
 		marginRight: "1rem",
 		[sizes.down("lg")]: {
-			fontSize: "2.3rem"
+			fontSize: "3.2rem"
 		},
 		[sizes.down("md")]: {
-			fontSize: "2rem"
-		}
-	},
-	istanbulSilhoutteSvg: {
-		width: "100%",
-		height: "350px",
-		[sizes.down("md")]: {
-			height: "300px"
-		},
-		[sizes.down("mdsm")]: {
-			height: "250px"
-		},
-		[sizes.down("sm")]: {
-			height: "200px"
-		},
-		[sizes.down("sm")]: {
-			height: "150px"
+			top: "3px",
+			fontSize: "2.8rem"
 		}
 	},
 	".react-multi-carousel-item": {
@@ -291,7 +261,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Index = (props) => {
-	const paperElevation = 2;
 	const reviewPaperElevation = 5;
 	const { open, handleCallbackClose, handleCallbackOpen } = props;
 	const language = "en";
@@ -360,20 +329,21 @@ const Index = (props) => {
 			<div className="hero-image-div">
 				<div className="hero-image-perfect-wrapper">
 					<h1 className="hero-image-perfect">
-						Let's make your <br className="perfect-break" />
+						{/* Let's make your <br className="perfect-break" />
 						<span className="hero-image-perfect-smile-text">smile</span>
-						<br className="perfect-break" /> perfect
+						<br className="perfect-break" /> perfect */}
+						Dental Implants In Turkey
 					</h1>
+					<h2 className="hero-image-sub-header">
+						Get
+						<span className="hero-image-perfect-smile-text"> Affordable</span> Dental Care
+					</h2>
+					<p className="hero-image-paragraph">
+						No need to break the bank at your local dentist. <br className="perfect-break" /> Come to
+						Istanbul Smile Center and save up to 70% on your treatment.
+					</p>
 					<Button variant="contained" color="primary" className={classes.button} onClick={handleChat}>
 						Chat with us
-					</Button>
-					<Button
-						variant="contained"
-						color="primary"
-						className={clsx(classes.button, classes.callButton)}
-						onClick={handleCallbackOpen}
-					>
-						Call Me Back
 					</Button>
 				</div>
 			</div>
@@ -421,36 +391,74 @@ const Index = (props) => {
 					<Form />
 				</div>
 			</section>
+			<div className="isc-img-div" />
+			<section className="why-choose-us-section">
+				<div className="our-services-header">
+					<h2 className="our-services-header-text">Why Choose Us?</h2>
+					<div className="guarantees-div">
+						<p className="treatment-paragraph">In Istanbul Smile Center, we guarantee;</p>
+						<div className="choose-us-check-divs-wrapper">
+							<div className="choose-us-check-div">
+								<p className="treatment-paragraph">
+									<FontAwesomeIcon
+										className={clsx(classes.fontAwesomeIcon, classes.fontAwesomeIconCheck)}
+										icon={faCheckCircle}
+									/>
+									14+ Years of Experience
+								</p>
 
-			<section className="isc-intro-section">
-				<div className="clinic-image-collage-div" />
-				<div className="clinic-intro-div">
-					<div className="clinic-intro-wrapper">
-						<h4 className="clinic-exclusive-text">An Exclusive Dental Clinic</h4>
-						<h2 className="clinic-name-header">
-							Istanbul <span className="clinic-smile-center-text">Smile </span> Center
-						</h2>
-						<p className="clinic-intro-text">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel eaque dignissimos error.
-							Fugit, corporis laboriosam. Minus dolor harum facilis, optio eius, saepe, nesciunt
-							voluptatem suscipit temporibus labore expedita quidem molestiae! Lorem ipsum, dolor sit amet
-							consectetur adipisicing elit. Doloribus rem ducimus quidem tempore fugiat obcaecati.
-							Necessitatibus quod consequuntur libero error vel dicta ad ullam ea! Facilis beatae sapiente
-							voluptatem vel. Error optio, totam laborum rem nihil culpa quidem odio numquam corporis sunt
-							tenetur veniam, reiciendis dicta eum obcaecati eaque similique hic quae voluptate sapiente,
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti soluta alias aliquam ipsa
-							a, ducimus dolorem quisquam inventore! Sapiente velit quae facilis aperiam possimus
-							distinctio laudantium odio, quidem suscipit accusamus?
-						</p>
-						<div className="clinic-intro-buttons-div">
-							<Button
-								variant="contained"
-								color="primary"
-								className={classes.regularButton}
-								onClick={handleChat}
-							>
-								Chat&nbsp;Now
-							</Button>
+								<p className="treatment-paragraph">
+									<FontAwesomeIcon
+										className={clsx(classes.fontAwesomeIcon, classes.fontAwesomeIconCheck)}
+										icon={faCheckCircle}
+									/>
+									Transparent Pricing
+								</p>
+								<p className="treatment-paragraph">
+									<FontAwesomeIcon
+										className={clsx(classes.fontAwesomeIcon, classes.fontAwesomeIconCheck)}
+										icon={faCheckCircle}
+									/>
+									No Price Change, Very Accurate Quotes
+								</p>
+								<p className="treatment-paragraph">
+									<FontAwesomeIcon
+										className={clsx(classes.fontAwesomeIcon, classes.fontAwesomeIconCheck)}
+										icon={faCheckCircle}
+									/>
+									Highest Quality Dental Materials{" "}
+								</p>
+							</div>
+							<div className="choose-us-check-div">
+								<p className="treatment-paragraph">
+									<FontAwesomeIcon
+										className={clsx(classes.fontAwesomeIcon, classes.fontAwesomeIconCheck)}
+										icon={faCheckCircle}
+									/>
+									Multilingual Assistance
+								</p>
+								<p className="treatment-paragraph">
+									<FontAwesomeIcon
+										className={clsx(classes.fontAwesomeIcon, classes.fontAwesomeIconCheck)}
+										icon={faCheckCircle}
+									/>
+									Affordable and The Most Competitive Prices
+								</p>
+								<p className="treatment-paragraph">
+									<FontAwesomeIcon
+										className={clsx(classes.fontAwesomeIcon, classes.fontAwesomeIconCheck)}
+										icon={faCheckCircle}
+									/>
+									Free Airport-Hotel-Clinic Transfers
+								</p>
+								<p className="treatment-paragraph">
+									<FontAwesomeIcon
+										className={clsx(classes.fontAwesomeIcon, classes.fontAwesomeIconCheck)}
+										icon={faCheckCircle}
+									/>
+									Hotel Discounts
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -710,7 +718,7 @@ const Index = (props) => {
 								<h3 className="my-business">My Business</h3>
 							</div>
 							<div className="review-number-div">
-								<p className="review-number">65 Patient Reviews</p>
+								<p className="review-number">67 Patient Reviews</p>
 							</div>
 						</div>
 					</Paper>
@@ -893,7 +901,15 @@ const Index = (props) => {
 
 			<style jsx>{`
 				.hero-image-div {
-					background-image: url(${require("../public/dental-implant-ad-page/dental-implant-intro-ad-img-1128843602.jpg")});
+					background-image: linear-gradient(
+							115deg,
+							rgba(255, 255, 255, .9) 0%,
+							rgba(255, 255, 255, .9) 35%,
+							rgba(255, 255, 255, .7) 50%,
+							transparent 60%,
+							transparent 100%
+						),
+						url(${require("../public/dental-implant-ad-page/dental-implant-intro-ad-img-738017344.jpg")});
 					width: 100vw;
 					height: calc(100vh - 141px);
 					position: relative;
@@ -905,15 +921,33 @@ const Index = (props) => {
 				.hero-image-perfect-wrapper {
 					position: absolute;
 					padding: 2rem;
-					border-radius: 10px;
-					left: 45%;
-					top: 23%;
+					left: 10%;
+					top: 18%;
 				}
+
 				.hero-image-perfect {
 					font-family: ${sTheme.typography.serif};
-					color: ${sTheme.palette.secondary.alternative2};
+					color: ${sTheme.palette.primary.main};
+					font-weight: bold;
+					font-size: 6rem;
+				}
+
+				.hero-image-sub-header {
+					color: ${sTheme.palette.primary.main};
+					font-size: 4rem;
 					font-weight: 500;
-					font-size: 7rem;
+					font-family: ${sTheme.typography.serif};
+					margin-top: 3rem;
+				}
+
+				.hero-image-paragraph {
+					color: ${sTheme.palette.secondary.dark};
+					font-size: 2.2rem;
+				}
+
+				.hero-image-perfect-smile-text {
+					color: ${sTheme.palette.third.dark};
+					font-weight: bold;
 				}
 
 				@media (min-width: ${sizes.sizes.fullhd}) {
@@ -936,18 +970,46 @@ const Index = (props) => {
 						left: 2.5%;
 					}
 					.hero-image-perfect {
-						font-size: 4.5rem;
+						font-size: 4rem;
+					}
+
+					.hero-image-sub-header {
+						font-size: 3.2rem;
+						margin-top: 2rem;
+					}
+
+					.hero-image-paragraph {
+						font-size: 2rem;
 					}
 				}
 
 				@media (max-width: ${sizes.sizes.sm}) {
+					.hero-image-div {
+						background-image: linear-gradient(
+								0deg,
+								rgba(255, 255, 255, .9) 0%,
+								rgba(255, 255, 255, .9) 35%,
+								rgba(255, 255, 255, .7) 55%,
+								transparent 65%,
+								transparent 100%
+							),
+							url(${require("../public/dental-implant-ad-page/dental-implant-intro-ad-img-738017344.jpg")});
+					}
+
 					.hero-image-perfect-wrapper {
-						top: 57%;
-						background-color: rgba(255, 255, 255, .7);
+						top: 45%;
 						padding: 1rem;
 					}
 					.hero-image-perfect {
-						font-size: 4rem;
+						font-size: 3.5rem;
+					}
+
+					.hero-image-sub-header {
+						font-size: 2.8rem;
+						margin-top: 1.5rem;
+					}
+					.hero-image-paragraph {
+						font-size: 1.8rem;
 					}
 
 					.perfect-break {
@@ -957,12 +1019,20 @@ const Index = (props) => {
 
 				@media (max-width: ${sizes.sizes.xs}) {
 					.hero-image-perfect-wrapper {
-						top: 55%;
+						top: 45%;
 						padding: .5rem;
 						padding-bottom: 1rem;
 					}
 					.hero-image-perfect {
 						font-size: 3rem;
+					}
+				}
+
+				@media (max-width: ${sizes.sizes.xxs}) {
+					.hero-image-perfect-wrapper {
+						text-align: center;
+						left: 0;
+						padding: 1rem;
 					}
 				}
 
@@ -1028,9 +1098,6 @@ const Index = (props) => {
 					}
 				}
 
-				.hero-image-perfect-smile-text {
-					color: ${sTheme.palette.third.dark};
-				}
 				.our-services-section {
 					display: flex;
 					justify-content: center;
@@ -1141,141 +1208,6 @@ const Index = (props) => {
 						width: 95%;
 					}
 				}
-
-				.form-wrapper {
-					width: 97%;
-				}
-
-				.isc-intro-section {
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					margin: 0 auto;
-					margin-top: 2.5rem;
-					width: 80%;
-				}
-
-				@media (max-width: ${sizes.sizes.xl}) {
-					.isc-intro-section {
-						width: 95%;
-					}
-				}
-
-				@media (max-width: ${sizes.sizes.lg}) {
-					.isc-intro-section {
-						width: 100%;
-						flex-wrap: wrap;
-					}
-				}
-				:global(.webp) .clinic-image-collage-div {
-					background-image: url(${require("../public/home-page/home-page-isc-intro-img.webp")});
-				}
-
-				:global(.no-webp) .clinic-image-collage-div {
-					background-image: url(${require("../public/home-page/home-page-isc-intro-img.jpg")});
-				}
-				.clinic-image-collage-div {
-					width: 50%;
-					height: 50rem;
-					background-repeat: no-repeat;
-					background-position: left 50% top 0%;
-					background-size: cover;
-					border-top-left-radius: 20px;
-					border-bottom-left-radius: 20px;
-				}
-
-				@media (max-width: ${sizes.sizes.lg}) {
-					.clinic-image-collage-div {
-						width: 100%;
-						height: 30rem;
-						border-radius: 0;
-					}
-				}
-
-				.clinic-intro-div {
-					width: 50%;
-					display: flex;
-					align-items: center;
-				}
-
-				@media (max-width: ${sizes.sizes.lg}) {
-					.clinic-intro-div {
-						width: 100%;
-						justify-content: center;
-						text-align: center;
-					}
-				}
-				.clinic-intro-wrapper {
-					background-color: ${sTheme.palette.secondary.main};
-					border-top: 1px solid ${sTheme.palette.primary.main};
-					border-bottom: 1px solid ${sTheme.palette.primary.main};
-					border-right: 1px solid ${sTheme.palette.primary.main};
-					border-radius: 20px;
-					margin: 3rem 0;
-					padding: 5rem;
-				}
-
-				@media (max-width: ${sizes.sizes.lg}) {
-					.clinic-intro-wrapper {
-						border: none;
-						border-radius: 0;
-						margin: 0;
-						padding: 3rem;
-					}
-				}
-
-				@media (max-width: ${sizes.sizes.md}) {
-					.clinic-intro-wrapper {
-						padding: 2rem;
-					}
-				}
-
-				.clinic-exclusive-text {
-					color: ${sTheme.palette.secondary.dark};
-					font-size: 1.8rem;
-				}
-				.clinic-name-header {
-					font-family: ${sTheme.typography.serif};
-					color: ${sTheme.palette.primary.main};
-					font-size: 4rem;
-					margin-top: .5rem;
-					font-size: 4.5rem;
-				}
-
-				.clinic-smile-center-text {
-					color: ${sTheme.palette.third.dark};
-				}
-				.clinic-intro-text {
-					width: 95%;
-					color: ${sTheme.palette.secondary.dark};
-					font-size: 1.7rem;
-					line-height: 1.6;
-				}
-
-				.clinic-intro-buttons-div {
-					margin-top: 2rem;
-					display: flex;
-					justify-content: space-between;
-					align-items: baseline;
-					width: 95%;
-				}
-
-				.clinic-intro-link {
-					color: ${sTheme.palette.primary.main};
-					text-decoration: none;
-					font-size: 1.7rem;
-					transition: all 200ms ease-in-out;
-				}
-
-				@media (max-width: ${sizes.sizes.md}) {
-					.clinic-intro-link {
-						margin-top: 1.5rem;
-					}
-				}
-				.clinic-intro-link:hover {
-					text-decoration: underline;
-				}
-
 				.dental-treatments-buttons-div {
 					display: flex;
 					justify-content: center;
@@ -1303,6 +1235,49 @@ const Index = (props) => {
 						align-items: center;
 					}
 				}
+
+				.form-wrapper {
+					width: 97%;
+				}
+
+				.isc-intro-section {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					margin: 0 auto;
+					margin-top: 2.5rem;
+					width: 80%;
+				}
+
+				@media (max-width: ${sizes.sizes.xl}) {
+					.isc-intro-section {
+						width: 95%;
+					}
+				}
+
+				@media (max-width: ${sizes.sizes.lg}) {
+					.isc-intro-section {
+						width: 100%;
+						flex-wrap: wrap;
+					}
+				}
+
+				:global(.webp) .isc-img-div {
+					background-image: url(${require("../public/ad-page/isc-ad-img.webp")});
+				}
+
+				:global(.no-webp) .isc-img-div {
+					background-image: url(${require("../public/ad-page/isc-ad-img.jpg")});
+				}
+
+				.isc-img-div {
+					width: 100%;
+					height: 35vmax;
+					background-repeat: no-repeat;
+					background-position: left 47% top 22%;
+					background-size: cover;
+				}
+
 				.our-doctors-section {
 					display: flex;
 					flex-direction: column;
@@ -1388,6 +1363,7 @@ const Index = (props) => {
 
 				.why-choose-us-section {
 					width: 100%;
+					margin-top: 3rem;
 				}
 
 				.guarantees-div {
@@ -1397,6 +1373,7 @@ const Index = (props) => {
 				.choose-us-check-divs-wrapper {
 					display: flex;
 					justify-content: center;
+					align-items: center;
 					text-align: left;
 					margin: 0 auto;
 				}
@@ -1405,30 +1382,30 @@ const Index = (props) => {
 					margin: 1rem;
 				}
 				.treatment-paragraph {
-					font-size: 2rem;
+					font-size: 2.5rem;
 					font-weight: normal;
-					margin-bottom: 1rem;
+					margin-bottom: 2rem;
 					color: ${sTheme.palette.primary.main};
 					font-weight: bold;
 				}
 
 				@media (max-width: ${sizes.sizes.lg}) {
 					.treatment-paragraph {
-						font-size: 1.8rem;
+						font-size: 2.3rem;
 					}
 				}
 
 				@media (max-width: ${sizes.sizes.md}) {
 					.treatment-paragraph {
-						font-size: 1.6rem;
+						font-size: 2rem;
+					}
+					.choose-us-check-divs-wrapper {
+						text-align: center;
+						flex-wrap: wrap;
 					}
 				}
 
 				@media (max-width: ${sizes.sizes.xs}) {
-					.choose-us-check-divs-wrapper {
-						flex-direction: column;
-						text-align: center;
-					}
 					.choose-us-check-div {
 						margin: 0 1rem;
 					}
@@ -1436,26 +1413,12 @@ const Index = (props) => {
 						margin: 1rem 0 2rem 0;
 						padding: 0 1rem;
 					}
-				}
 
-				.istanbul-silhouette-wrapper-div {
-					display: flex;
-					justify-content: center;
-					margin: 0 auto;
-					width: 80%;
-				}
-
-				@media (max-width: ${sizes.sizes.lg}) {
-					.istanbul-silhouette-wrapper-div {
-						width: 90%;
+					.treatment-paragraph {
+						font-size: 1.8rem;
 					}
 				}
 
-				@media (max-width: ${sizes.sizes.md}) {
-					.istanbul-silhouette-wrapper-div {
-						width: 95%;
-					}
-				}
 				.reviews-section {
 					padding-top: 2rem;
 					padding-bottom: 4rem;

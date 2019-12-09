@@ -1,5 +1,3 @@
-import ActiveLink from "./ActiveLink";
-import Link from "next/link";
 import { makeStyles } from "@material-ui/core/styles";
 import { useState } from "react";
 import Button from "@material-ui/core/Button";
@@ -7,11 +5,6 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Logo from "./logos-icons/Logo";
 import WhatsAppIcon from "@material-ui/icons/WhatsApp";
 import CallIcon from "@material-ui/icons/Call";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import clsx from "clsx";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemText from "@material-ui/core/ListItemText";
 import sizes from "../src/sizes";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
@@ -108,12 +101,18 @@ const useStyles = makeStyles((theme) => ({
 		width: "100%"
 	},
 
+	logoDiv: {
+		marginLeft: "50%",
+		marginRight: "auto",
+		transform: "translateX(-50%)"
+	},
+
 	headerDiv: {
 		margin: "0 auto",
 		height: "100%",
 		width: "80%",
 		display: "flex",
-		justifyContent: "space-between",
+		justifyContent: "flex-start",
 		alignItems: "center",
 		[sizes.down("xl")]: {
 			width: "90%"
@@ -345,7 +344,7 @@ export default () => {
 			<Toolbar className={classes.toolbar} disableGutters={true}>
 				<header className={classes.header}>
 					<div className={classes.headerDiv}>
-						<div>
+						<div className={classes.logoDiv}>
 							<Logo />
 						</div>
 

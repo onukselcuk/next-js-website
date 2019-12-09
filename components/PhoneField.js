@@ -4,7 +4,8 @@ import { TextField, withStyles } from "@material-ui/core";
 
 const styles = (theme) => ({
 	field: {
-		margin: "10px 0"
+		margin: "10px 0",
+		backgroundColor: theme.palette.secondary.alternative2
 	},
 	countryList: {
 		...theme.typography.body1
@@ -12,13 +13,13 @@ const styles = (theme) => ({
 });
 
 function PhoneField (props) {
-	const { value, defaultCountry, onChange, classes, error } = props;
+	const { value, countryCode, onChange, classes, error } = props;
 
 	return (
 		<React.Fragment>
 			<ReactPhoneInput
 				value={value}
-				defaultCountry={defaultCountry || "gb"}
+				defaultCountry={countryCode || "gb"}
 				onChange={onChange}
 				inputClass={classes.field}
 				dropdownClass={classes.countryList}

@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
 		padding: "20px 20px",
 		margin: "2rem auto",
 		border: `1px solid ${theme.palette.primary.main}`,
-		backgroundColor: theme.palette.secondary.alternative2,
+		backgroundColor: theme.palette.secondary.main,
 		borderRadius: "20px",
 		position: "relative",
 		overflow: "hidden",
@@ -52,7 +52,8 @@ const useStyles = makeStyles((theme) => ({
 		marginLeft: theme.spacing(1),
 		marginRight: theme.spacing(1),
 		flexGrow: 1,
-		minWidth: "200px"
+		minWidth: "200px",
+		backgroundColor: theme.palette.secondary.alternative2
 	},
 	menu: {
 		width: 200
@@ -238,7 +239,7 @@ const override = `
 	margin: 0 auto;
 `;
 
-const Form = () => {
+const Form = ({ countryCode }) => {
 	const classes = useStyles();
 	const router = useRouter();
 
@@ -486,7 +487,12 @@ const Form = () => {
 							)}
 						</FormControl>
 						<div className={classes.phoneInputWrapper}>
-							<PhoneField onChange={handleOnChange} value={phoneData.number} error={errors.phone} />
+							<PhoneField
+								onChange={handleOnChange}
+								value={phoneData.number}
+								error={errors.phone}
+								countryCode={countryCode}
+							/>
 						</div>
 
 						<FormControl
