@@ -900,7 +900,7 @@ const Index = (props) => {
 			`}</style>
 
 			<style jsx>{`
-				.hero-image-div {
+				:global(.webp) .hero-image-div {
 					background-image: linear-gradient(
 							115deg,
 							rgba(255, 255, 255, .9) 0%,
@@ -909,13 +909,28 @@ const Index = (props) => {
 							transparent 60%,
 							transparent 100%
 						),
-						url(${require("../public/dental-implant-ad-page/dental-implant-intro-ad-img-738017344.jpg")});
+						url(${require("../public/ad-page/patient-tour-img.webp")});
+				}
+
+				:global(.no-webp) .hero-image-div {
+					background-image: linear-gradient(
+							115deg,
+							rgba(255, 255, 255, .9) 0%,
+							rgba(255, 255, 255, .9) 35%,
+							rgba(255, 255, 255, .7) 50%,
+							transparent 60%,
+							transparent 100%
+						),
+						url(${require("../public/ad-page/patient-tour-img.jpg")});
+				}
+
+				.hero-image-div {
 					width: 100vw;
 					height: calc(100vh - 141px);
 					position: relative;
 					background-repeat: no-repeat;
 					background-size: cover;
-					background-position: right 25% bottom 85%;
+					background-position: right 25% bottom 90%;
 				}
 
 				.hero-image-perfect-wrapper {
@@ -952,7 +967,7 @@ const Index = (props) => {
 
 				@media (min-width: ${sizes.sizes.fullhd}) {
 					.hero-image-div {
-						background-position: right 25% bottom 60%;
+						background-position: right 25% bottom 90%;
 					}
 				}
 
@@ -984,7 +999,7 @@ const Index = (props) => {
 				}
 
 				@media (max-width: ${sizes.sizes.sm}) {
-					.hero-image-div {
+					:global(.webp) .hero-image-div {
 						background-image: linear-gradient(
 								0deg,
 								rgba(255, 255, 255, .9) 0%,
@@ -993,7 +1008,19 @@ const Index = (props) => {
 								transparent 65%,
 								transparent 100%
 							),
-							url(${require("../public/dental-implant-ad-page/dental-implant-intro-ad-img-738017344.jpg")});
+							url(${require("../public/ad-page/patient-tour-img.webp")});
+					}
+
+					:global(.no-webp) .hero-image-div {
+						background-image: linear-gradient(
+								0deg,
+								rgba(255, 255, 255, .9) 0%,
+								rgba(255, 255, 255, .9) 35%,
+								rgba(255, 255, 255, .7) 55%,
+								transparent 65%,
+								transparent 100%
+							),
+							url(${require("../public/ad-page/patient-tour-img.jpg")});
 					}
 
 					.hero-image-perfect-wrapper {

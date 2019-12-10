@@ -38,7 +38,8 @@ const useStyles = makeStyles((theme) => ({
 	textField: {
 		marginLeft: theme.spacing(1),
 		marginRight: theme.spacing(1),
-		flexGrow: 1
+		flexGrow: 1,
+		backgroundColor: theme.palette.secondary.alternative2
 	},
 
 	nameField: {

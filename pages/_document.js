@@ -31,16 +31,16 @@ class MyDocument extends Document {
 					/>
 					{/* PWA primary color */}
 					<meta name="theme-color" content={theme.palette.primary.main} />
-					<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
-					{/* <link rel="preconnect" href="https://embed.tawk.to" crossOrigin /> */}
-					<link rel="preconnect" href="https://lh3.googleusercontent.com" crossOrigin />
+					<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+					{/* <link rel="preconnect" href="https://embed.tawk.to" crossOrigin="true" /> */}
+					<link rel="preconnect" href="https://lh3.googleusercontent.com" crossOrigin="true" />
 
 					<link
 						href="https://fonts.googleapis.com/css?family=Laila:500,700|Nunito:400,700&display=swap"
 						rel="stylesheet"
 					/>
 					{/* Hotjar Tracking Code for www.istanbulsmilecenter.co */}
-					<script src="/scripts/hotjar.js" />
+					{process.env.NEXT_STATIC_PRODUCTION === "production" && <script src="/scripts/hotjar.js" />}
 				</Head>
 				<body>
 					{/* Google Tag Manager (noscript) */}
