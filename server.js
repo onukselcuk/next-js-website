@@ -13,7 +13,7 @@ moment.locale("tr");
 const mailer = require("./src/mailer");
 const mailerToUs = require("./src/mailerToUs");
 const axios = require("axios");
-const compression = require("compression");
+// const compression = require("compression");
 const callbackMailer = require("./src/callbackMailer");
 const sitemap = require("nextjs-sitemap-generator");
 
@@ -32,9 +32,9 @@ app.prepare().then(() => {
 	server.use(express.static("public"));
 	server.use(bodyParser.urlencoded({ extended: false }));
 	server.use(bodyParser.json());
-	if (dev === false) {
-		server.use(compression());
-	}
+	// if (dev === false) {
+	// 	server.use(compression());
+	// }
 
 	// server.get("/", (req, res) => {
 	// 	res.redirect("/en");

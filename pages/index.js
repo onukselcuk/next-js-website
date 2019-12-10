@@ -2053,7 +2053,6 @@ const Index = (props) => {
 };
 
 Index.getInitialProps = async ({ req }) => {
-	console.log(req.header("User-Agent"));
 	let userAgent;
 	let deviceType;
 	if (req) {

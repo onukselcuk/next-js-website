@@ -3,11 +3,16 @@ const withCSS = require("@zeit/next-css");
 // const withImages = require("next-images");
 const withFonts = require("next-fonts");
 const optimizedImages = require("next-optimized-images");
-const dev = process.env.NODE_ENV !== "production";
 // const dev = true;
+const nextEnv = require("next-env");
+require("dotenv").config();
+const dev = process.env.NEXT_STATIC_PRODUCTION !== "production";
+
+const withNextEnv = nextEnv();
 
 module.exports = withPlugins(
 	[
+		withNextEnv,
 		[
 			optimizedImages,
 			{

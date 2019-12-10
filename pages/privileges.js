@@ -316,10 +316,10 @@ const Privileges = (props) => {
 					}
 
 					.privilege-vip-img-div {
-						height: 62vh;
+						height: 65vh;
 						background-repeat: no-repeat;
 						background-size: cover;
-						background-position: bottom 63% right 50%;
+						background-position: bottom 0% right 17%;
 						clip-path: ellipse(100% 100% at 50% 0%);
 					}
 

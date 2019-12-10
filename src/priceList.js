@@ -3,17 +3,17 @@ export const dentalImplantObj = {
 		name: {
 			en: "Implant Straumann (Swiss) - abutment included"
 		},
-		euro: 775,
-		pound: 675,
-		dollar: 865
+		euro: 790,
+		pound: 690,
+		dollar: 880
 	},
 	hiossen: {
 		name: {
 			en: "Implant Hiossen (U.S. American) - abutment included"
 		},
-		euro: 490,
-		pound: 425,
-		dollar: 545
+		euro: 500,
+		pound: 435,
+		dollar: 560
 	},
 	boneGrafting: {
 		name: {
@@ -35,17 +35,17 @@ export const dentalImplantObj = {
 		name: {
 			en: "Ceramic Crown with Standard Metal Implant (per tooth)"
 		},
-		euro: 180,
+		euro: 185,
 		pound: 160,
-		dollar: 200
+		dollar: 205
 	},
 	ceramicCrownWithStandardMetal: {
 		name: {
 			en: "Ceramic Crown with Standard Metal (per tooth)"
 		},
-		euro: 135,
+		euro: 140,
 		pound: 120,
-		dollar: 150
+		dollar: 155
 	}
 };
 
@@ -54,9 +54,9 @@ export const dentalVeneerCrownObj = {
 		name: {
 			en: "Zirconium Crown (per tooth)"
 		},
-		euro: 210,
-		pound: 180,
-		dollar: 235
+		euro: 215,
+		pound: 190,
+		dollar: 240
 	},
 	zirconiumCrownWithCad: {
 		name: {
@@ -70,9 +70,9 @@ export const dentalVeneerCrownObj = {
 		name: {
 			en: "Full Porcelain Crown with CAD/CAM System (per tooth)"
 		},
-		euro: 280,
-		pound: 245,
-		dollar: 310
+		euro: 285,
+		pound: 250,
+		dollar: 320
 	},
 	laminateVeneer: {
 		name: {
