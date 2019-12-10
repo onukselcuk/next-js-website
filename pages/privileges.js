@@ -421,13 +421,17 @@ const Privileges = (props) => {
 					}
 
 					.privilege-image-2 {
-						background-position: right 50% bottom 55%;
+						background-position: right 20% bottom 85%;
 					}
 					:global(.webp) .privilege-image-3 {
 						background-image: url(${require("../public/privileges-page/schedule-an-appointment-img.webp")});
 					}
 					:global(.no-webp) .privilege-image-3 {
 						background-image: url(${require("../public/privileges-page/schedule-an-appointment-img.jpg")});
+					}
+
+					.privilege-image-3 {
+						background-position: right 20% bottom 85%;
 					}
 
 					:global(.webp) .privilege-image-4 {
