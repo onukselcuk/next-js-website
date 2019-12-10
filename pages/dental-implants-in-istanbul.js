@@ -340,7 +340,8 @@ const Index = (props) => {
 					</h2>
 					<p className="hero-image-paragraph">
 						No need to break the bank at your local dentist. <br className="perfect-break" /> Come to
-						Istanbul Smile Center and save up to 70% on your treatment.
+						<span className="hero-image-isc-text"> Istanbul Smile Center</span> and save up to 70% on your
+						treatment.
 					</p>
 					<Button variant="contained" color="primary" className={classes.button} onClick={handleChat}>
 						Chat with us
@@ -962,6 +963,10 @@ const Index = (props) => {
 
 				.hero-image-perfect-smile-text {
 					color: ${sTheme.palette.third.dark};
+					font-weight: bold;
+				}
+
+				.hero-image-isc-text {
 					font-weight: bold;
 				}
 

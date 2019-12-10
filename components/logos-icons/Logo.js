@@ -10,8 +10,9 @@ const useStyles = makeStyles((theme) => ({
 		height: "100px",
 		width: "130px",
 		position: "relative",
-		"& .st0, & .st1, & .st2": {
-			transition: "fill 400ms ease-in-out"
+		transition: "all 200ms",
+		"& .st0, & .st1, & .st2,& .st4": {
+			transition: "all 200ms"
 		},
 		"& .st0, & .st4": {
 			fill: theme.palette.third.dark
@@ -23,20 +24,22 @@ const useStyles = makeStyles((theme) => ({
 		[sizes.down("xxs")]: {
 			height: "60px",
 			width: "80px"
-		}
+		},
+		"&:hover": {
+			"& .st0,& .st4": {
+				fill: theme.palette.secondary.alternative2
+			}
 
-		// "&:hover": {
-		// 	cursor: "pointer",
-		// 	"& .st0 ": {
-		// 		fill: theme.palette.original.main
-		// 	},
-		// 	"& .st1": {
-		// 		fill: theme.palette.original.secondary
-		// 	},
-		// 	"& .st2": {
-		// 		fill: theme.palette.original.third
-		// 	}
-		// }
+			// "& .st0 ": {
+			// 	fill: theme.palette.original.main
+			// },
+			// "& .st1": {
+			// 	fill: theme.palette.original.secondary
+			// },
+			// "& .st2": {
+			// 	fill: theme.palette.original.third
+			// }
+		}
 	},
 	svgLogoAnchor: {
 		position: "relative"
