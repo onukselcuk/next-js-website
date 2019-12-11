@@ -33,7 +33,8 @@ import GoogleLogo from "../components/logos-icons/GoogleLogo";
 import MobileDetect from "mobile-detect";
 import GoogleLogoFull from "../components/logos-icons/GoogleLogoFull";
 import GoogleMyBusinessLogo from "../components/logos-icons/GoogleMyBusinessLogo";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { StateContext } from "../components/StateProvider";
 import sizes from "../src/sizes";
 import reviews from "../src/reviews";
 import moment from "moment";
@@ -1398,6 +1399,30 @@ const Index = (props) => {
 				}
 
 				@media (max-width: ${sizes.sizes.sm}) {
+					:global(.webp) .hero-image-div {
+						background-image: linear-gradient(
+								0deg,
+								rgba(0, 0, 0, .5) 0%,
+								rgba(0, 0, 0, .5) 10%,
+								rgba(0, 0, 0, .3) 35%,
+								transparent 45%,
+								transparent 100%
+							),
+							url(${require("../public/home-page/hero-image.webp")});
+					}
+
+					:global(.no-webp) .hero-image-div {
+						background-image: linear-gradient(
+								0deg,
+								rgba(0, 0, 0, .5) 0%,
+								rgba(0, 0, 0, .5) 10%,
+								rgba(0, 0, 0, .3) 35%,
+								transparent 45%,
+								transparent 100%
+							),
+							url(${require("../public/home-page/hero-image.jpg")});
+					}
+
 					.hero-image-perfect-wrapper {
 						top: 57%;
 

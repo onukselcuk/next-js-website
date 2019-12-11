@@ -8,6 +8,7 @@ import "react-multi-carousel/lib/styles.css";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
+import { StateProvider } from "../components/StateProvider";
 
 class MyApp extends App {
 	constructor (props) {
@@ -47,18 +48,8 @@ class MyApp extends App {
 	//   return { ...appProps }
 	// }
 
-	// const [ open, setOpen ] = React.useState(false);
-
-	// const handleClickOpen = () => {
-	// 	setOpen(true);
-	// };
-
-	// const handleClose = () => {
-	// 	setOpen(false);
-	// };
-
 	render () {
-		const { Component, pageProps } = this.props;
+		const { Component, pageProps, reqCountryCode } = this.props;
 		return (
 			<React.Fragment>
 				<DefaultSeo
@@ -70,21 +61,37 @@ class MyApp extends App {
 					}}
 				/>
 				<ThemeProvider theme={theme}>
-					<Component
-						{...pageProps}
-						openCallback={this.state.open}
-						handleCallbackOpen={this.handleCallbackOpen}
-						handleCallbackClose={this.handleCallbackClose}
-					/>
-					<Callback
-						openCallback={this.state.open}
-						handleCallbackOpen={this.handleCallbackOpen}
-						handleCallbackClose={this.handleCallbackClose}
-					/>
+					<StateProvider reqCountryCode={reqCountryCode}>
+						<Component
+							{...pageProps}
+							openCallback={this.state.open}
+							handleCallbackOpen={this.handleCallbackOpen}
+							handleCallbackClose={this.handleCallbackClose}
+						/>
+						<Callback
+							openCallback={this.state.open}
+							handleCallbackOpen={this.handleCallbackOpen}
+							handleCallbackClose={this.handleCallbackClose}
+						/>
+					</StateProvider>
 				</ThemeProvider>
 			</React.Fragment>
 		);
 	}
 }
+
+MyApp.getInitialProps = async ({ ctx }) => {
+	let reqCountryCode = "";
+
+	if (ctx.req) {
+		if (ctx.req.header("cf-ipcountry")) {
+			reqCountryCode = ctx.req.header("cf-ipcountry");
+			if (reqCountryCode === "XX" || reqCountryCode === "T1") {
+				reqCountryCode = "";
+			}
+		}
+	}
+	return { reqCountryCode };
+};
 
 export default MyApp;

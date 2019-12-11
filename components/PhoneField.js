@@ -1,11 +1,15 @@
 import "react-phone-input-mui/dist/style.css";
 import ReactPhoneInput from "react-phone-input-mui";
 import { TextField, withStyles } from "@material-ui/core";
+import { useContext } from "react";
+import { StateContext } from "./StateProvider";
 
 const styles = (theme) => ({
 	field: {
 		margin: "10px 0",
-		backgroundColor: theme.palette.secondary.alternative2
+		"& .MuiInputBase-root": {
+			backgroundColor: theme.palette.secondary.alternative2
+		}
 	},
 	countryList: {
 		...theme.typography.body1
@@ -13,7 +17,8 @@ const styles = (theme) => ({
 });
 
 function PhoneField (props) {
-	const { value, countryCode, onChange, classes, error } = props;
+	const { value, onChange, classes, error } = props;
+	const { countryCode } = useContext(StateContext);
 
 	return (
 		<React.Fragment>
@@ -59,7 +64,7 @@ function PhoneField (props) {
 				}
 
 				.react-tel-input .selected-flag .flag {
-					margin-top: -5px;
+					margin-top: -6px;
 				}
 
 				.react-tel-input .country-list {

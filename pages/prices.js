@@ -5,7 +5,6 @@ import clsx from "clsx";
 import sTheme from "../src/styledTheme";
 import PriceTable from "../components/PriceTable";
 import CostCalculator from "../components/CostCalculator";
-import { useState } from "react";
 import Form from "../components/Form";
 import sizes from "../src/sizes";
 import Layout from "../components/Layout";
@@ -55,12 +54,6 @@ const useStyles = makeStyles((theme) => ({
 const Prices = (props) => {
 	const classes = useStyles();
 	const language = "en";
-	const [ currentCurrency, setCurrentCurrency ] = useState("euro");
-	const [ currentSign, setCurrentSign ] = useState("€");
-	const handleCurrencyChange = (e) => {
-		setCurrentCurrency(e.currentTarget.name);
-		setCurrentSign(e.currentTarget.dataset.sign);
-	};
 
 	const handleChat = () => {
 		if (typeof Tawk_API !== "undefined") {
@@ -87,14 +80,7 @@ const Prices = (props) => {
 						</p>
 					</div>
 					<div className="our-prices-wrapper">
-						<PriceTable
-							currentCurrency={currentCurrency}
-							setCurrentCurrency={setCurrentCurrency}
-							currentSign={currentSign}
-							setCurrentSign={setCurrentSign}
-							handleCurrencyChange={handleCurrencyChange}
-							language={language}
-						/>
+						<PriceTable language={language} />
 					</div>
 
 					<div className="dental-treatments-buttons-div">
@@ -118,11 +104,7 @@ const Prices = (props) => {
 						</p>
 					</div>
 					<div className="cost-calculator-wrapper">
-						<CostCalculator
-							currentCurrency={currentCurrency}
-							handleCurrencyChange={handleCurrencyChange}
-							currentSign={currentSign}
-						/>
+						<CostCalculator />
 					</div>
 
 					<div className="dental-treatments-buttons-div">

@@ -14,7 +14,6 @@ import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import CostCalculator from "../../components/CostCalculator";
 import Button from "@material-ui/core/Button";
-import { useState } from "react";
 import clsx from "clsx";
 import Form from "../../components/Form";
 import DentalImplantsInIstanbul from "../../components/DentalImplantsInIstanbul";
@@ -89,12 +88,7 @@ const useStyles = makeStyles((theme) => ({
 
 const treatmentTemplate = (props) => {
 	const classes = useStyles();
-	const [ currentCurrency, setCurrentCurrency ] = useState("euro");
-	const [ currentSign, setCurrentSign ] = useState("€");
-	const handleCurrencyChange = (e) => {
-		setCurrentCurrency(e.currentTarget.name);
-		setCurrentSign(e.currentTarget.dataset.sign);
-	};
+
 	const handleChat = () => {
 		if (typeof Tawk_API !== "undefined") {
 			Tawk_API.maximize();
@@ -130,11 +124,7 @@ const treatmentTemplate = (props) => {
 						</p>
 					</div>
 					<div className="cost-calculator-wrapper">
-						<CostCalculator
-							currentCurrency={currentCurrency}
-							handleCurrencyChange={handleCurrencyChange}
-							currentSign={currentSign}
-						/>
+						<CostCalculator />
 					</div>
 
 					<div className="dental-treatments-buttons-div">

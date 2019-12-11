@@ -39,7 +39,9 @@ const useStyles = makeStyles((theme) => ({
 		marginLeft: theme.spacing(1),
 		marginRight: theme.spacing(1),
 		flexGrow: 1,
-		backgroundColor: theme.palette.secondary.alternative2
+		"& .MuiInputBase-root": {
+			backgroundColor: theme.palette.secondary.alternative2
+		}
 	},
 
 	nameField: {
@@ -152,8 +154,14 @@ const CallbackForm = ({ handleCallbackClose }) => {
 	const router = useRouter();
 
 	const [ formData, setFormData ] = useState({
-		name: "",
-		email: ""
+		nameCallback: "",
+		emailCallback: ""
+	});
+
+	const [ errors, setErrors ] = useState({
+		nameCallback: false,
+		emailCallback: false,
+		phone: false
 	});
 
 	const handleValidation = (e) => {
@@ -165,7 +173,7 @@ const CallbackForm = ({ handleCallbackClose }) => {
 
 	const handleChange = (e) => {
 		setFormData({ ...formData, [e.target.name]: e.target.value });
-		if (e.target.name === "name" || e.target.name === "email" || e.target.name === "message") {
+		if (e.target.name === "nameCallback" || e.target.name === "emailCallback") {
 			handleValidation(e);
 		}
 	};
@@ -194,12 +202,6 @@ const CallbackForm = ({ handleCallbackClose }) => {
 		});
 	};
 
-	const [ errors, setErrors ] = useState({
-		name: false,
-		email: false,
-		phone: false
-	});
-
 	const checkValidity = () => {
 		const validity = Object.keys(errors).every((cur) => errors[cur] === false);
 		const emptiness = Object.keys(formData).every((cur) => formData[cur] !== "");
@@ -214,8 +216,8 @@ const CallbackForm = ({ handleCallbackClose }) => {
 			}
 
 			setErrors({
-				name: !labelRefs.name.current.control.validity.valid,
-				email: !labelRefs.email.current.control.validity.valid,
+				nameCallback: !labelRefs.nameCallback.current.control.validity.valid,
+				emailCallback: !labelRefs.emailCallback.current.control.validity.valid,
 				phone: phoneValidError
 			});
 			return false;
@@ -233,7 +235,8 @@ const CallbackForm = ({ handleCallbackClose }) => {
 			setPerfectSmileState(true);
 
 			const data = {
-				...formData,
+				name: formData.nameCallback,
+				email: formData.emailCallback,
 				country: { ...phoneData },
 				captchaState
 			};
@@ -264,19 +267,19 @@ const CallbackForm = ({ handleCallbackClose }) => {
 	};
 
 	const [ labelWidth, setLabelWidth ] = useState({
-		email: 0,
-		name: 0
+		emailCallback: 0,
+		nameCallback: 0
 	});
 
 	let labelRefs = {
-		email: useRef(null),
-		name: useRef(null)
+		emailCallback: useRef(null),
+		nameCallback: useRef(null)
 	};
 
 	useEffect(() => {
 		setLabelWidth({
-			email: labelRefs.email.current.offsetWidth,
-			name: labelRefs.name.current.offsetWidth
+			emailCallback: labelRefs.emailCallback.current.offsetWidth,
+			nameCallback: labelRefs.nameCallback.current.offsetWidth
 		});
 	}, []);
 
@@ -313,22 +316,24 @@ const CallbackForm = ({ handleCallbackClose }) => {
 							className={clsx(classes.textField, classes.nameField)}
 							variant="outlined"
 							margin="normal"
-							error={errors.name}
+							error={errors.nameCallback}
 						>
-							<InputLabel ref={labelRefs.name} htmlFor="outlined-name-input">
+							<InputLabel ref={labelRefs.nameCallback} htmlFor="outlined-name-callback-input">
 								Name*
 							</InputLabel>
 							<OutlinedInput
-								id="outlined-name-input"
-								value={formData.name}
+								id="outlined-name-callback-input"
+								value={formData.nameCallback}
 								onChange={handleChange}
-								name="name"
-								labelWidth={labelWidth.name}
+								name="nameCallback"
+								labelWidth={labelWidth.nameCallback}
 								autoComplete="current-name"
 								required
 								autoFocus={true}
 							/>
-							{errors.name && <FormHelperText id="name-error-text">Name is required</FormHelperText>}
+							{errors.nameCallback && (
+								<FormHelperText id="name-error-text">Name is required</FormHelperText>
+							)}
 						</FormControl>
 						<div className={classes.phoneInputWrapper}>
 							<PhoneField onChange={handleOnChange} value={phoneData.number} error={errors.phone} />
@@ -337,22 +342,22 @@ const CallbackForm = ({ handleCallbackClose }) => {
 							className={clsx(classes.textField, classes.emailField)}
 							variant="outlined"
 							margin="normal"
-							error={errors.email}
+							error={errors.emailCallback}
 						>
-							<InputLabel ref={labelRefs.email} htmlFor="outlined-email-input">
+							<InputLabel ref={labelRefs.emailCallback} htmlFor="outlined-email-callback-input">
 								E-mail Address*
 							</InputLabel>
 							<OutlinedInput
-								id="outlined-email-input"
-								value={formData.email}
+								id="outlined-email-callback-input"
+								value={formData.emailCallback}
 								onChange={handleChange}
-								name="email"
-								labelWidth={labelWidth.email}
+								name="emailCallback"
+								labelWidth={labelWidth.emailCallback}
 								type="email"
 								autoComplete="current-email"
 								required
 							/>
-							{errors.email && (
+							{errors.emailCallback && (
 								<FormHelperText id="name-error-text">Valid email address is required</FormHelperText>
 							)}
 						</FormControl>

@@ -264,12 +264,6 @@ const Index = (props) => {
 	const reviewPaperElevation = 5;
 	const { open, handleCallbackClose, handleCallbackOpen } = props;
 	const language = "en";
-	const [ currentCurrency, setCurrentCurrency ] = useState("euro");
-	const [ currentSign, setCurrentSign ] = useState("€");
-	const handleCurrencyChange = (e) => {
-		setCurrentCurrency(e.currentTarget.name);
-		setCurrentSign(e.currentTarget.dataset.sign);
-	};
 
 	const pics = {
 		yasin: [
@@ -358,11 +352,7 @@ const Index = (props) => {
 					</p>
 				</div>
 				<div className="cost-calculator-wrapper">
-					<CostCalculator
-						currentCurrency={currentCurrency}
-						handleCurrencyChange={handleCurrencyChange}
-						currentSign={currentSign}
-					/>
+					<CostCalculator />
 				</div>
 
 				<div className="dental-treatments-buttons-div">

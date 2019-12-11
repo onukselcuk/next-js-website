@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { StateContext } from "./StateProvider";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
@@ -351,8 +352,11 @@ const GreenCheckbox = withStyles({
 	checked: {}
 })((props) => <Checkbox color="default" {...props} />);
 
-export default function CustomizedExpansionPanels ({ currentCurrency, handleCurrencyChange, currentSign }) {
+export default function CustomizedExpansionPanels () {
 	const classes = useStyles();
+
+	const { currentCurrency, handleCurrencyChange, currentSign } = useContext(StateContext);
+
 	const [ isOpen, setIsOpen ] = useState({
 		panel1: true,
 		panel2: false,

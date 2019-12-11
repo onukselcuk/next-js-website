@@ -119,10 +119,10 @@ const Contact = (props) => {
 							<a
 								target="_blank"
 								rel="noopener noreferrer"
-								href="tel:+4402081238053"
+								href="tel:+442081238053"
 								className="contact-link"
 							>
-								UK: +44 020 8123 8053
+								UK: +44 2081 238053
 							</a>
 						</p>
 						<p className="paragraph">
@@ -183,7 +183,7 @@ const Contact = (props) => {
 					</p>
 				</div>
 				<div className="form-wrapper">
-					<Form countryCode={props.countryCode} />
+					<Form />
 				</div>
 			</section>
 
@@ -417,21 +417,6 @@ const Contact = (props) => {
 			`}</style>
 		</Layout>
 	);
-};
-
-Contact.getInitialProps = async ({ req }) => {
-	let countryCode = "";
-	if (req) {
-		if (req.header("cf-ipcountry")) {
-			countryCode = req.header("cf-ipcountry");
-			if (countryCode === "XX" || countryCode === "T1") {
-				countryCode = "";
-			}
-			countryCode = countryCode.toLowerCase();
-		}
-	}
-
-	return { countryCode };
 };
 
 export default Contact;

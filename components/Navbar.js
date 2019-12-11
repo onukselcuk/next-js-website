@@ -321,10 +321,10 @@ export default () => {
 							<a
 								target="_blank"
 								rel="noopener noreferrer"
-								href="tel:+4402081238053"
+								href="tel:+442081238053"
 								className={classes.topBarLink}
 							>
-								+44 020 8123 8053
+								+44 2081 238053
 							</a>
 						</div>
 						<div className={classes.topBarContact}>

@@ -1,5 +1,6 @@
 import { withStyles, makeStyles } from "@material-ui/core/styles";
-
+import { useContext } from "react";
+import { StateContext } from "./StateProvider";
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
 import TableCell from "@material-ui/core/TableCell";
@@ -7,7 +8,6 @@ import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 import sizes from "../src/sizes";
-
 import {
 	dentalImplantArr,
 	dentalVeneerCrownArr,
@@ -116,8 +116,9 @@ const useStyles = makeStyles((theme) => ({
 	}
 }));
 
-export default function CustomizedTables ({ currentCurrency, currentSign, handleCurrencyChange, language }) {
+export default function CustomizedTables ({ language }) {
 	const classes = useStyles();
+	const { currentCurrency, currentSign, handleCurrencyChange } = useContext(StateContext);
 
 	return (
 		<React.Fragment>

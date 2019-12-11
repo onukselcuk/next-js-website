@@ -340,10 +340,10 @@ export default ({ handleCallbackOpen }) => {
 						<a
 							target="_blank"
 							rel="noopener noreferrer"
-							href="tel:+4402081238053"
+							href="tel:+442081238053"
 							className={clsx(classes.footerLink, classes.addressLink)}
 						>
-							UK: +44 020 8123 8053
+							UK: +44 2081 238053
 						</a>
 						<a
 							target="_blank"

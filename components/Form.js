@@ -53,7 +53,9 @@ const useStyles = makeStyles((theme) => ({
 		marginRight: theme.spacing(1),
 		flexGrow: 1,
 		minWidth: "200px",
-		backgroundColor: theme.palette.secondary.alternative2
+		"& .MuiInputBase-root": {
+			backgroundColor: theme.palette.secondary.alternative2
+		}
 	},
 	menu: {
 		width: 200
@@ -239,7 +241,7 @@ const override = `
 	margin: 0 auto;
 `;
 
-const Form = ({ countryCode }) => {
+const Form = () => {
 	const classes = useStyles();
 	const router = useRouter();
 
@@ -487,12 +489,7 @@ const Form = ({ countryCode }) => {
 							)}
 						</FormControl>
 						<div className={classes.phoneInputWrapper}>
-							<PhoneField
-								onChange={handleOnChange}
-								value={phoneData.number}
-								error={errors.phone}
-								countryCode={countryCode}
-							/>
+							<PhoneField onChange={handleOnChange} value={phoneData.number} error={errors.phone} />
 						</div>
 
 						<FormControl

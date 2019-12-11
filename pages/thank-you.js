@@ -121,10 +121,10 @@ const thankYou = (props) => {
 							<a
 								target="_blank"
 								rel="noopener noreferrer"
-								href="tel:+4402081238053"
+								href="tel:+442081238053"
 								className="contact-link"
 							>
-								UK: +44 020 8123 8053
+								UK: +44 2081 238053
 							</a>
 						</p>
 						<p className="paragraph">
