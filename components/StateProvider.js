@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 import { getAllInfoByISO } from "iso-country-currency";
 
 export const StateContext = createContext();
@@ -9,7 +9,6 @@ export const StateProvider = (props) => {
 	let reqCurrency;
 	let reqCurrencySign;
 	if (reqCountryCode !== "") {
-		setCountryCode(reqCountryCode.toLowerCase());
 		const countryCurrencyAbbr = getAllInfoByISO(reqCountryCode).currency.toUpperCase();
 		if (countryCurrencyAbbr === "EUR") {
 			reqCurrency = "euro";
@@ -32,6 +31,12 @@ export const StateProvider = (props) => {
 		setCurrentCurrency(e.currentTarget.name);
 		setCurrentSign(e.currentTarget.dataset.sign);
 	};
+
+	useEffect(() => {
+		if (reqCountryCode !== "") {
+			setCountryCode(reqCountryCode.toLowerCase());
+		}
+	}, []);
 
 	return (
 		<StateContext.Provider
