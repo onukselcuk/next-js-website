@@ -947,8 +947,9 @@ const Index = (props) => {
 						autoPlay={props.deviceType !== "mobile" ? autoPlay : false}
 						autoPlaySpeed={20000}
 						keyBoardControl={true}
-						customTransition="all 400ms ease-in-out"
-						transitionDuration={400}
+						minimumTouchDrag={1}
+						// customTransition={props.deviceType === "mobile" ? "all 1000ms ease" : "all 400ms ease"}
+						// transitionDuration={props.deviceType === "mobile" ? 1000 : 400}
 						containerClass="carousel-container"
 						removeArrowOnDeviceType={[ "mobile" ]}
 						deviceType={props.deviceType}
