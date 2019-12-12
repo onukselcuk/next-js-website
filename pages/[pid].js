@@ -554,8 +554,7 @@ const AdTemplate = (props) => {
 						autoPlay={props.deviceType !== "mobile" ? autoPlay : false}
 						autoPlaySpeed={20000}
 						keyBoardControl={true}
-						customTransition="all 400ms ease-in-out"
-						transitionDuration={400}
+						minimumTouchDrag={1}
 						containerClass="carousel-container"
 						removeArrowOnDeviceType={[ "mobile" ]}
 						deviceType={props.deviceType}
@@ -753,8 +752,7 @@ const AdTemplate = (props) => {
 						autoPlay={props.deviceType !== "mobile" ? autoPlay : false}
 						autoPlaySpeed={20000}
 						keyBoardControl={true}
-						customTransition="all 400ms ease-in-out"
-						transitionDuration={400}
+						minimumTouchDrag={1}
 						containerClass="carousel-container"
 						removeArrowOnDeviceType={[ "mobile" ]}
 						deviceType={props.deviceType}
