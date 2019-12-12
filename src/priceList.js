@@ -4,7 +4,7 @@ export const dentalImplantObj = {
 			en: "Implant Straumann (Swiss) - abutment included"
 		},
 		euro: 790,
-		pound: 690,
+		pound: 670,
 		dollar: 880
 	},
 	hiossen: {
@@ -12,7 +12,7 @@ export const dentalImplantObj = {
 			en: "Implant Hiossen (U.S. American) - abutment included"
 		},
 		euro: 500,
-		pound: 435,
+		pound: 425,
 		dollar: 560
 	},
 	boneGrafting: {
@@ -20,7 +20,7 @@ export const dentalImplantObj = {
 			en: "Bone Grafting"
 		},
 		euro: "65 - 320",
-		pound: "55 - 280",
+		pound: "55 - 270",
 		dollar: "70 - 355"
 	},
 	sinusLifting: {
@@ -28,7 +28,7 @@ export const dentalImplantObj = {
 			en: "Sinus Lifting (excluding bone grafting)"
 		},
 		euro: 360,
-		pound: 310,
+		pound: 305,
 		dollar: 400
 	},
 	ceramicCrownWithMetalImplant: {
@@ -36,7 +36,7 @@ export const dentalImplantObj = {
 			en: "Ceramic Crown with Standard Metal Implant (per tooth)"
 		},
 		euro: 185,
-		pound: 160,
+		pound: 155,
 		dollar: 205
 	},
 	ceramicCrownWithStandardMetal: {
@@ -55,7 +55,7 @@ export const dentalVeneerCrownObj = {
 			en: "Zirconium Crown (per tooth)"
 		},
 		euro: 215,
-		pound: 190,
+		pound: 180,
 		dollar: 240
 	},
 	zirconiumCrownWithCad: {
@@ -63,7 +63,7 @@ export const dentalVeneerCrownObj = {
 			en: "Zirconium Crown with CAD/CAM System (per tooth)"
 		},
 		euro: 250,
-		pound: 220,
+		pound: 210,
 		dollar: 280
 	},
 	fullPorcelainCrown: {
@@ -71,7 +71,7 @@ export const dentalVeneerCrownObj = {
 			en: "Full Porcelain Crown with CAD/CAM System (per tooth)"
 		},
 		euro: 285,
-		pound: 250,
+		pound: 240,
 		dollar: 320
 	},
 	laminateVeneer: {
@@ -79,7 +79,7 @@ export const dentalVeneerCrownObj = {
 			en: "Laminate Veneer (per tooth)"
 		},
 		euro: 250,
-		pound: 220,
+		pound: 210,
 		dollar: 280
 	},
 	laminateVeneerEmax: {
@@ -87,7 +87,7 @@ export const dentalVeneerCrownObj = {
 			en: "Laminate Veneer EMAX (per tooth)"
 		},
 		euro: 300,
-		pound: 260,
+		pound: 255,
 		dollar: 335
 	},
 	onlayInlay: {
@@ -95,7 +95,7 @@ export const dentalVeneerCrownObj = {
 			en: "Onlay/Inlay Filling (CAD/CAM)"
 		},
 		euro: 250,
-		pound: 220,
+		pound: 210,
 		dollar: 280
 	}
 };
@@ -106,7 +106,7 @@ export const denturesInvisalignObj = {
 			en: "Prosthesis Skeleton/Partial (per denture)"
 		},
 		euro: 600,
-		pound: 520,
+		pound: 505,
 		dollar: 670
 	},
 	prosthesisFull: {
@@ -114,7 +114,7 @@ export const denturesInvisalignObj = {
 			en: "Prosthesis Full (per denture)"
 		},
 		euro: 450,
-		pound: 390,
+		pound: 380,
 		dollar: 500
 	},
 	invisalign: {
@@ -122,7 +122,7 @@ export const denturesInvisalignObj = {
 			en: "Invisalign"
 		},
 		euro: "1600 - 2600",
-		pound: "1390 - 2260",
+		pound: "1350 - 2200",
 		dollar: "1780 - 2890"
 	}
 };
@@ -149,7 +149,7 @@ export const otherProceduresObj = {
 			en: "Root Canal Treatment (per canal)"
 		},
 		euro: 90,
-		pound: 80,
+		pound: 75,
 		dollar: 100
 	},
 	laserBleachingPerJaw: {
@@ -157,7 +157,7 @@ export const otherProceduresObj = {
 			en: "Laser Bleaching (single jaw)"
 		},
 		euro: 150,
-		pound: 130,
+		pound: 125,
 		dollar: 165
 	},
 	laserBleachingBothJaws: {
@@ -165,7 +165,7 @@ export const otherProceduresObj = {
 			en: "Laser Bleaching (both jaws)"
 		},
 		euro: 200,
-		pound: 175,
+		pound: 170,
 		dollar: 225
 	},
 	homeTeethWhiteningKit: {
@@ -197,7 +197,7 @@ export const otherProceduresObj = {
 			en: "Gum Contouring"
 		},
 		euro: 225,
-		pound: 195,
+		pound: 190,
 		dollar: 250
 	},
 	nightGuard: {
@@ -205,7 +205,7 @@ export const otherProceduresObj = {
 			en: "Night Guard"
 		},
 		euro: 90,
-		pound: 80,
+		pound: 75,
 		dollar: 100
 	}
 };
@@ -216,7 +216,7 @@ export const pedodonticsObj = {
 			en: "Pedodontic General Anesthesia"
 		},
 		euro: 550,
-		pound: 480,
+		pound: 465,
 		dollar: 610
 	},
 	pedodonticFluor: {
@@ -224,7 +224,7 @@ export const pedodonticsObj = {
 			en: "Pedodontic Fluor Treatment"
 		},
 		euro: 170,
-		pound: 150,
+		pound: 145,
 		dollar: 190
 	},
 	pedodonticFissurSealant: {
