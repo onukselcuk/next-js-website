@@ -1,4 +1,5 @@
 import sTheme from "../src/styledTheme";
+import { useRouter } from "next/router";
 import Link from "next/link";
 import { NextSeo } from "next-seo";
 import { makeStyles } from "@material-ui/core/styles";
@@ -44,6 +45,9 @@ const thankYou = (props) => {
 
 	const { open, handleCallbackClose, handleCallbackOpen } = props;
 
+	const router = useRouter();
+	const { query } = router;
+
 	return (
 		<Layout openCallback={open} handleCallbackOpen={handleCallbackOpen} handleCallbackClose={handleCallbackClose}>
 			<NextSeo title="Thank You | Istanbul Smile Center | Let's Make Your Smile Perfect" />
@@ -54,7 +58,7 @@ const thankYou = (props) => {
 				<div className="our-services-header">
 					<h1 className="our-services-header-text">Thank You</h1>
 
-					{props.type === "form" ? (
+					{query.type === "form" ? (
 						<p className="our-services-header-paragraph-text">
 							Thank you for sending us a form. Now you can relax. Our doctors will examine your request
 							and get back to you as soon as possible. We have the shortest response time among all dental
@@ -351,11 +355,6 @@ const thankYou = (props) => {
 			`}</style>
 		</Layout>
 	);
-};
-
-thankYou.getInitialProps = async (req) => {
-	const type = req.query.type;
-	return { type };
 };
 
 export default thankYou;

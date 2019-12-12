@@ -1,4 +1,5 @@
 import { makeStyles } from "@material-ui/core/styles";
+import { useRouter } from "next/router";
 import Button from "@material-ui/core/Button";
 import Paper from "@material-ui/core/Paper";
 import SvgIcon from "@material-ui/core/SvgIcon";
@@ -20,6 +21,7 @@ import { NextSeo } from "next-seo";
 import LayoutAd from "../components/LayoutAd";
 import CostCalculator from "../components/CostCalculator";
 import Form from "../components/Form";
+import Error from "./_error";
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -260,7 +262,32 @@ const useStyles = makeStyles((theme) => ({
 	}
 }));
 
-const Index = (props) => {
+const AdTemplate = (props) => {
+	const router = useRouter();
+	const { pid } = router.query;
+	const routes = [
+		"dental-implants-in-turkey",
+		"dental-veneers-in-turkey",
+		"dental-treatments-in-turkey",
+		"dental-clinic-in-turkey"
+	];
+
+	if (!routes.includes(pid)) {
+		return <Error />;
+	}
+
+	let headerText = "Dental Implants In Turkey";
+	let isVeneer = false;
+
+	if (pid === "dental-veneers-in-turkey") {
+		headerText = "Dental Veneers In Turkey";
+		isVeneer = true;
+	} else if (pid === "dental-treatments-in-turkey") {
+		headerText = "Dental Treatments In Turkey";
+	} else if (pid === "dental-clinic-in-turkey") {
+		headerText = "Dental Clinic In Turkey";
+	}
+
 	const reviewPaperElevation = 5;
 	const { open, handleCallbackClose, handleCallbackOpen } = props;
 	const language = "en";
@@ -326,7 +353,7 @@ const Index = (props) => {
 						{/* Let's make your <br className="perfect-break" />
 						<span className="hero-image-perfect-smile-text">smile</span>
 						<br className="perfect-break" /> perfect */}
-						Dental Implants In Turkey
+						{headerText}
 					</h1>
 					<h2 className="hero-image-sub-header">
 						Get
@@ -352,7 +379,7 @@ const Index = (props) => {
 					</p>
 				</div>
 				<div className="cost-calculator-wrapper">
-					<CostCalculator />
+					<CostCalculator isVeneer={isVeneer} />
 				</div>
 
 				<div className="dental-treatments-buttons-div">
@@ -1644,7 +1671,7 @@ const Index = (props) => {
 	);
 };
 
-Index.getInitialProps = async ({ req }) => {
+AdTemplate.getInitialProps = async ({ req }) => {
 	let userAgent;
 	let deviceType;
 	if (req) {
@@ -1661,7 +1688,7 @@ Index.getInitialProps = async ({ req }) => {
 		deviceType = "desktop";
 	}
 
-	return { deviceType };
+	return { deviceType, pid };
 };
 
-export default Index;
+export default AdTemplate;

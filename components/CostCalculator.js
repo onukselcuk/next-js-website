@@ -352,15 +352,15 @@ const GreenCheckbox = withStyles({
 	checked: {}
 })((props) => <Checkbox color="default" {...props} />);
 
-export default function CustomizedExpansionPanels () {
+export default function CustomizedExpansionPanels ({ isVeneer }) {
 	const classes = useStyles();
 
 	const { currentCurrency, handleCurrencyChange, currentSign } = useContext(StateContext);
 
 	const [ isOpen, setIsOpen ] = useState({
-		panel1: true,
+		panel1: isVeneer ? false : true,
 		panel2: false,
-		panel3: false,
+		panel3: isVeneer ? true : false,
 		panel4: false,
 		panel5: false
 	});

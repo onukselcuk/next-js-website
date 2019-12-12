@@ -20,9 +20,10 @@ const sitemap = require("nextjs-sitemap-generator");
 if (dev === false) {
 	sitemap({
 		baseUrl: "https://www.istanbulsmilecenter.co",
+		ignoredPaths: [ "pid" ],
 		pagesDirectory: __dirname + "/pages",
 		targetDirectory: __dirname + "/.next/static",
-		nextConfigPath: __dirname + "/next.config.js",
+		nextConfigPath: __dirname + "/sitemap.config.js",
 		ignoredExtensions: [ "png", "jpg" ]
 	});
 }
