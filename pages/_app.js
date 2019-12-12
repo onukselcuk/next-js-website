@@ -56,7 +56,7 @@ class MyApp extends App {
 					openGraph={{
 						type: "website",
 						locale: "en_USA",
-						url: "https://www.istanbulsmilecenter.co/",
+						url: "https://www.istanbulsmilecenter.co",
 						site_name: "Istanbul Smile Center Dental Clinic"
 					}}
 				/>

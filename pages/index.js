@@ -528,7 +528,7 @@ const Index = (props) => {
 						</p>
 						<p className="clinic-intro-text">
 							Our <b>patient-first mentality</b> is loved by our patients. Comfort of our patients and the
-							quality of the treatments has the utmost priority in Istanbul Smile Center. Although our
+							quality of the treatments have the utmost priority in Istanbul Smile Center. Although our
 							patients love our modern clinic and the waiting area, we doubt that you will be using the
 							waiting area much. Because <b>we never make our patients wait.</b>
 						</p>

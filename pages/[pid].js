@@ -344,17 +344,12 @@ const AdTemplate = (props) => {
 	return (
 		<LayoutAd openCallback={open} handleCallbackOpen={handleCallbackOpen} handleCallbackClose={handleCallbackClose}>
 			<NextSeo
-				title="Istanbul Smile Center | Let's Make Your Smile Perfect"
+				title={`${headerText} | Istanbul Smile Center `}
 				description="Top rated dental clinic in Istanbul, Turkey. We provide high quality and affordable dental treatments. Use our cost calculator to calculate your dental treatment cost."
 			/>
 			<div className="hero-image-div">
 				<div className="hero-image-perfect-wrapper">
-					<h1 className="hero-image-perfect">
-						{/* Let's make your <br className="perfect-break" />
-						<span className="hero-image-perfect-smile-text">smile</span>
-						<br className="perfect-break" /> perfect */}
-						{headerText}
-					</h1>
+					<h1 className="hero-image-perfect">{headerText}</h1>
 					<h2 className="hero-image-sub-header">
 						Get
 						<span className="hero-image-perfect-smile-text"> Affordable</span> Dental Care
