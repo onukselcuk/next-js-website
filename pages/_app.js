@@ -80,18 +80,20 @@ class MyApp extends App {
 	}
 }
 
-MyApp.getInitialProps = async ({ ctx }) => {
+MyApp.getInitialProps = async (appContext) => {
+	const appProps = await App.getInitialProps(appContext);
+
 	let reqCountryCode = "";
 
-	if (ctx.req) {
-		if (ctx.req.header("cf-ipcountry")) {
-			reqCountryCode = ctx.req.header("cf-ipcountry");
+	if (appContext.ctx.req) {
+		if (appContext.ctx.req.header("cf-ipcountry")) {
+			reqCountryCode = appContext.ctx.req.header("cf-ipcountry");
 			if (reqCountryCode === "XX" || reqCountryCode === "T1") {
 				reqCountryCode = "";
 			}
 		}
 	}
-	return { reqCountryCode };
+	return { ...appProps, reqCountryCode };
 };
 
 export default MyApp;

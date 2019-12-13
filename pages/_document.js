@@ -19,7 +19,9 @@ class MyDocument extends Document {
 		return (
 			<html lang="en">
 				<Head>
-					<link rel="icon" type="image/png" href={require("../public/favicon/favicon.png")} />
+					<link rel="icon" sizes="192x192" href={require("../public/favicon/apple-touch-icon.png")} />
+					<link rel="apple-touch-icon" href={require("../public/favicon/apple-touch-icon.png")} />
+					<link rel="icon" sizes="32x32" type="image/png" href={require("../public/favicon/favicon.png")} />
 					{/* Google Tag Manager */}
 					{process.env.NEXT_STATIC_PRODUCTION === "production" && (
 						<script src="/scripts/googleTagManager.js" />
@@ -60,6 +62,10 @@ class MyDocument extends Document {
 					<NextScript />
 					{/* Tawk Live Script Script */}
 					<script src="/scripts/tawkScript.js" />
+					{/* Google Code for tawk.to Chat Conversion */}
+					{process.env.NEXT_STATIC_PRODUCTION === "production" && (
+						<script src="/scripts/chatConversionGtag.js" />
+					)}
 				</body>
 			</html>
 		);
