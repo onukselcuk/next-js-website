@@ -369,6 +369,12 @@ const Index = (props) => {
 			<NextSeo
 				title="Istanbul Smile Center | Let's Make Your Smile Perfect"
 				description="Top rated dental clinic in Istanbul, Turkey. We provide high quality and affordable dental treatments. Use our cost calculator to calculate your dental treatment cost."
+				openGraph={{
+					url: "https://www.istanbulsmilecenter.co",
+					title: "Istanbul Smile Center | Let's Make Your Smile Perfect",
+					description:
+						"Top rated dental clinic in Istanbul, Turkey. We provide high quality and affordable dental treatments. Use our cost calculator to calculate your dental treatment cost."
+				}}
 			/>
 			<div className="hero-image-div">
 				<div className="hero-image-perfect-wrapper">

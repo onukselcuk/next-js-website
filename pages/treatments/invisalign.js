@@ -92,6 +92,12 @@ const treatmentTemplate = (props) => {
 			<NextSeo
 				title="Invisalign in Istanbul, Turkey - Dental Cost Calculator | Istanbul Smile Center"
 				description="Calculate your invisalign treatment cost with our dental cost calculator. We provide high quality and affordable invisalign treatments. Learn more about the advantages of invisalign."
+				openGraph={{
+					url: "https://www.istanbulsmilecenter.co/invisalign",
+					title: "Invisalign in Istanbul, Turkey - Dental Cost Calculator | Istanbul Smile Center",
+					description:
+						"Calculate your invisalign treatment cost with our dental cost calculator. We provide high quality and affordable invisalign treatments. Learn more about the advantages of invisalign."
+				}}
 			/>
 			<section className="treatment-img-section">
 				<div className="treatment-img-div" />

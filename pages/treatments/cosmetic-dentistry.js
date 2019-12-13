@@ -95,6 +95,13 @@ const treatmentTemplate = (props) => {
 				title="Cosmetic Dentistry - Smile Makeover in Istanbul, Turkey - Hollywood Smile - Dental Cost Calculator |
 					Istanbul Smile Center"
 				description="Calculate your hollywood smile/smile makeover cost with our dental cost calculator. We provide high quality and affordable smile makeovers. Learn more about our easy treatment process and gummy smile correction."
+				openGraph={{
+					url: "https://www.istanbulsmilecenter.co/cosmetic-dentistry",
+					title:
+						"Cosmetic Dentistry - Smile Makeover in Istanbul, Turkey - Hollywood Smile - Dental Cost Calculator | Istanbul Smile Center",
+					description:
+						"Calculate your hollywood smile/smile makeover cost with our dental cost calculator. We provide high quality and affordable smile makeovers. Learn more about our easy treatment process and gummy smile correction."
+				}}
 			/>
 			<section className="treatment-img-section">
 				<div className="treatment-img-div" />

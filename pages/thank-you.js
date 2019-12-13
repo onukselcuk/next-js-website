@@ -50,7 +50,13 @@ const thankYou = (props) => {
 
 	return (
 		<Layout openCallback={open} handleCallbackOpen={handleCallbackOpen} handleCallbackClose={handleCallbackClose}>
-			<NextSeo title="Thank You | Istanbul Smile Center | Let's Make Your Smile Perfect" />
+			<NextSeo
+				title="Thank You | Istanbul Smile Center | Let's Make Your Smile Perfect"
+				openGraph={{
+					url: "https://www.istanbulsmilecenter.co/thank-you",
+					title: "Thank You | Istanbul Smile Center | Let's Make Your Smile Perfect"
+				}}
+			/>
 			<section className="atakoy-towers-img-section">
 				<div className="atakoy-towers-img-div" />
 			</section>

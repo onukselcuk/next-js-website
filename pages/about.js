@@ -10,7 +10,12 @@ const About = (props) => {
 		<Layout openCallback={open} handleCallbackOpen={handleCallbackOpen} handleCallbackClose={handleCallbackClose}>
 			<NextSeo
 				title="Our Modern Clinic - Top Quality Doctors and Staff | Istanbul Smile Center"
-				description="Learn more about our modern clinic, awesome and experienced doctors and staff. "
+				description="Learn more about our modern clinic, awesome and experienced doctors and staff."
+				openGraph={{
+					url: "https://www.istanbulsmilecenter.co/about",
+					title: "Our Modern Clinic - Top Quality Doctors and Staff | Istanbul Smile Center",
+					description: "Learn more about our modern clinic, awesome and experienced doctors and staff."
+				}}
 			/>
 			<section className="about-us-whole-section">
 				<section className="clinic-entrance-img-section">

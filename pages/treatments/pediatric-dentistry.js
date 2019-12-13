@@ -93,6 +93,13 @@ const treatmentTemplate = (props) => {
 				title="Pediatric Dentistry in Istanbul, Turkey - General Anesthesia and Sedation in Children - Dental Cost
 					Calculator | Istanbul Smile Center"
 				description="Calculate general anesthesia and sedation treatment costs with our dental cost calculator. We provide high quality and affordable pediatric dentistry treatments. Learn more about fluoride treatment and fissure sealant."
+				openGraph={{
+					url: "https://www.istanbulsmilecenter.co/pediatric-dentistry",
+					title:
+						"Pediatric Dentistry in Istanbul, Turkey - General Anesthesia and Sedation in Children - Dental Cost Calculator | Istanbul Smile Center",
+					description:
+						"Calculate general anesthesia and sedation treatment costs with our dental cost calculator. We provide high quality and affordable pediatric dentistry treatments. Learn more about fluoride treatment and fissure sealant."
+				}}
 			/>
 			<section className="treatment-img-section">
 				<div className="treatment-img-div" />

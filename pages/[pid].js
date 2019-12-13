@@ -346,6 +346,12 @@ const AdTemplate = (props) => {
 			<NextSeo
 				title={`${headerText} | Istanbul Smile Center `}
 				description="Top rated dental clinic in Istanbul, Turkey. We provide high quality and affordable dental treatments. Use our cost calculator to calculate your dental treatment cost."
+				openGraph={{
+					url: `https://www.istanbulsmilecenter.co/${pid}`,
+					title: `${headerText} | Istanbul Smile Center `,
+					description:
+						"Top rated dental clinic in Istanbul, Turkey. We provide high quality and affordable dental treatments. Use our cost calculator to calculate your dental treatment cost."
+				}}
 			/>
 			<div className="hero-image-div">
 				<div className="hero-image-perfect-wrapper">
@@ -1681,7 +1687,7 @@ AdTemplate.getInitialProps = async ({ req }) => {
 		deviceType = "desktop";
 	}
 
-	return { deviceType, pid };
+	return { deviceType };
 };
 
 export default AdTemplate;

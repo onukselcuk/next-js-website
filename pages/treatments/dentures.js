@@ -92,6 +92,12 @@ const treatmentTemplate = (props) => {
 			<NextSeo
 				title="Dentures in Istanbul, Turkey - Dental Cost Calculator | Istanbul Smile Center"
 				description="Calculate your denture/dental prosthesis treatment cost with our dental cost calculator. We provide high quality and affordable denture treatments. Learn more about our easy denture treatment process."
+				openGraph={{
+					url: "https://www.istanbulsmilecenter.co/dentures",
+					title: "Dentures in Istanbul, Turkey - Dental Cost Calculator | Istanbul Smile Center",
+					description:
+						"Calculate your denture/dental prosthesis treatment cost with our dental cost calculator. We provide high quality and affordable denture treatments. Learn more about our easy denture treatment process."
+				}}
 			/>
 			<section className="treatment-img-section">
 				<div className="treatment-img-div" />

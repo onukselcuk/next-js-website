@@ -49,6 +49,12 @@ const Contact = (props) => {
 			<NextSeo
 				title="Contact Us - 7/24 Instant Communication | Istanbul Smile Center"
 				description="We have the shortest response time among all dental clinics. Day or night, you can contact us through many channels, live chat, WhatsApp, callback, form or email, whenever you need us we are here."
+				openGraph={{
+					url: "https://www.istanbulsmilecenter.co/contact",
+					title: "Contact Us - 7/24 Instant Communication | Istanbul Smile Center",
+					description:
+						"We have the shortest response time among all dental clinics. Day or night, you can contact us through many channels, live chat, WhatsApp, callback, form or email, whenever you need us we are here."
+				}}
 			/>
 			<section className="atakoy-towers-img-section">
 				<div className="atakoy-towers-img-div" />

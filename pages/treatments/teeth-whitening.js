@@ -92,6 +92,12 @@ const treatmentTemplate = (props) => {
 			<NextSeo
 				title="Teeth Whitening in Istanbul, Turkey - Dental Cost Calculator | Istanbul Smile Center"
 				description="Calculate teeth whitening cost with our dental cost calculator. We provide high quality and affordable teeth whitening treatments."
+				openGraph={{
+					url: "https://www.istanbulsmilecenter.co/teeth-whitening",
+					title: "Teeth Whitening in Istanbul, Turkey - Dental Cost Calculator | Istanbul Smile Center",
+					description:
+						"Calculate teeth whitening cost with our dental cost calculator. We provide high quality and affordable teeth whitening treatments."
+				}}
 			/>
 			<section className="treatment-img-section">
 				<div className="treatment-img-div" />

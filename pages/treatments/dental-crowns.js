@@ -99,6 +99,12 @@ const treatmentTemplate = (props) => {
 			<NextSeo
 				title="Dental Crowns in Istanbul, Turkey - Dental Cost Calculator | Istanbul Smile Center"
 				description="Calculate your dental crown cost with our dental cost calculator. We provide high quality and affordable dental crown treatments. Learn more about porcelain, zirconium, and e-max crowns."
+				openGraph={{
+					url: "https://www.istanbulsmilecenter.co/dental-crowns",
+					title: "Dental Crowns in Istanbul, Turkey - Dental Cost Calculator | Istanbul Smile Center",
+					description:
+						"Calculate your dental crown cost with our dental cost calculator. We provide high quality and affordable dental crown treatments. Learn more about porcelain, zirconium, and e-max crowns."
+				}}
 			/>
 			<section className="treatment-img-section">
 				<div className="treatment-img-div" />

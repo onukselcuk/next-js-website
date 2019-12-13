@@ -62,6 +62,12 @@ const Privileges = (props) => {
 			<NextSeo
 				title="Patient Privileges & Dental Tourism Process | Istanbul Smile Center"
 				description="Our patients have privileges. We offer unique and free services to our international patients to make their dental treatments super easy and enjoying as no other clinic can."
+				openGraph={{
+					url: "https://www.istanbulsmilecenter.co/privileges",
+					title: "Patient Privileges & Dental Tourism Process | Istanbul Smile Center",
+					description:
+						"Our patients have privileges. We offer unique and free services to our international patients to make their dental treatments super easy and enjoying as no other clinic can."
+				}}
 			/>
 
 			<section className="your-privileges-section">

@@ -92,6 +92,12 @@ const treatmentTemplate = (props) => {
 			<NextSeo
 				title="Root Canal Treatment in Istanbul, Turkey - Dental Cost Calculator | Istanbul Smile Center"
 				description="Calculate root canal treatment costs with our dental cost calculator. We provide high quality and affordable root canal treatments. Learn more about our easy root canal treatment process."
+				openGraph={{
+					url: "https://www.istanbulsmilecenter.co/root-canal-treatment",
+					title: "Root Canal Treatment in Istanbul, Turkey - Dental Cost Calculator | Istanbul Smile Center",
+					description:
+						"Calculate root canal treatment costs with our dental cost calculator. We provide high quality and affordable root canal treatments. Learn more about our easy root canal treatment process."
+				}}
 			/>
 			<section className="treatment-img-section">
 				<div className="treatment-img-div" />

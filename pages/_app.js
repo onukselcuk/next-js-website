@@ -55,9 +55,19 @@ class MyApp extends App {
 				<DefaultSeo
 					openGraph={{
 						type: "website",
-						locale: "en_USA",
-						url: "https://www.istanbulsmilecenter.co",
-						site_name: "Istanbul Smile Center Dental Clinic"
+						locale: "en_US",
+						site_name: "Istanbul Smile Center Dental Clinic",
+						images: [
+							{
+								url: require("../public/favicon/open-graph-photo.jpg"),
+								width: 1200,
+								height: 668,
+								alt: "Clinic Entrance Photo"
+							}
+						]
+					}}
+					twitter={{
+						cardType: "summary_large_image"
 					}}
 				/>
 				<ThemeProvider theme={theme}>

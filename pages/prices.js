@@ -68,6 +68,12 @@ const Prices = (props) => {
 				<NextSeo
 					title="Our Prices & Dental Cost Calculator - Transparent Pricing | Istanbul Smile Center"
 					description="Top quality treatment and affordable prices in top rated dental clinic in Istanbul, Turkey. Use our cost calculator to calculate your dental treatment cost."
+					openGraph={{
+						url: "https://www.istanbulsmilecenter.co/prices",
+						title: "Our Prices & Dental Cost Calculator - Transparent Pricing | Istanbul Smile Center",
+						description:
+							"Top quality treatment and affordable prices in top rated dental clinic in Istanbul, Turkey. Use our cost calculator to calculate your dental treatment cost."
+					}}
 				/>
 				<section className="our-prices-section">
 					<div className="calculator-img-div" />

@@ -100,6 +100,12 @@ const treatmentTemplate = (props) => {
 			<NextSeo
 				title="Dental Veneers in Istanbul, Turkey - Dental Cost Calculator | Istanbul Smile Center"
 				description="Calculate your dental veneer cost with our dental cost calculator. We provide high quality and affordable dental veneer treatments. Learn more about our easy dental veneer treatment process."
+				openGraph={{
+					url: "https://www.istanbulsmilecenter.co/dental-veneers",
+					title: "Dental Veneers in Istanbul, Turkey - Dental Cost Calculator | Istanbul Smile Center",
+					description:
+						"Calculate your dental veneer cost with our dental cost calculator. We provide high quality and affordable dental veneer treatments. Learn more about our easy dental veneer treatment process."
+				}}
 			/>
 			<section className="treatment-img-section">
 				<div className="treatment-img-div" />

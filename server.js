@@ -16,6 +16,7 @@ const axios = require("axios");
 // const compression = require("compression");
 const callbackMailer = require("./src/callbackMailer");
 const sitemap = require("nextjs-sitemap-generator");
+// require("ejs");
 
 if (dev === false) {
 	sitemap({
@@ -33,6 +34,7 @@ app.prepare().then(() => {
 	server.use(express.static("public"));
 	server.use(bodyParser.urlencoded({ extended: false }));
 	server.use(bodyParser.json());
+	// server.set("view engine", "ejs");
 	// if (dev === false) {
 	// 	server.use(compression());
 	// }
@@ -161,6 +163,29 @@ app.prepare().then(() => {
 			}
 		}
 	});
+
+	// server.get("/mail", (req, res) => {
+	// 	const patient = {
+	// 		patientName: "Selcuk"
+	// 	};
+	// 	res.render("mailtopatient", patient);
+	// });
+
+	// server.get("/mailtous", (req, res) => {
+	// 	const patient = {
+	// 		name: "Selcuk",
+	// 		title: "asdfa",
+	// 		email: "asdfasdf",
+	// 		imageLinks: [],
+	// 		country: {
+	// 			phoneJoin: "sdfasd",
+	// 			number: 4123424,
+	// 			name: "Turkey"
+	// 		},
+	// 		message: "asdfasdfasd"
+	// 	};
+	// 	res.render("mailtous", patient);
+	// });
 
 	server.get("*", (req, res) => {
 		return handle(req, res);
