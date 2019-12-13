@@ -62,10 +62,6 @@ class MyDocument extends Document {
 					<NextScript />
 					{/* Tawk Live Script Script */}
 					<script src="/scripts/tawkScript.js" />
-					{/* Google Code for tawk.to Chat Conversion */}
-					{process.env.NEXT_STATIC_PRODUCTION === "production" && (
-						<script src="/scripts/chatConversionGtag.js" />
-					)}
 				</body>
 			</html>
 		);

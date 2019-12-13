@@ -6,8 +6,6 @@ module.exports = {
 			"/contact": { page: "/contact" },
 			"/prices": { page: "/prices" },
 			"/privileges": { page: "/privileges" },
-			"/thank-you": { page: "/thank-you", query: { type: "form" } },
-			"/thank-you": { page: "/thank-you", query: { type: "callback" } },
 			"/dental-implants-in-turkey": { page: "/[pid]" },
 			"/dental-veneers-in-turkey": { page: "/[pid]" },
 			"/dental-treatments-in-turkey": { page: "/[pid]" },
