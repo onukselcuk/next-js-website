@@ -14,7 +14,8 @@ const useStyles = makeStyles((theme) => ({
 			fontSize: "62.5%",
 			boxSizing: "border-box",
 			fontFamily: theme.typography.sansSerif,
-			scrollBehavior: "smooth"
+			scrollBehavior: "smooth",
+			width: "100%"
 		},
 		body: {
 			fontSize: "1.6rem",
@@ -24,12 +25,16 @@ const useStyles = makeStyles((theme) => ({
 		},
 		".colorPath": {
 			transition: "all 200ms"
+		},
+		"#__next": {
+			width: "100%"
 		}
 	},
 	root: {
 		margin: 0,
 		padding: 0,
-		minHeight: "100vh"
+		minHeight: "100vh",
+		width: "100%"
 	}
 }));
 

@@ -103,9 +103,11 @@ const useStyles = makeStyles((theme) => ({
 		padding: 0,
 		margin: 0,
 		width: "100%",
-		overflow: "hidden",
 		// backgroundColor: theme.palette.primary.main,
-		background: "linear-gradient(to right, rgba(26,59,112,1) 0%, rgba(40,85,130,1) 52%, rgba(0,164,189,1) 100%)"
+		background: "linear-gradient(to right, rgba(26,59,112,1) 0%, rgba(40,85,130,1) 52%, rgba(0,164,189,1) 100%)",
+		[sizes.down("lg")]: {
+			overflow: "hidden"
+		}
 	},
 	header: {
 		width: "100%"
@@ -115,7 +117,7 @@ const useStyles = makeStyles((theme) => ({
 		[sizes.down("lg")]: {
 			marginLeft: "50%",
 			marginRight: "auto",
-			transform: "translateX(-35%)"
+			transform: "translateX(-50%)"
 		}
 	},
 

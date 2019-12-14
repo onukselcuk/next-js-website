@@ -107,10 +107,7 @@ const useStyles = makeStyles((theme) => ({
 	logoDiv: {
 		marginLeft: "50%",
 		marginRight: "auto",
-		transform: "translateX(-50%)",
-		[sizes.down("mdsm")]: {
-			transform: "translateX(-35%)"
-		}
+		transform: "translateX(-50%)"
 	},
 
 	headerDiv: {
