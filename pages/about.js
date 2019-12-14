@@ -53,10 +53,6 @@ const About = (props) => {
 					<section className="your-privileges-header-section">
 						<div className="your-privileges-header-wrapper">
 							<h2 className="your-privileges-header-text">Our Doctors</h2>
-							{/* <p className="your-privileges-header-paragraph-text">
-								At Istanbul Smile Center, we offer unique and free services to our international
-								patients to make their dental treatments super easy and enjoying as no other clinic can.
-							</p> */}
 						</div>
 					</section>
 					<section id="dr-yasin-akgul" className="privilege-section">
@@ -109,8 +105,9 @@ const About = (props) => {
 									his internship in Ukraine. <b>As dentistry is his family profession,</b> he also
 									excelled in dentistry following in the steps of his family. He focused his work on{" "}
 									<b>
-										Aesthetic Dentistry, Dental Implants and Smile Aesthetics and got more than 30
-										certificates on Smile Aesthetics.
+										Aesthetic Dentistry, Dental Implants and Smile Aesthetics. He has more than 30
+										certificates on Smile Aesthetics, Dental Implants, and Aesthetic Dentistry
+										treatments.
 									</b>{" "}
 									He has more than <b>13 years of experience</b> in dental treatments.
 								</p>

@@ -43,7 +43,7 @@ const StyledTableCell = withStyles((theme) => ({
 const StyledTableRow = withStyles((theme) => ({
 	root: {
 		"&:nth-of-type(odd)": {
-			backgroundColor: theme.palette.third.main
+			backgroundColor: theme.palette.secondary.main
 		}
 	}
 }))(TableRow);

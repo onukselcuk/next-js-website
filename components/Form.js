@@ -165,6 +165,7 @@ const useStyles = makeStyles((theme) => ({
 		letterSpacing: "1px",
 		position: "relative",
 		zIndex: 100,
+		fontWeight: "bold",
 		marginRight: ".5rem",
 		marginLeft: "auto",
 		padding: "10px 30px",

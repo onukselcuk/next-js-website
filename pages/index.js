@@ -59,6 +59,7 @@ const useStyles = makeStyles((theme) => ({
 		color: theme.palette.secondary.main,
 		position: "relative",
 		zIndex: 100,
+		fontWeight: "bold",
 		"&::before": {
 			borderRadius: "inherit",
 			content: "close-quote",
@@ -113,6 +114,7 @@ const useStyles = makeStyles((theme) => ({
 		padding: "10px 25px",
 		color: theme.palette.secondary.main,
 		position: "relative",
+		fontWeight: "bold",
 		"&::before": {
 			borderRadius: "inherit",
 			content: "close-quote",
@@ -1134,7 +1136,7 @@ const Index = (props) => {
 								<h3 className="my-business">My Business</h3>
 							</div>
 							<div className="review-number-div">
-								<p className="review-number">67 Patient Reviews</p>
+								<p className="review-number">68 Patient Reviews</p>
 							</div>
 						</div>
 					</Paper>

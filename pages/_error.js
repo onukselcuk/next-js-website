@@ -44,7 +44,7 @@ const thankYou = (props) => {
 
 	return (
 		<Layout openCallback={open} handleCallbackOpen={handleCallbackOpen} handleCallbackClose={handleCallbackClose}>
-			<NextSeo title="Oops.. 404 Error | Istanbul Smile Center" />
+			<NextSeo title="Oops.. 404 Error | Istanbul Smile Center" noindex={true} />
 			<section className="atakoy-towers-img-section">
 				<div className="atakoy-towers-img-div" />
 			</section>

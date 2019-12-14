@@ -2,6 +2,40 @@ const reviews = {
 	reviews: [
 		{
 			reviewId:
+				"AIe9_BF8X4EpR_fF6mwcYdso9awgYcXFM0ysfelx3C8Exn8YZf5Bxn8yQ0WLodx0BQ61ovq8v6Ck20Obo3_ENPv1IWs-pIAvLX2weOJMkCzsq99R-I5fsQA",
+			reviewer: {
+				profilePhotoUrl:
+					"https://lh3.googleusercontent.com/-v-Xrg6TbYG8/AAAAAAAAAAI/AAAAAAAAAAA/kMxazVSBw3o/c-rp-mo-br100-s100/photo.jpg",
+				displayName: "Leyla Akyol"
+			},
+			starRating: "FIVE",
+			comment:
+				"Mr Yasin has an extremely professional and successful team. During the treatment they helped me with patience, smiling face and pleasure. I'm so glad, I strongly recommend him to everyone. I'm glad I continued the treatment with you. 🙏😊",
+			createTime: "2019-12-05T18:05:06.414Z",
+			updateTime: "2019-12-05T18:05:06.414Z",
+			name:
+				"accounts/110663858472950433758/locations/6251002188613810282/reviews/AIe9_BF8X4EpR_fF6mwcYdso9awgYcXFM0ysfelx3C8Exn8YZf5Bxn8yQ0WLodx0BQ61ovq8v6Ck20Obo3_ENPv1IWs-pIAvLX2weOJMkCzsq99R-I5fsQA",
+			reviewUrl: "https://goo.gl/maps/zjo4TQzpRq3gFcQm9"
+		},
+		{
+			reviewId:
+				"AIe9_BExcxslmE1rr7n5jMcadSKer12iooUCcMNJ9bg6U5mvH4cI-RgJ-Lq0fLpi4gxrMzwHK-v0HPWbFmu78JNmmm06gWI-ujxTG1kXECfk9B5dmlNQX5I",
+			reviewer: {
+				profilePhotoUrl:
+					"https://lh3.googleusercontent.com/-YqqDFj4Jbr8/AAAAAAAAAAI/AAAAAAAAAAA/41FHPCQZ3vE/c-rp-mo-br100-s100/photo.jpg",
+				displayName: "necla engin"
+			},
+			starRating: "FIVE",
+			comment:
+				"Hello,\nMr Yasin & his associates,\nSmiling Face, Hygiene, Meticulous work, in short, they have all the qualities you might look for. \nIt's not possible to be dissatisfied,\nI would recommend him to everyone,",
+			createTime: "2019-12-05T12:52:18.327Z",
+			updateTime: "2019-12-05T12:52:18.327Z",
+			name:
+				"accounts/110663858472950433758/locations/6251002188613810282/reviews/AIe9_BExcxslmE1rr7n5jMcadSKer12iooUCcMNJ9bg6U5mvH4cI-RgJ-Lq0fLpi4gxrMzwHK-v0HPWbFmu78JNmmm06gWI-ujxTG1kXECfk9B5dmlNQX5I",
+			reviewUrl: "https://goo.gl/maps/1Ekd3q7ABFpw5Ntf9"
+		},
+		{
+			reviewId:
 				"AIe9_BGvUJd9etQojwpjZIMsiFne3VWs38NtZIHAfSoSW64nlsBryoslzbDS15xJ2QEyiAiIIZSmiiZ4mtOKj_Mce4kjsYQbKUiFtQWFLsKVKzq5sFJIdoQ",
 			reviewer: {
 				profilePhotoUrl:
@@ -66,39 +100,6 @@ const reviews = {
 			name:
 				"accounts/110663858472950433758/locations/6251002188613810282/reviews/AIe9_BGvUJd9etQojwpjZIMsiFnex7dA4Ea5GuI6CsGkoFgaFpv9f6rHjRG_zpWBuyUr_tonuvUMpG5f8ck3rJuJYd1uNAiEOSSVNQ5vCqSM7EuWGTFcsB4",
 			reviewUrl: "https://goo.gl/maps/ssaaBY4VUdtKVtDm7"
-		},
-		{
-			reviewId:
-				"AIe9_BG84YPnR8vhxeJfV_lAYVNiHdQbTgqWyexzaMUjY2V7OU-7HK16iCDl7wN78gN6f4jDF8ObUTIj7gr1MJO61VQyq1V1RabmlrJ4cW-rOmKptQmYKmI",
-			reviewer: {
-				profilePhotoUrl:
-					"https://lh6.googleusercontent.com/-tgODL2OCsbs/AAAAAAAAAAI/AAAAAAAAAAA/KBdWaciGFlI/c-rp-mo-br100-s100/photo.jpg",
-				displayName: "Muat Cantimur"
-			},
-			starRating: "FIVE",
-			comment:
-				"Thanks to everyone I am very pleased with having my canal and filling treatments done in your clinic",
-			createTime: "2019-07-16T08:11:58.753Z",
-			updateTime: "2019-07-16T08:11:58.753Z",
-			name:
-				"accounts/110663858472950433758/locations/6251002188613810282/reviews/AIe9_BG84YPnR8vhxeJfV_lAYVNiHdQbTgqWyexzaMUjY2V7OU-7HK16iCDl7wN78gN6f4jDF8ObUTIj7gr1MJO61VQyq1V1RabmlrJ4cW-rOmKptQmYKmI",
-			reviewUrl: "https://goo.gl/maps/DM1J7iNVopfdWEf27"
-		},
-		{
-			reviewId:
-				"AIe9_BFMK6FB7k24ANEBV5CospTTYh8fc7pRnV8MHh9v6gaT5A3X5rLGK5b1IiRZGLw93OD0guxd5d6r3l6iydT4mJxDQIt65FguuJB85CGDEXCJiL3B0ec",
-			reviewer: {
-				profilePhotoUrl:
-					"https://lh4.googleusercontent.com/-CunNp0pTAoE/AAAAAAAAAAI/AAAAAAAAAAA/cjg9uxMSoOI/c-rp-mo-br100-s100/photo.jpg",
-				displayName: "Rasim Kandemir"
-			},
-			starRating: "FIVE",
-			comment: "High quality physicians friendly team top service",
-			createTime: "2019-07-12T10:49:18.589Z",
-			updateTime: "2019-07-12T10:49:18.589Z",
-			name:
-				"accounts/110663858472950433758/locations/6251002188613810282/reviews/AIe9_BFMK6FB7k24ANEBV5CospTTYh8fc7pRnV8MHh9v6gaT5A3X5rLGK5b1IiRZGLw93OD0guxd5d6r3l6iydT4mJxDQIt65FguuJB85CGDEXCJiL3B0ec",
-			reviewUrl: "https://goo.gl/maps/Tm7mo7sJ67WZMriv7"
 		},
 		{
 			reviewId:
@@ -271,7 +272,7 @@ const reviews = {
 		}
 	],
 	averageRating: 4.9,
-	totalReviewCount: 64
+	totalReviewCount: 68
 };
 
 export default reviews;

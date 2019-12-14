@@ -64,10 +64,10 @@ const Contact = (props) => {
 					<h1 className="our-services-header-text">Contact Us</h1>
 
 					<p className="our-services-header-paragraph-text">
-						Our clinic is located in prestigious, luxurious and spacious Ataköy Towers Plaza in Istanbul
-						Ataköy district. We have the shortest response time among all dental clinics. Day or night, you
-						can contact us through many channels, live chat, WhatsApp, form or email, whenever you need us
-						we are here.
+						Our clinic is located in prestigious, luxurious and spacious <b>Ataköy Towers Plaza</b> in
+						Istanbul Ataköy district. We have <b>the shortest response time</b> among all dental clinics.
+						Day or night, you can contact us through many channels, live chat, WhatsApp, form or email,
+						<b>whenever you need us we are here.</b>
 					</p>
 				</div>
 				<section className="contact-us-section">
@@ -322,6 +322,7 @@ const Contact = (props) => {
 					font-size: 2rem;
 					color: ${sTheme.palette.primary.main};
 					margin-top: 1rem;
+					font-weight: bold;
 				}
 
 				.contact-link {

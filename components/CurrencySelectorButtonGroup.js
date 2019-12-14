@@ -10,6 +10,7 @@ const useStyles = makeStyles((theme) => ({
 		fontSize: "1.7rem",
 		position: "relative",
 		zIndex: 100,
+		fontWeight: "bold",
 		"&::before": {
 			borderRadius: "inherit",
 			content: "close-quote",

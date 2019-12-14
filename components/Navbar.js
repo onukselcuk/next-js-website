@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
 		fontFamily: theme.typography.sansSerif,
 		letterSpacing: "1px",
 		padding: "8px 25px",
+		fontWeight: "bold",
 		"&:hover": {
 			backgroundColor: theme.palette.third.dark,
 			color: theme.palette.secondary.main
@@ -108,6 +109,14 @@ const useStyles = makeStyles((theme) => ({
 		width: "100%"
 	},
 
+	logoDiv: {
+		[sizes.down("lg")]: {
+			marginLeft: "50%",
+			marginRight: "auto",
+			transform: "translateX(-35%)"
+		}
+	},
+
 	headerDiv: {
 		margin: "0 auto",
 		height: "100%",
@@ -119,7 +128,8 @@ const useStyles = makeStyles((theme) => ({
 			width: "90%"
 		},
 		[sizes.down("lg")]: {
-			width: "95%"
+			width: "95%",
+			justifyContent: "flex-start"
 		}
 	},
 	navBar: {
@@ -296,7 +306,7 @@ export default () => {
 							<p className={classes.topBarText}>WhatsApp</p>
 							<a
 								target="_blank"
-								rel="noopener noreferrer"
+								rel="noopener noreferrer nofollow"
 								href="https://wa.me/905510413230?text=Hi%20Istanbul%20Smile%20Center"
 								className={classes.topBarLink}
 							>
@@ -345,7 +355,7 @@ export default () => {
 			<Toolbar className={classes.toolbar} disableGutters={true}>
 				<header className={classes.header}>
 					<div className={classes.headerDiv}>
-						<div>
+						<div className={classes.logoDiv}>
 							<Logo />
 						</div>
 						<nav className={classes.navBar}>

@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
 		fontFamily: theme.typography.sansSerif,
 		letterSpacing: "1px",
 		padding: "8px 25px",
+		fontWeight: "bold",
 		"&:hover": {
 			backgroundColor: theme.palette.third.dark,
 			color: theme.palette.secondary.main
@@ -104,7 +105,10 @@ const useStyles = makeStyles((theme) => ({
 	logoDiv: {
 		marginLeft: "50%",
 		marginRight: "auto",
-		transform: "translateX(-50%)"
+		transform: "translateX(-50%)",
+		[sizes.down("mdsm")]: {
+			transform: "translateX(-35%)"
+		}
 	},
 
 	headerDiv: {
@@ -295,7 +299,7 @@ export default () => {
 							<p className={classes.topBarText}>WhatsApp</p>
 							<a
 								target="_blank"
-								rel="noopener noreferrer"
+								rel="noopener noreferrer nofollow"
 								href="https://wa.me/905510413230?text=Hi%20Istanbul%20Smile%20Center"
 								className={classes.topBarLink}
 							>

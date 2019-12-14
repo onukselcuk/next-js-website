@@ -175,6 +175,7 @@ const useStyles = makeStyles((theme) => ({
 		letterSpacing: "1px",
 		padding: "10px 25px",
 		transition: "all 250ms ease-in-out",
+		fontWeight: "bold",
 		"&:hover": {
 			backgroundColor: theme.palette.secondary.main,
 			color: theme.palette.primary.main

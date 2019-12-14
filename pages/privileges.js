@@ -15,6 +15,7 @@ const useStyles = makeStyles((theme) => ({
 		padding: "10px 25px",
 		position: "relative",
 		zIndex: 100,
+		fontWeight: "bold",
 		"&::before": {
 			borderRadius: "inherit",
 			content: "close-quote",
@@ -88,12 +89,15 @@ const Privileges = (props) => {
 						<div className="privilege-name-wrapper">
 							<h2 className="privilege-name-header">1) Contacting Us</h2>
 							<p className="privilege-text-paragraph">
-								The fastest way of contacting us is through Live Chat or WhatsApp. You may prefer
+								The fastest way of contacting us is through <b>Live Chat or WhatsApp.</b> You may prefer
 								sending us a form or even just an e-mail. When you contact us, you can ask us anything
 								and tell us your dental needs. You can send your teeth pictures and/or X-Ray images
 								through all channels, including live chat. Please keep in mind, providing us as much
-								information as possible, and an X-Ray image will help us in giving you an exact quote
-								and a treatment plan. You can also request a video call consultation.
+								information as possible, and{" "}
+								<b>
+									an X-Ray image will help us in giving you an exact quote and a treatment plan.
+								</b>{" "}
+								You can also request a video call consultation.
 							</p>
 							<div className="privilege-action-button-div">
 								<Button
@@ -113,9 +117,11 @@ const Privileges = (props) => {
 						<div className="privilege-name-wrapper">
 							<h2 className="privilege-name-header">2) Treatment Plan & Video Call</h2>
 							<p className="privilege-text-paragraph">
-								If you have requested a video call consultation, we will schedule a call as soon as
-								possible (usually the same day), and one of our doctors is going to call you. You can
-								show your teeth to your doctor, explain more about your dental needs, and make a
+								<b>
+									If you have requested a video call consultation, we will schedule a call as soon as
+									possible (usually the same day), and one of our doctors is going to call you.
+								</b>{" "}
+								You can show your teeth to your doctor, explain more about your dental needs, and make a
 								treatment plan with your doctor right then and there. After that call or your contact
 								(if you didn't request a video call), we will send you a detailed treatment plan and a
 								quote.
@@ -142,8 +148,12 @@ const Privileges = (props) => {
 							<p className="privilege-text-paragraph">
 								Scheduling an appointment for your treatment in Istanbul Smile Center is so easy. Our
 								international patients' department will be in contact with you to find the perfect date
-								for you. There is no waiting period, we will schedule your appointment to the exact date
-								you request or maybe the next day but not further. We value our patient's time.
+								for you.{" "}
+								<b>
+									There is no waiting period, we will schedule your appointment to the exact date you
+									request or maybe the next day but not further.
+								</b>{" "}
+								We value our patient's time.
 							</p>
 							<div className="privilege-action-button-div">
 								<Button
@@ -163,14 +173,18 @@ const Privileges = (props) => {
 						<div className="privilege-name-wrapper">
 							<h2 className="privilege-name-header">4) Hotel Booking & Travel Plan</h2>
 							<p className="privilege-text-paragraph">
-								Our team will be helping you with your travel plan and hotel booking. We offer deals to
-								our international patients for hotel bookings in our partner hotels. This is only for
-								the benefit of our patients. During the scheduling, we will send you current hotel deals
-								and selection of hotels you can choose. And upon your choice, we will book the hotel for
-								you. You don't need to do anything else. Your room will be ready and waiting for you
-								when you arrive. We only partner with 4-5 star hotels and value our patients' comfort
-								during their stay in Istanbul. Of course, if you wish, you can always book a hotel you
-								prefer yourself.
+								Our team will be helping you with your travel plan and hotel booking.{" "}
+								<b>
+									We offer deals to our international patients for hotel bookings in our partner
+									hotels.
+								</b>{" "}
+								This is only for the benefit of our patients.{" "}
+								<b>We do not have any profits from your hotel booking.</b> During the scheduling, we
+								will send you current hotel deals and selection of hotels you can choose. And upon your
+								choice, we will book the hotel for you. You don't need to do anything else.{" "}
+								<b>Your room will be ready and waiting for you when you arrive.</b> We only partner with
+								4-5 star hotels and value our patients' comfort during their stay in Istanbul. Of
+								course, if you wish, you can always book a hotel you prefer yourself.
 							</p>
 							<div className="privilege-action-button-div">
 								<Button
@@ -192,12 +206,15 @@ const Privileges = (props) => {
 						<div className="privilege-name-wrapper">
 							<h2 className="privilege-name-header">5) Arrival to Istanbul</h2>
 							<p className="privilege-text-paragraph">
-								Welcome to Istanbul! We are happy to have you here as our patient and guest. You will
-								never feel lost in Istanbul. Before your flight's landing, our professional team will be
-								waiting for you and greet you right inside the airport when you land. You will be
-								accompanied to your VIP car, which will take you directly to your hotel (free of
-								charge). You won't be wasting your time with the airport shuttle or public
-								transportation to arrive at your hotel.
+								Welcome to Istanbul! We are happy to have you here as our patient and guest.{" "}
+								<b>You will never feel lost in Istanbul.</b> Before your flight's landing, our
+								professional team will be waiting for you and greet you right inside the airport when
+								you land. You will be accompanied to your VIP car, which will take you directly to your
+								hotel (free of charge).{" "}
+								<b>
+									You won't be wasting your time with the airport shuttle or public transportation to
+									arrive at your hotel.
+								</b>
 							</p>
 							<div className="privilege-action-button-div">
 								<Button
@@ -217,13 +234,18 @@ const Privileges = (props) => {
 						<div className="privilege-name-wrapper">
 							<h2 className="privilege-name-header">6) Your Treatment</h2>
 							<p className="privilege-text-paragraph">
-								On the day of your appointment with our clinic, which is usually the next day, you will
-								be picked up by one of our international patient coordinators right from your hotel. At
-								the clinic, you will be greeted by our doctors, and your treatment will start. Feel free
-								to ask anything to your doctor and discuss further your treatment plan. After your
+								<b>
+									On the day of your appointment with our clinic, which is usually the next day, you
+									will be picked up by one of our international patient coordinators right from your
+									hotel.
+								</b>{" "}
+								At the clinic, you will be greeted by our doctors, and your treatment will start. Feel
+								free to ask anything to your doctor and discuss further your treatment plan. After your
 								treatment, you will be taken back to your hotel. You may need to come to our clinic a
-								few times during your stay. This depends on your treatment plan. On your every
-								appointment, you will be picked up from and taken back to your hotel.
+								few times during your stay. This depends on your treatment plan.{" "}
+								<b>
+									On your every appointment, you will be picked up from and taken back to your hotel.
+								</b>
 							</p>
 							<div className="privilege-action-button-div">
 								<Button
@@ -245,15 +267,18 @@ const Privileges = (props) => {
 						<div className="privilege-name-wrapper">
 							<h2 className="privilege-name-header">7) Dental Holiday in Istanbul</h2>
 							<p className="privilege-text-paragraph">
-								Your trip to Istanbul is a perfect opportunity for a great holiday. Istanbul is one of
-								the oldest and most historical cities in the world. It's many tourists' favorite city
-								located on two separate continents. With its multicultural society and neighborhoods,
-								wherever you go, there is always something to be amazed, not to mention delicious
-								Turkish food to enjoy. Nightlife in Istanbul is beyond many prominent cities of the
-								world. Among historical places, Bosphorous, Topkapi Palace, Hagia Sophia and Karia
-								Museums, Galata Tower and Maiden Tower are only a few of the places you can visit. We
-								also offer travel tours discounts to our international patients for them to enjoy
-								Istanbul more.
+								<b>Your trip to Istanbul is a perfect opportunity for a great holiday.</b> Istanbul is
+								one of the oldest and most historical cities in the world. It's many tourists' favorite
+								city located on two separate continents. With its multicultural society and
+								neighborhoods, wherever you go, there is always something to be amazed, not to mention
+								delicious Turkish food to enjoy.{" "}
+								<b>Nightlife in Istanbul is beyond many prominent cities of the world.</b> Among
+								historical places, Bosphorous, Topkapi Palace, Hagia Sophia and Karia Museums, Galata
+								Tower and Maiden Tower are only a few of the places you can visit.{" "}
+								<b>
+									We also offer travel tours discounts to our international patients for them to enjoy
+									Istanbul more.
+								</b>
 							</p>
 							<div className="privilege-action-button-div">
 								<Button
@@ -275,9 +300,11 @@ const Privileges = (props) => {
 							<p className="privilege-text-paragraph">
 								We always encourage our patients to come back to our clinic for a final check of your
 								treatment. If your treatment is completed then we only need your flight information so
-								that we can provide VIP Airport transfer from your hotel. Before your flight you will be
-								picked up from your hotel and taken to the airport. We are sure we'll miss you being
-								here as our guest. Bon voyage!
+								that we can provide VIP Airport transfer from your hotel.{" "}
+								<b>
+									Before your flight you will be picked up from your hotel and taken to the airport.
+									We are sure we'll miss you being here as our guest. Bon voyage!
+								</b>
 							</p>
 							<div className="privilege-action-button-div">
 								<Button

@@ -38,6 +38,7 @@ const useStyles = makeStyles((theme) => ({
 		color: theme.palette.secondary.main,
 		position: "relative",
 		zIndex: 100,
+		fontWeight: "bold",
 		"&::before": {
 			borderRadius: "inherit",
 			content: "close-quote",
@@ -80,6 +81,7 @@ const useStyles = makeStyles((theme) => ({
 		fontSize: "1.5rem",
 		backgroundImage: `linear-gradient(to right,${theme.palette.third.dark},${theme.palette.third.dark})`,
 		zIndex: 100,
+		fontWeight: "bold",
 		letterSpacing: "1px",
 		padding: "10px 25px",
 		color: theme.palette.secondary.main,
@@ -387,7 +389,7 @@ const AdTemplate = (props) => {
 					<Button
 						variant="contained"
 						color="primary"
-						className={clsx(classes.regularButton, classes.pricesButton)}
+						className={clsx(classes.regularButton, classes.treatmentsButton)}
 						onClick={handleChat}
 					>
 						Chat&nbsp;Now
