@@ -95,6 +95,8 @@ const useStyles = makeStyles((theme) => ({
 	toolbar: {
 		padding: 0,
 		margin: 0,
+		width: "100%",
+		overflow: "hidden",
 		// backgroundColor: theme.palette.primary.main,
 		background: "linear-gradient(to right, rgba(26,59,112,1) 0%, rgba(40,85,130,1) 52%, rgba(0,164,189,1) 100%)"
 	},
