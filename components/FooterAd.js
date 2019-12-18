@@ -209,18 +209,18 @@ export default ({ handleCallbackOpen }) => {
 						<a
 							target="_blank"
 							rel="noopener noreferrer"
-							href="tel:+442081238053"
+							href="tel:02081238053"
 							className={clsx(classes.footerLink, classes.addressLink)}
 						>
-							UK: +44 2081 238053
+							UK: 020 8123 8053
 						</a>
 						<a
 							target="_blank"
 							rel="noopener noreferrer"
-							href="tel:+18312048370"
+							href="tel:8312048370"
 							className={clsx(classes.footerLink, classes.addressLink)}
 						>
-							USA: +1 831 204 83 70
+							USA: 831 204 83 70
 						</a>
 						<a className={clsx(classes.footerLink, classes.addressLink)} onClick={handleCallbackOpen}>
 							Request A Call Back

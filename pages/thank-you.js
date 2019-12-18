@@ -135,18 +135,13 @@ const thankYou = (props) => {
 								href="tel:+442081238053"
 								className="contact-link"
 							>
-								UK: +44 2081 238053
+								UK: 020 8123 8053
 							</a>
 						</p>
 						<p className="paragraph">
 							<FontAwesomeIcon className={classes.fontAwesomeIconSmall} icon={faPhoneAlt} />{" "}
-							<a
-								target="_blank"
-								rel="noopener noreferrer"
-								href="tel:+18312048370"
-								className="contact-link"
-							>
-								USA: +1 831 204 83 70
+							<a target="_blank" rel="noopener noreferrer" href="tel:8312048370" className="contact-link">
+								USA: 831 204 83 70
 							</a>
 						</p>
 						<p className="paragraph">

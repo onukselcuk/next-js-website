@@ -61,7 +61,7 @@ class MyDocument extends Document {
 					<script src="/scripts/modernizr-custom.js" />
 					<NextScript />
 					{/* Tawk Live Script Script */}
-					<script src="/scripts/tawkScript.js" />
+					{process.env.NEXT_STATIC_PRODUCTION === "production" && <script src="/scripts/tawkScript.js" />}
 				</body>
 			</html>
 		);

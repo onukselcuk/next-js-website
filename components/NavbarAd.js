@@ -323,10 +323,10 @@ export default () => {
 							<a
 								target="_blank"
 								rel="noopener noreferrer"
-								href="tel:+442081238053"
+								href="tel:02081238053"
 								className={classes.topBarLink}
 							>
-								+44 2081 238053
+								020 8123 8053
 							</a>
 						</div>
 						<div className={classes.topBarContact}>
@@ -335,10 +335,10 @@ export default () => {
 							<a
 								target="_blank"
 								rel="noopener noreferrer"
-								href="tel:+18312048370"
+								href="tel:8312048370"
 								className={classes.topBarLink}
 							>
-								+1 831 204 83 70
+								831 204 83 70
 							</a>
 						</div>
 					</div>
