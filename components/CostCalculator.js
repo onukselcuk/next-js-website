@@ -57,6 +57,16 @@ const useStyles = makeStyles((theme) => ({
 		}
 		// position: "relative"
 	},
+	calculatorWidget: {
+		display: "none",
+		position: "fixed",
+		top: 0,
+		left: 0,
+		zIndex: 1000,
+		opacity: 0.95,
+		[sizes.down("mdsm")]: {}
+	},
+
 	calculatorResultPaper: {
 		position: "sticky",
 		borderRadius: "10px",
@@ -161,12 +171,24 @@ const useStyles = makeStyles((theme) => ({
 			padding: "4rem 0"
 		}
 	},
+	totalCostWrapperWidget: {
+		padding: ".5rem 0"
+	},
 	totalCostNumber: {},
+	totalCostNumberWidget: {
+		fontSize: "3rem"
+	},
 	totalCostText: {
 		fontSize: "3rem"
 	},
+	totalCostTextWidget: {
+		fontSize: "2.5rem"
+	},
 	discountButtonWrapper: {
 		padding: "2rem 0"
+	},
+	discountButtonWrapperWidget: {
+		padding: ".5rem 0 1rem 0"
 	},
 	regularButton: {
 		borderRadius: "20px",
@@ -193,6 +215,9 @@ const useStyles = makeStyles((theme) => ({
 
 		// position: "relative",
 		// left: "50%",
+	},
+	widgetButton: {
+		padding: ".7rem 3rem"
 	},
 	fontAwesomeIcon: {
 		fontSize: "2.5rem",
@@ -489,6 +514,27 @@ export default function CustomizedExpansionPanels ({ isVeneer }) {
 		}
 	};
 
+	useEffect(() => {
+		window.addEventListener("scroll", () => {
+			const calcStart = document.querySelector(".calculator-start");
+			const calcEnd = document.querySelector(".calculator-root");
+			const calcStartHeight = calcStart.getBoundingClientRect().top;
+			const calcEndHeight = calcEnd.getBoundingClientRect().height;
+			const calcEndY = calcEnd.getBoundingClientRect().y;
+			const widget = document.querySelector(".calculator-widget");
+			const windowWidth = window.innerWidth;
+			if (windowWidth < 950 && calcStartHeight < -120) {
+				widget.style.display = "block";
+			} else {
+				widget.style.display = "none";
+			}
+
+			if (windowWidth < 950 && -1 * calcEndY > calcEndHeight) {
+				widget.style.display = "none";
+			}
+		});
+	}, []);
+
 	return (
 		<div>
 			<CurrencySelectorButtonGroup
@@ -496,7 +542,7 @@ export default function CustomizedExpansionPanels ({ isVeneer }) {
 				handleCurrencyChange={handleCurrencyChange}
 				isInsideCalculator={true}
 			/>
-			<div className={classes.root}>
+			<div className={clsx(classes.root, "calculator-root")}>
 				<div className={classes.calculatorLeftPart}>
 					<ExpansionPanel expanded={isOpen.panel1}>
 						<ExpansionPanelSummary
@@ -935,7 +981,7 @@ export default function CustomizedExpansionPanels ({ isVeneer }) {
 						</ExpansionPanelDetails>
 					</ExpansionPanel>
 				</div>
-				<div className={classes.calculatorRightPart}>
+				<div className={clsx(classes.calculatorRightPart, "calculator-start")}>
 					<Paper className={classes.calculatorResultPaper}>
 						<div className={classes.totalCostWrapper}>
 							<h3 className={classes.totalCostNumber}>
@@ -959,6 +1005,30 @@ export default function CustomizedExpansionPanels ({ isVeneer }) {
 						</div>
 					</Paper>
 				</div>
+			</div>
+			<div className={clsx(classes.calculatorRightPart, classes.calculatorWidget, "calculator-widget")}>
+				<Paper className={classes.calculatorResultPaper}>
+					<div className={clsx(classes.totalCostWrapper, classes.totalCostWrapperWidget)}>
+						<h3 className={clsx(classes.totalCostNumber, classes.totalCostNumberWidget)}>
+							{currentCurrency !== "euro" ? currentSign : null}
+							{numberWithCommas(totalCostState)} {currentCurrency == "euro" ? currentSign : null}
+						</h3>
+						<h3 className={clsx(classes.totalCostText, classes.totalCostTextWidget)}>Total Cost</h3>
+					</div>
+					<div className={clsx(classes.discountButtonWrapper, classes.discountButtonWrapperWidget)}>
+						<Button
+							variant="contained"
+							color="primary"
+							className={clsx(classes.regularButton, classes.pricesButton, classes.widgetButton)}
+							onClick={handleChat}
+						>
+							<FontAwesomeIcon
+								className={classes.fontAwesomeIcon}
+								icon={faArrowAltCircleRight}
+							/>&nbsp;I&nbsp;want&nbsp;discount
+						</Button>
+					</div>
+				</Paper>
 			</div>
 		</div>
 	);
