@@ -235,7 +235,7 @@ const treatmentTemplate = (props) => {
 							<p className="treatment-paragraph">
 								Veneer coating is considered as one of the fastest and easiest treatment processes among
 								aesthetic applications. Depending on the number and structure of the teeth to be coated,
-								the veneers can be completed in 2-3 visits.
+								the veneers can be completed in about 5 to 7 days.
 							</p>
 						</div>
 						<div className="treatment-general-text-side-div">

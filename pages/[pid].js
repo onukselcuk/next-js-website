@@ -372,6 +372,21 @@ const AdTemplate = (props) => {
 					</Button>
 				</div>
 			</div>
+			<div className="hero-image-hidden-mobile">
+				<h1 className="hero-image-perfect">{headerText}</h1>
+				<h2 className="hero-image-sub-header">
+					Get
+					<span className="hero-image-perfect-smile-text"> Affordable</span> Dental Care
+				</h2>
+				<p className="hero-image-paragraph">
+					No need to break the bank at your local dentist. <br className="perfect-break" /> Come to
+					<span className="hero-image-isc-text"> Istanbul Smile Center</span> and save up to 70% on your
+					treatment.
+				</p>
+				<Button variant="contained" color="primary" className={classes.button} onClick={handleChat}>
+					Chat with us
+				</Button>
+			</div>
 			<section className="our-prices-section cost-calculator-section">
 				<div className="our-prices-header">
 					<h2 className="our-prices-header-text">Dental Cost Calculator</h2>
@@ -566,6 +581,16 @@ const AdTemplate = (props) => {
 					>
 						<picture className="carouselPaper-item">
 							<source
+								srcSet={require("../public/patient-pictures/patient-1-mobile-img.webp")}
+								type="image/webp"
+								media="(max-width:26.875em)"
+							/>
+							<source
+								srcSet={require("../public/patient-pictures/patient-1-mobile-img.jpg")}
+								type="image/jpeg"
+								media="(max-width:26.875em)"
+							/>
+							<source
 								srcSet={require("../public/patient-pictures/patient-1-img.webp")}
 								type="image/webp"
 							/>
@@ -580,6 +605,16 @@ const AdTemplate = (props) => {
 							/>
 						</picture>
 						<picture className="carouselPaper-item">
+							<source
+								srcSet={require("../public/patient-pictures/patient-2-mobile-img.webp")}
+								type="image/webp"
+								media="(max-width:26.875em)"
+							/>
+							<source
+								srcSet={require("../public/patient-pictures/patient-2-mobile-img.jpg")}
+								type="image/jpeg"
+								media="(max-width:26.875em)"
+							/>
 							<source
 								srcSet={require("../public/patient-pictures/patient-2-img.webp")}
 								type="image/webp"
@@ -596,6 +631,16 @@ const AdTemplate = (props) => {
 						</picture>
 						<picture className="carouselPaper-item">
 							<source
+								srcSet={require("../public/patient-pictures/patient-3-mobile-img.webp")}
+								type="image/webp"
+								media="(max-width:26.875em)"
+							/>
+							<source
+								srcSet={require("../public/patient-pictures/patient-3-mobile-img.jpg")}
+								type="image/jpeg"
+								media="(max-width:26.875em)"
+							/>
+							<source
 								srcSet={require("../public/patient-pictures/patient-3-img.webp")}
 								type="image/webp"
 							/>
@@ -610,6 +655,16 @@ const AdTemplate = (props) => {
 							/>
 						</picture>
 						<picture className="carouselPaper-item">
+							<source
+								srcSet={require("../public/patient-pictures/patient-4-mobile-img.webp")}
+								type="image/webp"
+								media="(max-width:26.875em)"
+							/>
+							<source
+								srcSet={require("../public/patient-pictures/patient-4-mobile-img.jpg")}
+								type="image/jpeg"
+								media="(max-width:26.875em)"
+							/>
 							<source
 								srcSet={require("../public/patient-pictures/patient-4-img.webp")}
 								type="image/webp"
@@ -626,6 +681,16 @@ const AdTemplate = (props) => {
 						</picture>
 						<picture className="carouselPaper-item">
 							<source
+								srcSet={require("../public/patient-pictures/patient-5-mobile-img.webp")}
+								type="image/webp"
+								media="(max-width:26.875em)"
+							/>
+							<source
+								srcSet={require("../public/patient-pictures/patient-5-mobile-img.jpg")}
+								type="image/jpeg"
+								media="(max-width:26.875em)"
+							/>
+							<source
 								srcSet={require("../public/patient-pictures/patient-5-img.webp")}
 								type="image/webp"
 							/>
@@ -640,6 +705,16 @@ const AdTemplate = (props) => {
 							/>
 						</picture>
 						<picture className="carouselPaper-item">
+							<source
+								srcSet={require("../public/patient-pictures/patient-6-mobile-img.webp")}
+								type="image/webp"
+								media="(max-width:26.875em)"
+							/>
+							<source
+								srcSet={require("../public/patient-pictures/patient-6-mobile-img.jpg")}
+								type="image/jpeg"
+								media="(max-width:26.875em)"
+							/>
 							<source
 								srcSet={require("../public/patient-pictures/patient-6-img.webp")}
 								type="image/webp"
@@ -656,6 +731,16 @@ const AdTemplate = (props) => {
 						</picture>
 						<picture className="carouselPaper-item">
 							<source
+								srcSet={require("../public/patient-pictures/patient-7-mobile-img.webp")}
+								type="image/webp"
+								media="(max-width:26.875em)"
+							/>
+							<source
+								srcSet={require("../public/patient-pictures/patient-7-mobile-img.jpg")}
+								type="image/jpeg"
+								media="(max-width:26.875em)"
+							/>
+							<source
 								srcSet={require("../public/patient-pictures/patient-7-img.webp")}
 								type="image/webp"
 							/>
@@ -671,6 +756,16 @@ const AdTemplate = (props) => {
 						</picture>
 						<picture className="carouselPaper-item">
 							<source
+								srcSet={require("../public/patient-pictures/patient-8-mobile-img.webp")}
+								type="image/webp"
+								media="(max-width:26.875em)"
+							/>
+							<source
+								srcSet={require("../public/patient-pictures/patient-8-mobile-img.jpg")}
+								type="image/jpeg"
+								media="(max-width:26.875em)"
+							/>
+							<source
 								srcSet={require("../public/patient-pictures/patient-8-img.webp")}
 								type="image/webp"
 							/>
@@ -685,6 +780,16 @@ const AdTemplate = (props) => {
 							/>
 						</picture>
 						<picture className="carouselPaper-item">
+							<source
+								srcSet={require("../public/patient-pictures/patient-9-mobile-img.webp")}
+								type="image/webp"
+								media="(max-width:26.875em)"
+							/>
+							<source
+								srcSet={require("../public/patient-pictures/patient-9-mobile-img.jpg")}
+								type="image/jpeg"
+								media="(max-width:26.875em)"
+							/>
 							<source
 								srcSet={require("../public/patient-pictures/patient-9-img.webp")}
 								type="image/webp"
@@ -945,7 +1050,7 @@ const AdTemplate = (props) => {
 
 				.hero-image-div {
 					width: 100vw;
-					height: calc(100vh - 141px);
+					height: calc(100vh - 66px);
 					position: relative;
 					background-repeat: no-repeat;
 					background-size: cover;
@@ -986,6 +1091,12 @@ const AdTemplate = (props) => {
 
 				.hero-image-isc-text {
 					font-weight: bold;
+				}
+
+				.hero-image-hidden-mobile {
+					display: none;
+					text-align: center;
+					padding: 2rem .5rem .5rem .5rem;
 				}
 
 				@media (min-width: ${sizes.sizes.fullhd}) {
@@ -1079,10 +1190,46 @@ const AdTemplate = (props) => {
 				}
 
 				@media (max-width: ${sizes.sizes.xxs}) {
+					:global(.webp) .hero-image-div {
+						background-image: url(${require("../public/ad-page/patient-tour-img.webp")});
+					}
+
+					:global(.no-webp) .hero-image-div {
+						background-image: url(${require("../public/ad-page/patient-tour-img.jpg")});
+					}
+					.hero-image-div {
+						width: 100vw;
+						height: 50vh;
+						position: relative;
+						background-repeat: no-repeat;
+						background-size: cover;
+						background-position: right 25% bottom 90%;
+					}
+
+					.hero-image-hidden-mobile {
+						display: block;
+					}
 					.hero-image-perfect-wrapper {
+						display: none;
+						top: 40%;
 						text-align: center;
 						left: 0;
 						padding: 1rem;
+					}
+				}
+
+				@media (max-width: ${sizes.sizes.xxxs}) {
+					:global(.webp) .hero-image-div {
+						background-image: url(${require("../public/ad-page/patient-tour-mobile-img.webp")});
+					}
+					:global(.no-webp) .hero-image-div {
+						background-image: url(${require("../public/ad-page/patient-tour-mobile-img.jpg")});
+					}
+				}
+
+				@media (max-width: ${sizes.sizes.xvsm}) {
+					.hero-image-perfect-wrapper {
+						top: 30%;
 					}
 				}
 
@@ -1326,6 +1473,15 @@ const AdTemplate = (props) => {
 					background-repeat: no-repeat;
 					background-position: left 47% top 22%;
 					background-size: cover;
+				}
+
+				@media (max-width: ${sizes.sizes.xxxs}) {
+					:global(.webp) .isc-img-div {
+						background-image: url(${require("../public/ad-page/isc-ad-mobile-img.webp")});
+					}
+					:global(.no-webp) .isc-img-div {
+						background-image: url(${require("../public/ad-page/isc-ad-mobile-img.jpg")});
+					}
 				}
 
 				.our-doctors-section {

@@ -262,11 +262,11 @@ const treatmentTemplate = (props) => {
 								Healing
 							</h2>
 							<p className="treatment-paragraph">
-								After the implants are placed, an average period of waiting is about at least 4 or 5
-								days. After this period, stitches are removed. You can either stay here in Turkey and
-								come back to our clinic for stitch removal, or you can go back home and get the stitches
-								removed by a local dentist. But we usually suggest our patients to stay here and come
-								back to the clinic for a final check and stitch removal before you leave.
+								After the implants are placed, an average period of waiting is about 3 to 5 days. After
+								this period, stitches are removed. You can either stay here in Turkey and come back to
+								our clinic for stitch removal, or you can go back home and get the stitches removed by a
+								local dentist. But we usually suggest our patients to stay here and come back to the
+								clinic for a final check and stitch removal before you leave.
 							</p>
 						</div>
 						<div className="treatment-general-text-side-div">

@@ -213,6 +213,17 @@ const treatmentTemplate = (props) => {
 								than E-Max crowns.
 							</p>
 						</div>
+						<div className="treatment-general-text-side-div">
+							<h2 className="treatment-paragraph-header">
+								<FontAwesomeIcon className={classes.fontAwesomeIcon} icon={faStarOfLife} /> How Long
+								Does The Treatment Process Take?
+							</h2>
+							<p className="treatment-paragraph">
+								Dental crown treatment is considered as one of the fastest and easiest treatment
+								processes among aesthetic applications. Depending on the number and structure of the
+								teeth to be crowned, the crown treatment can be completed in about 5 to 7 days.
+							</p>
+						</div>
 
 						<div className="dental-treatments-buttons-div">
 							<Button
