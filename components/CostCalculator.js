@@ -518,19 +518,21 @@ export default function CustomizedExpansionPanels ({ isVeneer }) {
 		window.addEventListener("scroll", () => {
 			const calcStart = document.querySelector(".calculator-start");
 			const calcEnd = document.querySelector(".calculator-root");
-			const calcStartHeight = calcStart.getBoundingClientRect().top;
-			const calcEndHeight = calcEnd.getBoundingClientRect().height;
-			const calcEndY = calcEnd.getBoundingClientRect().y;
-			const widget = document.querySelector(".calculator-widget");
-			const windowWidth = window.innerWidth;
-			if (windowWidth < 950 && calcStartHeight < -120) {
-				widget.style.display = "block";
-			} else {
-				widget.style.display = "none";
-			}
+			if (calcStart) {
+				const calcStartHeight = calcStart.getBoundingClientRect().top;
+				const calcEndHeight = calcEnd.getBoundingClientRect().height;
+				const calcEndY = calcEnd.getBoundingClientRect().y;
+				const widget = document.querySelector(".calculator-widget");
+				const windowWidth = window.innerWidth;
+				if (windowWidth < 950 && calcStartHeight < -120) {
+					widget.style.display = "block";
+				} else {
+					widget.style.display = "none";
+				}
 
-			if (windowWidth < 950 && -1 * calcEndY > calcEndHeight) {
-				widget.style.display = "none";
+				if (windowWidth < 950 && -1 * calcEndY > calcEndHeight) {
+					widget.style.display = "none";
+				}
 			}
 		});
 	}, []);

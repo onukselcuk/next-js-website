@@ -364,7 +364,7 @@ const CallbackForm = ({ handleCallbackClose }) => {
 
 						<div className={classes.captchaWrapper}>
 							<ReCAPTCHA
-								sitekey="6LcM0sAUAAAAAIR7gDii3dPPDk1l-JU6JKrWcW1X"
+								sitekey="6LcJFMsUAAAAAEz1ncTycbY0SWyTTIHgevtolEmG"
 								onChange={handleCaptchaChange}
 								badge="inline"
 								ref={recaptchaRef}

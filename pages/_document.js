@@ -22,10 +22,6 @@ class MyDocument extends Document {
 					<link rel="icon" sizes="192x192" href={require("../public/favicon/apple-touch-icon.png")} />
 					<link rel="apple-touch-icon" href={require("../public/favicon/apple-touch-icon.png")} />
 					<link rel="icon" sizes="32x32" type="image/png" href={require("../public/favicon/favicon.png")} />
-					{/* Google Tag Manager */}
-					{process.env.NEXT_STATIC_PRODUCTION === "production" && (
-						<script src="/scripts/googleTagManager.js" />
-					)}
 					<meta
 						name="viewport"
 						content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
@@ -34,33 +30,19 @@ class MyDocument extends Document {
 					{/* PWA primary color */}
 					<meta name="theme-color" content={theme.palette.primary.main} />
 					<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-					{/* <link rel="preconnect" href="https://embed.tawk.to" crossOrigin="true" /> */}
+					<link rel="preconnect" href="https://embed.tawk.to" crossOrigin="true" />
 					<link rel="preconnect" href="https://lh3.googleusercontent.com" crossOrigin="true" />
-
 					<link
 						href="https://fonts.googleapis.com/css?family=Laila:500,700|Nunito:400,700&display=swap"
 						rel="stylesheet"
 					/>
-					{/* Hotjar Tracking Code for www.istanbulsmilecenter.co */}
-					{process.env.NEXT_STATIC_PRODUCTION === "production" && <script src="/scripts/hotjar.js" />}
 				</Head>
 				<body>
-					{/* Google Tag Manager (noscript) */}
-					{process.env.NEXT_STATIC_PRODUCTION === "production" && (
-						<noscript>
-							<iframe
-								src="https://www.googletagmanager.com/ns.html?id=GTM-PNM2D2F"
-								height="0"
-								width="0"
-								style={{ display: "none", visibility: "hidden" }}
-							/>
-						</noscript>
-					)}
 					<Main />
 					{/* Modernizr Webp Detection Script */}
 					<script src="/scripts/modernizr-custom.js" />
 					<NextScript />
-					{/* Tawk Live Script Script */}
+					{/* Tawk Live Script */}
 					{process.env.NEXT_STATIC_PRODUCTION === "production" && <script src="/scripts/tawkScript.js" />}
 				</body>
 			</html>
