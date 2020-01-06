@@ -66,7 +66,7 @@ const Contact = (props) => {
 					<p className="our-services-header-paragraph-text">
 						Our clinic is located in prestigious, luxurious and spacious <b>Ataköy Towers Plaza</b> in
 						Istanbul Ataköy district. We have <b>the shortest response time</b> among all dental clinics.
-						Day or night, you can contact us through many channels, live chat, WhatsApp, form or email,
+						Day or night, you can contact us through many channels, live chat, WhatsApp, form or email,{" "}
 						<b>whenever you need us we are here.</b>
 					</p>
 				</div>
@@ -81,7 +81,7 @@ const Contact = (props) => {
 								className="contact-link contact-link-location"
 								target="_blank"
 								rel="noopener noreferrer"
-								href="https://www.google.com/maps/place/%C4%B0stanbul+Smile+Center+A%C4%9F%C4%B1z+ve+Di%C5%9F+Sa%C4%9Fl%C4%B1%C4%9F%C4%B1+Poliklini%C4%9Fi/@40.9914481,28.832006,17z/data=!3m1!4b1!4m5!3m4!1s0x14caa3147e2cba65:0xb6eaeab3d94bfd80!8m2!3d40.9914441!4d28.8341947"
+								href="https://g.page/istanbulsmilecenter?share"
 							>
 								Istanbul Smile Center Ağız ve Diş Sağlığı Kliniği<br />Ataköy 7-8-9-10. Kısım Mah.
 								Çobançeşme E-5 Yanyol Cad. Ataköy Towers B Blok No:20 Kat:1 Daire:24, 34212
@@ -103,38 +103,10 @@ const Contact = (props) => {
 							<a
 								target="_blank"
 								rel="noopener noreferrer"
-								href="https://wa.me/905510413230?text=Hi%20Istanbul%20Smile%20Center"
+								href="https://wa.me/905362520072?text=Hi%20Istanbul%20Smile%20Center"
 								className="contact-link"
 							>
-								WhatsApp: +90 551 041 32 30
-							</a>
-						</p>
-						<p className="paragraph">
-							<FontAwesomeIcon className={classes.fontAwesomeIconSmall} icon={faPhoneAlt} />{" "}
-							<a
-								target="_blank"
-								rel="noopener noreferrer"
-								href="tel:+905309492470"
-								className="contact-link"
-							>
-								International: +90 530 949 24 70
-							</a>
-						</p>
-						<p className="paragraph">
-							<FontAwesomeIcon className={classes.fontAwesomeIconSmall} icon={faPhoneAlt} />{" "}
-							<a
-								target="_blank"
-								rel="noopener noreferrer"
-								href="tel:02081238053"
-								className="contact-link"
-							>
-								UK: 020 8123 8053
-							</a>
-						</p>
-						<p className="paragraph">
-							<FontAwesomeIcon className={classes.fontAwesomeIconSmall} icon={faPhoneAlt} />{" "}
-							<a target="_blank" rel="noopener noreferrer" href="tel:8312048370" className="contact-link">
-								USA: 831 204 83 70
+								WhatsApp / International: +90 536 252 00 72
 							</a>
 						</p>
 						<p className="paragraph">

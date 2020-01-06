@@ -55,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
 	topBarContacts: {
 		display: "flex",
 		alignItems: "center",
-		justifyContent: "space-between",
+		justifyContent: "flex-end",
 		color: theme.palette.third.main,
 		margin: "0 auto",
 		width: "100%",
@@ -284,61 +284,17 @@ export default () => {
 		<React.Fragment>
 			<div className={classes.topBar}>
 				<div className={classes.topBarWrapper}>
-					{/* <div className={classes.languageSelections}>
-						<a
-							target="_blank"
-							rel="noopener noreferrer"
-							href="https://www.istanbulsmilecenter.com"
-							className={classes.topBarLink}
-						/>
-					</div> */}
 					<div className={classes.topBarContacts}>
 						<div className={classes.topBarContact}>
 							<WhatsAppIcon className={classes.topBarIcon} />
-							<p className={classes.topBarText}>WhatsApp</p>
+							<p className={classes.topBarText}>WhatsApp / International</p>
 							<a
 								target="_blank"
 								rel="noopener noreferrer nofollow"
-								href="https://wa.me/905510413230?text=Hi%20Istanbul%20Smile%20Center"
+								href="https://wa.me/905362520072?text=Hi%20Istanbul%20Smile%20Center"
 								className={classes.topBarLink}
 							>
-								+90 551 041 32 30
-							</a>
-						</div>
-						<div className={classes.topBarContact}>
-							<CallIcon className={classes.topBarIcon} />
-							<p className={classes.topBarText}>International</p>
-							<a
-								target="_blank"
-								rel="noopener noreferrer"
-								href="tel:+909492470"
-								className={classes.topBarLink}
-							>
-								+90 530 949 24 70
-							</a>
-						</div>
-						<div className={classes.topBarContact}>
-							<CallIcon className={classes.topBarIcon} />
-							<p className={classes.topBarText}>UK</p>
-							<a
-								target="_blank"
-								rel="noopener noreferrer"
-								href="tel:02081238053"
-								className={classes.topBarLink}
-							>
-								020 8123 8053
-							</a>
-						</div>
-						<div className={classes.topBarContact}>
-							<CallIcon className={classes.topBarIcon} />
-							<p className={classes.topBarText}>USA</p>
-							<a
-								target="_blank"
-								rel="noopener noreferrer"
-								href="tel:8312048370"
-								className={classes.topBarLink}
-							>
-								831 204 83 70
+								+90 536 252 00 72
 							</a>
 						</div>
 					</div>

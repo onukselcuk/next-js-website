@@ -306,7 +306,7 @@ export default ({ handleCallbackOpen }) => {
 						<a
 							target="_blank"
 							rel="noopener noreferrer nofollow"
-							href="https://www.google.com/maps/place/%C4%B0stanbul+Smile+Center+A%C4%9F%C4%B1z+ve+Di%C5%9F+Sa%C4%9Fl%C4%B1%C4%9F%C4%B1+Poliklini%C4%9Fi/@40.9914481,28.832006,17z/data=!3m1!4b1!4m5!3m4!1s0x14caa3147e2cba65:0xb6eaeab3d94bfd80!8m2!3d40.9914441!4d28.8341947"
+							href="https://g.page/istanbulsmilecenter?share"
 							className={clsx(classes.footerLink, classes.addressLink)}
 						>
 							Ataköy 7-8-9-10. Kısım Mah. Çobançeşme E-5 Yanyol Cad. Ataköy Towers B Blok No:20 Kat:1
@@ -324,35 +324,12 @@ export default ({ handleCallbackOpen }) => {
 						<a
 							target="_blank"
 							rel="noopener noreferrer nofollow"
-							href="https://wa.me/905510413230?text=Hi%20Istanbul%20Smile%20Center"
+							href="https://wa.me/905362520072?text=Hi%20Istanbul%20Smile%20Center"
 							className={clsx(classes.footerLink, classes.addressLink)}
 						>
-							WhatsApp: +90 551 041 32 30
+							WhatsApp / International : +90 536 252 00 72
 						</a>
-						<a
-							target="_blank"
-							rel="noopener noreferrer"
-							href="tel:+905309492470"
-							className={clsx(classes.footerLink, classes.addressLink)}
-						>
-							International: +90 530 949 24 70
-						</a>
-						<a
-							target="_blank"
-							rel="noopener noreferrer"
-							href="tel:02081238053"
-							className={clsx(classes.footerLink, classes.addressLink)}
-						>
-							UK: 020 8123 8053
-						</a>
-						<a
-							target="_blank"
-							rel="noopener noreferrer"
-							href="tel:8312048370"
-							className={clsx(classes.footerLink, classes.addressLink)}
-						>
-							USA: 831 204 83 70
-						</a>
+
 						<a className={clsx(classes.footerLink, classes.addressLink)} onClick={handleCallbackOpen}>
 							Request A Call Back
 						</a>

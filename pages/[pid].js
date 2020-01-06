@@ -843,7 +843,7 @@ const AdTemplate = (props) => {
 								<h3 className="my-business">My Business</h3>
 							</div>
 							<div className="review-number-div">
-								<p className="review-number">67 Patient Reviews</p>
+								<p className="review-number">69 Patient Reviews</p>
 							</div>
 						</div>
 					</Paper>

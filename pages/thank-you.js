@@ -110,40 +110,13 @@ const thankYou = (props) => {
 							<a
 								target="_blank"
 								rel="noopener noreferrer"
-								href="https://wa.me/905510413230?text=Hi%20Istanbul%20Smile%20Center"
+								href="https://wa.me/905362520072?text=Hi%20Istanbul%20Smile%20Center"
 								className="contact-link"
 							>
-								WhatsApp: +90 551 041 32 30
+								WhatsApp / International : +90 536 252 00 72
 							</a>
 						</p>
-						<p className="paragraph">
-							<FontAwesomeIcon className={classes.fontAwesomeIconSmall} icon={faPhoneAlt} />{" "}
-							<a
-								target="_blank"
-								rel="noopener noreferrer"
-								href="tel:+905309492470"
-								className="contact-link"
-							>
-								International: +90 530 949 24 70
-							</a>
-						</p>
-						<p className="paragraph">
-							<FontAwesomeIcon className={classes.fontAwesomeIconSmall} icon={faPhoneAlt} />{" "}
-							<a
-								target="_blank"
-								rel="noopener noreferrer"
-								href="tel:+442081238053"
-								className="contact-link"
-							>
-								UK: 020 8123 8053
-							</a>
-						</p>
-						<p className="paragraph">
-							<FontAwesomeIcon className={classes.fontAwesomeIconSmall} icon={faPhoneAlt} />{" "}
-							<a target="_blank" rel="noopener noreferrer" href="tel:8312048370" className="contact-link">
-								USA: 831 204 83 70
-							</a>
-						</p>
+
 						<p className="paragraph">
 							<FontAwesomeIcon className={classes.fontAwesomeIconSmall} icon={faPhoneAlt} />{" "}
 							<a className="contact-link" onClick={handleCallbackOpen}>

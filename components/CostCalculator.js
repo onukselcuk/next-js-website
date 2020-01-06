@@ -85,6 +85,12 @@ const useStyles = makeStyles((theme) => ({
 			marginLeft: 0
 		}
 	},
+	calculatorResultPaperWidget: {
+		borderBottomLeftRadius: "20px",
+		borderBottomRightRadius: "20px",
+		borderTopLeftRadius: 0,
+		borderTopRightRadius: 0
+	},
 	implantNumberSliderWrapper: {
 		display: "flex",
 		alignItems: "center",
@@ -1009,7 +1015,7 @@ export default function CustomizedExpansionPanels ({ isVeneer }) {
 				</div>
 			</div>
 			<div className={clsx(classes.calculatorRightPart, classes.calculatorWidget, "calculator-widget")}>
-				<Paper className={classes.calculatorResultPaper}>
+				<Paper className={clsx(classes.calculatorResultPaper, classes.calculatorResultPaperWidget)}>
 					<div className={clsx(classes.totalCostWrapper, classes.totalCostWrapperWidget)}>
 						<h3 className={clsx(classes.totalCostNumber, classes.totalCostNumberWidget)}>
 							{currentCurrency !== "euro" ? currentSign : null}
