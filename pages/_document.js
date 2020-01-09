@@ -37,10 +37,10 @@ class MyDocument extends Document {
 						rel="stylesheet"
 					/>
 					{/* Global site tag (gtag.js) - Google Analytics */}
-					{process.env.NEXT_STATIC_PRODUCTION !== "production" && (
+					{process.env.NEXT_STATIC_PRODUCTION === "production" && (
 						<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108868146-5" />
 					)}
-					{process.env.NEXT_STATIC_PRODUCTION !== "production" && (
+					{process.env.NEXT_STATIC_PRODUCTION === "production" && (
 						<script src="/scripts/googleAnalytics.js" />
 					)}
 				</Head>
