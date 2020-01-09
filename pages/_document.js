@@ -38,6 +38,9 @@ class MyDocument extends Document {
 					/>
 					{/* Global site tag (gtag.js) - Google Analytics */}
 					{process.env.NEXT_STATIC_PRODUCTION === "production" && (
+						<meta name="google-site-verification" content="HffmSK0RYlo-Je9Zb4EE1gbStNykmG7LqITvqrJqKnU" />
+					)}
+					{process.env.NEXT_STATIC_PRODUCTION === "production" && (
 						<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108868146-5" />
 					)}
 					{process.env.NEXT_STATIC_PRODUCTION === "production" && (
